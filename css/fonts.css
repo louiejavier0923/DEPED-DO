@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'Quantify';
+	src: url('../fonts/Quantify Bold v2.6.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Neoteric Bold';
+	src: url('../fonts/NEOTERIC+ - Bold DEMO VERSION.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Neoteric Regular';
+	src: url('../fonts/NEOTERIC+ - Regular DEMO VERSION.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Century Gothic';
+	src: url('../fonts/Century Gothic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Pasajero';
+	src: url('../fonts/Pasajero.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Gentona';
+	src: url('../fonts/Rene Bieder - Gentona ExtraBold DEMO.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Gentona Italic';
+	src: url('../fonts/Rene Bieder - Gentona ExtraBold Italic DEMO.otf') format('opentype');
+}
+
+/* == End == */
