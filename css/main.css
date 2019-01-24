@@ -1,0 +1,2560 @@
+/* == IMPORTS == */
+
+@import url(slider.css);
+@import url(fonts.css);
+@import url(header-footer.css);
+
+/*== IMPORTS ENDS HERE == */
+/* == GLOBAL DESIGN == */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Century Gothic';
+}
+
+/* == GLOBAL DESIGN ENDS HERE == */
+/* == BODY CONTAINER DESIGN == */
+
+.body-container {
+	float: left;
+	width: 95%;
+	margin: 130px 0px 50px 2.5%;
+}
+
+	/* == INDEX DESIGN == */
+
+	.body-container .body-two {
+		float: left;
+		width: 100%;
+	}
+
+		.body-container .body-two:first-child {
+			float: left;
+			width: 100%;
+			height: 520px;
+		}
+
+			.body-two .four-half {
+				float: left;
+				display: inline-block;
+				height: 100%;
+			}
+
+				.four-half:first-child {
+					width: 28%;
+					height: 100%;
+					padding: 0px 1%;
+					margin: 0px 2.5% 0px 0px;
+				}
+
+					.four-half:first-child .half-mission {
+						float: left;
+						width: 100%;
+						padding-bottom: 10px;
+						border-bottom: solid 1px rgb(240, 240, 240);
+					}
+
+						.half-mission h3 {
+							font-size: 160%;
+							font-family: 'Gentona';
+							text-transform: uppercase;
+							margin: 5px 0px 0px 10px;
+							color: rgb(70, 70, 70);
+						}
+
+						.half-mission .line {
+							float: left;
+							width: 10%;
+							height: 4px;
+							background-color: rgb(4, 80, 140);
+							margin: 3px 0px 20px 10px;
+							border-radius: 3px;
+						}
+
+						.half-mission p {
+							float: left;
+							width: 95%;
+							margin: 0px 0px 7px 5%;
+							font-size: 85%;
+							text-align: justify;
+						}
+
+						.half-mission ol {
+							float: left;
+							width: 90%;
+							margin-left: 10%;
+							font-size: 85%;
+							text-align: justify;
+						}
+
+					.four-half:first-child .half-vision {
+						float: left;
+						width: 100%;
+						padding-top: 10px;
+					}
+
+						.half-vision h3 {
+							font-size: 160%;
+							font-family: 'Gentona';
+							text-transform: uppercase;
+							margin: 0px 0px 0px 10px;
+							color: rgb(70, 70, 70);
+						}
+
+						.half-vision .line {
+							float: left;
+							width: 10%;
+							height: 4px;
+							background-color: rgb(4, 80, 140);
+							margin: 3px 0px 20px 10px;
+							border-radius: 3px;
+						}
+
+						.half-vision p {
+							float: left;
+							width: 95%;
+							margin: 0px 0px 10px 5%;
+							font-size: 85%;
+							text-align: justify;
+						}
+
+				.four-half:last-child {
+					float: left;
+					width: 67.5%;
+					height: 100%;
+					overflow: hidden;
+					position: relative;
+					border-radius: 5px;
+					box-shadow: 7px 7px 10px -9px rgb(0, 0, 0);
+				}
+
+					.four-half:last-child img {
+						float: left;
+						width: 100%;
+						height: 100%;
+					}
+
+		.body-container .body-two:last-child {
+			float: left;
+			width: 100%;
+			margin-top: 40px;
+		}
+
+			.body-two:last-child .two-side-info {
+				float: left;
+				width: 20%;
+				height: 100%;
+				margin-right: 2.5%;
+			}
+
+				.two-side-info h4 {
+					float: left;
+					width: 100%;
+					padding: 10px 0px;
+					text-align: center;
+					text-transform: uppercase;
+					font-family: 'Gentona';
+					color: rgb(255, 255, 255);
+					font-size: 110%;
+					background-color: rgb(4, 80, 140);
+					border-top-right-radius: 3px;
+					border-top-left-radius: 3px;
+				}
+
+				.two-side-info .side-info {
+					float: left;
+					width: 100%;
+					padding: 30px 0px 25px 0px;
+					border-bottom: solid 1px rgb(240, 240, 240);
+					background-color: rgb(250, 250, 250);
+				}
+
+					.side-info p {
+						text-transform: uppercase;
+						font-family: 'Century Gothic';
+						font-weight: bold;
+						font-size: 100%;
+						margin: 0px 0px 20px 10px;
+					}
+
+					.side-info a {
+						float: left;
+						width: 90%;
+						font-family: 'Century Gothic';
+						font-size: 95%;
+						text-align: center;
+						margin-left: 5%;
+						text-decoration: none;
+					}
+
+			.two-side-info #view {
+				float: left;
+				width: 100%;
+				padding: 7px 0px;
+				text-align: center;
+				text-decoration: none;
+				color: rgb(255, 255, 255);
+				background-color: rgb(4, 80, 140);
+				border-bottom-right-radius: 3px;
+				border-bottom-left-radius: 3px;
+				font-weight: bold;
+			}
+
+			.body-two:last-child .two-main-info {
+				float: left;
+				width: 77.5%;
+				height: 100%;
+			}
+
+				.two-main-info .main-info {
+					float: left;
+					width: 100%;
+					padding-bottom: 30px;
+				}
+
+					.main-info h1 {
+						float: left;
+						width: 100%;
+						font-family: 'Gentona';
+						font-size: 200%;
+						text-transform: uppercase;
+						color: rgb(90, 90, 90);
+					}
+
+					.main-info .line {
+						float: left;
+						width: 4%;
+						height: 5px;
+						background-color: rgb(4, 80, 140);
+						border-radius: 5px;
+						margin-bottom: 40px;
+					}
+
+					.main-info .info-latest {
+						float: left;
+						width: 100%;
+						padding: 10px 0px;
+					}
+
+						.info-latest #news-img {
+							float: left;
+							width: 40%;
+							height: 550px;
+						}
+
+						.info-latest #title {
+							font-family: 'Century Gothic';
+							font-size: 180%;
+							width: 50%;
+							margin-left: 3%;
+							color: rgb(60, 60, 60);
+						}
+
+						.info-latest #author {
+							float: left;
+							width: 50%;
+							margin-left: 3%;
+							color: rgb(150, 150, 150);
+							font-size: 95%;
+							font-style: italic;
+							margin-bottom: 40px;
+						}
+
+						.info-latest #subtitle {
+							float: left;
+							font-size: 130%;
+							width: 50%;
+							margin-left: 3%;
+							color: rgb(60, 60, 60);
+						}
+
+						.info-latest #memo-title {
+							float: left;
+							width: 50%;
+							margin-left: 3%;
+							font-size: 105%;
+							margin-bottom: 30px;
+						}
+
+						.info-latest #view-memo {
+							float: left;
+							margin-left: 3%;
+							margin-bottom: 40px;
+						}
+
+						.info-latest #info-content {
+							float: left;
+							width: 50%;
+							margin-left: 3%;
+							font-size: 100%;
+
+						}
+
+				.two-main-info .past-info {
+					float: left;
+					width: 100%;
+					padding-bottom: 80px;
+				}
+
+					.past-info .past-content {
+						float: left;
+						display: inline-block;
+						width: 20%;
+						margin-left: 2.5%;
+						border: solid 1px rgb(230, 230, 230);
+						border-radius: 3px;
+					}
+
+						.past-content #past-title {
+							float: left;
+							width: 100%;
+							padding: 5px 0px;
+							font-size: 105%;
+							text-align: center;
+							background-color: rgb(190, 190, 190);
+							border-top-left-radius: 3px;
+							border-top-right-radius: 3px;
+							margin-bottom: 15px;
+						}
+
+						.past-content #past-info {
+							float: left;
+							width: 94%;
+							padding: 0px 3%;
+							font-size: 95%;
+							margin-bottom: 20px;
+						}
+
+						.past-content #past-memo {
+							float: left;
+							width: 100%;
+							padding: 5px 0px;
+							text-align: center;
+							text-decoration: none;
+							background-color: rgb(4, 80, 140);
+							color: rgb(255, 255, 255);
+							border-bottom-right-radius: 3px;
+							border-bottom-left-radius: 3px;
+						}
+
+				.two-main-info .applicant-container {
+					float: left;
+					width: 100%;
+					height: 500px;
+					margin-bottom: 300px;
+				}
+
+					.applicant-container h1 {
+						float: left;
+						width: 100%;
+						font-family: 'Gentona';
+						font-size: 200%;
+						text-transform: uppercase;
+						color: rgb(90, 90, 90);
+					}
+
+					.applicant-container .line {
+						float: left;
+						width: 4%;
+						height: 5px;
+						background-color: rgb(4, 80, 140);
+						border-radius: 3px;
+						margin-bottom: 50px;
+						margin-right: 96%;
+					}
+
+					.applicant-container input {
+						float: left;
+						width: 39%;
+						height: 30px;
+						border-radius: 20px;
+						border: solid 1px rgb(200, 200, 200);
+						padding: 3px 0px 3px 1%;
+						font-family: 'Century Gothic';
+						font-size: 90%;
+						margin-bottom: 5px;
+					}
+
+						.applicant-container input:focus {
+							outline: none;
+						}
+
+					.applicant-container .applicant-table {
+						float: left;
+						width: 100%;
+						height: 600px;
+						border: solid 1px rgb(240, 240, 240);
+						border-radius: 3px;
+						overflow-y: scroll;
+					}
+
+						.applicant-table .applicant-table-header {
+							float: left;
+							width: 100%;
+							line-height: 35px;
+							background-color: rgb(240, 240, 240);
+							border-top-left-radius: 3px;
+							border-top-right-radius: 3px;
+						}
+
+							.applicant-table-header .header {
+								float: left;
+								display: inline-block;
+							}
+
+							.applicant-table-header p {
+								text-transform: uppercase;
+								text-align: center;
+								font-size: 80%;
+								font-weight: bold;
+							}
+
+								.applicant-table-header .header:first-child {
+									width: 5%;
+									height: 100%;
+									border-right: solid 1px rgb(220, 220, 220);
+								}
+
+								.applicant-table-header .header:nth-child(2) {
+									width: 80%;
+									height: 100%;
+									border-right: solid 1px rgb(220, 220, 220);
+								}
+
+								.applicant-table-header .header:nth-child(3) {
+									width: 5%;
+									height: 100%;
+									border-right: solid 1px rgb(220, 220, 220);
+								}
+
+								.applicant-table-header .header:last-child {
+									width: 9%;
+									height :100%;
+								}
+
+						.applicant-table .applicant-table-content {
+							float: left;
+							width: 100%;
+						}
+
+							.applicant-table-content .content-info {
+								float: left;
+								display: inline-block;
+								width: 100%;
+								line-height: 25px;
+								border-bottom: solid 1px rgb(220, 220, 220);
+							}
+
+								.applicant-table-content .content-info .info {
+									float: left;
+									display: inline-block;
+								}
+
+								.applicant-table-content .content-info .info p {
+									text-align: center;
+									font-size: 80%;
+								}
+
+									.applicant-table-content .content-info .info:first-child {
+										width: 5%;
+										height: 100%;
+										border-right: solid 1px rgb(220, 220, 220);
+									}
+
+									.applicant-table-content .content-info .info:nth-child(2) {
+										width: 80%;
+										height: 100%;
+										border-right: solid 1px rgb(220, 220, 220);
+									}
+
+									.applicant-table-content .content-info .info:nth-child(3) {
+										width: 5%;
+										height: 100%;
+										border-right: solid 1px rgb(220, 220, 220);
+									}
+
+									.applicant-table-content .content-info .info:last-child {
+										width: 9%;
+										height: 100%;
+									}
+
+				.two-main-info .vacancy-container {
+					float: left;
+					width: 100%;
+				}
+
+					.vacancy-container h1 {
+						float: left;
+						width: 100%;
+						font-family: 'Gentona';
+						font-size: 200%;
+						text-transform: uppercase;
+						color: rgb(90, 90, 90);
+					}
+
+					.vacancy-container .line {
+						float: left;
+						width: 4%;
+						height: 5px;
+						background-color: rgb(4, 80, 140);
+						border-radius: 3px;
+						margin-bottom: 50px;
+						margin-right: 96%;
+					}
+
+					.vacancy-container .vacant {
+						float: left;
+						width: 36%;
+						display: inline-block;
+						margin: 0px 5% 30px 5%;
+						background-color: rgb(240, 240, 240);
+						border-radius: 3px;
+						padding: 20px 2%;
+					}
+
+						.vacant img {
+							float: left;
+							width: 20%;
+							height: 70px;
+							margin-right: 5%;
+						}
+
+						.vacant #position {
+							float: left;
+							width: 75%;
+							font-family: 'Gentona';
+							font-size: 180%;
+							color: rgb(4, 80, 140);
+							margin-bottom: 5px;
+						}
+
+						.vacant #school {
+							float: left;
+							width: 75%;
+							font-size: 85%;
+							font-weight: bold;
+							text-transform: uppercase;
+						}
+
+						.vacant #address {
+							float: left;
+							width: 75%;
+							font-size: 70%;
+							font-style: italic;
+							line-height: 10px;
+						}
+
+						.vacant #salary {
+							float: left;
+							width: 60%;
+							margin-top: 30px;
+							margin-left: 5%;
+							font-weight: bold;
+							text-transform: uppercase;
+						}
+
+						.vacant a {
+							float: left;
+							width: 30%;
+							margin-top: 30px;
+							padding: 5px 0px;
+							background-color: rgb(4, 80, 140);
+							border-radius: 3px;
+							text-transform: uppercase;
+							text-align: center;
+							text-decoration: none;
+							color: rgb(255, 255, 255);
+							font-family: 'Gentona';
+							font-size: 90%;
+						}
+
+	/* == INDEX DESIGN ENDS HERE == */
+	/* == ABOUT US DESIGN == */
+
+	.body-container .body-about {
+		float: left;
+		width: 100%;
+	}
+
+		.body-about .body-about-nav {
+			float: left;
+			width: 20%;
+			height: 7100px;
+			padding: 2% 0px;
+			background-color: rgb(4, 80, 140);
+			border-radius: 5px;
+			box-shadow: 7px 7px 10px -9px rgb(30, 30, 30);
+		}
+
+			.body-about-nav a {
+				float: left;
+				display: inline-block;
+				width: 95%;
+				padding: 10px 10% 10px 0px;
+				text-transform: uppercase;
+				text-align: right;
+				text-decoration: none;
+				font-family: 'Gentona';
+				font-size: 110%;
+				color: rgb(255, 255, 255);
+			}
+
+			.body-about-nav a:hover, .body-about-nav .active {
+				color: rgb(200, 200, 200);
+				transition: all 0.2s ease-in-out;
+			}
+
+		.body-about .body-about-info {
+			float: left;
+			width: 77%;
+			margin-left: 3%;
+		}
+
+			.body-about-info .info-history {
+				float: left;
+				width: 100%;
+				margin-bottom: 40px;
+				border-bottom: solid 1px rgb(230, 230, 230);
+				padding-bottom: 30px;
+			}
+
+				.info-history h2 {
+					font-family: 'Gentona';
+					font-size: 180%;
+					color: rgb(50, 50, 50);
+					text-transform: uppercase;
+				}
+
+				.info-history .line {
+					float: left;
+					width: 5%;
+					height: 5px;
+					background-color: rgb(4, 80, 140);
+					border-radius: 5px;
+					margin-bottom: 50px;
+				}
+
+				.info-history .history-info {
+					float: left;
+					width: 96%;
+					margin-left: 2%;
+				}
+
+					.history-info p {
+						font-family: 'Century Gothic';
+						font-size: 100%;
+						color: rgb(110, 110, 110);
+						margin-bottom: 30px;
+					}
+
+			.body-about-info .info-org-cha {
+				float: left;
+				width: 100%;
+				margin-bottom: 40px;
+				border-bottom: solid 1px rgb(230, 230, 230);
+				padding-bottom: 30px;
+			}
+
+				.info-org-cha h2 {
+					font-family: 'Gentona';
+					font-size: 180%;
+					color: rgb(50, 50, 50);
+					text-transform: uppercase;
+				}
+
+				.info-org-cha .line {
+					float: left;
+					width: 5%;
+					height: 5px;
+					background-color: rgb(4, 80, 140);
+					border-radius: 5px;
+					margin-bottom: 50px;
+				}
+
+				.info-org-cha .org-cha-info {
+					float: left;
+					width: 96%;
+					margin-left: 2%;
+				}
+
+					.org-cha-info .org-cha-three {
+						float: left;
+						width: 100%;
+						padding: 10px 0px;
+						margin-bottom: 20px;
+						display: inline-block;
+					}
+
+						.org-cha-three:first-child img {
+							float: left;
+							width: 15%;
+							height: 160px;
+							margin: 0px 42% 10px 42%;
+							border: solid 1px rgb(100, 100, 100);
+							border-radius: 3px;
+						}
+
+						.org-cha-three:first-child h3 {
+							font-size: 120%;
+							width: 100%;
+							text-align: center;
+						}
+
+						.org-cha-three:first-child p {
+							font-size: 95%;
+							width: 100%;
+							text-align: center;
+						}
+
+						.org-cha-three:nth-child(2) .person-three {
+							float: left;
+							width: 20%;
+						}
+
+							.person-three:first-child {
+								margin-left: 15%;
+							}
+
+							.person-three:nth-child(2) {
+								margin: 0px 5%;
+							}
+
+							.person-three img {
+								float: left;
+								width: 95%;
+								height: 160px;
+								margin: 0px 2% 10px 2%;
+								border: solid 1px rgb(100, 100, 100);
+								border-radius: 3px;
+							}
+
+							.person-three h3 {
+								font-size: 120%;
+								width: 100%;
+								text-align: center;
+							}
+
+							.person-three p {
+								font-size: 95%;
+								width: 100%;
+								text-align: center;
+							}
+						.org-cha-three:last-child .person-two {
+							float: left;
+							width: 20%;
+						}
+
+							.person-two:first-child {
+								margin-left: 15%;
+								margin-right: 30%;
+							}
+
+							.person-two img {
+								float: left;
+								width: 95%;
+								height: 160px;
+								margin: 0px 2% 10px 2%;
+								border: solid 1px rgb(100, 100, 100);
+								border-radius: 3px;
+							}
+
+							.person-two h3 {
+								font-size: 120%;
+								width: 100%;
+								text-align: center;
+							}
+
+							.person-two p {
+								font-size: 95%;
+								width: 100%;
+								text-align: center;
+							}
+
+			.body-about-info .info-mis-vis {
+				float: left;
+				width: 100%;
+				margin-bottom: 40px;
+				border-bottom: solid 1px rgb(230, 230, 230);
+				padding-bottom: 30px;
+			}
+
+				.info-mis-vis .mis-vis-two {
+					float: left;
+					width: 100%;
+					margin-bottom: 30px;
+				}
+
+					.mis-vis-two h2 {
+						font-family: 'Gentona';
+						font-size: 180%;
+						color: rgb(50, 50, 50);
+						text-transform: uppercase;
+					}
+
+					.mis-vis-two .line {
+						float: left;
+						width: 5%;
+						height: 5px;
+						background-color: rgb(4, 80, 140);
+						border-radius: 5px;
+						margin-bottom: 50px;
+					}
+
+					.mis-vis-two .vis-info, .mis-vis-two .mis-info {
+						float: left;
+						width: 96%;
+						margin-left: 2%;
+					}
+
+						.vis-info p, .mis-info p {
+							font-family: 'Century Gothic';
+							font-size: 100%;
+							color: rgb(110, 110, 110);
+							margin-bottom: 30px;
+						}
+
+						.mis-info ul {
+							margin-left: 3%;
+						}
+
+						.mis-info ul li {
+							font-family: 'Century Gothic';
+							font-size: 100%;
+							color: rgb(110, 110, 110);
+						}
+
+			.body-about-info .info-citi-char {
+				float: left;
+				width: 100%;
+				margin-bottom: 40px;
+				border-bottom: solid 1px rgb(230, 230, 230);
+				padding-bottom: 30px;
+			}
+
+				.info-citi-char h2 {
+					font-family: 'Gentona';
+					font-size: 180%;
+					color: rgb(50, 50, 50);
+					text-transform: uppercase;
+				}
+
+				.info-citi-char .line {
+					float: left;
+					width: 5%;
+					height: 5px;
+					background-color: rgb(4, 80, 140);
+					border-radius: 5px;
+					margin-bottom: 50px;
+				}
+
+				.info-citi-char .citi-char-info {
+					float: left;
+					width: 96%;
+					margin-left: 2%;
+				}
+
+					.citi-char-info p {
+						font-family: 'Century Gothic';
+						font-size: 100%;
+						color: rgb(110, 110, 110);
+						margin-bottom: 30px;
+					}
+
+					.citi-char-info ul {
+						margin-left: 3%;
+					}
+
+					.citi-char-info ul li {
+						font-family: 'Century Gothic';
+						font-size: 100%;
+					}
+
+					.citi-char-info ul li a {
+						text-decoration: none;
+						color: rgb(110, 110, 110);
+					}
+
+			.body-about-info .info-inno {
+				float: left;
+				width: 100%;
+				margin-bottom: 40px;
+				border-bottom: solid 1px rgb(230, 230, 230);
+				padding-bottom: 30px;
+			}
+
+			.info-inno h2 {
+					font-family: 'Gentona';
+					font-size: 180%;
+					color: rgb(50, 50, 50);
+					text-transform: uppercase;
+				}
+
+				.info-inno .line {
+					float: left;
+					width: 5%;
+					height: 5px;
+					background-color: rgb(4, 80, 140);
+					border-radius: 5px;
+					margin-bottom: 50px;
+				}
+
+				.info-inno .inno-info {
+					float: left;
+					width: 96%;
+					margin-left: 2%;
+					margin-bottom: 50px;
+				}
+
+					.inno-info h3 {
+						font-size: 130%;
+						font-family: 'Century Gothic';
+						color: rgb(100, 100, 100);
+						margin-bottom: 20px;
+					}
+
+					.inno-info .inno-info-many {
+						float: left;
+						width: 96%;
+						margin-left: 2%;
+					}
+
+						.inno-info-many p {
+							font-family: 'Century Gothic';
+							font-size: 100%;
+							color: rgb(110, 110, 110);
+							margin-bottom: 20px;
+						}
+
+						.inno-info-many ul {
+							margin-left: 3%;
+							margin-bottom: 20px;
+						}
+
+						.inno-info-many ul li {
+							font-family: 'Century Gothic';
+							font-size: 100%;
+							color: rgb(110, 110, 110);
+						}
+
+	/* == ABOUT US DESIGN ENDS HERE == */
+	/* == DOWNLOADABLE FORM DESIGN == */
+
+	.body-container .body-download {
+		float: left;
+		width: 100%;
+	}
+
+		.body-download .body-download-nav {
+			float: left;
+			width: 20%;
+			height: 7170px;
+			padding-bottom: 20px;
+			border-radius: 5px;
+			background-color: rgb(4, 80, 140);
+		}
+
+			.body-download-nav h4 {
+				float: left;
+				width: 98%;
+				margin-left: 2%;
+				margin-bottom: 10px;
+				padding: 8px 0px;
+				font-family: 'Gentona';
+				font-size: 110%;
+				text-transform: uppercase;
+				color: rgb(250, 250, 250);
+			}
+
+			.body-download-nav ul {
+				float: left;
+				width: 85%;
+				margin-left: 7.5%;
+				list-style: none;
+			}
+
+				.body-download-nav ul li {
+					padding: 5px 0px;
+				}
+
+				.body-download-nav a {
+					text-decoration: none;
+					text-transform: uppercase;
+					font-family: 'Century Gothic';
+					font-size: 95%;
+					color: rgb(230, 230, 230);
+				}
+
+				.body-download-nav a:hover, .body-download-nav .active {
+					font-weight: bold;
+					color: rgb(255, 255, 255);
+					transition: all 0.2s ease-in-out;
+				}
+
+		.body-download .body-download-info {
+			float: left;
+			width: 75%;
+			margin-left: 5%;
+		}
+
+			.body-download-info .download-info {
+				float: left;
+				width: 100%;
+				padding: 30px 0px;
+				margin-top: 20px;
+				margin-bottom: 40px;
+				background-color: rgb(255, 255, 255);
+				box-shadow: 7px 7px 10px -9px rgb(30, 30, 30);
+				border-radius: 5px;
+				border: solid .5px rgb(230, 230, 230);
+			}
+
+				.download-info h3 {
+					float: left;
+					font-family: 'Gentona';
+					font-size: 160%;
+					text-transform: uppercase;
+					color: rgb(80, 80, 80);
+					width: 100%;
+					margin-left: 2%;
+				}
+
+				.download-info .line {
+					float: left;
+					width: 5%;
+					height: 5px;
+					background-color: rgb(4, 80, 140);
+					border-radius: 5px;
+					margin-bottom: 30px;
+					margin-left: 2%;
+				}
+
+				.download-info .form-info {
+					float: left;
+					width: 95%;
+					margin-left: 5%;
+					margin-top: 30px;
+				}
+
+					.download-info .form-info .download-file {
+						float: left;
+						width: 100%;
+						height: 50px;
+					}
+
+						.download-file a {
+							font-size: 95%;
+							font-family: 'Century Gothic';
+							text-decoration: none;
+							color: rgb(60, 60, 60);
+						}
+
+						.download-file a img {
+							float: left;
+							margin-right: 10px;
+							margin-top: -7px;
+						}
+
+	/* == DOWNLOADABLE FORM DESIGN ENDS HERE == */
+	/* == CONTACT US DESIGN == */
+
+	.body-container .body-contact {
+		float: left;
+		width: 100%;
+	}
+
+		.body-contact .body-contact-nav {
+			float: left;
+			width: 20%;
+			height: 4110px;
+			padding: 30px 0px;
+			background-color: rgb(4, 80 ,140);
+			border-radius: 5px;
+		}
+
+			.body-contact-nav h4 {
+				float: left;
+				width: 95%;
+				padding: 8px 0px;
+				margin-left: 5%;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(255, 255, 255);
+			}
+
+			.body-contact-nav ul {
+				float: left;
+				width: 90%;
+				margin-left: 10%;
+				list-style: none;
+				margin-top: 20px;
+			}
+
+				.body-contact-nav ul li {
+					padding: 5px 0px;
+				}
+
+				.body-contact-nav a {
+					text-decoration: none;
+					color: rgb(230, 230, 230);
+					text-transform: uppercase;
+				}
+
+				.body-contact-nav a:hover, .body-contact-nav .active {
+					color: rgb(255, 255, 255);
+					font-weight: bold;
+					transition: all 0.2s ease-in-out;
+				}
+
+	.body-contact .body-contact-info {
+		float: left;
+		width: 75%;
+		margin-left: 5%;
+		padding: 20px 0px;
+	}
+
+		.body-contact-info .contact-info {
+			float: left;
+			width: 100%;
+			margin-bottom: 70px;
+		}
+
+			.contact-info h3 {
+				font-family: 'Gentona';
+				font-size: 170%;
+				color: rgb(90, 90, 90);
+				text-transform: uppercase;
+				width: 100%;
+			}
+
+			.contact-info .line {
+				float: left;
+				width: 5%;
+				height: 5px;
+				border-radius: 5px;
+				background-color: rgb(4, 80, 140);
+				margin-bottom: 30px;
+			}
+
+			.contact-info .contact-table {
+				float: left;
+				width: 95%;
+				margin-left: 2.5%;
+				background-color: rgb(250, 250, 250);
+				border-bottom-left-radius: 3px;
+				border-bottom-right-radius: 3px;
+			}
+
+				.contact-table .contact-table-header {
+					float: left;
+					width: 100%;
+					background-color: rgb(4, 80, 140);
+					border-top-left-radius: 3px;
+					border-top-right-radius: 3px;
+				}
+
+					.contact-table-header h4 {
+						float: left;
+						display: inline-block;
+						font-family: 'Gentona';
+						font-size: 120%;
+						text-transform: uppercase;
+						color: rgb(255, 255, 255);
+					}
+
+						.contact-table-header h4:first-child {
+							width: 70%;
+							padding: 8px 0px;
+							padding-left: 3%;
+						}
+
+						.contact-table-header h4:last-child {
+							width: 27%;
+							padding: 8px 0px;
+							text-align: center;
+						}
+
+				.contact-table .contact-table-info {
+					float: left;
+					width: 100%;
+				}
+
+					.contact-table-info .contact {
+						float: left;
+						width: 100%;
+					}
+
+						.contact .contact-person {
+							float: left;
+							width: 70%;
+							padding: 8px 0px;
+							padding-left: 5%;
+						}
+
+							.contact-person p:first-child {
+								font-weight: bold;
+								font-size: 110%;
+								margin-bottom: 5px;
+								margin-left: 0%;
+							}
+
+								.contact-person p {
+									font-size: 90%;
+									margin-left: 6%;
+								}
+
+						.contact .contact-number {
+							float: left;
+							width: 25%;
+							padding: 8px 0px;
+							text-align: center;
+						}
+
+							.contact-number p {
+								font-weight: bold;
+								font-size: 110%;
+							}
+
+	/* == CONTACT US DESIGN ENDS HERE == */
+	/* == APPLICATION FORM DESING == */
+
+	.body-container .body-application {
+		float: left;
+		width: 100%;
+	}
+
+		.body-application .application-nav {
+			float: left;
+			width: 15%;
+			height: 100%;
+			margin: 0px 2.5% 0px 5%;
+		}
+
+			.application-nav a {
+				float: left;
+				width: 90%;
+				padding: 10px 0px;
+				margin: 5px 5%;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-family: 'Gentona';
+				font-size: 120%;
+				color: rgb(120, 120, 120);
+				border: solid 1px rgb(120, 120, 120);
+				border-radius: 100px;
+				transition: all 0.2s ease-in-out;
+				cursor: default;
+			}
+
+			.application-nav .active {
+				background-color: rgb(230, 230, 230);
+				transition: all 0.2s ease-in-out;
+			}
+
+				.application-nav a img {
+					float: left;
+					width: 20%;
+					height: 30px;
+					margin: 0px 5%;
+				}
+
+				.application-nav a p {
+					float: left;
+					width: 55%;
+					height: 30px;
+					margin-top: 2px	;
+					margin-right: 10%;
+					padding-left: 5%;
+				}
+
+		.body-application .application-info {
+			float: left;
+			width: 75%;
+			margin-right: 2.5%;
+		}
+
+			.application-info .info-content {
+				float: left;
+				width: 90%;
+				background-color: rgb(250, 250, 250);
+				border: solid 1px rgb(245, 245, 245);
+				margin-bottom: 10px;
+				border-radius: 3px;
+				padding: 20px 5%;
+			}
+
+				.info-content img {
+					float: right;
+					position: relative;
+					width: 13%;
+					height: 100px;
+					margin-left: 2%;
+				}
+
+				.info-content #position {
+					float: left;
+					width: 85%;
+					margin-top: 20px;
+					margin-bottom: 10px;
+					text-transform: uppercase;
+					font-family: 'Gentona';
+					font-size: 170%;
+					color: rgb(90, 90, 90);
+				}
+
+				.info-content #school {
+					float: left;
+					width: 84%;
+					margin-left: 1%;
+					text-transform: uppercase;
+					font-family: 'Century Gothic';
+					font-weight: bold;
+					color: rgb(4, 80, 140);
+				}
+
+				.info-content #add {
+					float: left;
+					width: 84%;
+					font-size: 85%;
+					margin-left: 1%;
+				}
+
+				.info-content #requirements {
+					float: left;
+					width: 90%;
+					margin: 20px 0px 0px 5%;
+				}
+
+					#requirements p {
+						font-size: 100%;
+						color: rgb(130, 130, 130);
+						font-weight: bold;
+						margin-bottom: 10px;
+					}
+
+					#requirements ul {
+						margin-left: 4%;
+					}
+
+					#requirements li {
+						font-size: 95%;
+						color: rgb(130, 130, 130);
+					}
+
+				.info-content #buttons {
+					float: left;
+					width: 100%;
+					padding-top: 10px;
+					margin-top: 40px;
+					border-top: solid 1px rgb(230, 230, 230);
+				}
+
+					#buttons p {
+						float: left;
+						width: 40%;
+						font-weight: bold;
+						font-size: 110%;
+						color: rgb(100, 100, 100);
+					}
+
+					#buttons button {
+						float: right;
+						width: 15%;
+						padding: 8px 0px;
+						font-family: 'Gentona';
+						font-size: 100%;
+						text-transform: uppercase;
+						border: none;
+						background-color: rgb(4, 80, 140);
+						color: rgb(255, 255, 255);
+						border-radius: 3px;
+					}
+
+	/* == APPLICATION FORM DESIGN ENDS HERE == */
+/* == BODY CONTAINER DESIGN ENDS HERE == */
+
+/* == LOGIN FORM CONTAINER DESIGN == */
+
+.login-form-container {
+	float: left;
+	position: fixed;
+	width: 45%;
+	height: 70%;
+	margin: 7% 27% 0px 27%;
+	border: solid 1px rgb(220, 220, 220);
+	border-radius: 3px;
+	box-shadow: 5px 5px 10px -9px rgb(30, 30, 30);
+}
+
+	.login-form-container .login-one-two:first-child {
+		float: left;
+		width: 40%;
+		height: 100%;
+		background-color: rgb(4, 80, 140);
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+	}
+
+		.login-form-container .login-one-two:first-child .one-two-title {
+			float: left;
+			width: 100%;
+			margin-top: 50px;
+		}
+
+			.login-form-container .login-one-two:first-child .one-two-title img {
+				float: left;
+				width: 20%;
+				height: 45px;
+				margin: 7px 2.5% 0px 2.5%;
+			}
+
+			.login-form-container .login-one-two:first-child .one-two-title h1 {
+				float: left;
+				width: 72%;
+				margin-right: 3%;
+				font-family: 'Gentona';
+				font-size: 125%;
+				line-height: 18px;
+				text-transform: uppercase;
+				color: rgb(255, 255, 255);
+			}
+
+		.login-form-container .login-one-two:first-child .line {
+			float: left;
+			width: 40%;
+			height: 1px;
+			background-color: rgb(200, 200, 200);
+			margin: 40px 30% 50px 30%;
+		}
+
+		.login-form-container .login-one-two:first-child .line-bottom {
+			float: left;
+			width: 15%;
+			height: 1px;
+			background-color: rgb(170, 170, 170);
+			margin: 50px 42.5% 0px 42.5%;
+		}
+
+		.login-form-container .login-one-two:first-child .one-two-info {
+			float: left;
+			width: 100%;
+		}
+
+			.login-form-container .login-one-two:first-child .one-two-info .info-two {
+				float: left;
+				width: 80%;
+				margin: 0px 10% 10px 10%;
+			}
+
+				.login-form-container .login-one-two:first-child .one-two-info .info-two img {
+					float: left;
+					width: 10%;
+					height: 15px;
+				}
+
+				.login-form-container .login-one-two:first-child .one-two-info .info-two p {
+					float: left;
+					width: 75%;
+					margin-left: 5%;
+					font-size: 70%;
+					color: rgb(200, 200, 200);
+				}
+
+	.login-form-container .login-one-two:last-child {
+		float: left;
+		width: 60%;
+		height: 100%;
+	}
+
+		.login-form-container .login-one-two:last-child h3 {
+			font-family: 'Gentona';
+			font-size: 180%;
+			color: rgb(110, 110, 110);
+			text-transform: uppercase;
+			margin: 90px 0px 0px 8%;
+		}
+
+		.login-form-container .login-one-two:last-child .line {
+			float: left;
+			width: 10%;
+			height: 5px;
+			background-color: rgb(4, 80, 140);
+			border-radius: 5px;
+			margin: 0px 0px 40px 8%;
+		}
+
+		.login-form-container .login-one-two:last-child .input-container {
+			float: left;
+			width: 100%;
+		}
+
+			.login-form-container .login-one-two:last-child .input-container .input-form {
+				width: 80%;
+				position: relative;
+				margin: 0px 0px 20px 8%;
+				color: rgb(30, 30, 30);
+			}
+
+				.login-form-container .login-one-two:last-child .input-container .input-form input {
+					width: 90%;
+					height: 35px;
+					font-size: 85%;
+					border: none;
+					border-bottom: solid 2px rgb(150, 150, 150);
+					background-color: transparent;
+					padding-left: 2%;
+					color: rgb(70, 70, 70);
+					margin-left: 5%;
+					font-family: 'Century Gothic';
+				}
+
+				.login-form-container .login-one-two:last-child .input-container .input-form input + label {
+					position: absolute;
+					top: 10px;
+					left: 16px;
+					font-size: 85%;
+					color: rgb(150, 150, 150);
+					transition: all 0.2s ease-in-out;
+					font-family: 'Century Gothic';
+				}
+
+				.login-form-container .login-one-two:last-child .input-container .input-form input:focus {
+					outline: none;
+					border-width: 2px;
+					transition: all 0.2s ease-in-out;
+					border-bottom: solid 2px rgb(4, 80, 140);
+				}
+
+				.login-form-container .login-one-two:last-child .input-container .input-form input:focus + label {
+					top: -15px;
+					color: rgb(4, 80, 140);
+					font-size: 80%;
+					font-weight: bold;
+				}
+
+			.login-form-container .login-one-two:last-child .input-container button {
+				float: left;
+				width: 74%;
+				padding: 10px;
+				border: none;
+				border-radius: 2px;
+				background-color: rgb(4, 80, 140);
+				font-family: 'Gentona';
+				font-size: 130%;
+				color: rgb(255, 255, 255);
+				margin: 0px 0px 0px 11.5%;
+			}
+
+/* == LOGIN FORM CONTAINER DESIGN ENDS HERE == */
+
+/* == EVALUATION FORM DESIGN == */
+
+.evaluation-form {
+	float: left;
+	position: fixed;
+	width: 80%;
+	height: 90%;
+	margin: 2.5% 0px 0px 10%;
+	border: solid 1px rgb(230, 230, 230);
+	border-radius: 3px;
+}
+
+	.evaluation-form .eval-user-info {
+		float: left;
+		width: 100%;
+		height: 30px;
+		background-color: rgb(230, 230, 230);
+		border-bottom: solid 1px rgb(240, 240, 240);
+	}
+
+		.eval-user-info p {
+			float: left;
+			width: 30%;
+			font-size: 90%;
+			margin-top: 5px;
+			margin-left: 2%;
+		}
+
+		.eval-user-info #back {
+			float: left;
+			width: 3%;
+			color: rgb(4, 80, 140);
+			font-size: 120%;
+			padding: 3px 0px;
+			border-top-left-radius: 3px;
+			text-align: center;
+		}
+
+		.eval-user-info #exit {
+			float: right;
+			width: 10%;
+			background-color: rgb(4, 80, 140);
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 90%;
+			padding: 7px 0px;
+			text-align: center;
+			color: rgb(255, 255, 255);
+			border-top-right-radius: 3px;
+		}
+
+	.evaluation-form .eval-title {
+		float: left;
+		width: 80%;
+		margin-left: 10%;
+		margin-bottom: 10px;
+		margin-top: 80px;
+	}
+
+		.eval-title img {
+			float: left;
+			width: 10%;
+			height: 70px;
+			margin: 0px 10% 0px 10%;
+		}
+
+		.eval-title h1 {
+			float: left;
+			font-size: 200%;
+			font-family: 'Gentona';
+			color: rgb(100, 100, 100);
+			text-transform: uppercase;
+			margin: 10px 0px 0px 0px;
+		}
+
+		.evaluation-form .line {
+			float: left;
+			width: 50%;
+			height: 1px;
+			background-color: rgb(200, 200, 200);
+			margin-left: 30%;
+			margin-bottom: 50px;
+		}
+
+	.evaluation-form .eval-options {
+		float: left;
+		width: 80%;
+		margin-left: 10%;
+		padding: 20px 0px;
+		text-align: center;
+	}
+
+		.eval-options a {
+			text-align: center;
+			display: inline-block;
+			width: 25%;
+			text-decoration: none;
+			padding: 30px 0px;
+			font-family: 'Gentona';
+			font-size: 120%;
+			text-transform: uppercase;
+			color: rgb(255, 255, 255);
+			background-color: rgb(4, 80, 140);
+			margin: 10px 15px;
+			border-radius: 3px;
+			transition: all 0.2s ease-in-out;
+		}
+
+		.eval-options a:hover {
+			transform: scale(1.1, 1.1);
+			transition: all 0.2s ease-in-out;
+		}
+
+	.evaluation-form .eval-info {
+		float: left;
+		width: 96%;
+		margin: 30px 2% 0px 2%;
+	}
+
+		.eval-info .eval-info-header {
+			float: left;
+			width: 100%;
+		}
+
+			.eval-info-header h1 {
+				float: left;
+				width: 97%;
+				margin: 0px 0px 0px 3%;
+				font-family: 'Gentona';
+				font-size: 200%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.eval-info-header .line {
+				float: left;
+				width: 5%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				margin-left: 3%;
+				margin-bottom: 15px;
+				border-radius: 10px;
+			}
+
+			.eval-info-header .header-filter {
+				float: left;
+				width: 94%;
+				height: 30px;
+				margin: 0px 3% 5px 3%;
+			}
+
+				.header-filter input {
+					float: left;
+					width: 29%;
+					height: 100%;
+					border: none;
+					border-bottom: solid 2px rgb(180, 180, 180);
+					font-family: 'Century Gothic';
+					font-size: 80%;
+					padding-left: 1%;
+				}
+
+					.header-filter input:focus {
+						outline: none;
+					}
+
+				.header-filter select {
+					float: right;
+					width: 10%;
+					height: 100%;
+					border: none;
+					border-bottom: solid 2px rgb(180, 180, 180);
+					font-family: 'Century Gothic';
+					font-size: 80%;
+				}
+
+					.header-filter select:focus {
+						outline: none;
+					}
+
+		.eval-info .eval-info-content {
+			float: left;
+			width: 94%;
+			height: 400px;
+			margin: 0px 3%;
+			border: solid 1px rgb(240, 240, 240);
+			overflow: scroll;
+			position: relative;
+		}
+
+			.eval-info-content .content-header {
+				float: left;
+				width: 180%;
+				height: 40px;
+				background-color: rgb(240, 240, 240);
+			}
+
+				.content-header .header {
+					float: left;
+					display: inline-block;
+				}
+
+					.content-header .header:first-child {
+						width: 2%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:first-child p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 80%;
+							text-transform: uppercase;
+							margin-top: 12px;
+						}
+
+					.content-header .header:nth-child(2) {
+						width: 20%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(2) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 80%;
+							text-transform: uppercase;
+							margin-top: 12px;
+						}
+
+					.content-header .header:nth-child(3) {
+						width: 25%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(3) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 80%;
+							text-transform: uppercase;
+							margin-top: 12px;
+						}
+
+					.content-header .header:nth-child(4) {
+						width: 7%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(4) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 80%;
+							text-transform: uppercase;
+							margin-top: 12px;
+						}
+
+					.content-header .header:nth-child(5) {
+						width: 3%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(5) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 80%;
+							text-transform: uppercase;
+							margin-top: 12px;
+						}
+
+					.content-header .header:nth-child(6) {
+						width: 5%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(6) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 75%;
+							text-transform: uppercase;
+							margin-top: 5px;
+						}
+
+					.content-header .header:nth-child(7) {
+						width: 5%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(7) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 65%;
+							text-transform: uppercase;
+							margin-top: 1px;
+						}
+
+					.content-header .header:nth-child(8) {
+						width: 5%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(8) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 65%;
+							text-transform: uppercase;
+							margin-top: 1px;
+						}
+
+					.content-header .header:nth-child(9) {
+						width: 6%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(9) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 65%;
+							text-transform: uppercase;
+							margin-top: 1px;
+						}
+
+					.content-header .header:nth-child(10) {
+						width: 5%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(10) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 75%;
+							text-transform: uppercase;
+							margin-top: 5px;
+						}
+
+					.content-header .header:nth-child(11) {
+						width: 5%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(11) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 65%;
+							text-transform: uppercase;
+							margin-top: 1px;
+						}
+
+					.content-header .header:nth-child(12) {
+						width: 5%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(12) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 65%;
+							text-transform: uppercase;
+							margin-top: 1px;
+						}
+
+					.content-header .header:nth-child(13) {
+						width: 3%;
+						height: 100%;
+						border-right: solid 1px rgb(230, 230, 230);
+					}
+
+						.content-header .header:nth-child(13) p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 65%;
+							text-transform: uppercase;
+							margin-top: 1px;
+						}
+
+					.content-header .header:last-child {
+						width: 3%;
+						height: 100%;
+					}
+
+						.content-header .header:last-child p {
+							float: left;
+							width: 100%;
+							text-align: center;
+							font-size: 80%;	
+							text-transform: uppercase;
+							margin-top: 12px;
+						}
+
+			.eval-info-content .content-info {
+				float: left;
+				width: 100%;
+				height: 360px;
+			}
+
+				.content-info .info-container {
+					float: left;
+					width: 180%;
+					height: 30px;
+					border-bottom: solid 1px rgb(230, 230, 230);
+				}
+
+					.info-container .content {
+						float: left;
+						display: inline-block;
+					}
+
+						.info-container .content:first-child {
+							width: 2%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:first-child p {
+								float: left;
+								width: 100%;
+								text-transform: uppercase;
+								text-align: center;
+								font-size: 80%;
+								margin-top: 7px;
+							}
+
+						.info-container .content:nth-child(2) {
+							width: 20%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(2) p {
+								float: left;
+								width: 100%;
+								text-transform: uppercase;
+								text-align: center;
+								font-size: 80%;
+								margin-top: 7px;
+							}
+
+						.info-container .content:nth-child(3) {
+							width: 25%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(3) p {
+								float: left;
+								width: 100%;
+								text-transform: uppercase;
+								text-align: center;
+								font-size: 80%;
+								margin-top: 7px;
+							}
+
+						.info-container .content:nth-child(4) {
+							width: 7%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(4) p {
+								float: left;
+								width: 100%;
+								text-transform: uppercase;
+								text-align: center;
+								font-size: 80%;
+								margin-top: 7px;
+							}
+
+						.info-container .content:nth-child(5) {
+							width: 3%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(5) p {
+								float: left;
+								width: 100%;
+								text-transform: uppercase;
+								text-align: center;
+								font-size: 80%;
+								margin-top: 7px;
+							}
+
+						.info-container .content:nth-child(6) {
+							width: 5%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(6) input {
+								float: left;
+								width: 100%;
+								height: 100%;
+								text-align: center;
+								border: none;
+								font-family: 'Century Gothic';
+								font-size: 80%;
+							}
+
+							.info-container .content:nth-child(6) input:focus {
+								outline: none;
+							}
+
+						.info-container .content:nth-child(7) {
+							width: 5%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(7) input {
+								float: left;
+								width: 100%;
+								height: 100%;
+								text-align: center;
+								border: none;
+								font-family: 'Century Gothic';
+								font-size: 80%;
+							}
+
+							.info-container .content:nth-child(7) input:focus {
+								outline: none;
+							}
+
+						.info-container .content:nth-child(8) {
+							width: 5%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(8) input {
+								float: left;
+								width: 100%;
+								height: 100%;
+								text-align: center;
+								border: none;
+								font-family: 'Century Gothic';
+								font-size: 80%;
+							}
+
+							.info-container .content:nth-child(8) input:focus {
+								outline: none;
+							}
+
+						.info-container .content:nth-child(9) {
+							width: 6%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(9) input {
+								float: left;
+								width: 100%;
+								height: 100%;
+								text-align: center;
+								border: none;
+								font-family: 'Century Gothic';
+								font-size: 80%;
+							}
+
+							.info-container .content:nth-child(9) input:focus {
+								outline: none;
+							}
+
+						.info-container .content:nth-child(10) {
+							width: 5%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(10) input {
+								float: left;
+								width: 100%;
+								height: 100%;
+								text-align: center;
+								border: none;
+								font-family: 'Century Gothic';
+								font-size: 80%;
+							}
+
+							.info-container .content:nth-child(10) input:focus {
+								outline: none;
+							}
+
+						.info-container .content:nth-child(11) {
+							width: 5%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(11) input {
+								float: left;
+								width: 100%;
+								height: 100%;
+								text-align: center;
+								border: none;
+								font-family: 'Century Gothic';
+								font-size: 80%;
+							}
+
+							.info-container .content:nth-child(11) input:focus {
+								outline: none;
+							}
+
+						.info-container .content:nth-child(12) {
+							width: 5%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(12) input {
+								float: left;
+								width: 100%;
+								height: 100%;
+								text-align: center;
+								border: none;
+								font-family: 'Century Gothic';
+								font-size: 80%;
+							}
+
+							.info-container .content:nth-child(12) input:focus {
+								outline: none;
+							}
+
+						.info-container .content:nth-child(13) {
+							width: 3%;
+							height: 100%;
+							border-right: solid 1px rgb(230, 230, 230);
+						}
+
+							.info-container .content:nth-child(13) p {
+								float: left;
+								width: 100%;
+								text-transform: uppercase;
+								text-align: center;
+								font-size: 80%;
+								margin-top: 7px;
+							}
+
+						.info-container .content:last-child {
+							width: 3%;
+							height: 100%;
+						}
+
+							.info-container .content:last-child p {
+								float: left;
+								width: 100%;
+								text-transform: uppercase;
+								text-align: center;
+								font-size: 80%;
+								margin-top: 7px;
+								font-weight: bold;
+							}
+
+/* == EVALUATION FORM DESIGN ENDS HERE == */
+/* == LOGIN & REGISTRATION MODAL == */
+
+.modal:before {
+	content: "";
+	position: fixed;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.6);
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 3;
+}
+
+.modal:target:before {
+	display: block;
+}
+
+	.modal:target .modal-container {
+		-webkit-transform: translate(-50%, 25%);
+		-ms-transform: translate(-50%, 25%);
+		transform: translate(-50%, 25%);
+	}
+
+	.modal .modal-container {
+		position: fixed;
+		background-color: rgb(255, 255, 255);
+		left: 50%;
+		border-radius: 5px;
+		width: 60%;
+		height: 400px;
+		z-index: 4;
+
+		-webkit-transform: translate(-50%, -200%);
+		-ms-transform: translate(-50%, -200%);
+		transform: translate(-50%, -200%);
+
+		-webkit-transition: -webkit-transform 200ms ease-in-out;
+		transition: -webkit-transform 200ms ease-in-out;
+	}
+
+		.modal-container .one-two:first-child {
+			float: left;
+			width: 45%;
+			height: 100%;
+			background-color: rgb(4, 80, 140);
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+
+			.modal-container .one-two:first-child .one-title {
+				float: left;
+				width: 90%;
+				margin: 30px 5% 80px 5%;
+			}
+
+				.one-title img {
+					float: left;
+					width: 25%;
+					height: 70px;
+					margin-right: 5%;
+				}
+
+				.one-title h1 {
+					float: left;
+					width: 60%;
+					margin-top: 10px;
+					font-family: 'Gentona';
+					font-size: 190%;
+					line-height: 30px;
+					text-align: right;
+				}
+
+			.modal-container .one-two:first-child .one-info {
+				float: left;
+				width: 70%;
+				margin: 0px 15%;
+			}
+
+				.one-info .info {
+					float: left;
+					width: 100%;
+					margin-bottom: 15px;
+				}
+
+					.one-info .info img {
+						float: left;
+						width: 10%;
+						height: 20px;
+						margin-right: 5%;
+					}
+
+					.one-info .info p {
+						float: left;
+						width: 85%;
+						font-family: 'Century Gothic';
+						font-size: 90%;
+						color: rgb(240, 240, 240);
+					}
+
+		.modal-container .one-two:last-child {
+			float: left;
+			width: 55%;
+			height: 100%;
+		}	
+
+			.modal-container .one-two:last-child .one-btn {
+				float: left;
+				width: 95%;
+				padding-right: 5%;
+				margin-top: 10px;
+			}
+
+				.one-btn a {
+					float: right;
+					font-size: 140%;
+					color: rgb(60, 60, 60);
+				}
+
+				.one-login-register {
+					float: left;
+					width: 100%;
+					height: 300px;
+					margin-top: 20px;
+				}
+
+					.one-login-register .login-register-nav {
+						float: left;
+						width: 100%;
+						padding: 5px 0px;
+					}
+
+						.login-register-nav a {
+							float: left;
+							display: inline-block;
+							padding: 0px 20px;
+							font-size: 80%;
+							text-decoration: none;
+							font-weight: bold;
+							color: rgb(30, 30, 30);
+							transition: all 0.2s ease-in-out;
+							cursor: pointer;
+						}
+
+						.login-register-nav a:hover {
+							transform: scale(1.1, 1.1);
+							transition: all 0.2s ease-in-out;
+						}
+
+					.one-login-register .login-register-content {
+						float: left;
+						width: 100%;
+						height: 92%;
+						overflow-y: scroll;
+					}
+
+						.login-register-content .content-login {
+							float: left;
+							width: 100%;
+							margin-top: 20px;
+						}
+
+							.content-login h2 {
+								width: 90%;
+								margin-left: 10%;
+								font-family: 'Gentona';
+								font-size: 170%;
+								color: rgb(90, 90, 90);
+							}
+
+							.content-login .line {
+								float: left;
+								width: 10%;
+								height: 5px;
+								background-color: rgb(4, 80, 140);
+								border-radius: 5px;
+								margin-left: 10%;
+							}
+
+							.content-login .input-container {
+								float: left;
+								width: 90%;
+								margin: 30px 5% 0px 5%;
+							}
+
+								.content-login .input-container .input-form {
+									float: left;
+									width: 70%;
+									position: relative;
+									margin: 0px 0px 20px 15%;
+									color: rgb(30, 30, 30);
+								}
+
+									.content-login .input-container .input-form input {
+										float: left;
+										width: 98%;
+										height: 35px;
+										font-size: 80%;
+										border: none;
+										border-bottom: solid 2px rgb(150, 150, 150);
+										background-color: transparent;
+										padding-left: 2%;
+										color: rgb(70, 70, 70);
+										font-family: 'Century Gothic';
+									}
+
+									.content-login .input-container .input-form input + label {
+										position: absolute;
+										top: 10px;
+										left: 5px;
+										font-size: 80%;
+										color: rgb(150, 150, 150);
+										transition: all 0.2s ease-in-out;
+										font-family: 'Century Gothic';
+									}
+
+									.content-login .input-container .input-form input:focus {
+										outline: none;
+										border-width: 2px;
+										transition: all 0.2s ease-in-out;
+										border-bottom: solid 2px rgb(4, 80, 140);
+									}
+
+									.content-login .input-container .input-form input:focus + label {
+										top: -15px;
+										color: rgb(4, 80, 140);
+										font-size: 80%;
+										font-weight: bold;
+									}
+
+									.content-login .input-container button {
+										float: left;
+										width: 70%;
+										padding: 10px 0px;
+										border: none;
+										border-radius: 2px;
+										background-color: rgb(4, 80, 140);
+										font-family: 'Gentona';
+										font-size: 130%;
+										color: rgb(255, 255, 255);
+										margin: 20px 15% 0px 15%;
+									}
+
+						.login-register-content .content-register {
+							float: left;
+							width: 100%;
+							margin-top: 20px;
+						}
+
+							.content-register h2 {
+								width: 90%;
+								margin-left: 10%;
+								font-family: 'Gentona';
+								font-size: 170%;
+								color: rgb(90, 90, 90);
+							}
+
+							.content-register .line {
+								float: left;
+								width: 10%;
+								height: 5px;
+								background-color: rgb(4, 80, 140);
+								border-radius: 5px;
+								margin-left: 10%;
+							}
+
+							.content-register .input-container {
+								float: left;
+								width: 90%;
+								margin: 30px 5% 0px 5%;
+							}
+
+								.content-register .input-container .input-form {
+									float: left;
+									width: 70%;
+									position: relative;
+									margin: 0px 0px 20px 15%;
+									color: rgb(30, 30, 30);
+								}
+
+									.content-register .input-container .input-form input {
+										float: left;
+										width: 98%;
+										height: 35px;
+										font-size: 80%;
+										border: none;
+										border-bottom: solid 2px rgb(150, 150, 150);
+										background-color: transparent;
+										padding-left: 2%;
+										color: rgb(70, 70, 70);
+										font-family: 'Century Gothic';
+									}
+
+									.content-register .input-container .input-form input + label {
+										position: absolute;
+										top: 10px;
+										left: 5px;
+										font-size: 80%;
+										color: rgb(150, 150, 150);
+										transition: all 0.2s ease-in-out;
+										font-family: 'Century Gothic';
+									}
+
+									.content-register .input-container .input-form input:focus {
+										outline: none;
+										border-width: 2px;
+										transition: all 0.2s ease-in-out;
+										border-bottom: solid 2px rgb(4, 80, 140);
+									}
+
+									.content-register .input-container .input-form input:focus + label {
+										top: -15px;
+										color: rgb(4, 80, 140);
+										font-size: 80%;
+										font-weight: bold;
+									}
+
+									.content-register .input-container button {
+										float: left;
+										width: 70%;
+										padding: 10px 0px;
+										border: none;
+										border-radius: 2px;
+										background-color: rgb(4, 80, 140);
+										font-family: 'Gentona';
+										font-size: 130%;
+										color: rgb(255, 255, 255);
+										margin: 20px 15% 0px 15%;
+									}
+
+/* == LOGIN & REGISTRATION MODAL ENDS HERE == */
