@@ -241,8 +241,7 @@ echo json_encode($data);
                                }
 
                            else{
-                                    $sql=$conn->query("INSERT INTO user (UID, EMAIL, PWD,STATUS,ACTIVATION_KEY,IS_ONLINE)
-                                                               VALUES ('TCH-0001', '".$reg_email."', '".$reg_pwd."','0', '".$generatedKey."','0')");
+                                    $sql=$conn->query("call register(".$reg_email."', '".$reg_pwd."','".$generatedKey."')");
                                          // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
                                            $mail->isSMTP();                                      // Set mailer to use SMTP
                                            $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
