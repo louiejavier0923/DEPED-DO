@@ -152,21 +152,22 @@ $(document).ready(function() {
 
     $('.content-register').hide();
     var moreInfoModal = document.getElementById('more-info');
+    var attachFileModal = document.getElementById('attach-file');
 
     $('body')
-    .on('click', '.modal-tab', function() {
-        switch (this.id) {
-            case 'loginBtn':
-                $('.content-login').show();
-                $('.content-register').hide();
-            break;
+      .on('click', '.modal-tab', function() {
+          switch (this.id) {
+              case 'loginBtn':
+                  $('.content-login').show();
+                  $('.content-register').hide();
+              break;
 
-            case 'registerBtn':
-                $('.content-login').hide();
-                $('.content-register').show();
-            break;
-        }
-    })
+              case 'registerBtn':
+                  $('.content-login').hide();
+                  $('.content-register').show();
+              break;
+          }
+      })
         
         .on('click', '#finishBtn', function() {
             $('#applyBtn').hide();
@@ -203,6 +204,18 @@ $(document).ready(function() {
         .on('click', '#editPassBtn', function() {
             $('#okPassBtn').show();
             $('#editPassBtn').hide();
+        })
+
+        .on('click', '#submit_file', function() {
+            attachFileModal.style.display= "block";
+        })
+
+        .on('click', '#cancelFileBtn', function() {
+            attachFileModal.style.display= "none";
+        })
+
+        .on('click', '#okFileBtn', function() {
+            attachFileModal.style.display= "none";
         })
 
     $('#submit_login_btn').click(function() {			

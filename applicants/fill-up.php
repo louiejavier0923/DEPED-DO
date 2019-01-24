@@ -1274,9 +1274,10 @@
 				</section>
 				<section class= "application-btn">
 					<button type= "submit" id="submit_pds">DONE</button>
-					<button type= "submit">ATTACH FILE</button>
+					<button type= "submit" id= "submit_file">ATTACH FILE</button>
 				</section>
 			</section>
 		</section>
+		<?php include '../include/applicant-attach-modal.php';?>
 	</body>
 </html>

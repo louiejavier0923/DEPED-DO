@@ -10,7 +10,7 @@ $mssqldriver = '{SQL Server Native Client 11.0}';
 
 $conn = new PDO("odbc:Driver=$mssqldriver;Server=$servername;Database=$database",$username,$password);
 */
-$conn = new mysqli('localhos:336', 'depeddo', 'P@ssw0rd', 'depeddo');
+$conn = new mysqli('localhost', 'root', '', 'depeddo');
 
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);

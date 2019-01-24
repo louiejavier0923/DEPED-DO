@@ -2211,6 +2211,12 @@ body {
 			transition: all 0.2s ease-in-out;
 		}
 
+		.modal-message img {
+			width: 60%;
+			height: 60%;
+			margin-top: 10px;
+		}
+
 		.modal-message button:focus {
 			outline: none;
 		}
@@ -2232,7 +2238,7 @@ body {
 		.body-container .slider-container {
 			float: left;
 			width: 100%;
-			height: 550px;
+			height: 450px;
 			overflow: hidden;
 			position: relative;
 			background-color: rgb(200, 200, 200);
@@ -2279,13 +2285,14 @@ body {
 
 						.info-latest #news-img {
 							float: left;
-							width: 40%;
+							width: 35%;
 							height: 550px;
+							margin-right: 5%;
 						}
 
 						.info-latest #title {
 							font-family: 'Century Gothic';
-							font-size: 180%;
+							font-size: 150%;
 							width: 50%;
 							margin-left: 3%;
 							color: rgb(60, 60, 60);
@@ -2296,14 +2303,14 @@ body {
 							width: 50%;
 							margin-left: 3%;
 							color: rgb(150, 150, 150);
-							font-size: 95%;
+							font-size: 90%;
 							font-style: italic;
 							margin-bottom: 40px;
 						}
 
 						.info-latest #subtitle {
 							float: left;
-							font-size: 130%;
+							font-size: 110%;
 							width: 50%;
 							margin-left: 3%;
 							color: rgb(60, 60, 60);
@@ -2313,7 +2320,7 @@ body {
 							float: left;
 							width: 50%;
 							margin-left: 3%;
-							font-size: 105%;
+							font-size: 95%;
 							margin-bottom: 30px;
 						}
 
@@ -2321,14 +2328,14 @@ body {
 							float: left;
 							margin-left: 3%;
 							margin-bottom: 40px;
+							font-size: 90%;
 						}
 
 						.info-latest #info-content {
 							float: left;
 							width: 50%;
 							margin-left: 3%;
-							font-size: 100%;
-
+							font-size: 95%;
 						}
 
 				.body-container .past-info {
@@ -2352,11 +2359,13 @@ body {
 							padding: 5px 0px;
 							font-size: 90%;
 							text-align: center;
+							color: rgb(30, 30, 30);
 							background-color: rgb(190, 190, 190);
 							border-top-left-radius: 3px;
 							border-top-right-radius: 3px;
 							margin-bottom: 15px;
 							font-family: 'Century Gothic';
+							font-weight: bold;
 							margin-top: 0;
 							margin-left: 0;
 						}
@@ -2525,10 +2534,11 @@ body {
 
 		.body-container .info-history {
 				float: left;
-				width: 100%;
+				width: 90%;
 				margin-bottom: 40px;
 				border-bottom: solid 1px rgb(230, 230, 230);
 				padding-bottom: 30px;
+				margin-left: 5%;
 			}
 
 				.info-history h2 {
@@ -2541,7 +2551,7 @@ body {
 
 				.info-history .line {
 					float: left;
-					width: 5%;
+					width: 4%;
 					height: 5px;
 					background-color: rgb(4, 80, 140);
 					border-radius: 5px;
@@ -2557,17 +2567,18 @@ body {
 
 					.history-info p {
 						font-family: 'Century Gothic';
-						font-size: 90%;
+						font-size: 85%;
 						color: rgb(110, 110, 110);
 						margin-bottom: 30px;
 					}
 
 			.body-container .info-org-cha {
 				float: left;
-				width: 100%;
+				width: 90%;
 				margin-bottom: 40px;
 				border-bottom: solid 1px rgb(230, 230, 230);
 				padding-bottom: 30px;
+				margin-left: 5%;
 			}
 
 				.info-org-cha h2 {
@@ -2580,7 +2591,7 @@ body {
 
 				.info-org-cha .line {
 					float: left;
-					width: 5%;
+					width: 4%;
 					height: 5px;
 					background-color: rgb(4, 80, 140);
 					border-radius: 5px;
@@ -2689,10 +2700,11 @@ body {
 
 			.body-container .info-mis-vis {
 				float: left;
-				width: 100%;
+				width: 90%;
 				margin-bottom: 40px;
 				border-bottom: solid 1px rgb(230, 230, 230);
 				padding-bottom: 30px;
+				margin-left: 5%;
 			}
 
 				.info-mis-vis .mis-vis-two {
@@ -2711,7 +2723,7 @@ body {
 
 					.mis-vis-two .line {
 						float: left;
-						width: 5%;
+						width: 4%;
 						height: 5px;
 						background-color: rgb(4, 80, 140);
 						border-radius: 5px;
@@ -2727,7 +2739,7 @@ body {
 
 						.vis-info p, .mis-info p {
 							font-family: 'Century Gothic';
-							font-size: 95%;
+							font-size: 85%;
 							color: rgb(110, 110, 110);
 							margin-bottom: 30px;
 						}
@@ -2738,16 +2750,17 @@ body {
 
 						.mis-info ul li {
 							font-family: 'Century Gothic';
-							font-size: 100%;
+							font-size: 85%;
 							color: rgb(110, 110, 110);
 						}
 
 			.body-container .info-citi-char {
 				float: left;
-				width: 100%;
+				width: 90%;
 				margin-bottom: 40px;
 				border-bottom: solid 1px rgb(230, 230, 230);
 				padding-bottom: 30px;
+				margin-left: 5%;
 			}
 
 				.info-citi-char h2 {
@@ -2760,7 +2773,7 @@ body {
 
 				.info-citi-char .line {
 					float: left;
-					width: 5%;
+					width: 4%;
 					height: 5px;
 					background-color: rgb(4, 80, 140);
 					border-radius: 5px;
@@ -2776,7 +2789,7 @@ body {
 
 					.citi-char-info p {
 						font-family: 'Century Gothic';
-						font-size: 95%;
+						font-size: 85%;
 						color: rgb(110, 110, 110);
 						margin-bottom: 30px;
 					}
@@ -2787,7 +2800,7 @@ body {
 
 					.citi-char-info ul li {
 						font-family: 'Century Gothic';
-						font-size: 95%;
+						font-size: 85%;
 					}
 
 					.citi-char-info ul li a {
@@ -2797,10 +2810,11 @@ body {
 
 			.body-container .info-inno {
 				float: left;
-				width: 100%;
+				width: 90%;
 				margin-bottom: 40px;
 				border-bottom: solid 1px rgb(230, 230, 230);
 				padding-bottom: 30px;
+				margin-left: 5%;
 			}
 
 			.info-inno h2 {
@@ -2813,7 +2827,7 @@ body {
 
 				.info-inno .line {
 					float: left;
-					width: 5%;
+					width: 4%;
 					height: 5px;
 					background-color: rgb(4, 80, 140);
 					border-radius: 5px;
@@ -2843,7 +2857,7 @@ body {
 
 						.inno-info-many p {
 							font-family: 'Century Gothic';
-							font-size: 95%;
+							font-size: 85%;
 							color: rgb(110, 110, 110);
 							margin-bottom: 20px;
 						}
@@ -2855,7 +2869,7 @@ body {
 
 						.inno-info-many ul li {
 							font-family: 'Century Gothic';
-							font-size: 100%;
+							font-size: 85%;
 							color: rgb(110, 110, 110);
 						}
 
@@ -3159,3 +3173,104 @@ body {
 				}
 
 /* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
+/* == APPLICANT`S ATTACH FILE MODAL == */
+
+.attach-container {
+	float: left;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;
+}
+
+	.attach-container .attach-file-container {
+		float: left;
+		width: 40%;
+		height: 350px;
+		background-color: rgb(255, 255, 255);
+		margin: 10% 30%;
+		border-radius: 5px;
+	}
+
+		.attach-file-container h2 {
+			float: left;
+			width: 90%;
+			margin-left: 5%;
+			margin-top: 30px;
+			font-family: 'Gentona';
+			font-size: 150%;
+			text-transform: uppercase;
+			color: rgb(100, 100, 100);
+		}
+
+		.attach-file-container .line {
+			float: left;
+			width: 7%;
+			height: 5px;
+			background-color: rgb(4, 80, 140);
+			border-radius: 3px;
+			margin-bottom: 60px;
+			margin-left: 5%;
+		}
+
+		.attach-file-container .input-file {
+			float: left;
+			width: 80%;
+			margin-left: 10%;
+			margin-bottom: 30px;
+		}
+
+			.input-file input {
+				float: left;
+				width: 50%;
+				margin-left: 5%;
+				font-family: 'Century Gothic';
+				font-size: 85%;
+			}
+
+			.input-file label {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				font-size: 70%;
+				text-transform: uppercase;
+				color: rgb(150, 150, 150);
+				font-weight: bold;
+				font-style: italic;
+				margin-top: 10px;
+			}
+
+		.attach-file-container .input-button {
+			float: left;
+			width: 70%;
+			margin-left: 15%;
+			text-align: right;
+			margin-top: 20px;
+		}
+
+			.input-button button {
+				width: 25%;
+				padding: 12px 0px;
+				margin-left: 2.5%;
+				border: none;
+				border-radius: 5px;
+				font-family: 'Gentona';
+				font-size: 90%;
+			}
+
+				.input-button button:first-child {
+					background-color: rgb(255, 255, 255);
+					border: solid 1px rgb(4, 80, 140);
+					color: rgb(4, 80, 140);
+				}
+
+				.input-button button:last-child {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+				}
+
+/* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */
