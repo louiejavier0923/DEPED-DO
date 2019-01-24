@@ -3,6 +3,7 @@ function login(action = 'login_function')
       {
       var login_email = $('#login_email').val();
       var login_password = $('#login_password').val();
+
                  
         $.ajax({
                url:"DOADMIN/credentials/model.php",
@@ -43,7 +44,14 @@ function register(action = 'register_function')
       var reg_email = $('#reg_email').val();
       var reg_pass = $('#reg_pwd').val();
        var reg_confirm_pass = $('#reg_confirm_pwd').val();
-     
+
+
+       if(reg_email==''&& reg_pass==''){
+               alert('empty fields');
+       }
+       else{
+        $('#loading').css("display","block");
+        $('.loading-container').css("display","block");
                  
         $.ajax({
                url:"DOADMIN/credentials/model.php",
@@ -53,9 +61,11 @@ function register(action = 'register_function')
                    success:function(data){
                                          
                                             alert(data.message);
+                                             $('#loading').css("display","none");
+                                             $('.loading-container').css("display","none");
                                          }    
                });
-  
+            }
 
         }
 
@@ -80,8 +90,8 @@ function register(action = 'register_function')
             var placeofbirth = $('#pds_placeofbirth').val();
             var gender = $("input[name='gender']:checked"). val();
             var civilstatus = $("input[name='status']:checked"). val();
-            var placeofbirth = $('#pds_height').val();
-            var placeofbirth = $('#pds_width').val();
+            var heigh = $('#pds_height').val();
+            var width = $('#pds_width').val();
             var placeofbirth = $('#pds_bloodtype').val();
             var placeofbirth = $('#pds_gsisno').val();
             var placeofbirth = $('#pds_pagibigno').val();
@@ -108,6 +118,7 @@ function register(action = 'register_function')
                 var placeofbirth = $('#pds_telno').val();
                 var placeofbirth = $('#pds_mobileno').val();
                 var placeofbirth = $('#pds_emailaddress').val();
+                /*
                  var placeofbirth = $('#pds_spousesurname').val();
                   var placeofbirth = $('#pds_spousefirstname').val();
                    var placeofbirth = $('#pds_spousenameextension').val();
@@ -122,21 +133,13 @@ function register(action = 'register_function')
                             var placeofbirth = $('#pds_fathermiddlename').val();
                              var placeofbirth = $('#pds_mothersurname').val();
                              var placeofbirth = $('#pds_motherfirstname').val();
-                             var placeofbirth = $('#pds_mothersnameextension').val();
-                             var placeofbirth = $('#pds_mothersmiddlename').val();
+                        var placeofbirth = $('#pds_mothersnameextension').val();
+                    var placeofbirth = $('#pds_mothersmiddlename').val();
+
+               var placeofbirth = $('#pds_mothersmiddlename').val();
+               */
                              
-
-        
-
-        $.ajax({
-               url:"../DOADMIN/credentials/model.php",
-               method:"POST",
-               data:{action:action},
-               dataType:"json",
-                   success:function(data){
-                                            window.location.href= "finish.php";
-                                         }    
-               });
+                    alert(firstname);
   
 
         }

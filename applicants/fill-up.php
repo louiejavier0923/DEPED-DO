@@ -421,7 +421,7 @@
 									<section class= "family-tbl-info">
 										<section class= "content-info">
 											<section class= "info">
-												<input type= "text">
+												<input type= "text" id="pds_children1">
 											</section>
 											<section class= "info">
 												<input type= "date">

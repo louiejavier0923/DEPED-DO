@@ -241,7 +241,7 @@ echo json_encode($data);
                                }
 
                            else{
-                                    $sql=$conn->query("call register(".$reg_email."', '".$reg_pwd."','".$generatedKey."')");
+                                    $sql=$conn->query("CALL `register`('".$reg_email."', '".$reg_pwd."', '".$generatedKey."')");
                                          // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
                                            $mail->isSMTP();                                      // Set mailer to use SMTP
                                            $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -261,7 +261,7 @@ echo json_encode($data);
                                            //Attachments
                                            //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
                                            //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-                                           $verification_link="http://localhost:8899/new/DOADMIN/credentials/activate.php?email=$reg_email&key=$generatedKey";
+                                           $verification_link="http://localhost:8899/DEPED-DO/DOADMIN/credentials/activate.php?email=$reg_email&key=$generatedKey";
                                            //Content
                                            $mail->isHTML(true);                                  // Set email format to HTML
                                            $mail->Subject = 'Here is the subject';
@@ -276,7 +276,7 @@ echo json_encode($data);
                                           else{
                                                   $output='successful inserted';
                                           }
-                                    $output='successful inserted';
+                                  
                                     
                                       
                                }
