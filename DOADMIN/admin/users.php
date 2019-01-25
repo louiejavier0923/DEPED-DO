@@ -52,7 +52,8 @@
               <table id="example1" class="table table-bordered">
                 <thead>
                   <th class="hidden"></th>
-                  <th>UID</th>
+                  <th>No.</th>
+                  <th>FULL NAME</th>
                   <th>EMAIL</th>
                   <th>STATUS</th>
                   <th>ISONLINE</th>
@@ -61,8 +62,9 @@
                 </thead>
                 <tbody class="tbl_body">
                   <?php
-                    $sql = "SELECT * from user";
+                    $sql = "SELECT u.UID as 'UID', concat(p.FIRSTNAME,' ',p.MIDDLENAME,' ',p.LASTNAME,' ',p.EXTENSION_NAME,' ') as 'fullname', u.EMAIL as 'EMAIL', u.STATUS as 'STATUS', u.IS_ONLINE as 'IS_ONLINE' FROM personal_info as p INNER JOIN user as u ON p.UID = u.UID";
                     $query = $conn->query($sql);
+					$NO = 1;
                     while($row = $query->fetch_assoc()){
                       $online = $row['IS_ONLINE'];
                       switch ($online) {
@@ -79,7 +81,8 @@
                       echo "
                         <tr>
                           <td class='hidden'></td>
-                          <td>".$row['UID']."</td>
+                          <td>".$NO."</td>
+                          <td>".$row['fullname']."</td>
                           <td>".$row['EMAIL']."</td>
                           <td>".$status."</td>
                           <td>".$online."</td>
@@ -89,6 +92,7 @@
                           </td>
                         </tr>
                       ";
+					  $NO+=1;
                     }
                   ?>
                 </tbody>
@@ -105,10 +109,48 @@
 </div>
 <?php include 'includes/scripts.php'; ?>
 <script>
+
 $(function(){
- 
-
-
+	
+	$('#pds_btn').click(function(e){
+		$('#view_pds').modal('show');
+	});
+	
+	$('#update-user').click(function(e){
+		action='update_user_function';
+		id = $(this).attr("data-id");
+		email =$('#email_edit').val(); 
+		pass =$('#password_edit').val(); 
+		repass =$('#repassword_edit').val(); 
+		status =$('#status_edit option:selected').text();
+		if(status==='ACTIVATE'){
+			status = '1'
+		}else{
+			status = '0'
+		}
+		
+		if(pass===repass){
+			$.ajax({
+				type: 'POST',
+				url: '../credentials/model.php',
+				data: {action:action,email:email,pass:pass,status:status,id:id},
+				dataType: 'json',
+				success: function(response){
+					if(response.e==='success'){
+						alert('updated');
+						$('#edit').modal('hide');
+						//$("#reload").load(location.href + " #reload>*", "");
+					}else{
+						alert('e');
+					}
+					
+				}
+			});
+		} else{
+			alert('password doesnt match');
+		}
+		
+	});
 
   $('.edit').click(function(e){
     e.preventDefault();
@@ -126,6 +168,7 @@ $(function(){
              $('#email_edit').val(response.email); 
              $('#password_edit').val(response.password); 
              $('#status_edit').val(response.status); 
+			 $('#update-user').attr('data-id', id);
     } 
   });
   });
