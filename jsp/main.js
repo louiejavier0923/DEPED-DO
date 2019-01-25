@@ -53,18 +53,7 @@ function register(action = 'register_function')
         $('#loading').css("display","block");
         $('.loading-container').css("display","block");
                  
-        $.ajax({
-               url:"DOADMIN/credentials/model.php",
-               method:"POST",
-               data:{action:action,email:reg_email,pwd:reg_pass,cpwd:reg_confirm_pass},
-               dataType:"json",
-                   success:function(data){
-                                         
-                                            alert(data.message);
-                                             $('#loading').css("display","none");
-                                             $('.loading-container').css("display","none");
-                                         }    
-               });
+      
             }
 
         }
@@ -89,35 +78,55 @@ function register(action = 'register_function')
              var dateofbirth = $('#pds_dateofbirth').val();
             var placeofbirth = $('#pds_placeofbirth').val();
             var gender = $("input[name='gender']:checked"). val();
-            var civilstatus = $("input[name='status']:checked"). val();
-            var heigh = $('#pds_height').val();
+            var civilstatus = $("input[name='civil']:checked"). val();
+            var height = $('#pds_height').val();
             var width = $('#pds_width').val();
-            var placeofbirth = $('#pds_bloodtype').val();
-            var placeofbirth = $('#pds_gsisno').val();
-            var placeofbirth = $('#pds_pagibigno').val();
-            var placeofbirth = $('#pds_philhealthno').val();
-            var placeofbirth = $('#pds_sssno').val();
-            var placeofbirth = $('#pds_tinno').val();
-            var placeofbirth = $('#pds_agencyemployee').val();
-            var civilstatus = $("input[name='citizenship']:checked"). val();
-            var placeofbirth = $('#pds_country').val();
-             var placeofbirth = $('#pds_rhouseblk').val();
-             var placeofbirth = $('#pds_rstreet').val();
-             var placeofbirth = $('#pds_rsubdivision').val();
-             var placeofbirth = $('#pds_rmunicipality').val();
-             var placeofbirth = $('#pds_rprovince').val();
-             var placeofbirth = $('#pds_rbarangay').val();
-             var placeofbirth = $('#pds_rzipcode').val();
-             var placeofbirth = $('#pds_phouseblk').val();
-             var placeofbirth = $('#pds_pstreet').val();
-             var placeofbirth = $('#pds_psubdivision').val();
-             var placeofbirth = $('#pds_pbarangay').val();
-              var placeofbirth = $('#pds_pmunicipality').val();
-               var placeofbirth = $('#pds_pprovince').val();
-                var placeofbirth = $('#pds_pzipcode').val();
-                var placeofbirth = $('#pds_telno').val();
-                var placeofbirth = $('#pds_mobileno').val();
-                var placeofbirth = $('#pds_emailaddress').val();
+            var bloodtype = $('#pds_bloodtype').val();
+            var gsis = $('#pds_gsisno').val();
+            var pagibig = $('#pds_pagibigno').val();
+            var philhealth = $('#pds_philhealthno').val();
+            var sssno = $('#pds_sssno').val();
+            var tinno = $('#pds_tinno').val();
+            var agencyemployee = $('#pds_agencyemployee').val();
+            var citizenship = $("input[name='citi']:checked").val();
+            var country = $('#pds_country').val();
+             var rhouseblk = $('#pds_rhouseblk').val();
+             var rstreet = $('#pds_rstreet').val();
+             var rsubdivsion = $('#pds_rsubdivision').val();
+             var rmunicipality = $('#pds_rmunicipality').val();
+             var rprovince = $('#pds_rprovince').val();
+             var rbarangay = $('#pds_rbarangay').val();
+             var rzipcode = $('#pds_rzipcode').val();
+             var phouseblk = $('#pds_phouseblk').val();
+             var pstreet = $('#pds_pstreet').val();
+             var psubdivision = $('#pds_psubdivision').val();
+             var pbarangay = $('#pds_pbarangay').val();
+              var pmunicipality = $('#pds_pmunicipality').val();
+               var pprovince = $('#pds_pprovince').val();
+                var pzipcode = $('#pds_pzipcode').val();
+                var ptelno = $('#pds_telno').val();
+                var pmobileno = $('#pds_mobileno').val();
+                var pemailaddress = $('#pds_emailaddress').val();
+
+                $.ajax({
+               url:"../DOADMIN/credentials/model.php",
+               method:"POST",
+              data:{action:action, 
+                firstname:firstname,
+               surname:surname,
+               middlename:middlename,
+               nameextension:nameextension,
+               dateofbirth:dateofbirth,
+               placeofbirth:placeofbirth,
+                civilstatus,civilstatus     
+              },
+               dataType:"json",
+                   success:function(data){
+                           
+                                      alert(civilstatus);   
+                                      }       
+                          });
+              }
                 /*
                  var placeofbirth = $('#pds_spousesurname').val();
                   var placeofbirth = $('#pds_spousefirstname').val();
@@ -137,12 +146,81 @@ function register(action = 'register_function')
                     var placeofbirth = $('#pds_mothersmiddlename').val();
 
                var placeofbirth = $('#pds_mothersmiddlename').val();
-               */
-                             
-                    alert(firstname);
+               
+              
+               data:{
+                action:action,
+               firstname:firstname,
+               surname:surname,
+               middlename:middlename,
+               nameextension:nameextension,
+               dateofbirth:dateofbirth,
+               placeofbirth:placeofbirth,
+               gender:gender,
+              civilstatus:civilstatus,
+              height:height,
+              width:width,
+              bloodtype:bloodtype,
+              gsis:gsis,
+              pagibig:pagibig,
+              philhealth:philhealth,
+              sssno:sssno,
+              tinno:tinno,
+              agencyemployee:agencyemployee,
+              citizenship:citizenship,
+              country:country,
+              rhouseblk:rhouseblk,
+              rstreet:rstreet,
+              rsubdivsion:rsubdivsion,
+              rmunicipality:rmunicipality,
+              rprovince:rprovince,
+              rbarangay:rbarangay,
+              rzipcode:rzipcode,
+              phouseblk:phouseblk,
+              pstreet:pstreet,
+              psubdivision:psubdivision,
+              pbarangay:pbarangay,
+              pmunicipality:pmunicipality,
+              pprovince:pprovince,
+              pzipcode:pzipcode,
+              ptelno:ptelno,
+              pmobileno:pmobileno,
+              pemailaddress:pemailaddress
+                },
+                     
+        $.ajax({
+               url:"DOADMIN/credentials/model.php",
+               method:"POST",
+               data:{action:action,email:login_email,pwd:login_password},
+               dataType:"json",
+                   success:function(data){
+                                         
+                             switch(data.message){
+                                                
+                                    case 'successful':
+                                          window.location.href='applicants/home.php';
+                                    break;
+
+                                    case 'redirect':
+                                          alert(data.message);
+                                    break;
+
+                                    default:
+                                          alert(data.message);
+                                    break;
+                                                 }
+                                           
+                                                
+ 
+                                                  
+                                     
+                                         }
+                                                
+                          });
+                          */
   
 
-        }
+        
 
 
 

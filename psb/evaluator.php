@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 
+<?php
+
+session_start();
+
+if(!isset($_SESSION['ID'])){
+	header('location:../evaluator-login-form.php');
+}
+$id = $_SESSION['ID'];
+
+?>
+
 <html>
 	<head>
-		<title>Schools Division Office</title>
-		<meta name= "viewport" content= "width=device-width, initia-scale= 1" />
+		<title>Schools Division Office | PSB</title>
+		<meta name= "viewport" content= "width=device-width, initial-scale=1" />
+		<link rel="icon" href="../img/logo.png"/>
 
 		<!-- CSS Libraries -->
 		<link rel= "stylesheet" href= "../css/animate.min.css" type= "text/css" />
@@ -14,28 +26,25 @@
 		<script typ= "text/javascript" src= "../jsp/angular.min.js"></script>
 
 		<!-- Custom CSS -->
-		<link rel= "stylesheet" href= "../css/main.css" type= "text/css" />
+		<link rel= "stylesheet" href="../css/main.css" type= "text/css" />
 		<link rel= "stylesheet" href="../RES/PSb-RESOURCES/CSS/evaluator.css" type= "text/css" />
 		
-		<!-- Custom Javascripts -->
-		<script src="../jsp/evaluator.js"></script>
-
 	</head>
 
 	<body>
 		<section class= "evaluation-form">
-			<section class= "eval-user-info">
-				<a href= "evaluator-main.php" id= "back"><i class="fa fa-arrow-left"></i></a>
-				<p>Louie Samson Javier - Personnel</p>
-				<a href= "../login-form.php" id= "exit">Log-out</a>
+			<section class= "eval-user-info" name="<?php echo $id;?>">
+				<a href="evaluator-main.php" id="back"><i class="fa fa-arrow-left"></i></a>
+				<p id="evaluator_name"></p>
+				<a id="exit">Log-out</a>
 			</section>
 			<section class= "eval-info">
 				<section class= "eval-info-header">
-					<h1>Experience</h1>
+					<h1 class="evaluator-criteria"><?php echo $_SESSION['CRITERIA'];?></h1>
 					<div class= "line"></div>
 					<section class= "header-filter">
-						<input type= "text" placeholder= "Search ....">
-						<select>
+						<input type= "text" placeholder= "Search ...." class="applicant-filters" id="applicant_namesearch">
+						<select class="applicant-filters" id="published_vacancy_select">
 							<option>A - Z</option>
 							<option>Z - A</option>
 						</select>
@@ -53,11 +62,11 @@
 							<p>Address</p>
 						</section>
 						<section class= "header">
-							<p>Contact No.</p>
+							<p>Email Address</p>
 						</section>
-						<section class= "header">
+						<!-- <section class= "header">
 							<p>Age</p>
-						</section>
+						</section> -->
 						<section class= "header">
 							<p>Education<br>20%</p>
 						</section>
@@ -68,7 +77,7 @@
 							<p>LET / PBET<br>Rating<br>15%</p>
 						</section>
 						<section class= "header">
-							<p>Specialized<br>Training / Skills<br>10%</p>
+							<p>Specialized<br>Training / Skills - 10%</p>
 						</section>
 						<section class= "header">
 							<p>Interview<br>15%</p>
@@ -77,7 +86,7 @@
 							<p>Demo<br>Teaching<br>15%</p>
 						</section>
 						<section class= "header">
-							<p>English Comm<br>Skills<br>15%</p>
+							<p>English Comm.<br>Skills - 15%</p>
 						</section>
 						<section class= "header">
 							<p>Total<br>Score<br>100%</p>
@@ -87,7 +96,7 @@
 						</section> -->
 					</section>
 					<section class= "content-info">
-						<section class= "info-container">
+						<!-- <section class= "info-container">
 							<section class= "content">
 								<p>1</p>
 							</section>
@@ -127,13 +136,27 @@
 							<section class= "content">
 								<p>98</p>
 							</section>
-							<!-- <section class= "content">
+							<section class= "content">
 								<p>1</p>
-							</section> -->
-						</section>
+							</section>
+						</section> -->
 					</section>
 				</section>
+
+				<section class="submit">
+
+					<button>SAVE</button>
+					
+				</section>
+
 			</section>
+
 		</section>
+
+
+<!-- Custom Javascripts -->
+<script src="../RES/PSb-RESOURCES/JS/functions.js"></script>
+<script src="../RES/PSb-RESOURCES/JS/evaluate.js"></script>
+
 	</body>
 </html>
