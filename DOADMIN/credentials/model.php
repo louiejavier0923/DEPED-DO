@@ -289,8 +289,20 @@ echo json_encode($data);
   break;
 
   case 'insert_pds_info':
+ 
               $output='';
               $output='qweq';
+                $firstname = $_POST['firstname'];
+                 $surname = $_POST['surname'];
+                  $middlename = $_POST['middlename'];
+                   $nameextension = $_POST['nameextension'];
+                    $dateofbirth = $_POST['dateofbirth'];
+                     $placeofbirth = $_POST['placeofbirth'];
+                      $gender = $_POST['gender'];
+                      
+
+
+
 
               
            $data = array(  
