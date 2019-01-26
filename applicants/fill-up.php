@@ -1279,5 +1279,6 @@
 			</section>
 		</section>
 		<?php include '../include/applicant-attach-modal.php';?>
+		<?php include '../include/applicant-choosefile-modal.php';?>
 	</body>
 </html>
