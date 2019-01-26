@@ -153,6 +153,7 @@ $(document).ready(function() {
     $('.content-register').hide();
     var moreInfoModal = document.getElementById('more-info');
     var attachFileModal = document.getElementById('attach-file');
+    var loginRegisterModal = document.getElementById('modal-login-register');
 
     $('body')
       .on('click', '.modal-tab', function() {
@@ -186,6 +187,9 @@ $(document).ready(function() {
             if (e.target == moreInfoModal) {
                 moreInfoModal.style.display= "none";
             }
+            else if (e.target == loginRegisterModal) {
+                loginRegisterModal.style.display= "none";
+            }
         })
 
         .on('click', '#accSettingBtn', function() {
@@ -214,8 +218,20 @@ $(document).ready(function() {
             attachFileModal.style.display= "none";
         })
 
-        .on('click', '#okFileBtn', function() {
+        .on('click', '#okFileBtn', function () {
             attachFileModal.style.display= "none";
+        })
+
+        .on('click', '#accBtn', function () {
+            loginRegisterModal.style.display= "block";
+        })
+
+        .on('click', "#joinBtn", function() {
+            loginRegisterModal.style.display= "block";
+        })
+
+        .on('click', '#closeLogin', function() {
+          loginRegisterModal.style.display= "none";
         })
 
     $('#submit_login_btn').click(function() {			

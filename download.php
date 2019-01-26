@@ -17,9 +17,6 @@
 		</section>
 		<section class= "body-container">
 			<section class="body-download">
-				<section class="body-download-nav">
-					
-				</section>
 				<section class="body-download-info">
 					<section class= "download-info">
 						<h3>Administrative Office</h3>
@@ -333,7 +330,7 @@
 		<section class= "footer-container">
 			<?php include 'include/footer-container.php';?>
         </section>
-        <section class= "modal" id= "login-register-modal">
+        <section class= "modal-login-register" id= "modal-login-register">
         	<?php include 'include/login-register-modal.php';?>
         </section>
 	</body>
