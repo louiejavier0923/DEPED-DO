@@ -220,6 +220,7 @@ $(document).ready(function() {
     var attachFileModal = document.getElementById('attach-file');
     var loginRegisterModal = document.getElementById('modal-login-register');
     var responsiveNav = document.getElementById('header-nav-responsive');
+    var chooseFileModal = document.getElementById('attach-categ');
 
     $('body')
       .on('click', '.modal-tab', function() {
@@ -281,11 +282,15 @@ $(document).ready(function() {
         })
 
         .on('click', '#submit_file', function() {
-            attachFileModal.style.display= "block";
+            chooseFileModal.style.display= "block";
         })
 
         .on('click', '#cancelFileBtn', function() {
-            attachFileModal.style.display= "none";
+            chooseFileModal.style.display= "none";
+        })
+
+        .on('click', '#exitFileBtn', function() {
+          chooseFileModal.style.display= "none";
         })
 
         .on('click', '#okFileBtn', function () {
@@ -306,6 +311,14 @@ $(document).ready(function() {
 
         .on('click', '#burgerBtn', function() {
           responsiveNav.style.display= "block";
+        })
+
+        .on('click', '#seminarsBtn', function() {
+          attachFileModal.style.display= "block";
+        })
+
+        .on('click', '#backFileBtn', function() {
+          attachFileModal.style.display= "none";
         })
 
     $('#submit_login_btn').click(function() {			
