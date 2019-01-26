@@ -23,7 +23,7 @@
        <div class='alert alert-success alert-dismissible'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
               <h4><i class='icon fa fa-check'></i> Success!</h4>
-               Sending
+          
             </div>
       <?php
         if(isset($_SESSION['error'])){
@@ -51,7 +51,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header with-border">
-              <a href="" id="appointment" data-toggle="modal" class="btn btn-primary btn-sm btn-flat">APPOINTMENT</a>
+        
                 <a href="" id="unselect" style="display: none;" data-toggle="modal" class="btn btn-danger btn-sm btn-flat"></a>
             </div>
             <div class="box-body">
@@ -67,7 +67,7 @@
                 </thead>
                 <tbody>
                   <?php
-                    $sql = "SELECT * FROM publish_vacancy";
+                    $sql = "SELECT * FROM publish_vacancy WHERE APP_ISSET = '0'";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       echo "
@@ -97,6 +97,10 @@
                   ?>
                 </tbody>
               </table>
+              <div class="box-header with-border">
+              <a href="" id="appointment" data-toggle="modal" class="btn btn-primary btn-sm btn-flat">APPOINTMENT</a>
+               
+            </div>
             </div>
           </div>
         </div>
@@ -118,22 +122,33 @@ $(function(){
               var id = $tr.find("td:nth-child(3) option:selected").val();
               return id;
               }).toArray();
+
+           var sids = $("#example1 tr:has(input:checked)").map(function() {
+              var $tr = $(this);
+              var id = $tr.find("td:nth-child(2)").text();
+              return id;
+              }).toArray();
+
               if(ids==''){
                  alert('no selected data');
               }
               else{
-                        alert(ids);
+
+                       alert(sids);
                          $.ajax({
                              type: 'POST',
                              url: '../credentials/model.php',
-                             data: {action:'set_appointment'},
+                             data: {action:'set_appointment',uid:ids},
                              dataType: 'json',
                              success: function(response){
-           
-                                              alert(response.message);
+                                            switch(response.message){
+                                              case 'success':
+                                              $('.alert-success').html(response.message);
+                                              break;
+                                            }
                                                  
-                            }
-               });
+                                 }
+                         });
               }
      
   });
@@ -150,16 +165,19 @@ $(".teachers-dropdown").change(function()
                {
            
                   var myid = $(this).data('id');
-                  var count = $("[type='checkbox']:checked").length+1;
+                  var count = $("[type='checkbox']:checked").length;
                    $(".teachers-dropdown  option").attr("hidden",false); //enable everything
-                      $("#unselect").css('display','block') 
-                   $("#unselect").html("DESELECT ALL"+"("+count+")"); 
+                   $("#unselect").css('display','block') 
+                 
                    $(':checkbox[value=' + myid + ']').prop('checked', true);
-                   
+                   CountSelected();
                    DisableOptions(); //disable selected values
 
                 });
-
+function CountSelected(){
+   var count = $("[type='checkbox']:checked").length;
+     $("#unselect").html("DESELECT ALL"+"("+count+")"); 
+}
 function DisableOptions()
 {
     var arr=[];
@@ -200,7 +218,7 @@ function applicants_list(action='applicants_list'){
     success: function(response){
            
                  
-                $('.teachers-dropdown').html(response);   
+                $('.teachers-dropdown').html(response.message);   
                             }
                });
   }
