@@ -55,7 +55,7 @@
                 </thead>
                 <tbody>
                   <?php
-                    $sql = "SELECT * FROM publish_vacancy";
+                    $sql = "SELECT * FROM publish_vacancy ORDER BY NO DESC";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       echo "

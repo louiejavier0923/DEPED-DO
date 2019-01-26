@@ -60,7 +60,7 @@
              <h3>12</h3>
               
 
-              <p>Total Employees</p>
+              <p>Total Applicants</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-stalker"></i>
@@ -73,10 +73,10 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-             <h3>10<sup style='font-size: 20px'>%</sup></h3>
+             <h3>10<sup style='font-size: 20px'></sup></h3>
               
           
-              <p>On Time Percentage</p>
+              <p>Total Evaluated  applicants  12/100</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
@@ -108,7 +108,7 @@
              <h3>23</h3>
               
 
-              <p>Late Today</p>
+              <p></p>
             </div>
             <div class="icon">
               <i class="ion ion-alert-circled"></i>

@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 
+<?php
+
+session_start();
+
+if(!isset($_SESSION['ID'])){
+	header('location:../evaluator-login-form.php');
+}
+$id = $_SESSION['ID'];
+
+?>
+
 <html>
 	<head>
 		<title>Schools Division Office</title>
 		<meta name= "viewport" content= "width=device-width, initial-scale=1" />
+		<link rel="icon" href="../img/logo.png"/>
 
 		<!-- CSS Libraries -->
 		<link rel= "stylesheet" href= "../css/animate.min.css" type= "text/css" />
@@ -15,17 +27,22 @@
 
 		<!-- Custom CSS -->
 		<link rel= "stylesheet" href= "../css/main.css" type= "text/css" />
-		
-		<!-- Custom Javascripts -->
-		<script src="../jsp/evaluator_functions.js"></script>
-		<script src="../jsp/evaluator.js"></script>
+		<style type="text/css">
+			#exit{
+				cursor: pointer;
+			}
+			.eval-options a{
+				cursor: pointer;
+			}
+		</style>
+
 	</head>
 
 	<body>
 		<section class= "evaluation-form">
-			<section class= "eval-user-info">
-				<p>Louie Samson Javier - Personnel</p>
-				<a href= "../login-form.php" id= "exit">Log-out</a>
+			<section class= "eval-user-info" name="<?php echo $id;?>">
+				<p id="evaluator_name">Louie Samson Javier - Personnel</p>
+				<a id="exit">Log-out</a>
 			</section>
 			<section class= "eval-title">
 				<img src= "../img/logo.png">
@@ -33,12 +50,17 @@
 			</section>
 			<div class= "line"></div>
 			<section class="eval-options">
-				<a href= "evaluator-education.php">Education</a>
-				<a href= "evaluator-experience.php">Experience</a>
-				<a href= "evaluator-training.php">Training</a>
-				<a href= "evaluator-eligibility.php">Eligibility</a>
-				<a href= "evaluator-interview.php">Interview</a>
+				<a id="btn_education">Education</a>
+				<a id="btn_experience">Experience</a>
+				<a id="btn_training">Training</a>
+				<a id="btn_eligibility">Eligibility</a>
+				<a id="btn_interview">Interview</a>
 			</section>
 		</section>
+
+<!-- Custom Javascripts -->
+<script type="text/javascript" src="../RES/PSB-RESOURCES/JS/functions.js"></script>
+<script type="text/javascript" src="../RES/PSB-RESOURCES/JS/evaluator-main.js"></script>
+
 	</body>
 </html>

@@ -16,7 +16,7 @@ include 'connection.php';
                                }
  	 $sql=$conn->query("UPDATE user SET STATUS='1' WHERE EMAIL='".$email."' and UID='".$UID."'");
 
-
+        echo $UID;
 
  }
  

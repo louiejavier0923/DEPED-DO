@@ -9,6 +9,8 @@
    $mail = new PHPMailer(true);
  
    switch($_POST['action']){
+
+
         case 'applicants_list':
           # code...
            $output='';
@@ -19,8 +21,8 @@
 
                      
                       $output.="
-                       
-                                <option>".$row['EMAIL']."</option>
+                                  
+                                <option value=".$row['UID'].">".$row['EMAIL']."</option>
                         
                       ";
                     }
@@ -29,7 +31,7 @@
             
                        );
 
-              echo json_encode($output);
+              echo json_encode($data);
           break;
    	 /*INSERT*/
       case 'add_user':
@@ -241,8 +243,7 @@ echo json_encode($data);
                                }
 
                            else{
-                                    $sql=$conn->query("INSERT INTO user (UID, EMAIL, PWD,STATUS,ACTIVATION_KEY,IS_ONLINE)
-                                                               VALUES ('TCH-0001', '".$reg_email."', '".$reg_pwd."','0', '".$generatedKey."','0')");
+                                        $sql=$conn->query("CALL `register`('".$reg_email."', '".$reg_pwd."', '".$generatedKey."')");
                                          // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
                                            $mail->isSMTP();                                      // Set mailer to use SMTP
                                            $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -262,7 +263,7 @@ echo json_encode($data);
                                            //Attachments
                                            //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
                                            //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-                                           $verification_link="http://localhost:8899/new/DOADMIN/credentials/activate.php?email=$reg_email&key=$generatedKey";
+                                           $verification_link="http://localhost:8899/DEPED-DO/DOADMIN/credentials/activate.php?email=$reg_email&key=$generatedKey";
                                            //Content
                                            $mail->isHTML(true);                                  // Set email format to HTML
                                            $mail->Subject = 'Here is the subject';
@@ -277,7 +278,7 @@ echo json_encode($data);
                                           else{
                                                   $output='successful inserted';
                                           }
-                                    $output='successful inserted';
+                                  
                                     
                                       
                                }
@@ -290,8 +291,13 @@ echo json_encode($data);
   break;
 
   case 'insert_pds_info':
+ 
               $output='';
               $output='qweq';
+              
+
+
+
 
               
            $data = array(  
@@ -299,6 +305,69 @@ echo json_encode($data);
            );
      echo json_encode($data);
     break;
+
+
+    case 'set_appointment':
+             foreach($_POST['uid'] as $value){
+                     $sql="SELECT * from user where UID='".$value."';";
+           
+                     $result=mysqli_query($conn,$sql);
+                          
+                              if($result->num_rows > 0) 
+                               {
+                                            while($row = $result->fetch_assoc()) {
+                                                  $appointment_email=$row["EMAIL"];
+                                                       // $mail->SMTPDebug = 2;      
+                                           $mail->isSMTP();                                      // Set mailer to use SMTP
+                                           $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+                                           $mail->SMTPAuth = true;                               // Enable SMTP authentication
+                                           $mail->Username = 'cromeroadr@gmail.com';                 // SMTP username
+                                           $mail->Password = '9325310huffles';                           // SMTP password
+                                           $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+                                           $mail->Port = 465;                                    // TCP port to connect to
+                                       
+                                           //Recipients
+                                           $mail->setFrom('cromeroadr@gmail.com', 'Division Office');
+                                           $mail->addAddress($appointment_email);     // Add a recipient
+                                         
+                                           //$mail->addCC('cc@example.com');
+                                           //$mail->addBCC('bcc@example.com');
+                                           $action = 'verify_email';
+                                           //Attachments
+                                           //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+                                           //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+                                         
+                                           //Content
+                                           $mail->isHTML(true);                                  // Set email format to HTML
+                                           $mail->Subject = 'Here is the subject';
+                                           $mail->Body    = "thank you for registering please <a href='#'>Confirm Account</a>";
+                                           $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+                                       
+                                         
+                            
+                                           if($mail->Send()) {
+                                                   $output="success";
+                                          }
+                                          else{
+                                                  $output='successful inserted';
+                                          }
+
+                                            }
+                               }
+
+            
+                                                                       
+    
+            }
+
+
+              
+           $data = array(  
+             'message' => $output          
+           );
+     echo json_encode($data);
+      break;
      
    }
+
  ?>
