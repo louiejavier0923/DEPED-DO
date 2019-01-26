@@ -51,8 +51,10 @@
                   <th>SCHOOL ADDRESS</th>
                   <th>TOOLS</th>
                 </thead>
-                <tbody class="schools_tbl">
-                
+                <tbody>
+                     <tr class="schools_tbl">
+                       
+                     </tr>
                 </tbody>
               </table>
             </div>
@@ -130,6 +132,7 @@ $(document).on('click', '.edit', function(e) {
         $('.alert-success').css("display","block").html(response.message);
          $('#edit').modal('hide');
          $("#reload").load(location.href + " #reload>*", "");
+         fetch_schools();
     }
   });
   });
@@ -137,7 +140,7 @@ $(document).on('click', '.edit', function(e) {
 
 	 /*ARCHIVE BUTTON*/
 
-	 $('.delete').click(function(e){
+$(document).on('click', '.delete', function(e) {
     e.preventDefault();
     $('#delete').modal('show');
     var id = $(this).data('id');
@@ -146,7 +149,7 @@ $(document).on('click', '.edit', function(e) {
   });
 
     /*ARCHIVE SCHOOLS*/
-    $("#archive").click(function(e){
+   $(document).on('click', '.delete', function(e) {
       e.preventDefault();
       var d_id = $("#d_id").val();
      $.ajax({

@@ -14,14 +14,15 @@
         case 'applicants_list':
           # code...
            $output='';
+           $cnt='';
                    $sql = "SELECT * from user";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
-                    
-
+                     $cnt+=1;
+                                
                      
                       $output.="
-                                       <option data-uid=".$row['UID']."  value=".$row['UID'].">".$row['EMAIL']."</option>
+                                       <option data-uid=".$cnt."  value=".$row['UID'].">".$row['EMAIL']."</option>
                                   
                                
                         
@@ -363,6 +364,12 @@ echo json_encode($data);
             
                                                                        
     
+            }
+
+            foreach($_POST['sids'] as $PIDS) {
+                        $sql="UPDATE publish_vacancy SET APP_ISSET = '1' WHERE UID='".$PIDS."';";
+                        $result=mysqli_query($conn,$sql);
+                      
             }
 
 
@@ -709,7 +716,7 @@ echo json_encode($data);
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $output.= "
-                        <tr>
+                      
                           <td>".$row['NO']."</td>
                           <td>".$row['SID']."</td>
                           <td>".$row['SCHOOL_NAME']."</td>
@@ -719,7 +726,7 @@ echo json_encode($data);
                             <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['SID']."'><i class='fa fa-edit'></i> Edit</button>
                             <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-trash'></i> Archive</button>
                           </td>
-                        </tr>
+                      
                       ";
                     }
                         $data = array(    
