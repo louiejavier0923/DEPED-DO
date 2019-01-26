@@ -93,19 +93,19 @@
 									</section>
 									<section class= "pi-row-input">
 										<section class= "radio-input">
-											<input type= "radio" name= "status" value= "Single"><p>Single</p>
+											<input type= "radio" class="civil_status" value= "Single"><p>Single</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name= "status" value= "Married"><p>Married</p>
+											<input type= "radio" name="civil_status" value= "Married"><p>Married</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name= "status" value= "Widow"><p>Widowed</p>
+											<input type= "radio" name="civil_status" value= "Widow"><p>Widowed</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name= "status" value= "Separated"><p>Separated</p>
+											<input type= "radio" name="civil_status" value= "Separated"><p>Separated</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name= "status" value= "Others"><p>Other`s</p>
+											<input type= "radio" name="civil_status" value= "Others"><p>Other`s</p>
 										</section>
 									</section>
 								</section>
@@ -189,19 +189,19 @@
 									</section>
 									<section class= "pi-row-input">
 										<section class= "radio-input">
-											<input type= "radio" name= "citizenship" value= "Filipino">
+											<input type= "radio" name= "citi" value= "Filipino">
 											<p>Filipino</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name= "citizenship" value= "Dual Citizenship">
+											<input type= "radio" name= "citi" value= "Dual Citizenship">
 											<p>Dual Citizenship</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name= "dc-info" value= "By Birth">
+											<input type= "radio" name= "citi" value= "By Birth">
 											<p>By Birth</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name= "dc-info" value= "By Naturalization">
+											<input type= "radio" name= "citi" value= "By Naturalization">
 											<p>By Naturalization</p>
 										</section>
 										<section class= "radio-input">
@@ -421,7 +421,7 @@
 									<section class= "family-tbl-info">
 										<section class= "content-info">
 											<section class= "info">
-												<input type= "text">
+												<input type= "text" id="pds_children1">
 											</section>
 											<section class= "info">
 												<input type= "date">

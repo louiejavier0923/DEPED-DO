@@ -20,6 +20,8 @@
 			<a id= "closeLogin"><i class= "fa fa-close"></i></a>
 		</section>
 		<section class= "one-login-register">
+			 <div id="loading"></div>
+			 <div class="loading-container"></div>
 			<section class= "login-register-nav">
 				<a class= "modal-tab" id= "loginBtn">LOGIN</a>
 				<a class= "modal-tab" id= "registerBtn">REGISTER</a>
@@ -43,19 +45,21 @@
 					</section>
 				</section>
 				<section class= "content-register">
+
 					<h2>REGISTER</h2>
+
 					<div class= "line"></div>
 					<section class= "input-container">
 						<section class= "input-form">
-							<input type= "text" id="reg_email">
+							<input type= "email" id="reg_email">
 							<label>Email</label>
 						</section>
 						<section class= "input-form">
-							<input type= "text" id="reg_pwd">
+							<input type= "password" id="reg_pwd">
 							<label>Password</label>
 						</section>
 						<section class= "input-form">
-							<input type= "text" id="reg_confirm_pwd">
+							<input type= "password" id="reg_confirm_pwd">
 							<label>Confirm password</label>
 						</section>
 						<section class= "input-btn">
