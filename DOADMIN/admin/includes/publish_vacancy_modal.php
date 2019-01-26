@@ -10,9 +10,11 @@
           	<div class="modal-body">
             	<div class="form-horizontal">
           		  <div class="form-group">
+
                   	<label for="title" class="col-sm-3 control-label">Title</label>
 
                   	<div class="col-sm-9">
+
                     	<input type="text" class="form-control" id="title" name="title" required>
                   	</div>
                 </div>
@@ -92,6 +94,7 @@
           	<div class="modal-body">
             	   <div class="form-horizontal">
                 <div class="form-group">
+                        <input type="hidden" id="id">
                     <label for="edit_title" class="col-sm-3 control-label">Title</label>
 
                     <div class="col-sm-9">
@@ -180,8 +183,9 @@
 	            	</div>
           	</div>
           	<div class="modal-footer">
+              <input type="hidden" id="delete_id">
             	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-            	<button type="submit" class="btn btn-danger btn-flat" name="delete"><i class="fa fa-trash"></i> Delete</button>
+            	<button type="submit" class="btn btn-danger btn-flat" id="delete_vacancy" name="delete"><i class="fa fa-trash"></i> Delete</button>
             	</form>
           	</div>
         </div>
