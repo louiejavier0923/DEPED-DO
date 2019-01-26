@@ -85,6 +85,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-align: left !important;
 }
 .content-header .header:nth-child(3),.info-container .content:nth-child(3) {
     width: 20%;
@@ -169,4 +170,7 @@
 
 .applicant-id{
     display: none;
+}
+.info-container .content:first-child p,.info-container .content:last-child p {
+    text-align: center !important;
 }

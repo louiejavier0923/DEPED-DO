@@ -52,7 +52,26 @@
                   <th>TOOLS</th>
                 </thead>
                 <tbody class="schools_tbl">
-                     
+                     <?php
+                       $sql = "SELECT * FROM schools WHERE isActive = '1'";
+                    $query = $conn->query($sql);
+                    while($row = $query->fetch_assoc()){
+                      echo "
+                       <tr>
+                          <td>".$row['NO']."</td>
+                          <td>".$row['SID']."</td>
+                          <td>".$row['SCHOOL_NAME']."</td>
+                          <td>".$row['SCHOOL_ADDRESS']."</td>
+
+                          <td>
+                            <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['SID']."'><i class='fa fa-edit'></i> Edit</button>
+                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-trash'></i> Archive</button>
+                          </td>
+                        </tr>
+                      
+                      ";
+                    }
+                     ?>
                 </tbody>
               </table>
             </div>

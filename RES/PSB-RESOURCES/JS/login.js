@@ -55,5 +55,10 @@ $(document).ready(function(){
 		}
 
 	})
+	.on('keypress','#passTxtbox',function(e){
+		if (e.which == 13) {
+			$('#loginBtn').click();
+		}
+	})
 
 })
