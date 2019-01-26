@@ -53,7 +53,7 @@ function setEditableInputGrades(criteria){
 		break;
 
 		case 'ELIGIBILITY':
-			$('.e-eligibility').prop('disabled',false);
+			$('.e-let').prop('disabled',false);
 		break;
 
 		case 'INTERVIEW':
@@ -61,5 +61,7 @@ function setEditableInputGrades(criteria){
 		break;
 
 	}
+
+	$('.e-demo,.e-communication').prop('disabled',false);
 
 }
