@@ -15,14 +15,14 @@
           # code...
            $output='';
            $cnt='';
-                   $sql = "SELECT * from user";
+                   $sql = "SELECT * from view_rank";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                      $cnt+=1;
                                 
                      
                       $output.="
-                                       <option data-uid=".$cnt."  value=".$row['UID'].">".$row['EMAIL']."</option>
+                                       <option data-uid=".$cnt."  value=".$row['UID'].">".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>
                                   
                                
                         
@@ -729,7 +729,7 @@ echo json_encode($data);
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $output.= "
-                      
+                       <tr>
                           <td>".$row['NO']."</td>
                           <td>".$row['SID']."</td>
                           <td>".$row['SCHOOL_NAME']."</td>
@@ -739,6 +739,7 @@ echo json_encode($data);
                             <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['SID']."'><i class='fa fa-edit'></i> Edit</button>
                             <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-trash'></i> Archive</button>
                           </td>
+                        </tr>
                       
                       ";
                     }

@@ -51,10 +51,8 @@
                   <th>SCHOOL ADDRESS</th>
                   <th>TOOLS</th>
                 </thead>
-                <tbody>
-                     <tr class="schools_tbl">
-                       
-                     </tr>
+                <tbody class="schools_tbl">
+                     
                 </tbody>
               </table>
             </div>

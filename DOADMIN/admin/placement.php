@@ -210,7 +210,7 @@ function DisableOptions()
 
 
  $(".teachers-dropdown  option").attr("hidden",false); 
-           $(".teachers-dropdown").val("SELECT -"); 
+ $(".teachers-dropdown").val("SELECT -"); 
    
 });
 
@@ -225,6 +225,8 @@ function applicants_list(action='applicants_list'){
            
                  
                 $('.teachers-dropdown').html(response.message);   
+                $(".teachers-dropdown  option").attr("hidden",false); 
+ $(".teachers-dropdown").val("SELECT -"); 
                             }
                });
   }
