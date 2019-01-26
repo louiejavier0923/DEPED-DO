@@ -79,10 +79,13 @@
   
 
                            <div class='col-sm-9'>
+                           
                              <select data-id=".$row['NO']." id='teachers-dropdown-id' class='teachers-dropdown form-control'>
                                                    
                                                   
                                   </select>
+
+                                  
                               </div>
                          </div>
 
@@ -98,7 +101,7 @@
                 </tbody>
               </table>
               <div class="box-header with-border">
-              <a href="" id="appointment" data-toggle="modal" class="btn btn-primary btn-sm btn-flat">APPOINTMENT</a>
+              <a href="" id="appointment" data-toggle="modal" class="btn btn-success btn-sm btn-flat">APPOINTMENT</a>
                
             </div>
             </div>

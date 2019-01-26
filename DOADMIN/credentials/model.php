@@ -21,8 +21,9 @@
 
                      
                       $output.="
+                                       <option data-uid=".$row['UID']."  value=".$row['UID'].">".$row['EMAIL']."</option>
                                   
-                                <option value=".$row['UID'].">".$row['EMAIL']."</option>
+                               
                         
                       ";
                     }
