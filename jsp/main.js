@@ -52,7 +52,20 @@ function register(action = 'register_function')
        else{
         $('#loading').css("display","block");
         $('.loading-container').css("display","block");
-                 
+              $.ajax({
+               url:"DOADMIN/credentials/model.php",
+               method:"POST",
+               data:{action:action,email:reg_email,pwd:reg_pass,cpwd:reg_confirm_pass},
+               dataType:"json",
+                   success:function(data){
+                                         
+                                            alert(data.message);
+                                             $('#loading').css("display","none");
+                                             $('.loading-container').css("display","none");
+                                         }    
+               });
+      
+                               
       
             }
 
@@ -78,55 +91,26 @@ function register(action = 'register_function')
              var dateofbirth = $('#pds_dateofbirth').val();
             var placeofbirth = $('#pds_placeofbirth').val();
             var gender = $("input[name='gender']:checked"). val();
-            var civilstatus = $("input[name='civil']:checked"). val();
-            var height = $('#pds_height').val();
-            var width = $('#pds_width').val();
-            var bloodtype = $('#pds_bloodtype').val();
-            var gsis = $('#pds_gsisno').val();
-            var pagibig = $('#pds_pagibigno').val();
-            var philhealth = $('#pds_philhealthno').val();
-            var sssno = $('#pds_sssno').val();
-            var tinno = $('#pds_tinno').val();
-            var agencyemployee = $('#pds_agencyemployee').val();
-            var citizenship = $("input[name='citi']:checked").val();
-            var country = $('#pds_country').val();
-             var rhouseblk = $('#pds_rhouseblk').val();
-             var rstreet = $('#pds_rstreet').val();
-             var rsubdivsion = $('#pds_rsubdivision').val();
-             var rmunicipality = $('#pds_rmunicipality').val();
-             var rprovince = $('#pds_rprovince').val();
-             var rbarangay = $('#pds_rbarangay').val();
-             var rzipcode = $('#pds_rzipcode').val();
-             var phouseblk = $('#pds_phouseblk').val();
-             var pstreet = $('#pds_pstreet').val();
-             var psubdivision = $('#pds_psubdivision').val();
-             var pbarangay = $('#pds_pbarangay').val();
-              var pmunicipality = $('#pds_pmunicipality').val();
-               var pprovince = $('#pds_pprovince').val();
-                var pzipcode = $('#pds_pzipcode').val();
-                var ptelno = $('#pds_telno').val();
-                var pmobileno = $('#pds_mobileno').val();
-                var pemailaddress = $('#pds_emailaddress').val();
-
-                $.ajax({
+             var civilstatus = $("input[name='civil_status']:checked"). val();
+              $.ajax({
                url:"../DOADMIN/credentials/model.php",
                method:"POST",
-              data:{action:action, 
-                firstname:firstname,
-               surname:surname,
-               middlename:middlename,
-               nameextension:nameextension,
-               dateofbirth:dateofbirth,
-               placeofbirth:placeofbirth,
-                civilstatus,civilstatus     
-              },
+               data:{action:action},
                dataType:"json",
                    success:function(data){
-                           
-                                      alert(civilstatus);   
-                                      }       
-                          });
-              }
+                                         
+                      
+                                           
+                                              alert(civilstatus);  
+ 
+                                                  
+                                     
+                                         }
+
+                        });
+                                
+                   
+        }
                 /*
                  var placeofbirth = $('#pds_spousesurname').val();
                   var placeofbirth = $('#pds_spousefirstname').val();

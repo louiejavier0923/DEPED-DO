@@ -19,8 +19,8 @@
 
                      
                       $output.="
-                       
-                                <option>".$row['EMAIL']."</option>
+                                  
+                                <option value=".$row['UID'].">".$row['EMAIL']."</option>
                         
                       ";
                     }
@@ -292,14 +292,7 @@ echo json_encode($data);
  
               $output='';
               $output='qweq';
-                $firstname = $_POST['firstname'];
-                 $surname = $_POST['surname'];
-                  $middlename = $_POST['middlename'];
-                   $nameextension = $_POST['nameextension'];
-                    $dateofbirth = $_POST['dateofbirth'];
-                     $placeofbirth = $_POST['placeofbirth'];
-                      $gender = $_POST['gender'];
-                      
+              
 
 
 

@@ -93,19 +93,19 @@
 									</section>
 									<section class= "pi-row-input">
 										<section class= "radio-input">
-											<input type= "radio" name="civil" value= "Single"><p>Single</p>
+											<input type= "radio" class="civil_status" value= "Single"><p>Single</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name="civil" value= "Married"><p>Married</p>
+											<input type= "radio" name="civil_status" value= "Married"><p>Married</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name="civil" value= "Widow"><p>Widowed</p>
+											<input type= "radio" name="civil_status" value= "Widow"><p>Widowed</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name="civil" value= "Separated"><p>Separated</p>
+											<input type= "radio" name="civil_status" value= "Separated"><p>Separated</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name="civil" value= "Others"><p>Other`s</p>
+											<input type= "radio" name="civil_status" value= "Others"><p>Other`s</p>
 										</section>
 									</section>
 								</section>

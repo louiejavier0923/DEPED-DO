@@ -20,6 +20,11 @@
     </section>
     <!-- Main content -->
     <section class="content">
+       <div class='alert alert-success alert-dismissible'>
+              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+              <h4><i class='icon fa fa-check'></i> Success!</h4>
+               Sending
+            </div>
       <?php
         if(isset($_SESSION['error'])){
           echo "
@@ -46,7 +51,8 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header with-border">
-              <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> New</a>
+              <a href="" id="appointment" data-toggle="modal" class="btn btn-primary btn-sm btn-flat">APPOINTMENT</a>
+                <a href="" id="unselect" style="display: none;" data-toggle="modal" class="btn btn-danger btn-sm btn-flat"></a>
             </div>
             <div class="box-body">
               <table id="example1" class="table table-bordered">
@@ -66,17 +72,18 @@
                     while($row = $query->fetch_assoc()){
                       echo "
                         <tr>
-                          <td>".$row['TITLE']."</td>
+                          <td>".$row['TITLE']."<input style='display:none;' type='checkbox' id=".$row['NO']." name=".$row['NO']." value=".$row['NO']."></td>
                           <td>".$row['PLACE_ASSIGNMENT']."</td>
                           <td>
                               <div class='form-group>
   
 
                            <div class='col-sm-9'>
-                              <select class='form-control applicants_list'  name='status'>
-                              
-                              </select>
-                           </div>
+                             <select data-id=".$row['NO']." id='teachers-dropdown-id' class='teachers-dropdown form-control'>
+                                                   
+                                                  
+                                  </select>
+                              </div>
                          </div>
 
                           </td>
@@ -98,61 +105,91 @@
   </div>
     
   <?php include 'includes/footer.php'; ?>
-  <?php include 'includes/replacement_modal.php'; ?>
+  <?php include 'includes/appointment_modal.php'; ?>
 </div>
 <?php include 'includes/scripts.php'; ?>
 <script>
 $(function(){
-  $('.edit').click(function(e){
-    e.preventDefault();
-    $('#edit').modal('show');
-    var id = $(this).data('id');
-   $.ajax({
-    type: 'POST',
-    url: '../credentials/model.php',
-    data: {action:'get_vacancy_id',id:id},
-    dataType: 'json',
-    success: function(response){
-      var date = new Date(response.expiration);
+  
 
-    
-       $('#edit_title').val(response.title);
-       $('#edit_expiration').val(response.expiration);
-       $('#edit_description').val(response.description);
-       $('#edit_noi').val(response.noi);
-       $('#edit_status').selectedIndex(response.status);
-       $('#edit_itemno').val(response.itemno);
-       $('#edit_salaries').val(response.salaries);
-       $('#edit_place').val(response.place);
-
-    
-    }
-  });
-  });
-
-  $('.delete').click(function(e){
-    e.preventDefault();
-    $('#delete').modal('show');
-    var id = $(this).data('id');
-    getRow(id);
-  });
-
-    $('#edit_vacancy').click(function(e){
-    e.preventDefault();
- 
-    var id = $(this).data('id');
-    alert(id);
+  $('#appointment').click(function(e){
+          var ids = $("#example1 tr:has(input:checked)").map(function() {
+              var $tr = $(this);
+              var id = $tr.find("td:nth-child(3) option:selected").val();
+              return id;
+              }).toArray();
+              if(ids==''){
+                 alert('no selected data');
+              }
+              else{
+                        alert(ids);
+                         $.ajax({
+                             type: 'POST',
+                             url: '../credentials/model.php',
+                             data: {action:'set_appointment'},
+                             dataType: 'json',
+                             success: function(response){
+           
+                                              alert(response.message);
+                                                 
+                            }
+               });
+              }
+     
   });
 
 
-    $('#submit_vacancy').click(function(e){
-    e.preventDefault();
+$("#unselect").click(function(){
+           $(".teachers-dropdown  option").attr("hidden",false); 
+           $(".teachers-dropdown").val("SELECT -"); 
+           $("#unselect").css("display","none"); 
+           $('input:checkbox').prop('checked',false);
+         
+  });
+$(".teachers-dropdown").change(function()
+               {
+           
+                  var myid = $(this).data('id');
+                  var count = $("[type='checkbox']:checked").length+1;
+                   $(".teachers-dropdown  option").attr("hidden",false); //enable everything
+                      $("#unselect").css('display','block') 
+                   $("#unselect").html("DESELECT ALL"+"("+count+")"); 
+                   $(':checkbox[value=' + myid + ']').prop('checked', true);
+                   
+                   DisableOptions(); //disable selected values
 
-        add_vacancy();
+                });
+
+function DisableOptions()
+{
+    var arr=[];
+
+      $(".teachers-dropdown option:selected").each(function()
+              {
+                  
+                  arr.push($(this).val());
+                  
+                   
+              });
+
+    $(".teachers-dropdown option").filter(function()
+        {
+
+
+              return $.inArray($(this).val(),arr)>-1;
+            
+
+   }).attr("hidden",true);   
    
- 
-  });
+}
+
+
+
+ $(".teachers-dropdown  option").attr("hidden",false); 
+           $(".teachers-dropdown").val("SELECT -"); 
+   
 });
+
 
 function applicants_list(action='applicants_list'){
         $.ajax({
@@ -163,38 +200,15 @@ function applicants_list(action='applicants_list'){
     success: function(response){
            
                  
-                $('.applicants_list').html(response);   
-    }
-  });
-}
+                $('.teachers-dropdown').html(response);   
+                            }
+               });
+  }
 
-applicants_list();
-
-function add_vacancy(action='add_vacancy'){
-        var title = $('#title').val();
-        var expiration = $('#expiration').val();
-        var description = $('#description').val();
-        var noi = $('#noi').val();
-        var status = $('#status').val();
-        var itemno = $('#itemno').val();
-        var salaries = $('#salaries').val();
-         var place = $('#place').val();
+  applicants_list();
 
 
 
-  $.ajax({
-    type: 'POST',
-    url: '../credentials/model.php',
-    data: {action:action,title:title,description:description,noi:noi,status:status,itemno:itemno,salaries:salaries,place:place,expiration:expiration},
-    dataType: 'json',
-    success: function(response){
-
-               alert(response.message);
-                   $('#addnew').modal('hide');
-
-    }
-  });
-}
 </script>
 </body>
 </html>
