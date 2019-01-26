@@ -3,6 +3,7 @@ function login(action = 'login_function')
       {
       var login_email = $('#login_email').val();
       var login_password = $('#login_password').val();
+
                  
         $.ajax({
                url:"DOADMIN/credentials/model.php",
@@ -43,9 +44,15 @@ function register(action = 'register_function')
       var reg_email = $('#reg_email').val();
       var reg_pass = $('#reg_pwd').val();
        var reg_confirm_pass = $('#reg_confirm_pwd').val();
-     
-                 
-        $.ajax({
+
+
+       if(reg_email==''&& reg_pass==''){
+               alert('empty fields');
+       }
+       else{
+        $('#loading').css("display","block");
+        $('.loading-container').css("display","block");
+              $.ajax({
                url:"DOADMIN/credentials/model.php",
                method:"POST",
                data:{action:action,email:reg_email,pwd:reg_pass,cpwd:reg_confirm_pass},
@@ -53,9 +60,14 @@ function register(action = 'register_function')
                    success:function(data){
                                          
                                             alert(data.message);
+                                             $('#loading').css("display","none");
+                                             $('.loading-container').css("display","none");
                                          }    
                });
-  
+      
+                               
+      
+            }
 
         }
 
@@ -79,35 +91,27 @@ function register(action = 'register_function')
              var dateofbirth = $('#pds_dateofbirth').val();
             var placeofbirth = $('#pds_placeofbirth').val();
             var gender = $("input[name='gender']:checked"). val();
-            var civilstatus = $("input[name='status']:checked"). val();
-            var placeofbirth = $('#pds_height').val();
-            var placeofbirth = $('#pds_width').val();
-            var placeofbirth = $('#pds_bloodtype').val();
-            var placeofbirth = $('#pds_gsisno').val();
-            var placeofbirth = $('#pds_pagibigno').val();
-            var placeofbirth = $('#pds_philhealthno').val();
-            var placeofbirth = $('#pds_sssno').val();
-            var placeofbirth = $('#pds_tinno').val();
-            var placeofbirth = $('#pds_agencyemployee').val();
-            var civilstatus = $("input[name='citizenship']:checked"). val();
-            var placeofbirth = $('#pds_country').val();
-             var placeofbirth = $('#pds_rhouseblk').val();
-             var placeofbirth = $('#pds_rstreet').val();
-             var placeofbirth = $('#pds_rsubdivision').val();
-             var placeofbirth = $('#pds_rmunicipality').val();
-             var placeofbirth = $('#pds_rprovince').val();
-             var placeofbirth = $('#pds_rbarangay').val();
-             var placeofbirth = $('#pds_rzipcode').val();
-             var placeofbirth = $('#pds_phouseblk').val();
-             var placeofbirth = $('#pds_pstreet').val();
-             var placeofbirth = $('#pds_psubdivision').val();
-             var placeofbirth = $('#pds_pbarangay').val();
-              var placeofbirth = $('#pds_pmunicipality').val();
-               var placeofbirth = $('#pds_pprovince').val();
-                var placeofbirth = $('#pds_pzipcode').val();
-                var placeofbirth = $('#pds_telno').val();
-                var placeofbirth = $('#pds_mobileno').val();
-                var placeofbirth = $('#pds_emailaddress').val();
+             var civilstatus = $("input[name='civil_status']:checked"). val();
+              $.ajax({
+               url:"../DOADMIN/credentials/model.php",
+               method:"POST",
+               data:{action:action},
+               dataType:"json",
+                   success:function(data){
+                                         
+                      
+                                           
+                                              alert(civilstatus);  
+ 
+                                                  
+                                     
+                                         }
+
+                        });
+                                
+                   
+        }
+                /*
                  var placeofbirth = $('#pds_spousesurname').val();
                   var placeofbirth = $('#pds_spousefirstname').val();
                    var placeofbirth = $('#pds_spousenameextension').val();
@@ -122,24 +126,85 @@ function register(action = 'register_function')
                             var placeofbirth = $('#pds_fathermiddlename').val();
                              var placeofbirth = $('#pds_mothersurname').val();
                              var placeofbirth = $('#pds_motherfirstname').val();
-                             var placeofbirth = $('#pds_mothersnameextension').val();
-                             var placeofbirth = $('#pds_mothersmiddlename').val();
-                             
+                        var placeofbirth = $('#pds_mothersnameextension').val();
+                    var placeofbirth = $('#pds_mothersmiddlename').val();
 
-        
-
+               var placeofbirth = $('#pds_mothersmiddlename').val();
+               
+              
+               data:{
+                action:action,
+               firstname:firstname,
+               surname:surname,
+               middlename:middlename,
+               nameextension:nameextension,
+               dateofbirth:dateofbirth,
+               placeofbirth:placeofbirth,
+               gender:gender,
+              civilstatus:civilstatus,
+              height:height,
+              width:width,
+              bloodtype:bloodtype,
+              gsis:gsis,
+              pagibig:pagibig,
+              philhealth:philhealth,
+              sssno:sssno,
+              tinno:tinno,
+              agencyemployee:agencyemployee,
+              citizenship:citizenship,
+              country:country,
+              rhouseblk:rhouseblk,
+              rstreet:rstreet,
+              rsubdivsion:rsubdivsion,
+              rmunicipality:rmunicipality,
+              rprovince:rprovince,
+              rbarangay:rbarangay,
+              rzipcode:rzipcode,
+              phouseblk:phouseblk,
+              pstreet:pstreet,
+              psubdivision:psubdivision,
+              pbarangay:pbarangay,
+              pmunicipality:pmunicipality,
+              pprovince:pprovince,
+              pzipcode:pzipcode,
+              ptelno:ptelno,
+              pmobileno:pmobileno,
+              pemailaddress:pemailaddress
+                },
+                     
         $.ajax({
-               url:"../DOADMIN/credentials/model.php",
+               url:"DOADMIN/credentials/model.php",
                method:"POST",
-               data:{action:action},
+               data:{action:action,email:login_email,pwd:login_password},
                dataType:"json",
                    success:function(data){
-                                            window.location.href= "finish.php";
-                                         }    
-               });
+                                         
+                             switch(data.message){
+                                                
+                                    case 'successful':
+                                          window.location.href='applicants/home.php';
+                                    break;
+
+                                    case 'redirect':
+                                          alert(data.message);
+                                    break;
+
+                                    default:
+                                          alert(data.message);
+                                    break;
+                                                 }
+                                           
+                                                
+ 
+                                                  
+                                     
+                                         }
+                                                
+                          });
+                          */
   
 
-        }
+        
 
 
 
@@ -152,21 +217,23 @@ $(document).ready(function() {
 
     $('.content-register').hide();
     var moreInfoModal = document.getElementById('more-info');
+    var attachFileModal = document.getElementById('attach-file');
+    var loginRegisterModal = document.getElementById('modal-login-register');
 
     $('body')
-    .on('click', '.modal-tab', function() {
-        switch (this.id) {
-            case 'loginBtn':
-                $('.content-login').show();
-                $('.content-register').hide();
-            break;
+      .on('click', '.modal-tab', function() {
+          switch (this.id) {
+              case 'loginBtn':
+                  $('.content-login').show();
+                  $('.content-register').hide();
+              break;
 
-            case 'registerBtn':
-                $('.content-login').hide();
-                $('.content-register').show();
-            break;
-        }
-    })
+              case 'registerBtn':
+                  $('.content-login').hide();
+                  $('.content-register').show();
+              break;
+          }
+      })
         
         .on('click', '#finishBtn', function() {
             $('#applyBtn').hide();
@@ -184,6 +251,9 @@ $(document).ready(function() {
         .on('click', window, function(e) {
             if (e.target == moreInfoModal) {
                 moreInfoModal.style.display= "none";
+            }
+            else if (e.target == loginRegisterModal) {
+                loginRegisterModal.style.display= "none";
             }
         })
 
@@ -203,6 +273,30 @@ $(document).ready(function() {
         .on('click', '#editPassBtn', function() {
             $('#okPassBtn').show();
             $('#editPassBtn').hide();
+        })
+
+        .on('click', '#submit_file', function() {
+            attachFileModal.style.display= "block";
+        })
+
+        .on('click', '#cancelFileBtn', function() {
+            attachFileModal.style.display= "none";
+        })
+
+        .on('click', '#okFileBtn', function () {
+            attachFileModal.style.display= "none";
+        })
+
+        .on('click', '#accBtn', function () {
+            loginRegisterModal.style.display= "block";
+        })
+
+        .on('click', "#joinBtn", function() {
+            loginRegisterModal.style.display= "block";
+        })
+
+        .on('click', '#closeLogin', function() {
+          loginRegisterModal.style.display= "none";
         })
 
     $('#submit_login_btn').click(function() {			

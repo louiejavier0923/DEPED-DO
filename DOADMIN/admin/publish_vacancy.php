@@ -56,6 +56,7 @@
                 <tbody>
                   <?php
                     $sql = "SELECT * FROM publish_vacancy WHERE isActive = '1'";
+                    
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       echo "

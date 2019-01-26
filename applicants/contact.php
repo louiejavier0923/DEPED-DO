@@ -11,7 +11,7 @@
 		</section>
 		<section class= "applicant-content-container">
 			<section class= "modal-message">
-				<button id= "messageBtn"><i class= "fa fa-comment"></i></button>
+				<button id= "messageBtn"><img src= "../img/icon-message.png"></button>
 			</section>
 			<section class= "body-container">
 				<section class= "contact-info">

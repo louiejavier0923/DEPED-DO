@@ -15,6 +15,7 @@
 
 		<!-- Custom CSS -->
 		<link rel= "stylesheet" href= "../css/main.css" type= "text/css" />
+		<link rel= "stylesheet" href="../RES/PSb-RESOURCES/CSS/evaluator.css" type= "text/css" />
 		
 		<!-- Custom Javascripts -->
 		<script src="../jsp/evaluator.js"></script>
@@ -81,9 +82,9 @@
 						<section class= "header">
 							<p>Total<br>Score<br>100%</p>
 						</section>
-						<section class= "header">
+						<!-- <section class= "header">
 							<p>Rank</p>
-						</section>
+						</section> -->
 					</section>
 					<section class= "content-info">
 						<section class= "info-container">
@@ -126,9 +127,9 @@
 							<section class= "content">
 								<p>98</p>
 							</section>
-							<section class= "content">
+							<!-- <section class= "content">
 								<p>1</p>
-							</section>
+							</section> -->
 						</section>
 					</section>
 				</section>

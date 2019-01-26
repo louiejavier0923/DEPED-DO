@@ -2,6 +2,7 @@
 
 @import url(fonts.css);
 @import url(slider.css);
+@import url(modals.css);
 
 /* == IMPORTS ENDS HERE == */
 /* == GLOBAL DESIGN == */
@@ -190,8 +191,8 @@ body {
 
 			.content-container .container-info {
 				float: left;
-				width: 34%;
-				margin: 0px 4.8% 20px 4.8%;
+				width: 90%;
+				margin: 0px 5% 20px 5%;
 				background-color: rgb(250, 250, 250);
 				border: solid 1px rgb(230, 230, 230);
 				border-radius: 3px;
@@ -200,8 +201,8 @@ body {
 
 				.container-info img {
 					float: right;
-					width: 25%;
-					heigth :100px;
+					width: 15%;
+					height: 90px;
 				}
 
 				.container-info #position {
@@ -242,9 +243,9 @@ body {
 
 				.container-info #applyBtn {
 					float: left;
-					width: 20%;
+					width: 15%;
 					padding: 10px 0px;
-					margin-left: 15%;
+					margin-left: 24%;
 					background-color: rgb(4, 80, 140);
 					color: rgb(255, 255, 255);
 					text-align: center;
@@ -290,2046 +291,2016 @@ body {
 					margin-left: 15%;
 				}
 
-	/* == APPLICATION FORM ENDS HERE == */
-	/* == PERSONAL DATA SHEET FORM == */
+		/* == PERSONAL DATA SHEET FORM == */
 
-	.application-content .pds-form {
-		float: left;
-		width: 100%;
-		border: solid 2px rgb(30, 30, 30);
-		margin-bottom: 50px;
-	}
-
-		.pds-form .pds-header {
+		.application-content .pds-form {
 			float: left;
 			width: 100%;
-			border-bottom: solid 2px rgb(30, 30,30);
+			border: solid 2px rgb(30, 30, 30);
+			margin-bottom: 50px;
 		}
 
-			.pds-header #pds-cs-no {
+			.pds-form .pds-header {
 				float: left;
 				width: 100%;
-				font-size: 85%;
-				font-weight: bold;
-				font-style: italic;
-				line-height: 20px;
+				border-bottom: solid 2px rgb(30, 30,30);
 			}
 
-			.pds-header #pds-revised {
-				float: left;
-				width: 100%;
-				font-size: 75%;
-				font-weight: bold;
-				font-style: italic;
-			}
-
-			.pds-header #pds-title {
-				float: left;
-				width: 100%;
-				text-align: center;
-				font-family: 'Gentona';
-				font-size: 180%;
-				letter-spacing: 3px;
-				margin-bottom: 25px;
-			}
-
-			.pds-header #pds-warning {
-				float: left;
-				width: 100%;
-				font-size: 70%;
-				font-weight: bold;
-				font-style: italic;
-				margin-bottom: 5px;
-			}
-
-			.pds-header #pds-guide {
-				float: left;
-				width: 100%;
-				font-size: 80%;
-				font-weight: bold;
-			}
-
-			.pds-header #pds-print {
-				float: left;
-				width: 100%;
-				font-size: 80%;
-			}
-
-		.pds-form .pds-personal-information {
-			float: left;
-			width: 100%;
-		}
-
-			.pds-personal-information h1 {
-				float: left;
-				width: 99%;
-				line-height: 30px;
-				margin-top: 2px;
-				background-color: rgb(140, 140, 140);
-				border-top: solid 2px rgb(30, 30, 30);
-				border-bottom: solid 2px rgb(30, 30, 30);
-				padding-left: 1%;
-				font-family: 'Century Gothic';
-				font-size: 90%;
-				text-transform: uppercase;
-				color: rgb(255, 255, 255);
-			}
-
-			.pds-personal-information .pds-pi-table {
-				float: left;
-				width: 100%;
-			}
-
-				.pds-pi-table .one-three:first-child {
+				.pds-header #pds-cs-no {
 					float: left;
 					width: 100%;
-					border-bottom: solid 2px rgb(30, 30, 30);
+					font-size: 85%;
+					font-weight: bold;
+					font-style: italic;
+					line-height: 20px;
 				}
 
-					.pds-pi-table .one-three:first-child .pi-row {
-						float: left;
-						display: inline-block;
-						width: 100%;
-						height: 35px;
-					}
-
-						.pds-pi-table .one-three:first-child .pi-row .pi-row-label {
-							float: left;
-							width: 25%;
-							height: 100%;
-							border-right: solid 1.5px rgb(30, 30, 30);
-							background-color: rgb(210, 210, 210);
-						}
-
-							.pds-pi-table .one-three:first-child .pi-row .pi-row-label  p {
-								float: left;
-								width: 95%;
-								margin-left: 5%;
-								height: 35px;
-								margin-top: 7px;
-								font-size: 70%;
-								text-transform: uppercase;
-							}
-
-						.pds-pi-table .one-three:first-child .pi-row .pi-row-input {
-							float: left;
-							width: 74.8%;
-							height: 100%;
-							border-bottom: solid 1px rgb(30, 30,30);
-						}
-
-							.pds-pi-table .one-three:first-child .pi-row .pi-row-input input:focus {
-								outline: none;
-							}
-
-							.pds-pi-table .one-three:first-child .pi-row:first-child .pi-row-input input {
-								float: left;
-								width: 99%;
-								height: 100%;
-								border: none;
-								padding-left: 1%;
-								font-family: 'Century Gothic';
-								font-size: 80%;
-							}
-
-							.pds-pi-table .one-three:first-child .pi-row:nth-child(2) .pi-row-input input:first-child {
-								float: left;
-								width: 59%;
-								height: 98%;
-								padding-left: 1%;
-								border: none;
-								font-family: 'Century Gothic';
-								font-size: 80%;
-								margin-top: 1px;
-							}
-
-							.pds-pi-table .one-three:first-child .pi-row:nth-child(2) .pi-row-input input:last-child {
-								float: left;
-								width: 39%;
-								height: 98%;
-								padding-left: 1%;
-								border: none;
-								font-family: 'Century Gothic';
-								font-size: 80%;
-								margin-top: 1px;
-								background-color: rgb(180, 180, 180);
-							}
-
-							.pds-pi-table .one-three:first-child .pi-row:last-child .pi-row-input input {
-								float: left;
-								width: 99%;
-								height: 98%;
-								border: none;
-								padding-left: 1%;
-								font-family: 'Century Gothic';
-								font-size: 80%;
-								margin-top: 1px;
-							}
-
-				.pds-pi-table .one-three:nth-child(2) {
+				.pds-header #pds-revised {
 					float: left;
-					width: 50%;
-					border-right: solid 2px rgb(30, 30,30);
+					width: 100%;
+					font-size: 75%;
+					font-weight: bold;
+					font-style: italic;
 				}
 
-					.pds-pi-table .one-three:nth-child(2) .pi-row {
+				.pds-header #pds-title {
+					float: left;
+					width: 100%;
+					text-align: center;
+					font-family: 'Gentona';
+					font-size: 180%;
+					letter-spacing: 3px;
+					margin-bottom: 25px;
+				}
+
+				.pds-header #pds-warning {
+					float: left;
+					width: 100%;
+					font-size: 70%;
+					font-weight: bold;
+					font-style: italic;
+					margin-bottom: 5px;
+				}
+
+				.pds-header #pds-guide {
+					float: left;
+					width: 100%;
+					font-size: 80%;
+					font-weight: bold;
+				}
+
+				.pds-header #pds-print {
+					float: left;
+					width: 100%;
+					font-size: 80%;
+				}
+
+			.pds-form .pds-personal-information {
+				float: left;
+				width: 100%;
+			}
+
+				.pds-personal-information h1 {
+					float: left;
+					width: 99%;
+					line-height: 30px;
+					margin-top: 2px;
+					background-color: rgb(140, 140, 140);
+					border-top: solid 2px rgb(30, 30, 30);
+					border-bottom: solid 2px rgb(30, 30, 30);
+					padding-left: 1%;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
+				}
+
+				.pds-personal-information .pds-pi-table {
+					float: left;
+					width: 100%;
+				}
+
+					.pds-pi-table .one-three:first-child {
 						float: left;
-						display: inline-block;
 						width: 100%;
-						height: 45px;
-						border-bottom: solid 1px rgb(30, 30, 30);
+						border-bottom: solid 2px rgb(30, 30, 30);
 					}
 
-					.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(4) {
-						height: 130px;
+						.pds-pi-table .one-three:first-child .pi-row {
+							float: left;
+							display: inline-block;
+							width: 100%;
+							height: 35px;
+						}
+
+							.pds-pi-table .one-three:first-child .pi-row .pi-row-label {
+								float: left;
+								width: 25%;
+								height: 100%;
+								border-right: solid 1.5px rgb(30, 30, 30);
+								background-color: rgb(210, 210, 210);
+							}
+
+								.pds-pi-table .one-three:first-child .pi-row .pi-row-label  p {
+									float: left;
+									width: 95%;
+									margin-left: 5%;
+									height: 35px;
+									margin-top: 7px;
+									font-size: 70%;
+									text-transform: uppercase;
+								}
+
+							.pds-pi-table .one-three:first-child .pi-row .pi-row-input {
+								float: left;
+								width: 74.8%;
+								height: 100%;
+								border-bottom: solid 1px rgb(30, 30,30);
+							}
+
+								.pds-pi-table .one-three:first-child .pi-row .pi-row-input input:focus {
+									outline: none;
+								}
+
+								.pds-pi-table .one-three:first-child .pi-row:first-child .pi-row-input input {
+									float: left;
+									width: 99%;
+									height: 100%;
+									border: none;
+									padding-left: 1%;
+									font-family: 'Century Gothic';
+									font-size: 80%;
+								}
+
+								.pds-pi-table .one-three:first-child .pi-row:nth-child(2) .pi-row-input input:first-child {
+									float: left;
+									width: 59%;
+									height: 98%;
+									padding-left: 1%;
+									border: none;
+									font-family: 'Century Gothic';
+									font-size: 80%;
+									margin-top: 1px;
+								}
+
+								.pds-pi-table .one-three:first-child .pi-row:nth-child(2) .pi-row-input input:last-child {
+									float: left;
+									width: 39%;
+									height: 98%;
+									padding-left: 1%;
+									border: none;
+									font-family: 'Century Gothic';
+									font-size: 80%;
+									margin-top: 1px;
+									background-color: rgb(180, 180, 180);
+								}
+
+								.pds-pi-table .one-three:first-child .pi-row:last-child .pi-row-input input {
+									float: left;
+									width: 99%;
+									height: 98%;
+									border: none;
+									padding-left: 1%;
+									font-family: 'Century Gothic';
+									font-size: 80%;
+									margin-top: 1px;
+								}
+
+					.pds-pi-table .one-three:nth-child(2) {
+						float: left;
+						width: 50%;
+						border-right: solid 2px rgb(30, 30,30);
 					}
 
-						.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-label {
+						.pds-pi-table .one-three:nth-child(2) .pi-row {
 							float: left;
-							width: 50%;
-							height: 100%;
-							background-color: rgb(200, 200, 200);
-							border-right: solid 1.5px rgb(30, 30, 30);
+							display: inline-block;
+							width: 100%;
+							height: 45px;
+							border-bottom: solid 1px rgb(30, 30, 30);
 						}
 
-							.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-label  p {
-								float: left;
-								width: 95%;	
-								margin-left: 5%;
-								margin-top: 7px;
-								font-size: 70%;
-								text-transform: uppercase;
-							}
-
-						.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-input {
-							float: left;
-							width: 49.5%;
-							height: 100%;
-							border: none;
+						.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(4) {
+							height: 130px;
 						}
 
-							.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-input input:focus {
-								outline: none;
-							}
-
-							.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-input input {
-								float: left;
-								width: 98%;
-								height: 98%;
-								padding-left: 2%;
-								border: none;
-								margin-top: 1px;
-								font-family: 'Century Gothic';
-								font-size: 80%;
-							}
-
-							.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(3) .pi-row-input .radio-input {
+							.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-label {
 								float: left;
 								width: 50%;
 								height: 100%;
-								margin-top: 15px;
-								display: inline-block;
+								background-color: rgb(200, 200, 200);
+								border-right: solid 1.5px rgb(30, 30, 30);
 							}
 
-								.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(3) .pi-row-input .radio-input input[type= "radio"] {
+								.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-label  p {
 									float: left;
-									width: 25%;
-									height: 25%;
-									margin-top: 2px;
-								}
-
-								.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(3) .pi-row-input .radio-input p {
-									float: left;
-									font-size: 80%;
+									width: 95%;	
+									margin-left: 5%;
+									margin-top: 7px;
+									font-size: 70%;
 									text-transform: uppercase;
 								}
 
-							.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(4) .pi-row-input .radio-input {
+							.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-input {
 								float: left;
-								width: 40%;
-								height: 30%;
-								display: inline-block;
-								margin: 5px 1% 0px 1%;
-							}
-
-								.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(4) .pi-row-input .radio-input input[type= "radio"] {
-									float: left;
-									width: 30%;
-									height: 30%;
-									margin-top: 0px;
-								}
-
-								.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(4) .pi-row-input .radio-input p {
-									float: left;
-									width: 30%;
-									font-size: 60%;
-									text-transform: uppercase;
-								}
-
-				.pds-pi-table .one-three:last-child {
-					float: left;
-					width: 49.7%;
-				}
-
-					.pds-pi-table .one-three:last-child .pi-row {
-						float: left;
-						width: 100%;
-						height: 45px;
-						display: inline-block;
-						border-bottom: solid 1px rgb(30, 30, 30);
-					}
-
-						.pds-pi-table .one-three:last-child .pi-row:first-child {
-							height: 170px;
-						}
-
-						.pds-pi-table .one-three:last-child .pi-row:nth-child(2) {
-							height: 143px;
-						}
-
-						.pds-pi-table .one-three:last-child .pi-row:nth-child(4) {
-							height: 137px;
-						}
-
-						.pds-pi-table .one-three:last-child .pi-row .pi-row-label {
-							float: left;
-							width: 50%;
-							height: 100%;
-							border-right: solid 1.5px rgb(30, 30, 30);
-							background-color: rgb(200, 200, 200);
-						}
-
-							.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-label p {
-								float: left;
-								width: 95%;	
-								margin-left: 5%;
-								margin-top: 7px;
-								font-size: 70%;
-								text-transform: uppercase;
-							}
-
-							.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-label p span {
-								text-transform: none;
-								margin-left: 10%;
-							}
-
-							.pds-pi-table .one-three:last-child .pi-row .pi-row-label p {
-								float: left;
-								width: 95%;	
-								margin-left: 5%;
-								margin-top: 7px;
-								font-size: 70%;
-								text-transform: uppercase;
-							}
-
-						.pds-pi-table .one-three:last-child .pi-row .pi-row-input {
-							float: left;
-							width: 49.6%;
-							height: 100%;
-						}
-
-							.pds-pi-table .one-three:last-child .pi-row .pi-row-input input {
-								float: left;
-								width: 98%;
+								width: 49.5%;
 								height: 100%;
 								border: none;
-								padding-left: 2%;
-								font-family: 'Century Gothic';
-								font-size: 80%;
 							}
 
-							.pds-pi-table .one-three:last-child .pi-row .pi-row-input input:focus {
-								outline: none;
-							}
-
-							.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input {
-								float: left;
-								width: 47.5%;
-								height: 35px;
-								display: inline-block;
-								margin-top: 10px;
-								margin-left: 2.5%;
-							}
-
-								.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input input {
-									float: left;
-									width: 10%;
-									height: 30%;
+								.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-input input:focus {
+									outline: none;
 								}
 
-								.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input p {
-									float: left;
-									width: 70%;
-									height: 100%;
-									font-size: 70%;
-								}
-
-								.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(5), .pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(6) {
-									float: left;
-									width: 100%;
-									margin: 0px;
-								}
-
-								.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(5) {
-									border-bottom: solid 1px rgb(30, 30, 30);
-								}
-
-								.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(5) p {
-									float: left;
-									width: 100%;
-									font-size: 70%;
-									text-align: center;
-									margin-top: 15px;
-								}
-
-								.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(6) select {
+								.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-input input {
 									float: left;
 									width: 98%;
-									height: 43px;
+									height: 98%;
+									padding-left: 2%;
+									border: none;
+									margin-top: 1px;
+									font-family: 'Century Gothic';
+									font-size: 80%;
+								}
+
+								.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(3) .pi-row-input .radio-input {
+									float: left;
+									width: 50%;
+									height: 100%;
+									margin-top: 15px;
+									display: inline-block;
+								}
+
+									.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(3) .pi-row-input .radio-input input[type= "radio"] {
+										float: left;
+										width: 25%;
+										height: 25%;
+										margin-top: 2px;
+									}
+
+									.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(3) .pi-row-input .radio-input p {
+										float: left;
+										font-size: 80%;
+										text-transform: uppercase;
+									}
+
+								.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(4) .pi-row-input .radio-input {
+									float: left;
+									width: 40%;
+									height: 30%;
+									display: inline-block;
+									margin: 5px 1% 0px 1%;
+								}
+
+									.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(4) .pi-row-input .radio-input input[type= "radio"] {
+										float: left;
+										width: 30%;
+										height: 30%;
+										margin-top: 0px;
+									}
+
+									.pds-pi-table .one-three:nth-child(2) .pi-row:nth-child(4) .pi-row-input .radio-input p {
+										float: left;
+										width: 30%;
+										font-size: 60%;
+										text-transform: uppercase;
+									}
+
+					.pds-pi-table .one-three:last-child {
+						float: left;
+						width: 49.7%;
+					}
+
+						.pds-pi-table .one-three:last-child .pi-row {
+							float: left;
+							width: 100%;
+							height: 45px;
+							display: inline-block;
+							border-bottom: solid 1px rgb(30, 30, 30);
+						}
+
+							.pds-pi-table .one-three:last-child .pi-row:first-child {
+								height: 170px;
+							}
+
+							.pds-pi-table .one-three:last-child .pi-row:nth-child(2) {
+								height: 143px;
+							}
+
+							.pds-pi-table .one-three:last-child .pi-row:nth-child(4) {
+								height: 137px;
+							}
+
+							.pds-pi-table .one-three:last-child .pi-row .pi-row-label {
+								float: left;
+								width: 50%;
+								height: 100%;
+								border-right: solid 1.5px rgb(30, 30, 30);
+								background-color: rgb(200, 200, 200);
+							}
+
+								.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-label p {
+									float: left;
+									width: 95%;	
+									margin-left: 5%;
+									margin-top: 7px;
+									font-size: 70%;
+									text-transform: uppercase;
+								}
+
+								.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-label p span {
+									text-transform: none;
+									margin-left: 10%;
+								}
+
+								.pds-pi-table .one-three:last-child .pi-row .pi-row-label p {
+									float: left;
+									width: 95%;	
+									margin-left: 5%;
+									margin-top: 7px;
+									font-size: 70%;
+									text-transform: uppercase;
+								}
+
+							.pds-pi-table .one-three:last-child .pi-row .pi-row-input {
+								float: left;
+								width: 49.6%;
+								height: 100%;
+							}
+
+								.pds-pi-table .one-three:last-child .pi-row .pi-row-input input {
+									float: left;
+									width: 98%;
+									height: 100%;
 									border: none;
 									padding-left: 2%;
 									font-family: 'Century Gothic';
 									font-size: 80%;
 								}
 
-								.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(6) select:focus {
+								.pds-pi-table .one-three:last-child .pi-row .pi-row-input input:focus {
 									outline: none;
 								}
 
-								.pds-pi-table .one-three:last-child .pi-row .pi-row-input .text-input {
+								.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input {
 									float: left;
-									width: 100%;
-									height: 45px;
-									border-bottom: solid 1px rgb(30, 30, 30);
+									width: 47.5%;
+									height: 35px;
+									display: inline-block;
+									margin-top: 10px;
+									margin-left: 2.5%;
 								}
 
-									.pds-pi-table .one-three:last-child .pi-row:nth-child(2) .pi-row-input .text-input:first-child {
-										margin-top: 6px;
+									.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input input {
+										float: left;
+										width: 10%;
+										height: 30%;
 									}
 
-									.pds-pi-table .one-three:last-child .pi-row .pi-row-input .text-input input {
+									.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input p {
 										float: left;
-										width: 48%;
+										width: 70%;
 										height: 100%;
-										display: inline-block;
+										font-size: 70%;
+									}
+
+									.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(5), .pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(6) {
+										float: left;
+										width: 100%;
+										margin: 0px;
+									}
+
+									.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(5) {
+										border-bottom: solid 1px rgb(30, 30, 30);
+									}
+
+									.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(5) p {
+										float: left;
+										width: 100%;
+										font-size: 70%;
+										text-align: center;
+										margin-top: 15px;
+									}
+
+									.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(6) select {
+										float: left;
+										width: 98%;
+										height: 43px;
 										border: none;
 										padding-left: 2%;
 										font-family: 'Century Gothic';
 										font-size: 80%;
 									}
 
-									.pds-pi-table .one-three:last-child .pi-row .pi-row-input .text-input input:focus {
+									.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(6) select:focus {
 										outline: none;
 									}
 
-		.pds-form .pds-family-background {
-			float: left;
-			width: 100%;
-		}
+									.pds-pi-table .one-three:last-child .pi-row .pi-row-input .text-input {
+										float: left;
+										width: 100%;
+										height: 45px;
+										border-bottom: solid 1px rgb(30, 30, 30);
+									}
 
-			.pds-family-background h1 {
-				float: left;
-				width: 99%;
-				line-height: 30px;
-				background-color: rgb(140, 140, 140);
-				border-top: solid 1px rgb(30, 30, 30);
-				border-bottom: solid 2px rgb(30, 30, 30);
-				padding-left: 1%;
-				font-family: 'Century Gothic';
-				font-size: 90%;
-				text-transform: uppercase;
-				color: rgb(255, 255, 255);
-			}
+										.pds-pi-table .one-three:last-child .pi-row:nth-child(2) .pi-row-input .text-input:first-child {
+											margin-top: 6px;
+										}
 
-			.pds-family-background .pds-fb-table {
+										.pds-pi-table .one-three:last-child .pi-row .pi-row-input .text-input input {
+											float: left;
+											width: 48%;
+											height: 100%;
+											display: inline-block;
+											border: none;
+											padding-left: 2%;
+											font-family: 'Century Gothic';
+											font-size: 80%;
+										}
+
+										.pds-pi-table .one-three:last-child .pi-row .pi-row-input .text-input input:focus {
+											outline: none;
+										}
+
+			.pds-form .pds-family-background {
 				float: left;
 				width: 100%;
 			}
 
-				.pds-fb-table .one-two:first-child {
+				.pds-family-background h1 {
 					float: left;
-					width: 60%;
-					border-right: solid 1.5px rgb(30, 30, 30);
+					width: 99%;
+					line-height: 30px;
+					background-color: rgb(140, 140, 140);
+					border-top: solid 1px rgb(30, 30, 30);
+					border-bottom: solid 2px rgb(30, 30, 30);
+					padding-left: 1%;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
 				}
 
-					.pds-fb-table .one-two:first-child .pi-row {
-						float: left;
-						width: 100%;
-						height: 45px;
-						border-bottom: solid 1px rgb(30, 30, 30);
-					}
-
-						.pds-fb-table .one-two:first-child .pi-row:first-child, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) {
-							height: 135px;
-						}
-
-						.pds-fb-table .one-two:first-child .pi-row:nth-child(7) {
-							height: 180px;
-						}
-
-						.pds-fb-table .one-two:first-child .pi-row .pi-row-label {
-							float: left;
-							width: 41.5%;
-							height: 100%;
-							border-right: solid 1.5px rgb(30, 30, 30);
-							background-color: rgb(200, 200, 200);
-						}
-
-							.pds-fb-table .one-two:first-child .pi-row .pi-row-label p {
-								float: left;
-								width: 95%;	
-								height: 40px;
-								margin-left: 5%;
-								margin-top: 7px;
-								font-size: 70%;
-								text-transform: uppercase;
-							}
-
-						.pds-fb-table .one-two:first-child .pi-row .pi-row-input {
-							float: left;
-							width: 58%;
-							height: 100%;
-							border-bottom: solid 1px rgb(30, 30, 30);
-						}
-
-							.pds-fb-table .one-two:first-child .pi-row .pi-row-input input {
-								float: left;
-								width: 98%;
-								height: 100%;
-								border: none;
-								padding-left: 2%;
-								font-family: 'Century Gothic';
-								font-size: 80%;
-							}
-
-							.pds-fb-table .one-two:first-child .pi-row .pi-row-input input:focus {
-								outline: none;
-							}
-
-							.pds-fb-table .one-two:first-child .pi-row:first-child .pi-row-input .text-input, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) .pi-row-input .text-input, .pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input {
-								float: left;
-								width: 100%;
-								height: 44px;
-								border-bottom: solid 1px rgb(30, 30, 30);
-							}
-
-								.pds-fb-table .one-two:first-child .pi-row:first-child .pi-row-input .text-input input, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) .pi-row-input .text-input input, .pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input input {
-									float: left;
-									width: 98%;
-									height: 100%;
-									border: none;
-									padding-left: 2%;
-									font-family: 'Century Gothic';
-									font-size: 80%;
-								}
-
-								.pds-fb-table .one-two:first-child .pi-row:first-child .pi-row-input .text-input input:focus, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) .pi-row-input .text-input input:focus, .pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input input:focus {
-									outline: none;
-								}
-
-								.pds-fb-table .one-two:first-child .pi-row:first-child .pi-row-input .text-input:nth-child(2) input:first-child, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) .pi-row-input .text-input:nth-child(2) input:first-child, .pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input:nth-child(2) input:first-child {
-									float: left;
-									width: 58%;
-									height: 100%;
-									border: none;
-									padding-left: 2%;
-									font-family: 'Century Gothic';
-									font-size: 80%;
-								}
-
-								.pds-fb-table .one-two:first-child .pi-row:first-child .pi-row-input .text-input:nth-child(2) input:last-child, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) .pi-row-input .text-input:nth-child(2) input:last-child, .pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input:nth-child(2) input:last-child {
-									float: left;
-									width: 38%;
-									height: 100%;
-									border: none;
-									padding-left: 2%;
-									font-family: 'Century Gothic';
-									font-size: 80%;
-									background-color: rgb(180, 180, 180);
-								}
-
-								.pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input:first-child {
-									margin-top: 45px;
-									border-top: solid 1px rgb(30, 30, 30);
-								}
-
-				.pds-fb-table .one-two:last-child {
+				.pds-family-background .pds-fb-table {
 					float: left;
-					width: 39.8%;
-				}				
+					width: 100%;
+				}
 
-					.pds-fb-table .one-two:last-child .family-tbl {
+					.pds-fb-table .one-two:first-child {
 						float: left;
-						width: 100%;
+						width: 60%;
+						border-right: solid 1.5px rgb(30, 30, 30);
 					}
 
-						.pds-fb-table .one-two:last-child .family-tbl .family-tbl-header {
+						.pds-fb-table .one-two:first-child .pi-row {
 							float: left;
 							width: 100%;
 							height: 45px;
 							border-bottom: solid 1px rgb(30, 30, 30);
-							background-color: rgb(200, 200, 200);
 						}
 
-							.family-tbl .family-tbl-header .header {
-								float: left;
-								height: 100%;
-								display: inline-block;
+							.pds-fb-table .one-two:first-child .pi-row:first-child, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) {
+								height: 135px;
 							}
 
-								.family-tbl .family-tbl-header .header:first-child {
-									width: 70%;
-									border-right: solid 1px rgb(30, 30, 30);
-								}
+							.pds-fb-table .one-two:first-child .pi-row:nth-child(7) {
+								height: 180px;
+							}
 
-									.family-tbl .family-tbl-header .header:first-child p {
-										float: left;
-										width: 95%;
-										height: 100%;
-										margin-left: 5%;
-										margin-top: 5px;
-										font-size: 70%;
-										text-transform: uppercase
-									}
-
-								.family-tbl .family-tbl-header .header:last-child {
-									width: 29.7%;
-								}
-
-									.family-tbl .family-tbl-header .header:last-child p {
-										float: left;
-										width: 95%;
-										height: 100%;
-										margin-left: 5%;
-										margin-top: 5px;
-										font-size: 70%;
-										text-transform: uppercase
-									}
-						.pds-fb-table .one-two:last-child .family-tbl .family-tbl-info {
-							float: left;
-							width: 100%;
-							height: 43px;
-						}
-
-							.family-tbl .family-tbl-info .content-info {
+							.pds-fb-table .one-two:first-child .pi-row .pi-row-label {
 								float: left;
-								width: 100%;
+								width: 41.5%;
 								height: 100%;
-								display: inline-block;
+								border-right: solid 1.5px rgb(30, 30, 30);
+								background-color: rgb(200, 200, 200);
+							}
+
+								.pds-fb-table .one-two:first-child .pi-row .pi-row-label p {
+									float: left;
+									width: 95%;	
+									height: 40px;
+									margin-left: 5%;
+									margin-top: 7px;
+									font-size: 70%;
+									text-transform: uppercase;
+								}
+
+							.pds-fb-table .one-two:first-child .pi-row .pi-row-input {
+								float: left;
+								width: 58%;
+								height: 100%;
 								border-bottom: solid 1px rgb(30, 30, 30);
 							}
 
-								.family-tbl .family-tbl-info .content-info .info {
+								.pds-fb-table .one-two:first-child .pi-row .pi-row-input input {
 									float: left;
-									display: inline-block;
+									width: 98%;
+									height: 100%;
+									border: none;
+									padding-left: 2%;
+									font-family: 'Century Gothic';
+									font-size: 80%;
 								}
 
-									.family-tbl .family-tbl-info .content-info .info input:focus {
+								.pds-fb-table .one-two:first-child .pi-row .pi-row-input input:focus {
+									outline: none;
+								}
+
+								.pds-fb-table .one-two:first-child .pi-row:first-child .pi-row-input .text-input, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) .pi-row-input .text-input, .pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input {
+									float: left;
+									width: 100%;
+									height: 44px;
+									border-bottom: solid 1px rgb(30, 30, 30);
+								}
+
+									.pds-fb-table .one-two:first-child .pi-row:first-child .pi-row-input .text-input input, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) .pi-row-input .text-input input, .pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input input {
+										float: left;
+										width: 98%;
+										height: 100%;
+										border: none;
+										padding-left: 2%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+									.pds-fb-table .one-two:first-child .pi-row:first-child .pi-row-input .text-input input:focus, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) .pi-row-input .text-input input:focus, .pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input input:focus {
 										outline: none;
 									}
 
-									.family-tbl .family-tbl-info .content-info .info:first-child {
-										width: 70%;
+									.pds-fb-table .one-two:first-child .pi-row:first-child .pi-row-input .text-input:nth-child(2) input:first-child, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) .pi-row-input .text-input:nth-child(2) input:first-child, .pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input:nth-child(2) input:first-child {
+										float: left;
+										width: 58%;
 										height: 100%;
+										border: none;
+										padding-left: 2%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+									.pds-fb-table .one-two:first-child .pi-row:first-child .pi-row-input .text-input:nth-child(2) input:last-child, .pds-fb-table .one-two:first-child .pi-row:nth-child(6) .pi-row-input .text-input:nth-child(2) input:last-child, .pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input:nth-child(2) input:last-child {
+										float: left;
+										width: 38%;
+										height: 100%;
+										border: none;
+										padding-left: 2%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+										background-color: rgb(180, 180, 180);
+									}
+
+									.pds-fb-table .one-two:first-child .pi-row:last-child .pi-row-input .text-input:first-child {
+										margin-top: 45px;
+										border-top: solid 1px rgb(30, 30, 30);
+									}
+
+					.pds-fb-table .one-two:last-child {
+						float: left;
+						width: 39.8%;
+					}				
+
+						.pds-fb-table .one-two:last-child .family-tbl {
+							float: left;
+							width: 100%;
+						}
+
+							.pds-fb-table .one-two:last-child .family-tbl .family-tbl-header {
+								float: left;
+								width: 100%;
+								height: 45px;
+								border-bottom: solid 1px rgb(30, 30, 30);
+								background-color: rgb(200, 200, 200);
+							}
+
+								.family-tbl .family-tbl-header .header {
+									float: left;
+									height: 100%;
+									display: inline-block;
+								}
+
+									.family-tbl .family-tbl-header .header:first-child {
+										width: 70%;
 										border-right: solid 1px rgb(30, 30, 30);
 									}
 
-										.family-tbl .family-tbl-info .content-info .info:first-child input {
+										.family-tbl .family-tbl-header .header:first-child p {
 											float: left;
-											width: 98%;
+											width: 95%;
 											height: 100%;
-											border: none;
-											padding-left: 2%;
-											font-family: 'Century Gothic';
-											font-size: 80%;
+											margin-left: 5%;
+											margin-top: 5px;
+											font-size: 70%;
+											text-transform: uppercase
 										}
 
-									.family-tbl .family-tbl-info .content-info .info:last-child {
+									.family-tbl .family-tbl-header .header:last-child {
 										width: 29.7%;
 									}
 
-										.family-tbl .family-tbl-info .content-info .info:last-child input {
+										.family-tbl .family-tbl-header .header:last-child p {
 											float: left;
-											width: 98%;
-											height: 43px;
-											border: none;
-											padding-left: 2%;
-											font-family: 'Century Gothic';
-											font-size: 80%;
+											width: 95%;
+											height: 100%;
+											margin-left: 5%;
+											margin-top: 5px;
+											font-size: 70%;
+											text-transform: uppercase
 										}
-						.pds-fb-table .one-two:last-child .family-tbl #separate {
-							float: left;
-							width: 100%;
-							background-color: rgb(200, 200, 200);
-							font-size: 60%;
-							line-height: 19px;
-							text-align: center;
-							font-style: italic;
-							color: rgb(255, 0, 0);
-							font-weight: bold;
-						}
+							.pds-fb-table .one-two:last-child .family-tbl .family-tbl-info {
+								float: left;
+								width: 100%;
+								height: 43px;
+							}
 
-		.pds-form .pds-eligibility {
-			float: left;
-			width: 100%;
-		}
+								.family-tbl .family-tbl-info .content-info {
+									float: left;
+									width: 100%;
+									height: 100%;
+									display: inline-block;
+									border-bottom: solid 1px rgb(30, 30, 30);
+								}
 
-			.pds-eligibility h1 {
-				float: left;
-				width: 99%;
-				line-height: 30px;
-				background-color: rgb(140, 140, 140);
-				border-top: solid 1px rgb(30, 30, 30);
-				border-bottom: solid 2px rgb(30, 30, 30);
-				padding-left: 1%;
-				font-family: 'Century Gothic';
-				font-size: 90%;
-				text-transform: uppercase;
-				color: rgb(255, 255, 255);
-			}
+									.family-tbl .family-tbl-info .content-info .info {
+										float: left;
+										display: inline-block;
+									}
 
-			.pds-eligibility .pds-eligibility-tbl {
+										.family-tbl .family-tbl-info .content-info .info input:focus {
+											outline: none;
+										}
+
+										.family-tbl .family-tbl-info .content-info .info:first-child {
+											width: 70%;
+											height: 100%;
+											border-right: solid 1px rgb(30, 30, 30);
+										}
+
+											.family-tbl .family-tbl-info .content-info .info:first-child input {
+												float: left;
+												width: 98%;
+												height: 100%;
+												border: none;
+												padding-left: 2%;
+												font-family: 'Century Gothic';
+												font-size: 80%;
+											}
+
+										.family-tbl .family-tbl-info .content-info .info:last-child {
+											width: 29.7%;
+										}
+
+											.family-tbl .family-tbl-info .content-info .info:last-child input {
+												float: left;
+												width: 98%;
+												height: 43px;
+												border: none;
+												padding-left: 2%;
+												font-family: 'Century Gothic';
+												font-size: 80%;
+											}
+							.pds-fb-table .one-two:last-child .family-tbl #separate {
+								float: left;
+								width: 100%;
+								background-color: rgb(200, 200, 200);
+								font-size: 60%;
+								line-height: 19px;
+								text-align: center;
+								font-style: italic;
+								color: rgb(255, 0, 0);
+								font-weight: bold;
+							}
+
+			.pds-form .pds-eligibility {
 				float: left;
 				width: 100%;
 			}
 
-				.pds-eligibility-tbl .eligibility-tbl-header {
+				.pds-eligibility h1 {
 					float: left;
-					width: 100%;
-					height: 90px;
-					border-bottom: solid 1px rgb(30, 30, 30);
-					background-color: rgb(200, 200, 200);
+					width: 99%;
+					line-height: 30px;
+					background-color: rgb(140, 140, 140);
+					border-top: solid 1px rgb(30, 30, 30);
+					border-bottom: solid 2px rgb(30, 30, 30);
+					padding-left: 1%;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
 				}
 
-					.pds-eligibility-tbl .eligibility-tbl-header .header {
-						float: left;
-						height: 100%;
-						display: inline-block;
-					}
-
-						.eligibility-tbl-header .header:first-child {
-							width: 35%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.eligibility-tbl-header .header:first-child p {
-								float: left;
-								width: 95%;
-								text-align: center;
-								text-transform: uppercase;
-								padding: 0px 2.5%;
-								font-size: 65%;
-								 margin-top: 20px;
-							}
-
-						.eligibility-tbl-header .header:nth-child(2) {
-							width: 10%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.eligibility-tbl-header .header:nth-child(2) p {
-								float: left;
-								width: 95%;
-								text-align: center;
-								text-transform: uppercase;
-								padding: 0px 2.5%;
-								font-size: 65%;
-								 margin-top: 20px;	
-							}
-
-						.eligibility-tbl-header .header:nth-child(3) {
-							width: 10%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.eligibility-tbl-header .header:nth-child(3) p {
-								float: left;
-								width: 95%;
-								text-align: center;
-								text-transform: uppercase;
-								padding: 0px 2.5%;
-								font-size: 65%;
-								 margin-top: 20px;	
-							}
-
-						.eligibility-tbl-header .header:nth-child(4) {
-							width: 25%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.eligibility-tbl-header .header:nth-child(4) p {
-								float: left;
-								width: 95%;
-								text-align: center;
-								text-transform: uppercase;
-								padding: 0px 2.5%;
-								font-size: 65%;
-								 margin-top: 20px;	
-							}
-
-						.eligibility-tbl-header .header:last-child {
-							width: 19.5%;
-						}
-
-							.eligibility-tbl-header .header:last-child p:first-child {
-								float: left;
-								width: 95%;
-								text-align: center;
-								text-transform: uppercase;
-								padding: 0px 2.5%;
-								font-size: 65%;
-								 margin-top: 20px;	
-								 padding-bottom: 20px;
-								 border-bottom: solid 1px rgb(30, 30, 30);
-							}
-
-							.eligibility-tbl-header .header:last-child p:nth-child(2) {
-								float: left;
-								width: 49%;
-								text-align: center;
-								text-transform: uppercase;
-								font-size: 65%;
-								border-right: solid 1px rgb(30, 30, 30);
-								padding: 11px 0px;
-							}
-
-							.eligibility-tbl-header .header:last-child p:last-child {
-								float: left;
-								width: 49%;
-								text-align: center;
-								text-transform: uppercase;
-								font-size: 65%;
-								border-left: solid 1px rgb(30, 30, 30);
-								padding: 4px 0px;
-							}
-
-				.pds-eligibility-tbl .eligibility-tbl-info {
+				.pds-eligibility .pds-eligibility-tbl {
 					float: left;
 					width: 100%;
 				}
 
-					.eligibility-tbl-info .content-info {
+					.pds-eligibility-tbl .eligibility-tbl-header {
 						float: left;
 						width: 100%;
-						height: 30px;
-						display: inline-block;
+						height: 90px;
 						border-bottom: solid 1px rgb(30, 30, 30);
+						background-color: rgb(200, 200, 200);
 					}
 
-						.eligibility-tbl-info .content-info .info {
+						.pds-eligibility-tbl .eligibility-tbl-header .header {
 							float: left;
 							height: 100%;
 							display: inline-block;
 						}
 
-							.eligibility-tbl-info .content-info .info:first-child {
+							.eligibility-tbl-header .header:first-child {
 								width: 35%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.eligibility-tbl-info .content-info .info:first-child input:focus {
-									outline: none;
-								}
-
-								.eligibility-tbl-info .content-info .info:first-child input {
+								.eligibility-tbl-header .header:first-child p {
 									float: left;
-									width: 98%;
-									height: 100%;
-									padding-left: 2%;
-									border: none;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 95%;
+									text-align: center;
+									text-transform: uppercase;
+									padding: 0px 2.5%;
+									font-size: 65%;
+									 margin-top: 20px;
 								}
 
-							.eligibility-tbl-info .content-info .info:nth-child(2) {
+							.eligibility-tbl-header .header:nth-child(2) {
 								width: 10%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.eligibility-tbl-info .content-info .info:nth-child(2) input:focus {
-									outline: none;
-								}
-
-								.eligibility-tbl-info .content-info .info:nth-child(2) input {
+								.eligibility-tbl-header .header:nth-child(2) p {
 									float: left;
-									width: 96%;
-									height: 100%;
-									padding-left: 4%;
-									border: none;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 95%;
+									text-align: center;
+									text-transform: uppercase;
+									padding: 0px 2.5%;
+									font-size: 65%;
+									 margin-top: 20px;	
 								}
 
-							.eligibility-tbl-info .content-info .info:nth-child(3) {
+							.eligibility-tbl-header .header:nth-child(3) {
 								width: 10%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.eligibility-tbl-info .content-info .info:nth-child(3) input:focus {
-									outline: none;
-								}
-
-								.eligibility-tbl-info .content-info .info:nth-child(3) input {
+								.eligibility-tbl-header .header:nth-child(3) p {
 									float: left;
-									width: 96%;
-									height: 100%;
-									padding-left: 4%;
-									border: none;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 95%;
+									text-align: center;
+									text-transform: uppercase;
+									padding: 0px 2.5%;
+									font-size: 65%;
+									 margin-top: 20px;	
 								}
 
-							.eligibility-tbl-info .content-info .info:nth-child(4) {
+							.eligibility-tbl-header .header:nth-child(4) {
 								width: 25%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.eligibility-tbl-info .content-info .info:nth-child(4) input:focus {
-									outline: none;
-								}
-
-								.eligibility-tbl-info .content-info .info:nth-child(4) input {
+								.eligibility-tbl-header .header:nth-child(4) p {
 									float: left;
-									width: 98%;
-									height: 100%;
-									padding-left: 2%;
-									border: none;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 95%;
+									text-align: center;
+									text-transform: uppercase;
+									padding: 0px 2.5%;
+									font-size: 65%;
+									 margin-top: 20px;	
 								}
 
-							.eligibility-tbl-info .content-info .info:last-child {
+							.eligibility-tbl-header .header:last-child {
 								width: 19.5%;
 							}
 
-								.eligibility-tbl-info .content-info .info:last-child input:focus {
-									outline: none;
+								.eligibility-tbl-header .header:last-child p:first-child {
+									float: left;
+									width: 95%;
+									text-align: center;
+									text-transform: uppercase;
+									padding: 0px 2.5%;
+									font-size: 65%;
+									 margin-top: 20px;	
+									 padding-bottom: 20px;
+									 border-bottom: solid 1px rgb(30, 30, 30);
 								}
 
-								.eligibility-tbl-info .content-info .info:last-child input:first-child {
+								.eligibility-tbl-header .header:last-child p:nth-child(2) {
 									float: left;
-									width: 47%;
-									height: 100%;
-									padding-left: 2%;
-									border: none;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 49%;
+									text-align: center;
+									text-transform: uppercase;
+									font-size: 65%;
+									border-right: solid 1px rgb(30, 30, 30);
+									padding: 11px 0px;
+								}
+
+								.eligibility-tbl-header .header:last-child p:last-child {
+									float: left;
+									width: 49%;
+									text-align: center;
+									text-transform: uppercase;
+									font-size: 65%;
+									border-left: solid 1px rgb(30, 30, 30);
+									padding: 4px 0px;
+								}
+
+					.pds-eligibility-tbl .eligibility-tbl-info {
+						float: left;
+						width: 100%;
+					}
+
+						.eligibility-tbl-info .content-info {
+							float: left;
+							width: 100%;
+							height: 30px;
+							display: inline-block;
+							border-bottom: solid 1px rgb(30, 30, 30);
+						}
+
+							.eligibility-tbl-info .content-info .info {
+								float: left;
+								height: 100%;
+								display: inline-block;
+							}
+
+								.eligibility-tbl-info .content-info .info:first-child {
+									width: 35%;
 									border-right: solid 1px rgb(30, 30, 30);
 								}
 
-								.eligibility-tbl-info .content-info .info:last-child input:last-child {
-									float: left;
-									width: 47%;
-									height: 100%;
-									padding-left: 2%;
-									border: none;
-									font-family: 'Century Gothic';
-									font-size: 80%;
-									border-left: solid 1px rgb(30, 30, 30);
+									.eligibility-tbl-info .content-info .info:first-child input:focus {
+										outline: none;
+									}
+
+									.eligibility-tbl-info .content-info .info:first-child input {
+										float: left;
+										width: 98%;
+										height: 100%;
+										padding-left: 2%;
+										border: none;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.eligibility-tbl-info .content-info .info:nth-child(2) {
+									width: 10%;
+									border-right: solid 1px rgb(30, 30, 30);
 								}
 
-					.pds-eligibility-tbl #separate {
-						float: left;
-						width: 100%;
-						background-color: rgb(200, 200, 200);
-						font-size: 60%;
-						text-align: center;
-						padding: 2px 0px;
-						font-style: italic;
-						font-weight: bold;
-						color: rgb(255, 0, 0);
-					}
+									.eligibility-tbl-info .content-info .info:nth-child(2) input:focus {
+										outline: none;
+									}
 
-		.pds-form .pds-expi {
-			float: left;
-			width: 100%;
-		}
+									.eligibility-tbl-info .content-info .info:nth-child(2) input {
+										float: left;
+										width: 96%;
+										height: 100%;
+										padding-left: 4%;
+										border: none;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
 
-			.pds-expi h1 {
-				float: left;
-				width: 99%;
-				line-height: 30px;
-				background-color: rgb(140, 140, 140);
-				border-top: solid 1px rgb(30, 30, 30);
-				border-bottom: solid 2px rgb(30, 30, 30);
-				padding-left: 1%;
-				font-family: 'Century Gothic';
-				font-size: 90%;
-				text-transform: uppercase;
-				color: rgb(255, 255, 255);
-			}
+								.eligibility-tbl-info .content-info .info:nth-child(3) {
+									width: 10%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
 
-			.pds-expi .expi-tbl {
+									.eligibility-tbl-info .content-info .info:nth-child(3) input:focus {
+										outline: none;
+									}
+
+									.eligibility-tbl-info .content-info .info:nth-child(3) input {
+										float: left;
+										width: 96%;
+										height: 100%;
+										padding-left: 4%;
+										border: none;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.eligibility-tbl-info .content-info .info:nth-child(4) {
+									width: 25%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.eligibility-tbl-info .content-info .info:nth-child(4) input:focus {
+										outline: none;
+									}
+
+									.eligibility-tbl-info .content-info .info:nth-child(4) input {
+										float: left;
+										width: 98%;
+										height: 100%;
+										padding-left: 2%;
+										border: none;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.eligibility-tbl-info .content-info .info:last-child {
+									width: 19.5%;
+								}
+
+									.eligibility-tbl-info .content-info .info:last-child input:focus {
+										outline: none;
+									}
+
+									.eligibility-tbl-info .content-info .info:last-child input:first-child {
+										float: left;
+										width: 47%;
+										height: 100%;
+										padding-left: 2%;
+										border: none;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+										border-right: solid 1px rgb(30, 30, 30);
+									}
+
+									.eligibility-tbl-info .content-info .info:last-child input:last-child {
+										float: left;
+										width: 47%;
+										height: 100%;
+										padding-left: 2%;
+										border: none;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+										border-left: solid 1px rgb(30, 30, 30);
+									}
+
+						.pds-eligibility-tbl #separate {
+							float: left;
+							width: 100%;
+							background-color: rgb(200, 200, 200);
+							font-size: 60%;
+							text-align: center;
+							padding: 2px 0px;
+							font-style: italic;
+							font-weight: bold;
+							color: rgb(255, 0, 0);
+						}
+
+			.pds-form .pds-expi {
 				float: left;
 				width: 100%;
 			}
 
-				.expi-tbl .expi-tbl-header {
+				.pds-expi h1 {
 					float: left;
-					width: 100%;
-					height: 90px;
-					border-bottom: solid 1px rgb(30, 30, 30);
-					background-color: rgb(200, 200, 200);
+					width: 99%;
+					line-height: 30px;
+					background-color: rgb(140, 140, 140);
+					border-top: solid 1px rgb(30, 30, 30);
+					border-bottom: solid 2px rgb(30, 30, 30);
+					padding-left: 1%;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
 				}
 
-					.expi-tbl .expi-tbl-header .header {
-						float: left;
-						height: 100%;
-						display: inline-block;
-					}
-
-						.expi-tbl .expi-tbl-header .header:first-child {
-							width: 15%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.expi-tbl .expi-tbl-header .header:first-child p:first-child {
-								float: left;
-								width: 100%;
-								text-align: center;
-								font-size: 65%;
-								margin-top: 15px;
-								padding-bottom: 15px;
-								border-bottom: solid 1px rgb(30, 30, 30);
-								text-transform: uppercase;
-							}
-
-							.expi-tbl .expi-tbl-header .header:first-child p:nth-child(2) {
-								float: left;
-								width: 49%;
-								text-align: center;
-								font-size: 70%;
-								padding: 8px 0px;
-								text-transform: uppercase;
-								border-right: solid 1px rgb(30, 30, 30);
-							}
-
-							.expi-tbl .expi-tbl-header .header:first-child p:last-child {
-								float: left;
-								width: 49%;
-								text-align: center;
-								font-size: 70%;
-								padding: 8px 0px;
-								text-transform: uppercase;
-								border-left: solid 1px rgb(30, 30, 30);
-							}
-
-						.expi-tbl .expi-tbl-header .header:nth-child(2) {
-							width: 20%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.expi-tbl .expi-tbl-header .header:nth-child(2) p {
-								float: left;
-								width: 100%;
-								text-align: center;
-								font-size: 65%;
-								padding: 8px 0px;
-								text-transform: uppercase;
-								border-right: solid 1px rgb(30, 30, 30);
-								margin-top: 15px;
-							}
-
-						.expi-tbl .expi-tbl-header .header:nth-child(3) {
-							width: 25%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.expi-tbl .expi-tbl-header .header:nth-child(3) p {
-								float: left;
-								width: 100%;
-								text-align: center;
-								font-size: 65%;
-								padding: 8px 0px;
-								text-transform: uppercase;
-								border-right: solid 1px rgb(30, 30, 30);
-								margin-top: 15px;
-							}
-
-						.expi-tbl .expi-tbl-header .header:nth-child(4) {
-							width: 10%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.expi-tbl .expi-tbl-header .header:nth-child(4) p {
-								float: left;
-								width: 100%;
-								text-align: center;
-								font-size: 65%;
-								padding: 8px 0px;
-								text-transform: uppercase;
-								border-right: solid 1px rgb(30, 30, 30);
-								margin-top: 20px;
-							}
-
-						.expi-tbl .expi-tbl-header .header:nth-child(5) {
-							width: 10%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.expi-tbl .expi-tbl-header .header:nth-child(5) p {
-								float: left;
-								width: 100%;
-								text-align: center;
-								font-size: 65%;
-								padding: 8px 0px;
-								text-transform: uppercase;
-								border-right: solid 1px rgb(30, 30, 30);
-								margin-top: 2px;
-							}
-
-						.expi-tbl .expi-tbl-header .header:nth-child(6) {
-							width: 10%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.expi-tbl .expi-tbl-header .header:nth-child(6) p {
-								float: left;
-								width: 100%;
-								text-align: center;
-								font-size: 65%;
-								padding: 8px 0px;
-								text-transform: uppercase;
-								border-right: solid 1px rgb(30, 30, 30);
-								margin-top: 20px;
-							}
-
-						.expi-tbl .expi-tbl-header .header:last-child {
-							width: 9.3%;
-						}
-
-							.expi-tbl .expi-tbl-header .header:last-child p {
-								float: left;
-								width: 100%;
-								text-align: center;
-								font-size: 65%;
-								padding: 8px 0px;
-								text-transform: uppercase;
-								border-right: solid 1px rgb(30, 30, 30);
-								margin-top: 15px;
-							}
-
-				.expi-tbl .expi-tbl-info {
+				.pds-expi .expi-tbl {
 					float: left;
 					width: 100%;
 				}
 
-					.expi-tbl-info .content-info {
+					.expi-tbl .expi-tbl-header {
 						float: left;
 						width: 100%;
-						height: 35px;
+						height: 90px;
 						border-bottom: solid 1px rgb(30, 30, 30);
+						background-color: rgb(200, 200, 200);
 					}
 
-						.expi-tbl-info .content-info .info {
+						.expi-tbl .expi-tbl-header .header {
 							float: left;
 							height: 100%;
 							display: inline-block;
 						}
 
-							.expi-tbl-info .content-info .info:first-child {
+							.expi-tbl .expi-tbl-header .header:first-child {
 								width: 15%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.expi-tbl-info .content-info .info:first-child input:focus {
-									outline: none;
+								.expi-tbl .expi-tbl-header .header:first-child p:first-child {
+									float: left;
+									width: 100%;
+									text-align: center;
+									font-size: 65%;
+									margin-top: 15px;
+									padding-bottom: 15px;
+									border-bottom: solid 1px rgb(30, 30, 30);
+									text-transform: uppercase;
 								}
 
-								.expi-tbl-info .content-info .info:first-child input:first-child {
+								.expi-tbl .expi-tbl-header .header:first-child p:nth-child(2) {
 									float: left;
-									width: 45%;
-									height: 100%;
-									border: none;
+									width: 49%;
+									text-align: center;
+									font-size: 70%;
+									padding: 8px 0px;
+									text-transform: uppercase;
 									border-right: solid 1px rgb(30, 30, 30);
-									padding-left: 4%;
-									font-family: 'Century Gothic';
-									font-size: 80%;
 								}
 
-								.expi-tbl-info .content-info .info:first-child input:last-child {
+								.expi-tbl .expi-tbl-header .header:first-child p:last-child {
 									float: left;
-									width: 45%;
-									height: 100%;
-									border: none;
+									width: 49%;
+									text-align: center;
+									font-size: 70%;
+									padding: 8px 0px;
+									text-transform: uppercase;
 									border-left: solid 1px rgb(30, 30, 30);
-									padding-left: 4%;
-									font-family: 'Century Gothic';
-									font-size: 80%;
 								}
 
-							.expi-tbl-info .content-info .info:nth-child(2) {
+							.expi-tbl .expi-tbl-header .header:nth-child(2) {
 								width: 20%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.expi-tbl-info .content-info .info:nth-child(2) input:focus {
-									outline: none;
-								}
-
-								.expi-tbl-info .content-info .info:nth-child(2) input {
+								.expi-tbl .expi-tbl-header .header:nth-child(2) p {
 									float: left;
-									width: 97%;
-									height: 100%;
-									border: none;
-									padding-left: 3%;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									text-align: center;
+									font-size: 65%;
+									padding: 8px 0px;
+									text-transform: uppercase;
+									border-right: solid 1px rgb(30, 30, 30);
+									margin-top: 15px;
 								}
 
-							.expi-tbl-info .content-info .info:nth-child(3) {
+							.expi-tbl .expi-tbl-header .header:nth-child(3) {
 								width: 25%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.expi-tbl-info .content-info .info:nth-child(3) input:focus {
-									outline: none;
-								}
-
-								.expi-tbl-info .content-info .info:nth-child(3) input {
+								.expi-tbl .expi-tbl-header .header:nth-child(3) p {
 									float: left;
-									width: 97%;
-									height: 100%;
-									border: none;
-									padding-left: 3%;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									text-align: center;
+									font-size: 65%;
+									padding: 8px 0px;
+									text-transform: uppercase;
+									border-right: solid 1px rgb(30, 30, 30);
+									margin-top: 15px;
 								}
 
-							.expi-tbl-info .content-info .info:nth-child(4) {
+							.expi-tbl .expi-tbl-header .header:nth-child(4) {
 								width: 10%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.expi-tbl-info .content-info .info:nth-child(4) input:focus {
-									outline: none;
-								}
-
-								.expi-tbl-info .content-info .info:nth-child(4) input {
+								.expi-tbl .expi-tbl-header .header:nth-child(4) p {
 									float: left;
-									width: 97%;
-									height: 100%;
-									border: none;
-									padding-left: 3%;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									text-align: center;
+									font-size: 65%;
+									padding: 8px 0px;
+									text-transform: uppercase;
+									border-right: solid 1px rgb(30, 30, 30);
+									margin-top: 20px;
 								}
 
-							.expi-tbl-info .content-info .info:nth-child(5) {
+							.expi-tbl .expi-tbl-header .header:nth-child(5) {
 								width: 10%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.expi-tbl-info .content-info .info:nth-child(5) input:focus {
-									outline: none;
-								}
-
-								.expi-tbl-info .content-info .info:nth-child(5) input {
+								.expi-tbl .expi-tbl-header .header:nth-child(5) p {
 									float: left;
-									width: 97%;
-									height: 100%;
-									border: none;
-									padding-left: 3%;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									text-align: center;
+									font-size: 65%;
+									padding: 8px 0px;
+									text-transform: uppercase;
+									border-right: solid 1px rgb(30, 30, 30);
+									margin-top: 2px;
 								}
 
-							.expi-tbl-info .content-info .info:nth-child(6) {
+							.expi-tbl .expi-tbl-header .header:nth-child(6) {
 								width: 10%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.expi-tbl-info .content-info .info:nth-child(6) input:focus {
-									outline: none;
-								}
-
-								.expi-tbl-info .content-info .info:nth-child(6) input {
+								.expi-tbl .expi-tbl-header .header:nth-child(6) p {
 									float: left;
-									width: 97%;
-									height: 100%;
-									border: none;
-									padding-left: 3%;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									text-align: center;
+									font-size: 65%;
+									padding: 8px 0px;
+									text-transform: uppercase;
+									border-right: solid 1px rgb(30, 30, 30);
+									margin-top: 20px;
 								}
 
-							.expi-tbl-info .content-info .info:last-child {
+							.expi-tbl .expi-tbl-header .header:last-child {
 								width: 9.3%;
 							}
 
-								.expi-tbl-info .content-info .info:last-child input:focus {
-									outline: none;
-								}
-
-								.expi-tbl-info .content-info .info:last-child input {
+								.expi-tbl .expi-tbl-header .header:last-child p {
 									float: left;
-									width: 97%;
-									height: 100%;
-									border: none;
-									padding-left: 3%;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									text-align: center;
+									font-size: 65%;
+									padding: 8px 0px;
+									text-transform: uppercase;
+									border-right: solid 1px rgb(30, 30, 30);
+									margin-top: 15px;
 								}
 
-					.expi-tbl-info #separate {
+					.expi-tbl .expi-tbl-info {
 						float: left;
 						width: 100%;
-						background-color: rgb(200, 200, 200);
-						font-size: 60%;
-						text-align: center;
-						padding: 2px 0px;
-						font-style: italic;
-						font-weight: bold;
-						color: rgb(255, 0, 0);
 					}
 
-		.pds-form .pds-work {
-			float: left;
-			width: 100%;
-		}
+						.expi-tbl-info .content-info {
+							float: left;
+							width: 100%;
+							height: 35px;
+							border-bottom: solid 1px rgb(30, 30, 30);
+						}
 
-			.pds-work h1 {
-				float: left;
-				width: 99%;
-				line-height: 30px;
-				background-color: rgb(140, 140, 140);
-				border-top: solid 1px rgb(30, 30, 30);
-				border-bottom: solid 2px rgb(30, 30, 30);
-				padding-left: 1%;
-				font-family: 'Century Gothic';
-				font-size: 90%;
-				text-transform: uppercase;
-				color: rgb(255, 255, 255);
-			}
+							.expi-tbl-info .content-info .info {
+								float: left;
+								height: 100%;
+								display: inline-block;
+							}
 
-			.pds-work .work-tbl {
+								.expi-tbl-info .content-info .info:first-child {
+									width: 15%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.expi-tbl-info .content-info .info:first-child input:focus {
+										outline: none;
+									}
+
+									.expi-tbl-info .content-info .info:first-child input:first-child {
+										float: left;
+										width: 45%;
+										height: 100%;
+										border: none;
+										border-right: solid 1px rgb(30, 30, 30);
+										padding-left: 4%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+									.expi-tbl-info .content-info .info:first-child input:last-child {
+										float: left;
+										width: 45%;
+										height: 100%;
+										border: none;
+										border-left: solid 1px rgb(30, 30, 30);
+										padding-left: 4%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.expi-tbl-info .content-info .info:nth-child(2) {
+									width: 20%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.expi-tbl-info .content-info .info:nth-child(2) input:focus {
+										outline: none;
+									}
+
+									.expi-tbl-info .content-info .info:nth-child(2) input {
+										float: left;
+										width: 97%;
+										height: 100%;
+										border: none;
+										padding-left: 3%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.expi-tbl-info .content-info .info:nth-child(3) {
+									width: 25%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.expi-tbl-info .content-info .info:nth-child(3) input:focus {
+										outline: none;
+									}
+
+									.expi-tbl-info .content-info .info:nth-child(3) input {
+										float: left;
+										width: 97%;
+										height: 100%;
+										border: none;
+										padding-left: 3%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.expi-tbl-info .content-info .info:nth-child(4) {
+									width: 10%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.expi-tbl-info .content-info .info:nth-child(4) input:focus {
+										outline: none;
+									}
+
+									.expi-tbl-info .content-info .info:nth-child(4) input {
+										float: left;
+										width: 97%;
+										height: 100%;
+										border: none;
+										padding-left: 3%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.expi-tbl-info .content-info .info:nth-child(5) {
+									width: 10%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.expi-tbl-info .content-info .info:nth-child(5) input:focus {
+										outline: none;
+									}
+
+									.expi-tbl-info .content-info .info:nth-child(5) input {
+										float: left;
+										width: 97%;
+										height: 100%;
+										border: none;
+										padding-left: 3%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.expi-tbl-info .content-info .info:nth-child(6) {
+									width: 10%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.expi-tbl-info .content-info .info:nth-child(6) input:focus {
+										outline: none;
+									}
+
+									.expi-tbl-info .content-info .info:nth-child(6) input {
+										float: left;
+										width: 97%;
+										height: 100%;
+										border: none;
+										padding-left: 3%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.expi-tbl-info .content-info .info:last-child {
+									width: 9.3%;
+								}
+
+									.expi-tbl-info .content-info .info:last-child input:focus {
+										outline: none;
+									}
+
+									.expi-tbl-info .content-info .info:last-child input {
+										float: left;
+										width: 97%;
+										height: 100%;
+										border: none;
+										padding-left: 3%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+						.expi-tbl-info #separate {
+							float: left;
+							width: 100%;
+							background-color: rgb(200, 200, 200);
+							font-size: 60%;
+							text-align: center;
+							padding: 2px 0px;
+							font-style: italic;
+							font-weight: bold;
+							color: rgb(255, 0, 0);
+						}
+
+			.pds-form .pds-work {
 				float: left;
 				width: 100%;
 			}
 
-				.work-tbl .work-tbl-header {
+				.pds-work h1 {
 					float: left;
-					width: 100%;
-					height: 90px;
-					border-bottom: solid 1px rgb(30, 30, 30);
-					background-color: rgb(200, 200, 200);
+					width: 99%;
+					line-height: 30px;
+					background-color: rgb(140, 140, 140);
+					border-top: solid 1px rgb(30, 30, 30);
+					border-bottom: solid 2px rgb(30, 30, 30);
+					padding-left: 1%;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
 				}
 
-					.work-tbl .work-tbl-header .header {
-						float: left;
-						height: 100%;
-						display: inline-block;
-					}
-
-						.work-tbl .work-tbl-header .header:first-child {
-							width: 40%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.work-tbl .work-tbl-header .header:first-child p {
-								float: left;
-								width: 100%;
-								text-align: center;
-								text-transform: uppercase;
-								font-size: 65%;
-								margin-top: 25px;
-							}
-
-						.work-tbl .work-tbl-header .header:nth-child(2) {
-							width: 20%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.work-tbl .work-tbl-header .header:nth-child(2) p:first-child {
-								float: left;
-								width: 100%;
-								text-align: center;
-								text-transform: uppercase;
-								font-size: 65%;
-								padding: 15px 0px;
-								border-bottom: solid 1px rgb(30, 30, 30);
-							}
-
-							.work-tbl .work-tbl-header .header:nth-child(2) p:nth-child(2) {
-								float: left;
-								width: 49%;
-								text-align: center;
-								text-transform: uppercase;
-								font-size: 65%;
-								padding: 9px 0px;
-								border-right: solid 1px rgb(30, 30, 30);
-							}
-
-							.work-tbl .work-tbl-header .header:nth-child(2) p:last-child {
-								float: left;
-								width: 49%;
-								text-align: center;
-								text-transform: uppercase;
-								font-size: 65%;
-								padding: 9px 0px;
-								border-left: solid 1px rgb(30, 30, 30);
-							}
-
-						.work-tbl .work-tbl-header .header:nth-child(3) {
-							width: 10%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.work-tbl .work-tbl-header .header:nth-child(3) p {
-								float: left;
-								width: 100%;
-								text-align: center;
-								text-transform: uppercase;
-								font-size: 65%;
-								margin-top: 30px;
-							}
-
-						.work-tbl .work-tbl-header .header:last-child {
-							width: 29%;
-						}
-
-							.work-tbl .work-tbl-header .header:last-child p {
-								float: left;
-								width: 100%;
-								text-align: center;
-								text-transform: uppercase;
-								font-size: 65%;
-								margin-top: 40px;
-							}
-
-				.work-tbl .work-tbl-info {
+				.pds-work .work-tbl {
 					float: left;
 					width: 100%;
 				}
 
-					.work-tbl-info .content-info {
+					.work-tbl .work-tbl-header {
 						float: left;
 						width: 100%;
-						height: 35px;
+						height: 90px;
 						border-bottom: solid 1px rgb(30, 30, 30);
+						background-color: rgb(200, 200, 200);
 					}
 
-						.work-tbl-info .content-info .info {
+						.work-tbl .work-tbl-header .header {
 							float: left;
 							height: 100%;
 							display: inline-block;
 						}
 
-							.work-tbl-info .content-info .info:first-child {
+							.work-tbl .work-tbl-header .header:first-child {
 								width: 40%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.work-tbl-info .content-info .info:first-child input:focus {
-									outline: none;
-								}
-
-								.work-tbl-info .content-info .info:first-child input {
+								.work-tbl .work-tbl-header .header:first-child p {
 									float: left;
-									width: 97%;
-									height: 100%;
-									padding-left: 3%;
-									border: none;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									text-align: center;
+									text-transform: uppercase;
+									font-size: 65%;
+									margin-top: 25px;
 								}
 
-							.work-tbl-info .content-info .info:nth-child(2) {
+							.work-tbl .work-tbl-header .header:nth-child(2) {
 								width: 20%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.work-tbl-info .content-info .info:nth-child(2) input:focus {
-									outline: none;
+								.work-tbl .work-tbl-header .header:nth-child(2) p:first-child {
+									float: left;
+									width: 100%;
+									text-align: center;
+									text-transform: uppercase;
+									font-size: 65%;
+									padding: 15px 0px;
+									border-bottom: solid 1px rgb(30, 30, 30);
 								}
 
-								.work-tbl-info .content-info .info:nth-child(2) input:first-child {
+								.work-tbl .work-tbl-header .header:nth-child(2) p:nth-child(2) {
 									float: left;
-									width: 46.5%;
-									height: 100%;
-									padding-left: 3%;
-									border: none;
+									width: 49%;
+									text-align: center;
+									text-transform: uppercase;
+									font-size: 65%;
+									padding: 9px 0px;
 									border-right: solid 1px rgb(30, 30, 30);
-									font-family: 'Century Gothic';
-									font-size: 80%;
 								}
 
-								.work-tbl-info .content-info .info:nth-child(2) input:last-child {
+								.work-tbl .work-tbl-header .header:nth-child(2) p:last-child {
 									float: left;
-									width: 45.5%;
-									height: 100%;
-									padding-left: 3%;
-									border: none;
+									width: 49%;
+									text-align: center;
+									text-transform: uppercase;
+									font-size: 65%;
+									padding: 9px 0px;
 									border-left: solid 1px rgb(30, 30, 30);
-									font-family: 'Century Gothic';
-									font-size: 80%;
 								}
 
-							.work-tbl-info .content-info .info:nth-child(3) {
+							.work-tbl .work-tbl-header .header:nth-child(3) {
 								width: 10%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.work-tbl-info .content-info .info:nth-child(3) input:focus {
-									outline: none;
-								}
-
-								.work-tbl-info .content-info .info:nth-child(3) input {
+								.work-tbl .work-tbl-header .header:nth-child(3) p {
 									float: left;
-									width: 97%;
-									height: 100%;
-									padding-left: 3%;
-									border: none;
-									border-right: solid 1px rgb(30, 30, 30);
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									text-align: center;
+									text-transform: uppercase;
+									font-size: 65%;
+									margin-top: 30px;
 								}
 
-							.work-tbl-info .content-info .info:last-child {
+							.work-tbl .work-tbl-header .header:last-child {
 								width: 29%;
 							}
 
-								.work-tbl-info .content-info .info:last-child input:focus {
-									outline: none;
-								}
-
-								.work-tbl-info .content-info .info:last-child input {
+								.work-tbl .work-tbl-header .header:last-child p {
 									float: left;
-									width: 97%;
-									height: 100%;
-									padding-left: 3%;
-									border: none;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									text-align: center;
+									text-transform: uppercase;
+									font-size: 65%;
+									margin-top: 40px;
 								}
 
-					.work-tbl-info #separate {
+					.work-tbl .work-tbl-info {
 						float: left;
 						width: 100%;
-						background-color: rgb(200, 200, 200);
-						font-size: 60%;
-						text-align: center;
-						padding: 2px 0px;
-						font-style: italic;
-						font-weight: bold;
-						color: rgb(255, 0, 0);
-					}			
+					}
 
-		.pds-form .pds-training {
-			float: left;
-			width: 100%;
-		}
+						.work-tbl-info .content-info {
+							float: left;
+							width: 100%;
+							height: 35px;
+							border-bottom: solid 1px rgb(30, 30, 30);
+						}
 
-			.pds-training h1 {
-				float: left;
-				width: 99%;
-				line-height: 30px;
-				background-color: rgb(140, 140, 140);
-				border-top: solid 1px rgb(30, 30, 30);
-				border-bottom: solid 2px rgb(30, 30, 30);
-				padding-left: 1%;
-				font-family: 'Century Gothic';
-				font-size: 90%;
-				text-transform: uppercase;
-				color: rgb(255, 255, 255);
-			}
+							.work-tbl-info .content-info .info {
+								float: left;
+								height: 100%;
+								display: inline-block;
+							}
 
-			.pds-training .training-tbl {
+								.work-tbl-info .content-info .info:first-child {
+									width: 40%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.work-tbl-info .content-info .info:first-child input:focus {
+										outline: none;
+									}
+
+									.work-tbl-info .content-info .info:first-child input {
+										float: left;
+										width: 97%;
+										height: 100%;
+										padding-left: 3%;
+										border: none;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.work-tbl-info .content-info .info:nth-child(2) {
+									width: 20%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.work-tbl-info .content-info .info:nth-child(2) input:focus {
+										outline: none;
+									}
+
+									.work-tbl-info .content-info .info:nth-child(2) input:first-child {
+										float: left;
+										width: 46.5%;
+										height: 100%;
+										padding-left: 3%;
+										border: none;
+										border-right: solid 1px rgb(30, 30, 30);
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+									.work-tbl-info .content-info .info:nth-child(2) input:last-child {
+										float: left;
+										width: 45.5%;
+										height: 100%;
+										padding-left: 3%;
+										border: none;
+										border-left: solid 1px rgb(30, 30, 30);
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.work-tbl-info .content-info .info:nth-child(3) {
+									width: 10%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.work-tbl-info .content-info .info:nth-child(3) input:focus {
+										outline: none;
+									}
+
+									.work-tbl-info .content-info .info:nth-child(3) input {
+										float: left;
+										width: 97%;
+										height: 100%;
+										padding-left: 3%;
+										border: none;
+										border-right: solid 1px rgb(30, 30, 30);
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.work-tbl-info .content-info .info:last-child {
+									width: 29%;
+								}
+
+									.work-tbl-info .content-info .info:last-child input:focus {
+										outline: none;
+									}
+
+									.work-tbl-info .content-info .info:last-child input {
+										float: left;
+										width: 97%;
+										height: 100%;
+										padding-left: 3%;
+										border: none;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+						.work-tbl-info #separate {
+							float: left;
+							width: 100%;
+							background-color: rgb(200, 200, 200);
+							font-size: 60%;
+							text-align: center;
+							padding: 2px 0px;
+							font-style: italic;
+							font-weight: bold;
+							color: rgb(255, 0, 0);
+						}			
+
+			.pds-form .pds-training {
 				float: left;
 				width: 100%;
 			}
 
-				.training-tbl .training-tbl-header {
+				.pds-training h1 {
 					float: left;
-					width: 100%;
-					height: 90px;
-					border-bottom: solid 1px rgb(30, 30, 30);
-					background-color: rgb(200, 200, 200);
+					width: 99%;
+					line-height: 30px;
+					background-color: rgb(140, 140, 140);
+					border-top: solid 1px rgb(30, 30, 30);
+					border-bottom: solid 2px rgb(30, 30, 30);
+					padding-left: 1%;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
 				}
 
-					.training-tbl .training-tbl-header .header {
-						float: left;
-						height: 100%;
-						display: inline-block;
-					}
-
-						.training-tbl .training-tbl-header .header:first-child {
-							width: 40%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.training-tbl .training-tbl-header .header:first-child p {
-								float: left;
-								width: 100%;
-								font-size: 65%;
-								text-transform: uppercase;
-								text-align: center;
-								margin-top: 20px;
-							}
-
-						.training-tbl .training-tbl-header .header:nth-child(2) {
-							width: 20%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.training-tbl .training-tbl-header .header:nth-child(2) p:first-child {
-								float: left;
-								width: 100%;
-								font-size: 65%;
-								text-transform: uppercase;
-								text-align: center;
-								padding: 10px 0px;
-								border-bottom: solid 1px rgb(30, 30, 30);
-							}
-
-							.training-tbl .training-tbl-header .header:nth-child(2) p:nth-child(2) {
-								float: left;
-								width: 49%;
-								font-size: 65%;
-								text-transform: uppercase;
-								text-align: center;
-								padding: 7px 0px;
-								border-right: solid 1px rgb(30, 30, 30);
-							}
-
-							.training-tbl .training-tbl-header .header:nth-child(2) p:last-child {
-								float: left;
-								width: 49%;
-								font-size: 65%;
-								text-transform: uppercase;
-								text-align: center;
-								padding: 7px 0px;
-								border-left: solid 1px rgb(30, 30, 30);
-							}
-
-						.training-tbl .training-tbl-header .header:nth-child(3) {
-							width: 10%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.training-tbl .training-tbl-header .header:nth-child(3) p {
-								float: left;
-								width: 100%;
-								font-size: 65%;
-								text-transform: uppercase;
-								text-align: center;
-								margin-top: 30px;
-							}
-
-						.training-tbl .training-tbl-header .header:nth-child(4) {
-							width: 10%;
-							border-right: solid 1px rgb(30, 30, 30);
-						}
-
-							.training-tbl .training-tbl-header .header:nth-child(4) p {
-								float: left;
-								width: 100%;
-								font-size: 50%;
-								text-transform: uppercase;
-								text-align: center;
-								margin-top: 15px;
-							}
-
-						.training-tbl .training-tbl-header .header:last-child {
-							width: 19%;
-						}
-
-							.training-tbl .training-tbl-header .header:last-child p {
-								float: left;
-								width: 100%;
-								font-size: 60%;
-								text-transform: uppercase;
-								text-align: center;
-								margin-top: 35px;
-							}
-
-				.training-tbl .training-tbl-info {
+				.pds-training .training-tbl {
 					float: left;
 					width: 100%;
 				}
 
-					.training-tbl-info .content-info {
+					.training-tbl .training-tbl-header {
 						float: left;
 						width: 100%;
-						height: 35px;
+						height: 90px;
 						border-bottom: solid 1px rgb(30, 30, 30);
+						background-color: rgb(200, 200, 200);
 					}
 
-						.training-tbl-info .content-info .info {
+						.training-tbl .training-tbl-header .header {
 							float: left;
 							height: 100%;
 							display: inline-block;
 						}
 
-							.training-tbl-info .content-info .info:first-child {
+							.training-tbl .training-tbl-header .header:first-child {
 								width: 40%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.training-tbl-info .content-info .info:first-child input:focus {
-									outline: none;
-								}
-
-								.training-tbl-info .content-info .info:first-child input {
+								.training-tbl .training-tbl-header .header:first-child p {
 									float: left;
-									width: 97%;
-									height: 35px;
-									padding-left: 3%;
-									border: none;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									font-size: 65%;
+									text-transform: uppercase;
+									text-align: center;
+									margin-top: 20px;
 								}
 
-							.training-tbl-info .content-info .info:nth-child(2) {
+							.training-tbl .training-tbl-header .header:nth-child(2) {
 								width: 20%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.training-tbl-info .content-info .info:nth-child(2) input:focus {
-									outline: none;
+								.training-tbl .training-tbl-header .header:nth-child(2) p:first-child {
+									float: left;
+									width: 100%;
+									font-size: 65%;
+									text-transform: uppercase;
+									text-align: center;
+									padding: 10px 0px;
+									border-bottom: solid 1px rgb(30, 30, 30);
 								}
 
-								.training-tbl-info .content-info .info:nth-child(2) input:first-child {
+								.training-tbl .training-tbl-header .header:nth-child(2) p:nth-child(2) {
 									float: left;
-									width: 46.5%;
-									height: 35px;
-									padding-left: 3%;
-									border: none;
+									width: 49%;
+									font-size: 65%;
+									text-transform: uppercase;
+									text-align: center;
+									padding: 7px 0px;
 									border-right: solid 1px rgb(30, 30, 30);
-									font-family: 'Century Gothic';
-									font-size: 80%;
 								}
 
-								.training-tbl-info .content-info .info:nth-child(2) input:last-child {
+								.training-tbl .training-tbl-header .header:nth-child(2) p:last-child {
 									float: left;
-									width: 45%;
-									height: 35px;
-									padding-left: 3%;
-									border: none;
+									width: 49%;
+									font-size: 65%;
+									text-transform: uppercase;
+									text-align: center;
+									padding: 7px 0px;
 									border-left: solid 1px rgb(30, 30, 30);
-									font-family: 'Century Gothic';
-									font-size: 80%;
 								}
 
-							.training-tbl-info .content-info .info:nth-child(3) {
+							.training-tbl .training-tbl-header .header:nth-child(3) {
 								width: 10%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.training-tbl-info .content-info .info:nth-child(3) input:focus {
-									outline: none;
-								}
-
-								.training-tbl-info .content-info .info:nth-child(3) input {
+								.training-tbl .training-tbl-header .header:nth-child(3) p {
 									float: left;
-									width: 97%;
-									height: 35px;
-									padding-left: 3%;
-									border: none;
-									border-right: solid 1px rgb(30, 30, 30);
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									font-size: 65%;
+									text-transform: uppercase;
+									text-align: center;
+									margin-top: 30px;
 								}
 
-							.training-tbl-info .content-info .info:nth-child(4) {
+							.training-tbl .training-tbl-header .header:nth-child(4) {
 								width: 10%;
 								border-right: solid 1px rgb(30, 30, 30);
 							}
 
-								.training-tbl-info .content-info .info:nth-child(4) input:focus {
-									outline: none;
-								}
-
-								.training-tbl-info .content-info .info:nth-child(4) input {
+								.training-tbl .training-tbl-header .header:nth-child(4) p {
 									float: left;
-									width: 97%;
-									height: 35px;
-									padding-left: 3%;
-									border: none;
-									border-right: solid 1px rgb(30, 30, 30);
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									font-size: 50%;
+									text-transform: uppercase;
+									text-align: center;
+									margin-top: 15px;
 								}
 
-							.training-tbl-info .content-info .info:last-child {
+							.training-tbl .training-tbl-header .header:last-child {
 								width: 19%;
 							}
 
-								.training-tbl-info .content-info .info:last-child input:focus {
-									outline: none;
-								}
-
-								.training-tbl-info .content-info .info:last-child input {
+								.training-tbl .training-tbl-header .header:last-child p {
 									float: left;
-									width: 97%;
-									height: 35px;
-									padding-left: 3%;
-									border: none;
-									font-family: 'Century Gothic';
-									font-size: 80%;
+									width: 100%;
+									font-size: 60%;
+									text-transform: uppercase;
+									text-align: center;
+									margin-top: 35px;
 								}
 
-					.training-tbl-info #separate {
+					.training-tbl .training-tbl-info {
 						float: left;
 						width: 100%;
+					}
+
+						.training-tbl-info .content-info {
+							float: left;
+							width: 100%;
+							height: 35px;
+							border-bottom: solid 1px rgb(30, 30, 30);
+						}
+
+							.training-tbl-info .content-info .info {
+								float: left;
+								height: 100%;
+								display: inline-block;
+							}
+
+								.training-tbl-info .content-info .info:first-child {
+									width: 40%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.training-tbl-info .content-info .info:first-child input:focus {
+										outline: none;
+									}
+
+									.training-tbl-info .content-info .info:first-child input {
+										float: left;
+										width: 97%;
+										height: 35px;
+										padding-left: 3%;
+										border: none;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.training-tbl-info .content-info .info:nth-child(2) {
+									width: 20%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.training-tbl-info .content-info .info:nth-child(2) input:focus {
+										outline: none;
+									}
+
+									.training-tbl-info .content-info .info:nth-child(2) input:first-child {
+										float: left;
+										width: 46.5%;
+										height: 35px;
+										padding-left: 3%;
+										border: none;
+										border-right: solid 1px rgb(30, 30, 30);
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+									.training-tbl-info .content-info .info:nth-child(2) input:last-child {
+										float: left;
+										width: 45%;
+										height: 35px;
+										padding-left: 3%;
+										border: none;
+										border-left: solid 1px rgb(30, 30, 30);
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.training-tbl-info .content-info .info:nth-child(3) {
+									width: 10%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.training-tbl-info .content-info .info:nth-child(3) input:focus {
+										outline: none;
+									}
+
+									.training-tbl-info .content-info .info:nth-child(3) input {
+										float: left;
+										width: 97%;
+										height: 35px;
+										padding-left: 3%;
+										border: none;
+										border-right: solid 1px rgb(30, 30, 30);
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.training-tbl-info .content-info .info:nth-child(4) {
+									width: 10%;
+									border-right: solid 1px rgb(30, 30, 30);
+								}
+
+									.training-tbl-info .content-info .info:nth-child(4) input:focus {
+										outline: none;
+									}
+
+									.training-tbl-info .content-info .info:nth-child(4) input {
+										float: left;
+										width: 97%;
+										height: 35px;
+										padding-left: 3%;
+										border: none;
+										border-right: solid 1px rgb(30, 30, 30);
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+								.training-tbl-info .content-info .info:last-child {
+									width: 19%;
+								}
+
+									.training-tbl-info .content-info .info:last-child input:focus {
+										outline: none;
+									}
+
+									.training-tbl-info .content-info .info:last-child input {
+										float: left;
+										width: 97%;
+										height: 35px;
+										padding-left: 3%;
+										border: none;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
+
+						.training-tbl-info #separate {
+							float: left;
+							width: 100%;
+							background-color: rgb(200, 200, 200);
+							font-size: 60%;
+							text-align: center;
+							padding: 2px 0px;
+							font-style: italic;
+							font-weight: bold;
+							color: rgb(255, 0, 0);
+						}			
+
+			.pds-form .pds-footer {
+				float: left;
+				width: 100%;
+				border-top: solid 2px rgb(30, 30, 30);
+			}
+
+				.pds-footer .footer-column:first-child {
+					float: left;
+					width: 60%;
+					height: 35px;
+					border-right: solid 1px rgb(30, 30, 30);
+				}
+
+					.pds-footer .footer-column:first-child p {
+						float: left;
+						width: 30%;
+						height: 69%;
+						border-right: solid 1px rgb(30, 30, 30);
 						background-color: rgb(200, 200, 200);
-						font-size: 60%;
+						float: left;
 						text-align: center;
-						padding: 2px 0px;
-						font-style: italic;
+						padding-top: 2%;
+						font-size: 80%;
 						font-weight: bold;
-						color: rgb(255, 0, 0);
-					}			
+					}
 
-		.pds-form .pds-footer {
+					.pds-footer .footer-column:first-child input:focus {
+						outline: none;
+					}
+
+					.pds-footer .footer-column:first-child input {
+						float: left;
+						width: 66%;
+						height: 100%;
+						padding-left: 2%;
+						font-family: 'Century Gothic';
+						font-size: 80%;
+						border: none;
+					}
+
+				.pds-footer .footer-column:last-child {
+					float: left;
+					width: 39.8%;
+					height: 35px;
+				}
+
+					.pds-footer .footer-column:last-child p {
+						float: left;
+						width: 30%;
+						height: 80%;
+						border-right: solid 1px rgb(30, 30, 30);
+						background-color: rgb(200, 200, 200);
+						float: left;
+						text-align: center;
+						padding-top: 2%;
+						font-size: 80%;
+						font-weight: bold;
+					}
+
+					.pds-footer .footer-column:last-child input:focus {
+						outline: none;
+					}
+
+					.pds-footer .footer-column:last-child input {
+						float: left;
+						width: 66%;
+						height: 100%;
+						padding-left: 2%;
+						font-family: 'Century Gothic';
+						font-size: 80%;
+						border: none;
+					}
+
+		.application-content .application-btn {
 			float: left;
-			width: 100%;
-			border-top: solid 2px rgb(30, 30, 30);
+			width: 50%;
+			margin-bottom: 80px;
+			margin-left: 25%;
 		}
 
-			.pds-footer .footer-column:first-child {
+			.application-btn button:first-child {
 				float: left;
-				width: 60%;
-				height: 35px;
-				border-right: solid 1px rgb(30, 30, 30);
+				width: 45%;
+				margin: 0px 2.5%;
+				padding: 15px 0px;
+				font-family: 'Gentona';
+				font-size: 90%;
+				color: rgb(255, 255, 255);
+				background-color: rgb(4, 80, 140);
+				border: none;
+				border-radius: 5px;
 			}
 
-				.pds-footer .footer-column:first-child p {
-					float: left;
-					width: 30%;
-					height: 69%;
-					border-right: solid 1px rgb(30, 30, 30);
-					background-color: rgb(200, 200, 200);
-					float: left;
-					text-align: center;
-					padding-top: 2%;
-					font-size: 80%;
-					font-weight: bold;
-				}
-
-				.pds-footer .footer-column:first-child input:focus {
-					outline: none;
-				}
-
-				.pds-footer .footer-column:first-child input {
-					float: left;
-					width: 66%;
-					height: 100%;
-					padding-left: 2%;
-					font-family: 'Century Gothic';
-					font-size: 80%;
-					border: none;
-				}
-
-			.pds-footer .footer-column:last-child {
+			.application-btn button:last-child {
 				float: left;
-				width: 39.8%;
-				height: 35px;
+				width: 45%;
+				margin: 0px 2.5%;
+				padding: 15px 0px;
+				font-family: 'Gentona';
+				font-size: 90%;
+				color: rgb(4, 80, 140);
+				border: solid 1px rgb(4, 80, 140);
+				border-radius: 5px;
+				background-color: rgb(255, 255, 255);
 			}
 
-				.pds-footer .footer-column:last-child p {
-					float: left;
-					width: 30%;
-					height: 80%;
-					border-right: solid 1px rgb(30, 30, 30);
-					background-color: rgb(200, 200, 200);
-					float: left;
-					text-align: center;
-					padding-top: 2%;
-					font-size: 80%;
-					font-weight: bold;
-				}
-
-				.pds-footer .footer-column:last-child input:focus {
-					outline: none;
-				}
-
-				.pds-footer .footer-column:last-child input {
-					float: left;
-					width: 66%;
-					height: 100%;
-					padding-left: 2%;
-					font-family: 'Century Gothic';
-					font-size: 80%;
-					border: none;
-				}
-
-	.application-content .application-btn {
-		float: left;
-		width: 50%;
-		margin-bottom: 80px;
-		margin-left: 25%;
-	}
-
-		.application-btn button:first-child {
-			float: left;
-			width: 45%;
-			margin: 0px 2.5%;
-			padding: 15px 0px;
-			font-family: 'Gentona';
-			font-size: 90%;
-			color: rgb(255, 255, 255);
-			background-color: rgb(4, 80, 140);
-			border: none;
-			border-radius: 5px;
-		}
-
-		.application-btn button:last-child {
-			float: left;
-			width: 45%;
-			margin: 0px 2.5%;
-			padding: 15px 0px;
-			font-family: 'Gentona';
-			font-size: 90%;
-			color: rgb(4, 80, 140);
-			border: solid 1px rgb(4, 80, 140);
-			border-radius: 5px;
-			background-color: rgb(255, 255, 255);
-		}
-
-	/* == PERSONAL DATA SHEET FORM ENDS HERE == */
-	/* == MODAL MESSAGE ICON == */
-
-	.applicant-content-container .modal-message {
-		float: right;
-		position: fixed;
-		width: 5%;
-		height: 65px;
-		margin-left: 70%;
-		margin-top: 40%;
-		z-index: 1;
-	}
-
-		.modal-message button {
-			width: 100%;
-			height: 100%;
-			border: none;
-			background-color: rgb(4, 80, 140);
-			font-size: 180%;
-			border-radius: 50px;
-			color: rgb(255, 255, 255);
-			transition: all 0.2s ease-in-out;
-		}
-
-		.modal-message button:focus {
-			outline: none;
-		}
-
-		.modal-message button:hover {
-			transform: scale(1.1, 1.1);
-			transition: all 0.2s ease-in-out;
-		}
-
-	/* == MODAL MESSAGE ICON ENDS HERE == */
-	/* == BODY CONTAINER DESIGN == */
+		/* == PERSONAL DATA SHEET FORM ENDS HERE == */
+	/* == APPLICATION FORM ENDS HERE == */
 
 	.applicant-content-container .body-container {
 		float: left;
-		width: 97.5%;
+		width: 90%;
 		padding: 20px 0px;
+		margin-left: 5%;
 	}
 
-		.body-container .slider-container {
+	/* == HOME DESIGN == */
+
+	.body-container .slider-container {
+		float: left;
+		width: 100%;
+		height: 450px;
+		overflow: hidden;
+		position: relative;
+		background-color: rgb(200, 200, 200);
+		margin: 20px 0px 30px 0px;
+		border-radius: 5px;
+	}
+
+		.slider-container .slider img {
 			float: left;
 			width: 100%;
-			height: 550px;
-			overflow: hidden;
-			position: relative;
-			background-color: rgb(200, 200, 200);
-			margin: 20px 0px 30px 0px;
-			border-radius: 5px;
+			height: 100%;
 		}
 
-			.slider-container .slider img {
+	.body-container .main-info {
+		float: left;
+		width: 100%;
+		padding-bottom: 30px;
+	}
+
+		.main-info h1 {
+			float: left;
+			width: 100%;
+			font-family: 'Gentona';
+			font-size: 150%;
+			text-transform: uppercase;
+			color: rgb(90, 90, 90);
+		}
+
+		.main-info .line {
+			float: left;
+			width: 5%;
+			height: 5px;
+			background-color: rgb(4, 80, 140);
+			border-radius: 5px;
+			margin-bottom: 40px;
+			margin-left: 0%;
+		}
+
+		.main-info .info-latest {
+			float: left;
+			width: 100%;
+			padding: 10px 0px;
+		}
+
+			.info-latest #news-img {
 				float: left;
-				width: 100%;
-				height: 100%;
+				width: 35%;
+				height: 550px;
+				margin-right: 5%;
 			}
 
-		.body-container .main-info {
+			.info-latest #title {
+				font-family: 'Century Gothic';
+				font-size: 150%;
+				width: 50%;
+				margin-left: 3%;
+				color: rgb(60, 60, 60);
+			}
+
+			.info-latest #author {
+				float: left;
+				width: 50%;
+				margin-left: 3%;
+				color: rgb(150, 150, 150);
+				font-size: 90%;
+				font-style: italic;
+				margin-bottom: 40px;
+			}
+
+			.info-latest #subtitle {
+				float: left;
+				font-size: 110%;
+				width: 50%;
+				margin-left: 3%;
+				color: rgb(60, 60, 60);
+			}
+
+			.info-latest #memo-title {
+				float: left;
+				width: 50%;
+				margin-left: 3%;
+				font-size: 95%;
+				margin-bottom: 30px;
+			}
+
+			.info-latest #view-memo {
+				float: left;
+				margin-left: 3%;
+				margin-bottom: 40px;
+				font-size: 90%;
+			}
+
+				.info-latest #info-content {
 					float: left;
-					width: 100%;
-					padding-bottom: 30px;
+					width: 50%;
+					margin-left: 3%;
+					font-size: 95%;
 				}
-
-					.main-info h1 {
-						float: left;
-						width: 100%;
-						font-family: 'Gentona';
-						font-size: 200%;
-						text-transform: uppercase;
-						color: rgb(90, 90, 90);
-					}
-
-					.main-info .line {
-						float: left;
-						width: 4%;
-						height: 5px;
-						background-color: rgb(4, 80, 140);
-						border-radius: 5px;
-						margin-bottom: 40px;
-						margin-left: 0;
-					}
-
-					.main-info .info-latest {
-						float: left;
-						width: 100%;
-						padding: 10px 0px;
-					}
-
-						.info-latest #news-img {
-							float: left;
-							width: 40%;
-							height: 550px;
-						}
-
-						.info-latest #title {
-							font-family: 'Century Gothic';
-							font-size: 180%;
-							width: 50%;
-							margin-left: 3%;
-							color: rgb(60, 60, 60);
-						}
-
-						.info-latest #author {
-							float: left;
-							width: 50%;
-							margin-left: 3%;
-							color: rgb(150, 150, 150);
-							font-size: 95%;
-							font-style: italic;
-							margin-bottom: 40px;
-						}
-
-						.info-latest #subtitle {
-							float: left;
-							font-size: 130%;
-							width: 50%;
-							margin-left: 3%;
-							color: rgb(60, 60, 60);
-						}
-
-						.info-latest #memo-title {
-							float: left;
-							width: 50%;
-							margin-left: 3%;
-							font-size: 105%;
-							margin-bottom: 30px;
-						}
-
-						.info-latest #view-memo {
-							float: left;
-							margin-left: 3%;
-							margin-bottom: 40px;
-						}
-
-						.info-latest #info-content {
-							float: left;
-							width: 50%;
-							margin-left: 3%;
-							font-size: 100%;
-
-						}
 
 				.body-container .past-info {
 					float: left;
@@ -2352,11 +2323,13 @@ body {
 							padding: 5px 0px;
 							font-size: 90%;
 							text-align: center;
+							color: rgb(30, 30, 30);
 							background-color: rgb(190, 190, 190);
 							border-top-left-radius: 3px;
 							border-top-right-radius: 3px;
 							margin-bottom: 15px;
 							font-family: 'Century Gothic';
+							font-weight: bold;
 							margin-top: 0;
 							margin-left: 0;
 						}
@@ -2392,7 +2365,7 @@ body {
 						float: left;
 						width: 100%;
 						font-family: 'Gentona';
-						font-size: 200%;
+						font-size: 150%;
 						text-transform: uppercase;
 						color: rgb(90, 90, 90);
 					}
@@ -2401,11 +2374,11 @@ body {
 						float: left;
 						width: 4%;
 						height: 5px;
+						margin-left: 0%;
 						background-color: rgb(4, 80, 140);
 						border-radius: 3px;
 						margin-bottom: 50px;
 						margin-right: 96%;
-						margin-left: 0;
 					}
 
 					.applicant-container input {
@@ -2523,25 +2496,75 @@ body {
 										height: 100%;
 									}
 
-		.body-container .info-history {
-				float: left;
-				width: 100%;
-				margin-bottom: 40px;
-				border-bottom: solid 1px rgb(230, 230, 230);
-				padding-bottom: 30px;
+	/* == HOME DESIGN ENDS HERE == */
+	/* == ABOUT DESIGN == */
+
+	.body-container .info-history {
+		float: left;
+		width: 90%;
+		margin-bottom: 40px;
+		border-bottom: solid 1px rgb(230, 230, 230);
+		padding-bottom: 30px;
+		margin-left: 5%;
+	}
+
+		.info-history h2 {
+			font-family: 'Gentona';
+			font-size: 170%;
+			color: rgb(50, 50, 50);
+			text-transform: uppercase;
+			margin-left: 0;
+		}
+
+		.info-history .line {
+			float: left;
+			width: 4%;
+			height: 5px;
+			background-color: rgb(4, 80, 140);
+			border-radius: 5px;
+			margin-bottom: 50px;
+			margin-left: 0;
+		}
+
+		.info-history .history-info {
+			float: left;
+			width: 96%;
+			margin-left: 2%;
+		}
+
+			.history-info p {
+				font-family: 'Century Gothic';
+				font-size: 85%;
+				color: rgb(110, 110, 110);
+				margin-bottom: 30px;
 			}
 
-				.info-history h2 {
-					font-family: 'Gentona';
-					font-size: 170%;
-					color: rgb(50, 50, 50);
-					text-transform: uppercase;
-					margin-left: 0;
-				}
+	.body-container .info-mis-vis {
+		float: left;
+		width: 90%;
+		margin-bottom: 40px;
+		border-bottom: solid 1px rgb(230, 230, 230);
+		padding-bottom: 30px;
+		margin-left: 5%;
+	}
 
-				.info-history .line {
+		.info-mis-vis .mis-vis-two {
+			float: left;
+			width: 100%;
+			margin-bottom: 30px;
+		}
+
+			.mis-vis-two h2 {
+				font-family: 'Gentona';
+				font-size: 170%;
+				color: rgb(50, 50, 50);
+				text-transform: uppercase;
+				margin-left: 0;
+			}
+
+				.mis-vis-two .line {
 					float: left;
-					width: 5%;
+					width: 4%;
 					height: 5px;
 					background-color: rgb(4, 80, 140);
 					border-radius: 5px;
@@ -2549,613 +2572,443 @@ body {
 					margin-left: 0;
 				}
 
-				.info-history .history-info {
+				.mis-vis-two .vis-info, .mis-vis-two .mis-info {
 					float: left;
 					width: 96%;
 					margin-left: 2%;
 				}
 
-					.history-info p {
+					.vis-info p, .mis-info p {
 						font-family: 'Century Gothic';
-						font-size: 90%;
+						font-size: 85%;
 						color: rgb(110, 110, 110);
 						margin-bottom: 30px;
 					}
 
-			.body-container .info-org-cha {
-				float: left;
-				width: 100%;
-				margin-bottom: 40px;
-				border-bottom: solid 1px rgb(230, 230, 230);
-				padding-bottom: 30px;
-			}
-
-				.info-org-cha h2 {
-					font-family: 'Gentona';
-					font-size: 170%;
-					color: rgb(50, 50, 50);
-					text-transform: uppercase;
-					margin-left: 0;
-				}
-
-				.info-org-cha .line {
-					float: left;
-					width: 5%;
-					height: 5px;
-					background-color: rgb(4, 80, 140);
-					border-radius: 5px;
-					margin-bottom: 50px;
-					margin-left: 0;
-				}
-
-				.info-org-cha .org-cha-info {
-					float: left;
-					width: 96%;
-					margin-left: 2%;
-				}
-
-					.org-cha-info .org-cha-three {
-						float: left;
-						width: 100%;
-						padding: 10px 0px;
-						margin-bottom: 20px;
-						display: inline-block;
+					.mis-info ul {
+						margin-left: 3%;
 					}
 
-						.org-cha-three:first-child img {
+					.mis-info ul li {
+						font-family: 'Century Gothic';
+						font-size: 85%;
+						color: rgb(110, 110, 110);
+					}
+
+	.body-container .info-org-cha {
+		float: left;
+		width: 90%;
+		margin-bottom: 40px;
+		border-bottom: solid 1px rgb(230, 230, 230);
+		padding-bottom: 30px;
+		margin-left: 5%;
+	}
+
+		.info-org-cha h2 {
+			font-family: 'Gentona';
+			font-size: 170%;
+			color: rgb(50, 50, 50);
+			text-transform: uppercase;
+			margin-left: 0;
+		}
+
+		.info-org-cha .line {
+			float: left;
+			width: 4%;
+			height: 5px;
+			background-color: rgb(4, 80, 140);
+			border-radius: 5px;
+			margin-bottom: 50px;
+			margin-left: 0;
+		}
+
+		.info-org-cha .org-cha-info {
+			float: left;
+			width: 96%;
+			margin-left: 2%;
+		}
+
+			.org-cha-info .org-cha-three {
+				float: left;
+				width: 100%;
+				padding: 10px 0px;
+				margin-bottom: 20px;
+				display: inline-block;
+			}
+
+				.org-cha-three:first-child img {
+					float: left;
+					width: 15%;
+					height: 160px;
+					margin: 0px 42% 10px 42%;
+					border: solid 1px rgb(100, 100, 100);
+					border-radius: 3px;
+				}
+
+					.org-cha-three:first-child h3 {
+						font-size: 100%;
+						width: 100%;
+						text-align: center;
+					}
+
+					.org-cha-three:first-child p {
+						font-size: 80%;
+						width: 100%;
+						text-align: center;
+					}
+
+					.org-cha-three:nth-child(2) .person-three {
+						float: left;
+						width: 20%;
+					}
+
+						.person-three:first-child {
+							margin-left: 15%;
+						}
+
+						.person-three:nth-child(2) {
+							margin: 0px 5%;
+						}
+
+						.person-three img {
 							float: left;
-							width: 15%;
+							width: 95%;
 							height: 160px;
-							margin: 0px 42% 10px 42%;
+							margin: 0px 2% 10px 2%;
 							border: solid 1px rgb(100, 100, 100);
 							border-radius: 3px;
 						}
 
-						.org-cha-three:first-child h3 {
+						.person-three h3 {
 							font-size: 100%;
 							width: 100%;
 							text-align: center;
 						}
 
-						.org-cha-three:first-child p {
+						.person-three p {
 							font-size: 80%;
 							width: 100%;
 							text-align: center;
 						}
 
-						.org-cha-three:nth-child(2) .person-three {
+					.org-cha-three:last-child .person-two {
+						float: left;
+						width: 20%;
+					}
+
+						.person-two:first-child {
+							margin-left: 15%;
+							margin-right: 30%;
+						}
+
+						.person-two img {
 							float: left;
-							width: 20%;
+							width: 95%;
+							height: 160px;
+							margin: 0px 2% 10px 2%;
+							border: solid 1px rgb(100, 100, 100);
+							border-radius: 3px;
 						}
 
-							.person-three:first-child {
-								margin-left: 15%;
-							}
-
-							.person-three:nth-child(2) {
-								margin: 0px 5%;
-							}
-
-							.person-three img {
-								float: left;
-								width: 95%;
-								height: 160px;
-								margin: 0px 2% 10px 2%;
-								border: solid 1px rgb(100, 100, 100);
-								border-radius: 3px;
-							}
-
-							.person-three h3 {
-								font-size: 100%;
-								width: 100%;
-								text-align: center;
-							}
-
-							.person-three p {
-								font-size: 80%;
-								width: 100%;
-								text-align: center;
-							}
-						.org-cha-three:last-child .person-two {
-							float: left;
-							width: 20%;
-						}
-
-							.person-two:first-child {
-								margin-left: 15%;
-								margin-right: 30%;
-							}
-
-							.person-two img {
-								float: left;
-								width: 95%;
-								height: 160px;
-								margin: 0px 2% 10px 2%;
-								border: solid 1px rgb(100, 100, 100);
-								border-radius: 3px;
-							}
-
-							.person-two h3 {
-								font-size: 100%;
-								width: 100%;
-								text-align: center;
-							}
-
-							.person-two p {
-								font-size: 80%;
-								width: 100%;
-								text-align: center;
-							}
-
-			.body-container .info-mis-vis {
-				float: left;
-				width: 100%;
-				margin-bottom: 40px;
-				border-bottom: solid 1px rgb(230, 230, 230);
-				padding-bottom: 30px;
-			}
-
-				.info-mis-vis .mis-vis-two {
-					float: left;
-					width: 100%;
-					margin-bottom: 30px;
-				}
-
-					.mis-vis-two h2 {
-						font-family: 'Gentona';
-						font-size: 170%;
-						color: rgb(50, 50, 50);
-						text-transform: uppercase;
-						margin-left: 0;
-					}
-
-					.mis-vis-two .line {
-						float: left;
-						width: 5%;
-						height: 5px;
-						background-color: rgb(4, 80, 140);
-						border-radius: 5px;
-						margin-bottom: 50px;
-						margin-left: 0;
-					}
-
-					.mis-vis-two .vis-info, .mis-vis-two .mis-info {
-						float: left;
-						width: 96%;
-						margin-left: 2%;
-					}
-
-						.vis-info p, .mis-info p {
-							font-family: 'Century Gothic';
-							font-size: 95%;
-							color: rgb(110, 110, 110);
-							margin-bottom: 30px;
-						}
-
-						.mis-info ul {
-							margin-left: 3%;
-						}
-
-						.mis-info ul li {
-							font-family: 'Century Gothic';
+						.person-two h3 {
 							font-size: 100%;
-							color: rgb(110, 110, 110);
-						}
-
-			.body-container .info-citi-char {
-				float: left;
-				width: 100%;
-				margin-bottom: 40px;
-				border-bottom: solid 1px rgb(230, 230, 230);
-				padding-bottom: 30px;
-			}
-
-				.info-citi-char h2 {
-					font-family: 'Gentona';
-					font-size: 170%;
-					color: rgb(50, 50, 50);
-					text-transform: uppercase;
-					margin-left: 0;
-				}
-
-				.info-citi-char .line {
-					float: left;
-					width: 5%;
-					height: 5px;
-					background-color: rgb(4, 80, 140);
-					border-radius: 5px;
-					margin-bottom: 50px;
-					margin-left: 0;
-				}
-
-				.info-citi-char .citi-char-info {
-					float: left;
-					width: 96%;
-					margin-left: 2%;
-				}
-
-					.citi-char-info p {
-						font-family: 'Century Gothic';
-						font-size: 95%;
-						color: rgb(110, 110, 110);
-						margin-bottom: 30px;
-					}
-
-					.citi-char-info ul {
-						margin-left: 3%;
-					}
-
-					.citi-char-info ul li {
-						font-family: 'Century Gothic';
-						font-size: 95%;
-					}
-
-					.citi-char-info ul li a {
-						text-decoration: none;
-						color: rgb(110, 110, 110);
-					}
-
-			.body-container .info-inno {
-				float: left;
-				width: 100%;
-				margin-bottom: 40px;
-				border-bottom: solid 1px rgb(230, 230, 230);
-				padding-bottom: 30px;
-			}
-
-			.info-inno h2 {
-					font-family: 'Gentona';
-					font-size: 170%;
-					color: rgb(50, 50, 50);
-					text-transform: uppercase;
-					margin-left: 0;
-				}
-
-				.info-inno .line {
-					float: left;
-					width: 5%;
-					height: 5px;
-					background-color: rgb(4, 80, 140);
-					border-radius: 5px;
-					margin-bottom: 50px;
-					margin-left: 0;
-				}
-
-				.info-inno .inno-info {
-					float: left;
-					width: 96%;
-					margin-left: 2%;
-					margin-bottom: 50px;
-				}
-
-					.inno-info h3 {
-						font-size: 110%;
-						font-family: 'Century Gothic';
-						color: rgb(100, 100, 100);
-						margin-bottom: 20px;
-					}
-
-					.inno-info .inno-info-many {
-						float: left;
-						width: 96%;
-						margin-left: 2%;
-					}
-
-						.inno-info-many p {
-							font-family: 'Century Gothic';
-							font-size: 95%;
-							color: rgb(110, 110, 110);
-							margin-bottom: 20px;
-						}
-
-						.inno-info-many ul {
-							margin-left: 3%;
-							margin-bottom: 20px;
-						}
-
-						.inno-info-many ul li {
-							font-family: 'Century Gothic';
-							font-size: 100%;
-							color: rgb(110, 110, 110);
-						}
-
-		.body-container .contact-info {
-			float: left;
-			width: 100%;
-			margin-bottom: 70px;
-		}
-
-			.contact-info h3 {
-				font-family: 'Gentona';
-				font-size: 170%;
-				color: rgb(90, 90, 90);
-				text-transform: uppercase;
-				width: 100%;
-			}
-
-			.contact-info .line {
-				float: left;
-				width: 5%;
-				height: 5px;
-				border-radius: 5px;
-				background-color: rgb(4, 80, 140);
-				margin-bottom: 30px;
-			}
-
-			.contact-info .contact-table {
-				float: left;
-				width: 95%;
-				margin-left: 2.5%;
-				background-color: rgb(250, 250, 250);
-				border-bottom-left-radius: 3px;
-				border-bottom-right-radius: 3px;
-			}
-
-				.contact-table .contact-table-header {
-					float: left;
-					width: 100%;
-					background-color: rgb(4, 80, 140);
-					border-top-left-radius: 3px;
-					border-top-right-radius: 3px;
-				}
-
-					.contact-table-header h4 {
-						float: left;
-						display: inline-block;
-						font-family: 'Gentona';
-						font-size: 120%;
-						text-transform: uppercase;
-						color: rgb(255, 255, 255);
-					}
-
-						.contact-table-header h4:first-child {
-							width: 70%;
-							padding: 8px 0px;
-							padding-left: 3%;
-						}
-
-						.contact-table-header h4:last-child {
-							width: 27%;
-							padding: 8px 0px;
+							width: 100%;
 							text-align: center;
 						}
 
-				.contact-table .contact-table-info {
-					float: left;
-					width: 100%;
-				}
-
-					.contact-table-info .contact {
-						float: left;
-						width: 100%;
-					}
-
-						.contact .contact-person {
-							float: left;
-							width: 70%;
-							padding: 8px 0px;
-							padding-left: 5%;
-						}
-
-							.contact-person p:first-child {
-								font-weight: bold;
-								font-size: 110%;
-								margin-bottom: 5px;
-								margin-left: 0%;
-							}
-
-								.contact-person p {
-									font-size: 90%;
-									margin-left: 6%;
-								}
-
-						.contact .contact-number {
-							float: left;
-							width: 25%;
-							padding: 8px 0px;
+						.person-two p {
+							font-size: 80%;
+							width: 100%;
 							text-align: center;
 						}
 
-							.contact-number p {
-								font-weight: bold;
-								font-size: 110%;
-							}
-
-			.body-container .download-info {
-				float: left;
-				width: 100%;
-				padding: 30px 0px;
-				margin-top: 20px;
-				margin-bottom: 40px;
-				background-color: rgb(255, 255, 255);
-				box-shadow: 7px 7px 10px -9px rgb(30, 30, 30);
-				border-radius: 5px;
-				border: solid .5px rgb(230, 230, 230);
-			}
-
-				.download-info h3 {
-					float: left;
-					font-family: 'Gentona';
-					font-size: 160%;
-					text-transform: uppercase;
-					color: rgb(80, 80, 80);
-					width: 100%;
-					margin-left: 2%;
-				}
-
-				.download-info .line {
-					float: left;
-					width: 5%;
-					height: 5px;
-					background-color: rgb(4, 80, 140);
-					border-radius: 5px;
-					margin-bottom: 30px;
-					margin-left: 2%;
-				}
-
-				.download-info .form-info {
-					float: left;
-					width: 95%;
-					margin-left: 5%;
-					margin-top: 30px;
-				}
-
-					.download-info .form-info .download-file {
-						float: left;
-						width: 100%;
-						height: 50px;
-					}
-
-						.download-file a {
-							font-size: 95%;
-							font-family: 'Century Gothic';
-							text-decoration: none;
-							color: rgb(60, 60, 60);
-						}
-
-						.download-file a img {
-							float: left;
-							margin-right: 10px;
-							margin-top: -7px;
-						}
-
-	/* == BODY CONTAINER DESIGN ENDS HERE == */
-/* == APPLICANT`S CONTENT CONTAINER ENDS HERE == */
-/* == APPLICANT`S MORE INFO MODAL DESIGN == */
-
-.modal-info {
-	float: left;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	z-index: 1;
-	display: none;
-}
-
-	.modal-info .modal-content {
+	.body-container .info-citi-char {
 		float: left;
-		width: 15%;
-		height: 150px;
-		background-color: rgb(255, 255, 255);
-		border-right: solid 1px rgb(230, 230, 230);
+		width: 90%;
+		margin-bottom: 40px;
 		border-bottom: solid 1px rgb(230, 230, 230);
-		border-top: solid 4px rgb(4, 80, 140);
-		margin-left: 18%;
+		padding-bottom: 30px;
+		margin-left: 5%;
 	}
 
-		.modal-content a {
-			float: left;
-			display: inline-block;
-			width: 95%;
-			padding: 8px 0px 8px 5%;
-			text-decoration: none;
-			text-transform: uppercase;
-			color: rgb(60, 60, 60);
-			font-size: 80%;
-			cursor: pointer;
-			transition: all 0.2s ease-in-out;
-		}
-
-		.modal-content a:hover {
-			font-weight: bold;
-			color: rgb(4, 80, 140);
-			transition: all 0.2s ease-in-out;
-		}
-
-/* == APPLICANT`S MORE INFO MOODAL DESIGN ENDS HERE == */
-/* == APPLICANT`S ACCOUNT SETTING MODAL == */
-
-	.applicant-content-container .accountSettingContainer {
-		float: left;
-		width: 60%;
-		height: 400px;
-		border-radius: 5px;
-		margin: 10% 20%;
-	}
-
-		.accountSettingContainer h1 {
-			float: left;
-			width: 95%;
+		.info-citi-char h2 {
 			font-family: 'Gentona';
 			font-size: 170%;
+			color: rgb(50, 50, 50);
 			text-transform: uppercase;
-			color: rgb(130, 130, 130);
-			margin: 10px 0px 0px 5%;
+			margin-left: 0;
 		}
 
-		.accountSettingContainer .line {
+			.info-citi-char .line {
+				float: left;
+				width: 4%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 5px;
+				margin-bottom: 50px;
+				margin-left: 0;
+			}
+
+			.info-citi-char .citi-char-info {
+				float: left;
+				width: 96%;
+				margin-left: 2%;
+			}
+
+				.citi-char-info p {
+					font-family: 'Century Gothic';
+					font-size: 85%;
+					color: rgb(110, 110, 110);
+					margin-bottom: 30px;
+				}
+
+				.citi-char-info ul {
+					margin-left: 3%;
+				}
+
+				.citi-char-info ul li {
+					font-family: 'Century Gothic';
+					font-size: 85%;
+				}
+
+				.citi-char-info ul li a {
+					text-decoration: none;
+					color: rgb(110, 110, 110);
+				}
+
+	/* == ABOUT DESIGN ENDS HER == */
+	/* == INNOVATION DESIGN == */
+
+	.body-container .info-inno {
+		float: left;
+		width: 90%;
+		margin-bottom: 40px;
+		border-bottom: solid 1px rgb(230, 230, 230);
+		padding-bottom: 30px;
+		margin-left: 5%;
+	}
+
+		.info-inno h2 {
+			font-family: 'Gentona';
+			font-size: 170%;
+			color: rgb(50, 50, 50);
+			text-transform: uppercase;
+			margin-left: 0;
+		}
+
+		.info-inno .line {
 			float: left;
-			width: 10%;
+			width: 4%;
 			height: 5px;
 			background-color: rgb(4, 80, 140);
 			border-radius: 5px;
-			margin: 0px 0px 30px 5%;
+			margin-bottom: 50px;
+			margin-left: 0;
 		}
 
-		.accountSettingContainer .viewAccount, .accountSettingContainer .updateAccount, .accountSettingContainer .changePassword {
+		.info-inno .inno-info {
 			float: left;
-			width: 90%;
-			margin: 20px 5% 80px 5%;
+			width: 96%;
+			margin-left: 2%;
+			margin-bottom: 50px;
 		}
 
-			.viewAccount .input-field, .updateAccount .input-field, .changePassword .input-field {
-				float: left;
-				width: 70%;
-				margin: 10px 15%;
+			.inno-info h3 {
+				font-size: 110%;
+				font-family: 'Century Gothic';
+				color: rgb(100, 100, 100);
+				margin-bottom: 20px;
 			}
 
-				.input-field label {
-					float: left;
-					width: 100%;
-					font-size: 85%;
-					text-transform: uppercase;
-					color: rgb(120, 120, 120);
-					font-weight: bold;
-					margin-bottom: 5px;
-				}
+			.inno-info .inno-info-many {
+				float: left;
+				width: 96%;
+				margin-left: 2%;
+			}
 
-				.input-field input {
-					float: left;
-					width: 98%;
-					height: 35px;
-					border: solid 1px rgb(210, 210, 210);
-					padding-left: 2%;
+				.inno-info-many p {
 					font-family: 'Century Gothic';
-					font-size: 80%;
-					border-radius: 15px;
+					font-size: 85%;
+					color: rgb(110, 110, 110);
+					margin-bottom: 20px;
 				}
 
-				.input-field input:focus {
-					outline: none;
+				.inno-info-many ul {
+					margin-left: 3%;
+					margin-bottom: 20px;
 				}
 
-			.viewAccount .button-field, .updateAccount .button-field, .changePassword .button-field {
+					.inno-info-many ul li {
+						font-family: 'Century Gothic';
+						font-size: 85%;
+						color: rgb(110, 110, 110);
+					}
+
+	/* == INNVOVATION DESIGN ENDS  HERE == */
+	/* == DOWNLOADBLE FORMS DESIGN == */
+
+	.body-container .download-info {
+		float: left;
+		width: 100%;
+		padding: 30px 0px;
+		margin-top: 20px;
+		margin-bottom: 40px;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 7px 7px 10px -9px rgb(30, 30, 30);
+		border-radius: 5px;
+		border: solid .5px rgb(230, 230, 230);
+	}
+
+		.download-info h3 {
+			float: left;
+			font-family: 'Gentona';
+			font-size: 140%;
+			text-transform: uppercase;
+			color: rgb(80, 80, 80);
+			width: 100%;
+			margin-left: 2%;
+		}
+
+		.download-info .line {
+			float: left;
+			width: 4%;
+			height: 5px;
+			background-color: rgb(4, 80, 140);
+			border-radius: 5px;
+			margin-bottom: 30px;
+			margin-left: 2%;
+		}
+
+		.download-info .form-info {
+			float: left;
+			width: 95%;
+			margin-left: 5%;
+			margin-top: 30px;
+		}
+
+			.download-info .form-info .download-file {
 				float: left;
-				width: 70%;
-				margin: 20px 15% 0px 15%;
+				width: 100%;
+				height: 50px;
 			}
 
-				.button-field button {
+				.download-file a {
+					font-size: 85%;
+					font-family: 'Century Gothic';
+					text-decoration: none;
+					color: rgb(60, 60, 60);
+				}
+
+				.download-file a img {
+					float: left;
+					margin-right: 10px;
+					margin-top: -7px;
+				}
+
+	/* == DOWNLOADABLE FORMS DESIGN ENDS HERE == */
+	/* == CONTACT US DESIGN == */
+
+	.body-container .contact-info {
+		float: left;
+		width: 100%;
+		margin-bottom: 70px;
+	}
+
+		.contact-info h3 {
+			font-family: 'Gentona';
+			font-size: 150%;
+			color: rgb(90, 90, 90);
+			text-transform: uppercase;
+			width: 100%;
+		}
+
+		.contact-info .line {
+			float: left;
+			width: 3%;
+			height: 5px;
+			border-radius: 5px;
+			background-color: rgb(4, 80, 140);
+			margin-bottom: 30px;
+		}
+
+		.contact-info .contact-table {
+			float: left;
+			width: 95%;
+			margin-left: 2.5%;
+			background-color: rgb(250, 250, 250);
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+
+			.contact-table .contact-table-header {
+				float: left;
+				width: 100%;
+				background-color: rgb(4, 80, 140);
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
+			}
+
+				.contact-table-header h4 {
+					float: left;
+					display: inline-block;
+					font-family: 'Gentona';
+					font-size: 100%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
+				}
+
+					.contact-table-header h4:first-child {
+						width: 70%;
+						padding: 8px 0px;
+						padding-left: 3%;
+					}
+
+					.contact-table-header h4:last-child {
+						width: 27%;
+						padding: 8px 0px;
+						text-align: center;
+					}
+
+			.contact-table .contact-table-info {
+				float: left;
+				width: 100%;
+			}
+
+				.contact-table-info .contact {
 					float: left;
 					width: 100%;
-					padding: 12px 0px;
-					background-color: rgb(4, 80, 140);
-					border: none;
-					border-radius: 15px;
-					font-family: 'Gentona';
-					font-size: 110%;
-					color: rgb(255, 255, 255);
-					margin-bottom: 10px;
 				}
 
-				.button-field button:focus {
-					outline: none;
-				}
+					.contact .contact-person {
+						float: left;
+						width: 70%;
+						padding: 8px 0px;
+						padding-left: 5%;
+					}
 
-				.button-field #okInfoBtn, .button-field #okPassBtn {
-					display: none;
-				}
+						.contact-person p:first-child {
+							font-weight: bold;
+							font-size: 90%;
+							margin-bottom: 5px;
+							margin-left: 0%;
+						}
 
-/* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
+							.contact-person p {
+								font-size: 80%;
+								margin-left: 6%;
+							}
+
+					.contact .contact-number {
+						float: left;
+						width: 25%;
+						padding: 8px 0px;
+						text-align: center;
+					}
+
+						.contact-number p {
+							font-weight: bold;
+							font-size: 80%;
+						}
+
+	/* == CONTACT US DESIGN ENDS HERE == */
+/* == APPLICANT`S CONTENT CONTAINER ENDS HERE == */

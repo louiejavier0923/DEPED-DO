@@ -1,0 +1,295 @@
+/* == IMPORTS == */
+
+@import url(fonts.css);
+
+/* == IMPORTS ENDS HERE == */
+/* == GLOBAL DESIGN == */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: 'Century Gothic';
+	font-size: 18px;
+}
+
+/* == GLOBAL DESIGN ENDS HERE == */
+/* == MODAL MESSAGE ICON == */
+
+	.applicant-content-container .modal-message {
+		float: right;
+		position: fixed;
+		width: 5%;
+		height: 65px;
+		margin-left: 70%;
+		margin-top: 40%;
+		z-index: 1;
+	}
+
+		.modal-message button {
+			width: 100%;
+			height: 100%;
+			border: none;
+			background-color: rgb(4, 80, 140);
+			font-size: 180%;
+			border-radius: 50px;
+			color: rgb(255, 255, 255);
+			transition: all 0.2s ease-in-out;
+		}
+
+		.modal-message img {
+			width: 60%;
+			height: 60%;
+			margin-top: 10px;
+		}
+
+		.modal-message button:focus {
+			outline: none;
+		}
+
+		.modal-message button:hover {
+			transform: scale(1.1, 1.1);
+			transition: all 0.2s ease-in-out;
+		}
+
+	/* == MODAL MESSAGE ICON ENDS HERE == */
+	/* == APPLICANT`S MORE INFO MODAL DESIGN == */
+
+.modal-info {
+	float: left;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	display: none;
+}
+
+	.modal-info .modal-content {
+		float: left;
+		width: 15%;
+		height: 150px;
+		background-color: rgb(255, 255, 255);
+		border-right: solid 1px rgb(230, 230, 230);
+		border-bottom: solid 1px rgb(230, 230, 230);
+		border-top: solid 4px rgb(4, 80, 140);
+		margin-left: 18%;
+	}
+
+		.modal-content a {
+			float: left;
+			display: inline-block;
+			width: 95%;
+			padding: 8px 0px 8px 5%;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: rgb(60, 60, 60);
+			font-size: 80%;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+		}
+
+		.modal-content a:hover {
+			font-weight: bold;
+			color: rgb(4, 80, 140);
+			transition: all 0.2s ease-in-out;
+		}
+
+/* == APPLICANT`S MORE INFO MOODAL DESIGN ENDS HERE == *//* == APPLICANT`S ACCOUNT SETTING MODAL == */
+
+	.applicant-content-container .accountSettingContainer {
+		float: left;
+		width: 60%;
+		height: 400px;
+		border-radius: 5px;
+		margin: 10% 20%;
+	}
+
+		.accountSettingContainer h1 {
+			float: left;
+			width: 95%;
+			font-family: 'Gentona';
+			font-size: 170%;
+			text-transform: uppercase;
+			color: rgb(130, 130, 130);
+			margin: 10px 0px 0px 5%;
+		}
+
+		.accountSettingContainer .line {
+			float: left;
+			width: 10%;
+			height: 5px;
+			background-color: rgb(4, 80, 140);
+			border-radius: 5px;
+			margin: 0px 0px 30px 5%;
+		}
+
+		.accountSettingContainer .viewAccount, .accountSettingContainer .updateAccount, .accountSettingContainer .changePassword {
+			float: left;
+			width: 90%;
+			margin: 20px 5% 80px 5%;
+		}
+
+			.viewAccount .input-field, .updateAccount .input-field, .changePassword .input-field {
+				float: left;
+				width: 70%;
+				margin: 10px 15%;
+			}
+
+				.input-field label {
+					float: left;
+					width: 100%;
+					font-size: 85%;
+					text-transform: uppercase;
+					color: rgb(120, 120, 120);
+					font-weight: bold;
+					margin-bottom: 5px;
+				}
+
+				.input-field input {
+					float: left;
+					width: 98%;
+					height: 35px;
+					border: solid 1px rgb(210, 210, 210);
+					padding-left: 2%;
+					font-family: 'Century Gothic';
+					font-size: 80%;
+					border-radius: 15px;
+				}
+
+				.input-field input:focus {
+					outline: none;
+				}
+
+			.viewAccount .button-field, .updateAccount .button-field, .changePassword .button-field {
+				float: left;
+				width: 70%;
+				margin: 20px 15% 0px 15%;
+			}
+
+				.button-field button {
+					float: left;
+					width: 100%;
+					padding: 12px 0px;
+					background-color: rgb(4, 80, 140);
+					border: none;
+					border-radius: 15px;
+					font-family: 'Gentona';
+					font-size: 110%;
+					color: rgb(255, 255, 255);
+					margin-bottom: 10px;
+				}
+
+				.button-field button:focus {
+					outline: none;
+				}
+
+				.button-field #okInfoBtn, .button-field #okPassBtn {
+					display: none;
+				}
+
+/* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
+/* == APPLICANT`S ATTACH FILE MODAL == */
+
+.attach-container {
+	float: left;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;
+}
+
+	.attach-container .attach-file-container {
+		float: left;
+		width: 40%;
+		height: 350px;
+		background-color: rgb(255, 255, 255);
+		margin: 10% 30%;
+		border-radius: 5px;
+	}
+
+		.attach-file-container h2 {
+			float: left;
+			width: 90%;
+			margin-left: 5%;
+			margin-top: 30px;
+			font-family: 'Gentona';
+			font-size: 150%;
+			text-transform: uppercase;
+			color: rgb(100, 100, 100);
+		}
+
+		.attach-file-container .line {
+			float: left;
+			width: 7%;
+			height: 5px;
+			background-color: rgb(4, 80, 140);
+			border-radius: 3px;
+			margin-bottom: 60px;
+			margin-left: 5%;
+		}
+
+		.attach-file-container .input-file {
+			float: left;
+			width: 80%;
+			margin-left: 10%;
+			margin-bottom: 30px;
+		}
+
+			.input-file input {
+				float: left;
+				width: 50%;
+				margin-left: 5%;
+				font-family: 'Century Gothic';
+				font-size: 85%;
+			}
+
+			.input-file label {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				font-size: 70%;
+				text-transform: uppercase;
+				color: rgb(150, 150, 150);
+				font-weight: bold;
+				font-style: italic;
+				margin-top: 10px;
+			}
+
+		.attach-file-container .input-button {
+			float: left;
+			width: 70%;
+			margin-left: 15%;
+			text-align: right;
+			margin-top: 20px;
+		}
+
+			.input-button button {
+				width: 25%;
+				padding: 12px 0px;
+				margin-left: 2.5%;
+				border: none;
+				border-radius: 5px;
+				font-family: 'Gentona';
+				font-size: 90%;
+			}
+
+				.input-button button:first-child {
+					background-color: rgb(255, 255, 255);
+					border: solid 1px rgb(4, 80, 140);
+					color: rgb(4, 80, 140);
+				}
+
+				.input-button button:last-child {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+				}
+
+/* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */

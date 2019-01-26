@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+		
+<?php
+session_start();
+if(isset($_SESSION['ID'])){
+	header('location:psb/evaluator-main.php');
+}
+?>
 
 <html>
 	<head>
-		<?php
-          session_start();
-            if(isset($_SESSION['APPLICANTS_ID'])){
-             header('location:applicants/home.php');
-             }
-         ?>
+
 		<title>Log-In Form | Division Office</title>
 		<meta name= "viewport" content= "width= device-width, initial-scale= 1"/>
 
@@ -18,14 +20,23 @@
 
 		<!-- Javascript Libraries -->
 		<script type= "text/javascript" src= "jsp/jquery-2.1.4.min.js"></script>
-		<script type= "text/javascript" src= "jsp/angular.min.js"></script>
-		<script type= "text/javascript" src= "jsp/aos.js"></script>
+		<!-- <script type= "text/javascript" src= "jsp/angular.min.js"></script> -->
+		<!-- <script type= "text/javascript" src= "jsp/aos.js"></script> -->
 
 		<!-- Custom CSS -->
 		<link rel= "stylesheet" href= "css/main.css" type= "text/css" />
 
-		<!-- Custom Javascripts -->
-
+		<style type="text/css">
+			.input-form input + label{
+				z-index: -1;
+			}
+			.inputsNotNull{
+				top: -15px !important;
+				color: rgb(4, 80, 140) !important;
+				font-size: 80% !important;
+				font-weight: bold !important;
+			}
+		</style>
 
 	</head>
 	<body>
@@ -53,16 +64,20 @@
 				<div class= "line"></div>
 				<section class = "input-container">
 					<section class= "input-form">
-						<input type= "email" name= "emailTxtbox">
+						<input type= "email" name= "emailTxtbox" id="emailTxtbox">
 						<label>Email</label>
 					</section>
 					<section class= "input-form">
-						<input type= "password" name= "passTxtbox">
+						<input type= "password" name= "passTxtbox" id="passTxtbox">
 						<label>Password</label>
 					</section>
-					<button type= "button" name= "loginBtn">LOGIN</button>
+					<button type= "button" name="loginBtn" id="loginBtn">LOGIN</button>
 				</section>
 			</section>
 		</section>
+
+<!-- Custom Javascripts -->
+<script type= "text/javascript" src= "RES/PSB-RESOURCES/JS/login.js"></script>
+
 	</body>
 </html>
