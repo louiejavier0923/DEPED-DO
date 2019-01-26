@@ -46,13 +46,13 @@
                     <div class="col-sm-9">
                       <select class='form-control' id='place_assign' name='place_assign'>
                           <?php
-                    $sql = "SELECT SID,SCHOOL_NAME FROM schools WHERE isActive = '1'";
+                       $sql = "SELECT SID,SCHOOL_NAME FROM schools WHERE isActive = '1'";
                     
                     $query = $conn->query($sql);
                       while($row = $query->fetch_assoc()){
                         echo 
                          "
-                              <option value = ".$row['SID']"> ".$row['SCHOOL_NAME']."</option>
+                              <option value = ".$row['SID']."> ".$row['SCHOOL_NAME']."</option>
                           
                   
                 ";
@@ -67,7 +67,7 @@
 
                     <div class="col-sm-9">
                           <select class="form-control" id="status" name="status">
-                              <option></option>
+                              <option>1</option>
                               <option>2</option>
                               <option>3</option>
                               <option>4</option>
