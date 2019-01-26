@@ -179,7 +179,24 @@
    	        break;
 
    	         	 /*UPDATE*/
-
+	case 'update_user_function':
+		$email = $_POST['email'];
+		$pass = $_POST['pass'];
+		$status = $_POST['status'];
+		$id = $_POST['id'];
+		
+		$sql = "UPDATE `user` SET `EMAIL`='$email',`PWD`='$pass',`STATUS`='$status' WHERE UID = '$id'";
+		if ($conn->query($sql) === TRUE) {
+			$data = array(
+				'e' => 'success'
+			);
+		} else {
+			$data = array(	
+				'e' => 'error'
+			);
+		}
+		echo json_encode($data);
+	break;
          case 'login_function':
  
   $login_email = $_POST['email'];

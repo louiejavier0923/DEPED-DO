@@ -52,6 +52,9 @@
           	</div>
           	<div class="modal-body">
             	<div class="form-horizontal">
+				<div class="col-sm-12">
+					<button type="submit" class="btn btn-default btn-flat pull-left" name="pds_btn" id="pds_btn"> Edit PDS</button>
+				</div>
                <div class="form-group">
                     <label for="email_edit" class="col-sm-3 control-label">EMAIL</label>
 
@@ -66,22 +69,59 @@
                       <input type="text" class="form-control" id="password_edit" name="password_edit" required>
                     </div>
                 </div>
+				<div class="form-group">
+                    <label for="password_edit" class="col-sm-3 control-label">RE-TYPE PASSWORD</label>
+
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="repassword_edit" name="password_edit" required>
+                    </div>
+                </div>
+				
                  <div class="form-group">
                     <label for="status_edit" class="col-sm-3 control-label">STATUS</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="status_edit" name="status_edit" required>
+						<select class="form-control" id="status_edit" name="status_edit">
+							<option>ACTIVATE</option>
+							<option>NOT ACTIVATE</option>
+						</select>
                     </div>
                 </div>
           	</div>
           	<div class="modal-footer">
             	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-            	<button type="submit" class="btn btn-success btn-flat" name="edit"><i class="fa fa-check-square-o"></i> Update</button>
+            	<button type="submit" class="btn btn-success btn-flat" name="edit" id="update-user"><i class="fa fa-check-square-o"></i> Update</button>
             	</div>
           	</div>
         </div>
     </div>
 </div>
+
+<!-- Edit PDS -->
+<div class="modal fade" id="view_pds">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          	<div class="modal-header">
+            	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              		<span aria-hidden="true">&times;</span></button>
+            	<h4 class="modal-title"><b><span id="employee_name"></span></b></h4>
+          	</div>
+          	<div class="modal-body">
+            	<div class="form-horizontal">
+				
+				<div class="form-group">
+                   <?php include 'view-PDS.php';?> 
+				</div>
+				</div>
+				<div class="modal-footer">
+            	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+            	<button type="submit" class="btn btn-success btn-flat" name="edit" id="update-user"><i class="fa fa-check-square-o"></i> Update</button>
+            	</div>
+          	</div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Delete -->
 <div class="modal fade" id="delete">
