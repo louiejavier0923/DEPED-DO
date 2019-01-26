@@ -79,8 +79,8 @@
   
 
                            <div class='col-sm-9'>
-                           
-                             <select data-id=".$row['NO']." id='teachers-dropdown-id' class='teachers-dropdown form-control'>
+
+                                  <select data-id=".$row['NO']." id='teachers-dropdown-id' class='teachers-dropdown form-control'>
                                                    
                                                   
                                   </select>

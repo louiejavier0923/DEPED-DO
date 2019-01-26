@@ -129,7 +129,7 @@
             
          	             );
 
-              echo json_encode($datea);
+              echo json_encode($date);
    	       	break;
    	       	case 'get_vacancy_id':
                        $puid = $_POST['id'];
@@ -307,382 +307,7 @@ echo json_encode($data);
      echo json_encode($data);
     break;
     /*Add Schools */
-     case 'add_schools':
-                      $output='';
-                     
-                      $school_name = $_POST['school_name'];
-                      $school_address = $_POST['school_address'];
-                      
-                      $sql=$conn->query("INSERT INTO schools(NO,SID,SCHOOL_NAME,SCHOOL_ADDRESS,isActive)VALUES('','SID-0004','".$school_name."','".$school_address."' , '1')");
-                             $output='Successful inserted';
-
-              
-
-                    $data = array(    
-                       'message' => $output
-            
-                       );
-
-              echo json_encode($data);
-            break;
-            /* Edit Schools*/
-            case 'get_school_id':
-                       $puid = $_POST['id'];
-                              $sql="SELECT * from schools where SID='".$puid."';";
-                         $result=mysqli_query($conn,$sql);
-                          if($result->num_rows > 0) 
-                               {
-                                      while($row = $result->fetch_assoc()) {
-
-                                                  $name=$row["SCHOOL_NAME"];
-                                                  $address=$row["SCHOOL_ADDRESS"];
-                                                  
-                                      }
-                               }
-
-                           else{
-                                   
-                                      
-                                    $output='no available data';
-                                    
-                                      
-                               }
-
-
-
-
-              $data = array(    
-                       'message' => $name,
-                       'name'=>$name,
-                       'address'=>$address
-                     
-            
-                       );
-
-              echo json_encode($data);
-            break;
-
-            /*Edit Schools*/
-                case 'edit_schools':
-                
-                  $s_id = $_POST['id'];
-                  $name = $_POST['name'];
-                  $address = $_POST['address'];
-                       $sql="UPDATE schools SET SCHOOL_NAME = '".$name. "', SCHOOL_ADDRESS ='".$address."' WHERE SID='".$s_id."';";
-                       $result=mysqli_query($conn,$sql);
-              $data = array(    
-                       'confirm' =>"Edit Success!",
-                                       
-            
-                    );
-
-
-
-  echo json_encode($data);
-                break;
-
-
-
-              /*Archive Schools*/
-                case 'archive_schools':
-                  $d_id = $_POST['d_id'];
-                       $sql="UPDATE schools SET isActive = '0' WHERE SID='".$d_id."';";
-                       $result=mysqli_query($conn,$sql);
-
-
-                        $data = array(    
-                       'confirm' =>"Deleting Success!",
-                                       
-            
-                    );
-
-  echo json_encode($data);
-                break;
-
-                /* Edit Vacancy */
-                case 'edit_vacancy':
-                  $date=date("Y-m-d");
-                  $expi_date = (string)$date;
-                  $edit_id = $_POST['edit_id'];
-                  $title = $_POST['title'];
-                  $expi_date = $_POST['expi_date'];
-                  $desc = $_POST['desc'];
-                  $noi = $_POST['noi'];
-                  $place = $_POST['place'];
-                  $status = $_POST['status'];
-                  $salaries = $_POST['salaries'];
-                  $itemno = $_POST['itemno'];
-                       $sql="UPDATE publish_vacancy SET TITLE = '".$title."', DESCRIPTION = '".$desc."', NOI = '".$noi."', PLACE_ASSIGNMENT = '".$place."', STATUS = '".$status."', SALARIES = '".$salaries."', ITEM_NO = '".$itemno."', PUBLICATION_DATE_UNTIL = '".$expi_date."', isActive = '0' WHERE UID='".$edit_id."';";
-                       $result=mysqli_query($conn,$sql);
-
-
-                        $data = array(    
-                       'message' =>"Edit Success!",
-
-                                       
-            
-                    );
-
-  echo json_encode($data);
-                break;
-
-
-                             /*Archive Vacancy*/ 
-          case 'archive_vacancy':
-                  $id = $_POST['id'];
-                       $sql="UPDATE publish_vacancy SET isActive = '0' WHERE UID='".$id."';";
-                       $result=mysqli_query($conn,$sql);
-
-
-                        $data = array(    
-                       'message' =>"Deleting Success!",
-                                       
-            
-                    );
-
-  echo json_encode($data);
-                break;
-
-                case 'add_news':
-                  $output='';
-                $date=date("Y-m-d");
-                $string_date = (string)$date;
-                  $title = $_POST['title'];
-                $description = $_POST['description'];
-                $news_date = $_POST['news_date'];
-                    
-                      $sql=$conn->query("INSERT INTO news(NO,UID,TITLE,DESCRIPTION,DATE_PUB,isActive)VALUES('','UID-0004','".$title."','".$description."' , '".$news_date."', '1')");
-                             $output='Successful inserted';
-                    
-
-
-                    $data = array(    
-                       'message' => $output
-            
-                       );
-
-
-                echo json_encode($data);
-                break;
-
-                /* GET NEWS ID*/
-                case 'get_news_id':
-                       $id = $_POST['id'];
-
-                              $sql="SELECT * from news where UID= '".$id."';";
-                         $result=mysqli_query($conn,$sql);
-                          if($result->num_rows > 0) 
-                               {
-                                      while($row = $result->fetch_assoc()) {
-
-                                                  $title=$row["TITLE"];
-                                                  $desc=$row["DESCRIPTION"];
-                                                  $date = $row['DATE_PUB'];
-                                          }
-                               }
-
-                           else{
-                                   
-                                      
-                                    $output='no available data';
-                                    
-                                      
-                               }
-
-
-
-
-              $data = array(    
-                       'message' => $title,
-                       'title'=>$title,
-                       'desc'=>$desc,
-                       'date'=>$date,
-                     
-            
-                       );
-
-              echo json_encode($data);
-            break;
-
-            /*  EDIT NEWS  */
-            case 'edit_news':          
-                   $output='';
-                    $date=date("Y-m-d");
-                    $string_date = (string)$date;
-                    $e_id = $_POST['e_id'];
-                    $desc = $_POST['desc'];
-                    $title = $_POST['title'];
-                    $date_pub = $_POST['date_pub'];
-                       $sql="UPDATE news SET TITLE = '".$title."', DESCRIPTION = '".$desc."', DATE_PUB = '".$date_pub."'  WHERE UID ='".$e_id."';";
-                       $result=mysqli_query($conn,$sql);
-
-
-                        $data = array(    
-                       'confirm' =>"Edit Success!",
-                                       
-            
-                    );
-
-  echo json_encode($data);
-                break;
- 
-                         /*   ARCHIVE NEWS*/
-                case 'archive_news':
-                  $d_id = $_POST['d_id'];
-                       $sql="UPDATE news SET isActive = '0' WHERE UID='".$d_id."';";
-                       $result=mysqli_query($conn,$sql);
-
-
-                        $data = array(    
-                       'confirm' =>"Deleting Success!",
-                                       
-            
-                    );
-
-  echo json_encode($data);
-                break;
-
-                    /* ADD ANNOUNCEMENTS */
-                        case 'add_announcement':
-                  $output='';
-                $date=date("Y-m-d");
-                $string_date = (string)$date;
-                  $title = $_POST['title'];
-                $description = $_POST['description'];
-                $a_date = $_POST['a_date'];
-                    
-                      $sql=$conn->query("INSERT INTO announcement(NO,UID,TITLE,DESCRIPTION,DATE_PUB,isActive)VALUES('','UID-0004','".$title."','".$description."' , '".$a_date."', '1')");
-                             $output='Successful inserted';
-                    
-
-
-                    $data = array(    
-                       'message' => $output
-            
-                       );
-
-
-                echo json_encode($data);
-                break;
-
-                    /* GET ANNOUNCEMENT ID*/
-        case 'get_a_id':
-                       $id = $_POST['id'];
-
-                              $sql="SELECT * from announcement where UID= '".$id."';";
-                         $result=mysqli_query($conn,$sql);
-                          if($result->num_rows > 0) 
-                               {
-                                      while($row = $result->fetch_assoc()) {
-
-                                                  $title=$row["TITLE"];
-                                                  $desc=$row["DESCRIPTION"];
-                                                  $date = $row['DATE_PUB'];
-                                          }
-                               }
-
-                           else{
-                                   
-                                      
-                                    $output='no available data';
-                                    
-                                      
-                               }
-              $data = array(    
-                       'message' => $title,
-                       'title'=>$title,
-                       'desc'=>$desc,
-                       'date'=>$date,
-                     
-            
-                       );
-
-              echo json_encode($data);
-            break;
-              /*   EDIT ANNOUNCEMENTS*/
-              case 'edit_announcement':          
-                   $output='';
-                    $date=date("Y-m-d");
-                    $string_date = (string)$date;
-                    $e_id = $_POST['e_id'];
-                    $desc = $_POST['desc'];
-                    $title = $_POST['title'];
-                    $date_pub = $_POST['date_pub'];
-                       $sql="UPDATE announcement SET TITLE = '".$title."', DESCRIPTION = '".$desc."', DATE_PUB = '".$date_pub."'  WHERE UID ='".$e_id."';";
-                       $result=mysqli_query($conn,$sql);
-
-
-                        $data = array(    
-                       'confirm' =>"Edit Success!",
-                                       
-            
-                    );
-
-  echo json_encode($data);
-                break;
-          /* ARCHIVE ANNOUNCEMENT */
-          case 'archive_announcement':
-                  $d_id = $_POST['d_id'];
-                       $sql="UPDATE announcement SET isActive = '0' WHERE UID='".$d_id."';";
-                       $result=mysqli_query($conn,$sql);
-
-
-                        $data = array(    
-                       'confirm' =>"Deleting Success!",
-                                       
-            
-                    );
-
-  echo json_encode($data);
-                break;
-        /*Retrieve Schools*/
-                case 'retrieve_schools':
-                  $d_id = $_POST['d_id'];
-                       $sql="UPDATE schools SET isActive = '1' WHERE SID='".$d_id."';";
-                       $result=mysqli_query($conn,$sql);
-
-
-                        $data = array(    
-                       'confirm' =>"Retrieve Success!",
-                                       
-            
-                    );
-
-                        echo json_encode($data);
-                  break;
-
-                  case 'fetch_schools_tbl':
-                   $output='';
-                               $sql = "SELECT * FROM schools WHERE isActive = '1'";
-                    $query = $conn->query($sql);
-                    while($row = $query->fetch_assoc()){
-                      $output.= "
-                        <tr>
-                          <td>".$row['NO']."</td>
-                          <td>".$row['SID']."</td>
-                          <td>".$row['SCHOOL_NAME']."</td>
-                          <td>".$row['SCHOOL_ADDRESS']."</td>
-
-                          <td>
-                            <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['SID']."'><i class='fa fa-edit'></i> Edit</button>
-                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-trash'></i> Archive</button>
-                          </td>
-                        </tr>
-                      ";
-                    }
-                        $data = array(    
-                       'schools' => $output
-                                       
-            
-                    );
-
-                        echo json_encode($data);
-                    break;
-
-
-
-   }
-
+    
 
 
 
@@ -747,7 +372,440 @@ echo json_encode($data);
            );
      echo json_encode($data);
       break;
+
+      case 'add_schools':
+                      $output='';
+                     
+                      $school_name = $_POST['school_name'];
+                      $school_address = $_POST['school_address'];
+                      
+                      $sql=$conn->query("INSERT INTO schools(NO,SID,SCHOOL_NAME,SCHOOL_ADDRESS,isActive)VALUES('','SID-0004','".$school_name."','".$school_address."' , '1')");
+                             $output='Successful inserted';
+
+              
+
+                    $data = array(    
+                       'message' => $output
+            
+                       );
+
+              echo json_encode($data);
+            break;
+
+             case 'get_school_id':
+                       $puid = $_POST['id'];
+                              $sql="SELECT * from schools where SID='".$puid."';";
+                         $result=mysqli_query($conn,$sql);
+                          if($result->num_rows > 0) 
+                               {
+                                      while($row = $result->fetch_assoc()) {
+
+                                                  $name=$row["SCHOOL_NAME"];
+                                                  $address=$row["SCHOOL_ADDRESS"];
+                                                  
+                                      }
+                               }
+
+                           else{
+                                   
+                                      
+                                    $output='no available data';
+                                    
+                                      
+                               }
+
+
+
+
+              $data = array(    
+                       'message' => $name,
+                       'name'=>$name,
+                       'address'=>$address
+                     
+            
+                       );
+
+              echo json_encode($data);
+            break;
+
+               case 'get_school_id':
+                       $puid = $_POST['id'];
+                              $sql="SELECT * from schools where SID='".$puid."';";
+                         $result=mysqli_query($conn,$sql);
+                          if($result->num_rows > 0) 
+                               {
+                                      while($row = $result->fetch_assoc()) {
+
+                                                  $name=$row["SCHOOL_NAME"];
+                                                  $address=$row["SCHOOL_ADDRESS"];
+                                                  
+                                      }
+                               }
+
+                           else{
+                                   
+                                      
+                                    $output='no available data';
+                                    
+                                      
+                               }
+
+
+
+
+              $data = array(    
+                       'message' => $name,
+                       'name'=>$name,
+                       'address'=>$address
+                     
+            
+                       );
+
+              echo json_encode($data);
+            break;
+                case 'edit_schools':
+                
+                  $s_id = $_POST['id'];
+                  $name = $_POST['name'];
+                  $address = $_POST['address'];
+                       $sql="UPDATE schools SET SCHOOL_NAME = '".$name. "', SCHOOL_ADDRESS ='".$address."' WHERE SID='".$s_id."';";
+                       $result=mysqli_query($conn,$sql);
+              $data = array(    
+                       'confirm' =>"Edit Success!",
+                                       
+            
+                    );
+
+
+
+  echo json_encode($data);
+                break;
+
+                   case 'archive_schools':
+                  $d_id = $_POST['d_id'];
+                       $sql="UPDATE schools SET isActive = '0' WHERE SID='".$d_id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Deleting Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+
+                  case 'edit_vacancy':
+                  $date=date("Y-m-d");
+                  $expi_date = (string)$date;
+                  $edit_id = $_POST['edit_id'];
+                  $title = $_POST['title'];
+                  $expi_date = $_POST['expi_date'];
+                  $desc = $_POST['desc'];
+                  $noi = $_POST['noi'];
+                  $place = $_POST['place'];
+                  $status = $_POST['status'];
+                  $salaries = $_POST['salaries'];
+                  $itemno = $_POST['itemno'];
+                       $sql="UPDATE publish_vacancy SET TITLE = '".$title."', DESCRIPTION = '".$desc."', NOI = '".$noi."', PLACE_ASSIGNMENT = '".$place."', STATUS = '".$status."', SALARIES = '".$salaries."', ITEM_NO = '".$itemno."', PUBLICATION_DATE_UNTIL = '".$expi_date."', isActive = '0' WHERE UID='".$edit_id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'message' =>"Edit Success!",
+
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+  case 'archive_vacancy':
+                  $id = $_POST['id'];
+                       $sql="UPDATE publish_vacancy SET isActive = '0' WHERE UID='".$id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'message' =>"Deleting Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+
+                  case 'add_news':
+                  $output='';
+                $date=date("Y-m-d");
+                $string_date = (string)$date;
+                  $title = $_POST['title'];
+                $description = $_POST['description'];
+                $news_date = $_POST['news_date'];
+                    
+                      $sql=$conn->query("INSERT INTO news(NO,UID,TITLE,DESCRIPTION,DATE_PUB,isActive)VALUES('','UID-0004','".$title."','".$description."' , '".$news_date."', '1')");
+                             $output='Successful inserted';
+                    
+
+
+                    $data = array(    
+                       'message' => $output
+            
+                       );
+
+
+                echo json_encode($data);
+                break;
+
+
+                case 'get_news_id':
+                       $id = $_POST['id'];
+
+                              $sql="SELECT * from news where UID= '".$id."';";
+                         $result=mysqli_query($conn,$sql);
+                          if($result->num_rows > 0) 
+                               {
+                                      while($row = $result->fetch_assoc()) {
+
+                                                  $title=$row["TITLE"];
+                                                  $desc=$row["DESCRIPTION"];
+                                                  $date = $row['DATE_PUB'];
+                                          }
+                               }
+
+                           else{
+                                   
+                                      
+                                    $output='no available data';
+                                    
+                                      
+                               }
+
+
+
+
+              $data = array(    
+                       'message' => $title,
+                       'title'=>$title,
+                       'desc'=>$desc,
+                       'date'=>$date,
+                     
+            
+                       );
+
+              echo json_encode($data);
+            break;
+
+             case 'edit_news':          
+                   $output='';
+                    $date=date("Y-m-d");
+                    $string_date = (string)$date;
+                    $e_id = $_POST['e_id'];
+                    $desc = $_POST['desc'];
+                    $title = $_POST['title'];
+                    $date_pub = $_POST['date_pub'];
+                       $sql="UPDATE news SET TITLE = '".$title."', DESCRIPTION = '".$desc."', DATE_PUB = '".$date_pub."'  WHERE UID ='".$e_id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Edit Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+                    case 'archive_news':
+                  $d_id = $_POST['d_id'];
+                       $sql="UPDATE news SET isActive = '0' WHERE UID='".$d_id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Deleting Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+
+                   case 'add_announcement':
+                  $output='';
+                $date=date("Y-m-d");
+                $string_date = (string)$date;
+                  $title = $_POST['title'];
+                $description = $_POST['description'];
+                $a_date = $_POST['a_date'];
+                    
+                      $sql=$conn->query("INSERT INTO announcement(NO,UID,TITLE,DESCRIPTION,DATE_PUB,isActive)VALUES('','UID-0004','".$title."','".$description."' , '".$a_date."', '1')");
+                             $output='Successful inserted';
+                    
+
+
+                    $data = array(    
+                       'message' => $output
+            
+                       );
+
+
+                echo json_encode($data);
+                break;
+
+  case 'get_a_id':
+                       $id = $_POST['id'];
+
+                              $sql="SELECT * from announcement where UID= '".$id."';";
+                         $result=mysqli_query($conn,$sql);
+                          if($result->num_rows > 0) 
+                               {
+                                      while($row = $result->fetch_assoc()) {
+
+                                                  $title=$row["TITLE"];
+                                                  $desc=$row["DESCRIPTION"];
+                                                  $date = $row['DATE_PUB'];
+                                          }
+                               }
+
+                           else{
+                                   
+                                      
+                                    $output='no available data';
+                                    
+                                      
+                               }
+              $data = array(    
+                       'message' => $title,
+                       'title'=>$title,
+                       'desc'=>$desc,
+                       'date'=>$date,
+                     
+            
+                       );
+
+              echo json_encode($data);
+            break;
+
+                 case 'archive_announcement':
+                  $d_id = $_POST['d_id'];
+                       $sql="UPDATE announcement SET isActive = '0' WHERE UID='".$d_id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Deleting Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+
+                    case 'fetch_schools_tbl':
+                   $output='';
+                               $sql = "SELECT * FROM schools WHERE isActive = '1'";
+                    $query = $conn->query($sql);
+                    while($row = $query->fetch_assoc()){
+                      $output.= "
+                        <tr>
+                          <td>".$row['NO']."</td>
+                          <td>".$row['SID']."</td>
+                          <td>".$row['SCHOOL_NAME']."</td>
+                          <td>".$row['SCHOOL_ADDRESS']."</td>
+
+                          <td>
+                            <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['SID']."'><i class='fa fa-edit'></i> Edit</button>
+                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-trash'></i> Archive</button>
+                          </td>
+                        </tr>
+                      ";
+                    }
+                        $data = array(    
+                       'schools' => $output
+                                       
+            
+                    );
+
+                        echo json_encode($data);
+                    break;
+
+                    
+              
      
    }
+
+   /*
+   
+      
+         
+            
+             
+
+              
+             
+
+                
+             
+
+                             
+        
+
+              
+
+               
+
+    
+           
+ 
+                    
+            
+
+                 
+                     
+                   
+      
+              case 'edit_announcement':          
+                   $output='';
+                    $date=date("Y-m-d");
+                    $string_date = (string)$date;
+                    $e_id = $_POST['e_id'];
+                    $desc = $_POST['desc'];
+                    $title = $_POST['title'];
+                    $date_pub = $_POST['date_pub'];
+                       $sql="UPDATE announcement SET TITLE = '".$title."', DESCRIPTION = '".$desc."', DATE_PUB = '".$date_pub."'  WHERE UID ='".$e_id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Edit Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+          
+          case 'archive_announcement':
+                  $d_id = $_POST['d_id'];
+                       $sql="UPDATE announcement SET isActive = '0' WHERE UID='".$d_id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Deleting Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+  
+               
+
+   }
+
+   */
 
  ?>
