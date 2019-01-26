@@ -17,7 +17,7 @@
 	</section>
 	<section class= "one-two">
 		<section class= "one-btn">
-			<a href= "#"><i class= "fa fa-close"></i></a>
+			<a id= "closeLogin"><i class= "fa fa-close"></i></a>
 		</section>
 		<section class= "one-login-register">
 			 <div id="loading"></div>

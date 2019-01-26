@@ -17,9 +17,6 @@
 		</section>
 		<section class= "body-container">
 			<section class="body-about">
-				<section class= "body-about-nav">
-					
-				</section>
 				<section class= "body-about-info">
 					<section class="info-history">
 						<h2>History</h2>
@@ -269,7 +266,7 @@
 		<section class= "footer-container">
 			<?php include 'include/footer-container.php';?>
         </section>
-        <section class= "modal" id= "login-register-modal">
+        <section class= "modal-login-register" id= "modal-login-register">
         	<?php include 'include/login-register-modal.php';?>
         </section>
 	</body>

@@ -217,21 +217,23 @@ $(document).ready(function() {
 
     $('.content-register').hide();
     var moreInfoModal = document.getElementById('more-info');
+    var attachFileModal = document.getElementById('attach-file');
+    var loginRegisterModal = document.getElementById('modal-login-register');
 
     $('body')
-    .on('click', '.modal-tab', function() {
-        switch (this.id) {
-            case 'loginBtn':
-                $('.content-login').show();
-                $('.content-register').hide();
-            break;
+      .on('click', '.modal-tab', function() {
+          switch (this.id) {
+              case 'loginBtn':
+                  $('.content-login').show();
+                  $('.content-register').hide();
+              break;
 
-            case 'registerBtn':
-                $('.content-login').hide();
-                $('.content-register').show();
-            break;
-        }
-    })
+              case 'registerBtn':
+                  $('.content-login').hide();
+                  $('.content-register').show();
+              break;
+          }
+      })
         
         .on('click', '#finishBtn', function() {
             $('#applyBtn').hide();
@@ -249,6 +251,9 @@ $(document).ready(function() {
         .on('click', window, function(e) {
             if (e.target == moreInfoModal) {
                 moreInfoModal.style.display= "none";
+            }
+            else if (e.target == loginRegisterModal) {
+                loginRegisterModal.style.display= "none";
             }
         })
 
@@ -268,6 +273,30 @@ $(document).ready(function() {
         .on('click', '#editPassBtn', function() {
             $('#okPassBtn').show();
             $('#editPassBtn').hide();
+        })
+
+        .on('click', '#submit_file', function() {
+            attachFileModal.style.display= "block";
+        })
+
+        .on('click', '#cancelFileBtn', function() {
+            attachFileModal.style.display= "none";
+        })
+
+        .on('click', '#okFileBtn', function () {
+            attachFileModal.style.display= "none";
+        })
+
+        .on('click', '#accBtn', function () {
+            loginRegisterModal.style.display= "block";
+        })
+
+        .on('click', "#joinBtn", function() {
+            loginRegisterModal.style.display= "block";
+        })
+
+        .on('click', '#closeLogin', function() {
+          loginRegisterModal.style.display= "none";
         })
 
     $('#submit_login_btn').click(function() {			

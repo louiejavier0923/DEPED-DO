@@ -4,6 +4,7 @@
 		<h1>SCHOOLS DIVISION OFFICE | QUEZON CITY</h1>
 	</a>
 </section>
+<a id= "burgerBtn"><i class= "fa fa-bars"></i></a>
 <section class= "header-nav">
 	<section class= "header-nav-main">
 		<a href= "index.php">Home</a>
@@ -11,10 +12,7 @@
 		<a href= "download.php">Downloadable Forms</a>
 		<a href= "contact.php">Contact Us</a>
 		<a href= "faqs.php">FAQs</a>
-		<a href= "#login-register-modal">JOIN US!</a>
-		<a href= "#login-register-modal">Account</a>
+		<a id= "joinBtn" >JOIN US!</a>
+		<a id= "accBtn">Account</a>
 	</section>
-</section>
-<section class= "header-nav-respo">
-
 </section>

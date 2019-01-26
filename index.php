@@ -171,16 +171,14 @@
 							<h3 id= "position">TEACHER I</h3>
 							<p id= "school">Quezon City Polytechnic University</p>
 							<p id= "address">367 Quirino Highway, San Bartolome, Novaliches, Quezon City</p>
-							<p id= "salary">Salary: 18, 000 Php</p>
-							<a href= "#">APPLY</a>
+							<a id= "joinBtn">APPLY</a>
 						</section>
 						<section class= "vacant">
 							<img src= "img/logo.png">
 							<h3 id= "position">TEACHER I</h3>
 							<p id= "school">Quezon City Polytechnic University</p>
 							<p id= "address">367 Quirino Highway, San Bartolome, Novaliches, Quezon City</p>
-							<p id= "salary">Salary: 18, 000 Php</p>
-							<a href= "#">APPLY</a>
+							<a id= "joinBtn">APPLY</a>
 						</section>
 					</section>
 				</section>
@@ -189,7 +187,7 @@
 		<section class= "footer-container">
 			<?php include 'include/footer-container.php';?>
         </section>
-        <section class= "modal" id= "login-register-modal">
+        <section class= "modal-login-register" id= "modal-login-register">
         	<?php include 'include/login-register-modal.php';?>
         </section>
 	</body>
