@@ -151,13 +151,12 @@ $(function(){
      $.ajax({
     type: 'POST',
     url: '../credentials/model.php',
-    data: {action:'retrieve_schools',d_id:d_id},
+    data: {action:'archive_schools',d_id:d_id},
     dataType: 'json',
     success: function(response){
         alert(response.confirm);
      $('.alert-success').css("display","block").html(response.message);
      $('#delete').modal('hide');
-     $("#reload").load(location.href + " #reload>*", "");
     }
   });
     });

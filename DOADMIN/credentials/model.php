@@ -604,6 +604,7 @@ echo json_encode($data);
                     $date=date("Y-m-d");
                     $string_date = (string)$date;
                     $e_id = $_POST['e_id'];
+
                     $desc = $_POST['desc'];
                     $title = $_POST['title'];
                     $date_pub = $_POST['date_pub'];
