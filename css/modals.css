@@ -201,7 +201,7 @@ body {
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 3;
+	z-index: 4;
 	background-color: rgba(0, 0, 0, 0.4);
 	display: none;
 }
@@ -215,7 +215,7 @@ body {
 		border-radius: 5px;
 	}
 
-		.attach-file-container h2 {
+		.attach-container .attach-file-container h2 {
 			float: left;
 			width: 90%;
 			margin-left: 5%;
@@ -226,7 +226,7 @@ body {
 			color: rgb(100, 100, 100);
 		}
 
-		.attach-file-container .line {
+		.attach-container .attach-file-container .line {
 			float: left;
 			width: 7%;
 			height: 5px;
@@ -236,14 +236,14 @@ body {
 			margin-left: 5%;
 		}
 
-		.attach-file-container .input-file {
+		.attach-container .attach-file-container .input-file {
 			float: left;
 			width: 80%;
 			margin-left: 10%;
 			margin-bottom: 30px;
 		}
 
-			.input-file input {
+			.attach-container .attach-file-container .input-file input {
 				float: left;
 				width: 50%;
 				margin-left: 5%;
@@ -251,7 +251,7 @@ body {
 				font-size: 85%;
 			}
 
-			.input-file label {
+			.attach-container .attach-file-container .input-file label {
 				float: left;
 				width: 90%;
 				margin-left: 5%;
@@ -263,7 +263,7 @@ body {
 				margin-top: 10px;
 			}
 
-		.attach-file-container .input-button {
+		.attach-container .attach-file-container .input-button {
 			float: left;
 			width: 70%;
 			margin-left: 15%;
@@ -271,7 +271,7 @@ body {
 			margin-top: 20px;
 		}
 
-			.input-button button {
+			.attach-container .attach-file-container .input-button button {
 				width: 25%;
 				padding: 12px 0px;
 				margin-left: 2.5%;
@@ -281,15 +281,95 @@ body {
 				font-size: 90%;
 			}
 
-				.input-button button:first-child {
+				.attach-container .attach-file-container .input-button button:first-child {
 					background-color: rgb(255, 255, 255);
 					border: solid 1px rgb(4, 80, 140);
 					color: rgb(4, 80, 140);
 				}
 
-				.input-button button:last-child {
+				.attach-container .attach-file-container .input-button button:last-child {
 					background-color: rgb(4, 80, 140);
 					color: rgb(255, 255, 255);
 				}
 
 /* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */
+/* == APPLICANT`S CHOOSE FILE MODAL == */
+
+.attach-category {
+	float: left;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;
+}
+
+	.attach-category .attach-file-container {
+		float: left;
+		width: 40%;
+		height: 350px;
+		background-color: rgb(255, 255, 255);
+		margin: 10% 30%;
+		border-radius: 5px;
+	}
+
+		.attach-category #exitFileBtn {
+			font-size: 140%;
+			color: rgb(90, 90, 90);
+		}
+
+		.attach-category .attach-file-container h2 {
+			float: left;
+			width: 90%;
+			margin-left: 5%;
+			margin-top: 30px;
+			font-family: 'Gentona';
+			font-size: 150%;
+			text-transform: uppercase;
+			color: rgb(100, 100, 100);
+		}
+
+		.attach-category .attach-file-container .categ-button {
+			float: left;
+			width: 80%;
+			margin-top: 40px;
+			margin-left: 10%;
+		}
+
+			.categ-button button {
+				float: left;
+				width: 40%;
+				border: solid 1px rgb(4, 80, 140);
+				border-radius: 3px;
+				padding: 10px 0px;
+				font-family: 'Century Gothic';
+				font-size: 90%;
+				text-transform: uppercase;
+				color: rgb(255, 255, 255);
+				background-color: rgb(4, 80, 140);
+				font-weight: bold;
+				margin: 5% 2.5%;
+			}
+
+		.attach-category .attach-file-container .input-button {
+			float: right;
+			text-align: right;
+			width: 80%;
+			margin-right: 10%;
+			margin-top: 50px;
+		}
+
+			.attach-category .attach-file-container .input-button button {
+				width: 20%;
+				padding: 15px 0px;
+				border: solid 1px rgb(4, 80, 140);
+				border-radius: 5px;
+				font-family: 'Gentona';
+				color: rgb(4, 80, 140);
+				background-color: rgb(255, 255, 255);
+			}
+
+/* == APPLICANT`S CHOOSE FILE MODAL ENDS HERE == */

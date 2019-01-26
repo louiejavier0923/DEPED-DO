@@ -95,62 +95,27 @@ $(function(){
     $("#d_id").val(id);
   });
 
-    /*ARCHIVE NEWS*/
-    $("#archive").click(function(e){
+   /*RETRIEVE SCHOOLS*/
+
+      $("#retrieve").click(function(e){
       e.preventDefault();
-      var d_id = $("#d_id").val();
+      var r_id = $("#r_id").val();
      $.ajax({
     type: 'POST',
     url: '../credentials/model.php',
-    data: {action:'archive_news',d_id:d_id},
+    data: {action:'retrieve_schools',r_id:r_id},
     dataType: 'json',
     success: function(response){
         alert(response.confirm);
-     $('.alert-success').css("display","block").html(response.confirm);
-     $('#delete').modal('hide');
-     $("#reload").load(location.href + " #reload>*", "");
+     $('.alert-success').css("display","block").html(response);
+     $('#delete').modal('hide');00
     }
   });
     });
 
-
-
-
-
-		/* ADD NEWS */
-    $('#submit_news').click(function(e){
-    e.preventDefault();
-    add_news();
- 
-  });
-
  });
 
-function add_news(action='add_news'){
-        var title = $("#title").val();
-        var description = $("#description").val();
-        var news_date = $("#date").val();
 
-
-  $.ajax({
-    type: 'POST',
-    url: '../credentials/model.php',
-    data: {action:action, title:title, description:description,news_date:news_date},
-    dataType: 'json',
-    success: function(response){
-
-               alert(response.message);
-                  $('.alert-success').css("display","block").html(response.message);
-                   $('#addnew').modal('hide');
-                   $("#title").val("");
-                   $("#description").val("");
-                   $("#news_date").val("");
-          $("#reload").load(location.href + " #reload>*", "");
-   
-
-    }
-  }); 
-}
 </script>
 </body>
 </html>

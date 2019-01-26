@@ -694,6 +694,19 @@ echo json_encode($data);
 
               echo json_encode($data);
             break;
+              /*   EDIT ANNOUNCEMENTS*/
+              case 'edit_announcement':          
+                   $output='';
+                    $date=date("Y-m-d");
+                    $string_date = (string)$date;
+                    $e_id = $_POST['e_id'];
+
+                    $desc = $_POST['desc'];
+                    $title = $_POST['title'];
+                    $date_pub = $_POST['date_pub'];
+                       $sql="UPDATE announcement SET TITLE = '".$title."', DESCRIPTION = '".$desc."', DATE_PUB = '".$date_pub."'  WHERE UID ='".$e_id."';";
+                       $result=mysqli_query($conn,$sql);
+
 
                  case 'archive_announcement':
                   $d_id = $_POST['d_id'];
