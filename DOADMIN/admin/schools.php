@@ -52,7 +52,7 @@
                   <th>TOOLS</th>
                 </thead>
                 <tbody class="schools_tbl">
-                
+                     
                 </tbody>
               </table>
             </div>
@@ -88,7 +88,8 @@ function fetch_schools(action='fetch_schools_tbl'){
 $(function(){
    fetch_schools();
 	var id = $(this).data('id');
-	$('.edit').click(function(e){
+$(document).on('click', '.edit', function(e) {
+	
     e.preventDefault();
     $('#edit').modal('show');
     id = $(this).data('id');
@@ -129,6 +130,7 @@ $(function(){
         $('.alert-success').css("display","block").html(response.message);
          $('#edit').modal('hide');
          $("#reload").load(location.href + " #reload>*", "");
+         fetch_schools();
     }
   });
   });
@@ -136,7 +138,7 @@ $(function(){
 
 	 /*ARCHIVE BUTTON*/
 
-	 $('.delete').click(function(e){
+$(document).on('click', '.delete', function(e) {
     e.preventDefault();
     $('#delete').modal('show');
     var id = $(this).data('id');
@@ -145,7 +147,7 @@ $(function(){
   });
 
     /*ARCHIVE SCHOOLS*/
-    $("#archive").click(function(e){
+   $(document).on('click', '.delete', function(e) {
       e.preventDefault();
       var d_id = $("#d_id").val();
      $.ajax({

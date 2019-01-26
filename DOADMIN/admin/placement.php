@@ -60,6 +60,7 @@
                 
                 
                   <th>POSITION</th>
+                   <th>SID</th>
                   <th>SCHOOL</th>
                   <th>APPLICANTS</th>
                   <th>REPLACEMENT NO</th>
@@ -73,6 +74,7 @@
                       echo "
                         <tr>
                           <td>".$row['TITLE']."<input style='display:none;' type='checkbox' id=".$row['NO']." name=".$row['NO']." value=".$row['NO']."></td>
+                           <td>".$row['UID']."</td>
                           <td>".$row['PLACE_ASSIGNMENT']."</td>
                           <td>
                               <div class='form-group>
@@ -128,8 +130,8 @@ $(function(){
 
            var sids = $("#example1 tr:has(input:checked)").map(function() {
               var $tr = $(this);
-              var id = $tr.find("td:nth-child(2)").text();
-              return id;
+              var ids = $tr.find("td:nth-child(2)").text();
+              return ids;
               }).toArray();
 
               if(ids==''){
@@ -141,12 +143,13 @@ $(function(){
                          $.ajax({
                              type: 'POST',
                              url: '../credentials/model.php',
-                             data: {action:'set_appointment',uid:ids},
+                             data: {action:'set_appointment',uid:ids,sids:sids},
                              dataType: 'json',
                              success: function(response){
                                             switch(response.message){
                                               case 'success':
-                                              $('.alert-success').html(response.message);
+                                                    $('.alert-success').html(response.message);
+                                                    alert(sids);
                                               break;
                                             }
                                                  
@@ -207,7 +210,7 @@ function DisableOptions()
 
 
  $(".teachers-dropdown  option").attr("hidden",false); 
-           $(".teachers-dropdown").val("SELECT -"); 
+ $(".teachers-dropdown").val("SELECT -"); 
    
 });
 
@@ -222,6 +225,8 @@ function applicants_list(action='applicants_list'){
            
                  
                 $('.teachers-dropdown').html(response.message);   
+                $(".teachers-dropdown  option").attr("hidden",false); 
+ $(".teachers-dropdown").val("SELECT -"); 
                             }
                });
   }

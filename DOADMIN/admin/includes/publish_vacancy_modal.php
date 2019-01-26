@@ -1,5 +1,6 @@
 <!-- Add -->
 <div class="modal fade" id="addnew">
+    
     <div class="modal-dialog">
         <div class="modal-content">
           	<div class="modal-header">
@@ -40,18 +41,33 @@
                     </div>
                 </div>
                  <div class="form-group">
-                    <label for="place" class="col-sm-3 control-label">Place assignment</label>
 
+                    <label for="status"  class="col-sm-3 control-label">Place assignment</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="place" name="place" required>
+                      <select class='form-control' id='place_assign' name='place_assign'>
+                          <?php
+                    $sql = "SELECT SID,SCHOOL_NAME FROM schools WHERE isActive = '1'";
+                    
+                    $query = $conn->query($sql);
+                      while($row = $query->fetch_assoc()){
+                        echo 
+                         "
+                              <option value = ".$row['SID']"> ".$row['SCHOOL_NAME']."</option>
+                          
+                  
+                ";
+                      }
+               ?>
+               </select>
                     </div>
+
                 </div>
                  <div class="form-group">
                     <label for="status"  class="col-sm-3 control-label">Status</label>
 
                     <div class="col-sm-9">
                           <select class="form-control" id="status" name="status">
-                              <option>1</option>
+                              <option></option>
                               <option>2</option>
                               <option>3</option>
                               <option>4</option>

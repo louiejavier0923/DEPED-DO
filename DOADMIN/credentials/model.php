@@ -14,14 +14,15 @@
         case 'applicants_list':
           # code...
            $output='';
-                   $sql = "SELECT * from user";
+           $cnt='';
+                   $sql = "SELECT * from view_rank";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
-                    
-
+                     $cnt+=1;
+                                
                      
                       $output.="
-                                       <option data-uid=".$row['UID']."  value=".$row['UID'].">".$row['EMAIL']."</option>
+                                       <option data-uid=".$cnt."  value=".$row['UID'].">".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>
                                   
                                
                         
@@ -365,6 +366,12 @@ echo json_encode($data);
     
             }
 
+            foreach($_POST['sids'] as $PIDS) {
+                        $sql="UPDATE publish_vacancy SET APP_ISSET = '1' WHERE UID='".$PIDS."';";
+                        $result=mysqli_query($conn,$sql);
+                      
+            }
+
 
               
            $data = array(  
@@ -496,6 +503,27 @@ echo json_encode($data);
   echo json_encode($data);
                 break;
 
+                  case 'retrieve_schools':
+                  $output ='';
+                  $id = $_POST['id'];
+                       $sql="UPDATE schools SET isActive = '1' WHERE SID='".$id."';";
+                       $result=mysqli_query($conn,$sql);
+                      $output ='Retrieve Success';
+
+                        $data = array(    
+                       'confirm' =>"Retrieve Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+
+
+
+
+
+
                   case 'edit_vacancy':
                   $date=date("Y-m-d");
                   $expi_date = (string)$date;
@@ -508,7 +536,7 @@ echo json_encode($data);
                   $status = $_POST['status'];
                   $salaries = $_POST['salaries'];
                   $itemno = $_POST['itemno'];
-                       $sql="UPDATE publish_vacancy SET TITLE = '".$title."', DESCRIPTION = '".$desc."', NOI = '".$noi."', PLACE_ASSIGNMENT = '".$place."', STATUS = '".$status."', SALARIES = '".$salaries."', ITEM_NO = '".$itemno."', PUBLICATION_DATE_UNTIL = '".$expi_date."', isActive = '0' WHERE UID='".$edit_id."';";
+                       $sql="UPDATE publish_vacancy SET TITLE = '".$title."', DESCRIPTION = '".$desc."', NOI = '".$noi."', PLACE_ASSIGNMENT = '".$place."', STATUS = '".$status."', SALARIES = '".$salaries."', ITEM_NO = '".$itemno."', PUBLICATION_DATE_UNTIL = '".$expi_date."' WHERE UID='".$edit_id."';";
                        $result=mysqli_query($conn,$sql);
 
 
@@ -558,6 +586,20 @@ echo json_encode($data);
                 echo json_encode($data);
                 break;
 
+                     case 'retrieve_vacancy':
+                  $id = $_POST['id'];
+                       $sql="UPDATE publish_vacancy SET isActive = '1' WHERE UID='".$id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'message' =>"Deleting Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
 
                 case 'get_news_id':
                        $id = $_POST['id'];
@@ -631,6 +673,25 @@ echo json_encode($data);
 
   echo json_encode($data);
                 break;
+                    case 'retrieve_news':
+                  $id = $_POST['id'];
+                       $sql="UPDATE news SET isActive = '1' WHERE UID='".$id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Deleting Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+
+
+
+
+
 
                    case 'add_announcement':
                   $output='';
@@ -716,13 +777,28 @@ echo json_encode($data);
   echo json_encode($data);
                 break;
 
+
+                    case 'retrieve_announcement':
+                  $id = $_POST['id'];
+                  $sql="UPDATE announcement SET isActive = '1' WHERE UID='".$id."';";
+                      $result=mysqli_query($conn,$sql);
+                     
+                        $data = array(    
+                       'confirm' =>"Retrieve Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+
                     case 'fetch_schools_tbl':
                    $output='';
                                $sql = "SELECT * FROM schools WHERE isActive = '1'";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $output.= "
-                        <tr>
+                       <tr>
                           <td>".$row['NO']."</td>
                           <td>".$row['SID']."</td>
                           <td>".$row['SCHOOL_NAME']."</td>
@@ -733,6 +809,7 @@ echo json_encode($data);
                             <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-trash'></i> Archive</button>
                           </td>
                         </tr>
+                      
                       ";
                     }
                         $data = array(    
@@ -743,8 +820,6 @@ echo json_encode($data);
 
                         echo json_encode($data);
                     break;
-
-                    
               
      
    }
@@ -815,7 +890,50 @@ echo json_encode($data);
   echo json_encode($data);
                 break;
   
-               
+                case 'retrieve_schools':
+                  $d_id = $_POST['d_id'];
+                       $sql="UPDATE schools SET isActive = '1' WHERE SID='".$d_id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Retrieve Success!",
+                                       
+            
+                    );
+
+                        echo json_encode($data);
+                  break;
+
+                  case 'fetch_schools_tbl':
+                   $output='';
+                               $sql = "SELECT * FROM schools WHERE isActive = '1'";
+                    $query = $conn->query($sql);
+                    while($row = $query->fetch_assoc()){
+                      $output.= "
+                        <tr>
+                          <td>".$row['NO']."</td>
+                          <td>".$row['SID']."</td>
+                          <td>".$row['SCHOOL_NAME']."</td>
+                          <td>".$row['SCHOOL_ADDRESS']."</td>
+
+                          <td>
+                            <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['SID']."'><i class='fa fa-edit'></i> Edit</button>
+                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-trash'></i> Archive</button>
+                          </td>
+                        </tr>
+                      ";
+                    }
+                        $data = array(    
+                       'schools' => $output
+                                       
+            
+                    );
+
+                        echo json_encode($data);
+                    break;
+
+
 
    }
 
