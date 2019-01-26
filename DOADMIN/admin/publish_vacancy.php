@@ -24,13 +24,13 @@
             <div style="display: none;" class='alert alert-danger alert-dismissible'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
               <h4><i class='icon fa fa-warning'></i> Error!</h4>
-             hahaha
+           
             </div>
        
             <div style="display: none;" class='alert alert-success alert-dismissible'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
               <h4><i class='icon fa fa-check'></i> Success!</h4>
-                hahaha
+             
             </div>
         
       <div class="row">
@@ -39,7 +39,7 @@
             <div class="box-header with-border">
               <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> New</a>
             </div>
-            <div class="box-body">
+            <div class="box-body" id="reload">
               <table id="example1" class="table table-bordered">
                 <thead>
                   <th>PUID</th>
@@ -55,7 +55,7 @@
                 </thead>
                 <tbody>
                   <?php
-                    $sql = "SELECT * FROM publish_vacancy";
+                    $sql = "SELECT * FROM publish_vacancy WHERE isActive = '1'";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       echo "
@@ -71,7 +71,7 @@
                           <td>".$row['ITEM_NO']."</td>
                           <td>
                             <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['UID']."'><i class='fa fa-edit'></i> Edit</button>
-                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['UID']."'><i class='fa fa-trash'></i> Delete</button>
+                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['UID']."'><i class='fa fa-trash'></i> Archive</button>
                           </td>
                         </tr>
                       ";
@@ -96,6 +96,7 @@ $(function(){
     e.preventDefault();
     $('#edit').modal('show');
     var id = $(this).data('id');
+    $("#id").val(id);
    $.ajax({
     type: 'POST',
     url: '../credentials/model.php',
@@ -120,20 +121,91 @@ $(function(){
     }
   });
   });
+                       /* EDIT BUTTON */
+            $("#edit_vacancy").click(function(e){
+            e.preventDefault();
+            var edit_id = $("#id").val();
+            var title = $("#edit_title").val();
+            var expi_date = $("#edit_expiration").val();
+            var desc = $("#edit_description").val();
+            var noi = $("#edit_noi").val();
+            var place = $("#edit_place").val();
+            var status = $("#edit_status").val();
+            var salaries = $("#edit_salaries").val();
+            var itemno = $("#edit_itemno").val();
+            $.ajax({
+            type: 'POST',
+            url: '../credentials/model.php',
+            data: {action:'edit_vacancy',edit_id:edit_id, title:title, expi_date:expi_date,
+              desc:desc, noi:noi, place:place, status:status, salaries:salaries, itemno:itemno},
+            dataType: 'json',
+            success: function(response){
+              alert(response.message);
+              $('.alert-success').css("display","block").html(response.message);
+              $('#edit').modal('hide');
+              $("#reload").load(location.href + " #reload>*", "");
+      
+       
+     
 
+
+    
+    }
+  });
+
+
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          /*GET DELETE  ID*/
   $('.delete').click(function(e){
     e.preventDefault();
     $('#delete').modal('show');
     var id = $(this).data('id');
-    getRow(id);
+    $("#delete_id").val(id);
   });
 
-    $('#edit_vacancy').click(function(e){
+  /*  ARCHIVE BUTTON*/
+  $("#delete_vacancy").click(function(e){
     e.preventDefault();
- 
-    var id = $(this).data('id');
-    alert(id);
+    var id = $("#delete_id").val();
+
+      $.ajax({
+    type: 'POST',
+    url: '../credentials/model.php',
+    data: {action:'archive_vacancy',id:id},
+    dataType: 'json',
+    success: function(response){
+      alert(response.message);
+             $('.alert-success').css("display","block").html(response.message);
+           $('#delete').modal('hide');
+        $("#reload").load(location.href + " #reload>*", "");
+      
+    }
   });
+
+
+
+  });
+
+
+
+
+
+
+
 
 
     $('#submit_vacancy').click(function(e){
@@ -159,7 +231,6 @@ function add_vacancy(action='add_vacancy'){
          var place = $('#place').val();
 
 
-
   $.ajax({
     type: 'POST',
     url: '../credentials/model.php',
@@ -170,6 +241,8 @@ function add_vacancy(action='add_vacancy'){
                alert(response.message);
                  $('.alert-success').css("display","block").html(response.message);
                    $('#addnew').modal('hide');
+        $("#reload").load(location.href + " #reload>*", "");
+      
 
     }
   });

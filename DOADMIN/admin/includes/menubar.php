@@ -38,14 +38,31 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="users.php"><i class="fa fa-circle-o"></i>Announcements</a></li>
-            <li><a href="overtime.php"><i class="fa fa-circle-o"></i>Advisory</a></li>
+            <li><a href="news.php"><i class="fa fa-circle-o"></i>News</a></li>
+            <li><a href="announcement.php"><i class="fa fa-circle-o"></i>Announcements</a></li>
           </ul>
         </li>
         <li><a href="publish_vacancy.php"><i class="fa fa-suitcase"></i>Publish Vacancy</a></li>
+        <li><a href="schools.php"><i class="fa fa-suitcase"></i>Schools</a></li>
         <li><a href="ranking.php"><i class="fa fa-suitcase"></i>Ranking</a></li>
         <li><a href="placement.php"><i class="fa fa-suitcase"></i>Placement</a></li>
           <li><a href="appointments.php"><i class="fa fa-suitcase"></i>Appointment</a></li>
+           <li class="treeview">
+          <a href="#">
+            <i class="fa fa-file-text"></i>
+            <span>Archives</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="archive_users.php"><i class="fa fa-circle-o"></i>User</a></li>
+            <li><a href="archive_schools.php"><i class="fa fa-circle-o"></i>Schools</a></li>
+            <li><a href="archive_vacancy.php"><i class="fa fa-circle-o"></i>Vacancy</a></li>
+            <li><a href="archive_news.php"><i class="fa fa-circle-o"></i>News</a></li>
+            <li><a href="archive_announcement.php"><i class="fa fa-circle-o"></i>Announcements</a></li>
+          </ul>
+        </li>
         <li class="header">PRINTABLES</li>
         <li><a href="payroll.php"><i class="fa fa-files-o"></i> <span>Ranking</span></a></li>
         <li><a href="schedule_employee.php"><i class="fa fa-clock-o"></i> <span></span></a></li>
