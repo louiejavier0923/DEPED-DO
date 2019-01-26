@@ -219,6 +219,7 @@ $(document).ready(function() {
     var moreInfoModal = document.getElementById('more-info');
     var attachFileModal = document.getElementById('attach-file');
     var loginRegisterModal = document.getElementById('modal-login-register');
+    var responsiveNav = document.getElementById('header-nav-responsive');
 
     $('body')
       .on('click', '.modal-tab', function() {
@@ -254,6 +255,10 @@ $(document).ready(function() {
             }
             else if (e.target == loginRegisterModal) {
                 loginRegisterModal.style.display= "none";
+            }
+
+            else if (e.target == responsiveNav) {
+              responsiveNav.style.display= "none";
             }
         })
 
@@ -297,6 +302,10 @@ $(document).ready(function() {
 
         .on('click', '#closeLogin', function() {
           loginRegisterModal.style.display= "none";
+        })
+
+        .on('click', '#burgerBtn', function() {
+          responsiveNav.style.display= "block";
         })
 
     $('#submit_login_btn').click(function() {			

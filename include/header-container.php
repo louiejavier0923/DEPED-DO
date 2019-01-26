@@ -5,7 +5,7 @@
 	</a>
 </section>
 <a id= "burgerBtn"><i class= "fa fa-bars"></i></a>
-<section class= "header-nav">
+<section class= "header-nav" id= "header-nav-responsive">
 	<section class= "header-nav-main">
 		<a href= "index.php">Home</a>
 		<a href= "about.php">About Us</a>
