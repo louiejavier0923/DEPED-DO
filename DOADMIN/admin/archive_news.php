@@ -11,13 +11,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-       	ARCHIVE FOR SCHOOLS
+      ARCHIVE FOR NEWS
       </h1>
       <ol class="breadcrumb">
+        
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#"><i class="fa fa-dashboard"></i> Archives</a></li>
-        
-        <li class="active">Schools</li>
+        <li class="active">News</li>
       </ol>
     </section>
      
@@ -41,29 +41,31 @@
  <div class="row">
         <div class="col-xs-12">
           <div class="box">
-              <div class="box-body" id="reload">
+            <div class="box-body" id="reload">
               <table id="example1" class="table table-bordered">
                 <thead>
                   <th>NO</th>
-                  <th>SID</th>
-                  <th>SCHOOL NAME</th>
-                  <th>SCHOOL ADDRESS</th>
+                  <th>UID</th>
+                  <th>TITLE</th>
+                  <th>DESCRIPTION</th>
+                  <th>DATE POSTED</th>
                   <th>TOOLS</th>
                 </thead>
                 <tbody>
                   <?php
-                    $sql = "SELECT * FROM schools WHERE isActive = '0'";
+                    $sql = "SELECT * FROM news WHERE isActive = '0'";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       echo "
                         <tr>
                           <td>".$row['NO']."</td>
-                          <td>".$row['SID']."</td>
-                          <td>".$row['SCHOOL_NAME']."</td>
-                          <td>".$row['SCHOOL_ADDRESS']."</td>
+                          <td>".$row['UID']."</td>
+                          <td>".$row['TITLE']."</td>
+                          <td>".$row['DESCRIPTION']."</td>
+                          <td>".$row['DATE_PUB']."</td>
 
                           <td>
-                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-trash'></i> Retrieve</button>
+                            <button class='btn btn-danger btn-sm archive btn-flat' data-id='".$row['UID']."'><i class='fa fa-trash'></i> Retrieve</button>
                           </td>
                         </tr>
                       ";
@@ -77,43 +79,48 @@
       </div>
     </section>   
   </div>
+    
 
   <?php include 'includes/footer.php'; ?>
 
-  <?php include 'includes/archive_school_modal.php'; ?>
+  <?php include 'includes/archive_news_modal.php'; ?>
 </div>
 <?php include 'includes/scripts.php'; ?>
 <script>
 $(function(){
 	 /*ARCHIVE BUTTON*/
 
-	 $('.delete').click(function(e){
+	 $('.archive').click(function(e){
     e.preventDefault();
-    $('#delete').modal('show');
+    $('#retrieve').modal('show');
     var id = $(this).data('id');
-    $("#d_id").val(id);
+    $("#id").val(id);
   });
 
-   /*RETRIEVE SCHOOLS*/
-
-      $("#retrieve").click(function(e){
+    /*ARCHIVE NEWS*/
+    $("#retrieve").click(function(e){
       e.preventDefault();
-      var id = $("#d_id").val();
+      var id = $("#id").val();
      $.ajax({
     type: 'POST',
     url: '../credentials/model.php',
-    data: {action:'retrieve_schools',id:id},
+    data: {action:'retrieve_news',id:id},
     dataType: 'json',
     success: function(response){
         alert(response.confirm);
      $('.alert-success').css("display","block").html(response.confirm);
-     $('#delete').modal('hide');
+     $('#retrieve').modal('hide');
+     $("#reload").load(location.href + " #reload>*", "");
     }
   });
     });
 
- });
 
+
+
+
+
+ });
 
 </script>
 </body>
