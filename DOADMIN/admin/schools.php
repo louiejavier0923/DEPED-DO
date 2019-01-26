@@ -88,7 +88,8 @@ function fetch_schools(action='fetch_schools_tbl'){
 $(function(){
    fetch_schools();
 	var id = $(this).data('id');
-	$('.edit').click(function(e){
+$(document).on('click', '.edit', function(e) {
+	
     e.preventDefault();
     $('#edit').modal('show');
     id = $(this).data('id');
