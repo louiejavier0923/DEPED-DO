@@ -351,9 +351,10 @@ $(function(){
 		
 	});
 
-	$('#update-user').click(function(){
+	$('#edit_n_update_pds_info-btn').click(function(){
 		action='update_user_function';
 		id = $(this).attr("data-id");
+		console.log(id);
 		/* email =$('#email_edit').val(); 
 		pass =$('#password_edit').val(); 
 		repass =$('#repassword_edit').val(); 
@@ -363,7 +364,7 @@ $(function(){
 		}else{
 			status = '0'
 		} */
-		action='update_user_function';
+		
 		//personal info
 		pds_surname = $('#addnew .pds_surname').val();
 		pds_firstname = $('#addnew .pds_firstname').val();
@@ -552,7 +553,7 @@ $(function(){
 				
 				
 				if(response.exe==='success')
-					$('#edit_pds').modal('hide');
+					$('#view_pds').modal('hide');
 				else 
 					alert(response.error);
 				
@@ -565,7 +566,10 @@ $(function(){
 	$('.view-pds').click(function(){
 		$('#view_pds').modal('show');
 		action='view_pds_function';
+		$('#edit_n_update_pds_info-btn').html('Edit'); 
 		id = $(this).attr("data-id");
+		alert(id);
+		$('#edit_n_update_pds_info-btn').data('id',id);
 		$("#view_pds input").val("");
 
 		$.ajax({
@@ -662,8 +666,10 @@ $(function(){
 	
 	$('.edit').click(function(){
 		$('#view_pds').modal('show');
+		$('#edit_n_update_pds_info-btn').html('Update'); 
 		action='view_pds_function';
-		var id = $(this).data('id');  
+		var id = $(this).data('id');
+		$('#edit_n_update_pds_info-btn').data('id',id);
 		$("#view_pds input").val("");
 		$.ajax({
 				type: 'POST',

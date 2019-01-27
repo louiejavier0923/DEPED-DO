@@ -147,8 +147,7 @@
 				<?php include 'view-PDS.php';?> 
           	<div class="modal-footer">
             	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-            	<button type="submit" class="btn btn-primary btn-flat" id="save_pds_info-btn" name="add"><i class="fa fa-save"></i> Edit</button>
-         
+            	<button type="submit" class="btn btn-primary btn-flat" id="edit_n_update_pds_info-btn" data-id="" name="add"><i class="fa fa-save"></i> Update</button>
           	</div>
           </div>
         </div>
