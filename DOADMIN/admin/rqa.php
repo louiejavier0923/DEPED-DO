@@ -11,11 +11,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-         RANKING
+         RQA LIST
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Rank</li>
+        <li class="active">rqa list</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -51,13 +51,7 @@
         <div class="col-xs-12">
           <div class="box">
               <div class="box-header with-border">
-             <div class="pull-right">
-                <form method="POST" class="form-inline" id="rankForm">
-                  
-                  
-                  <button type="button" class="btn btn-primary btn-sm btn-flat" id="ranking"><span class="glyphicon glyphicon-print"></span> Rankings</button>
-                </form>
-              </div>
+              <a href="" id="appointment" data-toggle="modal" class="btn btn-success btn-sm btn-flat">PRINT</a>
                
             </div>
             <div class="box-body">
@@ -80,7 +74,7 @@
                 <tbody>
                   <?php
                     $cnt='';
-                    $sql = "SELECT * FROM view_rank";
+                    $sql = "SELECT * FROM view_rank where TOTALPOINTS > 70";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $cnt += 1;
@@ -122,11 +116,7 @@
 <?php include 'includes/scripts.php'; ?>
 <script>
 $(function(){
-    $('#ranking').click(function(e){
-    e.preventDefault();
-    $('#rankForm').attr('action', '../credentials/model_printables.php');
-    $('#rankForm').submit();
-  });
+  
 
 
    

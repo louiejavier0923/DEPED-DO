@@ -20,7 +20,7 @@
     </section>
     <!-- Main content -->
     <section class="content">
-       <div class='alert alert-success alert-dismissible'>
+       <div style="display: none;" class='alert alert-success alert-dismissible'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
               <h4><i class='icon fa fa-check'></i> Success!</h4>
           
@@ -124,14 +124,14 @@ $(function(){
   $('#appointment').click(function(e){
           var ids = $("#example1 tr:has(input:checked)").map(function() {
               var $tr = $(this);
-              var id = $tr.find("td:nth-child(3) option:selected").val();
+              var id = $tr.find("td:nth-child(4) option:selected").val();
               return id;
               }).toArray();
 
            var sids = $("#example1 tr:has(input:checked)").map(function() {
               var $tr = $(this);
-              var ids = $tr.find("td:nth-child(2)").text();
-              return ids;
+              var id = $tr.find("td:nth-child(2)").text();
+              return id;
               }).toArray();
 
               if(ids==''){
@@ -146,13 +146,10 @@ $(function(){
                              data: {action:'set_appointment',uid:ids,sids:sids},
                              dataType: 'json',
                              success: function(response){
-                                            switch(response.message){
-                                              case 'success':
+                                          
                                                     $('.alert-success').html(response.message);
                                                     alert(sids);
-                                              break;
-                                            }
-                                                 
+                                            
                                  }
                          });
               }

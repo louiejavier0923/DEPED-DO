@@ -58,10 +58,22 @@ function register(action = 'register_function')
                data:{action:action,email:reg_email,pwd:reg_pass,cpwd:reg_confirm_pass},
                dataType:"json",
                    success:function(data){
-                                         
-                                            alert(data.message);
-                                             $('#loading').css("display","none");
-                                             $('.loading-container').css("display","none");
+                                              switch(data.message){
+                                                case 'success':
+                                                  alert(data.message);
+                                                  $('#loading').css("display","none");
+                                                  $('.loading-container').css("display","none");
+                                                   window.location.href='email-verification.php';
+                                                break;
+
+                                                default:
+                                                         alert(data.message);
+                                                           $('#loading').css("display","none");
+                                                  $('.loading-container').css("display","none");
+                                                break;
+
+                                              }
+                                           
                                          }    
                });
       
