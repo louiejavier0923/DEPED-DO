@@ -13,6 +13,7 @@
 			<section class= "modal-message">
 				<button id= "messageBtn"><img src= "../img/icon-message.png"></button>
 			</section>
+			<?php include '../include/applicant-message-modal.php';?>
 			<h2>APPLICATION FORM</h2>
 			<div class= "line"></div>
 			<section class= "application-nav">
