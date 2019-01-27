@@ -922,33 +922,18 @@ body {
 		margin-right: 85%;
 	}
 
-	.email-verify-container input {
-		float: left;
-		width: 58%;
-		height: 30px;
-		margin-left: 5%;
-		border-radius: 10px;
-		border: solid 1px rgb(130, 130, 130);
-		padding-left: 2%;
-		margin-bottom: 5px;
-	}
-
-	.email-verify-container input:focus {
-		outline: none;
-	}
-
 	.email-verify-container p {
 		float: left;
 		width: 90%;
 		margin-left: 5%;
 		font-size: 85%;
 		color: rgb(120, 120, 120);
-		text-transform: uppercase;
+		margin-bottom: 10px;
 	}
 
 	.email-verify-container button {
 		float: right;
-		width: 30%;
+		width: 40%;
 		padding: 10px 0px;
 		background-color: rgb(4, 80, 140);
 		margin-right: 5%;
