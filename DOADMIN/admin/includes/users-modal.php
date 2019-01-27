@@ -1,5 +1,5 @@
 <!-- Add -->
-<div class="modal fade" id="addnew">
+<!--<div class="modal fade" id="addnew">
     <div class="modal-dialog">
         <div class="modal-content">
           	<div class="modal-header">
@@ -40,9 +40,9 @@
         </div>
     </div>
 </div>
-
+ -->
 <!-- Edit -->
-<div class="modal fade" id="edit">
+<!--<div class="modal fade" id="edit">
     <div class="modal-dialog">
         <div class="modal-content">
           	<div class="modal-header">
@@ -87,9 +87,9 @@
         </div>
     </div>
 </div>
-
+ -->
 <!-- Edit PDS -->
-<div class="modal fade" id="view_pds">
+<!--<div class="modal fade" id="view_pds">
     <div class="modal-dialog">
         <div class="modal-content">
           	<div class="modal-header">
@@ -101,7 +101,7 @@
             	<div class="form-horizontal">
 				
 				<div class="form-group">
-                   <?php include 'view-PDS.php';?> 
+                   <?php //include 'view-PDS.php';?> 
 				</div>
 				</div>
 				<div class="modal-footer">
@@ -112,6 +112,49 @@
         </div>
     </div>
 </div>
+ -->
+<!-- Add with pds info -->
+<div class="modal fade" id="addnew">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          	<div class="modal-header">
+            	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              		<span aria-hidden="true">&times;</span></button>
+            	<h4 class="modal-title"><b>Add User</b></h4>
+          	</div>
+          	<div class="modal-body">
+				<?php include 'view-PDS.php';?> 
+          	<div class="modal-footer">
+            	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+            	<button type="submit" class="btn btn-primary btn-flat" id="save_pds_info-btn" name="add"><i class="fa fa-save"></i> Save</button>
+         
+          	</div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<!--  pds info -->
+<div class="modal fade" id="view_pds">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          	<div class="modal-header">
+            	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              		<span aria-hidden="true">&times;</span></button>
+            	<h4 class="modal-title"><b>Personal Data Sheet</b></h4>
+          	</div>
+          	<div class="modal-body">
+				<?php include 'view-PDS.php';?> 
+          	<div class="modal-footer">
+            	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+            	<button type="submit" class="btn btn-primary btn-flat" id="save_pds_info-btn" name="add"><i class="fa fa-save"></i> Edit</button>
+         
+          	</div>
+          </div>
+        </div>
+    </div>
+</div>
+
 
 
 <!-- Delete -->
