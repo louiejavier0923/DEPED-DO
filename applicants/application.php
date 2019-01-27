@@ -57,5 +57,6 @@
 				</section>
 			</section>
 		</section>
+		<?php include '../include/applicant-pds-modal.php';?>
 	</body>
 </html>

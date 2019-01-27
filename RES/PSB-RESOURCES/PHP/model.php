@@ -39,13 +39,13 @@ switch ($_POST['action']) {
 	case 'get_published_vacancy':
 
 		$html = "";
-		$sql = "SELECT UID,TITLE,PLACE_ASSIGNMENT FROM `publish_vacancy` WHERE PUBLICATION_DATE>CURRENT_DATE();";
+		$sql = "SELECT p.UID,p.TITLE,s.SCHOOL_NAME FROM publish_vacancy p JOIN schools s ON p.PLACE_ASSIGNMENT=s.SID WHERE PUBLICATION_DATE>CURRENT_DATE();";
 		$result = mysqli_query($conn,$sql);
 
 		while ($row = mysqli_fetch_assoc($result)) {
 			$id = $row['UID'];
 			$title = $row['TITLE'];
-			$place = $row['PLACE_ASSIGNMENT'];
+			$place = $row['SCHOOL_NAME'];
 
 			$html .= "<option value='$id'>$id - $title @ $place</option>";
 		}
@@ -58,11 +58,23 @@ switch ($_POST['action']) {
 
 		$a = $_POST['a'];
 		$b = $_POST['b'];
+		$c = $_POST['c'];
 
 		$html = "";
 		$cnt = 0;
 
-		$sql = "SELECT p.UID,p.LASTNAME,p.FIRSTNAME,p.MIDDLENAME,p.EXTENSION_NAME,p.RESIDENTIAL_ADDRESS,p.MOBILE_NO,u.EMAIL,apv.EDUCATION,apv.EXPERIENCE,apv.ELIGIBILITY,apv.TRAINING,apv.INTERVIEW FROM application a JOIN personal_info p JOIN user u JOIN applicant_points_view apv ON p.UID=a.UID AND u.UID=p.UID AND a.PID=apv.PID AND p.UID=apv.UID WHERE a.PID='$a' AND (p.LASTNAME LIKE '%$b%' OR p.FIRSTNAME LIKE '%$b%' OR p.MIDDLENAME LIKE '%$b%' OR p.UID LIKE '%$b%' OR u.EMAIL LIKE '%$b%') ORDER BY a.DATE ASC;";
+		$sql = "SELECT p.UID,p.LASTNAME,p.FIRSTNAME,p.MIDDLENAME,p.EXTENSION_NAME,p.RESIDENTIAL_ADDRESS,p.MOBILE_NO,u.EMAIL,
+			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID) AS 'EDUCATION',
+			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EXPERIENCE' AND ap.UID=a.UID) AS 'EXPERIENCE',
+			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='ELIGIBILITY' AND ap.UID=a.UID) AS 'ELIGIBILITY',
+			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='TRAINING' AND ap.UID=a.UID) AS 'TRAINING',
+			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.GRADED_BY='$c' AND ap.CRITERIA_CODE='INTERVIEW' AND ap.UID=a.UID) AS 'INTERVIEW',
+			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='DEMO' AND ap.UID=a.UID) AS 'DEMO',
+			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='COMMUNICATION' AND ap.UID=a.UID) AS 'COMMUNICATION',
+			((SELECT SUM(EQUIVALENT_POINTS) from applicants_points ap where (ap.CRITERIA_CODE = 'INTERVIEW' AND ap.UID=a.UID)) / (SELECT COUNT(ap.NO) from applicants_points ap where (ap.CRITERIA_CODE = 'INTERVIEW' AND ap.UID=a.UID))) AS `INTERVIEW_AVG`,
+			((SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID)+(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EXPERIENCE' AND ap.UID=a.UID)+(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='ELIGIBILITY' AND ap.UID=a.UID)+(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='TRAINING' AND ap.UID=a.UID)+(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='DEMO' AND ap.UID=a.UID)+(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='COMMUNICATION' AND ap.UID=a.UID)+((SELECT SUM(EQUIVALENT_POINTS) from applicants_points ap where (ap.CRITERIA_CODE = 'INTERVIEW' AND ap.UID=a.UID)) / (SELECT COUNT(ap.NO) from applicants_points ap where (ap.CRITERIA_CODE = 'INTERVIEW' AND ap.UID=a.UID)))) AS 'TOTALPOINTS'
+			FROM application a JOIN personal_info p JOIN user u ON p.UID=a.UID AND u.UID=p.UID WHERE a.PID='$a' AND (p.LASTNAME LIKE '%$b%' OR p.FIRSTNAME LIKE '%$b%' OR p.MIDDLENAME LIKE '%$b%' OR p.UID LIKE '%$b%' OR u.EMAIL LIKE '%$b%') ORDER BY TOTALPOINTS DESC;";
+
 		$result = mysqli_query($conn,$sql);
 		while ($row = mysqli_fetch_assoc($result)) {
 
@@ -77,6 +89,15 @@ switch ($_POST['action']) {
 			$eligib = $row['ELIGIBILITY'];
 			$train = $row['TRAINING'];
 			$interview = $row['INTERVIEW'];
+			$demo = $row['DEMO'];
+			$comm = $row['COMMUNICATION'];
+			$total_score = $row['TOTALPOINTS'];
+			if ($total_score==0) {
+				$rem = "-";
+			}
+			else{
+				$rem = number_format($total_score, 2, '.','');
+			}
 			
 			$html .= "<section class= 'info-container'>
 							<section class= 'content'>
@@ -93,28 +114,28 @@ switch ($_POST['action']) {
 								<p>$email</p>
 							</section>
 							<section class= 'content'>
-								<input type= 'text' class='input-grade e-education' value='$educ'>
+								<input type= 'text' name='EDUCATION' class='input-grade e-education' value='$educ'>
 							</section>
 							<section class= 'content'>
-								<input type= 'text' class='input-grade e-experience' value='$exp'>
+								<input type= 'text' name='EXPERIENCE' class='input-grade e-experience' value='$exp'>
 							</section>
 							<section class= 'content'>
-								<input type= 'text' class='input-grade e-let' value='$eligib'>
+								<input type= 'text' name='ELIGIBILITY' class='input-grade e-let' value='$eligib'>
 							</section>
 							<section class= 'content'>
-								<input type= 'text' class='input-grade e-training' value='$train'>
+								<input type= 'text' name='TRAINING' class='input-grade e-training' value='$train'>
 							</section>
 							<section class= 'content'>
-								<input type= 'text' class='input-grade e-interview' value='".number_format($interview, 2, '.', '')."'>
+								<input type= 'text' name='INTERVIEW' class='input-grade e-interview' value='$interview'>
 							</section>
 							<section class= 'content'>
-								<input type= 'text' class='input-grade e-demo'>
+								<input type= 'text' name='DEMO' class='input-grade e-demo' value='$demo'>
 							</section>
 							<section class= 'content'>
-								<input type= 'text' class='input-grade e-communication'>
+								<input type= 'text' name='COMMUNICATION' class='input-grade e-communication' value='$comm'>
 							</section>
 							<section class= 'content'>
-								<p></p>
+								<p>".$rem."</p>
 							</section>
 						</section>";
 
@@ -139,6 +160,12 @@ switch ($_POST['action']) {
 		if ($rowcount!=1) {
 			
 			$sql = "INSERT INTO applicants_points(UID,PID,CRITERIA_CODE,EQUIVALENT_POINTS,GRADED_BY) VALUES ('$a','$e','$b','$c','$d');";
+			$result = mysqli_query($conn,$sql);
+
+		}
+		else{
+
+			$sql = "UPDATE applicants_points SET EQUIVALENT_POINTS='$c' WHERE UID='$a' AND PID='$e' AND CRITERIA_CODE='$b' AND GRADED_BY='$d';";
 			$result = mysqli_query($conn,$sql);
 
 		}

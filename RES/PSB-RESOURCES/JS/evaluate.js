@@ -30,7 +30,8 @@ $(document).ready(function(){
 			data:{
 				action:'get_applicant_list',
 				a:job,
-				b:applicant_name
+				b:applicant_name,
+				c:user_id
 			}
 		}).done(function(data){
 			// console.log(data);
@@ -38,13 +39,12 @@ $(document).ready(function(){
 			setEditableInputGrades($('.evaluator-criteria').html());
 		});
 
-
 	})
 	.on('blur','.input-grade',function(){
 
 		var lim,
 		grade = $(this).val(),
-		criteria = $('.evaluator-criteria').html(),
+		criteria = $(this).prop('name'),
 		pid = $('#published_vacancy_select').val();
 
 		switch(criteria){
@@ -65,11 +65,19 @@ $(document).ready(function(){
 			break;
 
 			case 'INTERVIEW':
+				lim = 10;
+			break;
+
+			case 'DEMO':
+				lim = 15;
+			break;
+
+			case 'COMMUNICATION':
 				lim = 15;
 			break;
 		}
 
-		if (grade<0 || grade>lim) {
+		if (grade<0 || grade>lim || grade=="") {
 			alert('Invalid grade entered!');
 			// $(this).focus();
 		}
@@ -95,6 +103,11 @@ $(document).ready(function(){
 			})
 
 		}
+
+	})
+	.on('click','#btn_save',function(){
+
+		$('.applicant-filters').blur();
 
 	});
 

@@ -16,10 +16,10 @@
 		<h2>DEPED Connect</h2>
 		<div class= "line"></div>
 		<section class= "one-three-info">
-			<a href= "#">Department of Education</a>
-			<a href= "#">Learner Information System</a>
-			<a href= "#">Basic Education Information System</a>
-			<a href= "#">Learning Resource Management and Development System</a>
+			<a href= "http://www.deped.gov.ph/">Department of Education</a>
+			<a href= "https://lrmds.deped.gov.ph/">Learner Information System</a>
+			<a href= "https://ebeis.deped.gov.ph/beis/">Basic Education Information System</a>
+			<a href= "https://lrmds.deped.gov.ph/">Learning Resource Management and Development System</a>
 		</section>
 	</section>
 	<section class= "one-three">

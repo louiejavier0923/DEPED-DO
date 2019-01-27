@@ -19,7 +19,7 @@ function login(action = 'login_function')
                                     break;
 
                                     case 'redirect':
-                                          alert(data.message);
+                                          window.location.href='email-verification.php';
                                     break;
 
                                     default:
@@ -58,10 +58,22 @@ function register(action = 'register_function')
                data:{action:action,email:reg_email,pwd:reg_pass,cpwd:reg_confirm_pass},
                dataType:"json",
                    success:function(data){
-                                         
-                                            alert(data.message);
-                                             $('#loading').css("display","none");
-                                             $('.loading-container').css("display","none");
+                                              switch(data.message){
+                                                case 'success':
+                                                  alert(data.message);
+                                                  $('#loading').css("display","none");
+                                                  $('.loading-container').css("display","none");
+                                                   window.location.href='email-verification.php';
+                                                break;
+
+                                                default:
+                                                         alert(data.message);
+                                                           $('#loading').css("display","none");
+                                                  $('.loading-container').css("display","none");
+                                                break;
+
+                                              }
+                                           
                                          }    
                });
       
@@ -221,6 +233,7 @@ $(document).ready(function() {
     var loginRegisterModal = document.getElementById('modal-login-register');
     var responsiveNav = document.getElementById('header-nav-responsive');
     var chooseFileModal = document.getElementById('attach-categ');
+    var pdsModal = document.getElementById('pds-container');
 
     $('body')
       .on('click', '.modal-tab', function() {
@@ -260,6 +273,10 @@ $(document).ready(function() {
 
             else if (e.target == responsiveNav) {
               responsiveNav.style.display= "none";
+            }
+
+            else if (e.target == pdsModal) {
+              pdsModal.style.display= "none";
             }
         })
 
@@ -319,6 +336,15 @@ $(document).ready(function() {
 
         .on('click', '#backFileBtn', function() {
           attachFileModal.style.display= "none";
+        })
+
+        .on('click', '#pdsBtn', function() {
+          pdsModal.style.display= "block";
+          moreInfoModal.style.display= "none";
+        })
+
+        .on('click', '#closePdsBtn', function() {
+          pdsModal.style.display= "none";
         })
 
     $('#submit_login_btn').click(function() {			

@@ -19,12 +19,24 @@
 					<div class= "line"></div>
 					<section class= "logs-container">
 						<section class= "logs">
-
+							<img src= "../img/logo.png">
+							<h1 id= "position">TEACHER I</h1>
+							<p id= 'school'>Quezon City Polytechnic University</p>
+							<p id= "address">673  Quirino Highway, San Bartolome, Novaliches Quezon City</p>
+							<p id= "dateApply">Apply Date: January 27, 2019</p>
+						</section>
+						<section class= "logs">
+							<img src= "../img/logo.png">
+							<h1 id= "position">TEACHER I</h1>
+							<p id= 'school'>Quezon City Polytechnic University</p>
+							<p id= "address">673  Quirino Highway, San Bartolome, Novaliches Quezon City</p>
+							<p id= "dateApply">Apply Date: January 27, 2019</p>
 						</section>
 					</section>
 				</section>
 			</section>	
 		</section>
 		<?php include '../include/user-info-modal.php';?>
+		<?php include '../include/applicant-pds-modal.php';?>
 	</body>
 </html>

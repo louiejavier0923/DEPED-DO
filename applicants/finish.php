@@ -18,7 +18,7 @@
 			<section class= "application-nav">
 				<p class= "success">1</p>
 				<p class= "success">2</p>
-				<p class= "current">3</p>
+				<p class= "success">3</p>
 			</section>
 			<section class= "application-content">
 				<section class= "application-form">
@@ -33,5 +33,6 @@
 			</section>
 		</section>
 		<?php include '../include/user-info-modal.php';?>
+		<?php include '../include/applicant-pds-modal.php';?>
 	</body>
 </html>

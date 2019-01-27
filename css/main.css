@@ -4,6 +4,7 @@
 @import url(fonts.css);
 @import url(responsive-header-footer.css);
 @import url(responsive-main.css);
+@import url(responsive-login-register.css);
 
 /*== IMPORTS ENDS HERE == */
 /* == GLOBAL DESIGN == */
@@ -216,7 +217,6 @@ body {
 			}
 
 /* == LOGIN FORM CONTAINER DESIGN ENDS HERE == */
-
 /* == EVALUATION FORM DESIGN == */
 
 .evaluation-form {
@@ -892,318 +892,58 @@ body {
 							}
 
 /* == EVALUATION FORM DESIGN ENDS HERE == */
-/* == LOGIN & REGISTRATION MODAL == */
+/* == EMAIL VERIFICATION CONTAINER == */
 
-.modal-login-register {
-	position: fixed;
-	display: none;
-	background-color: rgba(0, 0, 0, 0.6);
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 3;
+.body-container .email-verify-container {
+	float: left;
+	width: 60%;
+	padding: 20px 0px;
+	border: solid 1px rgb(230, 230, 230);
+	border-radius: 5px;
+	margin: 6% 20%;
 }
 
-	.modal-login-register .modal-container {
-		width: 60%;
-		height: 400px;
-		margin-left: 20%;
-		background-color: rgb(255, 255, 255);
-		border-radius: 5px;
-		margin-top: 8%;
+	.email-verify-container h1 {
+		font-family: 'Gentona';
+		font-size: 160%;
+		text-transform: uppercase;
+		color: rgb(110, 110, 110);
+		margin-left: 5%;
 	}
 
-		.modal-container .one-two:first-child {
-			float: left;
-			width: 45%;
-			height: 100%;
-			background-color: rgb(4, 80, 140);
-			border-top-left-radius: 5px;
-			border-bottom-left-radius: 5px;
-		}
+	.email-verify-container .line {
+		float: left;
+		width: 10%;
+		height: 5px;
+		border-radius: 5px;
+		background-color: rgb(4, 80, 140);
+		margin-bottom: 40px;
+		margin-left: 5%;
+		margin-right: 85%;
+	}
 
-			.modal-container .one-two:first-child .one-title {
-				float: left;
-				width: 90%;
-				margin: 30px 5% 80px 5%;
-			}
+	.email-verify-container p {
+		float: left;
+		width: 90%;
+		margin-left: 5%;
+		font-size: 85%;
+		color: rgb(120, 120, 120);
+		margin-bottom: 10px;
+	}
 
-				.one-title img {
-					float: left;
-					width: 25%;
-					height: 70px;
-					margin-right: 5%;
-				}
+	.email-verify-container button {
+		float: right;
+		width: 40%;
+		padding: 10px 0px;
+		background-color: rgb(4, 80, 140);
+		margin-right: 5%;
+		margin-top: 30px;
+		border: solid 1px rgb(4, 80, 140);
+		border-radius: 5px;
+		font-family: 'Gentona';
+		font-size: 100%;
+		text-transform: uppercase;
+		color: rgb(255, 255, 255);
+	}
 
-				.one-title h1 {
-					float: left;
-					width: 60%;
-					margin-top: 10px;
-					font-family: 'Gentona';
-					font-size: 150%;
-					line-height: 25px;
-					text-align: right;
-					color: rgb(255, 255, 255);
-				}
-
-			.modal-container .one-two:first-child .one-info {
-				float: left;
-				width: 70%;
-				margin: 0px 15%;
-			}
-
-				.one-info .info {
-					float: left;
-					width: 100%;
-					margin-bottom: 15px;
-				}
-
-					.one-info .info img {
-						float: left;
-						width: 10%;
-						height: 20px;
-						margin-right: 5%;
-					}
-
-					.one-info .info p {
-						float: left;
-						width: 85%;
-						font-family: 'Century Gothic';
-						font-size: 90%;
-						color: rgb(240, 240, 240);
-					}
-
-		.modal-container .one-two:last-child {
-			float: left;
-			width: 55%;
-			height: 100%;
-		}	
-
-			.modal-container .one-two:last-child .one-btn {
-				float: left;
-				width: 95%;
-				padding-right: 5%;
-				margin-top: 10px;
-			}
-
-				.one-btn a {
-					float: right;
-					font-size: 140%;
-					color: rgb(60, 60, 60);
-				}
-
-				.one-login-register {
-					float: left;
-					width: 100%;
-					height: 300px;
-					margin-top: 20px;
-				}
-
-					.one-login-register .login-register-nav {
-						float: left;
-						width: 100%;
-						padding: 5px 0px;
-					}
-
-						.login-register-nav a {
-							float: left;
-							display: inline-block;
-							padding: 0px 20px;
-							font-size: 80%;
-							text-decoration: none;
-							font-weight: bold;
-							color: rgb(30, 30, 30);
-							transition: all 0.2s ease-in-out;
-							cursor: pointer;
-						}
-
-						.login-register-nav a:hover {
-							transform: scale(1.1, 1.1);
-							transition: all 0.2s ease-in-out;
-						}
-
-					.one-login-register .login-register-content {
-						float: left;
-						width: 100%;
-						height: 92%;
-						overflow-y: auto;
-					}
-
-						.login-register-content .content-login {
-							float: left;
-							width: 100%;
-							margin-top: 20px;
-							overflow: auto;
-						}
-
-							.content-login h2 {
-								width: 90%;
-								margin-left: 10%;
-								font-family: 'Gentona';
-								font-size: 170%;
-								color: rgb(90, 90, 90);
-							}
-
-							.content-login .line {
-								float: left;
-								width: 10%;
-								height: 5px;
-								background-color: rgb(4, 80, 140);
-								border-radius: 5px;
-								margin-left: 10%;
-							}
-
-							.content-login .input-container {
-								float: left;
-								width: 90%;
-								margin: 30px 5% 0px 5%;
-							}
-
-								.content-login .input-container .input-form {
-									float: left;
-									width: 70%;
-									position: relative;
-									margin: 0px 0px 20px 15%;
-									color: rgb(30, 30, 30);
-								}
-
-									.content-login .input-container .input-form input {
-										float: left;
-										width: 98%;
-										height: 35px;
-										font-size: 80%;
-										border: none;
-										border-bottom: solid 2px rgb(150, 150, 150);
-										background-color: transparent;
-										padding-left: 2%;
-										color: rgb(70, 70, 70);
-										font-family: 'Century Gothic';
-									}
-
-									.content-login .input-container .input-form input + label {
-										position: absolute;
-										top: 10px;
-										left: 5px;
-										font-size: 80%;
-										color: rgb(150, 150, 150);
-										transition: all 0.2s ease-in-out;
-										font-family: 'Century Gothic';
-									}
-
-									.content-login .input-container .input-form input:focus {
-										outline: none;
-										border-width: 2px;
-										transition: all 0.2s ease-in-out;
-										border-bottom: solid 2px rgb(4, 80, 140);
-									}
-
-									.content-login .input-container .input-form input:focus + label {
-										top: -15px;
-										color: rgb(4, 80, 140);
-										font-size: 80%;
-										font-weight: bold;
-									}
-
-									.content-login .input-container button {
-										float: left;
-										width: 70%;
-										padding: 10px 0px;
-										border: none;
-										border-radius: 2px;
-										background-color: rgb(4, 80, 140);
-										font-family: 'Gentona';
-										font-size: 130%;
-										color: rgb(255, 255, 255);
-										margin: 20px 15% 0px 15%;
-									}
-
-						.login-register-content .content-register {
-							float: left;
-							width: 100%;
-							margin-top: 20px;
-							overflow-y: auto;
-						}
-
-							.content-register h2 {
-								width: 90%;
-								margin-left: 10%;
-								font-family: 'Gentona';
-								font-size: 170%;
-								color: rgb(90, 90, 90);
-							}
-
-							.content-register .line {
-								float: left;
-								width: 10%;
-								height: 5px;
-								background-color: rgb(4, 80, 140);
-								border-radius: 5px;
-								margin-left: 10%;
-							}
-
-							.content-register .input-container {
-								float: left;
-								width: 90%;
-								margin: 30px 5% 0px 5%;
-							}
-
-								.content-register .input-container .input-form {
-									float: left;
-									width: 70%;
-									position: relative;
-									margin: 0px 0px 20px 15%;
-									color: rgb(30, 30, 30);
-								}
-
-									.content-register .input-container .input-form input {
-										float: left;
-										width: 98%;
-										height: 35px;
-										font-size: 80%;
-										border: none;
-										border-bottom: solid 2px rgb(150, 150, 150);
-										background-color: transparent;
-										padding-left: 2%;
-										color: rgb(70, 70, 70);
-										font-family: 'Century Gothic';
-									}
-
-									.content-register .input-container .input-form input + label {
-										position: absolute;
-										top: 10px;
-										left: 5px;
-										font-size: 80%;
-										color: rgb(150, 150, 150);
-										transition: all 0.2s ease-in-out;
-										font-family: 'Century Gothic';
-									}
-
-									.content-register .input-container .input-form input:focus {
-										outline: none;
-										border-width: 2px;
-										transition: all 0.2s ease-in-out;
-										border-bottom: solid 2px rgb(4, 80, 140);
-									}
-
-									.content-register .input-container .input-form input:focus + label {
-										top: -15px;
-										color: rgb(4, 80, 140);
-										font-size: 80%;
-										font-weight: bold;
-									}
-
-									.content-register .input-container button {
-										float: left;
-										width: 70%;
-										padding: 10px 0px;
-										border: none;
-										border-radius: 2px;
-										background-color: rgb(4, 80, 140);
-										font-family: 'Gentona';
-										font-size: 130%;
-										color: rgb(255, 255, 255);
-										margin: 20px 15% 0px 15%;
-									}
-
-/* == LOGIN & REGISTRATION MODAL ENDS HERE == */
+/* == EMAIL VERIFICATION CONTAINER ENDS HERE == */

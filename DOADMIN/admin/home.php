@@ -92,7 +92,7 @@
             <h3>3</h3>
               
              
-              <p>On Time Today</p>
+              <p>RQA</p>
             </div>
             <div class="icon">
               <i class="ion ion-clock"></i>
@@ -108,7 +108,7 @@
              <h3>23</h3>
               
 
-              <p></p>
+              <p>Calibrated</p>
             </div>
             <div class="icon">
               <i class="ion ion-alert-circled"></i>
@@ -167,13 +167,13 @@
   $months = array();
   $ontime = array();
   $late = array();
-  /*
+  
   for( $m = 1; $m <= 12; $m++ ) {
-    $sql = "SELECT * FROM attendance WHERE MONTH(date) = '$m' AND status = 1 $and";
+    $sql = "SELECT * FROM application WHERE MONTH(DATE) = '$m' AND IS_CALIBRATED = 1 $and";
     $oquery = $conn->query($sql);
     array_push($ontime, $oquery->num_rows);
 
-    $sql = "SELECT * FROM attendance WHERE MONTH(date) = '$m' AND status = 0 $and";
+    $sql = "SELECT * FROM application WHERE MONTH(DATE) = '$m' AND IS_CALIBRATED = 0 $and";
     $lquery = $conn->query($sql);
     array_push($late, $lquery->num_rows);
 
@@ -181,7 +181,7 @@
     $month =  date('M', mktime(0, 0, 0, $m, 1));
     array_push($months, $month);
   }
-  */
+  
 
   $months = json_encode($months);
   $late = json_encode($late);
@@ -198,7 +198,7 @@ $(function(){
     labels  : <?php echo $months; ?>,
     datasets: [
       {
-        label               : 'Late',
+        label               : 'CALIBRATED',
         fillColor           : 'rgba(210, 214, 222, 1)',
         strokeColor         : 'rgba(210, 214, 222, 1)',
         pointColor          : 'rgba(210, 214, 222, 1)',
@@ -208,7 +208,7 @@ $(function(){
         data                : <?php echo $late; ?>
       },
       {
-        label               : 'Ontime',
+        label               : 'RQA',
         fillColor           : 'rgba(60,141,188,0.9)',
         strokeColor         : 'rgba(60,141,188,0.8)',
         pointColor          : '#3b8bba',

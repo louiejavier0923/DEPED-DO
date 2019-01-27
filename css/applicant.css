@@ -298,6 +298,7 @@ body {
 			width: 100%;
 			border: solid 2px rgb(30, 30, 30);
 			margin-bottom: 50px;
+			background-color: rgb(255, 255, 255);
 		}
 
 			.pds-form .pds-header {
@@ -3010,10 +3011,12 @@ body {
 								font-size: 80%;
 							}
 
+		/* == CONTACT US DESIGN ENDS HERE == */
+		/* == LOGS DESIGN == */
+
 		.body-container .logs-info {
 			float: left;
 			width: 100%;
-			height: 500px;
 			margin-top: 20px;
 		}
 
@@ -3042,5 +3045,54 @@ body {
 				margin-left: 10%;
 			}
 
-		/* == CONTACT US DESIGN ENDS HERE == */
+				.logs-container .logs {
+					float: left;
+					display: inline-block;
+					width: 100%;
+					padding: 10px 0px;
+					background-color: rgb(250, 250, 250);
+					border-bottom: solid 1px rgb(240, 240, 240);
+				}
+
+					.logs img {
+						float: left;
+						width: 10%;
+						height: 60px;
+						margin-left: 2.5%;
+						margin-right: 2.5%;
+					}
+
+					.logs h1 {
+						float: left;
+						width: 85%;
+						font-size: 170%;
+						font-family: 'Gentona';
+						color: rgb(120, 120, 120);
+						margin-bottom: 10px;
+					}
+
+					.logs #school {
+						font-size: 100%;
+						text-transform: uppercase;
+						color: rgb(4, 80, 140);
+						font-weight: bold;
+					}
+
+					.logs #address {
+						font-size: 85%;
+						margin-left: 15%;
+						color: rgb(140, 140, 140);
+						font-style: italic;
+						margin-bottom: 15px;
+					}
+
+					.logs #dateApply {
+						font-size: 85%;
+						float: right;
+						margin-right: 2.5%;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+		/* == LOGS DESIGN ENDS HERE == */
 /* == APPLICANT`S CONTENT CONTAINER ENDS HERE == */
