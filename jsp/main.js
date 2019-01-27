@@ -19,7 +19,7 @@ function login(action = 'login_function')
                                     break;
 
                                     case 'redirect':
-                                          alert(data.message);
+                                          window.location.href='email-verification.php';
                                     break;
 
                                     default:
