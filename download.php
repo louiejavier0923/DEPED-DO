@@ -23,25 +23,25 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#" id="k"><img src= "img/icon-pdf.ico">Application for Cash Surrender / Termination Value</a>
+								<a href= "files/downloadables/Application-for-Cash-Surrender.pdf"><img src= "img/icon-pdf.ico">Application for Cash Surrender / Termination Value</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Provident Fund (Application Form)</a>
+								<a href= "files/downloadables/appl for provident fund.pdf"><img src= "img/icon-pdf.ico">Provident Fund (Application Form)</a>
 							</section>
 							<section class= "download-file">	
-								<a href= "#"><img src= "img/icon-pdf.ico">Application for Maturiry Benifits</a>
+								<a href= "files/downloadables/application-for-maturity-benefits.pdf"><img src= "img/icon-pdf.ico">Application for Maturiry Benifits</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Application for Retirement Benefits</a>
+								<a href= "files/downloadables/APPLICATION-FOR-RETIREMENT-BENEFITS.pdf"><img src= "img/icon-pdf.ico">Application for Retirement Benefits</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Application for Retirement (Routing Slip)</a>
+								<a href= "files/downloadables/application for retirement.pdf"><img src= "img/icon-pdf.ico">Application for Retirement (Routing Slip)</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Membership Information Sheet (GSIS)</a>
+								<a href= "files/downloadables/"><img src= "img/icon-pdf.ico">Membership Information Sheet (GSIS)</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">GSIS Member`s Request Form</a>
+								<a href= "files/downloadables/"><img src= "img/icon-pdf.ico">GSIS Member`s Request Form</a>
 							</section>
 						</section>
 					</section>
@@ -50,25 +50,25 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">PhilHealth Er2</a>
+								<a href= "files/downloadables/Philhealth-Er2.pdf"><img src= "img/icon-pdf.ico">PhilHealth Er2</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">PhilHealth Claim Form 1</a>
+								<a href= "files/downloadables/PhilHealth_ClaimForm.pdf"><img src= "img/icon-pdf.ico">PhilHealth Claim Form 1</a>
 							</section>
 							<section class= "download-file">	
-								<a href= "#"><img src= "img/icon-pdf.ico">BIR 1902 (Application for Registration)</a>
+								<a href= "files/downloadables/BIR-1902.pdf"><img src= "img/icon-pdf.ico">BIR 1902 (Application for Registration)</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">BIR - 1905 (Application for Registration Information Update)</a>
+								<a href= "files/downloadables/BIR-1905.pdf"><img src= "img/icon-pdf.ico">BIR - 1905 (Application for Registration Information Update)</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">BIR - 2305 (Certification of Update of Excemption and Employer`s and Employee`s Information)</a>
+								<a href= "files/downloadables/BIR-2305.pdf"><img src= "img/icon-pdf.ico">BIR - 2305 (Certification of Update of Excemption and Employer`s and Employee`s Information)</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Cash Disbursements Register</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">Cash Disbursements Register</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Disbursement Voucher (National)</a>
+								<a href= "files/downloadables/Dibursment-Voucher-National.xls"><img src= "img/icon-excel.ico">Disbursement Voucher (National)</a>
 							</section>
 						</section>
 					</section>
@@ -77,37 +77,37 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Application for Leave</a>
+								<a href= "files/downloadables/application for leave.pdf"><img src= "img/icon-pdf.ico">Application for Leave</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Application for Ombudsman Clearance</a>
+								<a href= "files/downloadables/application for ombudsman clearance.pdf"><img src= "img/icon-pdf.ico">Application for Ombudsman Clearance</a>
 							</section>
 							<section class= "download-file">	
-								<a href= "#"><img src= "img/icon-pdf.ico">Appointment of Teachers</a>
+								<a href= "files/downloadables/appointments of teachers.pdf"><img src= "img/icon-pdf.ico">Appointment of Teachers</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Division Clearance (All kinds of Leave)</a>
+								<a href= "files/downloadables/Division Clearance (All Kinds of Leave).pdf"><img src= "img/icon-pdf.ico">Division Clearance (All kinds of Leave)</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Division Office (Retirement)</a>
+								<a href= "files/downloadables/"><img src= "img/icon-pdf.ico">Division Office (Retirement)</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Daily Time Record</a>
+								<a href= "files/downloadables/"><img src= "img/icon-pdf.ico">Daily Time Record</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Medical Certificate</a>
+								<a href= "files/downloadables/medcert.pdf"><img src= "img/icon-pdf.ico">Medical Certificate</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Panunumpa sa Katungkulan</a>
+								<a href= "files/downloadables/"><img src= "img/icon-pdf.ico">Panunumpa sa Katungkulan</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Personal Data Sheet (CS Form No. 212 Revised Personal Data Sheet 2017)</a>
+								<a href= "files/downloadables/pdsrev2017 (1).xlsx"><img src= "img/icon-excel.ico">Personal Data Sheet (CS Form No. 212 Revised Personal Data Sheet 2017)</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Position Description Form</a>
+								<a href= "files/downloadables/position description form.pdf"><img src= "img/icon-pdf.ico">Position Description Form</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Statement of Assets and Liabilities</a>
+								<a href= "files/downloadables/"><img src= "img/icon-pdf.ico">Statement of Assets and Liabilities</a>
 							</section>
 						</section>
 					</section>
@@ -116,13 +116,13 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Obligation Request Status (Local)</a>
+								<a href= "files/downloadables/ObligationRequestStatus.xls"><img src= "img/icon-excel.ico">Obligation Request Status (Local)</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Obligation Request Status (Nat`l)</a>
+								<a href= "files/downloadables/ObligationRequestStatus.xls"><img src= "img/icon-excel.ico">Obligation Request Status (Nat`l)</a>
 							</section>
 							<section class= "download-file">	
-								<a href= "#"><img src= "img/icon-excel.ico">Budget Workshop Forms</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">Budget Workshop Forms</a>
 							</section>
 						</section>
 					</section>
@@ -131,10 +131,10 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Certificate of No Pending Administrative Case</a>
+								<a href= "files/downloadables/CERTIFICATE OF NO PENDING ADMIN CASE.pdf"><img src= "img/icon-pdf.ico">Certificate of No Pending Administrative Case</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Minutes of Hearing</a>
+								<a href= "files/downloadables/minutes of hearing.pdf"><img src= "img/icon-pdf.ico">Minutes of Hearing</a>
 							</section>
 						</section>
 					</section>
@@ -143,7 +143,7 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Monthly Collection and Debits</a>
+								<a href= "files/downloadables/monthtly collections and deposits.pdf"><img src= "img/icon-pdf.ico">Monthly Collection and Debits</a>
 							</section>
 						</section>
 					</section>
@@ -152,7 +152,7 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Annex A & B, Radar 1 & 2 DRRMO</a>
+								<a href= "files/downloadables/Annex A &B Radar 1 & 2.pdf"><img src= "img/icon-pdf.ico">Annex A & B, Radar 1 & 2 DRRMO</a>
 							</section>
 						</section>
 					</section>
@@ -161,10 +161,10 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Year End Form SY 2014 - 15 for Elementary</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">Year End Form SY 2014 - 15 for Elementary</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Year End Form SY 2014 - 15 for High School</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">Year End Form SY 2014 - 15 for High School</a>
 							</section>
 						</section>
 					</section>
@@ -173,7 +173,7 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">School Form 5 (SF 5)</a>
+								<a href= ""><img src= "img/icon-excel.ico">School Form 5 (SF 5)</a>
 							</section>
 						</section>
 					</section>
@@ -182,19 +182,19 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">2015 LAPG Answer Sheet Grade 3</a>
+								<a href= ""><img src= "img/icon-pdf.ico">2015 LAPG Answer Sheet Grade 3</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-ppt.ico">NAT Test Administrator Guidelines</a>
+								<a href= ""><img src= "img/icon-ppt.ico">NAT Test Administrator Guidelines</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">LAFG Handbook</a>
+								<a href= ""><img src= "img/icon-pdf.ico">LAFG Handbook</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Examiner`s Handbook Year 4</a>
+								<a href= ""><img src= "img/icon-pdf.ico">Examiner`s Handbook Year 4</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">Examiner`s Handbook Grade 6</a>
+								<a href= ""><img src= "img/icon-pdf.ico">Examiner`s Handbook Grade 6</a>
 							</section>
 						</section>
 					</section>
@@ -203,10 +203,10 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Accomodation Form 1</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">Accomodation Form 1</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Accomodation Form 1 (Supplemental for SHS)</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">Accomodation Form 1 (Supplemental for SHS)</a>
 							</section>
 						</section>
 					</section>
@@ -215,7 +215,7 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Division Annual Report</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">Division Annual Report</a>
 							</section>
 						</section>
 					</section>
@@ -224,19 +224,19 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">RSHS</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">RSHS</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">SPED</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">SPED</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">SSES</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">SSES</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">STE</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">STE</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">TechVoc - DO</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">TechVoc - DO</a>
 							</section>
 						</section>
 					</section>
@@ -245,13 +245,13 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">SY 2014 - 15 BOSY GESP</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">SY 2014 - 15 BOSY GESP</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">SY 2014 - 15 BOSY GSSP</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">SY 2014 - 15 BOSY GSSP</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">SY 2014 - 15 BOSY SUCs</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">SY 2014 - 15 BOSY SUCs</a>
 							</section>
 						</section>
 					</section>
@@ -260,25 +260,25 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-ppt.ico">2015 NCAE Overview</a>
+								<a href= "files/downloadables/"><img src= "img/icon-ppt.ico">2015 NCAE Overview</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-ppt.ico">2015 NCAE Guidelines</a>
+								<a href= "files/downloadables/"><img src= "img/icon-ppt.ico">2015 NCAE Guidelines</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">2015 NCAE Examiner`s Handbook - REVISED 7, 15, 15</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">2015 NCAE Examiner`s Handbook - REVISED 7, 15, 15</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">NCAE AS 2015</a>
+								<a href= "files/downloadables/"><img src= "img/icon-pdf.ico">NCAE AS 2015</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">NCAE COR 2015</a>
+								<a href= "files/downloadables/"><img src= "img/icon-pdf.ico">NCAE COR 2015</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-pdf.ico">NCAE HEADER 2015</a>
+								<a href= "files/downloadables/"><img src= "img/icon-pdf.ico">NCAE HEADER 2015</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Private Schs Directory & NCAE Testing Center</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">Private Schs Directory & NCAE Testing Center</a>
 							</section>
 						</section>
 					</section>
@@ -287,7 +287,7 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">2014 Private School Masterlist of Learners</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">2014 Private School Masterlist of Learners</a>
 							</section>
 						</section>
 					</section>
@@ -296,10 +296,10 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Accomodation Form 1</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">Accomodation Form 1</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Accomodation Form 1 (Supplemental for SHS)</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">Accomodation Form 1 (Supplemental for SHS)</a>
 							</section>
 						</section>
 					</section>
@@ -308,19 +308,19 @@
 						<div class= "line"></div>
 						<section class= "form-info">
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">2014 Private School Profile End of SY</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">2014 Private School Profile End of SY</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">2013 - 2014 Year End Form</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">2013 - 2014 Year End Form</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">Enrollment Report as June - BOSY 2014 - 2015</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">Enrollment Report as June - BOSY 2014 - 2015</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">NCAE & NAT Forms</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">NCAE & NAT Forms</a>
 							</section>
 							<section class= "download-file">
-								<a href= "#"><img src= "img/icon-excel.ico">SY 2014 - 15 Private School Profile</a>
+								<a href= "files/downloadables/"><img src= "img/icon-excel.ico">SY 2014 - 15 Private School Profile</a>
 							</section>
 						</section>
 					</section>
