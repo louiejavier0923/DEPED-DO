@@ -530,10 +530,12 @@
 
 							.vacant #address {
 								float: left;
-								width: 75%;
+								width: 70%;
 								font-size: 70%;
 								font-style: italic;
 								line-height: 10px;
+								margin-left: 25%;
+								margin-top: 5px;
 							}
 
 							.vacant #salary {
