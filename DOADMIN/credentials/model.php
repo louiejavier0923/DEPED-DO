@@ -14,15 +14,15 @@
         case 'applicants_list':
           # code...
            $output='';
-           $cnt='';
-                   $sql = "SELECT * from view_rank";
+           
+                   $sql = "SELECT * FROM view_rank";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
-                     $cnt+=1;
+                     
                                 
                      
                       $output.="
-                                       <option data-uid=".$cnt."  value=".$row['UID'].">".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>
+                                       <option  value=".$row['UID'].">".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>
                                   
                                
                         
@@ -275,10 +275,10 @@ echo json_encode($data);
                                          
                             
                                            if($mail->Send()) {
-                                                   $output="Successfully send";
+                                                   $output="success";
                                           }
                                           else{
-                                                  $output='successful inserted';
+                                                  $output='Registration failed';
                                           }
                                   
                                     
@@ -309,12 +309,16 @@ echo json_encode($data);
     break;
     /*Add Schools */
     
-
+        
 
 
 
     case 'set_appointment':
+              $uid_array = $_POST['uid'];
+              $ids_array = $_POST['sids'];
              foreach($_POST['uid'] as $value){
+                 
+                    /*
                      $sql="SELECT * from user where UID='".$value."';";
            
                      $result=mysqli_query($conn,$sql);
@@ -361,16 +365,29 @@ echo json_encode($data);
                                             }
                                }
 
-            
+                     */
                                                                        
     
             }
 
-            foreach($_POST['sids'] as $PIDS) {
-                        $sql="UPDATE publish_vacancy SET APP_ISSET = '1' WHERE UID='".$PIDS."';";
+           for ($i = 0; $i < count($uid_array); $i++) {
+                
+                    # code...
+
+        $uid = mysql_real_escape_string($uid_array[$i]);
+        $ids = mysql_real_escape_string($ids_array[$i]);
+                  
+                        $sql="UPDATE publish_vacancy SET APP_ISSET = '1' WHERE UID='".$ids."';";
                         $result=mysqli_query($conn,$sql);
-                      
-            }
+                        
+                       
+                        $sql="INSERT into appointment(UID,VID,DATE,EXPIRATION_DATE)VALUES('".$uid."','".$uid."',CURRENT_DATE(),DATE_ADD(CURRENT_DATE(),INTERVAL 15 DAY));";
+                        $result=mysqli_query($conn,$sql);
+                        
+
+                        
+            
+          }
 
 
               

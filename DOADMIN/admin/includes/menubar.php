@@ -44,9 +44,8 @@
         </li>
         <li><a href="publish_vacancy.php"><i class="fa fa-suitcase"></i>Publish Vacancy</a></li>
         <li><a href="schools.php"><i class="fa fa-suitcase"></i>Schools</a></li>
-        <li><a href="ranking.php"><i class="fa fa-suitcase"></i>Ranking</a></li>
         <li><a href="placement.php"><i class="fa fa-suitcase"></i>Placement</a></li>
-          <li><a href="appointments.php"><i class="fa fa-suitcase"></i>Appointment</a></li>
+        <li><a href="appointments.php"><i class="fa fa-suitcase"></i>Appointment</a></li>
            <li class="treeview">
           <a href="#">
             <i class="fa fa-file-text"></i>
@@ -64,8 +63,9 @@
           </ul>
         </li>
         <li class="header">PRINTABLES</li>
-        <li><a href="payroll.php"><i class="fa fa-files-o"></i> <span>Ranking</span></a></li>
-        <li><a href="schedule_employee.php"><i class="fa fa-clock-o"></i> <span></span></a></li>
+        <li><a href="ranking.php"><i class="fa fa-files-o"></i> <span>Ranking</span></a></li>
+        <li><a href="rqa.php"><i class="fa fa-suitcase"></i>RQA LIST</a></li>
+
       </ul>
     </section>
     <!-- /.sidebar -->
