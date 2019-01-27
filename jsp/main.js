@@ -360,6 +360,21 @@ $(document).ready(function() {
           messageModal.style.display= "none";
         })
 
+        .on('click','#logoutBtn',function(){
+          var confirmation = confirm('Are you sure you want to log out?');
+          if (confirmation) {
+            $.ajax({
+              type:'POST',
+              url:'../include/applicant-logout.php',
+              data:''
+            }).done(function(b){
+              if(b){
+                window.location.href = "../index.php";
+              }
+            })
+          }
+        })
+
     $('#submit_login_btn').click(function() {			
 				login();
     });
