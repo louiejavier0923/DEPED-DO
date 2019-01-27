@@ -46,6 +46,7 @@
                   <th>TITLE</th>
                   <th>DESCRIPTION</th>
                   <th>NAME OF INCUMBENT</th>
+                  <th>PLACE ASSIGNMENT</th>
                   <th>PUBLICATION DATE</th>
                   <th>EXPIRATION DATE</th>
                   <th>STATUS</th>
@@ -65,6 +66,7 @@
                           <td>".$row['TITLE']."</td>
                           <td>".$row['DESCRIPTION']."</td>
                           <td>".$row['NOI']."</td>
+                          <td>".$row['PLACE_ASSIGNMENT']."</td>
                           <td>".$row['PUBLICATION_DATE']."</td>
                           <td>".$row['PUBLICATION_DATE_UNTIL']."</td>
                           <td>".$row['STATUS']."</td>

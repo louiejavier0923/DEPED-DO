@@ -44,7 +44,7 @@
 
                     <label for="status"  class="col-sm-3 control-label">Place assignment</label>
                     <div class="col-sm-9">
-                      <select class='form-control' id='place_assign' name='place_assign'>
+                      <select class='form-control' id='place' name='place_assign'>
                           <?php
                        $sql = "SELECT SID,SCHOOL_NAME FROM schools WHERE isActive = '1'";
                     
