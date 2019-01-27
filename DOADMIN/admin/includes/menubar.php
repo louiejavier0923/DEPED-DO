@@ -25,8 +25,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="users.php"><i class="fa fa-circle-o"></i>User</a></li>
-            <li><a href="overtime.php"><i class="fa fa-circle-o"></i>Personnel</a></li>
+            <li><a href="users.php"><i class="fa fa-user"></i>User</a></li>
+            <li><a href="personnel.php"><i class="fa fa-user"></i>Personnel</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -38,13 +38,13 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="news.php"><i class="fa fa-circle-o"></i>News</a></li>
-            <li><a href="announcement.php"><i class="fa fa-circle-o"></i>Announcements</a></li>
+            <li><a href="news.php"><i class="fa fa-file"></i>News</a></li>
+            <li><a href="announcement.php"><i class="fa fa-bullhorn"></i>Announcements</a></li>
           </ul>
         </li>
-        <li><a href="publish_vacancy.php"><i class="fa fa-suitcase"></i>Publish Vacancy</a></li>
-        <li><a href="schools.php"><i class="fa fa-suitcase"></i>Schools</a></li>
-        <li><a href="placement.php"><i class="fa fa-suitcase"></i>Placement</a></li>
+        <li><a href="publish_vacancy.php"><i class="fa fa-search"></i>Publish Vacancy</a></li>
+        <li><a href="schools.php"><i class="fa fa-building"></i>Schools</a></li>
+        <li><a href="placement.php"><i class="fa fa-building"></i>Placement</a></li>
         <li><a href="appointments.php"><i class="fa fa-suitcase"></i>Appointment</a></li>
            <li class="treeview">
           <a href="#">
@@ -55,11 +55,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="archive_users.php"><i class="fa fa-circle-o"></i>User</a></li>
-            <li><a href="archive_schools.php"><i class="fa fa-circle-o"></i>Schools</a></li>
-            <li><a href="archive_vacancy.php"><i class="fa fa-circle-o"></i>Vacancy</a></li>
-            <li><a href="archive_news.php"><i class="fa fa-circle-o"></i>News</a></li>
-            <li><a href="archive_announcement.php"><i class="fa fa-circle-o"></i>Announcements</a></li>
+            <li><a href="archive_announcement.php"><i class="fa fa-bullhorn"></i>Announcements</a></li>
+            <li><a href="archive_news.php"><i class="fa fa-file"></i>News</a></li>
+            <li><a href="archive_personnel.php"><i class="fa fa-user"></i>Personnel</a></li>
+            <li><a href="archive_schools.php"><i class="fa fa-building"></i>Schools</a></li>
+            <li><a href="archive_user.php"><i class="fa fa-user"></i>User</a></li>
+            <li><a href="archive_vacancy.php"><i class="fa fa-search"></i>Vacancy</a></li>
           </ul>
         </li>
         <li class="header">PRINTABLES</li>

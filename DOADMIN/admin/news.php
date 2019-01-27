@@ -67,7 +67,7 @@
 
                           <td>
                             <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['UID']."'><i class='fa fa-edit'></i> Edit</button>
-                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['UID']."'><i class='fa fa-trash'></i> Archive</button>
+                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['UID']."'><i class='fa fa-archive'></i> Archive</button>
                           </td>
                         </tr>
                       ";
@@ -173,7 +173,11 @@ $(function(){
     add_news();
  
   });
-
+ $('#close').click(function(e){
+  $("#title").val("");
+                   $("#description").val("");
+                   $("#date").val("");
+  });
  });
 
 function add_news(action='add_news'){
@@ -194,7 +198,7 @@ function add_news(action='add_news'){
                    $('#addnew').modal('hide');
                    $("#title").val("");
                    $("#description").val("");
-                   $("#news_date").val("");
+                   $("#date").val("");
           $("#reload").load(location.href + " #reload>*", "");
    
 

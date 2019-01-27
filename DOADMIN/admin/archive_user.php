@@ -11,10 +11,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        User
+        Archive User
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Archives</a></li>
         <li class="active">Users</li>
       </ol>
     </section>
@@ -61,9 +62,6 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
-            <div class="box-header with-border">
-              <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> New</a>
-            </div>
             <div class="box-body" id="reload">
               <table id="example1" class="table table-bordered">
                 <thead>
@@ -103,8 +101,7 @@
                           <td>".$status."</td>
                           <td>".$online."</td>
                           <td>
-                            <button class='btn btn-success btn-sm btn-flat edit' data-id='".$row['UID']."'><i class='fa fa-edit'></i> Edit</button>
-                            <button class='btn btn-danger btn-sm btn-flat delete' data-id='".$row['UID']."'><i class='fa fa-archive'></i> Archive</button>
+                            <button class='btn btn-success btn-sm btn-flat retrieve' data-id='".$row['UID']."'><i class='fa fa-check'></i> Retrieve</button>
                           </td>
                         </tr>
                       ";
@@ -121,130 +118,42 @@
   </div>
     
   <?php include 'includes/footer.php'; ?>
-  <?php include 'includes/users-modal.php'; ?>
+  <?php include 'includes/archive_user-modal.php'; ?>
 </div>
 <?php include 'includes/scripts.php'; ?>
 <script>
 
 $(function(){
-	/*EDIT BUTTON*/
-	$(document).on('click', '.edit', function(e) {
-		$('#edit').modal('show');
-    var id = $(this).attr("data-id");
-    $("#id").val(id);
-     $.ajax({
-    type: 'POST',
-    url: '../credentials/model.php',
-    data: {action:'get_user_id',id:id},
-    dataType: 'json',
-    success: function(response){ 
-       $('#email_edit').val(response.email);
-       $('#password_edit').val(response.p_edit);
-        $('#repassword_edit').val(response.cp_edit);
-        
-    }
-  });
-	});
-
-
-  $('#update-user').click(function(e){
+	/*RETRIEVE BUTTON*/
+  $('.retrieve').click(function(e){
     e.preventDefault();
-		var id = $("#id").val();
-		var email =$('#email_edit').val(); 
-		var pass =$('#password_edit').val(); 
-		var repass =$('#repassword_edit').val(); 
-		
-		if(pass===repass){
-			$.ajax({
-				type: 'POST',
-				url: '../credentials/model.php',
-				data: {action:'edit_user',email:email,pass:pass,id:id},
-				dataType: 'json',
-				success: function(response){
-					if(response.confirm==='success'){
-            $('.alert-success').css("display","block").html(response.message);  
-					$('#edit').modal('hide');
-					}else{
-						alert('e');
-					}
-					
-				}
-			});
-		} else{
-			alert('password doesnt match');
-		}
-		
-	});
-
-  $("#pds_btn").click(function(e){
-    $("#view_pds").modal('show');
-
-
-  });
-
-  $('.delete').click(function(e){
-    e.preventDefault();
-    $('#delete').modal('show');
+    $('#retrieve').modal('show');
     var id = $(this).attr("data-id");
-    $("#d_id").val(id);
+    $("#r_id").val(id);
 
   });
 
-     $('#archive').click(function(e){
+     $('#retrieve_user').click(function(e){
       e.preventDefault();
-    var d_id = $("#d_id").val();
+    var r_id = $("#r_id").val();
      $.ajax({
     type: 'POST',
     url: '../credentials/model.php',
-    data: {action:'archive_user',d_id:d_id},
+    data: {action:'retrieve_user',r_id:r_id},
     dataType: 'json',
     success: function(response){
         alert(response.confirm);
      $('.alert-success').css("display","block").html(response.confirm);
-     $('#delete').modal('hide');
+     $('#retrieve').modal('hide');
      $("#reload").load(location.href + " #reload>*", "");
     }
   });        
-
-
  });
 
-
-
-   $('#submit-user').click(function(e){
-    e.preventDefault();
-          add_user();
-  });
-
-   $('#close').click(function(e){
-              $("#email").val("");
-                   $("#my_pass").val("");
-                   $("#cpassword").val("");
-  
-  });
 });
 
 
-function add_user(action='add_user'){
-        var email = $('#email').val();
-         var password = $('#my_pass').val();
-          var cpassword = $('#cpassword').val();
 
-  $.ajax({
-    type: 'POST',
-    url: '../credentials/model.php',
-    data: {action:action,email:email,password:password,cpassword:cpassword},
-    dataType: 'json',
-    success: function(response){
-        $('.alert-success').css("display","block").html(response.message);
-                  $('#addnew').modal('hide');
-                   $("#email").val("");
-                   $("#my_pass").val("");
-                   $("#cpassword").val("");
-            $("#reload").load(location.href + " #reload>*", "");
-    }
-  });
-}
 </script>
 </body>
 </html>

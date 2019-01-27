@@ -15,9 +15,9 @@
 	            	</div>
           	</div>
           	<div class="modal-footer">
-              <input type ="text" id="id">
+              <input type ="hidden" id="id">
             	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-            	<button type="submit" class="btn btn-danger btn-flat" name="delete" id="retrieve_announcement"><i class="fa fa-trash"></i> Archive</button>
+            	<button type="submit" class="btn btn-success btn-flat" name="delete" id="retrieve_announcement"><i class="fa fa-check"></i> Archive</button>
             	</div>
           	</div>
         </div>

@@ -52,7 +52,7 @@
                                }
 
                            else{
-                                    $sql=$conn->query("INSERT INTO user(UID,EMAIL,PWD, STATUS, IS_ONLINE)VALUES('TCH-0006','".$email."','".$password."','1','0')");
+                                    $sql=$conn->query("INSERT INTO user(UID,EMAIL,PWD, STATUS, IS_ONLINE)VALUES('TCH-0002','".$email."','".$password."','0','0')");
                                       
                                     $output='successful inserted';
                                     
@@ -67,6 +67,26 @@
 
               echo json_encode($data);
             break;
+                 case 'add_personnel':
+                      $output='';
+                      $lname = $_POST['lname'];
+                      $fname = $_POST['fname'];
+                      $middlename = $_POST['middlename'];
+                      $email = $_POST['email'];
+                      $pass = $_POST['pass'];
+                      $cpass = $_POST['cpass'];
+
+                $sql=$conn->query("INSERT INTO  evaluators_info_tbl(NO,LASTNAME,FIRSTNAME,MIDDLENAME,EMAIL,PASSWORD,ISACTIVE)
+                  VALUES('','".$lname."','".$fname."','".$middlename."','".$email."','".$pass."', '1')");
+                             $output='Successful inserted';
+                    $data = array(    
+                       'message' => $output
+            
+                       );
+
+              echo json_encode($data);
+            break;
+     
    	       case 'add_vacancy':
    	       	      $output='';
    	       	      $date=date("Y-m-d");
@@ -93,8 +113,9 @@
  	 /*SELECTION*/
    	       	case 'get_user_id':
                    $output='';
-                   $uid = $_POST['id'];
-                    $sql="SELECT * from user where UID='".$uid."';";
+                   $edit_status = '';
+                   $id = $_POST['id'];
+                    $sql="SELECT * from user where UID='".$id."';";
                          $result=mysqli_query($conn,$sql);
                           if($result->num_rows > 0) 
                                {
@@ -102,16 +123,18 @@
                                                   $email=$row["EMAIL"];
                                                   $password=$row["PWD"];
                                                   $status=$row["STATUS"];
-                                                 switch ($status) {
-                                                 	case '0':
-                                                 		      $status='NOT ACTIVATE';
-                                                 		break;
-                                                 	
-                                                 	default:
-                                                 	           $status='ACTIVATE';
-                                                 		break;
-                                                 }
+                                                  if ($status == '1')
+                                                  {
+                                                    $edit_status = "ACTIVATE";
+
+                                                  }
+                                                  else if ($status == '0')
+                                                  {
+                                                    $edit_status = "NOT ACTIVATE";
+                                                  }
+
                                       }
+
                                }
 
                            else{
@@ -122,19 +145,65 @@
                                       
                                }
 
+    $conn->close();
    	       		   $data = array(	 	
                        'message' => $output,
                        'email'=>$email,
-                       'password'=>$password,
-                       'status'=>$status
+                       'p_edit'=>$password,
+                       'cp_edit'=>$password,
+                       'status'=>$edit_status
             
          	             );
 
-              echo json_encode($date);
+              echo json_encode($data);
    	       	break;
+
+                  case 'get_personnel_id':
+                   $output='';
+                   $id = $_POST['id'];
+                    $sql="SELECT * from evaluators_info_tbl where NO='".$id."';";
+                         $result=mysqli_query($conn,$sql);
+                          if($result->num_rows > 0) 
+                               {
+                                      while($row = $result->fetch_assoc()) {
+                                                  $lastname=$row['LASTNAME'];
+                                                  $firstname=$row['FIRSTNAME'];
+                                                  $middlename=$row['MIDDLENAME'];
+                                                  $email=$row['EMAIL'];
+                                                  $password=$row['PASSWORD'];
+                                                  
+                                                 
+
+                                      }
+
+                               }
+
+                           else{
+                                   
+                                      
+                                    $output='no available data';
+                                    
+                                      
+                               }
+
+                       $data = array(   
+                       'message' => $output,
+                        'ln'=>$lastname,
+                        'fn'=>$firstname,
+                        'mn'=>$middlename,
+                         'email'=>$email,
+                        'pass'=>$password,
+                        'cpass'=>$password
+            
+                       );
+
+              echo json_encode($data);
+            break;
+
+
    	       	case 'get_vacancy_id':
-                       $puid = $_POST['id'];
-                              $sql="SELECT * from publish_vacancy where UID='".$puid."';";
+                       $id = $_POST['id'];
+                        $sql="SELECT * from publish_vacancy where UID='".$id."';";
                          $result=mysqli_query($conn,$sql);
                           if($result->num_rows > 0) 
                                {
@@ -404,7 +473,7 @@ echo json_encode($data);
                       $school_address = $_POST['school_address'];
                       
                       $sql=$conn->query("INSERT INTO schools(NO,SID,SCHOOL_NAME,SCHOOL_ADDRESS,isActive)VALUES('','SID-0004','".$school_name."','".$school_address."' , '1')");
-                             $output='Successful inserted';
+                             $output='Successfully inserted';
 
               
 
@@ -505,6 +574,55 @@ echo json_encode($data);
   echo json_encode($data);
                 break;
 
+
+                case 'edit_user':
+                  $output ='';
+                  $message ='Edit success!';
+                  $id = $_POST['id'];
+                  $email = $_POST['email'];
+                  $pass = $_POST['pass'];
+                       $sql="UPDATE user SET EMAIL = '".$email. "', PWD ='".$pass."'WHERE UID='".$id."';";
+                       $result=mysqli_query($conn,$sql);
+                       $output = 'success';
+              $data = array(    
+                       'confirm' => $output,
+                       'message' => $message
+                                       
+            
+                    );
+
+
+
+  echo json_encode($data);
+                break;
+
+                    case 'edit_personnel':
+                  $output ='';
+                  $message ='Edit success!';
+                  $id = $_POST['id'];
+                  $email = $_POST['email'];
+                  $pass = $_POST['pass'];
+                  $fn = $_POST['fn'];
+                  $ln = $_POST['ln'];
+                  $mn = $_POST['mn'];
+
+          $sql="UPDATE evaluators_info_tbl SET EMAIL = '".$email. "', PASSWORD ='".$pass."', LASTNAME = '".$ln."', FIRSTNAME ='".$fn."',
+          MIDDLENAME = '".$mn."' WHERE NO='".$id."';";
+                       $result=mysqli_query($conn,$sql);
+                       $output = 'success';
+              $data = array(    
+                       'confirm' => $output,
+                       'message' => $message
+                                       
+            
+                    );
+
+
+
+  echo json_encode($data);
+                break;
+
+
                    case 'archive_schools':
                   $d_id = $_POST['d_id'];
                        $sql="UPDATE schools SET isActive = '0' WHERE SID='".$d_id."';";
@@ -512,13 +630,75 @@ echo json_encode($data);
 
 
                         $data = array(    
-                       'confirm' =>"Deleting Success!",
+                       'confirm' =>"Archiving Success!",
                                        
             
                     );
 
   echo json_encode($data);
                 break;
+
+
+                    case 'archive_user':
+                  $d_id = $_POST['d_id'];
+                       $sql="UPDATE user SET STATUS = '0' WHERE UID='".$d_id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Archiving Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+
+                       case 'archive_personnel':
+                  $id = $_POST['id'];
+                       $sql="UPDATE evaluators_info_tbl SET ISACTIVE = '0' WHERE NO='".$id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Archiving Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+
+                    case 'retrieve_user':
+                  $r_id = $_POST['r_id'];
+                       $sql="UPDATE user SET STATUS = '1' WHERE UID='".$r_id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Retrieving Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+
+                    case 'retrieve_personnel':
+                  $id = $_POST['id'];
+                       $sql="UPDATE evaluators_info_tbl SET ISACTIVE = '1' WHERE NO='".$id."';";
+                       $result=mysqli_query($conn,$sql);
+
+
+                        $data = array(    
+                       'confirm' =>"Retrieving Success!",
+                                       
+            
+                    );
+
+  echo json_encode($data);
+                break;
+
 
                   case 'retrieve_schools':
                   $output ='';
@@ -573,7 +753,7 @@ echo json_encode($data);
 
 
                         $data = array(    
-                       'message' =>"Deleting Success!",
+                       'message' =>"Archiving Success!",
                                        
             
                     );
@@ -583,11 +763,11 @@ echo json_encode($data);
 
                   case 'add_news':
                   $output='';
-                $date=date("Y-m-d");
-                $string_date = (string)$date;
+                   $date=date("Y-m-d");
+                    $string_date = (string)$date;
                   $title = $_POST['title'];
-                $description = $_POST['description'];
-                $news_date = $_POST['news_date'];
+                  $description = $_POST['description'];
+                    $news_date = $_POST['news_date'];
                     
                       $sql=$conn->query("INSERT INTO news(NO,UID,TITLE,DESCRIPTION,DATE_PUB,isActive)VALUES('','UID-0004','".$title."','".$description."' , '".$news_date."', '1')");
                              $output='Successful inserted';
@@ -610,7 +790,7 @@ echo json_encode($data);
 
 
                         $data = array(    
-                       'message' =>"Deleting Success!",
+                       'message' =>"Retrieving Success!",
                                        
             
                     );
@@ -683,7 +863,7 @@ echo json_encode($data);
 
 
                         $data = array(    
-                       'confirm' =>"Deleting Success!",
+                       'confirm' =>"Archiving Success!",
                                        
             
                     );
@@ -697,7 +877,7 @@ echo json_encode($data);
 
 
                         $data = array(    
-                       'confirm' =>"Deleting Success!",
+                       'confirm' =>"Retrieving Success!",
                                        
             
                     );
@@ -778,6 +958,14 @@ echo json_encode($data);
                        $sql="UPDATE announcement SET TITLE = '".$title."', DESCRIPTION = '".$desc."', DATE_PUB = '".$date_pub."'  WHERE UID ='".$e_id."';";
                        $result=mysqli_query($conn,$sql);
 
+                             $data = array(    
+                       'confirm' =>"Editing Success!",
+                                       
+            
+                    );
+
+                  echo json_encode($data);
+                break;
 
                  case 'archive_announcement':
                   $d_id = $_POST['d_id'];
@@ -786,7 +974,7 @@ echo json_encode($data);
 
 
                         $data = array(    
-                       'confirm' =>"Deleting Success!",
+                       'confirm' =>"Archiving Success!",
                                        
             
                     );
@@ -801,7 +989,7 @@ echo json_encode($data);
                       $result=mysqli_query($conn,$sql);
                      
                         $data = array(    
-                       'confirm' =>"Retrieve Success!",
+                       'confirm' =>"Retrieving Success!",
                                        
             
                     );
