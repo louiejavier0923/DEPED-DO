@@ -52,7 +52,7 @@
                       while($row = $query->fetch_assoc()){
                         echo 
                          "
-                              <option value = ".$row['SID']"> ".$row['SCHOOL_NAME']."</option>
+                              <option value = ".$row['SID']."> ".$row['SCHOOL_NAME']."</option>
                           
                   
                 ";
