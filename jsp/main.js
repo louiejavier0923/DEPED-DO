@@ -234,6 +234,7 @@ $(document).ready(function() {
     var responsiveNav = document.getElementById('header-nav-responsive');
     var chooseFileModal = document.getElementById('attach-categ');
     var pdsModal = document.getElementById('pds-container');
+    var messageModal = document.getElementById('message-modal');
 
     $('body')
       .on('click', '.modal-tab', function() {
@@ -277,6 +278,10 @@ $(document).ready(function() {
 
             else if (e.target == pdsModal) {
               pdsModal.style.display= "none";
+            }
+
+            else if(e.target == messageModal) {
+              messageModal.style.display= "none";
             }
         })
 
@@ -345,6 +350,14 @@ $(document).ready(function() {
 
         .on('click', '#closePdsBtn', function() {
           pdsModal.style.display= "none";
+        })
+
+        .on('click', '#messageBtn', function() {
+          messageModal.style.display= "block";
+        })
+
+        .on('click', '#exitMessageBtn', function() {
+          messageModal.style.display= "none";
         })
 
     $('#submit_login_btn').click(function() {			
