@@ -601,7 +601,7 @@ echo json_encode($data);
                                    
                                       
                                     $output='no available data';
-                                    
+                                    s0
                                       
                                }
 

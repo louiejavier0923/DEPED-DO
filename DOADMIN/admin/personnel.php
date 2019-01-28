@@ -92,6 +92,64 @@
 <script>
 
 $(function(){
+  /*Validations of Inputs*/
+   $( "#middlename" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57)
+                     {
+                    alert("Alphabet letters only!");
+                    
+                        e.preventDefault();
+                    }
+                });
+
+   $( "#fname" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57)
+                     {
+                    alert("Alphabet letters only!");
+                    
+                        e.preventDefault();
+                    }
+                });
+
+   $( "#lname" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57)
+                     {
+                    alert("Alphabet letters only!");
+                    
+                        e.preventDefault();
+                    }
+                });
+
+   $( "#edit_fn" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57)
+                     {
+                    alert("Alphabet letters only!");
+                    
+                        e.preventDefault();
+                    }
+                });
+   $( "#edit_ln" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57)
+                     {
+                    alert("Alphabet letters only!");
+                    
+                        e.preventDefault();
+                    }
+                });
+   $( "#edit_mn").keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57)
+                     {
+                    alert("Alphabet letters only!");
+                    
+                        e.preventDefault();
+                    }
+                });
   /*EDIT BUTTON*/
   $(document).on('click', '.edit', function(e) {
     $('#edit').modal('show');
@@ -179,8 +237,19 @@ $(function(){
 
    $('#submit_personnel').click(function(e){
     e.preventDefault();
-          add_personnel();
-
+    var middlename = $("#middlename").val();
+        var email = $('#email').val();
+         var pass = $('#pass').val();
+          var cpass = $('#cpass').val();
+          var lname = $("#lname").val();
+          var fname = $("#fname").val();
+       
+    if(fname == "" || middlename == "" || email == "" || pass == "" || cpass == "" || lname == ""){
+        alert("Fill up all forms!");
+      }
+      else{    
+        add_personnel();
+}
   });
 
     $('#close').click(function(e){

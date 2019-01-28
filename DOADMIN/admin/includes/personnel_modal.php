@@ -39,17 +39,17 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="title" class="col-sm-3 control-label">Password</label>
+                    <label for="title" class="col-sm-3 control-label">Password(max 10 char)</label>
 
                     <div class="col-sm-9">
-                      <input type="password" class="form-control" id="pass" name="pass" required>
+                      <input type="password" class="form-control" maxlength="10 "id="pass" name="pass" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="title" class="col-sm-3 control-label">Confirm Password</label>
 
                     <div class="col-sm-9">
-                      <input type="password" class="form-control" id="cpass" name="cpass" required>
+                      <input type="password" class="form-control" maxlength="10 " id="cpass" name="cpass" required>
                     </div>
                 </div>
                  
@@ -110,7 +110,7 @@
                     <label for="title" class="col-sm-3 control-label">Password</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="edit_pass" name="edit_pass" required>
+                      <input type="password" class="form-control" id="edit_pass" name="edit_pass" maxlength="10 " required>
                     </div>
                 </div>
                   
@@ -118,7 +118,7 @@
                     <label for="title" class="col-sm-3 control-label">Confirm Password</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="edit_cpass" name="edit_cpass" required>
+                      <input type="password" class="form-control" id="edit_cpass" maxlength="10" name="edit_cpass" required>
                 </div>
                   </div>
                    
