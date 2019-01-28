@@ -181,13 +181,13 @@ $(document).ready(function(){
 
 			case 'master':
 				if ($(this).is(':checked')==true) {
-					$(this).parent('.ewc-grid-input').siblings('ewc-grid-input:last-child').children('.checkbox-doctor').prop('checked',false);
+					$(this).parent('.ewc-grid-input').siblings('.ewc-grid-input:last-child').children('.checkbox-doctor').prop('checked',false);
 				}
 			break;
 
 			case 'doctor':
 				if ($(this).is(':checked')==true) {
-					$(this).parent('.ewc-grid-input').siblings('ewc-grid-input:first-child').children('.checkbox-master').prop('checked',false);
+					$(this).parent('.ewc-grid-input').siblings('.ewc-grid-input:first-child').children('.checkbox-master').prop('checked',false);
 				}
 			break;
 

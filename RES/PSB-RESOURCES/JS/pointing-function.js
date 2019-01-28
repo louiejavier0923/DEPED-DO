@@ -41,9 +41,7 @@ var order22 = {
 	{"gwa_min":"1.29","gwa_max":"1.0","points":"18.00"}
 ]};
 
-
-// var obj = JSON.parse(order7);
-
+// function---------------------------------------------------------------
 function educationPoints(order,gwa) {
 
 	var p;
@@ -77,4 +75,12 @@ function educationPoints(order,gwa) {
 	}
 
 	return p;
+}
+
+function experiencePoints(order,mnth){
+
+	var p;
+
+	return p;
+
 }

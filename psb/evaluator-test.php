@@ -135,8 +135,16 @@ $id = $_SESSION['ID'];
 									</div>
 								</div>
 							</section>
-							<section class= "content">
-								<input type= "text">
+							<section class= "content center-pos">
+								<div class="eval-out">
+									<button>Edit</button>
+									<div class="eval-out-value">20</div>
+								</div>
+								<div class='educ-window'>
+									<div class="educ-window-content">
+										
+									</div>
+								</div>
 							</section>
 							<section class= "content">
 								<input type= "text">
@@ -174,7 +182,7 @@ $id = $_SESSION['ID'];
 <!-- Custom Javascripts -->
 <script src="../RES/PSb-RESOURCES/JS/functions.js"></script>
 <script src="../RES/PSb-RESOURCES/JS/pointing-function.js"></script>
-<script src="../RES/PSb-RESOURCES/JS/evaluate-test.js"></script>
+<!-- <script src="../RES/PSb-RESOURCES/JS/evaluate-test.js"></script> -->
 
 	</body>
 </html>
