@@ -63,7 +63,7 @@
                           <td>".$row['SCHOOL_ADDRESS']."</td>
 
                           <td>
-                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-trash'></i> Retrieve</button>
+                            <button class='btn btn-success btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-check'></i> Retrieve</button>
                           </td>
                         </tr>
                       ";

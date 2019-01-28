@@ -33,7 +33,7 @@
                 </div>
                
                 	<div class="modal-footer">
-            	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+            	<button type="button" id="close" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
             	<button type="submit" class="btn btn-primary btn-flat" name="submit_news" id="submit_news"><i class="fa fa-save"></i> Save</button>
             	</div>
           	</div>
@@ -111,7 +111,7 @@
           	<div class="modal-footer">
               <input type ="hidden" id="delete_id">
             	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-            	<button type="submit" class="btn btn-danger btn-flat" name="delete" id="archive"><i class="fa fa-trash"></i> Archive</button>
+            	<button type="submit" class="btn btn-danger btn-flat" name="delete" id="archive"><i class="fa fa-archive"></i> Archive</button>
             	</form>
           	</div>
         </div>

@@ -13,6 +13,7 @@
 			<section class= "modal-message">
 				<button id= "messageBtn"><img src= "../img/icon-message.png"></button>
 			</section>
+			<?php include '../include/applicant-message-modal.php';?>
 			<section class= "accountSettingContainer">
 				<h1>Account Settings</h1>
 				<div class= "line"></div>

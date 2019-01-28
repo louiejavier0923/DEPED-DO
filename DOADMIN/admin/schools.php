@@ -65,7 +65,7 @@
 
                           <td>
                             <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['SID']."'><i class='fa fa-edit'></i> Edit</button>
-                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-trash'></i> Archive</button>
+                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['SID']."'><i class='fa fa-archive'></i> Archive</button>
                           </td>
                         </tr>
                       
@@ -155,6 +155,41 @@ $(document).on('click', '.edit', function(e) {
   });
 
 
+/* ADD SCHOOLS */
+
+
+
+$(document).on('click', '#submit_school', function(e) {
+e.preventDefault();
+    add_school();
+
+
+  });
+function add_school(action='add_schools'){
+        var school_name = $("#school_name").val();
+        var school_address = $("#school_address").val();
+
+
+  $.ajax({
+    type: 'POST',
+    url: '../credentials/model.php',
+    data: {action:action, school_name:school_name, school_address:school_address},
+    dataType: 'json',
+    success: function(response){
+
+               alert(response.message);
+                  $('.alert-success').css("display","block").html(response.message);
+                   $('#addnew').modal('hide');
+                   $("#school_name").val("");
+                   $("#school_address").val("");
+          $("#reload").load(location.href + " #reload>*", "");
+   
+
+    }
+  }); 
+}
+
+
 	 /*ARCHIVE BUTTON*/
 
 $(document).on('click', '.delete', function(e) {
@@ -162,11 +197,10 @@ $(document).on('click', '.delete', function(e) {
     $('#delete').modal('show');
     var id = $(this).data('id');
     $("#d_id").val(id);
-    $("#d_id").hide();
   });
 
     /*ARCHIVE SCHOOLS*/
-   $(document).on('click', '.delete', function(e) {
+   $(document).on('click', '#archive', function(e) {
       e.preventDefault();
       var d_id = $("#d_id").val();
      $.ajax({
@@ -178,9 +212,15 @@ $(document).on('click', '.delete', function(e) {
         alert(response.confirm);
      $('.alert-success').css("display","block").html(response.message);
      $('#delete').modal('hide');
+        fetch_schools();
     }
   });
     });
+
+    $('#close').click(function(e){
+                   $("#school_name").val("");
+                   $("#school_address").val("");
+  });
   }); 
 
 </script>

@@ -11,13 +11,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      ARCHIVE FOR NEWS
+        Personnel
       </h1>
       <ol class="breadcrumb">
-        
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#"><i class="fa fa-dashboard"></i> Archives</a></li>
-        <li class="active">News</li>
+        <li class="active">Personnel</li>
       </ol>
     </section>
      
@@ -37,7 +35,7 @@
         
         
      
-					<!-- Table -->
+          <!-- Table -->
  <div class="row">
         <div class="col-xs-12">
           <div class="box">
@@ -45,32 +43,33 @@
               <table id="example1" class="table table-bordered">
                 <thead>
                   <th>NO</th>
-                  <th>UID</th>
-                  <th>TITLE</th>
-                  <th>DESCRIPTION</th>
-                  <th>DATE POSTED</th>
+                  <th>LAST NAME</th>
+                  <th>FIRST NAME</th>
+                  <th>MIDDLE NAME</th>
+                  <th>EMAIL</th>
                   <th>TOOLS</th>
                 </thead>
-                <tbody>
-                  <?php
-                    $sql = "SELECT * FROM news WHERE isActive = '0'";
+                <tbody class="schools_tbl">
+                     <?php
+                       $sql = "SELECT * FROM evaluators_info_tbl WHERE ISACTIVE = '0'";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       echo "
-                        <tr>
+                       <tr>
                           <td>".$row['NO']."</td>
-                          <td>".$row['UID']."</td>
-                          <td>".$row['TITLE']."</td>
-                          <td>".$row['DESCRIPTION']."</td>
-                          <td>".$row['DATE_PUB']."</td>
+                          <td>".$row['LASTNAME']."</td>
+                          <td>".$row['FIRSTNAME']."</td>
+                          <td>".$row['MIDDLENAME']."</td>
+                          <td>".$row['EMAIL']."</td>
 
                           <td>
-                            <button class='btn btn-success btn-sm archive btn-flat' data-id='".$row['UID']."'><i class='fa fa-check'></i> Retrieve</button>
+                            <button class='btn btn-success btn-sm retrieve btn-flat' data-id='".$row['NO']."'><i class='fa fa-check'></i> Retrieve</button>
                           </td>
                         </tr>
+                      
                       ";
                     }
-                  ?>
+                     ?>
                 </tbody>
               </table>
             </div>
@@ -82,29 +81,29 @@
     
 
   <?php include 'includes/footer.php'; ?>
-
-  <?php include 'includes/archive_news_modal.php'; ?>
+  
+  <?php include 'includes/archive_personnel_modal.php'; ?>
 </div>
 <?php include 'includes/scripts.php'; ?>
 <script>
-$(function(){
-	 /*ARCHIVE BUTTON*/
 
-	 $('.archive').click(function(e){
+$(function(){
+
+  $('.retrieve').click(function(e){
     e.preventDefault();
     $('#retrieve').modal('show');
-    var id = $(this).data('id');
+    var id = $(this).attr("data-id");
     $("#id").val(id);
+
   });
 
-    /*ARCHIVE NEWS*/
-    $("#retrieve").click(function(e){
+     $('#p_retrieve').click(function(e){
       e.preventDefault();
-      var id = $("#id").val();
+    var id = $("#id").val();
      $.ajax({
     type: 'POST',
     url: '../credentials/model.php',
-    data: {action:'retrieve_news',id:id},
+    data: {action:'retrieve_personnel',id:id},
     dataType: 'json',
     success: function(response){
         alert(response.confirm);
@@ -112,16 +111,9 @@ $(function(){
      $('#retrieve').modal('hide');
      $("#reload").load(location.href + " #reload>*", "");
     }
-  });
-    });
-
-
-
-
-
-
+  });        
  });
-
+});
 </script>
 </body>
 </html>

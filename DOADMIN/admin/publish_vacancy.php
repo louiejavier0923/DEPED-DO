@@ -74,7 +74,7 @@
                           <td>".$row['ITEM_NO']."</td>
                           <td>
                             <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['UID']."'><i class='fa fa-edit'></i> Edit</button>
-                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['UID']."'><i class='fa fa-trash'></i> Archive</button>
+                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['UID']."'><i class='fa fa-archive'></i> Archive</button>
                           </td>
                         </tr>
                       ";
@@ -218,6 +218,17 @@ $(function(){
    
  
   });
+     $('#close').click(function(e){
+   $('#addnew').modal('hide');
+                   $("#title").val("");
+                   $("#expiration").val("");
+                   $("#description").val("");
+                   $("#noi").val("");
+                   $("#status").val("");
+                   $("#itemno").val("");
+                   $("#salaries").val("");
+                   $("#place").val("");
+  });
 });
 
 
@@ -244,6 +255,15 @@ function add_vacancy(action='add_vacancy'){
                alert(response.message);
                  $('.alert-success').css("display","block").html(response.message);
                    $('#addnew').modal('hide');
+                   $("#title").val("");
+                   $("#expiration").val("");
+                   $("#description").val("");
+                   $("#noi").val("");
+                   $("#status").val("");
+                   $("#itemno").val("");
+                   $("#salaries").val("");
+                   $("#place").val("");
+
         $("#reload").load(location.href + " #reload>*", "");
       
 
