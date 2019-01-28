@@ -52,7 +52,7 @@ $(document).ready(function(){
 			}
 		}).done(function(data){
 			if(data){
-				window.location.href = "evaluator.php";
+				window.location.href = "evaluator-test.php";
 			}
 		})
 

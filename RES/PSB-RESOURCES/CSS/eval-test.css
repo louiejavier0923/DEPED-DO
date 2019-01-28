@@ -78,6 +78,15 @@
     height: calc(100% - 8px);
     font-size: 80%;
 }
+/* .eval-out-value{
+    margin: 4px 0px;
+    height: calc(100% - 10px);
+    width: calc(100% - 6px);
+    font-size: 80%;
+    border: 1px solid rgb(4, 80, 140);
+    border-radius: 3px;
+    font-weight: bold;
+} */
 .ewc-grid2-col{
     width: calc(100% - 0px);
     height: 100%;
@@ -99,7 +108,7 @@
     border: 1px solid rgb(4, 80, 140);
     color: #fff;
 }   
-.ewc-grid2-col button:first-child,.ee-cancel{
+.ewc-grid2-col button:first-child,.ee-cancel,.ex-cancel{
     background-color: #fff;
     border: 1px solid rgb(4, 80, 140);
     color: rgb(4, 80, 140);

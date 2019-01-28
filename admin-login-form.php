@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if(isset($_SESSION['ADMIN'])){
+	header('location:DOADMIN/admin/home.php');
+}
+?>
 
 <html>
 	<head>
@@ -47,16 +53,53 @@
 				<div class= "line"></div>
 				<section class = "input-container">
 					<section class= "input-form">
-						<input type= "email" name= "emailTxtbox">
+						<input type= "email" name= "emailTxtbox" id="id_email">
 						<label>Email</label>
 					</section>
 					<section class= "input-form">
-						<input type= "password" name= "passTxtbox">
+						<input type= "password" name= "passTxtbox" id="id_password">
 						<label>Password</label>
 					</section>
-					<button type= "button" name= "loginBtn">LOGIN</button>
+					<button type= "button" name= "loginBtn" id="admin_login">LOGIN</button>
 				</section>
 			</section>
 		</section>
+		 <script type="text/javascript">
+		 	 $(function(){
+  
+               
+
+  /*  ARCHIVE BUTTON*/
+  $("#admin_login").click(function(e){
+    e.preventDefault();
+         var email= $("#id_email").val();
+          var password = $("#id_password").val();
+
+
+      $.ajax({
+    type: 'POST',
+    url: 'DOADMIN/credentials/model.php',
+    data: {action:'admin_login',email:email,password:password},
+    dataType: 'json',
+    success: function(response){
+
+    	       switch(response.message){
+    	       	    case 'successful':
+    	       	           window.location.href='DOADMIN/admin/home.php';
+    	       	    break;
+
+    	       	    default:
+    	       	            alert(response.message);
+    	       	    break;
+    	       }
+            
+           
+     }
+  });
+  });
+});
+
+
+		 </script>
 	</body>
 </html>
