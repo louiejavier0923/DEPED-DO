@@ -1,12 +1,12 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
 	/* == HEADER DESIGN == */
 
 	.header-container {
 		float: left;
 		position: fixed;
 		width: 100%;
-		height: 50px;
+		height: 54px;
 		background-color: rgb(255, 255, 255);
 		border-top: solid 5px rgb(4, 80, 140);
 		border-bottom: solid 1px rgb(230, 230, 230);
@@ -15,8 +15,8 @@
 
 		.header-container .header-title {
 			float: left;
-			width: 65%;
-			height: 100%
+			width: 85%;
+			height: 100%;
 		}
 
 			.header-title a {
@@ -33,48 +33,55 @@
 
 				.header-title a h1 {
 					float: left;
-					width: 72%;
+					width: 70%;
 					height: 90%;
 					font-family: 'Gentona';
-					font-size: 110%;
-					line-height: 13px;
+					font-size: 120%;
+					line-height: 15px;
 					padding: 3.5% 0px;
 					color: rgb(30, 30, 30);
-					margin-top: -2px;
 				}
 
-		.header-container .header-nav {
+		.header-container #burgerBtn {
+			display: block;
 			float: right;
-			position: fixed;
+			font-size: 140%;
+			color: rgb(120, 120, 120);
+			margin: 4% 3% 0px 0px;
+		}
+
+		.header-container .header-nav {
+			float: left;
 			width: 100%;
 			height: 100%;
-			margin-top: 50px;
-			background-color: rgba(100, 100, 100, 0.6);
+			position: fixed;
+			background-color: rgba(0, 0, 0, 0.4);
 			display: none;
+			margin-top: 54px;
 		}
 
 			.header-nav .header-nav-main {
 				float: right;
 				position: relative;
+				width: 80%;
+				padding-bottom: 20px;
 				border-bottom-left-radius: 5px;
-				width: 60%;
 				background-color: rgb(255, 255, 255);
-				padding: 10px 0px;
+				background-color: rgb(250, 250, 250);
 			}
 
 				.header-nav-main a {
-					float: left;
-					width: 90%;
-					display: inline-block;
-					text-decoration: none;
+					float: right;
+					width: 100%;
 					text-align: right;
+					text-decoration: none;
+					display: inline-block;
 					font-family: 'Century Gothic';
-					font-size: 80%;
+					font-size: 90%;
 					text-transform: uppercase;
 					color: rgb(50, 50, 50);
-					padding: 8px 10% 8px 0px;
+					padding: 10px 8% 10px 0px;
 					transition: all 0.2s ease-in-out;
-					font-weight: bold;
 				}
 
 				.header-nav-main a:hover, .header-nav-main .activeBtn {
@@ -83,18 +90,26 @@
 					font-weight: bold;
 				}
 
-				.header-nav-main a:nth-child(6), .header-nav-main a:last-child {
+				.header-nav-main a:nth-child(6) {
+					float: right;
 					color: rgb(4, 80, 140);
-					transform: scale(1.1, 1.1);
+					font-weight: bold;
 					cursor: pointer;
 				}
 
-		.header-container #burgerBtn {
-			float: right;
-			font-size: 140%;
-			margin: 10px 20px 0px 0px;
-			color: rgb(90, 90, 90);
-		}
+				.header-nav-main a:nth-child(7) {
+					float: right;
+					color: rgb(4, 80, 140);
+					font-weight: bold;
+					cursor: pointer;
+				}
+
+				.header-nav-main a:nth-child(7):hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transform: none;
+					transition: all 0.2s ease-in-out;
+				}
 
 	/* == HEADER DESIGN ENDS HERE == */
 	/* == FOOTER DESIGN == */
@@ -120,19 +135,20 @@
 					float: left;
 					width: 80%;
 					height: 100%;
+					margin: 0px 10% 40px 10%;
 					display: inline-block;
 				}
 
 					.footer-one-two:first-child .one-three:first-child {
-						margin-left: 10%;
-						margin-bottom: 50px;
+
+						margin-left: 7.5%;
 					}
 
 						.footer-one-two:first-child .one-three:first-child h2 {
 							float: left;
 							width: 100%;
 							font-family: 'Gentona';
-							font-size: 130%;
+							font-size: 110%;
 							color: rgb(4, 80, 140);
 							text-transform: uppercase;
 							margin-bottom: 40px;
@@ -140,17 +156,17 @@
 
 						.footer-one-two:first-child .one-three:first-child img {
 							float: left;
-							width: 6%;
-							height: 20px;
+							width: 8%;
+							height: 15px;
 							padding-right: 2%;
 						}
 
 						.footer-one-two:first-child .one-three:first-child p {
 							float: left;
-							width: 92%;
+							width: 90%;
 							margin-bottom: 15px;
 							font-family: 'Century Gothic';
-							font-size: 95%;
+							font-size: 80%;
 						}
 
 						.footer-one-two:first-child .one-three:first-child a {
@@ -158,11 +174,11 @@
 							display: inline-block;
 							text-decoration: none;
 							margin-top: 20px;
-							padding: 8px 3%;
+							padding: 8px 6%;
 							text-align: center;
 							text-transform: uppercase;
 							font-family: 'Gentona';
-							font-size: 110%;
+							font-size: 85%;
 							color: rgb(255, 255, 255);
 						}
 
@@ -179,17 +195,14 @@
 							}
 
 					.footer-one-two:first-child .one-three:nth-child(2) {
-						width: 80%;
-						margin: 0px 5%;
-						margin-bottom: 50px;
-						margin-left: 10%;
+
 					}
 
 						.footer-one-two:first-child .one-three:nth-child(2) h2 {
 							float: left;
 							width: 100%;
 							font-family: 'Gentona';
-							font-size: 130%;
+							font-size: 110%;
 							color: rgb(4, 80, 140);
 							text-transform: uppercase;
 							margin-bottom: 40px;
@@ -199,20 +212,21 @@
 							float: left;
 							text-decoration: none;
 							width: 100%;
+							margin-left: 5%;
 							color: rgb(69, 93, 146);
-							line-height: 25px;
+							line-height: 20px;
+							font-size: 80%;
 						}
 
 					.footer-one-two:first-child .one-three:last-child {
-						width: 80%;
-						margin-left: 10%;
+
 					}
 
 						.footer-one-two:first-child .one-three:last-child h2 {
 							float: left;
 							width: 100%;
 							font-family: 'Gentona';
-							font-size: 130%;
+							font-size: 110%;
 							color: rgb(4, 80, 140);
 							text-transform: uppercase;
 							margin-bottom: 40px;
@@ -223,8 +237,10 @@
 							display: inline-block;
 							width: 100%;
 							text-decoration: none;
-							line-height: 25px;
+							line-height: 20px;
 							color: rgb(69, 93, 146);
+							margin-left: 5%;
+							font-size: 85%;
 						}
 
 			.footer-one-two:last-child {
@@ -235,16 +251,1070 @@
 			}
 
 				.footer-one-two:last-child p {
-					font-size: 80%;
+					font-size: 70%;
 					color: rgb(255, 255, 255);
 					text-align: center;
 				}
 
 	/* == FOOTER DESIGN ENDS HERE == */
-} 
+}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+	/* == HEADER DESIGN == */
+
+	.header-container {
+		float: left;
+		position: fixed;
+		width: 100%;
+		height: 54px;
+		background-color: rgb(255, 255, 255);
+		border-top: solid 5px rgb(4, 80, 140);
+		border-bottom: solid 1px rgb(230, 230, 230);
+		z-index: 3;
+	}
+
+		.header-container .header-title {
+			float: left;
+			width: 85%;
+			height: 100%;
+		}
+
+			.header-title a {
+				text-decoration: none;
+				color: rgb(30, 30, 30);
+			}
+
+				.header-title a img {
+					float: left;
+					width: 22%;
+					height: 90%;
+					margin: 1% 2% 0px 3%;
+				}
+
+				.header-title a h1 {
+					float: left;
+					width: 70%;
+					height: 90%;
+					font-family: 'Gentona';
+					font-size: 120%;
+					line-height: 15px;
+					padding: 3.5% 0px;
+					color: rgb(30, 30, 30);
+				}
+
+		.header-container #burgerBtn {
+			display: block;
+			float: right;
+			font-size: 140%;
+			color: rgb(120, 120, 120);
+			margin: 4% 3% 0px 0px;
+		}
+
+		.header-container .header-nav {
+			float: left;
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			background-color: rgba(0, 0, 0, 0.4);
+			display: none;
+			margin-top: 54px;
+		}
+
+			.header-nav .header-nav-main {
+				float: right;
+				position: relative;
+				width: 80%;
+				padding-bottom: 20px;
+				border-bottom-left-radius: 5px;
+				background-color: rgb(255, 255, 255);
+				background-color: rgb(250, 250, 250);
+			}
+
+				.header-nav-main a {
+					float: right;
+					width: 100%;
+					text-align: right;
+					text-decoration: none;
+					display: inline-block;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(50, 50, 50);
+					padding: 10px 8% 10px 0px;
+					transition: all 0.2s ease-in-out;
+				}
+
+				.header-nav-main a:hover, .header-nav-main .activeBtn {
+					color: rgb(4, 80, 140);
+					transition: all 0.2s ease-in-out;
+					font-weight: bold;
+				}
+
+				.header-nav-main a:nth-child(6) {
+					float: right;
+					color: rgb(4, 80, 140);
+					font-weight: bold;
+					cursor: pointer;
+				}
+
+				.header-nav-main a:nth-child(7) {
+					float: right;
+					color: rgb(4, 80, 140);
+					font-weight: bold;
+					cursor: pointer;
+				}
+
+				.header-nav-main a:nth-child(7):hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transform: none;
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == HEADER DESIGN ENDS HERE == */
+	/* == FOOTER DESIGN == */
+
+	.footer-container {
+		float: left;
+		width: 100%;
+		position: relative;
+	}
+
+		.footer-container .footer-one-two {
+			float: left;
+			width: 100%;
+			display: inline-block;
+			border-top: solid 1px rgb(230, 230, 230)
+		}
+
+			.footer-one-two:first-child {
+				padding: 30px 0px;
+			}
+
+				.footer-one-two:first-child .one-three {
+					float: left;
+					width: 80%;
+					height: 100%;
+					margin: 0px 10% 40px 10%;
+					display: inline-block;
+				}
+
+					.footer-one-two:first-child .one-three:first-child {
+
+						margin-left: 7.5%;
+					}
+
+						.footer-one-two:first-child .one-three:first-child h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+						}
+
+						.footer-one-two:first-child .one-three:first-child img {
+							float: left;
+							width: 8%;
+							height: 15px;
+							padding-right: 2%;
+						}
+
+						.footer-one-two:first-child .one-three:first-child p {
+							float: left;
+							width: 90%;
+							margin-bottom: 15px;
+							font-family: 'Century Gothic';
+							font-size: 80%;
+						}
+
+						.footer-one-two:first-child .one-three:first-child a {
+							float: left;
+							display: inline-block;
+							text-decoration: none;
+							margin-top: 20px;
+							padding: 8px 6%;
+							text-align: center;
+							text-transform: uppercase;
+							font-family: 'Gentona';
+							font-size: 85%;
+							color: rgb(255, 255, 255);
+						}
+
+							.footer-one-two:first-child .one-three:first-child #fb-btn {
+								background-color: rgb(69, 93, 146);
+							}
+
+							.footer-one-two:first-child .one-three:first-child #twitter-btn {
+								background-color: rgb(29, 159, 239);
+							}
+
+							.footer-one-two:first-child .one-three:first-child #gmail-btn {
+								background-color: rgb(220, 75, 62);
+							}
+
+					.footer-one-two:first-child .one-three:nth-child(2) {
+
+					}
+
+						.footer-one-two:first-child .one-three:nth-child(2) h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+						}
+
+						.footer-one-two:first-child .one-three:nth-child(2) a {
+							float: left;
+							text-decoration: none;
+							width: 100%;
+							margin-left: 5%;
+							color: rgb(69, 93, 146);
+							line-height: 20px;
+							font-size: 80%;
+						}
+
+					.footer-one-two:first-child .one-three:last-child {
+
+					}
+
+						.footer-one-two:first-child .one-three:last-child h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+						}
+
+						.footer-one-two:first-child .one-three:last-child a {
+							float: left;
+							display: inline-block;
+							width: 100%;
+							text-decoration: none;
+							line-height: 20px;
+							color: rgb(69, 93, 146);
+							margin-left: 5%;
+							font-size: 85%;
+						}
+
+			.footer-one-two:last-child {
+				float: left;
+				width: 100%;
+				padding: 8px 0px;
+				background-color: rgb(4, 80, 140);
+			}
+
+				.footer-one-two:last-child p {
+					font-size: 70%;
+					color: rgb(255, 255, 255);
+					text-align: center;
+				}
+
+	/* == FOOTER DESIGN ENDS HERE == */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	/* == HEADER DESIGN == */
+
+	.header-container {
+		float: left;
+		position: fixed;
+		width: 100%;
+		height: 84px;
+		background-color: rgb(255, 255, 255);
+		border-top: solid 5px rgb(4, 80, 140);
+		border-bottom: solid 1px rgb(230, 230, 230);
+		z-index: 3;
+	}
+
+		.header-container .header-title {
+			float: left;
+			width: 55%;
+			height: 100%;
+		}
+
+			.header-title a {
+				text-decoration: none;
+				color: rgb(30, 30, 30);
+			}
+
+				.header-title a img {
+					float: left;
+					width: 18%;
+					height: 90%;
+					margin: 1% 2% 0px 3%;
+				}
+
+				.header-title a h1 {
+					float: left;
+					width: 75%;
+					height: 90%;
+					font-family: 'Gentona';
+					font-size: 160%;
+					line-height: 20px;
+					padding: 3.5% 0px;
+					color: rgb(30, 30, 30);
+				}
+
+		.header-container #burgerBtn {
+			display: block;
+			float: right;
+			font-size: 190%;
+			color: rgb(120, 120, 120);
+			margin: 2.5% 3% 0px 0px;
+		}
+
+		.header-container .header-nav {
+			float: left;
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			background-color: rgba(0, 0, 0, 0.4);
+			display: none;
+			margin-top: 84px;
+		}
+
+			.header-nav .header-nav-main {
+				float: right;
+				position: relative;
+				width: 30%;
+				padding-bottom: 20px;
+				border-bottom-left-radius: 5px;
+				background-color: rgb(255, 255, 255);
+				background-color: rgb(250, 250, 250);
+			}
+
+				.header-nav-main a {
+					float: right;
+					width: 100%;
+					text-align: right;
+					text-decoration: none;
+					display: inline-block;
+					font-family: 'Century Gothic';
+					font-size: 100%;
+					text-transform: uppercase;
+					color: rgb(50, 50, 50);
+					padding: 10px 8% 10px 0px;
+					transition: all 0.2s ease-in-out;
+				}
+
+				.header-nav-main a:hover, .header-nav-main .activeBtn {
+					color: rgb(4, 80, 140);
+					transition: all 0.2s ease-in-out;
+					font-weight: bold;
+				}
+
+				.header-nav-main a:nth-child(6) {
+					float: right;
+					color: rgb(4, 80, 140);
+					font-weight: bold;
+					cursor: pointer;
+				}
+
+				.header-nav-main a:nth-child(7) {
+					float: right;
+					color: rgb(4, 80, 140);
+					font-weight: bold;
+					cursor: pointer;
+				}
+
+				.header-nav-main a:nth-child(7):hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transform: none;
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == HEADER DESIGN ENDS HERE == */
+	/* == FOOTER DESIGN == */
+
+	.footer-container {
+		float: left;
+		width: 100%;
+		position: relative;
+	}
+
+		.footer-container .footer-one-two {
+			float: left;
+			width: 100%;
+			display: inline-block;
+			border-top: solid 1px rgb(230, 230, 230)
+		}
+
+			.footer-one-two:first-child {
+				padding: 30px 0px;
+			}
+
+				.footer-one-two:first-child .one-three {
+					float: left;
+					width: 25%;
+					height: 100%;
+					display: inline-block;
+				}
+
+					.footer-one-two:first-child .one-three:first-child {
+						margin-left: 7.5%;
+					}
+
+						.footer-one-two:first-child .one-three:first-child h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+						}
+
+						.footer-one-two:first-child .one-three:first-child img {
+							float: left;
+							width: 8%;
+							height: 15px;
+							padding-right: 2%;
+						}
+
+						.footer-one-two:first-child .one-three:first-child p {
+							float: left;
+							width: 90%;
+							margin-bottom: 15px;
+							font-family: 'Century Gothic';
+							font-size: 90%;
+						}
+
+						.footer-one-two:first-child .one-three:first-child a {
+							float: left;
+							display: inline-block;
+							text-decoration: none;
+							margin-top: 20px;
+							padding: 8px 4%;
+							text-align: center;
+							text-transform: uppercase;
+							font-family: 'Gentona';
+							font-size: 75%;
+							color: rgb(255, 255, 255);
+						}
+
+							.footer-one-two:first-child .one-three:first-child #fb-btn {
+								background-color: rgb(69, 93, 146);
+							}
+
+							.footer-one-two:first-child .one-three:first-child #twitter-btn {
+								background-color: rgb(29, 159, 239);
+							}
+
+							.footer-one-two:first-child .one-three:first-child #gmail-btn {
+								background-color: rgb(220, 75, 62);
+							}
+
+					.footer-one-two:first-child .one-three:nth-child(2) {
+						margin: 0px 5%;
+					}
+
+						.footer-one-two:first-child .one-three:nth-child(2) h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+							text-align: center;
+						}
+
+						.footer-one-two:first-child .one-three:nth-child(2) a {
+							float: left;
+							text-decoration: none;
+							width: 100%;
+							text-align: center;
+							color: rgb(69, 93, 146);
+							line-height: 20px;
+							font-size: 80%;
+						}
+
+					.footer-one-two:first-child .one-three:last-child {
+						margin-righ: 7.5%;
+					}
+
+						.footer-one-two:first-child .one-three:last-child h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+							text-align: center;
+						}
+
+						.footer-one-two:first-child .one-three:last-child a {
+							float: left;
+							display: inline-block;
+							width: 100%;
+							text-decoration: none;
+							line-height: 20px;
+							color: rgb(69, 93, 146);
+							text-align: center;
+							font-size: 85%;
+						}
+
+			.footer-one-two:last-child {
+				float: left;
+				width: 100%;
+				padding: 8px 0px;
+				background-color: rgb(4, 80, 140);
+			}
+
+				.footer-one-two:last-child p {
+					font-size: 85%;
+					color: rgb(255, 255, 255);
+					text-align: center;
+				}
+
+	/* == FOOTER DESIGN ENDS HERE == */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+		/* == HEADER DESIGN == */
+
+	.header-container {
+		float: left;
+		position: fixed;
+		width: 100%;
+		height: 84px;
+		background-color: rgb(255, 255, 255);
+		border-top: solid 5px rgb(4, 80, 140);
+		border-bottom: solid 1px rgb(230, 230, 230);
+		z-index: 3;
+	}
+
+		.header-container .header-title {
+			float: left;
+			width: 55%;
+			height: 100%;
+		}
+
+			.header-title a {
+				text-decoration: none;
+				color: rgb(30, 30, 30);
+			}
+
+				.header-title a img {
+					float: left;
+					width: 18%;
+					height: 90%;
+					margin: 1% 2% 0px 3%;
+				}
+
+				.header-title a h1 {
+					float: left;
+					width: 75%;
+					height: 90%;
+					font-family: 'Gentona';
+					font-size: 160%;
+					line-height: 20px;
+					padding: 3.5% 0px;
+					color: rgb(30, 30, 30);
+				}
+
+		.header-container #burgerBtn {
+			display: block;
+			float: right;
+			font-size: 190%;
+			color: rgb(120, 120, 120);
+			margin: 2.5% 3% 0px 0px;
+		}
+
+		.header-container .header-nav {
+			float: left;
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			background-color: rgba(0, 0, 0, 0.4);
+			display: none;
+			margin-top: 84px;
+		}
+
+			.header-nav .header-nav-main {
+				float: right;
+				position: relative;
+				width: 30%;
+				padding-bottom: 20px;
+				border-bottom-left-radius: 5px;
+				background-color: rgb(255, 255, 255);
+				background-color: rgb(250, 250, 250);
+			}
+
+				.header-nav-main a {
+					float: right;
+					width: 100%;
+					text-align: right;
+					text-decoration: none;
+					display: inline-block;
+					font-family: 'Century Gothic';
+					font-size: 100%;
+					text-transform: uppercase;
+					color: rgb(50, 50, 50);
+					padding: 10px 8% 10px 0px;
+					transition: all 0.2s ease-in-out;
+				}
+
+				.header-nav-main a:hover, .header-nav-main .activeBtn {
+					color: rgb(4, 80, 140);
+					transition: all 0.2s ease-in-out;
+					font-weight: bold;
+				}
+
+				.header-nav-main a:nth-child(6) {
+					float: right;
+					color: rgb(4, 80, 140);
+					font-weight: bold;
+					cursor: pointer;
+				}
+
+				.header-nav-main a:nth-child(7) {
+					float: right;
+					color: rgb(4, 80, 140);
+					font-weight: bold;
+					cursor: pointer;
+				}
+
+				.header-nav-main a:nth-child(7):hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transform: none;
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == HEADER DESIGN ENDS HERE == */
+	/* == FOOTER DESIGN == */
+
+	.footer-container {
+		float: left;
+		width: 100%;
+		position: relative;
+	}
+
+		.footer-container .footer-one-two {
+			float: left;
+			width: 100%;
+			display: inline-block;
+			border-top: solid 1px rgb(230, 230, 230)
+		}
+
+			.footer-one-two:first-child {
+				padding: 30px 0px;
+			}
+
+				.footer-one-two:first-child .one-three {
+					float: left;
+					width: 30%;
+					height: 100%;
+					display: inline-block;
+				}
+
+					.footer-one-two:first-child .one-three:first-child {
+						float: left;
+						width: 30%;
+					}
+
+						.footer-one-two:first-child .one-three:first-child h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+						}
+
+						.footer-one-two:first-child .one-three:first-child img {
+							float: left;
+							width: 8%;
+							height: 15px;
+							padding-right: 2%;
+						}
+
+						.footer-one-two:first-child .one-three:first-child p {
+							float: left;
+							width: 90%;
+							margin-bottom: 15px;
+							font-family: 'Century Gothic';
+							font-size: 90%;
+						}
+
+						.footer-one-two:first-child .one-three:first-child a {
+							float: left;
+							display: inline-block;
+							text-decoration: none;
+							margin-top: 20px;
+							padding: 8px 4%;
+							text-align: center;
+							text-transform: uppercase;
+							font-family: 'Gentona';
+							font-size: 75%;
+							color: rgb(255, 255, 255);
+						}
+
+							.footer-one-two:first-child .one-three:first-child #fb-btn {
+								background-color: rgb(69, 93, 146);
+							}
+
+							.footer-one-two:first-child .one-three:first-child #twitter-btn {
+								background-color: rgb(29, 159, 239);
+							}
+
+							.footer-one-two:first-child .one-three:first-child #gmail-btn {
+								background-color: rgb(220, 75, 62);
+							}
+
+					.footer-one-two:first-child .one-three:nth-child(2) {
+						float: left;
+						width: 30%;
+						margin: 0%;
+					}
+
+						.footer-one-two:first-child .one-three:nth-child(2) h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+							text-align: center;
+						}
+
+						.footer-one-two:first-child .one-three:nth-child(2) a {
+							float: left;
+							text-decoration: none;
+							width: 100%;
+							text-align: center;
+							color: rgb(69, 93, 146);
+							line-height: 20px;
+							font-size: 80%;
+						}
+
+					.footer-one-two:first-child .one-three:last-child {
+						float: left;
+						width: 30%;
+						margin: 0px;
+					}
+
+						.footer-one-two:first-child .one-three:last-child h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+							text-align: center;
+						}
+
+						.footer-one-two:first-child .one-three:last-child a {
+							float: left;
+							display: inline-block;
+							width: 100%;
+							text-decoration: none;
+							line-height: 20px;
+							color: rgb(69, 93, 146);
+							text-align: center;
+							font-size: 85%;
+						}
+
+			.footer-one-two:last-child {
+				float: left;
+				width: 100%;
+				padding: 8px 0px;
+				background-color: rgb(4, 80, 140);
+			}
+
+				.footer-one-two:last-child p {
+					font-size: 85%;
+					color: rgb(255, 255, 255);
+					text-align: center;
+				}
+
+	/* == FOOTER DESIGN ENDS HERE == */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	/* == HEADER DESIGN == */
+
+	.header-container {
+		float: left;
+		position: fixed;
+		width: 100%;
+		height: 84px;
+		background-color: rgb(255, 255, 255);
+		border-top: solid 5px rgb(4, 80, 140);
+		border-bottom: solid 1px rgb(230, 230, 230);
+		z-index: 3;
+	}
+
+		.header-container .header-title {
+			float: left;
+			width: 55%;
+			height: 100%;
+		}
+
+			.header-title a {
+				text-decoration: none;
+				color: rgb(30, 30, 30);
+			}
+
+				.header-title a img {
+					float: left;
+					width: 18%;
+					height: 90%;
+					margin: 1% 2% 0px 3%;
+				}
+
+				.header-title a h1 {
+					float: left;
+					width: 75%;
+					height: 90%;
+					font-family: 'Gentona';
+					font-size: 160%;
+					line-height: 20px;
+					padding: 3.5% 0px;
+					color: rgb(30, 30, 30);
+				}
+
+		.header-container #burgerBtn {
+			display: block;
+			float: right;
+			font-size: 190%;
+			color: rgb(120, 120, 120);
+			margin: 2.5% 3% 0px 0px;
+		}
+
+		.header-container .header-nav {
+			float: left;
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			background-color: rgba(0, 0, 0, 0.4);
+			display: none;
+			margin-top: 84px;
+		}
+
+			.header-nav .header-nav-main {
+				float: right;
+				position: relative;
+				width: 30%;
+				padding-bottom: 20px;
+				border-bottom-left-radius: 5px;
+				background-color: rgb(255, 255, 255);
+				background-color: rgb(250, 250, 250);
+			}
+
+				.header-nav-main a {
+					float: right;
+					width: 100%;
+					text-align: right;
+					text-decoration: none;
+					display: inline-block;
+					font-family: 'Century Gothic';
+					font-size: 100%;
+					text-transform: uppercase;
+					color: rgb(50, 50, 50);
+					padding: 10px 8% 10px 0px;
+					transition: all 0.2s ease-in-out;
+				}
+
+				.header-nav-main a:hover, .header-nav-main .activeBtn {
+					color: rgb(4, 80, 140);
+					transition: all 0.2s ease-in-out;
+					font-weight: bold;
+				}
+
+				.header-nav-main a:nth-child(6) {
+					float: right;
+					color: rgb(4, 80, 140);
+					font-weight: bold;
+					cursor: pointer;
+				}
+
+				.header-nav-main a:nth-child(7) {
+					float: right;
+					color: rgb(4, 80, 140);
+					font-weight: bold;
+					cursor: pointer;
+				}
+
+				.header-nav-main a:nth-child(7):hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transform: none;
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == HEADER DESIGN ENDS HERE == */
+	/* == FOOTER DESIGN == */
+
+	.footer-container {
+		float: left;
+		width: 100%;
+		position: relative;
+	}
+
+		.footer-container .footer-one-two {
+			float: left;
+			width: 100%;
+			display: inline-block;
+			border-top: solid 1px rgb(230, 230, 230)
+		}
+
+			.footer-one-two:first-child {
+				padding: 30px 0px;
+			}
+
+				.footer-one-two:first-child .one-three {
+					float: left;
+					width: 25%;
+					height: 100%;
+					display: inline-block;
+				}
+
+					.footer-one-two:first-child .one-three:first-child {
+						margin-left: 7.5%;
+					}
+
+						.footer-one-two:first-child .one-three:first-child h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+						}
+
+						.footer-one-two:first-child .one-three:first-child img {
+							float: left;
+							width: 8%;
+							height: 15px;
+							padding-right: 2%;
+						}
+
+						.footer-one-two:first-child .one-three:first-child p {
+							float: left;
+							width: 90%;
+							margin-bottom: 15px;
+							font-family: 'Century Gothic';
+							font-size: 90%;
+						}
+
+						.footer-one-two:first-child .one-three:first-child a {
+							float: left;
+							display: inline-block;
+							text-decoration: none;
+							margin-top: 20px;
+							padding: 8px 4%;
+							text-align: center;
+							text-transform: uppercase;
+							font-family: 'Gentona';
+							font-size: 75%;
+							color: rgb(255, 255, 255);
+						}
+
+							.footer-one-two:first-child .one-three:first-child #fb-btn {
+								background-color: rgb(69, 93, 146);
+							}
+
+							.footer-one-two:first-child .one-three:first-child #twitter-btn {
+								background-color: rgb(29, 159, 239);
+							}
+
+							.footer-one-two:first-child .one-three:first-child #gmail-btn {
+								background-color: rgb(220, 75, 62);
+							}
+
+					.footer-one-two:first-child .one-three:nth-child(2) {
+						margin: 0px 5%;
+					}
+
+						.footer-one-two:first-child .one-three:nth-child(2) h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+							text-align: center;
+						}
+
+						.footer-one-two:first-child .one-three:nth-child(2) a {
+							float: left;
+							text-decoration: none;
+							width: 100%;
+							text-align: center;
+							color: rgb(69, 93, 146);
+							line-height: 20px;
+							font-size: 80%;
+						}
+
+					.footer-one-two:first-child .one-three:last-child {
+						margin-righ: 7.5%;
+					}
+
+						.footer-one-two:first-child .one-three:last-child h2 {
+							float: left;
+							width: 100%;
+							font-family: 'Gentona';
+							font-size: 110%;
+							color: rgb(4, 80, 140);
+							text-transform: uppercase;
+							margin-bottom: 40px;
+							text-align: center;
+						}
+
+						.footer-one-two:first-child .one-three:last-child a {
+							float: left;
+							display: inline-block;
+							width: 100%;
+							text-decoration: none;
+							line-height: 20px;
+							color: rgb(69, 93, 146);
+							text-align: center;
+							font-size: 85%;
+						}
+
+			.footer-one-two:last-child {
+				float: left;
+				width: 100%;
+				padding: 8px 0px;
+				background-color: rgb(4, 80, 140);
+			}
+
+				.footer-one-two:last-child p {
+					font-size: 85%;
+					color: rgb(255, 255, 255);
+					text-align: center;
+				}
+
+	/* == FOOTER DESIGN ENDS HERE == */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
 	/* == HEADER DESIGN == */
 
 	.header-container {
@@ -287,10 +1357,14 @@
 					color: rgb(30, 30, 30);
 				}
 
+		.header-container #burgerBtn {
+			display: none;
+		}
+
 		.header-container .header-nav {
 			float: left;
 			width: 65%;
-			height: 100%;
+			height: 0%;
 		}
 
 			.header-nav .header-nav-main {
@@ -451,7 +1525,7 @@
 						}
 
 					.footer-one-two:first-child .one-three:last-child {
-						margin-righ: 7.5%;
+						margin-right: 7.5%;
 					}
 
 						.footer-one-two:first-child .one-three:last-child h2 {
@@ -489,10 +1563,10 @@
 				}
 
 	/* == FOOTER DESIGN ENDS HERE == */
-} 
+}
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
 	/* == HEADER DESIGN == */
 
 	.header-container {
@@ -519,515 +1593,9 @@
 
 				.header-title a img {
 					float: left;
-					width: 30%;
+					width: 12%;
 					height: 90%;
-					margin: 1% 2% 0px 3%;
-				}
-
-				.header-title a h1 {
-					float: left;
-					width: 65%;
-					height: 90%;
-					font-family: 'Gentona';
-					font-size: 130%;
-					line-height: 20px;
-					padding: 3.5% 0px;
-					color: rgb(30, 30, 30);
-				}
-
-		.header-container #burgerBtn {
-			display: none;
-		}
-
-		.header-container .header-nav {
-			float: left;
-			width: 65%;
-			height: 0%;
-		}
-
-			.header-nav .header-nav-main {
-				float: left;
-				position: relative;
-				width: 98%;
-				height: 50%;
-				margin-top: 10%;
-			}
-
-				.header-nav-main a {
-					float: left;
-					text-decoration: none;
-					display: inline-block;
-					text-decoration: none;
-					font-family: 'Century Gothic';
-					font-size: 60%;
-					text-transform: uppercase;
-					color: rgb(50, 50, 50);
-					padding: 8px 7px;
-					transition: all 0.2s ease-in-out;
-				}
-
-				.header-nav-main a:hover, .header-nav-main .activeBtn {
-					color: rgb(4, 80, 140);
-					transition: all 0.2s ease-in-out;
-					transform: scale(1.1, 1.1);
-					font-weight: bold;
-				}
-
-				.header-nav-main a:nth-child(6) {
-					float: right;
-					background-color: rgb(4, 80, 140);
-					border-radius: 3px;
-					color: rgb(255, 255, 255);
-					font-weight: bold;
-					cursor: pointer;
-				}
-
-				.header-nav-main a:nth-child(7) {
-					float: right;
-					margin-right: 10px;
-					border: solid 1px rgb(210, 210, 210);
-					border-radius: 3px;
-					cursor: pointer;
-				}
-
-				.header-nav-main a:nth-child(7):hover {
-					background-color: rgb(4, 80, 140);
-					color: rgb(255, 255, 255);
-					transform: none;
-					transition: all 0.2s ease-in-out;
-				}
-
-	/* == HEADER DESIGN ENDS HERE == */
-	/* == FOOTER DESIGN == */
-
-	.footer-container {
-		float: left;
-		width: 100%;
-		position: relative;
-	}
-
-		.footer-container .footer-one-two {
-			float: left;
-			width: 100%;
-			display: inline-block;
-			border-top: solid 1px rgb(230, 230, 230)
-		}
-
-			.footer-one-two:first-child {
-				padding: 30px 0px;
-			}
-
-				.footer-one-two:first-child .one-three {
-					float: left;
-					width: 25%;
-					height: 100%;
-					display: inline-block;
-				}
-
-					.footer-one-two:first-child .one-three:first-child {
-						margin-left: 7.5%;
-					}
-
-						.footer-one-two:first-child .one-three:first-child h2 {
-							float: left;
-							width: 100%;
-							font-family: 'Gentona';
-							font-size: 110%;
-							color: rgb(4, 80, 140);
-							text-transform: uppercase;
-							margin-bottom: 40px;
-						}
-
-						.footer-one-two:first-child .one-three:first-child img {
-							float: left;
-							width: 7%;
-							height: 15px;
-							padding-right: 2%;
-						}
-
-						.footer-one-two:first-child .one-three:first-child p {
-							float: left;
-							width: 90%;
-							margin-bottom: 15px;
-							font-family: 'Century Gothic';
-							font-size: 85%;
-						}
-
-						.footer-one-two:first-child .one-three:first-child a {
-							float: left;
-							display: inline-block;
-							text-decoration: none;
-							margin-top: 20px;
-							padding: 8px 3%;
-							text-align: center;
-							text-transform: uppercase;
-							font-family: 'Gentona';
-							font-size: 80%;
-							color: rgb(255, 255, 255);
-						}
-
-							.footer-one-two:first-child .one-three:first-child #fb-btn {
-								background-color: rgb(69, 93, 146);
-							}
-
-							.footer-one-two:first-child .one-three:first-child #twitter-btn {
-								background-color: rgb(29, 159, 239);
-							}
-
-							.footer-one-two:first-child .one-three:first-child #gmail-btn {
-								background-color: rgb(220, 75, 62);
-							}
-
-					.footer-one-two:first-child .one-three:nth-child(2) {
-						margin: 0px 5%;
-					}
-
-						.footer-one-two:first-child .one-three:nth-child(2) h2 {
-							float: left;
-							width: 100%;
-							font-family: 'Gentona';
-							font-size: 110%;
-							color: rgb(4, 80, 140);
-							text-transform: uppercase;
-							margin-bottom: 40px;
-							text-align: center;
-						}
-
-						.footer-one-two:first-child .one-three:nth-child(2) a {
-							float: left;
-							text-decoration: none;
-							width: 100%;
-							text-align: center;
-							color: rgb(69, 93, 146);
-							line-height: 20px;
-							font-size: 80%;
-						}
-
-					.footer-one-two:first-child .one-three:last-child {
-						margin-righ: 7.5%;
-					}
-
-						.footer-one-two:first-child .one-three:last-child h2 {
-							float: left;
-							width: 100%;
-							font-family: 'Gentona';
-							font-size: 110%;
-							color: rgb(4, 80, 140);
-							text-transform: uppercase;
-							margin-bottom: 40px;
-							text-align: center;
-						}
-
-						.footer-one-two:first-child .one-three:last-child a {
-							float: left;
-							display: inline-block;
-							width: 100%;
-							text-decoration: none;
-							line-height: 20px;
-							color: rgb(69, 93, 146);
-							text-align: center;
-							font-size: 80%;
-						}
-
-			.footer-one-two:last-child {
-				float: left;
-				width: 100%;
-				padding: 8px 0px;
-				background-color: rgb(4, 80, 140);
-			}
-
-				.footer-one-two:last-child p {
-					font-size: 80Aazbrr1%;
-					color: rgb(255, 255, 255);
-					text-align: center;
-				}
-
-	/* == FOOTER DESIGN ENDS HERE == */
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-	/* == HEADER DESIGN == */
-	.header-container {
-		float: left;
-		position: fixed;
-		width: 100%;
-		height: 84px;
-		background-color: rgb(255, 255, 255);
-		border-top: solid 5px rgb(4, 80, 140);
-		border-bottom: solid 1px rgb(230, 230, 230);
-		z-index: 3;
-	}
-
-		.header-container .header-title {
-			float: left;
-			width: 35%;
-			height: 100%;
-		}
-
-			.header-title a {
-				text-decoration: none;
-				color: rgb(30, 30, 30);
-			}
-
-				.header-title a img {
-					float: left;
-					width: 22%;
-					height: 90%;
-					margin: 1% 2% 0px 3%;
-				}
-
-				.header-title a h1 {
-					float: left;
-					width: 70%;
-					height: 90%;
-					font-family: 'Gentona';
-					font-size: 160%;
-					line-height: 20px;
-					padding: 3.5% 0px;
-					color: rgb(30, 30, 30);
-				}
-
-		.header-container #burgerBtn {
-			display: none;
-		}
-
-		.header-container .header-nav {
-			float: left;
-			width: 65%;
-			height: 0%;
-		}
-
-			.header-nav .header-nav-main {
-				float: left;
-				position: relative;
-				width: 98%;
-				height: 50%;
-				margin-top: 7%;
-			}
-
-				.header-nav-main a {
-					float: left;
-					text-decoration: none;
-					display: inline-block;
-					text-decoration: none;
-					font-family: 'Century Gothic';
-					font-size: 70%;
-					text-transform: uppercase;
-					color: rgb(50, 50, 50);
-					padding: 8px 10px;
-					transition: all 0.2s ease-in-out;
-				}
-
-				.header-nav-main a:hover, .header-nav-main .activeBtn {
-					color: rgb(4, 80, 140);
-					transition: all 0.2s ease-in-out;
-					transform: scale(1.1, 1.1);
-					font-weight: bold;
-				}
-
-				.header-nav-main a:nth-child(6) {
-					float: right;
-					background-color: rgb(4, 80, 140);
-					border-radius: 3px;
-					color: rgb(255, 255, 255);
-					font-weight: bold;
-					cursor: pointer;
-				}
-
-				.header-nav-main a:nth-child(7) {
-					float: right;
-					margin-right: 10px;
-					border: solid 1px rgb(210, 210, 210);
-					border-radius: 3px;
-					cursor: pointer;
-				}
-
-				.header-nav-main a:nth-child(7):hover {
-					background-color: rgb(4, 80, 140);
-					color: rgb(255, 255, 255);
-					transform: none;
-					transition: all 0.2s ease-in-out;
-				}
-
-	/* == HEADER DESIGN ENDS HERE == */
-	/* == FOOTER DESIGN == */
-
-	.footer-container {
-		float: left;
-		width: 100%;
-		position: relative;
-	}
-
-		.footer-container .footer-one-two {
-			float: left;
-			width: 100%;
-			display: inline-block;
-			border-top: solid 1px rgb(230, 230, 230)
-		}
-
-			.footer-one-two:first-child {
-				padding: 30px 0px;
-			}
-
-				.footer-one-two:first-child .one-three {
-					float: left;
-					width: 25%;
-					height: 100%;
-					display: inline-block;
-				}
-
-					.footer-one-two:first-child .one-three:first-child {
-						margin-left: 7.5%;
-					}
-
-						.footer-one-two:first-child .one-three:first-child h2 {
-							float: left;
-							width: 100%;
-							font-family: 'Gentona';
-							font-size: 120%;
-							color: rgb(4, 80, 140);
-							text-transform: uppercase;
-							margin-bottom: 40px;
-						}
-
-						.footer-one-two:first-child .one-three:first-child img {
-							float: left;
-							width: 6%;
-							height: 15px;
-							padding-right: 2%;
-						}
-
-						.footer-one-two:first-child .one-three:first-child p {
-							float: left;
-							width: 92%;
-							margin-bottom: 15px;
-							font-family: 'Century Gothic';
-							font-size: 85%;
-						}
-
-						.footer-one-two:first-child .one-three:first-child a {
-							float: left;
-							display: inline-block;
-							text-decoration: none;
-							margin-top: 20px;
-							padding: 8px 5%;
-							text-align: center;
-							text-transform: uppercase;
-							font-family: 'Gentona';
-							font-size: 90%;
-							color: rgb(255, 255, 255);
-						}
-
-							.footer-one-two:first-child .one-three:first-child #fb-btn {
-								background-color: rgb(69, 93, 146);
-							}
-
-							.footer-one-two:first-child .one-three:first-child #twitter-btn {
-								background-color: rgb(29, 159, 239);
-							}
-
-							.footer-one-two:first-child .one-three:first-child #gmail-btn {
-								background-color: rgb(220, 75, 62);
-							}
-
-					.footer-one-two:first-child .one-three:nth-child(2) {
-						margin: 0px 5%;
-					}
-
-						.footer-one-two:first-child .one-three:nth-child(2) h2 {
-							float: left;
-							width: 100%;
-							font-family: 'Gentona';
-							font-size: 120%;
-							color: rgb(4, 80, 140);
-							text-transform: uppercase;
-							margin-bottom: 40px;
-							text-align: center;
-						}
-
-						.footer-one-two:first-child .one-three:nth-child(2) a {
-							float: left;
-							text-decoration: none;
-							width: 100%;
-							text-align: center;
-							color: rgb(69, 93, 146);
-							line-height: 25px;
-							font-size: 95%;
-						}
-
-					.footer-one-two:first-child .one-three:last-child {
-						margin-righ: 7.5%;
-					}
-
-						.footer-one-two:first-child .one-three:last-child h2 {
-							float: left;
-							width: 100%;
-							font-family: 'Gentona';
-							font-size: 120%;
-							color: rgb(4, 80, 140);
-							text-transform: uppercase;
-							margin-bottom: 40px;
-							text-align: center;
-						}
-
-						.footer-one-two:first-child .one-three:last-child a {
-							float: left;
-							display: inline-block;
-							width: 100%;
-							text-decoration: none;
-							line-height: 25px;
-							color: rgb(69, 93, 146);
-							text-align: center;
-						}
-
-			.footer-one-two:last-child {
-				float: left;
-				width: 100%;
-				padding: 8px 0px;
-				background-color: rgb(4, 80, 140);
-			}
-
-				.footer-one-two:last-child p {
-					font-size: 85%;
-					color: rgb(255, 255, 255);
-					text-align: center;
-				}
-
-	/* == FOOTER DESIGN ENDS HERE == */
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-	/* == HEADER DESIGN == */
-
-	.header-container {
-		float: left;
-		position: fixed;
-		width: 100%;
-		height: 84px;
-		background-color: rgb(255, 255, 255);
-		border-top: solid 5px rgb(4, 80, 140);
-		border-bottom: solid 1px rgb(230, 230, 230);
-		z-index: 3;
-	}
-
-		.header-container .header-title {
-			float: left;
-			width: 35%;
-			height: 100%;
-		}
-
-			.header-title a {
-				text-decoration: none;
-				color: rgb(30, 30, 30);
-			}
-
-				.header-title a img {
-					float: left;
-					width: 18%;
-					height: 90%;
-					margin: 1% 2% 0px 3%;
+					margin: 0.5% 2% 0px 3%;
 				}
 
 				.header-title a h1 {
@@ -1035,7 +1603,7 @@
 					width: 75%;
 					height: 90%;
 					font-family: 'Gentona';
-					font-size: 160%;
+					font-size: 190%;
 					line-height: 20px;
 					padding: 3.5% 0px;
 					color: rgb(30, 30, 30);
@@ -1049,6 +1617,7 @@
 			float: left;
 			width: 65%;
 			height: 0%;
+			display: block;
 		}
 
 			.header-nav .header-nav-main {
@@ -1056,7 +1625,7 @@
 				position: relative;
 				width: 98%;
 				height: 50%;
-				margin-top: 5%;
+				margin-top: 2.5%;
 			}
 
 				.header-nav-main a {
@@ -1065,7 +1634,7 @@
 					display: inline-block;
 					text-decoration: none;
 					font-family: 'Century Gothic';
-					font-size: 80%;
+					font-size: 95%;
 					text-transform: uppercase;
 					color: rgb(50, 50, 50);
 					padding: 8px 20px;
@@ -1196,7 +1765,7 @@
 							color: rgb(4, 80, 140);
 							text-transform: uppercase;
 							margin-bottom: 40px;
-							text-align: center;
+							text-align: cent*/er;
 						}
 
 						.footer-one-two:first-child .one-three:nth-child(2) a {
