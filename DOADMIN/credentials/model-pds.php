@@ -1,5 +1,7 @@
 <?php
    include 'connection.php';
+   include '../../include/session.php';
+   
    use PHPMailer\PHPMailer\PHPMailer;
    use PHPMailer\PHPMailer\Exception;
 
@@ -241,24 +243,26 @@
 			//auto generate simple password
 			//passwrod = 1 or 3 char of Firstname + surname
 			$password = '';
-			for($i = 0; $i < (strlen($pds_firstname) < 3 ? 1 : 3); ++$i)
+			/* for($i = 0; $i < (strlen($pds_firstname) < 3 ? 1 : 3); ++$i)
 			$password .= $pds_firstname[$i];
 			$password .= $pds_surname;
+			 */
+			$sql="INSERT INTO `user` (`UID`, `EMAIL`, `PWD`, `STATUS`, `ACTIVATION_KEY`, `IS_ONLINE`) VALUES ('". $user['UID'] ."', '$pds_emailaddress', '$password', '1', '$generatedKey', '0');";
 			
-			$sql="INSERT INTO `user` (`UID`, `EMAIL`, `PWD`, `STATUS`, `ACTIVATION_KEY`, `IS_ONLINE`) VALUES ('', '$pds_emailaddress', '$password', '1', '$generatedKey', '0');";
+			$sql .= " INSERT INTO `personal_info` (`UID`, `FIRSTNAME`, `LASTNAME`, `MIDDLENAME`, `EXTENSION_NAME`, `BIRTHDATE`, `BIRTHPLACE`, `GENDER`, `HEIGHT`, `WEIGHT`, `BLOOD_TYPE`, `CIVIL_STATUS`, `GSIS_ID_NO`, `PAG_IBIG_NO`, `PHILHEALTH_NO`, `SSS_NO`, `TIN_NO`, `AGENCY_EMPLOYEE_NO`, `CITIZENSHIP`, `RESIDENTIAL_LOTNO`, `RESIDENTIAL_STREET`, `RESIDENTIAL_SUBDIVISION`, `RESIDENTIAL_BARANGAY`, `RESIDENTIAL_MUNICIPALITY`, `RESIDENTIAL_PROVINCE`, `RESIDENTIAL_ZIP_CODE`, `PERMANENT_LOTNO`, `PERMANENT_STREET`, `PERMANENT_SUBDIVISION`, `PERMANENT_BARANGAY`, `PERMANENT_MUNICIPALITY`, `PERMANENT_PROVINCE`, `PERMANENT_ZIP_CODE`, `TELEPHONE_NO`, `MOBILE_NO`) VALUES ('". $user['UID'] ."', '$pds_firstname', '$pds_surname', '$pds_middlename', '$pds_nameextension', '$pds_dateofbirth', '$pds_placeofbirth', '$pds_gender', '$pds_height', '$pds_weight', '$pds_bloodtype', '$civil_status', '$pds_gsisno', '$pds_pagibigno', '$pds_philhealthno', '$pds_sssno', '$pds_tinno', '$pds_agencyemployee', '$pds_citizenship', '$pds_rhouseblk', '$pds_rstreet', '$pds_rsubdivision', '$pds_rbarangay', '$pds_rmunicipality', '$pds_rprovince', '$pds_rzipcode', '$pds_phouseblk', '$pds_pstreet', '$pds_psubdivision', '$pds_pbarangay', '$pds_pmunicipality', '$pds_pprovince', '$pds_pzipcode', '$pds_mobileno', '$pds_mobileno');";
 			
-			$sql .= " INSERT INTO `personal_info` (`UID`, `FIRSTNAME`, `LASTNAME`, `MIDDLENAME`, `EXTENSION_NAME`, `BIRTHDATE`, `BIRTHPLACE`, `GENDER`, `HEIGHT`, `WEIGHT`, `BLOOD_TYPE`, `CIVIL_STATUS`, `GSIS_ID_NO`, `PAG_IBIG_NO`, `PHILHEALTH_NO`, `SSS_NO`, `TIN_NO`, `AGENCY_EMPLOYEE_NO`, `CITIZENSHIP`, `RESIDENTIAL_LOTNO`, `RESIDENTIAL_STREET`, `RESIDENTIAL_SUBDIVISION`, `RESIDENTIAL_BARANGAY`, `RESIDENTIAL_MUNICIPALITY`, `RESIDENTIAL_PROVINCE`, `RESIDENTIAL_ZIP_CODE`, `PERMANENT_LOTNO`, `PERMANENT_STREET`, `PERMANENT_SUBDIVISION`, `PERMANENT_BARANGAY`, `PERMANENT_MUNICIPALITY`, `PERMANENT_PROVINCE`, `PERMANENT_ZIP_CODE`, `TELEPHONE_NO`, `MOBILE_NO`) VALUES ('', '$pds_firstname', '$pds_surname', '$pds_middlename', '$pds_nameextension', '$pds_dateofbirth', '$pds_placeofbirth', '$pds_gender', '$pds_height', '$pds_weight', '$pds_bloodtype', '$civil_status', '$pds_gsisno', '$pds_pagibigno', '$pds_philhealthno', '$pds_sssno', '$pds_tinno', '$pds_agencyemployee', '$pds_citizenship', '$pds_rhouseblk', '$pds_rstreet', '$pds_rsubdivision', '$pds_rbarangay', '$pds_rmunicipality', '$pds_rprovince', '$pds_rzipcode', '$pds_phouseblk', '$pds_pstreet', '$pds_psubdivision', '$pds_pbarangay', '$pds_pmunicipality', '$pds_pprovince', '$pds_pzipcode', '$pds_mobileno', '$pds_mobileno');";
-			
-			$sql .= " INSERT INTO `family_background` (`UID`, `spousesurname`, `spousefirstname`, `spousemiddlename`, `spousenameextension`, `spouseoccupation`, `businessname`, `businessaddress`, `businesstelno`, `fathersurname`, `fatherfirstname`, `fathernameextension`, `fathermiddlename`, `mothermaindenname`, `motherfirstname`, `mothersnameextension`, `mothersmiddlename`) VALUES ('$', '$pds_spousesurname', '$pds_spousefirstname', '$pds_spousemiddlename', '$pds_spousenameextension', '$pds_spouseoccupation', '$pds_businessname', '$pds_businessaddress', '$pds_businesstelno', '$pds_fathersurname', '$pds_fatherfirstname', '$pds_fathernameextension', '$pds_fathermiddlename', '$pds_mothermaindenname', '$pds_motherfirstname', '$pds_mothersnameextension', '$pds_mothersmiddlename');";
-			
-			
+			$sql .= " INSERT INTO `family_background` (`UID`, `spousesurname`, `spousefirstname`, `spousemiddlename`, `spousenameextension`, `spouseoccupation`, `businessname`, `businessaddress`, `businesstelno`, `fathersurname`, `fatherfirstname`, `fathernameextension`, `fathermiddlename`, `mothermaindenname`, `motherfirstname`, `mothersnameextension`, `mothersmiddlename`) VALUES ('". $user['UID'] ."', '$pds_spousesurname', '$pds_spousefirstname', '$pds_spousemiddlename', '$pds_spousenameextension', '$pds_spouseoccupation', '$pds_businessname', '$pds_businessaddress', '$pds_businesstelno', '$pds_fathersurname', '$pds_fatherfirstname', '$pds_fathernameextension', '$pds_fathermiddlename', '$pds_mothermaindenname', '$pds_motherfirstname', '$pds_mothersnameextension', '$pds_mothersmiddlename');";
 			
 			
-			if ($conn->multi_query($sql)) 
+			
+			
+			if ($conn->multi_query($sql)) {
 				$exe = "success";
+			$output = $sql;
+			}
+				
 			else 
 				$error = "Error: " . $sql . "<br>" . $conn->error;
-			
 			
 		} else {
 			$error = "email already exist";

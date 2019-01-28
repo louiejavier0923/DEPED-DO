@@ -80,6 +80,7 @@
                 <tbody>
                   <?php
                     $cnt='';
+                    
                     $sql = "SELECT * FROM appointment a join view_rank v On v.UID = a.UID join publish_vacancy pv ON pv.UID = a.VID join schools s ON s.SID = pv.PLACE_ASSIGNMENT GROUP BY v.UID";
                     $query = $conn->query($sql);
 

@@ -260,6 +260,11 @@ switch ($_POST['action']) {
 			$comm_val = $row['COMMUNICATION_VALUE'];
 			$total_score = $row['TOTALPOINTS'];
 
+			$points = split(',', ',');
+			if($gwa!=""){
+			$points = split(',', $gwa);
+			}
+
 			if ($total_score==0) {
 				$rem = "-";
 			}

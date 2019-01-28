@@ -78,14 +78,14 @@
                     <label for="salaries" class="col-sm-3 control-label">Salaries</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="salaries" name="salaries" required>
+                      <input type="text" class="form-control" maxlength="5" id="salaries" name="salaries" required>
                     </div>
                 </div>
                  <div class="form-group">
                     <label for="itemno" class="col-sm-3 control-label">Item no</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="itemno" name="itemno" required>
+                      <input type="text" class="form-control" maxlength="14" id="itemno" name="itemno" required>
                     </div>
                 </div>
           	</div>
@@ -158,17 +158,17 @@
                     </div>
                 </div>
                  <div class="form-group">
-                    <label for="edit_salaries" class="col-sm-3 control-label">Salaries</label>
+                    <label for="edit_salaries"  class="col-sm-3 control-label">Salaries</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="edit_salaries" name="edit_salaries" required>
+                      <input type="text" maxlength="5" class="form-control" id="edit_salaries" name="edit_salaries" required>
                     </div>
                 </div>
                  <div class="form-group">
                     <label for="edit_itemno" class="col-sm-3 control-label">Item no</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="edit_itemno" name="edit_itemno" required>
+                      <input type="text" maxlength = "14" class="form-control" id="edit_itemno" name="edit_itemno" required>
                     </div>
                 </div>
             </div>

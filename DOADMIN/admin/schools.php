@@ -5,7 +5,6 @@
 
   <?php include 'includes/navbar.php'; ?>
   <?php include 'includes/menubar.php'; ?>
-
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -80,6 +79,9 @@
       </div>
     </section>   
   </div>
+  <script>
+
+  </script>
     
 
   <?php include 'includes/footer.php'; ?>
@@ -102,8 +104,6 @@ function fetch_schools(action='fetch_schools_tbl'){
     }
   });
 }
-
-
 $(function(){
    fetch_schools();
 	var id = $(this).data('id');
@@ -161,10 +161,26 @@ $(document).on('click', '.edit', function(e) {
 
 $(document).on('click', '#submit_school', function(e) {
 e.preventDefault();
-    add_school();
 
+        var school_name = $("#school_name").val();
+        var school_address = $("#school_address").val();
+        if(school_name == "" || school_address == ||){
+            alert("Fill up all forms!");
+        }
+        else
+        {
+    add_school();
+}
 
   });
+
+
+
+
+
+
+
+
 function add_school(action='add_schools'){
         var school_name = $("#school_name").val();
         var school_address = $("#school_address").val();
@@ -221,7 +237,26 @@ $(document).on('click', '.delete', function(e) {
                    $("#school_name").val("");
                    $("#school_address").val("");
   });
+
+
+ $( "#school_name" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                    alert("Alphabet letters only!");
+                        e.preventDefault();
+                    }
+                });
+
+
+ $( "#school_name" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                    alert("Alphabet letters only!");
+                        e.preventDefault();
+                    }
+                });
   }); 
+
 
 </script>
 </body>
