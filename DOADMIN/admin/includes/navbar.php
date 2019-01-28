@@ -19,7 +19,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?php echo (!empty($user['photo'])) ? '../images/'.$user['photo'] : '../images/profile.jpg'; ?>" class="user-image" alt="User Image">
-              <span class="hidden-xs">ROMERO</span>
+              <span class="hidden-xs"><?php echo $user['EMAIL'] ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -27,7 +27,7 @@
                 <img src="<?php echo (!empty($user['photo'])) ? '../images/'.$user['photo'] : '../images/profile.jpg'; ?>" class="img-circle" alt="User Image">
 
                 <p>
-                  ROMERO ADRIANE
+                  <?php echo $user['LASTNAME'].', '.$user['FIRSTNAME'] ?>
                   <small>Member since 2019</small>
                 </p>
               </li>
