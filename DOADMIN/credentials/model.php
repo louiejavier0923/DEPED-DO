@@ -537,6 +537,7 @@ echo json_encode($data);
                                          
                             
                                            if($mail->Send()) {
+
                                                       $sql="UPDATE publish_vacancy SET APP_ISSET = '1' WHERE UID='".$ids."';";
                                                        $result=mysqli_query($conn,$sql);
 
@@ -568,8 +569,8 @@ echo json_encode($data);
                      
                       $school_name = $_POST['school_name'];
                       $school_address = $_POST['school_address'];
-                      
-                      $sql=$conn->query("INSERT INTO schools(NO,SID,SCHOOL_NAME,SCHOOL_ADDRESS,isActive)VALUES('','SID-0004','".$school_name."','".$school_address."' , '1')");
+                      $sql=$conn->query("CALL `insert_school`('".$school_name."', '".$school_address."')");
+                    
                              $output='Successfully inserted';
 
               
