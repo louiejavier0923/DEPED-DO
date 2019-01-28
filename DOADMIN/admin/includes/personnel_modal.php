@@ -35,11 +35,11 @@
                     <label for="title" class="col-sm-3 control-label">Email</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="email" name="email" required>
+                      <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="title" class="col-sm-3 control-label">Password(max 10 char)</label>
+                    <label for="title" class="col-sm-3 control-label">Password</label>
 
                     <div class="col-sm-9">
                       <input type="password" class="form-control" maxlength="10 "id="pass" name="pass" required>
