@@ -928,7 +928,8 @@
 
 					.footer-one-two:first-child .one-three:first-child {
 						float: left;
-						width: 30%;
+						width: 25%;
+						margin-right: 0px;
 					}
 
 						.footer-one-two:first-child .one-three:first-child h2 {
@@ -983,8 +984,8 @@
 
 					.footer-one-two:first-child .one-three:nth-child(2) {
 						float: left;
-						width: 30%;
-						margin: 0%;
+						width: 25%;
+						margin: 0% 5%;
 					}
 
 						.footer-one-two:first-child .one-three:nth-child(2) h2 {
@@ -1010,7 +1011,7 @@
 
 					.footer-one-two:first-child .one-three:last-child {
 						float: left;
-						width: 30%;
+						width: 25%;
 						margin: 0px;
 					}
 
@@ -1512,7 +1513,7 @@
 							color: rgb(4, 80, 140);
 							text-transform: uppercase;
 							margin-bottom: 40px;
-							text-align: center;
+							text-align: cent*/er;
 						}
 
 						.footer-one-two:first-child .one-three:nth-child(2) a {
@@ -1778,7 +1779,7 @@
 						}
 
 					.footer-one-two:first-child .one-three:last-child {
-						margin-righ: 7.5%;
+						margin-right: 7.5%;
 					}
 
 						.footer-one-two:first-child .one-three:last-child h2 {
