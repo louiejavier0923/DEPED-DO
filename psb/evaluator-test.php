@@ -136,13 +136,26 @@ $id = $_SESSION['ID'];
 								</div>
 							</section>
 							<section class= "content center-pos">
-								<div class="eval-out">
+								<div class='eval-out'>
 									<button>Edit</button>
 									<div class="eval-out-value">20</div>
 								</div>
-								<div class='educ-window'>
-									<div class="educ-window-content">
-										
+								<div class='educ-window exp-window'>
+									<div class='educ-window-content'>
+										<div class='educ-window-content-form'>
+											<input type='number' class='experience-months' placeholder='Teaching experience(in months)'/>
+										</div>
+										<div class='educ-window-content-form'>
+											<select>
+												<option value='1'>Less than 2 years experience</option>
+												<option value='2'>2 to less than 5 years experience</option>
+												<option value='3'>5 or more years experience</option>
+											</select>
+										</div>
+										<div class="ewc-grid2-col exp-btns">
+											<button>Cancel</button>
+											<button>Save</button>
+										</div>
 									</div>
 								</div>
 							</section>
@@ -182,7 +195,7 @@ $id = $_SESSION['ID'];
 <!-- Custom Javascripts -->
 <script src="../RES/PSb-RESOURCES/JS/functions.js"></script>
 <script src="../RES/PSb-RESOURCES/JS/pointing-function.js"></script>
-<!-- <script src="../RES/PSb-RESOURCES/JS/evaluate-test.js"></script> -->
+<script src="../RES/PSb-RESOURCES/JS/evaluate-test.js"></script>
 
 	</body>
 </html>

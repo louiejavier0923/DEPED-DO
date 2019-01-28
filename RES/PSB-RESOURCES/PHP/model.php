@@ -280,8 +280,29 @@ switch ($_POST['action']) {
 									</div>
 								</div>
 							</section>
-							<section class= 'content'>
-								<input type= 'text' name='EXPERIENCE' class='input-grade e-experience' value='$exp'>
+							<section class= 'content center-pos'>
+								<div class='eval-out'>
+									<button class='eval-out-editbtn'>Edit</button>
+									<div class='eval-out-value'>$exp</div>
+								</div>
+								<div class='educ-window exp-window'>
+									<div class='educ-window-content'>
+										<div class='educ-window-content-form'>
+											<input type='number' class='experience-months' placeholder='Teaching experience(in months)'/>
+										</div>
+										<div class='educ-window-content-form'>
+											<select>
+												<option value='1'>Less than 2 years experience</option>
+												<option value='2'>2 to less than 5 years experience</option>
+												<option value='3'>5 or more years experience</option>
+											</select>
+										</div>
+										<div class='ewc-grid2-col exp-btns'>
+											<button class='ex-cancel'>Cancel</button>
+											<button class='ex-save'>Save</button>
+										</div>
+									</div>
+								</div>
 							</section>
 							<section class= 'content'>
 								<input type= 'text' name='ELIGIBILITY' class='input-grade e-let' value='$eligib'>

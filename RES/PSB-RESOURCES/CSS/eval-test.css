@@ -20,7 +20,7 @@
     z-index: 1;
     box-shadow: 0px 0px 3px #888;
     border-radius: 4px;
-    /* display: none; */
+    display: none;
 }
 .educ-window:before{
     content: '';
@@ -79,11 +79,11 @@
     font-size: 80%;
 }
 .ewc-grid2-col{
-    width: calc(100% - 8px);
+    width: calc(100% - 0px);
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0px 4px;
+    padding: 0px 0px;
 }
 .ewc-grid2-col button{
     width: calc(100% - 4px);
@@ -103,4 +103,43 @@
     background-color: #fff;
     border: 1px solid rgb(4, 80, 140);
     color: rgb(4, 80, 140);
+}
+.exp-window{
+    height: auto;
+    padding: 6px 0px;
+}
+.educ-window-content-form{
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+    padding: 10px 0px;
+}
+.educ-window-content-form:first-child{
+    border-bottom: 1px solid #ccc;
+}
+.educ-window-content-form:last-child{
+    padding: 12px 0px;
+}
+.educ-window-content-form input{
+    float: unset;
+    width: calc(100% - 10px) !important;
+    height: auto !important;
+    font-size: 14px !important;
+    padding: 2px 4px !important;
+    border: 1px solid #888 !important;
+    text-align: left !important;
+}
+.educ-window-content-form select{
+    float: unset;
+    width: calc(100% - 0px) !important;
+    height: auto !important;
+    font-size: 14px !important;
+    padding: 2px 4px !important;
+    border: 1px solid #888 !important;
+    text-align: left !important;
+    font-weight: normal;
+}
+.exp-btns{
+    height: 5vh;
 }

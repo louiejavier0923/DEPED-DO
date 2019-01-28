@@ -130,6 +130,13 @@ $(document).ready(function(){
 			'display':'none'
 		})
 	})
+	.on('click','.ex-cancel',function(){
+
+		var e_win = $(this).parent('.ewc-grid2-col').parent('.educ-window-content').parent('.educ-window');
+		e_win.css({
+			'display':'none'
+		})
+	})
 	.on('click','.ee-save',function(){
 
 		var additional = 0;
