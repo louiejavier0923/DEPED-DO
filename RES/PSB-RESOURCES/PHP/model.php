@@ -190,6 +190,7 @@ switch ($_POST['action']) {
 			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID) AS 'EDUCATION',
 			(SELECT ap.VALUE FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID) AS 'EDUCATION_GWA',
 			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EXPERIENCE' AND ap.UID=a.UID) AS 'EXPERIENCE',
+			(SELECT ap.VALUE FROM applicants_points ap WHERE ap.CRITERIA_CODE='EXPERIENCE' AND ap.UID=a.UID) AS 'EXPERIENCE_VALUE',
 			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='ELIGIBILITY' AND ap.UID=a.UID) AS 'ELIGIBILITY',
 			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='TRAINING' AND ap.UID=a.UID) AS 'TRAINING',
 			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.GRADED_BY='$c' AND ap.CRITERIA_CODE='INTERVIEW' AND ap.UID=a.UID) AS 'INTERVIEW',
@@ -212,6 +213,7 @@ switch ($_POST['action']) {
 			$gwa = $row['EDUCATION_GWA'];
 			$points = split(',', $gwa);
 			$exp = $row['EXPERIENCE'];
+			$exp_point = ',0';
 			$eligib = $row['ELIGIBILITY'];
 			$train = $row['TRAINING'];
 			$interview = $row['INTERVIEW'];
@@ -224,6 +226,10 @@ switch ($_POST['action']) {
 			}
 			else{
 				$rem = number_format($total_score, 2, '.','');
+			}
+
+			if($row['EXPERIENCE_VALUE']!=""){
+				$exp_point = split(',',$row['EXPERIENCE_VALUE']);
 			}
 
 			if ($points[1]==2) {
@@ -243,6 +249,41 @@ switch ($_POST['action']) {
 					<div class='ewc-grid-input'>
 						<input type='checkbox' class='checkbox-doctor' name='doctor'/>&nbsp;&nbsp;With Master or Doctors(PhD) degree
 					</div>";
+			}
+
+			switch($exp_point[1]){
+				case '0':
+					$exp_options="
+						<option value='0' selected>Choose Options</option>
+						<option value='1'>Less than 2 years experience</option>
+						<option value='2'>2 to less than 5 years experience</option>
+						<option value='3'>5 or more years experience</option>
+					";
+				break;
+				case '1':
+					$exp_options="
+						<option value='0'>Choose Options</option>
+						<option value='1' selected>Less than 2 years experience</option>
+						<option value='2'>2 to less than 5 years experience</option>
+						<option value='3'>5 or more years experience</option>
+					";
+				break;
+				case '2':
+					$exp_options="
+						<option value='0'>Choose Options</option>
+						<option value='1'>Less than 2 years experience</option>
+						<option value='2' selected>2 to less than 5 years experience</option>
+						<option value='3'>5 or more years experience</option>
+					";
+				break;
+				case '3':
+					$exp_options="
+						<option value='0'>Choose Options</option>
+						<option value='1' selected>Less than 2 years experience</option>
+						<option value='2'>2 to less than 5 years experience</option>
+						<option value='3' selected>5 or more years experience</option>
+					";
+				break;
 			}
 			
 			$html .= "<section class= 'info-container'>
@@ -288,16 +329,15 @@ switch ($_POST['action']) {
 								<div class='educ-window exp-window'>
 									<div class='educ-window-content'>
 										<div class='educ-window-content-form'>
-											<input type='number' class='experience-months' placeholder='Teaching experience(in months)'/>
+											<input type='number' value='$exp_point[0]' class='experience-months' placeholder='Teaching experience(in months)'/>
 										</div>
 										<div class='educ-window-content-form'>
-											<select>
-												<option value='1'>Less than 2 years experience</option>
-												<option value='2'>2 to less than 5 years experience</option>
-												<option value='3'>5 or more years experience</option>
+											<select class='select-kvtlgu'>
+												$exp_options	
 											</select>
 										</div>
 										<div class='ewc-grid2-col exp-btns'>
+											<p class='applicant-id'>$id</p>
 											<button class='ex-cancel'>Cancel</button>
 											<button class='ex-save'>Save</button>
 										</div>
