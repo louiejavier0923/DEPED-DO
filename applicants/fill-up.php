@@ -36,7 +36,7 @@
 										<p>2. Surname</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_surname"> 
+										<input type= "text" class="pds_surname"> 
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -44,8 +44,8 @@
 										<p>First name</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_firstname">
-										<input type= "text" placeholder= "Name Extension (Jr., Sr.)" id="pds_nameextension">
+										<input type= "text" class="pds_firstname">
+										<input type= "text" placeholder= "Name Extension (Jr., Sr.)" class="pds_nameextension">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -53,7 +53,7 @@
 										<p>Middle name</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_middlename">
+										<input type= "text" class="pds_middlename">
 									</section>
 								</section>
 							</section>
@@ -63,7 +63,7 @@
 										<p>3. Date of birth<br>(mm/dd/yyyy)</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "date" id="pds_dateofbirth">
+										<input type= "date" class="pds_dateofbirth">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -71,7 +71,7 @@
 										<p>4. Place of birth</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_placeofbirth">
+										<input type= "text" class="pds_placeofbirth">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -80,10 +80,10 @@
 									</section>
 									<section class= "pi-row-input">
 										<section class= "radio-input">
-											<input type= "radio" name= "gender"  value= "Male"><p>Male</p>
+											<input type= "radio" class='pds_gender'  name= "gender"  value= "Male"><p>Male</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name= "gender"  value= "Female"><p>Female</p>
+											<input type= "radio" class='pds_gender'  name= "gender"  value= "Female"><p>Female</p>
 										</section>
 									</section>
 								</section>
@@ -93,19 +93,19 @@
 									</section>
 									<section class= "pi-row-input">
 										<section class= "radio-input">
-											<input type= "radio" class="civil_status" value= "Single"><p>Single</p>
+											<input type= "radio"  class="civil_status" value= "Single"><p>Single</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name="civil_status" value= "Married"><p>Married</p>
+											<input type= "radio" class="civil_status" name="civil_status" value= "Married"><p>Married</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name="civil_status" value= "Widow"><p>Widowed</p>
+											<input type= "radio" class="civil_status" name="civil_status" value= "Widow"><p>Widowed</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name="civil_status" value= "Separated"><p>Separated</p>
+											<input type= "radio"  class="civil_status" name="civil_status" value= "Separated"><p>Separated</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name="civil_status" value= "Others"><p>Other`s</p>
+											<input type= "radio" class="civil_status" name="civil_status" value= "Others"><p>Other`s</p>
 										</section>
 									</section>
 								</section>
@@ -114,7 +114,7 @@
 										<p>7. Height(m)</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text"  id="pds_height">
+										<input type= "text"  class="pds_height">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -122,7 +122,7 @@
 										<p>8. Weight(kg)</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text"  id="pds_width">
+										<input type= "text"  class="pds_weight">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -130,15 +130,15 @@
 										<p>9. Blood Type</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text"  id="pds_bloodtype">
-									</section>
+										<input type= "text"  class="pds_bloodtype">
+									</section>	
 								</section>
 								<section class= "pi-row">
 									<section class= "pi-row-label">
 										<p>10. GSIS ID No</p> 
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text"  id="pds_gsisno">
+										<input type= "text"  class="pds_gsisno">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -146,7 +146,7 @@
 										<p>11. Pag-ibig ID No</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_pagibigno">
+										<input type= "text" class="pds_pagibigno">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -154,7 +154,7 @@
 										<p>12. Philhealth No.</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_philhealthno">
+										<input type= "text" class="pds_philhealthno">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -162,7 +162,7 @@
 										<p>13. SSS No.</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_sssno">
+										<input type= "text" class="pds_sssno">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -170,7 +170,7 @@
 										<p>14. TIN No.</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_tinno">
+										<input type= "text" class="pds_tinno">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -178,7 +178,7 @@
 										<p>15. Agency Employee No.</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_agencyemployee">
+										<input type= "text" class="pds_agencyemployee">
 									</section>
 								</section>
 							</section>
@@ -189,26 +189,26 @@
 									</section>
 									<section class= "pi-row-input">
 										<section class= "radio-input">
-											<input type= "radio" name= "citi" value= "Filipino">
+											<input type= "radio" class='pds_citizenship' name= "citi" value= "Filipino">
 											<p>Filipino</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name= "citi" value= "Dual Citizenship">
+											<input type= "radio" class='pds_citizenship' name= "citi" value= "Dual Citizenship">
 											<p>Dual Citizenship</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name= "citi" value= "By Birth">
+											<input type= "radio" class='pds_citizenship' name= "citi" value= "By Birth">
 											<p>By Birth</p>
 										</section>
 										<section class= "radio-input">
-											<input type= "radio" name= "citi" value= "By Naturalization">
+											<input type= "radio"  class='pds_citizenship' name= "citi" value= "By Naturalization">
 											<p>By Naturalization</p>
 										</section>
 										<section class= "radio-input">
 											<p>Pls. indicate the country:</p>
 										</section>
-										<section class= "radio-input" id="pds_country">
-											<select>
+										<section class= "radio-input" >
+											<select class="pds_country">
 												<option>Algeria</option>
 												<option>Andorra</option>
 												<option>Angola</option>
@@ -235,16 +235,16 @@
 									</section>
 									<section class= "pi-row-input">
 										<section class= "text-input">
-											<input type= "text" placeholder= "House/Block/Lot No." id="pds_rhouseblk">
-											<input type= "text" placeholder= "Street" id="pds_rstreet">
+											<input type= "text" placeholder= "House/Block/Lot No." class="pds_rhouseblk">
+											<input type= "text" placeholder= "Street" class="pds_rstreet">
 										</section>
 										<section class= "text-input">
-											<input type= "text" placeholder= "Subdivision/Village" id="pds_rsubdivision">
-											<input type= "text" placeholder= "Barangay" id="pds_rbarangay">
+											<input type= "text" placeholder= "Subdivision/Village" class="pds_rsubdivision">
+											<input type= "text" placeholder= "Barangay" class="pds_rbarangay">
 										</section>
 										<section class= "text-input">
-											<input type= "text" placeholder= "City/Municipality" id="pds_rmunicipality">
-											<input type= "text" placeholder= "Province" id="pds_rprovince">
+											<input type= "text" placeholder= "City/Municipality" class="pds_rmunicipality">
+											<input type= "text" placeholder= "Province" class="pds_rprovince">
 										</section>
 									</section>
 								</section>
@@ -253,7 +253,7 @@
 										<p>ZIP CODE</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_rzipcode">
+										<input type= "text" class="pds_rzipcode">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -265,16 +265,16 @@
 									</section>
 									<section class= "pi-row-input">
 										<section class= "text-input">
-											<input type= "text" placeholder= "House/Block/Lot No." id="pds_phouseblk">
-											<input type= "text" placeholder= "Street" id="pds_pstreet">
+											<input type= "text" placeholder= "House/Block/Lot No." class="pds_phouseblk">
+											<input type= "text" placeholder= "Street" class="pds_pstreet">
 										</section>
 										<section class= "text-input">
-											<input type= "text" placeholder= "Subdivision/Village" id="pds_psubdivision">
-											<input type= "text" placeholder= "Barangay" id="pds_pbarangay">
+											<input type= "text" placeholder= "Subdivision/Village" class="pds_psubdivision">
+											<input type= "text" placeholder= "Barangay" class="pds_pbarangay">
 										</section>
 										<section class= "text-input">
-											<input type= "text" placeholder= "City/Municipality" id="pds_pmunicipality">
-											<input type= "text" placeholder= "Province" id="pds_pprovince">
+											<input type= "text" placeholder= "City/Municipality" class="pds_pmunicipality">
+											<input type= "text" placeholder= "Province" class="pds_pprovince">
 										</section>
 									</section>
 								</section>
@@ -283,7 +283,7 @@
 										<p>ZIP CODE</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_pzipcode">
+										<input type= "text" class="pds_pzipcode">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -291,7 +291,7 @@
 										<p>19. Telephone No.</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_telno">
+										<input type= "text" class="pds_telno">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -299,7 +299,7 @@
 										<p>20. Mobile No.</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" id="pds_mobileno">
+										<input type= "text" class="pds_mobileno">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -307,7 +307,7 @@
 										<p>21. Email Address(If any)</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "email" id="pds_emailaddress">
+										<input type= "email" class="pds_emailaddress">
 									</section>
 								</section>
 							</section>
@@ -325,14 +325,14 @@
 									</section>
 									<section class= "pi-row-input">
 										<section class= "text-input">
-											<input type= "text" id="pds_spousesurname">
+											<input type= "text" class="pds_spousesurname">
 										</section>
 										<section class= "text-input">
-											<input type= "text"  id="pds_spousefirstname">
-											<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  id="pds_spousenameextension">
+											<input type= "text"  class="pds_spousefirstname">
+											<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  class="pds_spousenameextension">
 										</section>
 										<section class= "text-input">
-											<input type= "text"  id="pds_spousemiddlename">
+											<input type= "text"  class="pds_spousemiddlename">
 										</section>
 									</section>
 								</section>
@@ -341,7 +341,7 @@
 										<p>Occupation</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text"  id="pds_spouseoccupation">
+										<input type= "text"  class="pds_spouseoccupation">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -349,7 +349,7 @@
 										<p>Employer/Business Name</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text"  id="pds_businessname">
+										<input type= "text"  class="pds_businessname">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -357,7 +357,7 @@
 										<p>Business Address</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text"  id="pds_businessaddress">
+										<input type= "text"  class="pds_businessaddress">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -365,7 +365,7 @@
 										<p>Telephone No.</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text"  id="pds_businesstelno">
+										<input type= "text"  class="pds_businesstelno">
 									</section>
 								</section>
 								<section class= "pi-row">
@@ -376,14 +376,14 @@
 									</section>
 									<section class= "pi-row-input">
 										<section class= "text-input">
-											<input type= "text"  id="pds_fathersurname">
+											<input type= "text"  class="pds_fathersurname">
 										</section>
 										<section class= "text-input">
-											<input type= "text"  id="pds_fatherfirstname">
-											<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  id="pds_fathernameextension">
+											<input type= "text"  class="pds_fatherfirstname">
+											<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  class="pds_fathernameextension">
 										</section>
 										<section class= "text-input">
-											<input type= "text" id="pds_fathermiddlename">
+											<input type= "text" class="pds_fathermiddlename">
 										</section>
 									</section>
 								</section>
@@ -396,14 +396,14 @@
 									</section>
 									<section class= "pi-row-input">
 										<section class= "text-input">
-											<input type= "text" id="pds_mothersurname">
+											<input type= "text" class="pds_mothermaindenname">
 										</section>
 										<section class= "text-input">
-											<input type= "text" id="pds_motherfirstname" >
-											<input type= "text" placeholder= "Name Extension(Jr., Sr.)" id="pds_mothersnameextension">
+											<input type= "text" class="pds_motherfirstname" >
+											<input type= "text" placeholder= "Name Extension(Jr., Sr.)" class="pds_mothersnameextension">
 										</section>
 										<section class= "text-input">
-											<input type= "text" id="pds_mothersmiddlename">
+											<input type= "text" class="pds_mothersmiddlename">
 										</section>
 									</section>
 								</section>
@@ -421,10 +421,10 @@
 									<section class= "family-tbl-info">
 										<section class= "content-info">
 											<section class= "info">
-												<input type= "text" id="pds_children1">
+												<input type= "text" class="pds_children">
 											</section>
 											<section class= "info">
-												<input type= "date">
+												<input type= "date" class="pds_childrenBdate">
 											</section>
 										</section>
 										<section class= "content-info">
@@ -554,20 +554,20 @@
 							<section class= "eligibility-tbl-info">
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_CS'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_CS_rating'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_CS_date'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text"  class='pds_CS_place'>
 									</section>
 									<section class= "info">
-										<input type= "text">
-										<input type= "date">
+										<input type= "text" class='pds_CS_licenceNo'>
+										<input type= "date" class='pds_CS_licenceDate'>
 									</section>
 								</section>
 								<section class= "content-info">
@@ -713,26 +713,26 @@
 							<section class= "expi-tbl-info">
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "date">
-										<input type= "date">
+										<input type= "date" class='pds_WE_FromDate'>
+										<input type= "date" class='pds_WE_ToDate'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_WE_PositionTitle'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_WE_Place'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_WE_MonthSalary'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_WE_Salary'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_WE_AppointmentStatus'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" value='....' class='pds_WE_GovService'>
 									</section>
 								</section>
 								<section class= "content-info">
@@ -977,17 +977,17 @@
 							<section class= "work-tbl-info">
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_VW_Name_Address'>
 									</section>
 									<section class= "info">
-										<input type= "date">
-										<input type= "date">
+										<input type= "date" class='pds_VW_FromDate'>
+										<input type= "date" class='pds_VW_Todate'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_VW_NumbHours'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_VW_Work'>
 									</section>
 								</section>
 								<section class= "content-info">
@@ -1169,20 +1169,20 @@
 							<section class= "training-tbl-info">
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_LaD_Title'>
 									</section>
 									<section class= "info">
-										<input type= "date">
-										<input type= "date">
+										<input type= "date" class='pds_LaD_FromDate'>
+										<input type= "date" class='pds_LaD_ToDate'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_LaD_NumbHours'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_LaD_Type'>
 									</section>
 									<section class= "info">
-										<input type= "text">
+										<input type= "text" class='pds_LaD_ConductBy'>
 									</section>
 								</section>
 								<section class= "content-info">
@@ -1273,7 +1273,7 @@
 					</section>
 				</section>
 				<section class= "application-btn">
-					<button type= "submit" id="submit_pds">DONE</button>
+					<button type= "submit" class='save_pds' id="submit_pds">DONE</button>
 					<button type= "submit" id= "submit_file">ATTACH FILE</button>
 				</section>
 			</section>
@@ -1284,4 +1284,7 @@
 		<?php include '../include/applicant-pds-modal.php';?>
 		<?php include '../include/applicant-files-modal.php';?>
 	</body>
+	<script type="text/javascript" src="../jsp/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../jsp/pds-function.js"></script>
+	
 </html>
