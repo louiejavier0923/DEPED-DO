@@ -3,6 +3,7 @@
 @import url(fonts.css);
 @import url(slider.css);
 @import url(modals.css);
+@import url(responsive-applicant-header.css);
 
 /* == IMPORTS ENDS HERE == */
 /* == GLOBAL DESIGN == */
@@ -18,103 +19,7 @@ body {
 }
 
 /* == GLOBAL DESIGN ENDS HERE == */
-/* == APPLICANT`S HEADER CONTAINER == */
 
-.applicant-header-container {
-	float: left;
-	position: fixed;
-	width: 18%;
-	height: 100%;
-	border-right: solid 1px rgb(240, 240, 240);
-	background-color: rgb(250, 250, 250);
-}
-
-	.applicant-header-container .applicant-header-profile {
-		float: left;
-		width: 100%;
-		border-bottom: solid 1px rgb(200, 200, 200);	
-		border-top: solid 4px rgb(4, 80, 140);
-		background-color: rgb(250, 250, 250);
-	}
-
-		.applicant-header-profile a {
-			float: right;
-			margin: 5px 5% 20px 95%;
-			color: rgb(90, 90, 90);
-			font-size: 130%;
-			transition: all 0.2s ease-in-out;
-		}
-
-		.applicant-header-profile a:hover {
-			transform: scale(1.1, 1.1);
-			transition: all 0.2s ease-in-out;
-		}
-
-		.applicant-header-profile #rank {
-			float: left;
-			font-size: 70%;
-			color: rgb(150, 150, 150);
-			margin: 0px 45% 5px 5%;
-		}
-
-			.applicant-header-profile #rank span {
-				font-weight: bold;
-				text-transform: uppercase;
-			}
-
-		.applicant-header-profile img {
-			float: left;
-			width: 60%;
-			height: 130px;
-			margin: 10px 20% 20px 20%;
-			border-radius: 100%;
-			overflow: hidden;
-		}
-
-		.applicant-header-profile h3 {
-			float: left;
-			width: 95%;
-			margin-left: 5%;
-			font-size: 90%;
-			color: rgb(50, 50, 50);
-		}
-
-		.applicant-header-profile #position {
-			float: left;
-			font-size: 70%;
-			color: rgb(150, 150, 150);
-			margin: 0px 45% 20px 5%;
-		}
-
-	.applicant-header-container .applicant-header-nav {
-		float: left;
-		width: 100%;
-	}
-
-		.applicant-header-nav a {
-			float: left;
-			width: 95%;
-			line-height: 50px;
-			text-decoration: none;
-			text-transform: uppercase;
-			text-align: right;
-			font-family: 'Century Gothic';
-			font-size: 70%;
-			color: rgb(100, 100, 100);
-			border-bottom: solid 1px rgb(240, 240, 240);
-			padding-right: 5%;
-			transition: all 0.2s ease-in-out;
-		}
-
-			.applicant-header-nav a:hover {
-				padding-top: 30px;
-				background-color: rgb(4, 80, 140);
-				color: rgb(255, 255, 255);
-				font-weight: bold;
-				transition: all 0.2s ease-in-out;
-			}
-
-/* == APPLICANT`S HEADER CONTAINER ENDS HERE == */
 /* == APPLICANT`S CONTENT CONTAINER == */
 
 .applicant-content-container {

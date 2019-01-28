@@ -101,5 +101,6 @@
 		</section>
 		<?php include '../include/user-info-modal.php';?>
 		<?php include '../include/applicant-pds-modal.php';?>
+		<?php include '../include/applicant-files-modal.php';?>
 	</body>
 </html>

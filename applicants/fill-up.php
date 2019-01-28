@@ -1282,5 +1282,6 @@
 		<?php include '../include/applicant-attach-modal.php';?>
 		<?php include '../include/applicant-choosefile-modal.php';?>
 		<?php include '../include/applicant-pds-modal.php';?>
+		<?php include '../include/applicant-files-modal.php';?>
 	</body>
 </html>

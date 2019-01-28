@@ -13,6 +13,7 @@
 	margin: 0px;
 	padding: 0px;
 }
+
 .loading-container{
 	position: fixed;
 	width: 100%;
@@ -20,22 +21,21 @@
 	z-index: 1;
 	display: none;
 }
+
 #loading {
-  width: 30px;
-  height: 30px;
-  border: 5px solid #ccc;
-  border-top-color: #ddd;
-  border-radius: 100%;
-  margin-left: 10px;
-
-  display: none;
-
-  animation: round .5s linear infinite;
+	width: 30px;
+	height: 30px;
+	border: 5px solid #ccc;
+	border-top-color: #ddd;
+	border-radius: 100%;
+	margin-left: 10px;
+	display: none;
+	animation: round .5s linear infinite;
 }
 
 @keyframes round {
-   from { transform: rotate(0deg); }
-   to { transform: rotate(360deg); }
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
 } 
 
 body {

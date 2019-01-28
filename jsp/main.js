@@ -235,6 +235,7 @@ $(document).ready(function() {
     var chooseFileModal = document.getElementById('attach-categ');
     var pdsModal = document.getElementById('pds-container');
     var messageModal = document.getElementById('message-modal');
+    var fileModal = document.getElementById('file-modal');
 
     $('body')
       .on('click', '.modal-tab', function() {
@@ -280,8 +281,12 @@ $(document).ready(function() {
               pdsModal.style.display= "none";
             }
 
-            else if(e.target == messageModal) {
+            else if (e.target == messageModal) {
               messageModal.style.display= "none";
+            }
+
+            else if (e.target == fileModal) {
+              fileModal.style.display= "none";
             }
         })
 
@@ -373,6 +378,14 @@ $(document).ready(function() {
               }
             })
           }
+        })
+
+        .on('click', '#closeFileBtn', function (){
+          fileModal.style.display= "none";
+        })
+
+        .on('click', "#filesBtn", function() {
+          fileModal.style.display= "block";
         })
 
     $('#submit_login_btn').click(function() {			
