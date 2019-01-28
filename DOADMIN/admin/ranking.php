@@ -80,7 +80,7 @@
                 <tbody>
                   <?php
                     $cnt='';
-                    $sql = "SELECT * FROM view_rank";
+                    $sql = "SELECT DISTINCT LASTNAME,FIRSTNAME,MIDDLENAME,EXTENSION_NAME,EMAIL,EDUCATION,EXPERIENCE,ELIGIBILITY,TRAINING,DEMO,INTERVIEW_AVG,TOTALPOINTS,COMMUNICATION  FROM view_rank";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $cnt += 1;
