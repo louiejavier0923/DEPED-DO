@@ -386,9 +386,10 @@ echo json_encode($data);
               $output='';
               $uid_array = $_POST['uid'];
               $ids_array = $_POST['sids'];
+              /*
              foreach($_POST['uid'] as $value){
                  
-                    /*
+                    
                      $sql="SELECT * from user where UID='".$value."';";
            
                      $result=mysqli_query($conn,$sql);
@@ -435,10 +436,11 @@ echo json_encode($data);
                                        }
                                }
 
-                      */
+                      
                                                                        
     
             }
+            */
 
            for ($i = 0; $i < count($uid_array); $i++) {
                 
@@ -457,11 +459,54 @@ echo json_encode($data);
                         $sql="INSERT into appointment(UID,VID,DATE,EXPIRATION_DATE)VALUES('".$uid."','".$ids."',CURRENT_DATE(),DATE_ADD(CURRENT_DATE(),INTERVAL 15 DAY));";
                         $result=mysqli_query($conn,$sql);
                         
-                        $output='Success';
-                        
-            
-          }
+                       
 
+                       $sql2="SELECT * from user where UID='".$uid."';";
+           
+                     $result2=mysqli_query($conn,$sql2);
+                          
+                              if($result2->num_rows > 0) 
+                               {
+                                            while($row = $result2->fetch_assoc()) {
+                                                  $appointment_email=$row["EMAIL"];
+                                                       // $mail->SMTPDebug = 2;      
+                                           $mail->isSMTP();                                      // Set mailer to use SMTP
+                                           $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+                                           $mail->SMTPAuth = true;                               // Enable SMTP authentication
+                                           $mail->Username = 'cromeroadr@gmail.com';                 // SMTP username
+                                           $mail->Password = '9325310huffles';                           // SMTP password
+                                           $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+                                           $mail->Port = 465;                                    // TCP port to connect to
+                                       
+                                           //Recipients
+                                           $mail->setFrom('cromeroadr@gmail.com', 'Division Office');
+                                           $mail->addAddress($appointment_email);     // Add a recipient
+                                         
+                                           //$mail->addCC('cc@example.com');
+                                           //$mail->addBCC('bcc@example.com');
+                                           $action = 'verify_email';
+                                           //Attachments
+                                           //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+                                           //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+                                         
+                                           //Content
+                                           $mail->isHTML(true);                                  // Set email format to HTML
+                                           $mail->Subject = 'Here is the subject';
+                                           $mail->Body    = "QCDO set an appointment";
+                                           $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+                                       
+                                         
+                            
+                                           if($mail->Send()) {
+                                                 $output='';
+                                           }
+                                                   
+                                     }
+
+                       } 
+            
+          
+      }
 
               
            $data = array(  
