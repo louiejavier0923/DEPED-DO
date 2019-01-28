@@ -61,7 +61,7 @@
 						</section>
 						<section class= "pi-row-input">
 							<section class= "radio-input">
-							 <input type="radio" name="gender" value="<?php ('Male' == $user['GENDER']) ? 'checked' : ''?> " /><p>Male</p>
+							 <input type="radio" name="gender" value="Male"  <?php ('Male' == $user['GENDER']) ? 'checked' : ''?> /><p>Male</p>
 							</section>
 							<section class= "radio-input">
 								<input type= "radio" name= "gender"  value= "Female" <?php ('Female' == $user['GENDER']) ? 'checked' : ''?>/><p>Female</p>
