@@ -108,7 +108,7 @@
     border: 1px solid rgb(4, 80, 140);
     color: #fff;
 }   
-.ewc-grid2-col button:first-child,.ee-cancel,.ex-cancel{
+.ewc-grid2-col button:first-child,.el-cancel,.ee-cancel,.ex-cancel{
     background-color: #fff;
     border: 1px solid rgb(4, 80, 140);
     color: rgb(4, 80, 140);
@@ -151,4 +151,17 @@
 }
 .exp-btns{
     height: 5vh;
+}
+.ewc-grid-input input[type=radio]{
+    width: unset !important;
+}
+.elig-grid{
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 1fr;
+}
+
+.eligib-window{
+    width: 24vh;
+    height: auto;
+    padding: 6px 0px;
 }

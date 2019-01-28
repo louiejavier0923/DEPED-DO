@@ -81,7 +81,7 @@ $id = $_SESSION['ID'];
 							<p>Specialized<br>Training / Skills - 10%</p>
 						</section>
 						<section class= "header">
-							<p>Interview<br>15%</p>
+							<p>Interview<br>10%</p>
 						</section>
 						<section class= "header">
 							<p>Demo<br>Teaching<br>15%</p>
@@ -133,7 +133,7 @@ $id = $_SESSION['ID'];
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> 
 							</section>
 							<section class= "content center-pos">
 								<div class='eval-out'>
@@ -157,10 +157,32 @@ $id = $_SESSION['ID'];
 											<button>Save</button>
 										</div>
 									</div>
-								</div>
+								</div> 
 							</section>
-							<section class= "content">
-								<input type= "text">
+							<section class= "content center-pos">
+								<div class='eval-out'>
+									<button>Edit</button>
+									<div class="eval-out-value">10</div>
+								</div>
+								<div class='educ-window eligib-window'>
+									<div class='educ-window-content'>
+										<div class='ewc-grid elig-grid'>
+											<div class='ewc-grid-input'>
+												<input type='radio' class='exam-rater' value='LET' name='exam-rater'/>&nbsp;&nbsp;LET
+											</div>
+											<div class='ewc-grid-input'>
+												<input type='radio' class='exam-rater' value='PBET' name='exam-rater'/>&nbsp;&nbsp;PBET
+											</div>
+										</div>
+										<div class='educ-window-content-form'>
+											<input type='number' class='experience-months' placeholder='Enter rating'/>
+										</div>
+										<div class="ewc-grid2-col exp-btns">
+											<button class='el-cancel'>Cancel</button>
+											<button class='el-save'>Save</button>
+										</div>
+									</div>
+								</div>
 							</section>
 							<section class= "content">
 								<input type= "text">
