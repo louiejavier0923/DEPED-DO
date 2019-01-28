@@ -27,6 +27,8 @@
           <ul class="treeview-menu">
             <li><a href="users.php"><i class="fa fa-user"></i>User</a></li>
             <li><a href="personnel.php"><i class="fa fa-user"></i>Personnel</a></li>
+			<li><a href="personal_info.php"><i class="fa fa-user"></i>Personal Info.</a></li>
+			
           </ul>
         </li>
         <li class="treeview">
