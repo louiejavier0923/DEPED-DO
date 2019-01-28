@@ -21,10 +21,10 @@ body {
 	.applicant-content-container .modal-message {
 		float: right;
 		position: fixed;
-		width: 5%;
-		height: 65px;
+		width: 4%;
+		height: 55px;
 		margin-left: 70%;
-		margin-top: 40%;
+		margin-top: 42%;
 		z-index: 1;
 	}
 
@@ -494,18 +494,20 @@ body {
 					margin-bottom: 10px;
 					font-weight: bold;
 					text-transform: uppercase;
+					font-size: 85%;
 				}
 
 				.inbox-user #inbox-content {
 					float: left;
 					width: 80%;
 					margin: 0px 17.5%;
+					font-size: 80%;
 				}
 
 				.inbox-user #inbox-sent {
 					float: right;
 					margin: 5px 2.5% 0px 0px;
-					font-size: 80%;
+					font-size: 50%;
 					text-transform: uppercase;
 					color: rgb(100, 100, 100);
 					font-weight: bold;
@@ -535,18 +537,20 @@ body {
 					margin-bottom: 10px;
 					font-weight: bold;
 					text-transform: uppercase;
+					font-size: 85%;
 				}
 
 				.inbox-admin #inbox-content {
 					float: left;
 					width: 80%;
 					margin: 0px 17.5%;
+					font-size: 80%;
 				}
 
 				.inbox-admin #inbox-receive {
 					float: right;
 					margin: 5px 2.5% 0px 0px;
-					font-size: 80%;
+					font-size: 50%;
 					text-transform: uppercase;
 					color: rgb(100, 100, 100);
 					font-weight: bold;

@@ -85,6 +85,7 @@
 				.header-nav-main a:nth-child(6), .header-nav-main a:last-child {
 					color: rgb(4, 80, 140);
 					transform: scale(1.1, 1.1);
+					cursor: pointer;
 				}
 
 		.header-container #burgerBtn {
@@ -325,6 +326,7 @@
 					border-radius: 3px;
 					color: rgb(255, 255, 255);
 					font-weight: bold;
+					cursor: pointer;
 				}
 
 				.header-nav-main a:nth-child(7) {
@@ -332,6 +334,7 @@
 					margin-right: 10px;
 					border: solid 1px rgb(210, 210, 210);
 					border-radius: 3px;
+					cursor: pointer;
 				}
 
 				.header-nav-main a:nth-child(7):hover {
@@ -575,6 +578,7 @@
 					border-radius: 3px;
 					color: rgb(255, 255, 255);
 					font-weight: bold;
+					cursor: pointer;
 				}
 
 				.header-nav-main a:nth-child(7) {
@@ -582,6 +586,7 @@
 					margin-right: 10px;
 					border: solid 1px rgb(210, 210, 210);
 					border-radius: 3px;
+					cursor: pointer;
 				}
 
 				.header-nav-main a:nth-child(7):hover {
@@ -826,6 +831,7 @@
 					border-radius: 3px;
 					color: rgb(255, 255, 255);
 					font-weight: bold;
+					cursor: pointer;
 				}
 
 				.header-nav-main a:nth-child(7) {
@@ -833,6 +839,7 @@
 					margin-right: 10px;
 					border: solid 1px rgb(210, 210, 210);
 					border-radius: 3px;
+					cursor: pointer;
 				}
 
 				.header-nav-main a:nth-child(7):hover {
@@ -1077,6 +1084,7 @@
 					border-radius: 3px;
 					color: rgb(255, 255, 255);
 					font-weight: bold;
+					cursor: pointer;
 				}
 
 				.header-nav-main a:nth-child(7) {
@@ -1084,6 +1092,7 @@
 					margin-right: 10px;
 					border: solid 1px rgb(210, 210, 210);
 					border-radius: 3px;
+					cursor: pointer;
 				}
 
 				.header-nav-main a:nth-child(7):hover {
