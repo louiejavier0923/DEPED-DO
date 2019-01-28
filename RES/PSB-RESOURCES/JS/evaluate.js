@@ -99,7 +99,10 @@ $(document).ready(function(){
 					e:pid
 				}			
 			}).done(function(data){
-				console.log(data);
+				// console.log(data);
+				if (data) {
+					$('.applicant-filters').blur();
+				}
 			})
 
 		}

@@ -28,18 +28,8 @@ $id = $_SESSION['ID'];
 		<!-- Custom CSS -->
 		<link rel= "stylesheet" href="../css/main.css" type= "text/css" />
 		<link rel= "stylesheet" href="../RES/PSb-RESOURCES/CSS/evaluator.css" type= "text/css" />
-		<style type="text/css">
-			.info-container .content:nth-child(5) input {
-			    float: left;
-			    width: 100%;
-			    height: 100%;
-			    text-align: center;
-			    border: none;
-			    font-family: 'Century Gothic';
-			    font-size: 80%;
-			    outline: none;
-			}
-		</style>
+		<link rel= "stylesheet" href="../RES/PSb-RESOURCES/CSS/eval-test.css" type= "text/css" />
+		
 	</head>
 
 	<body>
@@ -107,7 +97,7 @@ $id = $_SESSION['ID'];
 						</section> -->
 					</section>
 					<section class= "content-info">
-						<!-- <section class= "info-container">
+						<section class= "info-container">
 							<section class= "content">
 								<p>1</p>
 							</section>
@@ -120,14 +110,54 @@ $id = $_SESSION['ID'];
 							<section class= "content">
 								<p>09067720950</p>
 							</section>
-							<section class= "content">
-								<p>21</p>
+							<section class= "content center-pos">
+								<div class="eval-out">
+									<button>Edit</button>
+									<div class="eval-out-value">20</div>
+								</div>
+								<div class='educ-window'>
+									<div class="educ-window-content">
+										<div class="ewc-grid">
+											<div class="ewc-grid-input">
+												<input type="checkbox" name="degree"/>&nbsp;&nbsp;With MA or MS degree
+											</div>
+											<div class="ewc-grid-input">
+												<input type="checkbox" name="degree"/>&nbsp;&nbsp;With Master or Doctors(PhD) degree
+											</div>
+										</div>
+										<div class="ewc-grid2">
+											<input type="number" placeholder="Enter GWA">
+											<div class="ewc-grid2-col">
+												<button>Cancel</button>
+												<button>Save</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</section>
-							<section class= "content">
-								<input type= "text">
-							</section>
-							<section class= "content">
-								<input type= "text">
+							<section class= "content center-pos">
+								<div class='eval-out'>
+									<button>Edit</button>
+									<div class="eval-out-value">20</div>
+								</div>
+								<div class='educ-window exp-window'>
+									<div class='educ-window-content'>
+										<div class='educ-window-content-form'>
+											<input type='number' class='experience-months' placeholder='Teaching experience(in months)'/>
+										</div>
+										<div class='educ-window-content-form'>
+											<select>
+												<option value='1'>Less than 2 years experience</option>
+												<option value='2'>2 to less than 5 years experience</option>
+												<option value='3'>5 or more years experience</option>
+											</select>
+										</div>
+										<div class="ewc-grid2-col exp-btns">
+											<button>Cancel</button>
+											<button>Save</button>
+										</div>
+									</div>
+								</div>
 							</section>
 							<section class= "content">
 								<input type= "text">
@@ -147,10 +177,7 @@ $id = $_SESSION['ID'];
 							<section class= "content">
 								<p>98</p>
 							</section>
-							<section class= "content">
-								<p>1</p>
-							</section>
-						</section> -->
+						</section>
 					</section>
 				</section>
 
@@ -167,7 +194,8 @@ $id = $_SESSION['ID'];
 
 <!-- Custom Javascripts -->
 <script src="../RES/PSb-RESOURCES/JS/functions.js"></script>
-<script src="../RES/PSb-RESOURCES/JS/evaluate.js"></script>
+<script src="../RES/PSb-RESOURCES/JS/pointing-function.js"></script>
+<script src="../RES/PSb-RESOURCES/JS/evaluate-test.js"></script>
 
 	</body>
 </html>
