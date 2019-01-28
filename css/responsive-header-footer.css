@@ -26,20 +26,21 @@
 
 				.header-title a img {
 					float: left;
-					width: 18%;
+					width: 22%;
 					height: 90%;
 					margin: 1% 2% 0px 3%;
 				}
 
 				.header-title a h1 {
 					float: left;
-					width: 75%;
+					width: 72%;
 					height: 90%;
 					font-family: 'Gentona';
 					font-size: 110%;
-					line-height: 15px;
+					line-height: 13px;
 					padding: 3.5% 0px;
 					color: rgb(30, 30, 30);
+					margin-top: -2px;
 				}
 
 		.header-container .header-nav {
@@ -541,7 +542,7 @@
 		.header-container .header-nav {
 			float: left;
 			width: 65%;
-			height: 100%;
+			height: 0%;
 		}
 
 			.header-nav .header-nav-main {
@@ -794,7 +795,7 @@
 		.header-container .header-nav {
 			float: left;
 			width: 65%;
-			height: 100%;
+			height: 0%;
 		}
 
 			.header-nav .header-nav-main {
@@ -1047,7 +1048,7 @@
 		.header-container .header-nav {
 			float: left;
 			width: 65%;
-			height: 100%;
+			height: 0%;
 		}
 
 			.header-nav .header-nav-main {

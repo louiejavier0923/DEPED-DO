@@ -232,6 +232,7 @@ $(document).ready(function() {
     var attachFileModal = document.getElementById('attach-file');
     var loginRegisterModal = document.getElementById('modal-login-register');
     var responsiveNav = document.getElementById('header-nav-responsive');
+    var navContent = document.getElementById('header-content');
     var chooseFileModal = document.getElementById('attach-categ');
     var pdsModal = document.getElementById('pds-container');
     var messageModal = document.getElementById('message-modal');
