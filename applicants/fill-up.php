@@ -1273,7 +1273,7 @@
 					</section>
 				</section>
 				<section class= "application-btn">
-					<button type= "submit" id="submit_pds">DONE</button>
+					<button type= "submit" class='save_pds' id="submit_pds">DONE</button>
 					<button type= "submit" id= "submit_file">ATTACH FILE</button>
 				</section>
 			</section>
@@ -1284,4 +1284,7 @@
 		<?php include '../include/applicant-pds-modal.php';?>
 		<?php include '../include/applicant-files-modal.php';?>
 	</body>
+	<script type="text/javascript" src="../jsp/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../jsp/pds-function.js"></script>
+	
 </html>
