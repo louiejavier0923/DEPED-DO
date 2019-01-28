@@ -1,160 +1,187 @@
 <?php
-   include 'connection.php';
-   use PHPMailer\PHPMailer\PHPMailer;
-   use PHPMailer\PHPMailer\Exception;
+    include 'connection.php';
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
 
-//Load Composer's autoloader
-   require 'vendor/autoload.php';
+    //Load Composer's autoloader
+    require 'vendor/autoload.php';
+    require '../../include/session.php';
 
-   $mail = new PHPMailer(true);
+    $mail = new PHPMailer(true);
  
-   switch($_POST['action']){
+    switch($_POST['action']){
+
+        case 'vacant-function':
+            $vacant_no = $_POST['vacant_no'];
+
+            $sql = "INSERT INTO application VALUES (NULL, '".$user['UID']."', '".$vacant_no."', '0', 'NOW()', '0');";
+            $query = mysqli_query($conn, $sql);
+
+            header('Location: fill-up.php');
+        break;
+
+        case 'update_password':
+            $output = "";
+            $new_password= $_POST['new_password'];
+
+            $sql= "UPDATE user SET PWD= '".$new_password."' WHERE UID= '".$user['UID']."';";
+            $result= mysqli_query($conn, $sql);
+            $output= "Success!";
+
+            $data = array(
+                'message' => $output
+            );
+
+            echo json_encode($data);
+        break;
+
+        case 'update_applicant':
+            $output = "";
+            $app_fname = $_POST['fname'];
+            $app_mname = $_POST['mname'];
+            $app_lname = $_POST['lname'];
+
+            $sql= "UPDATE personal_info SET FIRSTNAME= '". $app_fname ."', LASTNAME= '". $app_lname ."', MIDDLENAME= '". $app_mname ."' WHERE UID= '".$user['UID'] ."';";
+            $result= mysqli_query($conn, $sql);
+            $output= "Success!";
+
+            $data = array(    
+                'message' => $output 
+            );
+
+            echo json_encode($data);
+        break;
 
         case 'admin_login':
-                 $login_email = $_POST['email'];
-                 $login_pwd = $_POST['password'];
 
-  session_start();
-    $sql="SELECT * from admin where EMAIL='".$login_email."';";
-           
-                     $result=mysqli_query($conn,$sql);
-                          
-                              if($result->num_rows > 0) 
-                               {
-                                            while($row = $result->fetch_assoc()) {
+            $login_email = $_POST['email'];
+            $login_pwd = $_POST['password'];
+
+            session_start();
+            $sql="SELECT * from admin where EMAIL='".$login_email."';";
+            $result=mysqli_query($conn,$sql);
+
+                if($result->num_rows > 0) {
+
+                    while($row = $result->fetch_assoc()) {
                                                  
-                                                  $password=$row["PASSWORD"];
-                                                       
-                                                               if($login_pwd==$password) {
-                                                                         $output='successful';
-                                                                         $_SESSION['ADMIN'] = $row["NO"];
-                                                                }
-                                                                else{
-                                                                         $output='invalid password';
-                                                                }
-                                                        
-                                            }
-                               }
-
-                           else{
-                                             $output='INVALID EMAIL';
-                               }
-                          
-                              
-                
- 
-  # code...
-    $conn->close();
-
-
-                $data = array(    
-                       'message' => $output
-            
-                       );
-
-              echo json_encode($data);
-        
-          break;
-        case 'applicants_list':
-          # code...
-           $output='';
-           
-                $sql = "SELECT MAX(b.UID) AS 'bUID',a.FIRSTNAME,a.LASTNAME,a.MIDDLENAME FROM view_rank a join  application b ON a.UID = b.UID WHERE STATUS='0' GROUP BY b.UID";
-                    $query = $conn->query($sql);
-                    while($row = $query->fetch_assoc()){
-                     
-                                
-                     
-                      $output.="
-                                       <option  value=".$row['bUID'].">".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>
-                                  
-                               
+                        $password=$row["PASSWORD"];
                         
-                      ";
+                        if($login_pwd==$password) {
+    
+                            $output='successful';
+                            $_SESSION['ADMIN'] = $row["NO"];
+                        }
+                        else{
+                            $output='invalid password';
+                        }                                 
                     }
-                    $data = array(    
-                       'message' => $output
-            
-                       );
+                }
+                else{
+                    $output='INVALID EMAIL';
+                }
+                # code...
+                $conn->close();
+                $data = array(    
+                    'message' => $output            
+                );
 
-              echo json_encode($data);
-          break;
-   	 /*INSERT*/
-      case 'add_user':
-                      $output='';
-                     
-                      $email = $_POST['email'];
-                      $password = $_POST['password'];
-                      $cpassword = $_POST['cpassword'];
+                echo json_encode($data);
+        
+        break;
 
-                       $sql="SELECT * from user where EMAIL='".$email."';";
-                         $result=mysqli_query($conn,$sql);
-
-                           if($result->num_rows > 0) 
-                               {
-                                    $output='email already used';
-                               }
-
-                           else{
-                                    $sql=$conn->query("INSERT INTO user(UID,EMAIL,PWD, STATUS, IS_ONLINE)VALUES('TCH-0002','".$email."','".$password."','0','0')");
-                                      
-                                    $output='successful inserted';
-                                    
-                                      
-                               }
+        case 'applicants_list':
+            # code...
+            $output='';
            
+            $sql = "SELECT MAX(b.UID) AS 'bUID',a.FIRSTNAME,a.LASTNAME,a.MIDDLENAME FROM view_rank a join  application b ON a.UID = b.UID WHERE STATUS='0' GROUP BY b.UID";
+            $query = $conn->query($sql);
 
-                    $data = array(    
-                       'message' => $output
+            while($row = $query->fetch_assoc()){                     
+                $output.="
+                                    <option  value=".$row['bUID'].">".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>                    
+                                ";
+            }
+
+            $data = array(    
+                'message' => $output 
+            );
+
+            echo json_encode($data);
+
+        break;
+   	    /*INSERT*/
+        case 'add_user':
+            $output='';
+                     
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $cpassword = $_POST['cpassword'];
+
+            $sql="SELECT * from user where EMAIL='".$email."';";
+            $result=mysqli_query($conn,$sql);
+
+            if($result->num_rows > 0) {
+                $output='email already used';
+            }
+            else {
+                $sql=$conn->query("INSERT INTO user(UID,EMAIL,PWD, STATUS, IS_ONLINE)VALUES('TCH-0002','".$email."','".$password."','0','0')");
+                                      
+                $output='successful inserted';                      
+            }
+
+            $data = array(    
+                'message' => $output    
+            );
+
+            echo json_encode($data);
+
+        break;
+
+        case 'add_personnel':
+            $output='';
             
-                       );
+            $lname = $_POST['lname'];
+            $fname = $_POST['fname'];
+            $middlename = $_POST['middlename'];
+            $email = $_POST['email'];
+            $pass = $_POST['pass'];
+            $cpass = $_POST['cpass'];
 
-              echo json_encode($data);
-            break;
-                 case 'add_personnel':
-                      $output='';
-                      $lname = $_POST['lname'];
-                      $fname = $_POST['fname'];
-                      $middlename = $_POST['middlename'];
-                      $email = $_POST['email'];
-                      $pass = $_POST['pass'];
-                      $cpass = $_POST['cpass'];
-
-                $sql=$conn->query("INSERT INTO  evaluators_info_tbl(NO,LASTNAME,FIRSTNAME,MIDDLENAME,EMAIL,PASSWORD,ISACTIVE)
-                  VALUES('','".$lname."','".$fname."','".$middlename."','".$email."','".$pass."', '1')");
-                             $output='Successful inserted';
-                    $data = array(    
-                       'message' => $output
+            $sql=$conn->query("INSERT INTO  evaluators_info_tbl(NO,LASTNAME,FIRSTNAME,MIDDLENAME,EMAIL,PASSWORD,ISACTIVE) VALUES('','".$lname."','".$fname."','".$middlename."','".$email."','".$pass."', '1')");
+            $output='Successful inserted';
             
-                       );
+            $data = array(    
+                'message' => $output 
+            );
 
-              echo json_encode($data);
-            break;
-     
-   	       case 'add_vacancy':
-   	       	      $output='';
-   	       	      $date=date("Y-m-d");
-	                 $string_date = (string)$date;
-   	       	      $title = $_POST['title'];
-                  $description = $_POST['description'];
-                  $expiration = $_POST['expiration'];
-                  $noi = $_POST['noi'];
-                  $status = $_POST['status'];
-                  $itemno = $_POST['itemno'];
-                  $salaries = $_POST['salaries'];
-                  $place = $_POST['place'];
+            echo json_encode($data);
 
-                            $sql=$conn->query("INSERT INTO  publish_vacancy(UID,TITLE,DESCRIPTION,PLACE_ASSIGNMENT,NOI,PUBLICATION_DATE,PUBLICATION_DATE_UNTIL,STATUS,SALARIES,ITEM_NO,isActive)VALUES('PID-1005','".$title."','".$description."','".$place."','".$noi."','".$date."','".$expiration."','".$status."','".$salaries."','".$itemno."', '1')");
-                             $output='Successful inserted';
+        break;
 
-   	       	        $data = array(	 	
-                       'message' => $output
-            
-         	             );
+   	    case 'add_vacancy':
+   	        $output='';
+   	        $date=date("Y-m-d");
+            $string_date = (string)$date;
+   	        $title = $_POST['title'];
+            $description = $_POST['description'];
+            $expiration = $_POST['expiration'];
+            $noi = $_POST['noi'];
+            $status = $_POST['status'];
+            $itemno = $_POST['itemno'];
+            $salaries = $_POST['salaries'];
+            $place = $_POST['place'];
 
-              echo json_encode($data);
-   	       	break;
- 	 /*SELECTION*/
+            $sql=$conn->query("INSERT INTO  publish_vacancy(UID,TITLE,DESCRIPTION,PLACE_ASSIGNMENT,NOI,PUBLICATION_DATE,PUBLICATION_DATE_UNTIL,STATUS,SALARIES,ITEM_NO,isActive)VALUES('PID-1005','".$title."','".$description."','".$place."','".$noi."','".$date."','".$expiration."','".$status."','".$salaries."','".$itemno."', '1')");
+            $output='Successful inserted';
+
+   	        $data = array(	 	
+                'message' => $output
+            );
+
+            echo json_encode($data);
+   	        break;
+            /*SELECTION*/
    	       	case 'get_user_id':
                    $output='';
                    $edit_status = '';
@@ -402,7 +429,7 @@ echo json_encode($data);
         $data = array(  
              'message' => $output          
            );
-     echo json_encode($data);
+     echo json_encode($data);                     
   break;
 
   case 'insert_pds_info':

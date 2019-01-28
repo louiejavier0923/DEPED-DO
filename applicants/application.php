@@ -20,41 +20,23 @@
 			</section>
 			<section class= "application-content">
 				<section class= "content-container">
-					
-					  <?php
-                                  
-                  $sql="SELECT * from publish_vacancy;";
-                      
-                          if ($result=mysqli_query($conn,$sql))
-                          {
-         
-
-                              while ($row=mysqli_fetch_row($result))
-                               { 
-                                   
-                            
-                                    
-
-
-                                     echo  '
-                                           <section class= "container-info">
-						                      <img src= "../img/logo.png">
-						                        <h1 id= "position">'.$row[2].'</h1>
-						                        <p id= "school">'.$row[5].'</p>
-						                        <p id= "address">'.$row[4].', '.$row[3].'</p>
-						                        <p id= "salary">Salary: '.$row[9].' Php</p>
-						                        <a href= "#" data-id='.$row[1].' id= "applyBtn" class="apply_btn">APPLY</a>
-					                       </section>
-                                               ';
-                               }
-                          }
-                          mysqli_close($conn);
-                                  
-
-        ?>
-
-				
-				</section>
+				<?php
+						$sql = "SELECT UID, TITLE, NOI, DESCRIPTION, PLACE_ASSIGNMENT, SALARIES, PUBLICATION_DATE FROM publish_vacancy";
+						$query = $conn->query($sql);
+						while($row = $query->fetch_assoc()){
+					?>
+                    <section class= "container-info">
+						<img src= "../img/logo.png">
+						<h1 id= "position"><?php echo $row['TITLE'];?></h1>
+						<input type= "hidden" name= "vacant_no" id= "job_no" value= "<?php echo $row['UID'];?>">
+						<p id= "school"><?php echo $row['NOI'];?></p>
+						<p id= "address"><?php echo $row['PUBLICATION_DATE'];?> | <?php echo $row['DESCRIPTION'];?></p>
+						<p id= "salary">SALARY: <?php echo $row['SALARIES'];?></p>
+						<a id= "applyBtn" class="apply_btn">APPLY</a>
+					</section>
+        			<?php 
+        				}
+        			?>
 			</section>
 		</section>
 		<?php include '../include/user-info-modal.php';?>
