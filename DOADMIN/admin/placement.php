@@ -67,8 +67,9 @@
                  
                 </thead>
                 <tbody>
+               
                   <?php
-                    $sql = "SELECT * FROM publish_vacancy WHERE APP_ISSET = '0'";
+                    $sql = "SELECT p.NO,p.TITLE,p.UID,p.PLACE_ASSIGNMENT,p.ITEM_NO FROM publish_vacancy p join schools a ON p.PLACE_ASSIGNMENT = a.SID WHERE p.APP_ISSET = '0'";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       echo "
@@ -100,6 +101,7 @@
                       ";
                     }
                   ?>
+                
                 </tbody>
               </table>
               <div class="box-header with-border">
@@ -139,7 +141,7 @@ $(function(){
               }
               else{
 
-                       alert(sids);
+                   
                          $.ajax({
                              type: 'POST',
                              url: '../credentials/model.php',
@@ -147,8 +149,13 @@ $(function(){
                              dataType: 'json',
                              success: function(response){
                                           
-                                                    $('.alert-success').html(response.message);
-                                                    alert(sids);
+                                                      $('.alert-success').html('Success Updated').css("display","block");
+                                                        $(".teachers-dropdown  option").attr("hidden",false); 
+                                                      $(".teachers-dropdown").val("SELECT -"); 
+                                                   $("#unselect").css("display","none"); 
+                                                    $('input:checkbox').prop('checked',false);
+
+                                                  applicants_list();
                                             
                                  }
                          });

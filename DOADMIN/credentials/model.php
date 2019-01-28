@@ -15,14 +15,14 @@
           # code...
            $output='';
            
-                   $sql = "SELECT * FROM view_rank";
+                $sql = "SELECT MAX(b.UID) AS 'bUID',a.FIRSTNAME,a.LASTNAME,a.MIDDLENAME FROM view_rank a join  application b ON a.UID = b.UID WHERE STATUS='0' GROUP BY b.UID";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                      
                                 
                      
                       $output.="
-                                       <option  value=".$row['UID'].">".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>
+                                       <option  value=".$row['bUID'].">".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>
                                   
                                
                         
@@ -314,6 +314,7 @@ echo json_encode($data);
 
 
     case 'set_appointment':
+              $output='';
               $uid_array = $_POST['uid'];
               $ids_array = $_POST['sids'];
              foreach($_POST['uid'] as $value){
@@ -362,10 +363,10 @@ echo json_encode($data);
                                                   $output='successful inserted';
                                           }
 
-                                            }
+                                       }
                                }
 
-                     */
+                      */
                                                                        
     
             }
@@ -379,12 +380,15 @@ echo json_encode($data);
                   
                         $sql="UPDATE publish_vacancy SET APP_ISSET = '1' WHERE UID='".$ids."';";
                         $result=mysqli_query($conn,$sql);
-                        
-                       
-                        $sql="INSERT into appointment(UID,VID,DATE,EXPIRATION_DATE)VALUES('".$uid."','".$uid."',CURRENT_DATE(),DATE_ADD(CURRENT_DATE(),INTERVAL 15 DAY));";
+
+                        $sql="UPDATE application SET STATUS = 1 WHERE UID='".$uid."';";
                         $result=mysqli_query($conn,$sql);
                         
-
+                       
+                        $sql="INSERT into appointment(UID,VID,DATE,EXPIRATION_DATE)VALUES('".$uid."','".$ids."',CURRENT_DATE(),DATE_ADD(CURRENT_DATE(),INTERVAL 15 DAY));";
+                        $result=mysqli_query($conn,$sql);
+                        
+                        $output='Success';
                         
             
           }
