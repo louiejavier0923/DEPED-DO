@@ -248,9 +248,9 @@ switch ($_POST['action']) {
 			$gwa = $row['EDUCATION_GWA'];
 			$points = ',';
 			$exp = $row['EXPERIENCE'];
-			$exp_point = ',';
+			$exp_point = split(',',',');
 			$eligib = $row['ELIGIBILITY'];
-			$elg_point = ',';
+			$elg_point = split(',', ',');
 			$train = $row['TRAINING'];
 			$interview = $row['INTERVIEW'];
 			$interview_val = $row['INTERVIEW_VALUE'];
@@ -262,7 +262,7 @@ switch ($_POST['action']) {
 
 			$points = split(',', ',');
 			if($gwa!=""){
-			$points = split(',', $gwa);
+				$points = split(',', $gwa);
 			}
 
 			if ($total_score==0) {
