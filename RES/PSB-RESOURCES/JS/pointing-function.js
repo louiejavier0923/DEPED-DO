@@ -81,6 +81,20 @@ function experiencePoints(order,mnth){
 
 	var p;
 
+	switch(order){
+		case '7':
+			p = mnth*0.15;
+		break;
+
+		case '22':
+			p = mnth*0.5;
+		break;
+	}
+
+	if(p>12){
+		p=12;
+	}
+
 	return p;
 
 }

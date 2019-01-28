@@ -200,6 +200,37 @@ $(document).ready(function(){
 
 		}
 
+	})
+	.on('click','.ex-save',function(){
+
+		var mnths = $(this).parent('.exp-btns').siblings('.educ-window-content-form').children('.experience-months').val();
+		var kvtlgu = $(this).parent('.exp-btns').siblings('.educ-window-content-form').children('.select-kvtlgu').val();
+	
+		var exp_points = parseFloat(experiencePoints('7',mnths))+parseFloat(kvtlgu);
+		var exp_value = mnths.toString()+','+kvtlgu.toString();
+		var uid = $(this).siblings('.applicant-id').html(),
+		pid = $('#published_vacancy_select').val();
+		console.log(experiencePoints('7',mnths) +'/'+exp_value+'/'+exp_points);
+
+		$.ajax({
+			type:'POST',
+			url:'../RES/PSB-RESOURCES/PHP/model.php',
+			data:{
+				action:'insert_applicant_point',
+				a:uid,
+				b:'EXPERIENCE',
+				c:exp_points,
+				d:user_id,
+				e:pid,
+				val:exp_value
+			}			
+		}).done(function(data){
+			// console.log(data);
+			if (data) {
+				$('.applicant-filters').blur();
+			}
+		}) 
+
 	});
 
 	setTimeout(function(){

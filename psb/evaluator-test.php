@@ -97,7 +97,7 @@ $id = $_SESSION['ID'];
 						</section> -->
 					</section>
 					<section class= "content-info">
-						<section class= "info-container">
+						<!-- <section class= "info-container">
 							<section class= "content">
 								<p>1</p>
 							</section>
@@ -177,7 +177,7 @@ $id = $_SESSION['ID'];
 							<section class= "content">
 								<p>98</p>
 							</section>
-						</section>
+						</section> -->
 					</section>
 				</section>
 
