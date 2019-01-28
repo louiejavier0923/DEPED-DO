@@ -10,7 +10,51 @@
  
    switch($_POST['action']){
 
+        case 'admin_login':
+                 $login_email = $_POST['email'];
+                 $login_pwd = $_POST['password'];
 
+  session_start();
+    $sql="SELECT * from admin where EMAIL='".$login_email."';";
+           
+                     $result=mysqli_query($conn,$sql);
+                          
+                              if($result->num_rows > 0) 
+                               {
+                                            while($row = $result->fetch_assoc()) {
+                                                 
+                                                  $password=$row["PASSWORD"];
+                                                       
+                                                               if($login_pwd==$password) {
+                                                                         $output='successful';
+                                                                         $_SESSION['ADMIN'] = $row["NO"];
+                                                                }
+                                                                else{
+                                                                         $output='invalid password';
+                                                                }
+                                                        
+                                            }
+                               }
+
+                           else{
+                                             $output='INVALID EMAIL';
+                               }
+                          
+                              
+                
+ 
+  # code...
+    $conn->close();
+
+
+                $data = array(    
+                       'message' => $output
+            
+                       );
+
+              echo json_encode($data);
+        
+          break;
         case 'applicants_list':
           # code...
            $output='';
@@ -449,15 +493,7 @@ echo json_encode($data);
         $uid = mysql_real_escape_string($uid_array[$i]);
         $ids = mysql_real_escape_string($ids_array[$i]);
                   
-                        $sql="UPDATE publish_vacancy SET APP_ISSET = '1' WHERE UID='".$ids."';";
-                        $result=mysqli_query($conn,$sql);
-
-                        $sql="UPDATE application SET STATUS = 1 WHERE UID='".$uid."';";
-                        $result=mysqli_query($conn,$sql);
-                        
-                       
-                        $sql="INSERT into appointment(UID,VID,DATE,EXPIRATION_DATE)VALUES('".$uid."','".$ids."',CURRENT_DATE(),DATE_ADD(CURRENT_DATE(),INTERVAL 15 DAY));";
-                        $result=mysqli_query($conn,$sql);
+                      
                         
                        
 
@@ -498,7 +534,16 @@ echo json_encode($data);
                                          
                             
                                            if($mail->Send()) {
-                                                 $output='';
+                                                      $sql="UPDATE publish_vacancy SET APP_ISSET = '1' WHERE UID='".$ids."';";
+                                                       $result=mysqli_query($conn,$sql);
+
+                                                      $sql="UPDATE application SET STATUS = 1 WHERE UID='".$uid."';";
+                                                       $result=mysqli_query($conn,$sql);
+                        
+                       
+                                                      $sql="INSERT into appointment(UID,VID,DATE,EXPIRATION_DATE)VALUES('".$uid."','".$ids."',CURRENT_DATE(),DATE_ADD(CURRENT_DATE(),INTERVAL 15 DAY));";
+                                                      $result=mysqli_query($conn,$sql);
+                                                       $output='Success';
                                            }
                                                    
                                      }
