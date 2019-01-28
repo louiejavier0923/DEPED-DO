@@ -8,6 +8,7 @@
              header('location:applicants/home.php');
              }
          ?>
+         <?php include 'DOADMIN/admin/includes/conn.php';?>
 		<title>Home | Division Office</title>
 		<?php include 'include/header-content.php';?>
 	</head>
@@ -146,20 +147,30 @@
 								</section>
 							</section>
 							<section class= "applicant-table-content">
+		                	<?php
+			                    $cnt='';
+			                    $sql = "SELECT DISTINCT LASTNAME, FIRSTNAME, MIDDLENAME, TOTALPOINTS FROM view_rank";
+			                    $query = $conn->query($sql);
+			                    while($row = $query->fetch_assoc()){
+			                      $cnt += 1;
+		                    ?>
 								<section class= "content-info">
 									<section class= "info">
-										<p>1</p>
+										<p><?php echo $cnt ?></p>
 									</section>
 									<section class= "info">
-										<p>Javier, Louie Samson</p>
+										<p><?php echo $row['LASTNAME']; ?>, <?php echo $row['FIRSTNAME']; ?> <?php echo $row['MIDDLENAME']; ?></p>
 									</section>
 									<section class= "info">
 										<p>21</p>
 									</section>
 									<section class= "info">
-										<p>98.8</p>
+										<p><?php echo $row['TOTALPOINTS']; ?></p>
 									</section>
 								</section>
+							<?php
+								}
+                  			?>
 							</section>
 						</section>
 					</section>
