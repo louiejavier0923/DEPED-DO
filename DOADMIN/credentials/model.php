@@ -1048,7 +1048,7 @@ echo json_encode($data);
 
                     case 'fetch_schools_tbl':
                    $output='';
-                               $sql = "SELECT * FROM schools WHERE isActive = '1'";
+                  $sql = "SELECT * FROM schools WHERE isActive = '1'";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $output.= "
