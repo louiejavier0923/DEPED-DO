@@ -16,3 +16,12 @@
 <!-- Custom Javascripts -->
 <script type= "text/javascript" src= "jsp/scrollEffect.js"></script>
 <script type= "text/javascript" src= "jsp/main.js"></script>
+<style>
+    .may-laman{
+        top: -15px !important;
+		color: rgb(4, 80, 140) !important;
+		font-size: 80% !important;
+		font-weight: bold !important;
+    }
+</style>
+<script type= "text/javascript" src= "jsp/login.js"></script>

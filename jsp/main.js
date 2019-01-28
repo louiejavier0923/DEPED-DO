@@ -390,7 +390,7 @@ $(document).ready(function() {
         })
 
     $('#submit_login_btn').click(function() {			
-				login();
+				 login();
     });
     $('#submit_register_btn').click(function() {			
 				register();
