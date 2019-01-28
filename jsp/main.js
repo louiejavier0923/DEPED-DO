@@ -96,30 +96,7 @@ function register(action = 'register_function')
 
    function submit_pds(action='insert_pds_info')
       {
-            var firstname = $('#pds_firstname').val();
-            var surname = $('#pds_surname').val();
-            var middlename = $('#pds_middlename').val();
-            var nameextension = $('#pds_nameextension').val();
-             var dateofbirth = $('#pds_dateofbirth').val();
-            var placeofbirth = $('#pds_placeofbirth').val();
-            var gender = $("input[name='gender']:checked"). val();
-             var civilstatus = $("input[name='civil_status']:checked"). val();
-              $.ajax({
-               url:"../DOADMIN/credentials/model.php",
-               method:"POST",
-               data:{action:action},
-               dataType:"json",
-                   success:function(data){
-                                         
-                      
-                                           
-                                              alert(civilstatus);  
- 
-                                                  
-                                     
-                                         }
-
-                        });
+            
                                 
                    
         }

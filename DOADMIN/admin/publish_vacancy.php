@@ -40,9 +40,9 @@
               <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> New</a>
             </div>
             <div class="box-body" id="reload">
-              <table id="example1" class="table table-bordered">
+              <table id="example1" class="table-bordered">
                 <thead>
-                  <th>PUID</th>
+                 
                   <th>TITLE</th>
                   <th>DESCRIPTION</th>
                   <th>NAME OF INCUMBENT</th>
@@ -57,19 +57,30 @@
                 <tbody>
                   <?php
                     $sql = "SELECT * FROM publish_vacancy WHERE isActive = '1'";
+
+
+
                     
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
+                                
+                     if(strtotime($row['PUBLICATION_DATE']) > strtotime($row['PUBLICATION_DATE_UNTIL'])) {
+                                $status='<span class="label label-danger pull-right">Expired</span>';
+                            }
+                            else{
+                                  $status='<span class="label label-success pull-right">Ongoing</span>';
+                            }
+                            
                       echo "
                         <tr>
-                          <td>".$row['UID']."</td>
+                        
                           <td>".$row['TITLE']."</td>
                           <td>".$row['DESCRIPTION']."</td>
                           <td>".$row['NOI']."</td>
                           <td>".$row['PLACE_ASSIGNMENT']."</td>
                           <td>".$row['PUBLICATION_DATE']."</td>
                           <td>".$row['PUBLICATION_DATE_UNTIL']."</td>
-                          <td>".$row['STATUS']."</td>
+                          <td>".$row['STATUS'].' '.$status."</td>
                           <td>".$row['SALARIES']."</td>
                           <td>".$row['ITEM_NO']."</td>
                           <td>

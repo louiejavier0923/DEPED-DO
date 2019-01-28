@@ -2,6 +2,11 @@ $(function(){
 		
 	$('.save_pds').click(function(){
 	action='add_user_with_pds_info_function';
+	
+	//temp default value
+	pds_gender = 'male';
+	pds_citizenship = 'filipino';
+	civil_status = 'single'
 	//personal info
 	pds_surname = $('.pds_surname').val();
 	pds_firstname = $('.pds_firstname').val();
@@ -189,9 +194,12 @@ $(function(){
 		success: function(response){
 			
 			
-			if(response.exe==='success')
+			if(response.exe==='success'){
+				
+			
 				alert(response.exe);
-			else 
+			$("input").val("");
+			}else 
 				alert(response.error);
 			
 			

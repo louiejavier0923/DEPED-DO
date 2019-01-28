@@ -63,7 +63,7 @@ switch ($_POST['action']) {
 		$html = "";
 		$cnt = 0;
 
-		$sql = "SELECT p.UID,p.LASTNAME,p.FIRSTNAME,p.MIDDLENAME,p.EXTENSION_NAME,p.RESIDENTIAL_ADDRESS,p.MOBILE_NO,u.EMAIL,
+		$sql = "SELECT p.UID,p.LASTNAME,p.FIRSTNAME,p.MIDDLENAME,p.EXTENSION_NAME,p.MOBILE_NO,u.EMAIL,
 			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID) AS 'EDUCATION',
 			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EXPERIENCE' AND ap.UID=a.UID) AS 'EXPERIENCE',
 			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='ELIGIBILITY' AND ap.UID=a.UID) AS 'ELIGIBILITY',
@@ -81,7 +81,7 @@ switch ($_POST['action']) {
 			$cnt += 1;
 			$id = $row['UID'];
 			$name = $row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME'];
-			$address = $row['RESIDENTIAL_ADDRESS'];
+			$address = '';//$row['RESIDENTIAL_ADDRESS'];
 			$mobile = $row['MOBILE_NO'];
 			$email = $row['EMAIL'];
 			$educ = $row['EDUCATION'];
@@ -186,7 +186,7 @@ switch ($_POST['action']) {
 		$html = "";
 		$cnt = 0;
 
-		$sql = "SELECT p.UID,p.LASTNAME,p.FIRSTNAME,p.MIDDLENAME,p.EXTENSION_NAME,p.RESIDENTIAL_ADDRESS,p.MOBILE_NO,u.EMAIL,
+		$sql = "SELECT p.UID,p.LASTNAME,p.FIRSTNAME,p.MIDDLENAME,p.EXTENSION_NAME,p.MOBILE_NO,u.EMAIL,
 			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID) AS 'EDUCATION',
 			(SELECT ap.VALUE FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID) AS 'EDUCATION_GWA',
 			(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EXPERIENCE' AND ap.UID=a.UID) AS 'EXPERIENCE',
@@ -206,7 +206,7 @@ switch ($_POST['action']) {
 			$cnt += 1;
 			$id = $row['UID'];
 			$name = $row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME'];
-			$address = $row['RESIDENTIAL_ADDRESS'];
+			$address = '';//$row['RESIDENTIAL_ADDRESS'];
 			$mobile = $row['MOBILE_NO'];
 			$email = $row['EMAIL'];
 			$educ = $row['EDUCATION'];
@@ -220,6 +220,11 @@ switch ($_POST['action']) {
 			$demo = $row['DEMO'];
 			$comm = $row['COMMUNICATION'];
 			$total_score = $row['TOTALPOINTS'];
+
+			$points = split(',', ',');
+			if($gwa!=""){
+			$points = split(',', $gwa);
+			}
 
 			if ($total_score==0) {
 				$rem = "-";
