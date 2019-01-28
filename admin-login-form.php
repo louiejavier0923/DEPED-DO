@@ -64,22 +64,19 @@ if(isset($_SESSION['ADMIN'])){
 				</section>
 			</section>
 		</section>
+
+
 		 <script type="text/javascript">
 		 	 $(function(){
-  
-               
-
-  /*  ARCHIVE BUTTON*/
   $("#admin_login").click(function(e){
     e.preventDefault();
          var email= $("#id_email").val();
           var password = $("#id_password").val();
 
-
       $.ajax({
     type: 'POST',
     url: 'DOADMIN/credentials/model.php',
-    data: {action:'admin_login',email:email,password:password},
+    data: {action:'admin_login', email:email, password:password},
     dataType: 'json',
     success: function(response){
 
