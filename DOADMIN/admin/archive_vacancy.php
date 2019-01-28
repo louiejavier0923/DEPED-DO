@@ -69,7 +69,7 @@
                           <td>".$row['SALARIES']."</td>
                           <td>".$row['ITEM_NO']."</td>
                           <td>
-                            <button class='btn btn-danger btn-sm archive btn-flat' data-id='".$row['UID']."'><i class='fa fa-trash'></i> Archive</button>
+                            <button class='btn btn-success btn-sm archive btn-flat' data-id='".$row['UID']."'><i class='fa fa-check'></i> Archive</button>
                           </td>
                         </tr>
                       ";

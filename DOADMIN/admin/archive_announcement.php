@@ -65,7 +65,7 @@
                           <td>".$row['DATE_PUB']."</td>
 
                           <td>
-                            <button class='btn btn-danger btn-sm archive btn-flat' data-id='".$row['UID']."'><i class='fa fa-trash'></i> Retrieve</button>
+                            <button class='btn btn-success btn-sm archive btn-flat' data-id='".$row['UID']."'><i class='fa fa-check'></i> Retrieve</button>
                           </td>
                         </tr>
                       ";

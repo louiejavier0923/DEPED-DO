@@ -19,7 +19,7 @@
           	<div class="modal-footer">
               <input type ="hidden" id="d_id">
             	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-            	<button type="submit" class="btn btn-danger btn-flat" name="delete" id="retrieve"><i class="fa fa-trash"></i> Retrieve</button>
+            	<button type="submit" class="btn btn-success btn-flat" name="delete" id="retrieve"><i class="fa fa-check"></i> Retrieve</button>
             	</div>
           	</div>
         </div>
