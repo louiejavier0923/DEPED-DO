@@ -36,7 +36,7 @@
 										<p>2. Surname</p>
 									</section>
 									<section class= "pi-row-input">
-							<input type= "text" id="pds_surname" name='Surname' value="<?php echo $user['LASTNAME'] ?>"> 
+							<input type= "text" class="pds_surname" name='Surname' value="<?php echo $user['LASTNAME'] ?>"> 
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -44,8 +44,8 @@
 							<p>First name</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "text" id="pds_firstname" name='First Name' value="<?php echo $user['FIRSTNAME'] ?>">
-							<input type= "text" name='Extension Name' placeholder= "Name Extension (Jr., Sr.)" id="pds_nameextension">
+							<input type= "text" class="pds_firstname" name='First Name' value="<?php echo $user['FIRSTNAME'] ?>">
+							<input type= "text" name='Extension Name' placeholder= "Name Extension (Jr., Sr.)" class="pds_nameextension">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -53,7 +53,7 @@
 							<p>Middle name</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "text" name='Middle Name' id="pds_middlename" value="<?php echo $user['MIDDLENAME'] ?>">
+							<input type= "text" name='Middle Name' class="pds_middlename" value="<?php echo $user['MIDDLENAME'] ?>">
 						</section>
 					</section>
 				</section>
@@ -63,7 +63,7 @@
 							<p>3. Date of birth<br>(mm/dd/yyyy)</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "date" name='Date of Birth' id="pds_dateofbirth" value="<?php echo $user['BIRTHDATE'] ?>">
+							<input type= "date" name='Date of Birth' class="pds_dateofbirth" value="<?php echo $user['BIRTHDATE'] ?>">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -71,7 +71,7 @@
 							<p>4. Place of birth</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "text" id="pds_placeofbirth" name='Place of Birth'  value="<?php echo $user['BIRTHPLACE'] ?>">
+							<input type= "text" class="pds_placeofbirth" name='Place of Birth'  value="<?php echo $user['BIRTHPLACE'] ?>">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -114,7 +114,7 @@
 							<p>7. Height(m)</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "text"  id="pds_height" name='Height' value="<?php echo $user['HEIGHT'] ?>">
+							<input type= "text"  class="pds_height" name='Height' value="<?php echo $user['HEIGHT'] ?>">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -122,7 +122,7 @@
 							<p>8. Weight(kg)</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "text"  id="pds_width" name='Weight' value="<?php echo $user['WEIGHT'] ?>">
+							<input type= "text"  class="pds_width" name='Weight' value="<?php echo $user['WEIGHT'] ?>">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -130,7 +130,7 @@
 							<p>9. Blood Type</p>
 						</section>
 										<section class= "pi-row-input">
-											<input type= "text"  id="pds_bloodtype" name='Blood Type' value="<?php echo $user['BLOOD_TYPE'] ?>">
+											<input type= "text"  class="pds_bloodtype" name='Blood Type' value="<?php echo $user['BLOOD_TYPE'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -138,7 +138,7 @@
 											<p>10. GSIS ID No</p> 
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='GSIS ID No.'  id="pds_gsisno" value="<?php echo $user['GSIS_ID_NO'] ?>">
+											<input type= "text" name='GSIS ID No.'  class="pds_gsisno" value="<?php echo $user['GSIS_ID_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -146,7 +146,7 @@
 											<p>11. Pag-ibig ID No</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Pag-ibig ID No.' id="pds_pagibigno" value="<?php echo $user['PAG_IBIG_NO'] ?>">
+											<input type= "text" name='Pag-ibig ID No.' class="pds_pagibigno" value="<?php echo $user['PAG_IBIG_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -154,7 +154,7 @@
 											<p>12. Philhealth No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Philhealth ID No.'  id="pds_philhealthno" value="<?php echo $user['PHILHEALTH_NO'] ?>">
+											<input type= "text" name='Philhealth ID No.'  class="pds_philhealthno" value="<?php echo $user['PHILHEALTH_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -162,7 +162,7 @@
 											<p>13. SSS No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='SSS ID No.' id="pds_sssno" value="<?php echo $user['SSS_NO'] ?>">
+											<input type= "text" name='SSS ID No.' class="pds_sssno" value="<?php echo $user['SSS_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -170,7 +170,7 @@
 											<p>14. TIN No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='TIN ID No.'  id="pds_tinno" value="<?php echo $user['TIN_NO'] ?>">
+											<input type= "text" name='TIN ID No.'  class="pds_tinno" value="<?php echo $user['TIN_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -178,7 +178,7 @@
 											<p>15. Agency Employee No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Agency Employee ID No.' id="pds_agencyemployee" value="<?php echo $user['AGENCY_EMPLOYEE_NO'] ?>">
+											<input type= "text" name='Agency Employee ID No.' class="pds_agencyemployee" value="<?php echo $user['AGENCY_EMPLOYEE_NO'] ?>">
 										</section>
 									</section>
 								</section>
@@ -208,7 +208,7 @@
 												<p>Pls. indicate the country:</p>
 											</section>
 											<section class= "radio-input" >
-												<select id="pds_country">
+												<select class="pds_country">
 													<option>Algeria</option>
 													<option>Andorra</option>
 													<option>Angola</option>
@@ -235,16 +235,16 @@
 										</section>
 										<section class= "pi-row-input">
 											<section class= "text-input">
-												<input type= "text" name='Residential House/Block/Lot No.'  placeholder= "House/Block/Lot No." id="pds_rhouseblk" value="<?php echo $user['RESIDENTIAL_LOTNO'] ?>">
-												<input type= "text" name='Residential Street'  placeholder= "Street" id="pds_rstreet" value="<?php echo $user['RESIDENTIAL_STREET'] ?>">
+												<input type= "text" name='Residential House/Block/Lot No.'  placeholder= "House/Block/Lot No." class="pds_rhouseblk" value="<?php echo $user['RESIDENTIAL_LOTNO'] ?>">
+												<input type= "text" name='Residential Street'  placeholder= "Street" class="pds_rstreet" value="<?php echo $user['RESIDENTIAL_STREET'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text" name='Residential Subdivision/Village' placeholder= "Subdivision/Village" id="pds_rsubdivision" value="<?php echo $user['RESIDENTIAL_SUBDIVISION'] ?>">
-												<input type= "text" name='Residential Barangay' placeholder= "Barangay" id="pds_rbarangay" value="<?php echo $user['RESIDENTIAL_BARANGAY'] ?>">
+												<input type= "text" name='Residential Subdivision/Village' placeholder= "Subdivision/Village" class="pds_rsubdivision" value="<?php echo $user['RESIDENTIAL_SUBDIVISION'] ?>">
+												<input type= "text" name='Residential Barangay' placeholder= "Barangay" class="pds_rbarangay" value="<?php echo $user['RESIDENTIAL_BARANGAY'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text" name='Residential City/Municipality' placeholder= "City/Municipality" id="pds_rmunicipality" value="<?php echo $user['RESIDENTIAL_MUNICIPALITY'] ?>">
-												<input type= "text" name='Residential Province'  placeholder= "Province" id="pds_rprovince" value="<?php echo $user['RESIDENTIAL_PROVINCE'] ?>">
+												<input type= "text" name='Residential City/Municipality' placeholder= "City/Municipality" class="pds_rmunicipality" value="<?php echo $user['RESIDENTIAL_MUNICIPALITY'] ?>">
+												<input type= "text" name='Residential Province'  placeholder= "Province" class="pds_rprovince" value="<?php echo $user['RESIDENTIAL_PROVINCE'] ?>">
 											</section>
 										</section>
 									</section>
@@ -253,7 +253,7 @@
 											<p>ZIP CODE</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Residential ZIP CODE' id="pds_rzipcode" value="<?php echo $user['RESIDENTIAL_ZIP_CODE'] ?>">
+											<input type= "text" name='Residential ZIP CODE' class="pds_rzipcode" value="<?php echo $user['RESIDENTIAL_ZIP_CODE'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -265,16 +265,16 @@
 										</section>
 										<section class= "pi-row-input">
 											<section class= "text-input">
-												<input type= "text" name='Permanent House/Block/Lot No.'  placeholder= "House/Block/Lot No." id="pds_phouseblk" value="<?php echo $user['PERMANENT_LOTNO'] ?>">
-												<input type= "text" name='Permanent Street'  placeholder= "Street" id="pds_pstreet" value="<?php echo $user['PERMANENT_STREET'] ?>">
+												<input type= "text" name='Permanent House/Block/Lot No.'  placeholder= "House/Block/Lot No." class="pds_phouseblk" value="<?php echo $user['PERMANENT_LOTNO'] ?>">
+												<input type= "text" name='Permanent Street'  placeholder= "Street" class="pds_pstreet" value="<?php echo $user['PERMANENT_STREET'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text" name='Permanent Subdivision/Village' placeholder= "Subdivision/Village" id="pds_psubdivision" value="<?php echo $user['PERMANENT_SUBDIVISION'] ?>">
-												<input type= "text" name='Permanent Barangay' placeholder= "Barangay" id="pds_pbarangay" value="<?php echo $user['PERMANENT_BARANGAY'] ?>">
+												<input type= "text" name='Permanent Subdivision/Village' placeholder= "Subdivision/Village" class="pds_psubdivision" value="<?php echo $user['PERMANENT_SUBDIVISION'] ?>">
+												<input type= "text" name='Permanent Barangay' placeholder= "Barangay" class="pds_pbarangay" value="<?php echo $user['PERMANENT_BARANGAY'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text" name='Permanent City/Municipality' placeholder= "City/Municipality" id="pds_pmunicipality" value="<?php echo $user['PERMANENT_MUNICIPALITY'] ?>">
-												<input type= "text" name='Permanent Province'  placeholder= "Province" id="pds_pprovince" value="<?php echo $user['PERMANENT_PROVINCE'] ?>">
+												<input type= "text" name='Permanent City/Municipality' placeholder= "City/Municipality" class="pds_pmunicipality" value="<?php echo $user['PERMANENT_MUNICIPALITY'] ?>">
+												<input type= "text" name='Permanent Province'  placeholder= "Province" class="pds_pprovince" value="<?php echo $user['PERMANENT_PROVINCE'] ?>">
 											</section>
 										</section>
 									</section>
@@ -283,7 +283,7 @@
 											<p>ZIP CODE</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Permanent ZIP CODE' id="pds_pzipcode" value="<?php echo $user['PERMANENT_ZIP_CODE'] ?>">
+											<input type= "text" name='Permanent ZIP CODE' class="pds_pzipcode" value="<?php echo $user['PERMANENT_ZIP_CODE'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -291,7 +291,7 @@
 											<p>19. Telephone No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text"  name='Telephone No.' id="pds_telno" value="<?php echo $user['TELEPHONE_NO'] ?>">
+											<input type= "text"  name='Telephone No.' class="pds_telno" value="<?php echo $user['TELEPHONE_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -299,7 +299,7 @@
 											<p>20. Mobile No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Mobile No.' id="pds_mobileno" value="<?php echo $user['MOBILE_NO'] ?>">
+											<input type= "text" name='Mobile No.' class="pds_mobileno" value="<?php echo $user['MOBILE_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -307,7 +307,7 @@
 											<p>21. Email Address(If any)</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "email" name='Email Address' id="pds_emailaddress" value="<?php echo $user['EMAIL'] ?>">
+											<input type= "email" name='Email Address' class="pds_emailaddress" value="<?php echo $user['EMAIL'] ?>">
 										</section>
 									</section>
 								</section>
@@ -325,14 +325,14 @@
 										</section>
 										<section class= "pi-row-input">
 											<section class= "text-input">
-												<input type= "text" name='Spouse`s Surname' id="pds_spousesurname"  value="<?php echo $user['spousesurname'] ?>">
+												<input type= "text" name='Spouse`s Surname' class="pds_spousesurname"  value="<?php echo $user['spousesurname'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text"  name='Spouse`s First Name' id="pds_spousefirstname" value="<?php echo $user['spousefirstname'] ?>">
-												<input type= "text" name='Spouse`s Extension Name'  placeholder= "Name Extension(Jr., Sr.)"  id="pds_spousenameextension" value="<?php echo $user['spousenameextension'] ?>">
+												<input type= "text"  name='Spouse`s First Name' class="pds_spousefirstname" value="<?php echo $user['spousefirstname'] ?>">
+												<input type= "text" name='Spouse`s Extension Name'  placeholder= "Name Extension(Jr., Sr.)"  class="pds_spousenameextension" value="<?php echo $user['spousenameextension'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text"  name='Spouse`s Middle Name' id="pds_spousemiddlename" value="<?php echo $user['spousemiddlename'] ?>">
+												<input type= "text"  name='Spouse`s Middle Name' class="pds_spousemiddlename" value="<?php echo $user['spousemiddlename'] ?>">
 											</section>
 										</section>
 									</section>
@@ -341,7 +341,7 @@
 											<p>Occupation</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text"  name='Spouse`s Occupation' id="pds_spouseoccupation" value="<?php echo $user['spouseoccupation'] ?>">
+											<input type= "text"  name='Spouse`s Occupation' class="pds_spouseoccupation" value="<?php echo $user['spouseoccupation'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row spouse-fields">
@@ -349,7 +349,7 @@
 											<p>Employer/Business Name</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text"  name='Spouse`s Employer/Business Name' id="pds_businessname" value="<?php echo $user['businessname'] ?>">
+											<input type= "text"  name='Spouse`s Employer/Business Name' class="pds_businessname" value="<?php echo $user['businessname'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row spouse-fields">
@@ -357,7 +357,7 @@
 											<p>Business Address</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text"  name='Spouse`s Business Address'  id="pds_businessaddress" value="<?php echo $user['businessaddress'] ?>">
+											<input type= "text"  name='Spouse`s Business Address'  class="pds_businessaddress" value="<?php echo $user['businessaddress'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row spouse-fields">
@@ -365,7 +365,7 @@
 											<p>Telephone No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Spouse`s Business Telephone No.' id="pds_businesstelno" value="<?php echo $user['businesstelno'] ?>">
+											<input type= "text" name='Spouse`s Business Telephone No.' class="pds_businesstelno" value="<?php echo $user['businesstelno'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row single-fields">
@@ -376,14 +376,14 @@
 										</section>
 										<section class= "pi-row-input">
 											<section class= "text-input">
-												<input type= "text"  name='Father`s Surname'  id="pds_fathersurname" value="<?php echo $user['fathersurname'] ?>">
+												<input type= "text"  name='Father`s Surname'  class="pds_fathersurname" value="<?php echo $user['fathersurname'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text" name='Father`s First Name'  id="pds_fatherfirstname" value="<?php echo $user['fatherfirstname'] ?>"> 
-												<input type= "text"  name='Father`s Extension Name' placeholder= "Name Extension(Jr., Sr.)"  id="pds_fathernameextension" value="<?php echo $user['fathernameextension'] ?>">
+												<input type= "text" name='Father`s First Name'  class="pds_fatherfirstname" value="<?php echo $user['fatherfirstname'] ?>"> 
+												<input type= "text"  name='Father`s Extension Name' placeholder= "Name Extension(Jr., Sr.)"  class="pds_fathernameextension" value="<?php echo $user['fathernameextension'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text" name='Father`s Middle Name' id="pds_fathermiddlename" value="<?php echo $user['fathermiddlename'] ?>">
+												<input type= "text" name='Father`s Middle Name' class="pds_fathermiddlename" value="<?php echo $user['fathermiddlename'] ?>">
 											</section>
 										</section>
 									</section>
@@ -396,14 +396,14 @@
 										</section>
 										<section class= "pi-row-input">
 											<section class= "text-input">
-												<input type= "text"  name='Mother`s Surname'  id="pds_mothersurname" value="<?php echo $user['mothermaindenname'] ?>">
+												<input type= "text"  name='Mother`s Surname'  class="pds_mothersurname" value="<?php echo $user['mothermaindenname'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text" name='Mother`s First Name'   id="pds_motherfirstname" value="<?php echo $user['motherfirstname'] ?>">
-												<input type= "text"  name='Mother`s Extension Name' placeholder= "Name Extension(Jr., Sr.)" id="pds_mothersnameextension" >
+												<input type= "text" name='Mother`s First Name'   class="pds_motherfirstname" value="<?php echo $user['motherfirstname'] ?>">
+												<input type= "text"  name='Mother`s Extension Name' placeholder= "Name Extension(Jr., Sr.)" class="pds_mothersnameextension" >
 											</section>
 											<section class= "text-input">
-												<input type= "text"  name='Mother`s Middle Name' id="pds_mothersmiddlename" value="<?php echo $user['mothersmiddlename'] ?>">
+												<input type= "text"  name='Mother`s Middle Name' class="pds_mothersmiddlename" value="<?php echo $user['mothersmiddlename'] ?>">
 											</section>
 										</section>
 									</section>
@@ -1272,6 +1272,11 @@
 						</section>
 					</section>
 				</section>
+				<section>
+				<div  class='errors'>
+				</div>
+				</section>
+				
 				<section class= "application-btn">
 					<?php 
 					     
@@ -1301,6 +1306,5 @@
 	</body>
 	<script type="text/javascript" src="../jsp/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../jsp/pds-function.js"></script>
-	<S
 	
 </html>

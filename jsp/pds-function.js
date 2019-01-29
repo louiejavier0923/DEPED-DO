@@ -157,11 +157,9 @@ $(function(){
 	
 	
 	error = checking();
-	alert(error);
 	
-	if (error > 0) {
-        $("#error").show('slow');
-    
+	if (error < 1) {
+		alert('tangaina');
 		$.ajax({
 		type: 'POST',
 		url: '../DOADMIN/credentials/model-pds.php',
