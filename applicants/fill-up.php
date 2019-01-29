@@ -1286,14 +1286,13 @@
                               if($user['UID']==null) 
                                {
                              
-                                         echo "<button type= 'submit' class='save_pds' id='submit_pds'>Confirm</button>";    
+                                         echo "<button type= 'submit' class='save_pds' data-id='". $user['UID'] ."' id='submit_pds'>Confirm</button>";    
                                }
                            else{
                                           echo "<button type= 'submit' class='edit_pds' id='edit_pds'>Save</button>"; 
                                }
                     
 					?>
-					
 					<button type= "submit" id= "submit_file">ATTACH FILE</button>
 				</section>
 			</section>
