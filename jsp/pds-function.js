@@ -1,5 +1,61 @@
 $(function(){
 		
+	function checking() {
+	$('.single-fields input').css('background-color', "#ffffff");
+	$(".errors div").html('');
+	count = 0;
+    $('.single-fields input').each(function(){
+		text = $(".errors div").html();
+		if ($(this).val().length == 0) {
+		   $(this).css('background-color', "#ffa0a0f7");
+		   
+           $(".errors div").html(text + (count == 0 ? '' :', ') +  $(this).attr("name"));
+		   count++;
+		} 
+    });
+	$('.spouse-fields input').each(function(){
+		text = $(".errors div").html();
+		if(($('.pds_spousesurname').val().length != 0) ||  ($('.pds_spousefirstname').val().length != 0) ||  ($('.pds_spousenameextension').val().length != 0) ||  ($('.pds_spousemiddlename').val().length != 0) ){
+			if ($(this).val().length == 0) {
+			   $(this).css('background-color', "#ffa0a0f7");
+			   $(".errors div").html(text + (count == 0 ? '' :', ') +  $(this).attr("name"));
+			   count++;
+			} 
+		}
+		
+    });
+	
+	/* if($('input[name="Gender"]:checked').length === 0) {
+		$(".errors div").html(text + (count == 0 ? '' :', ') +  'Gender');
+	}
+	if($('input[name="Civil Status"]:checked').length === 0) {
+		$(".errors div").html(text + (count == 0 ? '' :', ') + 'Civil Status');
+	}
+	if($('input[name="Citizenship"]:checked').length === 0) {
+		$(".errors div").html(text + (count == 0 ? '' :', ') +  'Citizenship');
+	} */
+	
+	/* var names = []
+    $('.radio-fields input:radio').each(function () {
+        var rname = $(this).attr('name');
+        if ($.inArray(rname, names) == -1) names.push(rname);
+    });
+	$.each(names, function (i, name) {
+        if ($('input[name="' + name + '"]:checked').length == 0) {
+           $(".errors div").html(text + (count == 0 ? '' :', ') +  'please check '+ name);
+        }
+    }); */
+	
+	
+	
+	
+	return count;
+	
+	}
+	/* var phone_pattern = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/; 
+	phone_pattern.test( input_value ); */
+	
+	
 	$('.save_pds').click(function(){
 	action='add_user_with_pds_info_function';
 	
@@ -14,8 +70,8 @@ $(function(){
 	pds_middlename = $('.pds_middlename').val();
 	pds_dateofbirth = $('.pds_dateofbirth').val();
 	pds_placeofbirth = $('.pds_placeofbirth').val();
-	pds_gender = $("input[name='gender']:checked").val();
-	civil_status = $("input[name='civil_status']:checked").val();
+	pds_gender = $("input[name='Gender']:checked").val();
+	civil_status = $("input[name='Civil Status']:checked").val();
 	pds_height = $('.pds_height').val();
 	pds_weight = $('.pds_weight').val();
 	pds_bloodtype = $('.pds_bloodtype').val();
@@ -25,7 +81,7 @@ $(function(){
 	pds_sssno = $('.pds_sssno').val();
 	pds_tinno = $('.pds_tinno').val();
 	pds_agencyemployee = $('.pds_agencyemployee').val();
-	pds_citizenship = $("input[name='citi']:checked").val();
+	pds_citizenship = $("input[name='Citizenship']:checked").val();
 	pds_country = $('.pds_country option:selected').text();
 	pds_rhouseblk = $('.pds_rhouseblk').val();
 	pds_rstreet = $('.pds_rstreet').val();
@@ -100,6 +156,12 @@ $(function(){
 	
 	
 	
+	error = checking();
+	alert(error);
+	
+	if (error > 0) {
+        $("#error").show('slow');
+    
 		$.ajax({
 		type: 'POST',
 		url: '../DOADMIN/credentials/model-pds.php',
@@ -206,7 +268,10 @@ $(function(){
 		}
 		});
 	
-	
+	}else{
+		 $(".errors div").html(error + ' empty input(s)');
+		 
+	}
 	});
 	
 	
