@@ -230,7 +230,7 @@
 		$result=mysqli_query($conn,$sql);
 		
 		if (!$result->num_rows > 0){
-			
+			$sql='';
 			
 			$sql .= " INSERT INTO `personal_info` (`UID`, `FIRSTNAME`, `LASTNAME`, `MIDDLENAME`, `EXTENSION_NAME`, `BIRTHDATE`, `BIRTHPLACE`, `GENDER`, `HEIGHT`, `WEIGHT`, `BLOOD_TYPE`, `CIVIL_STATUS`, `GSIS_ID_NO`, `PAG_IBIG_NO`, `PHILHEALTH_NO`, `SSS_NO`, `TIN_NO`, `AGENCY_EMPLOYEE_NO`, `CITIZENSHIP`, `RESIDENTIAL_LOTNO`, `RESIDENTIAL_STREET`, `RESIDENTIAL_SUBDIVISION`, `RESIDENTIAL_BARANGAY`, `RESIDENTIAL_MUNICIPALITY`, `RESIDENTIAL_PROVINCE`, `RESIDENTIAL_ZIP_CODE`, `PERMANENT_LOTNO`, `PERMANENT_STREET`, `PERMANENT_SUBDIVISION`, `PERMANENT_BARANGAY`, `PERMANENT_MUNICIPALITY`, `PERMANENT_PROVINCE`, `PERMANENT_ZIP_CODE`, `TELEPHONE_NO`, `MOBILE_NO`) VALUES ('". $user['UID'] ."', '$pds_firstname', '$pds_surname', '$pds_middlename', '$pds_nameextension', '$pds_dateofbirth', '$pds_placeofbirth', '$pds_gender', '$pds_height', '$pds_weight', '$pds_bloodtype', '$civil_status', '$pds_gsisno', '$pds_pagibigno', '$pds_philhealthno', '$pds_sssno', '$pds_tinno', '$pds_agencyemployee', '$pds_citizenship', '$pds_rhouseblk', '$pds_rstreet', '$pds_rsubdivision', '$pds_rbarangay', '$pds_rmunicipality', '$pds_rprovince', '$pds_rzipcode', '$pds_phouseblk', '$pds_pstreet', '$pds_psubdivision', '$pds_pbarangay', '$pds_pmunicipality', '$pds_pprovince', '$pds_pzipcode', '$pds_mobileno', '$pds_mobileno');";
 			

@@ -1,34 +1,52 @@
 $(function(){
 		
 	function checking() {
+	text='';
 	$('.single-fields input').css('background-color', "#ffffff");
+	$('.radio-fields').css('background-color', "#ffffff");
 	$(".errors div").html('');
 	count = 0;
     $('.single-fields input').each(function(){
-		text = $(".errors div").html();
+		str = $(".errors div").html();
 		if ($(this).val().length == 0) {
 		   $(this).css('background-color', "#ffa0a0f7");
 		   
-           $(".errors div").html(text + (count == 0 ? '' :', ') +  $(this).attr("name"));
+           $(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
 		   count++;
 		} 
     });
+	if($('input[name="Gender"]:checked').length === 0) {
+		str = $(".errors div").html();
+		$(".gender-fields").css('background-color', "#ffa0a0f7");
+		$(".errors div").html(str +(count == 0 ? '' :', ') +  'Gender' );
+		count++;
+	}
+	if($('input[name="Civil Status"]:checked').length === 0) {
+		str = $(".errors div").html();
+		$(".civilstat-fields").css('background-color', "#ffa0a0f7");
+		$(".errors div").html(str +(count == 0 ? '' :', ') +  'Civil Status' );
+		count++;
+	}
+	if($('input[name="Citizenship"]:checked').length === 0) {
+		str = $(".errors div").html();
+		$(".citizenship-fields").css('background-color', "#ffa0a0f7");
+		$(".errors div").html(str +(count == 0 ? '' :', ') +  'Citizenship' );
+		count++;
+	}
 	$('.spouse-fields input').each(function(){
-		text = $(".errors div").html();
+		str = $(".errors div").html();
 		if(($('.pds_spousesurname').val().length != 0) ||  ($('.pds_spousefirstname').val().length != 0) ||  ($('.pds_spousenameextension').val().length != 0) ||  ($('.pds_spousemiddlename').val().length != 0) ){
 			if ($(this).val().length == 0) {
 			   $(this).css('background-color', "#ffa0a0f7");
-			   $(".errors div").html(text + (count == 0 ? '' :', ') +  $(this).attr("name"));
+			   $(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
 			   count++;
 			} 
 		}
 		
     });
 	
-	/* if($('input[name="Gender"]:checked').length === 0) {
-		$(".errors div").html(text + (count == 0 ? '' :', ') +  'Gender');
-	}
-	if($('input[name="Civil Status"]:checked').length === 0) {
+	
+	/*if($('input[name="Civil Status"]:checked').length === 0) {
 		$(".errors div").html(text + (count == 0 ? '' :', ') + 'Civil Status');
 	}
 	if($('input[name="Citizenship"]:checked').length === 0) {
@@ -159,7 +177,7 @@ $(function(){
 	error = checking();
 	
 	if (error < 1) {
-		alert('tangaina');
+		
 		$.ajax({
 		type: 'POST',
 		url: '../DOADMIN/credentials/model-pds.php',
@@ -266,9 +284,6 @@ $(function(){
 		}
 		});
 	
-	}else{
-		 $(".errors div").html(error + ' empty input(s)');
-		 
 	}
 	});
 	
