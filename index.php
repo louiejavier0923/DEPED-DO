@@ -177,20 +177,21 @@
 					<section class= "vacancy-container">
 						<h1>LIST OF VACANT POSITIONS</h1>
 						<div class= "line"></div>
+					<?php 
+						$sql = "SELECT * FROM publish_vacancy";
+						$query = $conn->query($sql);
+						while($row = $query->fetch_assoc()) {
+					?>
 						<section class= "vacant">
 							<img src= "img/logo.png">
-							<h3 id= "position">TEACHER I</h3>
-							<p id= "school">Quezon City Polytechnic University</p>
-							<p id= "address">367 Quirino Highway, San Bartolome, Novaliches, Quezon City</p>
+							<h3 id= "position"><?php echo $row['TITLE'];?></h3>
+							<p id= "school"><?php echo $row['NOI'];?></p>
+							<p id= "address"><?php echo $row['PUBLICATION_DATE'];?> | <?php echo $row['DESCRIPTION'];?></p>
 							<a id= "joinBtn">APPLY</a>
 						</section>
-						<section class= "vacant">
-							<img src= "img/logo.png">
-							<h3 id= "position">TEACHER I</h3>
-							<p id= "school">Quezon City Polytechnic University</p>
-							<p id= "address">367 Quirino Highway, San Bartolome, Novaliches, Quezon City</p>
-							<a id= "joinBtn">APPLY</a>
-						</section>
+					<?php
+						}
+					?>
 					</section>
 				</section>
 			</section>
