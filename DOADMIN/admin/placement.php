@@ -69,14 +69,14 @@
                 <tbody>
                
                   <?php
-                    $sql = "SELECT p.NO,p.TITLE,p.UID,p.PLACE_ASSIGNMENT,p.ITEM_NO FROM publish_vacancy p join schools a ON p.PLACE_ASSIGNMENT = a.SID WHERE p.APP_ISSET = '0'";
+                    $sql = "SELECT p.NO,p.TITLE,p.UID,p.PLACE_ASSIGNMENT,p.ITEM_NO,a.SCHOOL_NAME FROM publish_vacancy p join schools a ON p.PLACE_ASSIGNMENT = a.SID WHERE p.APP_ISSET = '0'";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       echo "
                         <tr>
                           <td>".$row['TITLE']."<input style='display:none;' type='checkbox' id=".$row['NO']." name=".$row['NO']." value=".$row['NO']."></td>
                            <td>".$row['UID']."</td>
-                          <td>".$row['PLACE_ASSIGNMENT']."</td>
+                          <td>".$row['SCHOOL_NAME']."</td>
                           <td>
                               <div class='form-group>
   
