@@ -3,6 +3,7 @@
 	<p id= "rank">Rank: <span>Not Ranked</span></p>
 	<img src= "../img/logo.png">
 	<h3><?php echo $user['EMAIL']?></h3>
+	<input type= "hidden" name= "teacher-no" id= "teacher-no" value= "<?php echo $user['UID'];?>">
 	<p id= "position">TEACHER I</p>
 </section>
 <section class= "applicant-header-nav">
