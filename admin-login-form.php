@@ -79,7 +79,7 @@ if(isset($_SESSION['ADMIN'])){
 		 <script type="text/javascript">
 		 	 $(function(){
   $("#admin_login").click(function(e){
-    e.preventDefault();
+       e.preventDefault();
          var email= $("#id_email").val();
           var password = $("#id_password").val();
 

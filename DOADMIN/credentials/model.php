@@ -24,8 +24,155 @@
                 
                      $sql = "INSERT INTO application (UID,PID,STATUS,DATE,IS_CALIBRATED)VALUES ('".$user['UID']."', '".$vacant_no."', '0',CURRENT_DATE(), '0');";
                       $query = mysqli_query($conn, $sql);
-            
-                      $output='successful';
+                        
+                       // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+                                           $mail->isSMTP();                                      // Set mailer to use SMTP
+                                           $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+                                           $mail->SMTPAuth = true;                               // Enable SMTP authentication
+                                           $mail->Username = 'cromeroadr@gmail.com';                 // SMTP username
+                                           $mail->Password = '9325310huffles';                           // SMTP password
+                                           $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+                                           $mail->Port = 465;                                    // TCP port to connect to
+                                       
+                                           //Recipients
+                                           $mail->setFrom('cromeroadr@gmail.com', 'Division Office');
+                                           $mail->addAddress($user['EMAIL']);     // Add a recipient
+                                         
+                                           //$mail->addCC('cc@example.com');
+                                           //$mail->addBCC('bcc@example.com');
+                                           $action = 'verify_email';
+                                           //Attachments
+                                           //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+                                           //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+                                        
+                                           //Content
+                                           $mail->isHTML(true);                                  // Set email format to HTML
+                                           $mail->Subject = 'Here is the subject';
+                                           $mail->Body    = "<p>Nueva Ecija St., Bago Bantay, Quezon City
+
+                                                              www.depedqc.ph
+
+
+September 17, 2018
+
+(Date)
+MS. MARECRIS M. ABLAN
+
+#179 FFF Extension Brgy. Culiat,
+
+Quezon City
+
+Dear Sir/ Madam
+
+Please be informed that you have been considered for employment in this Division as Division OfficeNEQC
+
+division office
+
+Permanent Teacher I at Manuel Roxas High School
+
+vice MS. Lisa P. Soriano, Transferred to Division Of Nueva Ecija
+
+Date of Publication 6/26/18
+
+division office
+
+In view hereof, you are requested to submit to the Head, Personnel Services Section the following
+
+pertinent documents to facilitate the preparation of your appointment on or before October 4. 2018
+
+1. Call-up Letter
+
+- 2 xeroxed copies
+
+2. From No. 212 - Duly accomplished Personal Data Sheet, revised 2017
+
+- w/ latest picture passport size while background with name tag & signiture
+
+- Attachment of CS Form No. 212
+
+- 5 copies
+
+3. P.R.C. License & Report of Rating (Aithenticated copy from PRC)
+
+- 1 original copy &
+
+- 3 certified xeroxed copies
+
+4. DBM-CSC Form No. 1 - Duly accomplished Position Description
+
+Form, revised 2017
+
+- 4 copies
+
+5. Transcript of Records
+
+- 2 certified xeroxed copies
+
+6. CS Form No. 211 - Medical Certificate, revised 2018
+
+with copies of laboratory results
+
+- 2 copies (Original & xeroxed)
+
+7. Sworn Statement of Assets and Liabilities, revised 2015
+
+- 4 copies
+
+8. NBI Clearance (Original & xeroxed)
+
+- 2 copies (Original & xeroxed)
+
+9. TIN and PhilHealth Number (to indicate on Form 212/PDS)
+
+10. Certificate of Live Birth from PSA or LCR (certified copy)
+
+- 2 copies
+
+11. Marriage Contract/Certificate if married (certified copy)
+
+- 2 copies
+
+Additional papers to be submitted after Assumptions of Duty
+
+12. CS Form No. 4 - Certification of Assumption to Duty, revised 2018
+
+- 5 copies
+
+13. CS Form No. 32 - Oath of Office, revised 2018
+
+- 5 copies
+
+Truly yours,
+
+ELIZABETH E. QUESEDA, CESO V
+
+Schools Division Superintendent
+IMPORTANT NOTE:
+
+SECTION 4 ITEM #4.2, DEPED ORDER #7, s. 2015
+
+'' NO TRANSFER TO ANOTHER SCHOOL UNTIL AFTER RENDERING
+
+AT LEAST THREE (3) YEARS OF SERVICE IN PRESENT SCHOOL. '
+
+PLEASE REPORT TO YOUR ASSIGNED SCHOOL UPON ISSUANCE OF YOUR
+
+APPOINTMENT FROM THE PERSONNEL SECTION.
+
+P/ayee</p>";
+
+                                           $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+                                       
+                                         
+                            
+                                           if($mail->Send()) {
+                                                  $sql = "INSERT INTO application (UID,PID,STATUS,DATE,IS_CALIBRATED)VALUES ('".$user['UID']."', '".$vacant_no."', '0',CURRENT_DATE(), '0');";
+                                                   $query = mysqli_query($conn, $sql);
+                                                   $output="success";
+                                          }
+                                          else{
+                                                     $output="failed";
+                                          }
                 }
            
               $data = array(

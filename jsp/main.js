@@ -1,8 +1,14 @@
 function login(action = 'login_function') {
     var login_email = $('#login_email').val();
     var login_password = $('#login_password').val();
-
-                 
+    
+     if(login_email=='' || login_email==null){
+          alert("empty email");
+     }
+     else if(login_password=='' || login_password==null){
+          alert("empty password");
+     }
+     else{         
     $.ajax({
         url:"DOADMIN/credentials/model.php",
         method:"POST",
@@ -23,11 +29,10 @@ function login(action = 'login_function') {
                 }
             }
     });
+  }
 }
 
-function vacant(action = "vacant-function") {
-  
-}
+
 
 function update_password(action = "update_password") {
     var app_password = $('#applicant_password').val();
@@ -508,8 +513,19 @@ $(document).ready(function() {
         },
         dataType: 'json',
             success:function(data) {
-               
-                      alert(data.message);
+                      
+                      switch(data.message){
+                            case 'successful':
+                                  window.location.href='finish.php'
+                                 
+                            break;
+
+                            default:
+                                 alert(data.message);
+                            break;
+
+                      }
+                     
                   
                 
             }

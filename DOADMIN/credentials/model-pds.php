@@ -11,7 +11,7 @@
    $mail = new PHPMailer(true);
 	
    switch($_POST['action']){
-	case 'update_user_function':
+	case 'update_pds_function':
 		$output='';
 		$exe = '';
 		$error = '';
@@ -106,7 +106,7 @@
 		$exe = '';
 		$error = '';
 		
-		$sql="UPDATE `user` SET `EMAIL`='$pds_emailaddress' WHERE UID = '$id';";
+		$sql="";
 		
 		$sql .= "UPDATE `personal_info` SET `FIRSTNAME`='$pds_firstname', `LASTNAME`='$pds_surname', `MIDDLENAME`='$pds_middlename', `EXTENSION_NAME`='$pds_nameextension', `BIRTHDATE`='$pds_dateofbirth', `BIRTHPLACE`='$pds_placeofbirth', `GENDER`='$pds_gender', `HEIGHT`='$pds_height', `WEIGHT`='$pds_weight', `BLOOD_TYPE`='$pds_bloodtype', `CIVIL_STATUS`='$civil_status', `GSIS_ID_NO`='$pds_gsisno', `PAG_IBIG_NO`='$pds_pagibigno', `PHILHEALTH_NO`='$pds_philhealthno', `SSS_NO`='$pds_sssno', `TIN_NO`='$pds_tinno', `AGENCY_EMPLOYEE_NO`='$pds_agencyemployee', `CITIZENSHIP`='$pds_citizenship', `RESIDENTIAL_LOTNO`='$pds_rhouseblk', `RESIDENTIAL_STREET`='$pds_rstreet', `RESIDENTIAL_SUBDIVISION`='$pds_rsubdivision', `RESIDENTIAL_BARANGAY`='$pds_rbarangay', `RESIDENTIAL_MUNICIPALITY`='$pds_rmunicipality', `RESIDENTIAL_PROVINCE`='$pds_rprovince', `RESIDENTIAL_ZIP_CODE`='$pds_rzipcode', `PERMANENT_LOTNO`='$pds_phouseblk', `PERMANENT_STREET`='$pds_pstreet', `PERMANENT_SUBDIVISION`='$pds_psubdivision', `PERMANENT_BARANGAY`='$pds_pbarangay', `PERMANENT_MUNICIPALITY`='$pds_pmunicipality', `PERMANENT_PROVINCE`='$pds_pprovince', `PERMANENT_ZIP_CODE`='$pds_pzipcode', `TELEPHONE_NO`='$pds_telno', `MOBILE_NO`='$pds_mobileno' WHERE UID = '$id';";
 		
