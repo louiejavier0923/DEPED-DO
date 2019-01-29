@@ -48,7 +48,7 @@
                                            //Content
                                            $mail->isHTML(true);                                  // Set email format to HTML
                                            $mail->Subject = 'Here is the subject';
-                                           $mail->Body    = "<p>Nueva Ecija St., Bago Bantay, Quezon City
+                                           $mail->Body    = "<Nueva Ecija St., Bago Bantay, Quezon City
 
                                                               www.depedqc.ph
 
@@ -159,7 +159,7 @@ PLEASE REPORT TO YOUR ASSIGNED SCHOOL UPON ISSUANCE OF YOUR
 
 APPOINTMENT FROM THE PERSONNEL SECTION.
 
-P/ayee</p>";
+P/ayee";
 
                                            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
                                        

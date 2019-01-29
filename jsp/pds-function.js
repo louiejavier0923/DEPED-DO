@@ -9,10 +9,15 @@ $(function(){
     $('.single-fields input').each(function(){
 		str = $(".errors div").html();
 		if ($(this).val().length == 0) {
-		   $(this).css('background-color', "#ffa0a0f7");
+			if($(this).hasClass("not-require")){
+				
+			}else{
+				$(this).css('background-color', "#ffa0a0f7");
+			   
+			   $(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
+			   count++;
+			}
 		   
-           $(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
-		   count++;
 		} 
     });
 	if($('input[name="Gender"]:checked').length === 0) {
@@ -67,9 +72,9 @@ $(function(){
 	
 	$('.edit_pds').click(function(){
 	error = checking();
-	
+	//window.location.href="application.php";
 	action='update_pds_function';
-	
+	id = $(this).attr("data-id");
 	//personal info
 	pds_surname = $('.pds_surname').val();
 	pds_firstname = $('.pds_firstname').val();
@@ -169,7 +174,7 @@ $(function(){
 		$.ajax({
 		type: 'POST',
 		url: '../DOADMIN/credentials/model-pds.php',
-		data: {action:action,
+		data: {action:action,id:id,
 			
 			pds_surname:pds_surname,
 			pds_firstname:pds_firstname,
@@ -264,7 +269,7 @@ $(function(){
 				
 			
 				alert(response.exe);
-			$("input").val("");
+			window.location.href="application.php";
 			}else 
 				alert(response.error);
 			
