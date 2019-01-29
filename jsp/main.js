@@ -26,27 +26,7 @@ function login(action = 'login_function') {
 }
 
 function vacant(action = "vacant-function") {
-    var vacant = $('#vacant_no').val();
-
-    $.ajax ({
-        url: '../DOADMIN/credentials/model.php',
-        method: 'POST',
-        data: {
-            action:action,
-            vacant_no:vacant
-        },
-        dataType: 'json',
-            success:function(data) {
-                switch (data.message) {
-                    case 'successful':
-                        window.location.href= "fill-up.php";
-                    break;
-                    default:
-                        alert(data.message);
-                    break;
-                }
-            }
-    })
+  
 }
 
 function update_password(action = "update_password") {
@@ -516,8 +496,24 @@ $(document).ready(function() {
         })
 
         .on('click', '#applyBtn', function() {
-           vacant();
-           window.location.href= "fill-up.php";
+         
+            var vacant = $(this).data('id');
+           
+    $.ajax ({
+        url: '../DOADMIN/credentials/model.php',
+        method: 'POST',
+        data: {
+            action:'vacant-function',
+            vacant_no:vacant
+        },
+        dataType: 'json',
+            success:function(data) {
+               
+                      alert(data.message);
+                  
+                
+            }
+    })
         })
 
         $('#submit_login_btn').click(function() {			
@@ -529,7 +525,7 @@ $(document).ready(function() {
         });
 
         $('#submit_pds').click(function() {   
-            submit_pds();
+            //submit_pds();
         });
 
         $('#okInfoBtn').click(function (){

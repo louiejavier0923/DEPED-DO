@@ -61,10 +61,10 @@
 						</section>
 						<section class= "pi-row-input">
 							<section class= "radio-input">
-							 <input type="radio" name="gender" value="Male"  <?php ('Male' == $user['GENDER']) ? 'checked' : ''?> /><p>Male</p>
+							 <input type="radio" name="modal_gender" value="Male"  <?php echo('Male' == $user['GENDER']) ? 'checked' : ''?> /><p>Male</p>
 							</section>
 							<section class= "radio-input">
-								<input type= "radio" name= "gender"  value= "Female" <?php ('Female' == $user['GENDER']) ? 'checked' : ''?>/><p>Female</p>
+								<input type= "radio" name= "modal_gender"  value= "Female" <?php echo('Female' == $user['GENDER']) ? 'checked' : ''?>/><p>Female</p>
 							</section>
 						</section>
 					</section>
@@ -74,19 +74,19 @@
 						</section>
 						<section class= "pi-row-input">
 							<section class= "radio-input">
-								<input type= "radio" class="civil_status" value= "Single"><p>Single</p>
+								<input type= "radio" name="modal_civil_status" value= "Single" <?php echo('Single' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Single</p>
 							</section>
 							<section class= "radio-input">
-								<input type= "radio" name="civil_status" value= "Married"><p>Married</p>
+								<input type= "radio" name="modal_civil_status" value= "Married" <?php echo('Married' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Married</p>
 							</section>
 							<section class= "radio-input">
-								<input type= "radio" name="civil_status" value= "Widow"><p>Widowed</p>
+								<input type= "radio" name="modal_civil_status" value= "Widow" <?php echo('Widow' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Widowed</p>
 							</section>
 							<section class= "radio-input">
-								<input type= "radio" name="civil_status" value= "Separated"><p>Separated</p>
+								<input type= "radio" name="modal_civil_status" value= "Separated" <?php echo('Separated' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Separated</p>
 							</section>
 							<section class= "radio-input">
-								<input type= "radio" name="civil_status" value= "Others"><p>Other`s</p>
+								<input type= "radio" name="modal_civil_status" value= "Others" <?php echo('Others' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Other`s</p>
 							</section>
 						</section>
 					</section>
@@ -170,19 +170,19 @@
 										</section>
 										<section class= "pi-row-input">
 											<section class= "radio-input">
-												<input type= "radio" name= "citi" value= "Filipino">
+												<input type= "radio" name= "modal_citi" value= "Filipino" <?php echo('Filipino' == $user['CITIZENSHIP']) ? 'checked' : ''?>>
 												<p>Filipino</p>
 											</section>
 											<section class= "radio-input">
-												<input type= "radio" name= "citi" value= "Dual Citizenship">
+												<input type= "radio" name= "modal_citi" value= "Dual Citizenship" <?php echo('Dual Citizenship' == $user['CITIZENSHIP']) ? 'checked' : ''?>>
 												<p>Dual Citizenship</p>
 											</section>
 											<section class= "radio-input">
-												<input type= "radio" name= "citi" value= "By Birth">
+												<input type= "radio" name= "modal_citi" value= "By Birth" <?php echo('By Birth' == $user['CITIZENSHIP']) ? 'checked' : ''?>>
 												<p>By Birth</p>
 											</section>
 											<section class= "radio-input">
-												<input type= "radio" name= "citi" value= "By Naturalization">
+												<input type= "radio" name= "modal_citi" value= "By Naturalization" <?php echo('By Naturalization' == $user['CITIZENSHIP']) ? 'checked' : ''?>>
 												<p>By Naturalization</p>
 											</section>
 											<section class= "radio-input">
@@ -306,14 +306,14 @@
 										</section>
 										<section class= "pi-row-input">
 											<section class= "text-input">
-												<input type= "text" id="pds_spousesurname">
+												<input type= "text" id="pds_spousesurname"  value="<?php echo $user['spousesurname'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text"  id="pds_spousefirstname">
-												<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  id="pds_spousenameextension">
+												<input type= "text"  id="pds_spousefirstname" value="<?php echo $user['spousefirstname'] ?>">
+												<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  id="pds_spousenameextension" value="<?php echo $user['spousenameextension'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text"  id="pds_spousemiddlename">
+												<input type= "text"  id="pds_spousemiddlename" value="<?php echo $user['spousemiddlename'] ?>">
 											</section>
 										</section>
 									</section>
@@ -322,7 +322,7 @@
 											<p>Occupation</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text"  id="pds_spouseoccupation">
+											<input type= "text"  id="pds_spouseoccupation" value="<?php echo $user['spouseoccupation'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -330,7 +330,7 @@
 											<p>Employer/Business Name</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text"  id="pds_businessname">
+											<input type= "text"  id="pds_businessname" value="<?php echo $user['businessname'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -338,7 +338,7 @@
 											<p>Business Address</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text"  id="pds_businessaddress">
+											<input type= "text"  id="pds_businessaddress" value="<?php echo $user['businessaddress'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -346,7 +346,7 @@
 											<p>Telephone No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text"  id="pds_businesstelno">
+											<input type= "text"  id="pds_businesstelno" value="<?php echo $user['businesstelno'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -357,14 +357,14 @@
 										</section>
 										<section class= "pi-row-input">
 											<section class= "text-input">
-												<input type= "text"  id="pds_fathersurname">
+												<input type= "text"  id="pds_fathersurname" value="<?php echo $user['fathersurname'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text"  id="pds_fatherfirstname">
-												<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  id="pds_fathernameextension">
+												<input type= "text"  id="pds_fatherfirstname" value="<?php echo $user['fatherfirstname'] ?>"> 
+												<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  id="pds_fathernameextension" value="<?php echo $user['fathernameextension'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text" id="pds_fathermiddlename">
+												<input type= "text" id="pds_fathermiddlename" value="<?php echo $user['fathermiddlename'] ?>">
 											</section>
 										</section>
 									</section>
@@ -377,14 +377,14 @@
 										</section>
 										<section class= "pi-row-input">
 											<section class= "text-input">
-												<input type= "text" id="pds_mothersurname">
+												<input type= "text" id="pds_mothersurname" value="<?php echo $user['mothermaindenname'] ?>">
 											</section>
 											<section class= "text-input">
-												<input type= "text" id="pds_motherfirstname" >
-												<input type= "text" placeholder= "Name Extension(Jr., Sr.)" id="pds_mothersnameextension">
+												<input type= "text" id="pds_motherfirstname" value="<?php echo $user['motherfirstname'] ?>">
+												<input type= "text" placeholder= "Name Extension(Jr., Sr.)" id="pds_mothersnameextension" >
 											</section>
 											<section class= "text-input">
-												<input type= "text" id="pds_mothersmiddlename">
+												<input type= "text" id="pds_mothersmiddlename" value="<?php echo $user['mothersmiddlename'] ?>">
 											</section>
 										</section>
 									</section>
