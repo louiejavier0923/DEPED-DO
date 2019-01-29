@@ -5,19 +5,34 @@
 
     //Load Composer's autoloader
     require 'vendor/autoload.php';
-    require '../../include/session.php';
+
 
     $mail = new PHPMailer(true);
  
     switch($_POST['action']){
 
         case 'vacant-function':
+            require '../../include/session.php';
             $vacant_no = $_POST['vacant_no'];
+               $sql="SELECT * from application where PID='" .$vacant_no."' AND UID = '".$user['UID']."';";
+            $result=mysqli_query($conn,$sql);
 
-            $sql = "INSERT INTO application VALUES (NULL, '".$user['UID']."', '".$vacant_no."', '0', 'NOW()', '0');";
-            $query = mysqli_query($conn, $sql);
+                if($result->num_rows > 0) {
+                      $output='you already applied for this position';
+                } 
+                else{
+                
+                     $sql = "INSERT INTO application (UID,PID,STATUS,DATE,IS_CALIBRATED)VALUES ('".$user['UID']."', '".$vacant_no."', '0',CURRENT_DATE(), '0');";
+                      $query = mysqli_query($conn, $sql);
+            
+                      $output='successful';
+                }
+           
+              $data = array(
+                'message' => $output
+            );
 
-            header('Location: fill-up.php');
+            echo json_encode($data);
         break;
 
         case 'update_password':
