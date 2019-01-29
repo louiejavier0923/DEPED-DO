@@ -14,9 +14,10 @@ include 'connection.php';
                                               
                                       }
                                }
- 	 $sql=$conn->query("UPDATE user SET STATUS='1' WHERE EMAIL='".$email."' and UID='".$UID."'");
+ 	 $sql=$conn->query("UPDATE user SET STATUS='1' WHERE EMAIL='".$email."' and UID='".$UID."';");
+	 $sql1=$conn->query("INSERT INTO family_background(`UID`) VALUES ('".$UID."');");
 
-        echo $UID;
+        echo $UID.' - '.$email.' has already confirmed! Proceed to login! <a href="../../">Click here...</a>';
 
  }
  
