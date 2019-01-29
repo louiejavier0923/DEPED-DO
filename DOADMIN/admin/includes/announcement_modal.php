@@ -21,7 +21,7 @@
                     <label for="description" class="col-sm-3 control-label">Announcement Description</label>
 
                     <div class="col-sm-9">
-                       <textarea class="form-control" rows="3" id="description" name="description" placeholder="Type Address . . ."></textarea>
+                       <textarea class="form-control" rows="3" id="description" name="description" placeholder="Type Description . . ."></textarea>
                     </div>
                 </div>
                  <div class="form-group">

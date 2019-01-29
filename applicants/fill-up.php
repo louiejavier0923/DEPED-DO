@@ -78,7 +78,7 @@
 						<section class= "pi-row-label">
 							<p>5. Sex</p>
 						</section>
-						<section class= "pi-row-input">
+						<section class= "pi-row-input gender-fields radio-fields">
 							<section class= "radio-input">
 							 <input type="radio" name="Gender" value="Male"  <?php echo('Male' == $user['GENDER']) ? 'checked' : ''?> /><p>Male</p>
 							</section>
@@ -91,9 +91,9 @@
 						<section class= "pi-row-label">
 							<p>6. Civil Status</p>
 						</section>
-						<section class= "pi-row-input">
+						<section class= "pi-row-input civilstat-fields radio-fields">
 							<section class= "radio-input">
-								<input type= "radio" class="Civil Status" value= "Single" <?php echo('Single' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Single</p>
+								<input type= "radio" name="Civil Status" value= "Single" <?php echo('Single' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Single</p>
 							</section>
 							<section class= "radio-input">
 								<input type= "radio" name="Civil Status" value= "Married" <?php echo('Married' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Married</p>
@@ -122,7 +122,7 @@
 							<p>8. Weight(kg)</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "text"  class="pds_width" name='Weight' value="<?php echo $user['WEIGHT'] ?>">
+							<input type= "text"  class="pds_weight" name='Weight' value="<?php echo $user['WEIGHT'] ?>">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -187,7 +187,7 @@
 										<section class= "pi-row-label">
 											<p>16. Citizenship<br><br><br><br><br><br><br><span>If holder of dual citizenship</span><br><br><span>please indicate the details.</span></p>
 										</section>
-										<section class= "pi-row-input">
+										<section class= "pi-row-input citizenship-fields radio-fields">
 											<section class= "radio-input">
 												<input type= "radio" name= "Citizenship" value= "Filipino" <?php echo('Filipino' == $user['CITIZENSHIP']) ? 'checked' : ''?>>
 												<p>Filipino</p>
@@ -344,7 +344,7 @@
 											<input type= "text"  name='Spouse`s Occupation' class="pds_spouseoccupation" value="<?php echo $user['spouseoccupation'] ?>">
 										</section>
 									</section>
-									<section class= "pi-row spouse-fields">
+									<section class= "pi-row single-fields">
 										<section class= "pi-row-label">
 											<p>Employer/Business Name</p>
 										</section>
@@ -352,7 +352,7 @@
 											<input type= "text"  name='Spouse`s Employer/Business Name' class="pds_businessname" value="<?php echo $user['businessname'] ?>">
 										</section>
 									</section>
-									<section class= "pi-row spouse-fields">
+									<section class= "pi-row single-fields">
 										<section class= "pi-row-label">
 											<p>Business Address</p>
 										</section>
@@ -360,7 +360,7 @@
 											<input type= "text"  name='Spouse`s Business Address'  class="pds_businessaddress" value="<?php echo $user['businessaddress'] ?>">
 										</section>
 									</section>
-									<section class= "pi-row spouse-fields">
+									<section class= "pi-row single-fields">
 										<section class= "pi-row-label">
 											<p>Telephone No.</p>
 										</section>
@@ -396,7 +396,7 @@
 										</section>
 										<section class= "pi-row-input">
 											<section class= "text-input">
-												<input type= "text"  name='Mother`s Surname'  class="pds_mothersurname" value="<?php echo $user['mothermaindenname'] ?>">
+												<input type= "text"  name='Mother`s Surname'  class="pds_mothermaindenname" value="<?php echo $user['mothermaindenname'] ?>">
 											</section>
 											<section class= "text-input">
 												<input type= "text" name='Mother`s First Name'   class="pds_motherfirstname" value="<?php echo $user['motherfirstname'] ?>">
@@ -1272,8 +1272,8 @@
 						</section>
 					</section>
 				</section>
-				<section>
-				<div  class='errors'>
+				<section class='errors'>
+				<div>
 				</div>
 				</section>
 				
@@ -1286,14 +1286,13 @@
                               if($user['UID']==null) 
                                {
                              
-                                         echo "<button type= 'submit' class='save_pds' id='submit_pds'>Confirm</button>";    
+                                         echo "<button type= 'submit' class='save_pds' data-id='". $user['UID'] ."' id='submit_pds'>Confirm</button>";    
                                }
                            else{
                                           echo "<button type= 'submit' class='edit_pds' id='edit_pds'>Save</button>"; 
                                }
                     
 					?>
-					
 					<button type= "submit" id= "submit_file">ATTACH FILE</button>
 				</section>
 			</section>

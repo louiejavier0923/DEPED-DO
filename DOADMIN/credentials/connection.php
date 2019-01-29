@@ -1,9 +1,7 @@
 <?php
-
 /*$servername = "ROMEROMAN\SQLEXPRESS";
 /* 
 $servername = "ROMEROMAN\SQLEXPRESS";
->>>>>>> 93304126f75fd1f57e1ba049ac8a958110658afc
 $username = "sa";
 $password = "1234";
 $database = "RECOMMENDINGSYSTEMDO";

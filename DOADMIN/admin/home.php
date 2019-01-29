@@ -169,11 +169,11 @@
   $late = array();
   
   for( $m = 1; $m <= 12; $m++ ) {
-    $sql = "SELECT * FROM application WHERE MONTH(DATE) = '$m' AND IS_CALIBRATED = 1 $and";
+    $sql = "SELECT * FROM application WHERE MONTH(DATE) = '$m' AND IS_CALIBRATED = 0 $and";
     $oquery = $conn->query($sql);
     array_push($ontime, $oquery->num_rows);
 
-    $sql = "SELECT * FROM application WHERE MONTH(DATE) = '$m' AND IS_CALIBRATED = 0 $and";
+    $sql = "SELECT * FROM application WHERE MONTH(DATE) = '$m' AND IS_CALIBRATED = 1 $and";
     $lquery = $conn->query($sql);
     array_push($late, $lquery->num_rows);
 

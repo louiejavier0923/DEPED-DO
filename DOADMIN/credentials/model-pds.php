@@ -11,7 +11,7 @@
    $mail = new PHPMailer(true);
 	
    switch($_POST['action']){
-	case 'update_user_function':
+	case 'update_pds_function':
 		$output='';
 		$exe = '';
 		$error = '';
@@ -106,7 +106,7 @@
 		$exe = '';
 		$error = '';
 		
-		$sql="UPDATE `user` SET `EMAIL`='$pds_emailaddress' WHERE UID = '$id';";
+		$sql="";
 		
 		$sql .= "UPDATE `personal_info` SET `FIRSTNAME`='$pds_firstname', `LASTNAME`='$pds_surname', `MIDDLENAME`='$pds_middlename', `EXTENSION_NAME`='$pds_nameextension', `BIRTHDATE`='$pds_dateofbirth', `BIRTHPLACE`='$pds_placeofbirth', `GENDER`='$pds_gender', `HEIGHT`='$pds_height', `WEIGHT`='$pds_weight', `BLOOD_TYPE`='$pds_bloodtype', `CIVIL_STATUS`='$civil_status', `GSIS_ID_NO`='$pds_gsisno', `PAG_IBIG_NO`='$pds_pagibigno', `PHILHEALTH_NO`='$pds_philhealthno', `SSS_NO`='$pds_sssno', `TIN_NO`='$pds_tinno', `AGENCY_EMPLOYEE_NO`='$pds_agencyemployee', `CITIZENSHIP`='$pds_citizenship', `RESIDENTIAL_LOTNO`='$pds_rhouseblk', `RESIDENTIAL_STREET`='$pds_rstreet', `RESIDENTIAL_SUBDIVISION`='$pds_rsubdivision', `RESIDENTIAL_BARANGAY`='$pds_rbarangay', `RESIDENTIAL_MUNICIPALITY`='$pds_rmunicipality', `RESIDENTIAL_PROVINCE`='$pds_rprovince', `RESIDENTIAL_ZIP_CODE`='$pds_rzipcode', `PERMANENT_LOTNO`='$pds_phouseblk', `PERMANENT_STREET`='$pds_pstreet', `PERMANENT_SUBDIVISION`='$pds_psubdivision', `PERMANENT_BARANGAY`='$pds_pbarangay', `PERMANENT_MUNICIPALITY`='$pds_pmunicipality', `PERMANENT_PROVINCE`='$pds_pprovince', `PERMANENT_ZIP_CODE`='$pds_pzipcode', `TELEPHONE_NO`='$pds_telno', `MOBILE_NO`='$pds_mobileno' WHERE UID = '$id';";
 		
@@ -230,7 +230,7 @@
 		$result=mysqli_query($conn,$sql);
 		
 		if (!$result->num_rows > 0){
-			
+			$sql='';
 			
 			$sql .= " INSERT INTO `personal_info` (`UID`, `FIRSTNAME`, `LASTNAME`, `MIDDLENAME`, `EXTENSION_NAME`, `BIRTHDATE`, `BIRTHPLACE`, `GENDER`, `HEIGHT`, `WEIGHT`, `BLOOD_TYPE`, `CIVIL_STATUS`, `GSIS_ID_NO`, `PAG_IBIG_NO`, `PHILHEALTH_NO`, `SSS_NO`, `TIN_NO`, `AGENCY_EMPLOYEE_NO`, `CITIZENSHIP`, `RESIDENTIAL_LOTNO`, `RESIDENTIAL_STREET`, `RESIDENTIAL_SUBDIVISION`, `RESIDENTIAL_BARANGAY`, `RESIDENTIAL_MUNICIPALITY`, `RESIDENTIAL_PROVINCE`, `RESIDENTIAL_ZIP_CODE`, `PERMANENT_LOTNO`, `PERMANENT_STREET`, `PERMANENT_SUBDIVISION`, `PERMANENT_BARANGAY`, `PERMANENT_MUNICIPALITY`, `PERMANENT_PROVINCE`, `PERMANENT_ZIP_CODE`, `TELEPHONE_NO`, `MOBILE_NO`) VALUES ('". $user['UID'] ."', '$pds_firstname', '$pds_surname', '$pds_middlename', '$pds_nameextension', '$pds_dateofbirth', '$pds_placeofbirth', '$pds_gender', '$pds_height', '$pds_weight', '$pds_bloodtype', '$civil_status', '$pds_gsisno', '$pds_pagibigno', '$pds_philhealthno', '$pds_sssno', '$pds_tinno', '$pds_agencyemployee', '$pds_citizenship', '$pds_rhouseblk', '$pds_rstreet', '$pds_rsubdivision', '$pds_rbarangay', '$pds_rmunicipality', '$pds_rprovince', '$pds_rzipcode', '$pds_phouseblk', '$pds_pstreet', '$pds_psubdivision', '$pds_pbarangay', '$pds_pmunicipality', '$pds_pprovince', '$pds_pzipcode', '$pds_mobileno', '$pds_mobileno');";
 			

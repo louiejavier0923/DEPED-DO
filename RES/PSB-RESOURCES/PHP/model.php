@@ -338,6 +338,14 @@ switch ($_POST['action']) {
 			}
 
 			switch($exp_point[1]){
+				case '':
+					$exp_options="
+						<option value='0' selected>Choose Options</option>
+						<option value='1'>Less than 2 years experience</option>
+						<option value='2'>2 to less than 5 years experience</option>
+						<option value='3'>5 or more years experience</option>
+					";
+				break;
 				case '0':
 					$exp_options="
 						<option value='0' selected>Choose Options</option>

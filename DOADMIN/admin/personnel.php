@@ -98,7 +98,6 @@ $(function(){
                     var key = e.keyCode;
                     if (key >= 48 && key <= 57)
                      {
-                    alert("Alphabet letters only!");
                     
                         e.preventDefault();
                     }
@@ -108,8 +107,6 @@ $(function(){
                     var key = e.keyCode;
                     if (key >= 48 && key <= 57)
                      {
-                    alert("Alphabet letters only!");
-                    
                         e.preventDefault();
                     }
                 });
@@ -118,7 +115,6 @@ $(function(){
                     var key = e.keyCode;
                     if (key >= 48 && key <= 57)
                      {
-                    alert("Alphabet letters only!");
                     
                         e.preventDefault();
                     }
@@ -128,7 +124,6 @@ $(function(){
                     var key = e.keyCode;
                     if (key >= 48 && key <= 57)
                      {
-                    alert("Alphabet letters only!");
                     
                         e.preventDefault();
                     }
@@ -138,7 +133,6 @@ $(function(){
                     var key = e.keyCode;
                     if (key >= 48 && key <= 57)
                      {
-                    alert("Alphabet letters only!");
                     
                         e.preventDefault();
                     }
@@ -148,7 +142,6 @@ $(function(){
                     var key = e.keyCode;
                     if (key >= 48 && key <= 57)
                      {
-                    alert("Alphabet letters only!");
                     
                         e.preventDefault();
                     }
