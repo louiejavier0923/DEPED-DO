@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2019 at 05:30 PM
+-- Generation Time: Jan 29, 2019 at 03:38 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -24,6 +24,16 @@ DELIMITER $$
 --
 -- Procedures
 --
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_school`(IN `SCHOOLNAME` VARCHAR(45), IN `SCHOOLADDRESS` VARCHAR(65))
+BEGIN
+SET @maxno = (SELECT MAX(NO)+1 FROM schools);
+ SET @THISUID = (CONCAT("SID-000",@maxno));
+ 
+
+insert into schools(SID,SCHOOL_NAME,SCHOOL_ADDRESS,isActive)
+VALUES(@THISUID,SCHOOLNAME,SCHOOLADDRESS,'1');
+ END$$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_vacancy`(IN `TITLE` VARCHAR(45), IN `DESCRIPTION` LONGTEXT, IN `PLACE` VARCHAR(45), IN `NOI` VARCHAR(45), IN `DATE` DATE, IN `EXPIRATION` DATE, IN `STATUS` VARCHAR(45), IN `SALARIES` VARCHAR(45), IN `ITEM_NO` VARCHAR(45))
 BEGIN
 SET @maxno = (SELECT MAX(NO)+1 FROM publish_vacancy);
@@ -164,15 +174,18 @@ CREATE TABLE IF NOT EXISTS `application` (
   `STATUS` tinyint(4) NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `IS_CALIBRATED` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `application`
 --
 
 INSERT INTO `application` (`NO`, `UID`, `PID`, `STATUS`, `date`, `IS_CALIBRATED`) VALUES
-(1, 'TCH-00033', 'PID-00012', 0, '2019-01-25 12:00:46', 1),
-(4, 'TCH-0001', 'PID-0001', 0, '2019-01-28 20:40:10', 0);
+(21, 'TCH-0002', 'PID-0002', 0, '2019-01-29 00:00:00', 0),
+(22, 'TCH-0001', 'PID-0002', 0, '2019-01-29 00:00:00', 0),
+(23, 'TCH-0001', '', 0, '2019-01-29 00:00:00', 0),
+(24, 'TCH-0001', 'PID-0008', 0, '2019-01-29 00:00:00', 0),
+(25, 'TCH-0001', 'PID-0009', 0, '2019-01-29 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -284,14 +297,14 @@ CREATE TABLE IF NOT EXISTS `family_background` (
   `motherfirstname` varchar(30) NOT NULL,
   `mothersnameextension` varchar(10) NOT NULL,
   `mothersmiddlename` varchar(30) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `family_background`
 --
 
 INSERT INTO `family_background` (`NO`, `UID`, `spousesurname`, `spousefirstname`, `spousemiddlename`, `spousenameextension`, `spouseoccupation`, `businessname`, `businessaddress`, `businesstelno`, `fathersurname`, `fatherfirstname`, `fathernameextension`, `fathermiddlename`, `mothermaindenname`, `motherfirstname`, `mothersnameextension`, `mothersmiddlename`) VALUES
-(1, 'TCH-0001', 'dfhdh', 'fdhdh', 'dhdh', 'dhdhdhdh', 'dhd', 'hdhdh', 'dfhdhdh', 'dhdhh', 'hdhd', 'hdhdhdfhd', 'hsdhsh', 'sdhssd', 'hshs', 'hshshsdh', 'shshsh', 'shshshss'),
+(1, 'TCH-0001', 'none', 'none', 'none', 'none', 'dhd', 'hdhdh', 'dfhdhdh', 'dhdhh', 'hdhd', 'hdhdhdfhd', 'hsdhsh', 'sdhssd', 'hshs', 'hshshsdh', 'shshsh', 'shshshss'),
 (2, '$', 'v01', 'v02', 'v04', 'v03', 'v05', 'v06', 'v07', 'v08', 'v09', 'v010', 'v011', 'v012', 'v013', 'v014', 'v015', 'v016'),
 (3, '$', 'fgkf', 'kfkf', 'fkfkfk', 'kfkfk', 'fkfkf', 'k', 'kkgkdgj', 'gkdkdg', 'hdghdhd', 'ghdghdg', 'hdhdhd', 'hdghdgh', '', 'hdhdh', 'dghdhd', 'hdghdhd'),
 (4, '$', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
@@ -304,7 +317,8 @@ INSERT INTO `family_background` (`NO`, `UID`, `spousesurname`, `spousefirstname`
 (11, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (12, 'TCH-0001', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (13, 'TCH-0001', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(14, 'TCH-0001', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+(14, 'TCH-0001', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(15, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -365,7 +379,7 @@ CREATE TABLE IF NOT EXISTS `personal_info` (
   `LASTNAME` varchar(255) NOT NULL,
   `MIDDLENAME` varchar(255) NOT NULL,
   `EXTENSION_NAME` varchar(255) NOT NULL,
-  `BIRTHDATE` varchar(255) NOT NULL,
+  `BIRTHDATE` date NOT NULL,
   `BIRTHPLACE` varchar(255) NOT NULL,
   `GENDER` varchar(255) NOT NULL,
   `HEIGHT` varchar(255) NOT NULL,
@@ -395,19 +409,19 @@ CREATE TABLE IF NOT EXISTS `personal_info` (
   `PERMANENT_ZIP_CODE` varchar(255) NOT NULL,
   `TELEPHONE_NO` varchar(10) NOT NULL,
   `MOBILE_NO` varchar(13) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `personal_info`
 --
 
 INSERT INTO `personal_info` (`NO`, `UID`, `FIRSTNAME`, `LASTNAME`, `MIDDLENAME`, `EXTENSION_NAME`, `BIRTHDATE`, `BIRTHPLACE`, `GENDER`, `HEIGHT`, `WEIGHT`, `BLOOD_TYPE`, `CIVIL_STATUS`, `GSIS_ID_NO`, `PAG_IBIG_NO`, `PHILHEALTH_NO`, `SSS_NO`, `TIN_NO`, `AGENCY_EMPLOYEE_NO`, `CITIZENSHIP`, `RESIDENTIAL_LOTNO`, `RESIDENTIAL_STREET`, `RESIDENTIAL_SUBDIVISION`, `RESIDENTIAL_BARANGAY`, `RESIDENTIAL_MUNICIPALITY`, `RESIDENTIAL_PROVINCE`, `RESIDENTIAL_ZIP_CODE`, `PERMANENT_LOTNO`, `PERMANENT_STREET`, `PERMANENT_SUBDIVISION`, `PERMANENT_BARANGAY`, `PERMANENT_MUNICIPALITY`, `PERMANENT_PROVINCE`, `PERMANENT_ZIP_CODE`, `TELEPHONE_NO`, `MOBILE_NO`) VALUES
-(1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(2, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(3, '', '', '', '', '', '', '', 'Male', '', '', '', 'Married', '', '', '', '', '', '', 'By Birth', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(4, 'TCH-00032', 'ROMERO', 'ADRIANE', 'GENITA', '', '', '', 'Male', '', '', '', 'Married', '', '', '', '', '', '', 'By Birth', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(5, 'TCH-0005', 'Adriane Clark', 'Romero', 'Genita', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(6, 'TCH-0001', 'Adriane Clark', 'Romero', 'Genita', '', '', '', 'Male', '', '', '', 'Separated', '', '', '', '', '', '', 'Dual Citizenship', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+(1, '', '', '', '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(2, '', '', '', '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(3, '', '', '', '', '', '0000-00-00', '', 'Male', '', '', '', 'Married', '', '', '', '', '', '', 'By Birth', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(4, 'TCH-00032', 'ROMERO', 'ADRIANE', 'GENITA', '', '0000-00-00', '', 'Male', '', '', '', 'Married', '', '', '', '', '', '', 'By Birth', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(5, 'TCH-0005', 'Adriane Clark', 'Romero', 'Genita', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(6, 'TCH-0001', 'Adriane Clark', 'Romero', 'Genita', '', '1997-11-03', 'Manila', 'Male', '152cm', '49kg', 'A', 'Separated', '283929231', '23123123', '23123122', '2312312312', '12312312', '1231231231', 'Dual Citizenship', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', '09662715987');
 
 -- --------------------------------------------------------
 
@@ -463,7 +477,7 @@ CREATE TABLE IF NOT EXISTS `schools` (
   `SCHOOL_NAME` varchar(255) NOT NULL,
   `SCHOOL_ADDRESS` varchar(255) NOT NULL,
   `isActive` tinyint(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `schools`
@@ -471,7 +485,9 @@ CREATE TABLE IF NOT EXISTS `schools` (
 
 INSERT INTO `schools` (`NO`, `SID`, `SCHOOL_NAME`, `SCHOOL_ADDRESS`, `isActive`) VALUES
 (1, 'SID-0001', 'Pugad Lawin High School', 'Brgy. Bahay Toro, Project 8 Quezon Cities', 1),
-(2, 'SID-0002', 'QUEZON CITY POLYTECHNIC UNIVERSITY', 'San Bartolome', 1);
+(2, 'SID-0002', 'QUEZON CITY POLYTECHNIC UNIVERSITY', 'San Bartolome', 1),
+(3, 'SID-0003', 'BEST LINK', 'Novaliches Bayan', 1),
+(4, 'SID-0004', 'HAMBURGER', 'asd', 1);
 
 -- --------------------------------------------------------
 
@@ -487,14 +503,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   `STATUS` varchar(1) NOT NULL,
   `ACTIVATION_KEY` longtext NOT NULL,
   `IS_ONLINE` varchar(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`NO`, `UID`, `EMAIL`, `PWD`, `STATUS`, `ACTIVATION_KEY`, `IS_ONLINE`) VALUES
-(34, 'TCH-0001', 'cromeroadr@gmail.com', 'e', '1', '2e942a8eb075d2c26f92cc2ae525999f20008153', '0');
+(34, 'TCH-0001', 'cromeroadr@gmail.com', 'e', '1', '2e942a8eb075d2c26f92cc2ae525999f20008153', '0'),
+(35, 'TCH-0002', 'flipmusicc@gmail.com', 'e', '1', '', '');
 
 -- --------------------------------------------------------
 
@@ -729,7 +746,7 @@ ALTER TABLE `applicants_points`
 -- AUTO_INCREMENT for table `application`
 --
 ALTER TABLE `application`
-  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `appointment`
 --
@@ -759,7 +776,7 @@ ALTER TABLE `evaluators_info_tbl`
 -- AUTO_INCREMENT for table `family_background`
 --
 ALTER TABLE `family_background`
-  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `learning_and_development`
 --
@@ -779,7 +796,7 @@ ALTER TABLE `other_info`
 -- AUTO_INCREMENT for table `personal_info`
 --
 ALTER TABLE `personal_info`
-  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `publish_vacancy`
 --
@@ -789,12 +806,12 @@ ALTER TABLE `publish_vacancy`
 -- AUTO_INCREMENT for table `schools`
 --
 ALTER TABLE `schools`
-  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=35;
+  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `voluntary_work`
 --

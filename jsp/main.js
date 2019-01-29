@@ -1,86 +1,231 @@
-
-function login(action = 'login_function')
-      {
-      var login_email = $('#login_email').val();
-      var login_password = $('#login_password').val();
-
-                 
-        $.ajax({
-               url:"DOADMIN/credentials/model.php",
-               method:"POST",
-               data:{action:action,email:login_email,pwd:login_password},
-               dataType:"json",
-                   success:function(data){
+function login(action = 'login_function') {
+    var login_email = $('#login_email').val();
+    var login_password = $('#login_password').val();
+    
+     if(login_email=='' || login_email==null){
+          alert("empty email");
+     }
+     else if(login_password=='' || login_password==null){
+          alert("empty password");
+     }
+     else{         
+    $.ajax({
+        url:"DOADMIN/credentials/model.php",
+        method:"POST",
+        data:{action:action,email:login_email,pwd:login_password},
+        dataType:"json",
+            success:function(data){
                                          
-                             switch(data.message){
-                                               	
-                                    case 'successful':
-                                          window.location.href='applicants/home.php';
-                                    break;
+                switch(data.message){                      	
+                    case 'successful':
+                        window.location.href='applicants/home.php';
+                    break;
+                    case 'redirect':
+                        window.location.href='email-verification.php';
+                    break;
+                    default:
+                        alert(data.message);
+                    break;
+                }
+            }
+    });
+  }
+}
 
-                                    case 'redirect':
-                                          window.location.href='email-verification.php';
-                                    break;
 
-                                    default:
-                                          alert(data.message);
-                                    break;
-                                                 }
-                                           
-                                                
- 
-                                                  
-                                     
-                                         }
-                                                
-                          });
-  
 
+function update_password(action = "update_password") {
+    var app_password = $('#applicant_password').val();
+    var old_password = $('#applicant_oldPass').val();
+    var new_password = $('#applicant_newPass').val();
+    var confirm_password = $('#applicant_repeatPass').val();
+
+    if (old_password == app_password ) {
+        $('#applicant_oldPass').css('border', 'solid 1px rgb(0, 255, 0)');
+
+        if (new_password == "" && confirm_password == "") {
+            $('#applicant_newPass').css('border', 'solid 1px rgb(255, 0, 0)');
+            $('#applicant_repeatPass').css('border', 'solid 1px rgb(255, 0, 0)');
         }
+        else if (new_password == confirm_password) {
+            $('#applicant_newPass').css('border', 'solid 1px rgb(0, 255, 0)');
+            $('#applicant_repeatPass').css('border', 'solid 1px rgb(0, 255, 0)');
+
+            $('.new_password').css('border', 'solid 1px rgb(220, 220, 220)');
+            $('.new_password').attr('disabled', true);
+            $('#okPassBtn').hide();
+            $('#editPassBtn').show();
+            $.ajax ({
+                url: '../DOADMIN/credentials/model.php',
+                method: 'post',
+                data: {
+                    action:action,
+                    new_password:new_password
+                },
+                dataType: 'json',
+                    success:function(data) {
+                        switch (data.message){
+                            case 'success':
+                                alert(data.message);
+                            break;
+                            default:
+                                alert(data.message);
+                            break;
+                        }
+                    }
+            });
+        }
+        else {
+            $('#applicant_newPass').css('border', 'solid 1px rgb(255, 0, 0)');   
+            $('#applicant_repeatPass').css('border', 'solid 1px rgb(255, 0, 0)');
+        }
+    }
+    else {
+        $('#applicant_oldPass').css('border', 'solid 1px rgb(255, 0, 0)');
+    }
+}
+
+function update_applicant(action = 'update_applicant') {
+
+    var app_firstname = $('#applicant_firstname').val();
+    var app_middlename = $('#applicant_middlename').val();
+    var app_lastname = $('#applicant_lastname').val();
+
+    //FIRST NAME
+    if (app_firstname == '') {
+        $('#applicant_firstname').css("border", "solid 1px rgb(255, 0, 0)");
+    }
+    else {
+        $('#applicant_firstname').css("border", "solid 1px rgb(0, 255, 0)");
+    }
+
+    //MIDDLE NAME
+     if (app_middlename == '') {
+        $('#applicant_middlename').css("border", "solid 1px rgb(255, 0, 0)");
+    }
+    else {
+        $('#applicant_middlename').css("border", "solid 1px rgb(0, 255, 0)");
+    }
+
+    //LAST NAME
+     if (app_lastname == '') {
+        $('#applicant_lastname').css("border", "solid 1px rgb(255, 0, 0)");
+    }
+    else {
+        $('#applicant_lastname').css("border", "solid 1px rgb(0, 255, 0)");
+    }
 
 
-function register(action = 'register_function')
-      {
-      var reg_email = $('#reg_email').val();
-      var reg_pass = $('#reg_pwd').val();
-       var reg_confirm_pass = $('#reg_confirm_pwd').val();
+    //FUNCTION
+    if (app_firstname != "" & app_middlename != "" & app_lastname != "") {
+        
+        $('.fullname').attr('disabled', true);
+        $('#okInfoBtn').hide();
+        $('#editInfoBtn').show();
+        $('.fullname').css('border', 'solid 1px rgb(220, 220, 220)');
+
+        $.ajax ({
+            url: '../DOADMIN/credentials/model.php',
+            method: 'post',
+            data: {
+                action:action,
+                fname:app_firstname,
+                mname:app_middlename,
+                lname:app_lastname
+            },
+            dataType: 'json',
+                success:function(data) {
+                    switch (data.message){
+                        case 'success':
+                            alert(data.message);
+                        break;
+                        default:
+                            alert(data.message);
+                        break;
+                    }
+                }
+        });
+    }
+}
+
+function register(action = 'register_function') {
+    var reg_email = $('#reg_email').val();
+    var reg_pass = $('#reg_pwd').val();
+    var reg_confirm_pass = $('#reg_confirm_pwd').val();
 
 
-       if(reg_email==''&& reg_pass==''){
-               alert('empty fields');
-       }
-       else{
+    if(reg_email==''&& reg_pass=='') {
+        alert('empty fields');
+    }
+    else {
         $('#loading').css("display","block");
         $('.loading-container').css("display","block");
-              $.ajax({
-               url:"DOADMIN/credentials/model.php",
-               method:"POST",
-               data:{action:action,email:reg_email,pwd:reg_pass,cpwd:reg_confirm_pass},
-               dataType:"json",
-                   success:function(data){
-                                              switch(data.message){
-                                                case 'success':
-                                                  alert(data.message);
-                                                  $('#loading').css("display","none");
-                                                  $('.loading-container').css("display","none");
-                                                   window.location.href='email-verification.php';
-                                                break;
+        
+        $.ajax({
+            url:"DOADMIN/credentials/model.php",
+            method:"POST",
+            data:{action:action,email:reg_email,pwd:reg_pass,cpwd:reg_confirm_pass},
+            dataType:"json",
+                success:function(data){
 
-                                                default:
-                                                         alert(data.message);
-                                                           $('#loading').css("display","none");
-                                                  $('.loading-container').css("display","none");
-                                                break;
+                    switch(data.message){
+                        case 'success':
+                            alert(data.message);
+                            $('#loading').css("display","none");
+                            $('.loading-container').css("display","none");
+                            window.location.href='email-verification.php';
+                        break;
+                        default:
+                            alert(data.message);
+                            $('#loading').css("display","none");
+                            $('.loading-container').css("display","none");
+                        break;
+                    }
+                }    
+        });     
+    }
+}
 
-                                              }
-                                           
-                                         }    
-               });
-      
-                               
-      
+function submit_pds(action='insert_pds_info') {
+    var firstname = $('#pds_firstname').val();
+    var surname = $('#pds_surname').val();
+    var middlename = $('#pds_middlename').val();
+    var nameextension = $('#pds_nameextension').val();
+    var dateofbirth = $('#pds_dateofbirth').val();
+    var placeofbirth = $('#pds_placeofbirth').val();
+    var gender = $("input[name='gender']:checked"). val();
+    var civilstatus = $("input[name='civil_status']:checked"). val();
+    
+    $.ajax({
+        url:"../DOADMIN/credentials/model.php",
+        method:"POST",
+        data:{action:action},
+        dataType:"json",
+            success:function(data){
+                alert(civilstatus);  
             }
 
+    });                                        
+}
+/*
+var placeofbirth = $('#pds_spousesurname').val();
+var placeofbirth = $('#pds_spousefirstname').val();
+var placeofbirth = $('#pds_spousenameextension').val();
+var placeofbirth = $('#pds_spousemiddlename').val();
+var placeofbirth = $('#pds_spouseoccupation').val();
+var placeofbirth = $('#pds_businessname').val();
+ var placeofbirth = $('#pds_businessaddress').val();
+var placeofbirth = $('#pds_businesstelno').val();
+var placeofbirth = $('#pds_fathersurname').val();
+var placeofbirth = $('#pds_fatherfirstname').val();
+var placeofbirth = $('#pds_fathernameextension').val();
+var placeofbirth = $('#pds_fathermiddlename').val();
+var placeofbirth = $('#pds_mothersurname').val();
+var placeofbirth = $('#pds_motherfirstname').val();
+var placeofbirth = $('#pds_mothersnameextension').val();
+var placeofbirth = $('#pds_mothersmiddlename').val();
+
+var placeofbirth = $('#pds_mothersmiddlename').val();
         }
 
   function apply(action = 'apply_vacancy')
@@ -121,86 +266,68 @@ function register(action = 'register_function')
                var placeofbirth = $('#pds_mothersmiddlename').val();
                
               
-               data:{
-                action:action,
-               firstname:firstname,
-               surname:surname,
-               middlename:middlename,
-               nameextension:nameextension,
-               dateofbirth:dateofbirth,
-               placeofbirth:placeofbirth,
-               gender:gender,
-              civilstatus:civilstatus,
-              height:height,
-              width:width,
-              bloodtype:bloodtype,
-              gsis:gsis,
-              pagibig:pagibig,
-              philhealth:philhealth,
-              sssno:sssno,
-              tinno:tinno,
-              agencyemployee:agencyemployee,
-              citizenship:citizenship,
-              country:country,
-              rhouseblk:rhouseblk,
-              rstreet:rstreet,
-              rsubdivsion:rsubdivsion,
-              rmunicipality:rmunicipality,
-              rprovince:rprovince,
-              rbarangay:rbarangay,
-              rzipcode:rzipcode,
-              phouseblk:phouseblk,
-              pstreet:pstreet,
-              psubdivision:psubdivision,
-              pbarangay:pbarangay,
-              pmunicipality:pmunicipality,
-              pprovince:pprovince,
-              pzipcode:pzipcode,
-              ptelno:ptelno,
-              pmobileno:pmobileno,
-              pemailaddress:pemailaddress
-                },
-                     
-        $.ajax({
-               url:"DOADMIN/credentials/model.php",
-               method:"POST",
-               data:{action:action,email:login_email,pwd:login_password},
-               dataType:"json",
-                   success:function(data){
-                                         
-                             switch(data.message){
+data:{
+action:action,
+firstname:firstname,
+ surname:surname,
+middlename:middlename,
+nameextension:nameextension,
+dateofbirth:dateofbirth,
+placeofbirth:placeofbirth,
+gender:gender,
+civilstatus:civilstatus,
+height:height,
+width:width,
+bloodtype:bloodtype,
+gsis:gsis,
+pagibig:pagibig,
+philhealth:philhealth,
+sssno:sssno,
+tinno:tinno,
+agencyemployee:agencyemployee,
+citizenship:citizenship,
+country:country,
+rhouseblk:rhouseblk,
+rstreet:rstreet,
+rsubdivsion:rsubdivsion,
+rmunicipality:rmunicipality,
+rprovince:rprovince,
+rbarangay:rbarangay,
+rzipcode:rzipcode,
+phouseblk:phouseblk,
+pstreet:pstreet,
+psubdivision:psubdivision,
+pbarangay:pbarangay,
+pmunicipality:pmunicipality,
+pprovince:pprovince,
+pzipcode:pzipcode,
+ptelno:ptelno,
+pmobileno:pmobileno,
+pemailaddress:pemailaddress
+},
+$.ajax({
+url:"DOADMIN/credentials/model.php",
+method:"POST",
+data:{action:action,email:login_email,pwd:login_password},
+dataType:"json",
+success:function(data){
+switch(data.message){
                                                 
-                                    case 'successful':
-                                          window.location.href='applicants/home.php';
-                                    break;
+case 'successful':
+ window.location.href='applicants/home.php';
+break;
 
-                                    case 'redirect':
-                                          alert(data.message);
-                                    break;
+case 'redirect':
+alert(data.message);
+break;
 
-                                    default:
-                                          alert(data.message);
-                                    break;
-                                                 }
-                                           
-                                                
- 
-                                                  
-                                     
-                                         }
-                                                
-                          });
-                          */
-  
-
-        
-
-
-
-
-
-
-
+default:
+alert(data.message);
+break;
+}                                   
+}                                             
+});
+*/
 
 $(document).ready(function() {
 
@@ -215,24 +342,22 @@ $(document).ready(function() {
     var messageModal = document.getElementById('message-modal');
     var fileModal = document.getElementById('file-modal');
 
-    $('body')
-      .on('click', '.modal-tab', function() {
-          switch (this.id) {
-              case 'loginBtn':
-                  $('.content-login').show();
-                  $('.content-register').hide();
-              break;
+    $('.fullname').attr('disabled', true);
+    $('.new_password').attr('disabled', true);
 
-              case 'registerBtn':
-                  $('.content-login').hide();
-                  $('.content-register').show();
-              break;
-          }
-      })
-        
-        .on('click', '#finishBtn', function() {
-            $('#applyBtn').hide();
-            window.location.href= "home.php";
+    $('body')
+        .on('click', '.modal-tab', function() {
+            switch (this.id) {
+                case 'loginBtn':
+                    $('.content-login').show();
+                    $('.content-register').hide();
+                break;
+
+                case 'registerBtn':
+                    $('.content-login').hide();
+                    $('.content-register').show();
+                break;
+            }
         })
 
         .on('click', '#doneBtn', function() {
@@ -284,10 +409,15 @@ $(document).ready(function() {
         .on('click', '#editPassBtn', function() {
             $('#okPassBtn').show();
             $('#editPassBtn').hide();
+            $('.new_password').attr('disabled', false);
         })
 
         .on('click', '#submit_file', function() {
             chooseFileModal.style.display= "block";
+        })
+
+        .on('click', '#editInfoBtn', function() {
+            $('.fullname').attr('disabled', false);
         })
 
         .on('click', '#cancelFileBtn', function() {
@@ -300,6 +430,10 @@ $(document).ready(function() {
 
         .on('click', '#okFileBtn', function () {
             attachFileModal.style.display= "none";
+        })
+
+        .on('click', '#okPassBtn', function() {
+            update_password();
         })
 
         .on('click', '#accBtn', function () {
@@ -366,20 +500,51 @@ $(document).ready(function() {
           fileModal.style.display= "block";
         })
 
-    $('#submit_login_btn').click(function() {			
-				 login();
-    });
-    $('#submit_register_btn').click(function() {			
-				register();
-    });
+        .on('click', '#applyBtn', function() {
+         
+            var vacant = $(this).data('id');
+           
+    $.ajax ({
+        url: '../DOADMIN/credentials/model.php',
+        method: 'POST',
+        data: {
+            action:'vacant-function',
+            vacant_no:vacant
+        },
+        dataType: 'json',
+            success:function(data) {
+                      
+                      switch(data.message){
+                            case 'successful':
+                                  window.location.href='finish.php'
+                                 
+                            break;
 
-    $('.apply_btn').click(function() {   
-          var vacancy_pid = $(this).data('id');                 
-          alert(vacancy_pid);
-          window.location.href='fill-up.php';
-  
-    });
-      $('#submit_pds').click(function() {   
-            submit_pds();
-    });
+                            default:
+                                 alert(data.message);
+                            break;
+
+                      }
+                     
+                  
+                
+            }
+    })
+        })
+
+        $('#submit_login_btn').click(function() {			
+            login();
+        });
+
+        $('#submit_register_btn').click(function() {			
+			register();
+        });
+
+        $('#submit_pds').click(function() {   
+            //submit_pds();
+        });
+
+        $('#okInfoBtn').click(function (){
+            update_applicant();
+        });
 });

@@ -2349,6 +2349,7 @@ body {
 										width: 5%;
 										height: 100%;
 										border-right: solid 1px rgb(220, 220, 220);
+										display: none;
 									}
 
 									.applicant-table-header .header:last-child {
@@ -2392,6 +2393,7 @@ body {
 										}
 
 										.applicant-table-content .content-info .info:nth-child(3) {
+											display: none;
 											width: 5%;
 											height: 100%;
 											border-right: solid 1px rgb(220, 220, 220);

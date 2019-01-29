@@ -20,10 +20,11 @@
 			</section>
 			<section class= "application-content">
 				<section class= "content-container">
+			
 				
                                   
                  <?php
-                    $sql = "SELECT * FROM publish_vacancy a join schools s ON s.SID=a.PLACE_ASSIGNMENT WHERE a.isActive = '1'";
+                    $sql = "SELECT * FROM publish_vacancy a join schools s ON s.SID=a.PLACE_ASSIGNMENT WHERE a.isActive = '1' and a.APP_ISSET = '0'";
 
 
 

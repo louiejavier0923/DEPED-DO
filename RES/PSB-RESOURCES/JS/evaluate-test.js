@@ -36,7 +36,7 @@ $(document).ready(function(){
 		}).done(function(data){
 			// console.log(data);
 			$('.content-info').html(data);
-			setEditableInputGrades($('.evaluator-criteria').html());
+			// setEditableInputGrades($('.evaluator-criteria').html());
 		});
 
 	})
@@ -117,9 +117,6 @@ $(document).ready(function(){
 	.on('click','.eval-out-editbtn',function(){
 
 		var e_win = $(this).parent('.eval-out').siblings('.educ-window');
-		// e_win.css({
-		// 	'display':'block'
-		// })
 		e_win.toggle();
 
 	})
@@ -130,7 +127,7 @@ $(document).ready(function(){
 			'display':'none'
 		})
 	})
-	.on('click','.ex-cancel',function(){
+	.on('click','.ex-cancel,.el-cancel',function(){
 
 		var e_win = $(this).parent('.ewc-grid2-col').parent('.educ-window-content').parent('.educ-window');
 		e_win.css({
@@ -231,7 +228,160 @@ $(document).ready(function(){
 			}
 		}) 
 
+	})
+	.on('click','.el-save',function(){
+
+		var valid = true;
+		var rater = $(this).parent('.exp-btns').siblings('.elig-grid').children('.ewc-grid-input').children('input[type=radio]:checked').val();
+		var rating = $(this).parent('.exp-btns').siblings('.educ-window-content-form').children('.eligibility-rating').val();
+		var el_points=0,el_value='';
+		var uid = $(this).siblings('.applicant-id').html(),
+		pid = $('#published_vacancy_select').val();
+
+		if(rater==undefined){
+			alert('Choose between LET/PBET!');
+			valid = false;
+		}
+		if(rating>100||rating<75){
+			alert('Enter a valid number!');
+			valid = false;
+		}
+		
+		if(valid){
+			el_value = rating.toString()+','+rater.toString();
+			el_points = eligibilityPoints(rater,parseFloat(rating));
+			// console.log(el_points +'//'+el_value)
+			// console.log(eligibilityPoints('LET',parseFloat(85)))
+
+			$.ajax({
+				type:'POST',
+				url:'../RES/PSB-RESOURCES/PHP/model.php',
+				data:{
+					action:'insert_applicant_point',
+					a:uid,
+					b:'ELIGIBILITY',
+					c:el_points,
+					d:user_id,
+					e:pid,
+					val:el_value
+				}			
+			}).done(function(data){
+				// console.log(data);
+				if (data) {
+					$('.applicant-filters').blur();
+				}
+			}) 
+			
+		}
+
+	})
+	.on('click','.ei-save',function(){
+
+		var sum_points = $(this).parent('.exp-btns').siblings('.educ-window-content-form').children('.interview-rating').val();
+		sum_points = parseFloat(sum_points);
+		var equivalent = interviewPoints(sum_points);
+		var uid = $(this).siblings('.applicant-id').html(),
+		pid = $('#published_vacancy_select').val();
+
+		if(sum_points==""||sum_points>15||sum_points<=0){
+			alert('Enter a valid value!');
+		}
+		else{
+
+			$.ajax({
+				type:'POST',
+				url:'../RES/PSB-RESOURCES/PHP/model.php',
+				data:{
+					action:'insert_applicant_point_interview',
+					a:uid,
+					b:'INTERVIEW',
+					c:equivalent,
+					d:user_id,
+					e:pid,
+					val:sum_points
+				}			
+			}).done(function(data){
+				// console.log(data);
+				if (data) {
+					$('.applicant-filters').blur();
+				}
+			}) 
+
+		}
+
+	})
+	.on('click','.ed-save',function(){
+
+		var sum_points = $(this).parent('.exp-btns').siblings('.educ-window-content-form').children('.demo-rating').val();
+		sum_points = parseFloat(sum_points);
+		var equivalent = demoteachingPoints(sum_points);
+		var uid = $(this).siblings('.applicant-id').html(),
+		pid = $('#published_vacancy_select').val();
+
+		if(sum_points==""||sum_points>60||sum_points<=0){
+			alert('Enter a valid value!');
+		}
+		else{
+
+			$.ajax({
+				type:'POST',
+				url:'../RES/PSB-RESOURCES/PHP/model.php',
+				data:{
+					action:'insert_applicant_point',
+					a:uid,
+					b:'DEMO',
+					c:equivalent,
+					d:user_id,
+					e:pid,
+					val:sum_points
+				}			
+			}).done(function(data){
+				// console.log(data);
+				if (data) {
+					$('.applicant-filters').blur();
+				}
+			}) 
+
+		}
+
+	})
+	.on('click','.ec-save',function(){
+
+		var sum_points = $(this).parent('.exp-btns').siblings('.educ-window-content-form').children('.comm-rating').val();
+		sum_points = parseFloat(sum_points);
+		var equivalent = communicationPoints(sum_points);
+		var uid = $(this).siblings('.applicant-id').html(),
+		pid = $('#published_vacancy_select').val();
+
+		if(sum_points==""||sum_points>100||sum_points<=0){
+			alert('Enter a valid value!');
+		}
+		else{
+
+			$.ajax({
+				type:'POST',
+				url:'../RES/PSB-RESOURCES/PHP/model.php',
+				data:{
+					action:'insert_applicant_point',
+					a:uid,
+					b:'COMMUNICATION',
+					c:equivalent,
+					d:user_id,
+					e:pid,
+					val:sum_points
+				}			
+			}).done(function(data){
+				// console.log(data);
+				if (data) {
+					$('.applicant-filters').blur();
+				}
+			}) 
+
+		}
+
 	});
+
+	// console.log(communicationPoints(98))
 
 	setTimeout(function(){
 		$('.applicant-filters').blur();
