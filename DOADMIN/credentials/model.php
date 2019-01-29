@@ -917,6 +917,31 @@ echo json_encode($data);
                 break;
 
 
+                    case 'edit_admin':
+                  $output ='';
+                  $message ='Update success!';
+                  $id = $_POST['id'];
+                  $user = $_POST['user'];
+                  $pass = $_POST['pass'];
+                  $fn = $_POST['fn'];
+                  $ln = $_POST['ln'];
+
+          $sql="UPDATE admin SET EMAIL = '".$user. "', PASSWORD ='".$pass."', LASTNAME = '".$ln."', FIRSTNAME ='".$fn."' WHERE NO='".$id."';";
+                       $result=mysqli_query($conn,$sql);
+                       $output = 'success';
+              $data = array(    
+                       'confirm' => $output,
+                       'message' => $message
+                                       
+            
+                    );
+
+
+
+  echo json_encode($data);
+                break;
+
+
                    case 'archive_schools':
                   $d_id = $_POST['d_id'];
                        $sql="UPDATE schools SET isActive = '0' WHERE SID='".$d_id."';";

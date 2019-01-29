@@ -1,6 +1,6 @@
 <?php
 /*$servername = "ROMEROMAN\SQLEXPRESS";
-/* 
+
 $servername = "ROMEROMAN\SQLEXPRESS";
 $username = "sa";
 $password = "1234";
