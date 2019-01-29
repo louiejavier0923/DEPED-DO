@@ -8,10 +8,11 @@
             	<h4 class="modal-title"><b>Admin Profile</b></h4>
           	</div>
           	<div class="modal-body">
-            	<form class="form-horizontal" method="POST" action="profile_update.php?return=<?php echo basename($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data">
+            	<div class="form-horizontal">
           		  <div class="form-group">
-                  	<label for="username" class="col-sm-3 control-label">Username</label>
-
+                  	<label for="username" class="col-sm-3 control-label">Email</label>
+                     <input type="hidden" id="admin_id" value='<?php echo $user["NO"] ?>'>
+                     <input type="hidden" id="admin_pass" value='<?php echo $user["PASSWORD"] ?>'>
                   	<div class="col-sm-9">
                     	<input type="text" class="form-control" id="username" name="username" value="">
                   	</div>
@@ -55,9 +56,10 @@
           	</div>
           	<div class="modal-footer">
             	<button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-            	<button type="submit" class="btn btn-success btn-flat" name="save"><i class="fa fa-check-square-o"></i> Save</button>
-            	</form>
+            	<button type="submit" class="btn btn-success btn-flat" id= "admin_save" name="save"><i class="fa fa-check-square-o"></i> Save</button>
+            	</div>
           	</div>
         </div>
     </div>
 </div>
+</script>
