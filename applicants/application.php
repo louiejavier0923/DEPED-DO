@@ -20,27 +20,11 @@
 			</section>
 			<section class= "application-content">
 				<section class= "content-container">
-				<?php
-						$sql = "SELECT UID, TITLE, NOI, DESCRIPTION, PLACE_ASSIGNMENT, SALARIES, PUBLICATION_DATE FROM publish_vacancy";
-						$query = $conn->query($sql);
-						while($row = $query->fetch_assoc()){
-					?>
-                    <section class= "container-info">
-						<img src= "../img/logo.png">
-						<h1 id= "position"><?php echo $row['TITLE'];?></h1>
-						<input type= "hidden" name= "vacant_no" id= "job_no" value= "<?php echo $row['UID'];?>">
-						<p id= "school"><?php echo $row['NOI'];?></p>
-						<p id= "address"><?php echo $row['PUBLICATION_DATE'];?> | <?php echo $row['DESCRIPTION'];?></p>
-						<p id= "salary">SALARY: <?php echo $row['SALARIES'];?></p>
-						<a id= "applyBtn" class="apply_btn">APPLY</a>
-					</section>
-        			<?php 
-        				}
-        			?>
+			
 				
                                   
                  <?php
-                    $sql = "SELECT * FROM publish_vacancy a join schools s ON s.SID=a.PLACE_ASSIGNMENT WHERE a.isActive = '1'";
+                    $sql = "SELECT * FROM publish_vacancy a join schools s ON s.SID=a.PLACE_ASSIGNMENT WHERE a.isActive = '1' and a.APP_ISSET = '0'";
 
 
 
