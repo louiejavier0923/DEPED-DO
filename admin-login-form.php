@@ -24,7 +24,17 @@ if(isset($_SESSION['ADMIN'])){
 		<!-- Custom CSS -->
 		<link rel= "stylesheet" href= "css/main.css" type= "text/css" />
 
+		<style>
+		.may-laman{
+			top: -15px !important;
+			color: rgb(4, 80, 140) !important;
+			font-size: 80% !important;
+			font-weight: bold !important;
+		}
+		</style>
+
 		<!-- Custom Javascripts -->
+		<script src='jsp/login.js'></script>
 
 
 	</head>

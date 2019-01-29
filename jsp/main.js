@@ -541,7 +541,7 @@ $(document).ready(function() {
         });
 
         $('#submit_pds').click(function() {   
-            submit_pds();
+            //submit_pds();
         });
 
         $('#okInfoBtn').click(function (){
