@@ -1,5 +1,5 @@
 <?php
-
+/*
 $servername = "ROMEROMAN\SQLEXPRESS";
 $username = "sa";
 $password = "1234";
@@ -9,7 +9,7 @@ $mssqldriver = '{SQL Server}';
 $mssqldriver = '{SQL Server Native Client 11.0}';
 
 $conn = new PDO("odbc:Driver=$mssqldriver;Server=$servername;Database=$database",$username,$password);
-
+*/
 $conn = new mysqli('localhost', 'root', '', 'depeddo');
 
 	if ($conn->connect_error) {

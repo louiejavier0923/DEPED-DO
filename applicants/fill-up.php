@@ -36,378 +36,378 @@
 										<p>2. Surname</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" class="pds_surname"> 
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>First name</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_firstname">
-										<input type= "text" placeholder= "Name Extension (Jr., Sr.)" class="pds_nameextension">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>Middle name</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_middlename">
-									</section>
-								</section>
+							<input type= "text" id="pds_surname" value="<?php echo $user['LASTNAME'] ?>"> 
+						</section>
+					</section>
+					<section class= "pi-row">
+						<section class= "pi-row-label">
+							<p>First name</p>
+						</section>
+						<section class= "pi-row-input">
+							<input type= "text" id="pds_firstname" value="<?php echo $user['FIRSTNAME'] ?>">
+							<input type= "text" placeholder= "Name Extension (Jr., Sr.)" id="pds_nameextension">
+						</section>
+					</section>
+					<section class= "pi-row">
+						<section class= "pi-row-label">
+							<p>Middle name</p>
+						</section>
+						<section class= "pi-row-input">
+							<input type= "text" id="pds_middlename" value="<?php echo $user['MIDDLENAME'] ?>">
+						</section>
+					</section>
+				</section>
+				<section class= "one-three">
+					<section class= "pi-row">
+						<section class= "pi-row-label">
+							<p>3. Date of birth<br>(mm/dd/yyyy)</p>
+						</section>
+						<section class= "pi-row-input">
+							<input type= "date" id="pds_dateofbirth" value="<?php echo $user['BIRTHDATE'] ?>">
+						</section>
+					</section>
+					<section class= "pi-row">
+						<section class= "pi-row-label">
+							<p>4. Place of birth</p>
+						</section>
+						<section class= "pi-row-input">
+							<input type= "text" id="pds_placeofbirth" value="<?php echo $user['BIRTHPLACE'] ?>">
+						</section>
+					</section>
+					<section class= "pi-row">
+						<section class= "pi-row-label">
+							<p>5. Sex</p>
+						</section>
+						<section class= "pi-row-input">
+							<section class= "radio-input">
+							 <input type="radio" name="gender" value="Male"  <?php echo('Male' == $user['GENDER']) ? 'checked' : ''?> /><p>Male</p>
 							</section>
-							<section class= "one-three">
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>3. Date of birth<br>(mm/dd/yyyy)</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "date" class="pds_dateofbirth">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>4. Place of birth</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_placeofbirth">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>5. Sex</p>
-									</section>
-									<section class= "pi-row-input">
-										<section class= "radio-input">
-											<input type= "radio" class='pds_gender'  name= "gender"  value= "Male"><p>Male</p>
-										</section>
-										<section class= "radio-input">
-											<input type= "radio" class='pds_gender'  name= "gender"  value= "Female"><p>Female</p>
-										</section>
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>6. Civil Status</p>
-									</section>
-									<section class= "pi-row-input">
-										<section class= "radio-input">
-											<input type= "radio"  class="civil_status" value= "Single"><p>Single</p>
-										</section>
-										<section class= "radio-input">
-											<input type= "radio" class="civil_status" name="civil_status" value= "Married"><p>Married</p>
-										</section>
-										<section class= "radio-input">
-											<input type= "radio" class="civil_status" name="civil_status" value= "Widow"><p>Widowed</p>
-										</section>
-										<section class= "radio-input">
-											<input type= "radio"  class="civil_status" name="civil_status" value= "Separated"><p>Separated</p>
-										</section>
-										<section class= "radio-input">
-											<input type= "radio" class="civil_status" name="civil_status" value= "Others"><p>Other`s</p>
-										</section>
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>7. Height(m)</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text"  class="pds_height">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>8. Weight(kg)</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text"  class="pds_weight">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>9. Blood Type</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text"  class="pds_bloodtype">
-									</section>	
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>10. GSIS ID No</p> 
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text"  class="pds_gsisno">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>11. Pag-ibig ID No</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_pagibigno">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>12. Philhealth No.</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_philhealthno">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>13. SSS No.</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_sssno">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>14. TIN No.</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_tinno">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>15. Agency Employee No.</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_agencyemployee">
-									</section>
-								</section>
+							<section class= "radio-input">
+								<input type= "radio" name= "gender"  value= "Female" <?php echo('Female' == $user['GENDER']) ? 'checked' : ''?>/><p>Female</p>
 							</section>
-							<section class= "one-three">
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>16. Citizenship<br><br><br><br><br><br><br><span>If holder of dual citizenship</span><br><br><span>please indicate the details.</span></p>
+						</section>
+					</section>
+					<section class= "pi-row">
+						<section class= "pi-row-label">
+							<p>6. Civil Status</p>
+						</section>
+						<section class= "pi-row-input">
+							<section class= "radio-input">
+								<input type= "radio" class="civil_status" value= "Single" <?php echo('Single' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Single</p>
+							</section>
+							<section class= "radio-input">
+								<input type= "radio" name="civil_status" value= "Married" <?php echo('Married' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Married</p>
+							</section>
+							<section class= "radio-input">
+								<input type= "radio" name="civil_status" value= "Widow" <?php echo('Widow' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Widowed</p>
+							</section>
+							<section class= "radio-input">
+								<input type= "radio" name="civil_status" value= "Separated" <?php echo('Separated' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Separated</p>
+							</section>
+							<section class= "radio-input">
+								<input type= "radio" name="civil_status" value= "Others" <?php echo('Others' == $user['CIVIL_STATUS']) ? 'checked' : ''?>><p>Other`s</p>
+							</section>
+						</section>
+					</section>
+					<section class= "pi-row">
+						<section class= "pi-row-label">
+							<p>7. Height(m)</p>
+						</section>
+						<section class= "pi-row-input">
+							<input type= "text"  id="pds_height" value="<?php echo $user['HEIGHT'] ?>">
+						</section>
+					</section>
+					<section class= "pi-row">
+						<section class= "pi-row-label">
+							<p>8. Weight(kg)</p>
+						</section>
+						<section class= "pi-row-input">
+							<input type= "text"  id="pds_width" value="<?php echo $user['WEIGHT'] ?>">
+						</section>
+					</section>
+					<section class= "pi-row">
+						<section class= "pi-row-label">
+							<p>9. Blood Type</p>
+						</section>
+										<section class= "pi-row-input">
+											<input type= "text"  id="pds_bloodtype" value="<?php echo $user['BLOOD_TYPE'] ?>">
+										</section>
 									</section>
-									<section class= "pi-row-input">
-										<section class= "radio-input">
-											<input type= "radio" class='pds_citizenship' name= "citi" value= "Filipino">
-											<p>Filipino</p>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>10. GSIS ID No</p> 
 										</section>
-										<section class= "radio-input">
-											<input type= "radio" class='pds_citizenship' name= "citi" value= "Dual Citizenship">
-											<p>Dual Citizenship</p>
+										<section class= "pi-row-input">
+											<input type= "text"  id="pds_gsisno" value="<?php echo $user['GSIS_ID_NO'] ?>">
 										</section>
-										<section class= "radio-input">
-											<input type= "radio" class='pds_citizenship' name= "citi" value= "By Birth">
-											<p>By Birth</p>
+									</section>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>11. Pag-ibig ID No</p>
 										</section>
-										<section class= "radio-input">
-											<input type= "radio"  class='pds_citizenship' name= "citi" value= "By Naturalization">
-											<p>By Naturalization</p>
+										<section class= "pi-row-input">
+											<input type= "text" id="pds_pagibigno" value="<?php echo $user['PAG_IBIG_NO'] ?>">
 										</section>
-										<section class= "radio-input">
-											<p>Pls. indicate the country:</p>
+									</section>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>12. Philhealth No.</p>
 										</section>
-										<section class= "radio-input" >
-											<select class="pds_country">
-												<option>Algeria</option>
-												<option>Andorra</option>
-												<option>Angola</option>
-												<option>Antigua and Barbuda</option>
-												<option>Argentina</option>
-												<option>Armenia</option>
-												<option>Aruba</option>
-												<option>Australia</option>
-												<option>Austria</option>
-												<option>Azerbaijan</option>
-												<option>Bahamas</option>
-												<option>Bangladesh</option>
-												<option>Barbados</option>
-											</select>
+										<section class= "pi-row-input">
+											<input type= "text" id="pds_philhealthno" value="<?php echo $user['PHILHEALTH_NO'] ?>">
+										</section>
+									</section>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>13. SSS No.</p>
+										</section>
+										<section class= "pi-row-input">
+											<input type= "text" id="pds_sssno" value="<?php echo $user['SSS_NO'] ?>">
+										</section>
+									</section>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>14. TIN No.</p>
+										</section>
+										<section class= "pi-row-input">
+											<input type= "text" id="pds_tinno" value="<?php echo $user['TIN_NO'] ?>">
+										</section>
+									</section>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>15. Agency Employee No.</p>
+										</section>
+										<section class= "pi-row-input">
+											<input type= "text" id="pds_agencyemployee" value="<?php echo $user['AGENCY_EMPLOYEE_NO'] ?>">
 										</section>
 									</section>
 								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>17. Residential Address</p><br>
-										<p></p><br>
-										<p></p><br>
-										<p></p>
-									</section>
-									<section class= "pi-row-input">
-										<section class= "text-input">
-											<input type= "text" placeholder= "House/Block/Lot No." class="pds_rhouseblk">
-											<input type= "text" placeholder= "Street" class="pds_rstreet">
+								<section class= "one-three">
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>16. Citizenship<br><br><br><br><br><br><br><span>If holder of dual citizenship</span><br><br><span>please indicate the details.</span></p>
 										</section>
-										<section class= "text-input">
-											<input type= "text" placeholder= "Subdivision/Village" class="pds_rsubdivision">
-											<input type= "text" placeholder= "Barangay" class="pds_rbarangay">
-										</section>
-										<section class= "text-input">
-											<input type= "text" placeholder= "City/Municipality" class="pds_rmunicipality">
-											<input type= "text" placeholder= "Province" class="pds_rprovince">
-										</section>
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>ZIP CODE</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_rzipcode">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>18. Permanent Address</p>
-										<p></p>
-										<p></p>
-										<p></p>
-									</section>
-									<section class= "pi-row-input">
-										<section class= "text-input">
-											<input type= "text" placeholder= "House/Block/Lot No." class="pds_phouseblk">
-											<input type= "text" placeholder= "Street" class="pds_pstreet">
-										</section>
-										<section class= "text-input">
-											<input type= "text" placeholder= "Subdivision/Village" class="pds_psubdivision">
-											<input type= "text" placeholder= "Barangay" class="pds_pbarangay">
-										</section>
-										<section class= "text-input">
-											<input type= "text" placeholder= "City/Municipality" class="pds_pmunicipality">
-											<input type= "text" placeholder= "Province" class="pds_pprovince">
+										<section class= "pi-row-input">
+											<section class= "radio-input">
+												<input type= "radio" name= "citi" value= "Filipino" <?php echo('Filipino' == $user['CITIZENSHIP']) ? 'checked' : ''?>>
+												<p>Filipino</p>
+											</section>
+											<section class= "radio-input">
+												<input type= "radio" name= "citi" value= "Dual Citizenship" <?php echo('Dual Citizenship' == $user['CITIZENSHIP']) ? 'checked' : ''?>>
+												<p>Dual Citizenship</p>
+											</section>
+											<section class= "radio-input">
+												<input type= "radio" name= "citi" value= "By Birth" <?php echo('By Birth' == $user['CITIZENSHIP']) ? 'checked' : ''?>>
+												<p>By Birth</p>
+											</section>
+											<section class= "radio-input">
+												<input type= "radio" name= "citi" value= "By Naturalization" <?php echo('By Naturalization' == $user['CITIZENSHIP']) ? 'checked' : ''?>>
+												<p>By Naturalization</p>
+											</section>
+											<section class= "radio-input">
+												<p>Pls. indicate the country:</p>
+											</section>
+											<section class= "radio-input" id="pds_country">
+												<select>
+													<option>Algeria</option>
+													<option>Andorra</option>
+													<option>Angola</option>
+													<option>Antigua and Barbuda</option>
+													<option>Argentina</option>
+													<option>Armenia</option>
+													<option>Aruba</option>
+													<option>Australia</option>
+													<option>Austria</option>
+													<option>Azerbaijan</option>
+													<option>Bahamas</option>
+													<option>Bangladesh</option>
+													<option>Barbados</option>
+												</select>
+											</section>
 										</section>
 									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>ZIP CODE</p>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>17. Residential Address</p><br>
+											<p></p><br>
+											<p></p><br>
+											<p></p>
+										</section>
+										<section class= "pi-row-input">
+											<section class= "text-input">
+												<input type= "text" placeholder= "House/Block/Lot No." id="pds_rhouseblk" value="<?php echo $user['RESIDENTIAL_LOTNO'] ?>">
+												<input type= "text" placeholder= "Street" id="pds_rstreet" value="<?php echo $user['RESIDENTIAL_STREET'] ?>">
+											</section>
+											<section class= "text-input">
+												<input type= "text" placeholder= "Subdivision/Village" id="pds_rsubdivision" value="<?php echo $user['RESIDENTIAL_SUBDIVISION'] ?>">
+												<input type= "text" placeholder= "Barangay" id="pds_rbarangay" value="<?php echo $user['RESIDENTIAL_BARANGAY'] ?>">
+											</section>
+											<section class= "text-input">
+												<input type= "text" placeholder= "City/Municipality" id="pds_rmunicipality" value="<?php echo $user['RESIDENTIAL_MUNICIPALITY'] ?>">
+												<input type= "text" placeholder= "Province" id="pds_rprovince" value="<?php echo $user['RESIDENTIAL_PROVINCE'] ?>">
+											</section>
+										</section>
 									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_pzipcode">
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>ZIP CODE</p>
+										</section>
+										<section class= "pi-row-input">
+											<input type= "text" id="pds_rzipcode" value="<?php echo $user['RESIDENTIAL_ZIP_CODE'] ?>">
+										</section>
 									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>19. Telephone No.</p>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>18. Permanent Address</p>
+											<p></p>
+											<p></p>
+											<p></p>
+										</section>
+										<section class= "pi-row-input">
+											<section class= "text-input">
+												<input type= "text" placeholder= "House/Block/Lot No." id="pds_phouseblk" value="<?php echo $user['PERMANENT_LOTNO'] ?>">
+												<input type= "text" placeholder= "Street" id="pds_pstreet" value="<?php echo $user['PERMANENT_STREET'] ?>">
+											</section>
+											<section class= "text-input">
+												<input type= "text" placeholder= "Subdivision/Village" id="pds_psubdivision" value="<?php echo $user['PERMANENT_SUBDIVISION'] ?>">
+												<input type= "text" placeholder= "Barangay" id="pds_pbarangay" value="<?php echo $user['PERMANENT_BARANGAY'] ?>">
+											</section>
+											<section class= "text-input">
+												<input type= "text" placeholder= "City/Municipality" id="pds_pmunicipality" value="<?php echo $user['PERMANENT_MUNICIPALITY'] ?>">
+												<input type= "text" placeholder= "Province" id="pds_pprovince" value="<?php echo $user['PERMANENT_PROVINCE'] ?>">
+											</section>
+										</section>
 									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_telno">
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>ZIP CODE</p>
+										</section>
+										<section class= "pi-row-input">
+											<input type= "text" id="pds_pzipcode" value="<?php echo $user['PERMANENT_ZIP_CODE'] ?>">
+										</section>
 									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>20. Mobile No.</p>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>19. Telephone No.</p>
+										</section>
+										<section class= "pi-row-input">
+											<input type= "text" id="pds_telno" value="<?php echo $user['TELEPHONE_NO'] ?>">
+										</section>
 									</section>
-									<section class= "pi-row-input">
-										<input type= "text" class="pds_mobileno">
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>20. Mobile No.</p>
+										</section>
+										<section class= "pi-row-input">
+											<input type= "text" id="pds_mobileno" value="<?php echo $user['MOBILE_NO'] ?>">
+										</section>
 									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>21. Email Address(If any)</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "email" class="pds_emailaddress">
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>21. Email Address(If any)</p>
+										</section>
+										<section class= "pi-row-input">
+											<input type= "email" id="pds_emailaddress" value="<?php echo $user['EMAIL'] ?>">
+										</section>
 									</section>
 								</section>
 							</section>
 						</section>
-					</section>
-					<section class= "pds-family-background">
-						<h1>II. Family Background</h1>
-						<section class= "pds-fb-table">
-							<section class= "one-two">
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>22. Spouse`s Surname</p>
-										<p>First Name</p>
-										<p>Middle Name</p>
+						<section class= "pds-family-background">
+							<h1>II. Family Background</h1>
+							<section class= "pds-fb-table">
+								<section class= "one-two">
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>22. Spouse`s Surname</p>
+											<p>First Name</p>
+											<p>Middle Name</p>
+										</section>
+										<section class= "pi-row-input">
+											<section class= "text-input">
+												<input type= "text" id="pds_spousesurname"  value="<?php echo $user['spousesurname'] ?>">
+											</section>
+											<section class= "text-input">
+												<input type= "text"  id="pds_spousefirstname" value="<?php echo $user['spousefirstname'] ?>">
+												<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  id="pds_spousenameextension" value="<?php echo $user['spousenameextension'] ?>">
+											</section>
+											<section class= "text-input">
+												<input type= "text"  id="pds_spousemiddlename" value="<?php echo $user['spousemiddlename'] ?>">
+											</section>
+										</section>
 									</section>
-									<section class= "pi-row-input">
-										<section class= "text-input">
-											<input type= "text" class="pds_spousesurname">
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>Occupation</p>
 										</section>
-										<section class= "text-input">
-											<input type= "text"  class="pds_spousefirstname">
-											<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  class="pds_spousenameextension">
+										<section class= "pi-row-input">
+											<input type= "text"  id="pds_spouseoccupation" value="<?php echo $user['spouseoccupation'] ?>">
 										</section>
-										<section class= "text-input">
-											<input type= "text"  class="pds_spousemiddlename">
+									</section>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>Employer/Business Name</p>
+										</section>
+										<section class= "pi-row-input">
+											<input type= "text"  id="pds_businessname" value="<?php echo $user['businessname'] ?>">
+										</section>
+									</section>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>Business Address</p>
+										</section>
+										<section class= "pi-row-input">
+											<input type= "text"  id="pds_businessaddress" value="<?php echo $user['businessaddress'] ?>">
+										</section>
+									</section>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>Telephone No.</p>
+										</section>
+										<section class= "pi-row-input">
+											<input type= "text"  id="pds_businesstelno" value="<?php echo $user['businesstelno'] ?>">
+										</section>
+									</section>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>24. Father`s Surname</p>
+											<p>First Name</p>
+											<p>Middle Name</p>
+										</section>
+										<section class= "pi-row-input">
+											<section class= "text-input">
+												<input type= "text"  id="pds_fathersurname" value="<?php echo $user['fathersurname'] ?>">
+											</section>
+											<section class= "text-input">
+												<input type= "text"  id="pds_fatherfirstname" value="<?php echo $user['fatherfirstname'] ?>"> 
+												<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  id="pds_fathernameextension" value="<?php echo $user['fathernameextension'] ?>">
+											</section>
+											<section class= "text-input">
+												<input type= "text" id="pds_fathermiddlename" value="<?php echo $user['fathermiddlename'] ?>">
+											</section>
+										</section>
+									</section>
+									<section class= "pi-row">
+										<section class= "pi-row-label">
+											<p>25. Mother`s Maiden Name</p>
+											<p>Surname</p>
+											<p>First Name</p>
+											<p>Middle Name</p> 
+										</section>
+										<section class= "pi-row-input">
+											<section class= "text-input">
+												<input type= "text" id="pds_mothersurname" value="<?php echo $user['mothermaindenname'] ?>">
+											</section>
+											<section class= "text-input">
+												<input type= "text" id="pds_motherfirstname" value="<?php echo $user['motherfirstname'] ?>">
+												<input type= "text" placeholder= "Name Extension(Jr., Sr.)" id="pds_mothersnameextension" >
+											</section>
+											<section class= "text-input">
+												<input type= "text" id="pds_mothersmiddlename" value="<?php echo $user['mothersmiddlename'] ?>">
+											</section>
 										</section>
 									</section>
 								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>Occupation</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text"  class="pds_spouseoccupation">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>Employer/Business Name</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text"  class="pds_businessname">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>Business Address</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text"  class="pds_businessaddress">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>Telephone No.</p>
-									</section>
-									<section class= "pi-row-input">
-										<input type= "text"  class="pds_businesstelno">
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>24. Father`s Surname</p>
-										<p>First Name</p>
-										<p>Middle Name</p>
-									</section>
-									<section class= "pi-row-input">
-										<section class= "text-input">
-											<input type= "text"  class="pds_fathersurname">
-										</section>
-										<section class= "text-input">
-											<input type= "text"  class="pds_fatherfirstname">
-											<input type= "text" placeholder= "Name Extension(Jr., Sr.)"  class="pds_fathernameextension">
-										</section>
-										<section class= "text-input">
-											<input type= "text" class="pds_fathermiddlename">
-										</section>
-									</section>
-								</section>
-								<section class= "pi-row">
-									<section class= "pi-row-label">
-										<p>25. Mother`s Maiden Name</p>
-										<p>Surname</p>
-										<p>First Name</p>
-										<p>Middle Name</p> 
-									</section>
-									<section class= "pi-row-input">
-										<section class= "text-input">
-											<input type= "text" class="pds_mothermaindenname">
-										</section>
-										<section class= "text-input">
-											<input type= "text" class="pds_motherfirstname" >
-											<input type= "text" placeholder= "Name Extension(Jr., Sr.)" class="pds_mothersnameextension">
-										</section>
-										<section class= "text-input">
-											<input type= "text" class="pds_mothersmiddlename">
-										</section>
-									</section>
-								</section>
-							</section>
 							<section class= "one-two">
 								<section class= "family-tbl">
 									<section class= "family-tbl-header">
@@ -1273,7 +1273,24 @@
 					</section>
 				</section>
 				<section class= "application-btn">
-					<button type= "submit" class='save_pds' id="submit_pds">DONE</button>
+					<?php 
+					     
+           
+                  
+                          
+                              if($user['UID']==null) 
+                               {
+                             
+                                         echo "<button type= 'submit' class='save_pds' id='submit_pds'>Confirm</button>";    
+                               }
+
+                           else{
+                                          echo "<button type= 'submit' class='edit_pds' id='edit_pds'>Save</button>"; 
+                               }
+                    
+
+					?>
+					
 					<button type= "submit" id= "submit_file">ATTACH FILE</button>
 				</section>
 			</section>
@@ -1286,5 +1303,6 @@
 	</body>
 	<script type="text/javascript" src="../jsp/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../jsp/pds-function.js"></script>
+	<S
 	
 </html>
