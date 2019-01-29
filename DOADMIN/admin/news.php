@@ -91,8 +91,9 @@
 <script>
 $(function(){
 	var id = $(this).data('id');
-	$('.edit').click(function(e){
-    e.preventDefault();
+	
+   $(document).on('click', '.edit', function(e){
+     e.preventDefault();
     $('#edit').modal('show');
     id = $(this).data('id');
     $("#edit_uid").val(id);
@@ -121,6 +122,10 @@ $(function(){
     var title = $('#edit_title').val();
     var desc =  $('#edit_desc').val();
     var date_pub = $('#edit_date').val();
+    if(title == "" || desc == ""){
+      alert("Fill up all forms!");
+    }
+    else{
     $.ajax({
     type: 'POST',
     url: '../credentials/model.php',
@@ -133,6 +138,7 @@ $(function(){
      $("#reload").load(location.href + " #reload>*", "");
     }
   });
+    }
   });
 
 
@@ -163,16 +169,37 @@ $(function(){
   });
     });
 
+ $( "#title" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                    alert("Alphabet letters only!");
+                        e.preventDefault();
+                    }
+                });
 
-
-
+ $( "#edit_title" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                    alert("Alphabet letters only!");
+                        e.preventDefault();
+                    }
+                });
 
 		/* ADD NEWS */
     $('#submit_news').click(function(e){
     e.preventDefault();
+        var title = $("#title").val();
+        var description = $("#description").val();
+        var news_date = $("#date").val();
+    if(title == "" || description == ""){
+    alert("Fill up all forms!");
+  }
+  else{  
     add_news();
- 
+   }
   });
+
+
  $('#close').click(function(e){
   $("#title").val("");
                    $("#description").val("");

@@ -241,6 +241,44 @@ var placeofbirth = $('#pds_mothersnameextension').val();
 var placeofbirth = $('#pds_mothersmiddlename').val();
 
 var placeofbirth = $('#pds_mothersmiddlename').val();
+        }
+
+  function apply(action = 'apply_vacancy')
+       {
+       var vacancy_pid = $(this).data('id');   
+     
+                 
+       alert(vacancy_pid);
+  
+
+        }
+
+
+   function submit_pds(action='insert_pds_info')
+      {
+            
+                                
+                   
+        }
+                /*
+                 var placeofbirth = $('#pds_spousesurname').val();
+                  var placeofbirth = $('#pds_spousefirstname').val();
+                   var placeofbirth = $('#pds_spousenameextension').val();
+                    var placeofbirth = $('#pds_spousemiddlename').val();
+                     var placeofbirth = $('#pds_spouseoccupation').val();
+                      var placeofbirth = $('#pds_businessname').val();
+                       var placeofbirth = $('#pds_businessaddress').val();
+                        var placeofbirth = $('#pds_businesstelno').val();
+                         var placeofbirth = $('#pds_fathersurname').val();
+                          var placeofbirth = $('#pds_fatherfirstname').val();
+                           var placeofbirth = $('#pds_fathernameextension').val();
+                            var placeofbirth = $('#pds_fathermiddlename').val();
+                             var placeofbirth = $('#pds_mothersurname').val();
+                             var placeofbirth = $('#pds_motherfirstname').val();
+                        var placeofbirth = $('#pds_mothersnameextension').val();
+                    var placeofbirth = $('#pds_mothersmiddlename').val();
+
+               var placeofbirth = $('#pds_mothersmiddlename').val();
                
               
 data:{

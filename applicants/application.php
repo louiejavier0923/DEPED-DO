@@ -37,6 +37,48 @@
         			<?php 
         				}
         			?>
+				
+                                  
+                 <?php
+                    $sql = "SELECT * FROM publish_vacancy a join schools s ON s.SID=a.PLACE_ASSIGNMENT WHERE a.isActive = '1'";
+
+
+
+                    
+                    $query = $conn->query($sql);
+
+                    while($row = $query->fetch_assoc()){
+                                
+                     if(strtotime($row['PUBLICATION_DATE']) > strtotime($row['PUBLICATION_DATE_UNTIL'])) {
+                           
+                                $status='<span class="label label-danger pull-right">Expired</span>';
+                            }
+                            else{
+                                 
+                                     echo  '
+                                           <section class= "container-info">
+						                      <img src= "../img/logo.png">
+						                        <h1 id= "position">'.$row['TITLE'].'</h1>
+						                        <p id= "school">'.$row['SCHOOL_NAME'].'</p>
+						                        <p id= "address">'.$row['DESCRIPTION'].', 
+						                        '.$row['PUBLICATION_DATE'].'</p>
+						                        <p id= "salary">Salary: '.$row['SALARIES'].' Php</p>
+						                        <a href= "#" data-id='.$row['UID'].' id= "applyBtn" class="apply_btn">APPLY</a>
+					                       </section>
+                                               ';
+                            }
+                                    
+
+
+                               }
+                          
+                          mysqli_close($conn);
+                                  
+
+        ?>
+
+				
+				</section>
 			</section>
 		</section>
 		<?php include '../include/user-info-modal.php';?>

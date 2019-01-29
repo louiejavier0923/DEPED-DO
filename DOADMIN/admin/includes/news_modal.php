@@ -34,7 +34,7 @@
                
                 	<div class="modal-footer">
             	<button type="button" id="close" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-            	<button type="submit" class="btn btn-primary btn-flat" name="submit_news" id="submit_news"><i class="fa fa-save"></i> Save</button>
+            	<button type="submit" class="btn btn-success btn-flat" name="submit_news" id="submit_news"><i class="fa fa-edit"></i> Update</button>
             	</div>
           	</div>
         </div>
@@ -82,7 +82,7 @@
                 </div>
                   <div class="modal-footer">
               <button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-              <button type="submit" class="btn btn-primary btn-flat" name="edit_news" id="edit_news"><i class="fa fa-save"></i> Save</button>
+              <button type="submit" class="btn btn-success btn-flat" name="edit_news" id="edit_news"><i class="fa fa-edit"></i> Update</button>
               </div>
             </div>
         </div>

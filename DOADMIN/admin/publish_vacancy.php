@@ -2,7 +2,38 @@
 <?php include 'includes/header.php'; ?>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    var dtToday = new Date();
+    
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+    
+    var maxDate = year + '-' + month + '-' + day;
 
+    $('#expiration').attr('min', maxDate);
+});
+  $(function(){
+    var dtToday = new Date();
+    
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+    
+    var maxDate = year + '-' + month + '-' + day;
+    $('#edit_expiration').attr('min', maxDate);
+});
+</script>
   <?php include 'includes/navbar.php'; ?>
   <?php include 'includes/menubar.php'; ?>
 
@@ -40,9 +71,9 @@
               <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> New</a>
             </div>
             <div class="box-body" id="reload">
-              <table id="example1" class="table table-bordered">
+              <table id="example1" class="table-bordered">
                 <thead>
-                  <th>PUID</th>
+                 
                   <th>TITLE</th>
                   <th>DESCRIPTION</th>
                   <th>NAME OF INCUMBENT</th>
@@ -57,19 +88,30 @@
                 <tbody>
                   <?php
                     $sql = "SELECT * FROM publish_vacancy WHERE isActive = '1'";
+
+
+
                     
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
+                                
+                     if(strtotime($row['PUBLICATION_DATE']) > strtotime($row['PUBLICATION_DATE_UNTIL'])) {
+                                $status='<span class="label label-danger pull-right">Expired</span>';
+                            }
+                            else{
+                                  $status='<span class="label label-success pull-right">Ongoing</span>';
+                            }
+                            
                       echo "
                         <tr>
-                          <td>".$row['UID']."</td>
+                        
                           <td>".$row['TITLE']."</td>
                           <td>".$row['DESCRIPTION']."</td>
                           <td>".$row['NOI']."</td>
                           <td>".$row['PLACE_ASSIGNMENT']."</td>
                           <td>".$row['PUBLICATION_DATE']."</td>
                           <td>".$row['PUBLICATION_DATE_UNTIL']."</td>
-                          <td>".$row['STATUS']."</td>
+                          <td>".$row['STATUS'].' '.$status."</td>
                           <td>".$row['SALARIES']."</td>
                           <td>".$row['ITEM_NO']."</td>
                           <td>
@@ -94,8 +136,10 @@
 </div>
 <?php include 'includes/scripts.php'; ?>
 <script>
+
 $(function(){
-  $('.edit').click(function(e){
+  
+   $(".edit").click(function(e){
     e.preventDefault();
     $('#edit').modal('show');
     var id = $(this).data('id');
@@ -136,6 +180,10 @@ $(function(){
             var status = $("#edit_status").val();
             var salaries = $("#edit_salaries").val();
             var itemno = $("#edit_itemno").val();
+            if(title == "" || desc == "" || noi == "" || salaries == "" || itemno == ""){
+                alert("Fill up all forms!");
+            }
+            else{
             $.ajax({
             type: 'POST',
             url: '../credentials/model.php',
@@ -155,10 +203,10 @@ $(function(){
     
     }
   });
+            }
 
 
             });
-
 
 
 
@@ -204,18 +252,81 @@ $(function(){
   });
 
 
+$( "#itemno ").keydown(function  (e){
+    var itemno = $("#itemno").val();
+    var qwe = $("#itemno").val().length;
+    if(qwe == 4 || qwe == 9){
+    var s = itemno + "-";
+    $("#itemno").val(s);
+    }
+});
 
 
+ $( "#title" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                    alert("Alphabet letters only!");
+                        e.preventDefault();
+                    }
+                });
+ $( "#edit_title" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                    alert("Alphabet letters only!");
+                        e.preventDefault();
+                    }
+                });
 
 
-
+ $( "#noi" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                    alert("Alphabet letters only!");
+                        e.preventDefault();
+                    }
+                });
+  $( "#edit_noi" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                    alert("Alphabet letters only!");
+                        e.preventDefault();
+                    }
+                });
+ $("#salaries").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+        alert("Numbers only!");
+               return false;
+    }
+   });
+ $("#edit_salaries").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+        alert("Numbers only!");
+               return false;
+    }
+   });
 
 
     $('#submit_vacancy').click(function(e){
     e.preventDefault();
-
+        var title = $('#title').val();
+        var expiration = $('#expiration').val();
+        var description = $('#description').val();
+        var noi = $('#noi').val();
+        var status = $('#status').val();
+        var itemno = $('#itemno').val();
+        var salaries = $('#salaries').val();
+         var place = $('#place').val();
+        if(title = "" || description == "" || noi == "" || itemno == "" || salaries =="")
+        {
+          alert("Fill up all forms!");
+        }
+        else{
         add_vacancy();
-   
+   }
  
   });
      $('#close').click(function(e){
