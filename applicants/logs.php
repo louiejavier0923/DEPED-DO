@@ -19,20 +19,41 @@
 					<h3>Logs</h3>
 					<div class= "line"></div>
 					<section class= "logs-container">
-						<section class= "logs">
+						<?php
+                              $sql = "SELECT * FROM application a join publish_vacancy p ON p.UID=a.PID join schools s ON s.SID = p.PLACE_ASSIGNMENT WHERE a.UID = '".$user['UID']."'";
+
+
+
+                    
+                    $query = $conn->query($sql);
+
+                    while($row = $query->fetch_assoc()){
+                                
+                 
+                                 
+                                     echo  '
+                                           
+					                       <section class= "logs">
 							<img src= "../img/logo.png">
-							<h1 id= "position">TEACHER I</h1>
-							<p id= 'school'>Quezon City Polytechnic University</p>
+							<h1 id= "position">'.$row['TITLE'].'</h1>
+							<p id= "school">'.$row['SCHOOL_NAME'].'</p>
+							<p id= "salary">Salary: '.$row['SALARIES'].' Php</p>
+							<p id= "salary">PUBLICATION DATE: '.$row['PUBLICATION_DATE'].' Php</p>
 							<p id= "address">673  Quirino Highway, San Bartolome, Novaliches Quezon City</p>
-							<p id= "dateApply">Apply Date: January 27, 2019</p>
+							<p id= "dateApply">Apply Date: '.$row['date'].'</p>
 						</section>
-						<section class= "logs">
-							<img src= "../img/logo.png">
-							<h1 id= "position">TEACHER I</h1>
-							<p id= 'school'>Quezon City Polytechnic University</p>
-							<p id= "address">673  Quirino Highway, San Bartolome, Novaliches Quezon City</p>
-							<p id= "dateApply">Apply Date: January 27, 2019</p>
-						</section>
+                                               ';
+                            
+                                    
+
+
+                               }
+                          
+                          mysqli_close($conn);
+                                  
+						 ?>
+						
+						
 					</section>
 				</section>
 			</section>	
