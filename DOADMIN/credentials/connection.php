@@ -11,7 +11,6 @@ $mssqldriver = '{SQL Server Native Client 11.0}';
 
 $conn = new PDO("odbc:Driver=$mssqldriver;Server=$servername;Database=$database",$username,$password); */
 
-$conn = new PDO("odbc:Driver=$mssqldriver;Server=$servername;Database=$database",$username,$password);
 
 $conn = new mysqli('localhost', 'root', '', 'depeddo');
 
