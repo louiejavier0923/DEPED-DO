@@ -5,6 +5,7 @@
 
   <?php include 'includes/navbar.php'; ?>
   <?php include 'includes/menubar.php'; ?>
+
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -79,9 +80,6 @@
       </div>
     </section>   
   </div>
-  <script>
-
-  </script>
     
 
   <?php include 'includes/footer.php'; ?>
@@ -104,6 +102,8 @@ function fetch_schools(action='fetch_schools_tbl'){
     }
   });
 }
+
+
 $(function(){
    fetch_schools();
 	var id = $(this).data('id');
@@ -139,7 +139,12 @@ $(document).on('click', '.edit', function(e) {
     var id = $("#edit_id").val();
     var name = $('#edit_name').val();
     var address =  $('#edit_address').val();
-       $.ajax({
+    if (name == "" || address == "" ){
+      alert("Fill up all forms!");
+    }
+    else{
+
+      $.ajax({
     type: 'POST',
     url: '../credentials/model.php',
     data: {action:'edit_schools',id:id,name:name,address:address},
@@ -152,6 +157,7 @@ $(document).on('click', '.edit', function(e) {
          fetch_schools();
     }
   });
+    }
   });
 
 
@@ -161,26 +167,17 @@ $(document).on('click', '.edit', function(e) {
 
 $(document).on('click', '#submit_school', function(e) {
 e.preventDefault();
-
         var school_name = $("#school_name").val();
         var school_address = $("#school_address").val();
-        if(school_name == "" || school_address == ||){
-            alert("Fill up all forms!");
-        }
-        else
-        {
-    add_school();
+if(school_name == "" || school_address == ""){
+    alert("Fill up all forms!");
+}
+ 
+ else{  
+  add_school();
 }
 
   });
-
-
-
-
-
-
-
-
 function add_school(action='add_schools'){
         var school_name = $("#school_name").val();
         var school_address = $("#school_address").val();
@@ -204,7 +201,19 @@ function add_school(action='add_schools'){
     }
   }); 
 }
+ $( "#school_name" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
 
+ $( "#edit_name" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
 
 	 /*ARCHIVE BUTTON*/
 
@@ -238,25 +247,7 @@ $(document).on('click', '.delete', function(e) {
                    $("#school_address").val("");
   });
 
-
- $( "#school_name" ).keypress(function(e) {
-                    var key = e.keyCode;
-                    if (key >= 48 && key <= 57) {
-                    alert("Alphabet letters only!");
-                        e.preventDefault();
-                    }
-                });
-
-
- $( "#school_name" ).keypress(function(e) {
-                    var key = e.keyCode;
-                    if (key >= 48 && key <= 57) {
-                    alert("Alphabet letters only!");
-                        e.preventDefault();
-                    }
-                });
   }); 
-
 
 </script>
 </body>
