@@ -341,9 +341,12 @@ $(document).ready(function() {
     var pdsModal = document.getElementById('pds-container');
     var messageModal = document.getElementById('message-modal');
     var fileModal = document.getElementById('file-modal');
+<<<<<<< HEAD
+=======
     var statusCont = document.getElementById('status-container');
     var logsCont = document.getElementById('logs-container');
     var updateImage = document.getElementById('change-image');
+>>>>>>> 41f43af95c028e36d03e2bc916c1fc49271318d1
 
     $('.fullname').attr('disabled', true);
     $('.new_password').attr('disabled', true);
@@ -363,6 +366,8 @@ $(document).ready(function() {
             }
         })
 
+<<<<<<< HEAD
+=======
         .on('click', '.statusBtn', function() {
             switch (this.id) {
                 case 'statBtn':
@@ -384,6 +389,7 @@ $(document).ready(function() {
             updateImage.style.display= "block";
         })
 
+>>>>>>> 41f43af95c028e36d03e2bc916c1fc49271318d1
         .on('click', '#doneBtn', function() {
             window.location.href= "finish.php";
         })
@@ -457,6 +463,7 @@ $(document).ready(function() {
         })
 
         .on('click', '#okFileBtn', function () {
+                   var myuid = $('#myuid').val();
                  var file_data = $('#applicantfile').prop('files')[0];         
                    var form_data = new FormData();
                    form_data.append('file',file_data);
@@ -470,11 +477,27 @@ $(document).ready(function() {
                     data:form_data,
                     type:'post'
                 }).done(function(output_img){
+
+
+                       $.ajax({
+                         type: 'POST',
+                            url: '../DOADMIN/credentials/model.php',
+                            data: {action:'upload_applicant_files',myuid:myuid,img:output_img},
+                            dataType: 'json',
+                              success: function(response){
+                              
+                                     
+                                  attachFileModal.style.display= "none";
+          
+                            }
+                     });
                     // alert(output_img);
                      
                             
                 });
+        /*
             attachFileModal.style.display= "none";
+            */
         })
 
         .on('click', '#okPassBtn', function() {
