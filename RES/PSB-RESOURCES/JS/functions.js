@@ -127,3 +127,19 @@ function saveAlert(msg){
 	},3000)
 
 }
+
+function alertLogout(){
+
+	var content = "<div class='message'>"+
+			"<div class='message-inner'>"+
+				"<div class='message-box'>"+
+					"<div class='message-box-icon'><i class='fa fa-question-circle' style='color:rgb(4, 80, 140);'></i></div>"+
+					"<div class='message-box-message'>Are you sure you want to log out ?</div>"+
+					"<div class='message-box-btn'><button class='logout-yes'>Yes</button><button class='logout-no'>No</button></div>"+
+				"</div>"+
+			"</div>"+
+		"</div>";
+	
+	$('body').append(content);
+
+}
