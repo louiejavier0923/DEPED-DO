@@ -162,13 +162,13 @@ switch ($_POST['action']) {
 
 		if ($rowcount!=1) {
 			
-			$sql = "INSERT INTO applicants_points(UID,PID,CRITERIA_CODE,EQUIVALENT_POINTS,GRADED_BY,VALUE) VALUES ('$a','$e','$b','$c','$d','$f');";
+			$sql = "INSERT INTO applicants_points(UID,PID,CRITERIA_CODE,EQUIVALENT_POINTS,GRADED_BY,`VALUE`) VALUES ('$a','$e','$b','$c','$d','$f');";
 			$result = mysqli_query($conn,$sql);
 
 		}
 		else{
 
-			$sql = "UPDATE applicants_points SET EQUIVALENT_POINTS='$c',VALUE='$f' WHERE UID='$a' AND PID='$e' AND CRITERIA_CODE='$b' AND GRADED_BY='$d';";
+			$sql = "UPDATE applicants_points SET EQUIVALENT_POINTS='$c',`VALUE`='$f' WHERE UID='$a' AND PID='$e' AND CRITERIA_CODE='$b' AND GRADED_BY='$d';";
 			$result = mysqli_query($conn,$sql);
 
 		}
@@ -527,6 +527,35 @@ switch ($_POST['action']) {
 		print_r($html);
 
 	break;
+
+
+	// case 'select-applicant-recalibrate':
+
+	// 	$pid = $_POST['pid'];
+
+	// 	$arrPoint = array();
+
+	// 	$sql="SELECT p.UID,p.LASTNAME,p.FIRSTNAME,p.MIDDLENAME,p.EXTENSION_NAME,p.RESIDENTIAL_LOTNO,p.RESIDENTIAL_STREET,p.RESIDENTIAL_SUBDIVISION,p.RESIDENTIAL_BARANGAY,p.RESIDENTIAL_MUNICIPALITY,p.RESIDENTIAL_PROVINCE,p.MOBILE_NO,u.EMAIL,
+	// 	(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID) AS 'EDUCATION',
+	// 	(SELECT ap.VALUE FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID) AS 'EDUCATION_GWA',
+	// 	(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EXPERIENCE' AND ap.UID=a.UID) AS 'EXPERIENCE',
+	// 	(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='ELIGIBILITY' AND ap.UID=a.UID) AS 'ELIGIBILITY',
+	// 	(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='TRAINING' AND ap.UID=a.UID) AS 'TRAINING',
+	// 	(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='DEMO' AND ap.UID=a.UID) AS 'DEMO',
+	// 	(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='COMMUNICATION' AND ap.UID=a.UID) AS 'COMMUNICATION',
+	// 	((SELECT SUM(EQUIVALENT_POINTS) from applicants_points ap where (ap.CRITERIA_CODE = 'INTERVIEW' AND ap.UID=a.UID)) / (SELECT COUNT(ap.NO) from applicants_points ap where (ap.CRITERIA_CODE = 'INTERVIEW' AND ap.UID=a.UID))) AS `INTERVIEW_AVG`,
+	// 	((SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID)+(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EXPERIENCE' AND ap.UID=a.UID)+(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='ELIGIBILITY' AND ap.UID=a.UID)+(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='TRAINING' AND ap.UID=a.UID)+(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='DEMO' AND ap.UID=a.UID)+(SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='COMMUNICATION' AND ap.UID=a.UID)+((SELECT SUM(EQUIVALENT_POINTS) from applicants_points ap where (ap.CRITERIA_CODE = 'INTERVIEW' AND ap.UID=a.UID)) / (SELECT COUNT(ap.NO) from applicants_points ap where (ap.CRITERIA_CODE = 'INTERVIEW' AND ap.UID=a.UID)))) AS 'TOTALPOINTS'
+	// 	FROM application a JOIN personal_info p JOIN user u ON p.UID=a.UID AND u.UID=p.UID WHERE a.PID='$pid' AND (p.LASTNAME LIKE '%%' OR p.FIRSTNAME LIKE '%%' OR p.MIDDLENAME LIKE '%%' OR p.UID LIKE '%%' OR u.EMAIL LIKE '%%') HAVING TOTALPOINTS<70 ORDER BY TOTALPOINTS DESC;";
+
+	// 	$result = mysqli_query($conn,$sql);
+	// 	while($row = mysqli_fetch_assoc($result)){
+
+
+	// 	}		
+
+	// 	print_r(json_encode($arrPoint));
+		
+	// break;
 
 
 }

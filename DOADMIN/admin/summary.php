@@ -19,11 +19,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-         RANKING
+         SUMMARY
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Rank</li>
+        <li class="active">summary</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -60,27 +60,7 @@
           <div class="box">
               <div class="box-header with-border">
              <div class="pull-right">
-                <form class="form-inline" id="rankForm">
-                   <div class="box-tools pull-right">
-                
-                  <div class="form-group">
-                    <label>Select Year: </label>
-                    <select class="form-control input-sm" id="select_year">
-                      <?php
-                        for($i=2015; $i<=2065; $i++){
-                          $selected = ($i==$year)?'selected':'';
-                          echo "
-                            <option value='".$i."' ".$selected.">".$i."</option>
-                          ";
-                        }
-                      ?>
-                    </select> <button type="button" class="btn btn-primary btn-sm btn-flat" id="ranking"><span class="glyphicon glyphicon-print"></span> Rankings</button>
-                  </div>
-        
-              </div> 
-                  
-                 
-                </form>
+          
               </div>
                
             </div>
@@ -89,41 +69,34 @@
                 <thead>
                 
                 
-                  <th>RANK</th>
-                   <th>NAME</th>
-                  <th>EDUCATION</th>
-                   <th>ELIGIBILITY</th>
-                  <th>EXPERIENCE</th>
-                  <th>TRAINING</th>
-                   <th>DEMO</th>
-                    <th>COMMUNICATION</th>
-                     <th>INTERVIEW</th>
-                      <th>TOTAL POINTS</th>
+                  <th>UID</th>
+                   <th>APPLICANT NAME</th>
+                  <th>CRITERIA</th>
+                  <th>EQUIVALENT POINTS</th>
+                   <th>GRADED BY</th>
+                 
                  
                 </thead>
                 <tbody>
                   <?php
                     $cnt='';
-                    $sql = "SELECT DISTINCT LASTNAME,FIRSTNAME,MIDDLENAME,EXTENSION_NAME,EMAIL,EDUCATION,EXPERIENCE,ELIGIBILITY,TRAINING,DEMO,INTERVIEW_AVG,TOTALPOINTS,COMMUNICATION  FROM view_rank";
+
+                    $sql = "SELECT a.UID,a.EQUIVALENT_POINTS,a.CRITERIA_CODE,a.VALUE,a.GRADED_BY, CONCAT(p.LASTNAME,' ',p.FIRSTNAME,' ',p.MIDDLENAME) as 'APPLICANT_NAME',p.UID,CONCAT(e.LASTNAME,' ',e.FIRSTNAME,' ',e.MIDDLENAME) as 'EVALUATOR_NAME',e.NO FROM applicants_points a INNER JOIN personal_info p ON p.UID = a.UID INNER JOIN evaluators_info_tbl e ON e.NO = a.GRADED_BY";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $cnt += 1;
                       
                       echo "
                         <tr>
-                          <td>".$cnt."</td>
-                           <td>".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']. "</td>
-                          <td>".$row['EDUCATION']."</td>
+                          <td>".$row['UID']."</td>
+                           <td>".$row['APPLICANT_NAME']. "</td>
+                          <td>".$row['CRITERIA_CODE']."</td>
                           
 
-                          
-                          <td>".$row['EXPERIENCE']."</td>
-                           <td>".$row['ELIGIBILITY']."</td>
-                            <td>".$row['TRAINING']."</td>
-                             <td>".$row['DEMO']."</td>
-                              <td>".$row['COMMUNICATION']."</td>
-                                <td>".$row['INTERVIEW_AVG']."</td>
-                                 <td>".$row['TOTALPOINTS']."</td>
+                           <td>".$row['EQUIVALENT_POINTS']."</td>
+                          <td>".$row['EVALUATOR_NAME']."</td>
+                             
+                        
                          
                   
 
@@ -142,7 +115,7 @@
   </div>
     
   <?php include 'includes/footer.php'; ?>
-  <?php include 'includes/ranking_modal.php'; ?>
+
 </div>
 <?php include 'includes/scripts.php'; ?>
 <script>
@@ -152,9 +125,7 @@ $(function(){
     $('#rankForm').attr('action', '../credentials/model_printables.php');
     $('#rankForm').submit();
   });
-  $('#select_year').change(function(){
-    window.location.href = 'ranking.php?year='+$(this).val();
-  });
+
 
    
 });

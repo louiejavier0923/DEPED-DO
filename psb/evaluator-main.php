@@ -27,6 +27,7 @@ $id = $_SESSION['ID'];
 
 		<!-- Custom CSS -->
 		<link rel= "stylesheet" href= "../css/main.css" type= "text/css" />
+		<link rel= "stylesheet" href="../RES/PSB-RESOURCES/CSS/responsible.css" type= "text/css" />
 		<style type="text/css">
 			#exit{
 				cursor: pointer;

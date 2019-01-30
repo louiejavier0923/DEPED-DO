@@ -36,7 +36,7 @@
 										<p>2. Surname</p>
 									</section>
 									<section class= "pi-row-input">
-							<input type= "text" class="pds_surname" name='Surname' value="<?php echo $user['LASTNAME'] ?>"> 
+							<input type= "text" class="pds_surname" name='Surname' maxlength ="45" value="<?php echo $user['LASTNAME'] ?>"> 
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -44,8 +44,8 @@
 							<p>First name</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "text" class="pds_firstname" name='First Name' value="<?php echo $user['FIRSTNAME'] ?>">
-							<input type= "text" name='Extension Name' placeholder= "Name Extension (Jr., Sr.)" class="pds_nameextension not-require">
+							<input type= "text" class="pds_firstname" maxlength ="45" name='First Name' value="<?php echo $user['FIRSTNAME'] ?>">
+							<input type= "text" name='Extension Name' maxlength ="3" placeholder= "Name Extension (Jr., Sr.)" class="pds_nameextension not-require">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -111,10 +111,10 @@
 					</section>
 					<section class= "pi-row">
 						<section class= "pi-row-label">
-							<p>7. Height(m)</p>
+							<p>7. Height(cm)</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "text"  class="pds_height" name='Height' value="<?php echo $user['HEIGHT'] ?>">
+							<input type= "text"  class="pds_height" maxlength ="3" name='Height' value="<?php echo $user['HEIGHT'] ?>">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -122,7 +122,7 @@
 							<p>8. Weight(kg)</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "text"  class="pds_weight" name='Weight' value="<?php echo $user['WEIGHT'] ?>">
+							<input type= "text"  class="pds_weight" maxlength ="3" name='Weight' value="<?php echo $user['WEIGHT'] ?>">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -130,7 +130,13 @@
 							<p>9. Blood Type</p>
 						</section>
 										<section class= "pi-row-input">
-											<input type= "text"  class="pds_bloodtype" name='Blood Type' value="<?php echo $user['BLOOD_TYPE'] ?>">
+											<select class="pds_bloodtype" name="Blood Type" value='<?php echo $user["BLOOD_TYPE"] ?>'> 
+														<OPTION <?php echo('A' == $user['BLOOD_TYPE']) ? 'selected' : ''?>>A</OPTION>	
+														<OPTION <?php echo('AB' == $user['BLOOD_TYPE']) ? 'selected' : ''?>>AB</OPTION>
+														<OPTION <?php echo('B' == $user['BLOOD_TYPE']) ? 'selected' : ''?>>B</OPTION>
+														<OPTION <?php echo('O' == $user['BLOOD_TYPE']) ? 'selected' : ''?>>O</OPTION>
+
+											</select> 
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -138,7 +144,7 @@
 											<p>10. GSIS ID No</p> 
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='GSIS ID No.'  class="pds_gsisno" value="<?php echo $user['GSIS_ID_NO'] ?>">
+											<input type= "text" name='GSIS ID No.'  class="pds_gsisno" maxlength='14' value="<?php echo $user['GSIS_ID_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -146,7 +152,7 @@
 											<p>11. Pag-ibig ID No</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Pag-ibig ID No.' class="pds_pagibigno" value="<?php echo $user['PAG_IBIG_NO'] ?>">
+											<input type= "text" name='Pag-ibig ID No.' maxlength='14' class="pds_pagibigno" value="<?php echo $user['PAG_IBIG_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -154,7 +160,7 @@
 											<p>12. Philhealth No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Philhealth ID No.'  class="pds_philhealthno" value="<?php echo $user['PHILHEALTH_NO'] ?>">
+											<input type= "text" name='Philhealth ID No.'  maxlength='12' class="pds_philhealthno" value="<?php echo $user['PHILHEALTH_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -162,7 +168,7 @@
 											<p>13. SSS No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='SSS ID No.' class="pds_sssno" value="<?php echo $user['SSS_NO'] ?>">
+											<input type= "text" name='SSS ID No.' maxlength='10' class="pds_sssno" value="<?php echo $user['SSS_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -170,7 +176,7 @@
 											<p>14. TIN No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='TIN ID No.'  class="pds_tinno" value="<?php echo $user['TIN_NO'] ?>">
+											<input type= "text" name='TIN ID No.'  maxlength='14'  class="pds_tinno" value="<?php echo $user['TIN_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -178,7 +184,7 @@
 											<p>15. Agency Employee No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Agency Employee ID No.' class="pds_agencyemployee" value="<?php echo $user['AGENCY_EMPLOYEE_NO'] ?>">
+											<input type= "text" maxlength="10" name='Agency Employee ID No.' class="pds_agencyemployee" value="<?php echo $user['AGENCY_EMPLOYEE_NO'] ?>">
 										</section>
 									</section>
 								</section>
@@ -253,7 +259,7 @@
 											<p>ZIP CODE</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Residential ZIP CODE' class="pds_rzipcode" value="<?php echo $user['RESIDENTIAL_ZIP_CODE'] ?>">
+											<input type= "text" maxlength="4" name='Residential ZIP CODE' class="pds_rzipcode" value="<?php echo $user['RESIDENTIAL_ZIP_CODE'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -283,7 +289,7 @@
 											<p>ZIP CODE</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Permanent ZIP CODE' class="pds_pzipcode" value="<?php echo $user['PERMANENT_ZIP_CODE'] ?>">
+											<input type= "text" maxlength="4" name='Permanent ZIP CODE' class="pds_pzipcode" value="<?php echo $user['PERMANENT_ZIP_CODE'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -291,7 +297,7 @@
 											<p>19. Telephone No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text"  name='Telephone No.' class="pds_telno" value="<?php echo $user['TELEPHONE_NO'] ?>">
+											<input type= "text"  maxlength= "7" name='Telephone No.' class="pds_telno not-require" value="<?php echo $user['TELEPHONE_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -299,7 +305,7 @@
 											<p>20. Mobile No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Mobile No.' class="pds_mobileno" value="<?php echo $user['MOBILE_NO'] ?>">
+											<input type= "text" maxlength="11" name='Mobile No.' class="pds_mobileno" value="<?php echo $user['MOBILE_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -1268,7 +1274,8 @@
 						</section>
 						<section class= "footer-column">
 							<p>DATE</p>
-							<input type= "date">
+							<input type= "date" id="sign_date">
+
 						</section>
 					</section>
 				</section>

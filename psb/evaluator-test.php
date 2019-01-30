@@ -29,6 +29,7 @@ $id = $_SESSION['ID'];
 		<link rel= "stylesheet" href="../css/main.css" type= "text/css" />
 		<link rel= "stylesheet" href="../RES/PSb-RESOURCES/CSS/evaluator.css" type= "text/css" />
 		<link rel= "stylesheet" href="../RES/PSb-RESOURCES/CSS/eval-test.css" type= "text/css" />
+		<link rel= "stylesheet" href="../RES/PSb-RESOURCES/CSS/responsible.css" type= "text/css" />
 		
 	</head>
 

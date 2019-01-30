@@ -78,7 +78,7 @@
                   <?php
                     $sql = "SELECT u.UID as 'UID', concat(p.FIRSTNAME,' ',p.MIDDLENAME,' ',p.LASTNAME,' ',p.EXTENSION_NAME,' ') as 'fullname', u.EMAIL as 'EMAIL', u.STATUS as 'STATUS', u.IS_ONLINE as 'IS_ONLINE' FROM personal_info as p INNER JOIN user as u ON p.UID = u.UID";
                     $query = $conn->query($sql);
-					$NO = 1;
+					                  $NO = 1;
                     while($row = $query->fetch_assoc()){
                       $online = $row['IS_ONLINE'];
                       switch ($online) {
@@ -105,7 +105,7 @@
                           </td>
                         </tr>
                       ";
-					  $NO+=1;
+					                   $NO+=1;
                     }
                   ?>
                 </tbody>

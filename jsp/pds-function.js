@@ -1,5 +1,50 @@
 $(function(){
-		
+	$(".single-fields input").keyup(function () {
+		$(this).css('background-color', "#ffffff");
+	});
+	$(".radio-fields").change(function () {
+		$(this).css('background-color', "#ffffff");
+	});
+	$('input[type="date"]').change(function() {
+		$(this).css('background-color', "#ffffff");
+	});
+	$('.pds_gsisno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{4})\-?(\d{7})\-?(\d{1})/,'$1-$2-$3'));
+	});
+	$('.pds_pagibigno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{4})\-?(\d{4})\-?(\d{4})/,'$1-$2-$3'));
+	});
+	$('.pds_philhealthno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{2})\-?(\d{9})\-?(\d{1})/,'$1-$2-$3'));
+	});
+	$('.pds_sssno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{2})\-?(\d{7})\-?(\d{1})/,'$1-$2-$3'));
+	});
+	$('.pds_tinno').keyup(function(e){
+		$(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3-$4'));
+	});
+	$('.pds_agencyemployee').keyup(function(e){
+		$(this).val($(this).val().replace(/(\d{3})\-?(\d{4})/,'$1-$2'));
+	});
+	$('.pds_telno').keyup(function(e){
+		$(this).val($(this).val().replace(/(\d{3})\-?(\d{4})/,'$1-$2'));
+	});
+
+	
+	/* $(".pds_pagibigno").keyup(function (e) {
+      if($(this).val().length === 14) return;
+      if(e.keyCode === 8 || e.keyCode === 37 || e.keyCode === 39) return;
+      let newStr = '';
+      let groups = $(this).val().split('-');
+      for(let i in groups) {
+       if (groups[i].length % 4 === 0) {
+        newStr += groups[i] + "-"
+       } else {
+        newStr += groups[i];
+       }
+      }
+      $(this).val(newStr);
+    }); */
 	function checking() {
 	text='';
 	$('.single-fields input').css('background-color', "#ffffff");
@@ -14,7 +59,7 @@ $(function(){
 			}else{
 				$(this).css('background-color', "#ffa0a0f7");
 			   
-			   $(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
+			   //$(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
 			   count++;
 			}
 		   
@@ -23,28 +68,33 @@ $(function(){
 	if($('input[name="Gender"]:checked').length === 0) {
 		str = $(".errors div").html();
 		$(".gender-fields").css('background-color', "#ffa0a0f7");
-		$(".errors div").html(str +(count == 0 ? '' :', ') +  'Gender' );
+		//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Gender' );
 		count++;
 	}
 	if($('input[name="Civil Status"]:checked').length === 0) {
 		str = $(".errors div").html();
 		$(".civilstat-fields").css('background-color', "#ffa0a0f7");
-		$(".errors div").html(str +(count == 0 ? '' :', ') +  'Civil Status' );
+		//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Civil Status' );
 		count++;
 	}
 	if($('input[name="Citizenship"]:checked').length === 0) {
 		str = $(".errors div").html();
 		$(".citizenship-fields").css('background-color', "#ffa0a0f7");
-		$(".errors div").html(str +(count == 0 ? '' :', ') +  'Citizenship' );
+		//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Citizenship' );
 		count++;
 	}
 	$('.spouse-fields input').each(function(){
 		str = $(".errors div").html();
 		if(($('.pds_spousesurname').val().length != 0) ||  ($('.pds_spousefirstname').val().length != 0) ||  ($('.pds_spousenameextension').val().length != 0) ||  ($('.pds_spousemiddlename').val().length != 0) ){
 			if ($(this).val().length == 0) {
-			   $(this).css('background-color', "#ffa0a0f7");
-			   $(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
-			   count++;
+				if($(this).hasClass("not-require")){
+				
+				}else{
+				 $(this).css('background-color', "#ffa0a0f7");
+				//$(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
+				count++;
+			}
+			  
 			} 
 		}
 		
@@ -70,6 +120,136 @@ $(function(){
 	
 	}
 	
+ $( ".pds_surname" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+ $( ".pds_firstname" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+  $( ".pds_nameextension" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+   $( ".pds_middlename" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+   	$(".pds_height").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   		$(".pds_weight").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   			$(".pds_pagibigno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   				$(".pds_gsisno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   					$(".pds_philhealthno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   						$(".pds_sssno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   	$(".pds_tinno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   		$(".pds_agencyemployee").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   			$(".pds_telno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+	$(".pds_mobileno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+
+	$(".pds_pzipcode").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+
+$(".pds_rzipcode").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+
+
+
+
+
+
+
+
 	$('.edit_pds').click(function(){
 	error = checking();
 	//window.location.href="application.php";

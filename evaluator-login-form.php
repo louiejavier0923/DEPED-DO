@@ -25,6 +25,7 @@ if(isset($_SESSION['ID'])){
 
 		<!-- Custom CSS -->
 		<link rel= "stylesheet" href= "css/main.css" type= "text/css" />
+		<link rel= "stylesheet" href= "RES/PSB-RESOURCES/CSS/responsible.css" type= "text/css" />
 
 		<style type="text/css">
 			.input-form input + label{
@@ -36,6 +37,7 @@ if(isset($_SESSION['ID'])){
 				font-size: 80% !important;
 				font-weight: bold !important;
 			}
+
 		</style>
 
 	</head>

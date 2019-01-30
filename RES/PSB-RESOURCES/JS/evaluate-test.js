@@ -159,7 +159,7 @@ $(document).ready(function(){
 		}
 		else{
 			var val = gwa.toString()+','+additional.toString();
-			console.log(val)
+			// console.log(val)
 			$.ajax({
 				type:'POST',
 				url:'../RES/PSB-RESOURCES/PHP/model.php',
@@ -207,7 +207,7 @@ $(document).ready(function(){
 		var exp_value = mnths.toString()+','+kvtlgu.toString();
 		var uid = $(this).siblings('.applicant-id').html(),
 		pid = $('#published_vacancy_select').val();
-		console.log(experiencePoints('7',mnths) +'/'+exp_value+'/'+exp_points);
+		// console.log(experiencePoints('7',mnths) +'/'+exp_value+'/'+exp_points);
 
 		$.ajax({
 			type:'POST',
