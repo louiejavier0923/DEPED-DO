@@ -6,18 +6,7 @@ $(document).ready(function(){
 	$('body')
 	.on('click','#exit',function(){
 		// logout button click
-		var confirmation = confirm('Are you sure you want to log out?');
-		if (confirmation) {
-			$.ajax({
-				type:'POST',
-				url:'../RES/PSB-RESOURCES/PHP/session-logout.php',
-				data:''
-			}).done(function(b){
-				if(b){
-					window.location.href = "../evaluator-login-form.php";
-				}
-			})
-		}
+		alertLogout();
 	})
 	.on('keyup change blur','.applicant-filters',function(){
 
@@ -396,6 +385,20 @@ $(document).ready(function(){
 
 	})
 	.on('click','.alert-error-close',function(){
+		$('body .message').remove();
+	})
+	.on('click','.logout-yes',function(){
+		$.ajax({
+			type:'POST',
+			url:'../RES/PSB-RESOURCES/PHP/session-logout.php',
+			data:''
+		}).done(function(b){
+			if(b){
+				window.location.href = "../evaluator-login-form.php";
+			}
+		})
+	})
+	.on('click','.logout-no',function(){
 		$('body .message').remove();
 	});
 
