@@ -110,3 +110,20 @@ function alertError(msg){
 	},3000)
 
 }
+
+function saveAlert(msg){
+
+	var content = "<div class='message'>"+
+				"<div class='message-inner'>"+
+					"<div class='message-box'>"+
+						"<div class='message-box-icon'><i class='fa fa-exclamation-circle' style='color:rgb(4, 80, 140);'></i></div>"+
+						"<div class='message-box-message'>"+msg+"</div>"+
+						"<div class='message-box-btn'><button class='alert-error-close'>Close</button></div>"+
+					"</div></div></div>";
+
+	$('body').append(content);
+	setTimeout(function(){
+		$('body .message').remove();
+	},3000)
+
+}

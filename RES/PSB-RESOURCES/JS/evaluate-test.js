@@ -113,6 +113,7 @@ $(document).ready(function(){
 	.on('click','#btn_save',function(){
 
 		$('.applicant-filters').blur();
+		saveAlert("Valid changes applied successfuly!")
 
 	})
 	.on('click','.eval-out-editbtn',function(){

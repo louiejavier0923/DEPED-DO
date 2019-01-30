@@ -29,7 +29,7 @@ switch ($_POST['action']) {
 		$result = mysqli_query($conn,$sql);
 		while ($row = mysqli_fetch_assoc($result)) {
 			$data[0] = $row['NO'];
-			$data[1] = $row['FIRSTNAME'].' '.substr($row['MIDDLENAME'],0,1).'. '.$row['LASTNAME'].' - PERSONNEL';
+			$data[1] = $row['FIRSTNAME'].' '.substr($row['MIDDLENAME'],0,1).'. '.$row['LASTNAME'].' - PERSONNEL SELECTION BOARD';
 		}
 
 		print_r(json_encode($data));
@@ -39,7 +39,7 @@ switch ($_POST['action']) {
 	case 'get_published_vacancy':
 
 		$html = "";
-		$sql = "SELECT p.UID,p.TITLE,s.SCHOOL_NAME FROM publish_vacancy p JOIN schools s ON p.PLACE_ASSIGNMENT=s.SID WHERE PUBLICATION_DATE>CURRENT_DATE();";
+		$sql = "SELECT p.UID,p.TITLE,s.SCHOOL_NAME FROM publish_vacancy p JOIN schools s ON p.PLACE_ASSIGNMENT=s.SID WHERE PUBLICATION_DATE_UNTIL>CURRENT_DATE();";
 		$result = mysqli_query($conn,$sql);
 
 		while ($row = mysqli_fetch_assoc($result)) {
