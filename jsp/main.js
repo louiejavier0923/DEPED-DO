@@ -341,6 +341,8 @@ $(document).ready(function() {
     var pdsModal = document.getElementById('pds-container');
     var messageModal = document.getElementById('message-modal');
     var fileModal = document.getElementById('file-modal');
+    var statusCont = document.getElementById('status-container');
+    var logsCont = document.getElementById('logs-container');
 
     $('.fullname').attr('disabled', true);
     $('.new_password').attr('disabled', true);
@@ -356,6 +358,19 @@ $(document).ready(function() {
                 case 'registerBtn':
                     $('.content-login').hide();
                     $('.content-register').show();
+                break;
+            }
+        })
+
+        .on('click', '.statusBtn', function() {
+            switch (this.id) {
+                case 'statBtn':
+                    statusCont.style.display= "block";
+                    logsCont.style.display= "none";
+                break;
+                case 'logsBtn':
+                    logsCont.style.display= "block";
+                    statusCont.style.display= "none";
                 break;
             }
         })
