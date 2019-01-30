@@ -270,9 +270,16 @@ $("#admin_save").click(function(){
   var cpass = $("#curr_password").val();
   var admin_pass = $("#admin_pass").val();
   var id = $("#admin_id").val();
+
+ 
+  
   if(user == "" || pass == "" || fn == "" || ln == "")
   {
       alert("Fill up all forms!");
+      
+       
+     
+     
   }
   else if(admin_pass===cpass)
   {

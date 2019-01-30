@@ -35,7 +35,7 @@
                                 
                      if(strtotime($row['PUBLICATION_DATE']) > strtotime($row['PUBLICATION_DATE_UNTIL'])) {
                            
-                                $status='<span class="label label-danger pull-right">Expired</span>';
+                                echo'.';
                             }
                             else{
                                  

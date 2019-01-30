@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                  	<label for="firstname" class="col-sm-3 control-label">Firstname</label>
+                  	<label for="firstname" class="col-sm-3 control-label"  value='<?php echo $user["FIRSTNAME"] ?>'>Firstname</label>
 
                   	<div class="col-sm-9">
                     	<input type="text" class="form-control" id="firstname" name="firstname" value="">

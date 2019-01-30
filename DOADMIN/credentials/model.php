@@ -48,7 +48,7 @@
                                            //Content
                                            $mail->isHTML(true);                                  // Set email format to HTML
                                            $mail->Subject = 'Here is the subject';
-                                           $mail->Body    = "<Nueva Ecija St., Bago Bantay, Quezon City
+                                           $mail->Body    = "<p>Nueva Ecija St., Bago Bantay, Quezon City
 
                                                               www.depedqc.ph
 
@@ -159,7 +159,7 @@ PLEASE REPORT TO YOUR ASSIGNED SCHOOL UPON ISSUANCE OF YOUR
 
 APPOINTMENT FROM THE PERSONNEL SECTION.
 
-P/ayee";
+P/ayee</p>";
 
                                            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
                                        
@@ -256,7 +256,7 @@ P/ayee";
             # code...
             $output='';
            
-            $sql = "SELECT MAX(b.UID) AS 'bUID',a.FIRSTNAME,a.LASTNAME,a.MIDDLENAME FROM view_rank a join  application b ON a.UID = b.UID WHERE STATUS='0' GROUP BY b.UID";
+            $sql = "SELECT MAX(b.UID) AS 'bUID',a.FIRSTNAME,a.LASTNAME,a.MIDDLENAME,a.TOTALPOINTS FROM view_rank a join  application b ON a.UID = b.UID WHERE a.TOTALPOINTS > 70 AND b.STATUS = '0'";
             $query = $conn->query($sql);
 
             while($row = $query->fetch_assoc()){                     
@@ -300,16 +300,7 @@ P/ayee";
 
         break;
                          
-                              $sql=$conn->query("CALL `insert_vacancy`('".$title."', '".$description."', '".$place."', '".$noi."', '".$date."', '".$expiration."', '".$status."', '".$salaries."', '".$itemno."')");
-                             $output='Successful inserted';
-
-
-
-   	       	        $data = array(	 	
-                       'message' => $output
-            
-         	             );
-
+                        
         case 'add_personnel':
             $output='';
             
@@ -344,8 +335,13 @@ P/ayee";
             $salaries = $_POST['salaries'];
             $place = $_POST['place'];
 
-            $sql=$conn->query("INSERT INTO  publish_vacancy(UID,TITLE,DESCRIPTION,PLACE_ASSIGNMENT,NOI,PUBLICATION_DATE,PUBLICATION_DATE_UNTIL,STATUS,SALARIES,ITEM_NO,isActive)VALUES('PID-1005','".$title."','".$description."','".$place."','".$noi."','".$date."','".$expiration."','".$status."','".$salaries."','".$itemno."', '1')");
-            $output='Successful inserted';
+                 $sql=$conn->query("CALL `insert_vacancy`('".$title."', '".$description."', '".$place."', '".$noi."', '".$date."', '".$expiration."', '".$status."', '".$salaries."', '".$itemno."')");
+                             $output='Successful inserted';
+
+
+
+                  
+
 
    	        $data = array(	 	
                 'message' => $output
@@ -917,7 +913,7 @@ echo json_encode($data);
                 break;
 
 
-                    case 'edit_admin':
+               case 'edit_admin':
                   $output ='';
                   $message ='Update success!';
                   $id = $_POST['id'];
@@ -925,7 +921,7 @@ echo json_encode($data);
                   $pass = $_POST['pass'];
                   $fn = $_POST['fn'];
                   $ln = $_POST['ln'];
-
+              
           $sql="UPDATE admin SET EMAIL = '".$user. "', PASSWORD ='".$pass."', LASTNAME = '".$ln."', FIRSTNAME ='".$fn."' WHERE NO='".$id."';";
                        $result=mysqli_query($conn,$sql);
                        $output = 'success';
