@@ -81,7 +81,7 @@
                   <?php
                     $cnt='';
 
-                    $sql = "SELECT a.UID,a.EQUIVALENT_POINTS,a.CRITERIA_CODE,a.VALUE,a.GRADED_BY, CONCAT(p.LASTNAME,' ',p.FIRSTNAME,' ',p.MIDDLENAME) as 'APPLICANT_NAME',p.UID,CONCAT(e.LASTNAME,' ',e.FIRSTNAME,' ',e.MIDDLENAME) as 'EVALUATOR_NAME',e.NO FROM applicants_points a INNER JOIN personal_info p ON p.UID = a.UID INNER JOIN evaluators_info_tbl e ON e.NO = a.GRADED_BY";
+                    $sql = "SELECT DISTINCT a.UID,a.EQUIVALENT_POINTS,a.CRITERIA_CODE,a.VALUE,a.GRADED_BY, CONCAT(p.LASTNAME,' ',p.FIRSTNAME,' ',p.MIDDLENAME) as 'APPLICANT_NAME',p.UID,CONCAT(e.LASTNAME,' ',e.FIRSTNAME,' ',e.MIDDLENAME) as 'EVALUATOR_NAME',e.NO FROM applicants_points a INNER JOIN personal_info p ON p.UID = a.UID INNER JOIN evaluators_info_tbl e ON e.NO = a.GRADED_BY";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $cnt += 1;

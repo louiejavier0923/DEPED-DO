@@ -20,7 +20,7 @@
                   	</div>
                 </div>
                 <div class="form-group">
-                    <label for="expiration" class="col-sm-3 control-label">Expiration Date</label>
+                    <label for="expiration" class="col-sm-3 control-label">Publication Date</label>
 
                     <div class="col-sm-9">
                       <input type="date" class="form-control" id="expiration" name="expiration" required>

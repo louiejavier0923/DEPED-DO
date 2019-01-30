@@ -868,8 +868,9 @@ echo json_encode($data);
                   $pass = $_POST['pass'];
                   $fn = $_POST['fn'];
                   $ln = $_POST['ln'];
+                   $img = $_POST['img'];
               
-          $sql="UPDATE admin SET EMAIL = '".$user. "', PASSWORD ='".$pass."', LASTNAME = '".$ln."', FIRSTNAME ='".$fn."' WHERE NO='".$id."';";
+          $sql="UPDATE admin SET EMAIL = '".$user. "', PASSWORD ='".$pass."', LASTNAME = '".$ln."', FIRSTNAME ='".$fn."', IMG ='".$img."' WHERE NO='".$id."';";
                        $result=mysqli_query($conn,$sql);
                        $output = 'success';
               $data = array(    
