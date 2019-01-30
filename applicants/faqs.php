@@ -31,5 +31,7 @@
 				<button id= "messageBtn"><img src= "../img/icon-message.png"></button>
 			</section>
 		</section>
+		<?php include '../include/applicant-image-modal.php';?>
+		<?php include '../include/error-message-modal.php';?>
 	</body>
 </html>

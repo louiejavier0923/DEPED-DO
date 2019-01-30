@@ -53,9 +53,11 @@ $id = $_SESSION['ID'];
 			<section class="eval-options">
 				<a id="btn_education">Education</a>
 				<a id="btn_experience">Experience</a>
-				<a id="btn_training">Training</a>
 				<a id="btn_eligibility">Eligibility</a>
+				<a id="btn_training">Training</a>
 				<a id="btn_interview">Interview</a>
+				<a id="btn_demo">Demo Teaching</a>
+				<a id="btn_comm">English Communication Skills</a>
 			</section>
 		</section>
 

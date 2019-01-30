@@ -11,7 +11,7 @@
 @media screen and (max-width: 768px) and (min-width: 520px) {
 
     .eval-user-info p {
-        width: 40%;
+        width: 50%;
         margin: 6px 6px;
     }
     .eval-user-info #exit {
@@ -53,7 +53,7 @@
         width: 8%;
     }
     .content-header .header:nth-child(6), .info-container .content:nth-child(6), .content-header .header:nth-child(7), .info-container .content:nth-child(7), .content-header .header:nth-child(8), .info-container .content:nth-child(8), .content-header .header:nth-child(10), .info-container .content:nth-child(10), .content-header .header:nth-child(11), .info-container .content:nth-child(11), .content-header .header:nth-child(12), .info-container .content:nth-child(12) {
-        width: 8.8%;
+        width: 8.5%;
     }
     .content-header .header:nth-child(4), .info-container .content:nth-child(4) {
         width: 8%;
@@ -61,13 +61,16 @@
     .content-header .header:nth-child(4) p {
         margin-top: 2px;
     }
+    .content-header .header:nth-child(9),.info-container .content:nth-child(9)  {
+        width: 8.5%;
+    }
     .evaluation-form .eval-info {
         width: calc(100% - 8px);
         height: calc(100% - 16px);
         margin: 8px 4px 8px 4px;
     }
     .eval-info-content .content-info {
-        width: calc(148% + 12px);
+        width: calc(148% + 15px);
         height: calc(100% - 40px);
         overflow: hidden;
     }

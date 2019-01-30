@@ -326,5 +326,7 @@
 		<?php include '../include/user-info-modal.php';?>
 		<?php include '../include/applicant-pds-modal.php';?>
 		<?php include '../include/applicant-files-modal.php';?>
+		<?php include '../include/applicant-image-modal.php';?>
+		<?php include '../include/error-message-modal.php';?>
 	</body>
 </html>

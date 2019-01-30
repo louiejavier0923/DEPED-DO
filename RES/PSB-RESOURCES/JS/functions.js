@@ -36,32 +36,94 @@ function getPublishedVacancy(){
 function setEditableInputGrades(criteria){
 	// console.log(criteria);
 
-	$('.input-grade').prop('disabled',true);
+	// $('.input-grade').prop('disabled',true);
 
 	switch(criteria){
 
 		case 'EDUCATION':
-			$('.e-education').prop('disabled',false);
+			$('.e-experience,.e-training input,.e-let,.e-interview,.e-demoteaching,.e-communication').css({
+				'pointer-events':'none',
+				'background-color': 'rgba(150,150,150,.5)'
+			});
 		break;
 
 		case 'EXPERIENCE':
-			$('.e-experience').prop('disabled',false);
+			$('.e-education,.e-training input,.e-let,.e-interview,.e-demoteaching,.e-communication').css({
+				'pointer-events':'none',
+				'background-color': 'rgba(150,150,150,.5)'
+			});
 		break;
 
 		case 'TRAINING':
-			$('.e-training').prop('disabled',false);
+			$('.e-education,.e-experience,.e-let,.e-interview,.e-demoteaching,.e-communication').css({
+				'pointer-events':'none',
+				'background-color': 'rgba(150,150,150,.5)'
+			});
 		break;
 
 		case 'ELIGIBILITY':
-			$('.e-let').prop('disabled',false);
+			$('.e-education,.e-experience,.e-training input,.e-interview,.e-demoteaching,.e-communication').css({
+				'pointer-events':'none',
+				'background-color': 'rgba(150,150,150,.5)'
+			});
 		break;
 
 		case 'INTERVIEW':
-			$('.e-interview').prop('disabled',false);
+			$('.e-education,.e-experience,.e-training input,.e-let,.e-demoteaching,.e-communication').css({
+				'pointer-events':'none',
+				'background-color': 'rgba(150,150,150,.5)'
+			});
 		break;
 
+		case 'DEMO TEACHING':
+			$('.e-education,.e-experience,.e-training input,.e-let,.e-interview,.e-communication').css({
+				'pointer-events':'none',
+				'background-color': 'rgba(150,150,150,.5)'
+			});
+		break;
+
+		case 'ENGLISH COMMUNICATION SKILLS':
+			$('.e-education,.e-experience,.e-training input,.e-let,.e-interview,.e-demoteaching').css({
+				'pointer-events':'none',
+				'background-color': 'rgba(150,150,150,.5)'
+			});
+		break;
 	}
 
-	$('.e-demo,.e-communication').prop('disabled',false);
+	// $('.e-demo,.e-communication').css('disabled',false);
+
+}
+
+function alertError(msg){
+
+	var content = "<div class='message'>"+
+				"<div class='message-inner'>"+
+					"<div class='message-box'>"+
+						"<div class='message-box-icon'><i class='fa fa-exclamation-circle'></i></div>"+
+						"<div class='message-box-message'>"+msg+"</div>"+
+						"<div class='message-box-btn'><button class='alert-error-close'>Close</button></div>"+
+					"</div></div></div>";
+
+	$('body').append(content);
+	setTimeout(function(){
+		$('body .message').remove();
+	},3000)
+
+}
+
+function saveAlert(msg){
+
+	var content = "<div class='message'>"+
+				"<div class='message-inner'>"+
+					"<div class='message-box'>"+
+						"<div class='message-box-icon'><i class='fa fa-exclamation-circle' style='color:rgb(4, 80, 140);'></i></div>"+
+						"<div class='message-box-message'>"+msg+"</div>"+
+						"<div class='message-box-btn'><button class='alert-error-close'>Close</button></div>"+
+					"</div></div></div>";
+
+	$('body').append(content);
+	setTimeout(function(){
+		$('body .message').remove();
+	},3000)
 
 }

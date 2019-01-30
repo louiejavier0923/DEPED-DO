@@ -341,6 +341,10 @@ $(document).ready(function() {
     var pdsModal = document.getElementById('pds-container');
     var messageModal = document.getElementById('message-modal');
     var fileModal = document.getElementById('file-modal');
+    var statusCont = document.getElementById('status-container');
+    var logsCont = document.getElementById('logs-container');
+    var updateImage = document.getElementById('change-image');
+    var errorMessage = document.getElementById('error-message');
 
     $('.fullname').attr('disabled', true);
     $('.new_password').attr('disabled', true);
@@ -358,6 +362,27 @@ $(document).ready(function() {
                     $('.content-register').show();
                 break;
             }
+        })
+
+        .on('click', '.statusBtn', function() {
+            switch (this.id) {
+                case 'statBtn':
+                    statusCont.style.display= "block";
+                    logsCont.style.display= "none";
+                break;
+                case 'logsBtn':
+                    logsCont.style.display= "block";
+                    statusCont.style.display= "none";
+                break;
+            }
+        })
+
+        .on('click', '#closeImageBtn', function() {
+            updateImage.style.display= "none";
+        })
+        
+        .on('click', '#updatePicBtn', function (){
+            updateImage.style.display= "block";
         })
 
         .on('click', '#doneBtn', function() {
@@ -391,6 +416,18 @@ $(document).ready(function() {
             else if (e.target == fileModal) {
               fileModal.style.display= "none";
             }
+
+            else if (e.target == updateImage) {
+                updateImage.style.display= "none";
+            }
+
+            else if (e.target == errorMessage) {
+                errorMessage.style.display= "none";
+            }
+        })
+
+        .on('click', '#closeErrorBtn', function() {
+            errorMessage.style.display= "none";
         })
             
         .on('click', '#accSettingBtn', function() {
@@ -429,7 +466,41 @@ $(document).ready(function() {
         })
 
         .on('click', '#okFileBtn', function () {
+                   var myuid = $('#myuid').val();
+                 var file_data = $('#applicantfile').prop('files')[0];         
+                   var form_data = new FormData();
+                   form_data.append('file',file_data);
+
+        $.ajax({
+                    url:'../DOADMIN/credentials/upload_files.php',
+                    dataType:'text',
+                    cache:false,
+                    contentType:false,
+                    processData:false,
+                    data:form_data,
+                    type:'post'
+                }).done(function(output_img){
+
+
+                       $.ajax({
+                         type: 'POST',
+                            url: '../DOADMIN/credentials/model.php',
+                            data: {action:'upload_applicant_files',myuid:myuid,img:output_img},
+                            dataType: 'json',
+                              success: function(response){
+                              
+                                     
+                                  attachFileModal.style.display= "none";
+          
+                            }
+                     });
+                    // alert(output_img);
+                     
+                            
+                });
+        /*
             attachFileModal.style.display= "none";
+            */
         })
 
         .on('click', '#okPassBtn', function() {
@@ -533,9 +604,12 @@ $(document).ready(function() {
     })
         })
 
+       
         $('#submit_login_btn').click(function() {			
             login();
         });
+
+        
 
         $('#submit_register_btn').click(function() {			
 			register();

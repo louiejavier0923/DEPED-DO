@@ -13,22 +13,73 @@
 
         case 'vacant-function':
             require '../../include/session.php';
+             $memo='';
             $vacant_no = $_POST['vacant_no'];
                $sql="SELECT * from application where PID='" .$vacant_no."' AND UID = '".$user['UID']."';";
             $result=mysqli_query($conn,$sql);
+           
 
-                if($result->num_rows > 0) {
+            $memo .= '<html>
+                                                                <body style= "margin: 0px; padding: 0px;">
+                     <section style= "float: left; position: relative; width: 80%; height: 1800px; padding: 40px 5%; border: solid 1px rgb(30, 30, 30); margin: 2.5% 5%">
+      <section style= "float: left; width: 100%; height: 200px;">
+        <img src= "logo.png" style= "float: left; width: 15%; height: 150px; margin: 0px 5%;">
+        <section>
+          <p style= "float: left; width: 50%; text-align: center; font-size: 120%">Republic of the Philippines<br>Department of Education<br>Natianal Capital Region<br><b>SCHOOLS DIVISION OFFICE<br>QUEZON CITY</b><br>Nueva  Ecija, St., Bago Bantay, Quezon City<br>www.depedqc.ph</p>
+        </section>
+        <img src= "logo.png" style= "float: left; width: 15%; height: 150px; margin: 0px 5%">
+      </section>
+      <section style= "float: left; width: 100%;">
+        <p style= "float: left; margin-left: 5%; font-size: 105%;"><span style= "font-weight: bold; text-transform: uppercase; font-size: 120%; letter-spacing: 1px;">Division Memorandum</span><br>No.<span style= "text-decoration: underline;">&nbsp; &nbsp; &nbsp; &nbsp;104&nbsp; &nbsp; &nbsp; &nbsp;</span>, s. 2018</p>
+        <p style= "float: right; font-size: 115%; margin-right: 30%;">November 5, 2018</p>
+      </section>
+      <h2 style= "float: left; width: 100%; font-size: 125%; text-transform: uppercase; text-align: center; margin-bottom: 20px;">Recruitment/screening of elementary, junior hs and senior hs<br>teacher applicants for school year 2019 - 2020</h2>
+      <section style= "float: left; width: 100%; margin-bottom: 20px">
+        <p style= "float: left; font-size: 125%; margin-left: 5%;">To:<span style= "float: left; margin-left: 20%">Assistant Schools Division Superintendents<br>Chief Education Supervisors, CID/SGOD<br>Division/District Supervisors/Coordinators<br>Elementary/Secondary School Principals/Officers In-Charge<br>Heads, Administrative Units</span></p>
+      </section>
+      <section style= "float: left; width: 85%; margin-left: 10%; margin-right: 10%;">
+        <p style= "float: left; width: 100%; font-size: 125%;"><span style= "float: left;">1.</span><span style= "float: left; position: relative; width: 90%; margin-left: 5%">For the information and guidance of field and in accordance with DepEd Order No. 3, s. 2016 <i>(Hiring Guidelines for Senior HS Teaching Positions)</i> dated January 21, 2016 and DepEd Order No. 9, s. 2016 <i>(Reinforcement of DepEd Order Nos. 7 and 22, s. 2015 as the Hiring Guidelines for Kindergarten to Grade 10 Teaching Positions)</i> dated February 18, 2016 is scheduled on the following dates:</span></p>
+        <section style= "float: right; width: 80%; height: 100px;">
+          <section style= "float: left; width: 50%;">
+            <p style= "width: 100%; float: left; font-size: 125%; margin-bottom: 5px; text-align: center">December 15, 2018 to January 31, 2019</p>
+            <p style= "width: 100%; float: left; font-size: 125%; text-align: center; margin-bottom: 5px">February 4-8, 2019</p>
+            <p style= "width: 100%; float: left; font-size: 125%; text-align: center;">February 18-19, 2019</p>
+            <p style= "width: 100%; float: left; font-size: 125%; text-align: center; margin-top: 30px">February 26, 2019 to March 13, 2019</p>
+            <p style= "width: 100%; float: left; font-size: 125%; text-align: center; margin-top: 35px">April 25, 2019</p>
+          </section>
+          <section style= "float: left; width: 50%;">
+            <p style= "width: 100%; float; left; font-size: 125%;"><span style= "float: left; ">-</span><span style= "float: left; margin-left: 3%">Filling of Applicants to School<br>Screening Committee</span></p>
+            <p style= "width: 100%; float: left; font-size: 125%; margin-top: 5px"><span style= "float: left; ">-</span><span style= "float: left; margin-left: 3%">Demonstration Teaching (School Level)</span></p>
+            <p style= "width: 100%; float: left; font-size: 125%; margin-top: -5px"><span style= "float: left; ">-</span><span style= "float: left; margin-left: 3%">Submission of List of Applicants with<br>corresponding documents from school<br>to the Personnel Services Section</span></p>
+            <p style= "width: 100%; float: left; font-size: 125%; margin-top: -10px"><span style= "float: left; ">-</span><span style= "float: left; margin-left: 3%">Evaluation, Selection and Consilidation<br>of Registry of Qualified Applicants (RQA)<br>(RQA) by the Divisin Selection Committee</span></p>
+            <p style= "width: 100%; float: left; font-size: 125%; margin-top: -10px"><span style= "float: left; ">-</span><span style= "float: left; margin-left: 3%">Posting of Registry of Qualified Applicants<br>(RQA)</span></p>
+          </section>
+        </section>
+        <p style= "float: left; width: 100%; font-size: 125%; margin-top: 250px;"><span style= "float: left;">2.</span><span style= "float: left; position: relative; width: 90%; margin-left: 5%">An English Proficiency Test, Interview and Paper Evaluation of applicants will be administered at the Division Office Science Iteractive Center from 9:00 a.m. to 4:00 p.m. on the following dates:</span></p>
+        <h3 style= "float: left; border-top: solid 1px rgb(30, 30, 30); border-bottom: solid 1px rgb(30, 30, 30); margin-top: 5px; padding: 2px 5%; margin-left: 10%"><span style= "float: left; padding: 0px 40px; font-weight: bold">ACTIVIES</span><span style= "float: left; padding: 0px 40px; font-weight: bold">ELEMENTARY</span><span style= "float: left; padding: 0px 40px; font-weight: bold">JUNIOR HS</span><span style= "float: left; padding: 0px 30px; font-weight: bold">SENIOR HS</span></h3>
+        <p style= "float: left; font-weight: bold; font-size: 110%; margin-top: -10px; margin-left: 10%; border-bottom: solid 1px rgb(30, 30, 30);"><span style= "float: left; padding: 0px 40px;">English Proficiency Test</span><span style= "float: left; padding: 0px 210px;">February 22, 2019</span></p>
+        <p style= "float: left; font-weight: bold; font-size: 110%; margin-top: -10px; margin-left: 10%; border-bottom: solid 1px rgb(30, 30, 30);"><span style= "float: left; padding: 0px 40px; text-align: center">Interview and Paper<br>Evaluation</span><span style= "float: left; padding: 0px 5px;">February 27 - March 1, 2019</span><span style= "float: left; padding: 0px 10px;">March 5-7, 2019</span><span style= "float: left; padding: 0px 48px; text-align: center">March 8, 12-13,<br> 2019</span></p>
+        <p style= "float: left; font-weight: bold; font-size: 110%; margin-top: -10px; margin-left: 10%; border-bottom: solid 1px rgb(30, 30, 30);"><span style= "float: left; padding: 0px 40px; text-align: center;">Consilidation/Encoding of<br>Results by the Secretariat</span><span style= "float: left; padding: 0px 177px;">March 5 - April 15, 2019</span></p>
+        <p style= "float: left; width: 100%; font-size: 125%; margin-left: 2%;"><span style= "float: left; position: relative; width: 90%; margin-left: 5%">School Screening Committee shall submit the list of applicants with the corresponding documents to the Division Selection Committees for kindergarten/SPED, elementart/junior and senior High schools through the Head, Personnel Services Section in soft and hard copy not later than <u><b>February 18-19, 2019.</b></u></span></p>
+        <p  style= "float: left; width: 90%; margin-left: 10%; font-size: 120%; margin-bottom: 5px"><span style= "float: left; padding: 0px 40px;">February 18, 2019</span><span style= "float: left; padding: 0px 40px;">District I, II & III</span><span style= "float: left; padding: 0px 40px;">Elementary & Junior/Senior Hs</span></p>
+        <p  style= "float: left; width: 90%; margin-left: 10%; font-size: 120%; margin-top: 5px;"><span style= "float: left; padding: 0px 40px;">February 19, 2019</span><span style= "float: left; padding: 0px 40px;">District IV, V & VI</span><span style= "float: left; padding: 0px 25px;">Elementary & Junior/Senior Hs</span></p>
+        <p style= "float: left; width: 100%; font-size: 125%; margin-top: 30px;"><span style= "float: left;">3.</span><span style= "float: left; position: relative; width: 90%; margin-left: 5%">New applicants and old substitute teachers shall strictly submit to only one (1) elementary or secondary school head theri application forms with the required documents. As much as possible, Bachelor of Secondary Education or Bachelor`s Degree plus 18 professional units in Education with appropriate major shall be evaluated only for secondary.</span></p>
+        <p style= "float: left; width: 100%; font-size: 125%; margin-top: 30px;"><span style= "float: left;">4.</span><span style= "float: left; position: relative; width: 90%; margin-left: 5%">The application forms shall be filed as practicable in schools located in the barangay or city where the teacher-applicants reside.</span></p>
+          </section>
+         </section>
+           </body>
+       </html>';
+
+            
+
+                  if($result->num_rows > 0) 
+                  {
                       $output='you already applied for this position';
-                } 
-                else{ 
-                            $sql = "INSERT INTO application (UID,PID,STATUS,DATE,IS_CALIBRATED)VALUES ('".$user['UID']."', '".$vacant_no."', '0',CURRENT_DATE(), '0');";
-                                                   $query = mysqli_query($conn, $sql);
-                
-                         
-                  
-                        
-                       // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
-                                           $mail->isSMTP();                                      // Set mailer to use SMTP
+                  }
+                      else {
+
+
+                                          $mail->isSMTP();                                      // Set mailer to use SMTP
                                            $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
                                            $mail->SMTPAuth = true;                               // Enable SMTP authentication
                                            $mail->Username = 'cromeroadr@gmail.com';                 // SMTP username
@@ -49,20 +100,27 @@
                                         
                                            //Content
                                            $mail->isHTML(true);                                  // Set email format to HTML
-                                           $mail->Subject = 'APPLICATION';
-                                           $mail->Body    = "<p>Verifyin application<p>";
-
+                                           $mail->Subject = 'APPLICATION';                                                             
+                                           $mail->Body   = $memo;
+                  
+                        
+                       // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+                                          
+                                         
                                            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
                                        
                                          
                             
                                            if($mail->Send()) {
-
+                                                    
+                                                  $sql = "INSERT INTO application (UID,PID,STATUS,DATE,IS_CALIBRATED)VALUES ('".$user['UID']."', '".$vacant_no."', '0',CURRENT_DATE(), '0');";
+                                                   $query = mysqli_query($conn, $sql);
                                                 
                                                    $output="success";
                                           }
-                                          
-                }
+                                  }        
+                
+
            
               $data = array(
                 'message' => $output
@@ -145,12 +203,13 @@
             # code...
             $output='';
            
-            $sql = "SELECT MAX(b.UID) AS 'bUID',a.FIRSTNAME,a.LASTNAME,a.MIDDLENAME,a.TOTALPOINTS FROM view_rank a join  application b ON a.UID = b.UID WHERE a.TOTALPOINTS > 70 AND b.STATUS = '0'";
+            $sql = "SELECT DISTINCT (u.UID) as 'ID',u.FIRSTNAME,u.LASTNAME,u.MIDDLENAME,u.TOTALPOINTS from view_rank u INNER JOIN application n 
+            on u.UID = n.UID  where n.STATUS = '0' and u.TOTALPOINTS > 70";
             $query = $conn->query($sql);
 
             while($row = $query->fetch_assoc()){                     
                 $output.="
-                                    <option  value=".$row['bUID'].">".$row['LASTNAME'].''.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>                    
+                                    <option  value=".$row['ID'].">".$row['LASTNAME'].' '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>                    
                                 ";
             }
 
@@ -807,8 +866,9 @@ echo json_encode($data);
                   $pass = $_POST['pass'];
                   $fn = $_POST['fn'];
                   $ln = $_POST['ln'];
+                   $img = $_POST['img'];
               
-          $sql="UPDATE admin SET EMAIL = '".$user. "', PASSWORD ='".$pass."', LASTNAME = '".$ln."', FIRSTNAME ='".$fn."' WHERE NO='".$id."';";
+          $sql="UPDATE admin SET EMAIL = '".$user. "', PASSWORD ='".$pass."', LASTNAME = '".$ln."', FIRSTNAME ='".$fn."', IMG ='".$img."' WHERE NO='".$id."';";
                        $result=mysqli_query($conn,$sql);
                        $output = 'success';
               $data = array(    
@@ -1528,6 +1588,17 @@ echo json_encode($data);
 		}
 		echo json_encode($row);
 	break;
+  case 'upload_applicant_files':
+               $id = $_POST['myuid'];
+               $img = $_POST['img'];
+             
+            $sql = "INSERT INTO file (UID,FILE_NAME)VALUES ('".$id."', '".$img."');";
+                                 $query = mysqli_query($conn, $sql);
+                                              
+                                                   $output="success";
+
+         echo json_encode($output);
+    break;
 	
    }
 

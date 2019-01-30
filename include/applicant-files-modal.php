@@ -5,18 +5,38 @@
 			<a id= "closeFileBtn"><i class= "fa fa-close"></i></a>
 		</section>
 		<section class= "file-content">
-			<section class= "files">
-				<img src= "../img/icon-word.ico">
-				<p>File Name</p>
-			</section>
-			<section class= "files">
-				<img src= "../img/icon-pdf.ico">
-				<p>File Name</p>
-			</section>
-			<section class= "files">
-				<img src= "../img/icon-pdf.ico">
-				<p>File Name</p>
-			</section>
+			
+
+			 <?php
+                    $sql = "SELECT * FROM file where UID = '".$user['UID']."'";
+
+
+
+                    
+                    $query = $conn->query($sql);
+
+                    while($row = $query->fetch_assoc()){
+                                
+                   
+                                 
+                                     echo  '
+                                           	<section class= "files">
+				                                 <img src= "../img/icon-pdf.ico">
+				                                 <p>'.$row['FILE_NAME'].'</p>
+				                                 
+			                                 </section>
+                                               ';
+                            
+                                    
+
+
+                               }
+                          
+                          mysqli_close($conn);
+                                  
+
+        ?>
+
 		</section>
 	</section>
 </section>

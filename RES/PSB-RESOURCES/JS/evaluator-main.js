@@ -42,6 +42,14 @@ $(document).ready(function(){
 			case 'btn_interview':
 				criteria = 'INTERVIEW';
 			break;
+
+			case 'btn_demo':
+				criteria = 'DEMO TEACHING';
+			break;
+
+			case 'btn_comm':
+				criteria = 'ENGLISH COMMUNICATION SKILLS';
+			break;
 		}
 
 		$.ajax({
