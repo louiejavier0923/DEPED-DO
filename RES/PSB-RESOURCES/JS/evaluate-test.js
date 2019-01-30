@@ -36,7 +36,7 @@ $(document).ready(function(){
 		}).done(function(data){
 			// console.log(data);
 			$('.content-info').html(data);
-			// setEditableInputGrades($('.evaluator-criteria').html());
+			setEditableInputGrades($('.evaluator-criteria').html());
 		});
 
 	})
@@ -78,7 +78,8 @@ $(document).ready(function(){
 		}
 
 		if (grade<0 || grade>lim || grade=="") {
-			alert('Invalid grade entered!');
+			// alert('Invalid grade entered!');
+			alertError('Invalid grade entered! Try Again!');
 			// $(this).focus();
 		}
 		else{
@@ -155,7 +156,8 @@ $(document).ready(function(){
 
 
 		if (gwa>3 || gwa<1) {
-			alert('Invalid GWA! Enter a valid number!');
+			// alert('Invalid GWA! Enter a valid number!');
+			alertError('Invalid GWA! Enter a valid number!');
 		}
 		else{
 			var val = gwa.toString()+','+additional.toString();
@@ -208,25 +210,32 @@ $(document).ready(function(){
 		var uid = $(this).siblings('.applicant-id').html(),
 		pid = $('#published_vacancy_select').val();
 		// console.log(experiencePoints('7',mnths) +'/'+exp_value+'/'+exp_points);
+		if(mnths==""||mnths=='0'){
+			alertError("You've entered an invalid value! Try again!");
+		}
+		else{
 
-		$.ajax({
-			type:'POST',
-			url:'../RES/PSB-RESOURCES/PHP/model.php',
-			data:{
-				action:'insert_applicant_point',
-				a:uid,
-				b:'EXPERIENCE',
-				c:exp_points,
-				d:user_id,
-				e:pid,
-				val:exp_value
-			}			
-		}).done(function(data){
-			// console.log(data);
-			if (data) {
-				$('.applicant-filters').blur();
-			}
-		}) 
+			$.ajax({
+				type:'POST',
+				url:'../RES/PSB-RESOURCES/PHP/model.php',
+				data:{
+					action:'insert_applicant_point',
+					a:uid,
+					b:'EXPERIENCE',
+					c:exp_points,
+					d:user_id,
+					e:pid,
+					val:exp_value
+				}			
+			}).done(function(data){
+				// console.log(data);
+				if (data) {
+					$('.applicant-filters').blur();
+				}
+			}) 
+
+		}
+
 
 	})
 	.on('click','.el-save',function(){
@@ -239,11 +248,13 @@ $(document).ready(function(){
 		pid = $('#published_vacancy_select').val();
 
 		if(rater==undefined){
-			alert('Choose between LET/PBET!');
+			// alert('Choose between LET/PBET!');
+			alertError('Choose between LET/PBET!');
 			valid = false;
 		}
 		if(rating>100||rating<75){
-			alert('Enter a valid number!');
+			// alert('Enter a valid number!');
+			alertError('Enter a valid number!');
 			valid = false;
 		}
 		
@@ -284,7 +295,8 @@ $(document).ready(function(){
 		pid = $('#published_vacancy_select').val();
 
 		if(sum_points==""||sum_points>15||sum_points<=0){
-			alert('Enter a valid value!');
+			// alert('Enter a valid value!');
+			alertError('Enter a valid value!');
 		}
 		else{
 
@@ -319,7 +331,8 @@ $(document).ready(function(){
 		pid = $('#published_vacancy_select').val();
 
 		if(sum_points==""||sum_points>60||sum_points<=0){
-			alert('Enter a valid value!');
+			// alert('Enter a valid value!');
+			alertError('Enter a valid value!');
 		}
 		else{
 
@@ -354,7 +367,8 @@ $(document).ready(function(){
 		pid = $('#published_vacancy_select').val();
 
 		if(sum_points==""||sum_points>100||sum_points<=0){
-			alert('Enter a valid value!');
+			// alert('Enter a valid value!');
+			alertError('Enter a valid value!');
 		}
 		else{
 
@@ -379,6 +393,9 @@ $(document).ready(function(){
 
 		}
 
+	})
+	.on('click','.alert-error-close',function(){
+		$('body .message').remove();
 	});
 
 	// console.log(communicationPoints(98))
