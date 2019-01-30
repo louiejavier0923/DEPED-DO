@@ -3,9 +3,13 @@
 <html>
 	<head>
 		<title>Application Form | Division Office</title>
-		<?php include '../include/applicant-header-content.php';?>
+
+	<?php include '../include/applicant-header-content.php';?>
 	</head>
 	<body>
+			              <button type= 'submit' class='scroll' id="scroll">Scroll</button>
+                   
+			<?php include '../include/error-message-modal.php'; ?>
 		<section class= "applicant-header-container">
 			<?php include '../include/applicant-header-container.php';?>
 		</section>
@@ -55,7 +59,7 @@
 							<p>Middle name</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "text" name='Middle Name' class="pds_middlename" value="<?php echo $user['MIDDLENAME'] ?>">
+							<input type= "text" name='Middle Name' class="pds_middlename not-require" value="<?php echo $user['MIDDLENAME'] ?>">
 						</section>
 					</section>
 				</section>
@@ -186,7 +190,7 @@
 											<p>15. Agency Employee No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" maxlength="10" name='Agency Employee ID No.' class="pds_agencyemployee" value="<?php echo $user['AGENCY_EMPLOYEE_NO'] ?>">
+											<input type= "text" maxlength="10" name='Agency Employee ID No.' class="pds_agencyemployee not-require" value="<?php echo $user['AGENCY_EMPLOYEE_NO'] ?>">
 										</section>
 									</section>
 								</section>
@@ -1269,15 +1273,14 @@
 							</section>
 						</section>
 					</section>
-					<section class= "pds-footer">
-						<section class= "footer-column">
+					<section class= "pds-footer singl">
+						<section class= "footer-column single-fields">
 							<p>SIGNATURE</p>
 							<input type= "text">
 						</section>
 						<section class= "footer-column">
 							<p>DATE</p>
-							<input type= "date" id="sign_date">
-
+							<input type= "date" id="sign_date"
 						</section>
 					</section>
 				</section>
