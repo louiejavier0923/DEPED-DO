@@ -91,20 +91,10 @@
   var id = $("#admin_id").val();
 
 
-  
-  if(user == "" || pass == "" || fn == "" || ln == "")
-  {
-      alert("Fill up all forms!");
-      
-       
-     
-     
-  }
-  else if(admin_pass===cpass)
-  {
-      var file_data = $('#photo').prop('files')[0];
-            
-         var form_data = new FormData();
+
+      var file_data = $('#photo').prop('files')[0];         
+      var form_data = new FormData();
+
           $.ajax({
         type: 'POST',
         url: '../credentials/admin_img_upload.php',
@@ -112,7 +102,7 @@
         dataType: 'json',
         success: function(response){
         
-            alert('e');
+            alert(response.message);
           
           
         }
@@ -136,11 +126,7 @@
       });
       */
    
-  }
-  else{
 
-      alert("Your current password is Incorrect!"); 
-  }
 
 
 
