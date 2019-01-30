@@ -14,7 +14,7 @@
                      <input type="hidden" id="admin_id" value='<?php echo $user["NO"] ?>'>
                      <input type="hidden" id="admin_pass" value='<?php echo $user["PASSWORD"] ?>'>
                   	<div class="col-sm-9">
-                    	<input type="text" class="form-control" id="username" name="username" value="">
+                    	<input type="text" class="form-control" id="username" value="<?php echo $user["EMAIL"] ?>" name="username" value="">
                   	</div>
                 </div>
                 <div class="form-group">
@@ -28,14 +28,14 @@
                   	<label for="firstname" class="col-sm-3 control-label"  value='<?php echo $user["FIRSTNAME"] ?>'>Firstname</label>
 
                   	<div class="col-sm-9">
-                    	<input type="text" class="form-control" id="firstname" name="firstname" value="">
+                    	<input type="text" class="form-control" id="firstname" value="<?php echo $user["FIRSTNAME"] ?>" name="firstname" value="">
                   	</div>
                 </div>
                 <div class="form-group">
                   	<label for="lastname" class="col-sm-3 control-label">Lastname</label>
 
                   	<div class="col-sm-9">
-                    	<input type="text" class="form-control" id="lastname" name="lastname" value="">
+                    	<input type="text" class="form-control" id="lastname" value="<?php echo $user["Lastname"] ?>" name="lastname" value="">
                   	</div>
                 </div>
                 <div class="form-group">

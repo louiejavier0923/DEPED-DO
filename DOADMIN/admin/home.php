@@ -272,65 +272,6 @@ $(function(){
   });
 });
 
-$("#admin_save").click(function(){
-  var user = $("#username").val();
-  var pass = $("#password").val();
-  var fn = $("#firstname").val();
-  var ln = $("#lastname").val();
-  var cpass = $("#curr_password").val();
-  var admin_pass = $("#admin_pass").val();
-  var id = $("#admin_id").val();
-
-
-  
-  if(user == "" || pass == "" || fn == "" || ln == "")
-  {
-      alert("Fill up all forms!");
-      
-       
-     
-     
-  }
-  else if(admin_pass===cpass)
-  {
-    $.ajax({
-        type: 'POST',
-        url: '../credentials/model.php',
-        data: {action:'edit_admin', id:id, ln:ln, fn:fn, user:user, pass:pass},
-        dataType: 'json',
-        success: function(response){
-          if(response.confirm==='success'){
-            alert("Update Success!");
-            $("#profile").modal("hide");
-
-          }else{
-            alert('e');
-          }
-          
-        }
-      });
-   
-  }
-  else{
-
-      alert("Your current password is Incorrect!"); 
-  }
-
-
-
-});
- $( "#firstname" ).keypress(function(e) {
-                    var key = e.keyCode;
-                    if (key >= 48 && key <= 57) {
-                        e.preventDefault();
-                    }
-                });
- $( "#lastname" ).keypress(function(e) {
-                    var key = e.keyCode;
-                    if (key >= 48 && key <= 57) {
-                        e.preventDefault();
-                    }
-                });
 
 </script>
 </body>

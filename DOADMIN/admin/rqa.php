@@ -5,17 +5,25 @@
 
   <?php include 'includes/navbar.php'; ?>
   <?php include 'includes/menubar.php'; ?>
-
+<?php 
+  include '../timezone.php'; 
+  $today = date('Y-m-d');
+  $year = date('Y');
+  if(isset($_GET['year'])){
+    $year = $_GET['year'];
+   
+  }
+?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-         RQA LIST
+         RQA
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">rqa list</li>
+        <li class="active">Rank</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -51,11 +59,33 @@
         <div class="col-xs-12">
           <div class="box">
               <div class="box-header with-border">
-              <a href="" id="appointment" data-toggle="modal" class="btn btn-success btn-sm btn-flat">PRINT</a>
+             <div class="pull-right">
+                <form class="form-inline" id="rankForm">
+                   <div class="box-tools pull-right">
+                
+                  <div class="form-group">
+                    <label>Select Year: </label>
+                    <select class="form-control input-sm" id="select_year">
+                      <?php
+                        for($i=2015; $i<=2065; $i++){
+                          $selected = ($i==$year)?'selected':'';
+                          echo "
+                            <option value='".$i."' ".$selected.">".$i."</option>
+                          ";
+                        }
+                      ?>
+                    </select> <button type="button" class="btn btn-primary btn-sm btn-flat" id="ranking"><span class="glyphicon glyphicon-print"></span> Rankings</button>
+                  </div>
+        
+              </div> 
+                  
+                 
+                </form>
+              </div>
                
             </div>
             <div class="box-body">
-              <table id="example1" class="table table-bordered">
+                    <table id="example1" class="table table-bordered">
                 <thead>
                 
                 
@@ -102,7 +132,6 @@
                   ?>
                 </tbody>
               </table>
-            
             </div>
           </div>
         </div>
@@ -116,8 +145,14 @@
 <?php include 'includes/scripts.php'; ?>
 <script>
 $(function(){
-  
-
+    $('#ranking').click(function(e){
+    e.preventDefault();
+    $('#rankForm').attr('action', '../credentials/model_printables.php');
+    $('#rankForm').submit();
+  });
+  $('#select_year').change(function(){
+    window.location.href = 'rqa.php?year='+$(this).val();
+  });
 
    
 });

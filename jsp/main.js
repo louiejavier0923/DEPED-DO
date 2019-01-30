@@ -392,7 +392,7 @@ $(document).ready(function() {
               fileModal.style.display= "none";
             }
         })
-
+            
         .on('click', '#accSettingBtn', function() {
             window.location.href= "account-setting.php";
         })
@@ -516,7 +516,7 @@ $(document).ready(function() {
             success:function(data) {
                       
                       switch(data.message){
-                            case 'successful':
+                            case 'success':
                                   window.location.href='finish.php'
                                  
                             break;
