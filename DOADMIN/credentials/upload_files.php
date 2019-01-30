@@ -12,15 +12,15 @@
     }
 
     function rename_appending_unique_id($source, $tempfile){
-
-               $target_path ='../images/'.$source;
+               $fileName='';
+               $target_path ='../../files/appfiles/'.$source;
                 while(file_exists($target_path)){
                      $fileName = uniqid().'-'.$source;
-                     $target_path = ('../images/'.$fileName);
+                     $target_path = ('../../files/appfiles/'.$fileName);
                   }
 
     move_uploaded_file($tempfile, $target_path);
-    print_r($source);
+    print_r($fileName);
 
 }
 

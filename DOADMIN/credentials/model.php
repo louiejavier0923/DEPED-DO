@@ -1574,6 +1574,17 @@ echo json_encode($data);
 		}
 		echo json_encode($row);
 	break;
+  case 'upload_applicant_files':
+               $id = $_POST['myuid'];
+               $img = $_POST['img'];
+             
+            $sql = "INSERT INTO file (UID,FILE_NAME)VALUES ('".$id."', '".$img."');";
+                                 $query = mysqli_query($conn, $sql);
+                                              
+                                                   $output="success";
+
+         echo json_encode($output);
+    break;
 	
    }
 
