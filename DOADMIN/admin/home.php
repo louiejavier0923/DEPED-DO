@@ -57,7 +57,12 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-             <h3>12</h3>
+              <?php
+                $sql = "SELECT * FROM user";
+                $query = $conn->query($sql);
+
+                echo "<h3>".$query->num_rows."</h3>";
+              ?>
               
 
               <p>Total Applicants</p>
@@ -65,7 +70,7 @@
             <div class="icon">
               <i class="ion ion-person-stalker"></i>
             </div>
-            <a href="employee.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="users.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -73,15 +78,20 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-             <h3>10<sup style='font-size: 20px'></sup></h3>
+              <?php
+                $sql = "SELECT * FROM view_rank where TOTALPOINTS > 70";
+                $query = $conn->query($sql);
+
+                echo "<h3>".$query->num_rows."</h3>";
+              ?>
               
           
-              <p>Total Evaluated  applicants  12/100</p>
+              <p>Total RQA</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="attendance.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="ranking.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -271,7 +281,7 @@ $("#admin_save").click(function(){
   var admin_pass = $("#admin_pass").val();
   var id = $("#admin_id").val();
 
- 
+
   
   if(user == "" || pass == "" || fn == "" || ln == "")
   {
