@@ -36,7 +36,7 @@ $(document).ready(function(){
 		}).done(function(data){
 			// console.log(data);
 			$('.content-info').html(data);
-			// setEditableInputGrades($('.evaluator-criteria').html());
+			setEditableInputGrades($('.evaluator-criteria').html());
 		});
 
 	})
