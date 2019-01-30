@@ -67,7 +67,7 @@
 
                     <div class="col-sm-9">
                           <select class="form-control" id="status" name="status">
-                              <option>1</option>
+                              <option value="PERMANENT">PERMANENT</option>
                               <option>2</option>
                               <option>3</option>
                               <option>4</option>
@@ -85,7 +85,7 @@
                     <label for="itemno" class="col-sm-3 control-label">Item no</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" maxlength="14" id="itemno" name="itemno" required>
+                      <input type="text" class="form-control" maxlength="15" id="itemno" name="itemno" required>
                     </div>
                 </div>
           	</div>

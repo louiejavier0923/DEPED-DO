@@ -1,29 +1,22 @@
 <?php include 'includes/session.php'; ?>
 <?php include 'includes/header.php'; ?>
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <?php include 'includes/navbar.php'; ?>
   <?php include 'includes/menubar.php'; ?>
-<?php 
-  include '../timezone.php'; 
-  $today = date('Y-m-d');
-  $year = date('Y');
-  if(isset($_GET['year'])){
-    $year = $_GET['year'];
-   
-  }
-?>
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-         RANKING
+         CALIBRATE LIST
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Rank</li>
+        <li class="active">recalibrate list</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -59,29 +52,7 @@
         <div class="col-xs-12">
           <div class="box">
               <div class="box-header with-border">
-             <div class="pull-right">
-                <form class="form-inline" id="rankForm">
-                   <div class="box-tools pull-right">
-                
-                  <div class="form-group">
-                    <label>Select Year: </label>
-                    <select class="form-control input-sm" id="select_year">
-                      <?php
-                        for($i=2015; $i<=2065; $i++){
-                          $selected = ($i==$year)?'selected':'';
-                          echo "
-                            <option value='".$i."' ".$selected.">".$i."</option>
-                          ";
-                        }
-                      ?>
-                    </select> <button type="button" class="btn btn-primary btn-sm btn-flat" id="ranking"><span class="glyphicon glyphicon-print"></span> Rankings</button>
-                  </div>
-        
-              </div> 
-                  
-                 
-                </form>
-              </div>
+              <a href="" id="recalibrate" data-toggle="modal" class="btn btn-success btn-sm btn-flat">RECALIBRATE</a>
                
             </div>
             <div class="box-body">
@@ -89,41 +60,42 @@
                 <thead>
                 
                 
-                  <th>RANK</th>
+                  <th>NO</th>
+                    <th>UID</th>
                    <th>NAME</th>
-                  <th>EDUCATION</th>
-                   <th>ELIGIBILITY</th>
-                  <th>EXPERIENCE</th>
-                  <th>TRAINING</th>
-                   <th>DEMO</th>
-                    <th>COMMUNICATION</th>
-                     <th>INTERVIEW</th>
-                      <th>TOTAL POINTS</th>
+                   <th>PID</th>
+                  <th>CRITERIA</th>
+                   <th>VALUE</th>
+                  <th>EQUIVALENT POINTS</th>
+                  <th>TOTAL POINTS</th>
+                   <th>STATUS</th>
+                
+                   
                  
                 </thead>
                 <tbody>
                   <?php
                     $cnt='';
-                    $sql = "SELECT DISTINCT LASTNAME,FIRSTNAME,MIDDLENAME,EXTENSION_NAME,EMAIL,EDUCATION,EXPERIENCE,ELIGIBILITY,TRAINING,DEMO,INTERVIEW_AVG,TOTALPOINTS,COMMUNICATION  FROM view_rank";
+                    $sql = "SELECT DISTINCT (u.UID) as 'ID',u.FIRSTNAME,u.LASTNAME,u.MIDDLENAME,u.TOTALPOINTS from view_rank u INNER JOIN application n on u.UID = n.UID   where n.STATUS = '0' and u.TOTALPOINTS < 70";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $cnt += 1;
-                      
+                        $status = ($row['IS_CALIBRATED'])?'<span class="label label-success pull-right">CALIBRATED</span>':'<span class="label label-danger pull-right">NOT CALIBRATED</span>';
                       echo "
                         <tr>
                           <td>".$cnt."</td>
+                           <td>".$row['UID']."</td>
+                            <td>".$row['PID']."</td>
                            <td>".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']. "</td>
-                          <td>".$row['EDUCATION']."</td>
+                          <td>".$row['CRITERIA_CODE']."</td>
                           
 
                           
-                          <td>".$row['EXPERIENCE']."</td>
-                           <td>".$row['ELIGIBILITY']."</td>
-                            <td>".$row['TRAINING']."</td>
-                             <td>".$row['DEMO']."</td>
-                              <td>".$row['COMMUNICATION']."</td>
-                                <td>".$row['INTERVIEW_AVG']."</td>
-                                 <td>".$row['TOTALPOINTS']."</td>
+                          <td>".$row['VALUE']."</td>
+                           <td>".$row['EQUIVALENT_POINTS']."</td>
+                            <td>".$row['TOTALPOINTS']."</td>
+                             <td>".$status."</td>
+                          
                          
                   
 
@@ -147,13 +119,29 @@
 <?php include 'includes/scripts.php'; ?>
 <script>
 $(function(){
-    $('#ranking').click(function(e){
-    e.preventDefault();
-    $('#rankForm').attr('action', '../credentials/model_printables.php');
-    $('#rankForm').submit();
+   $('#select_year').change(function(){
+    window.location.href = 'home.php?year='+$(this).val();
   });
-  $('#select_year').change(function(){
-    window.location.href = 'ranking.php?year='+$(this).val();
+
+   $('#recalibrate').click(function(e){
+    e.preventDefault();
+              var value = $("#example1").map(function() {
+              var $tr = $(this);
+              var id = $tr.find("td:nth-child(6)").text();
+              return id;
+              }).toArray();
+
+              var uid = $("#example1").map(function() {
+              var $tr = $(this);
+              var id = $tr.find("td:nth-child(2)").text();
+              return id;
+              }).toArray();
+
+
+              alert(uid+value);
+
+
+                 
   });
 
    

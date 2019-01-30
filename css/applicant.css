@@ -413,7 +413,15 @@ body {
 								height: 100%;
 								border: none;
 							}
-
+							.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-input select{
+										float: left;
+										width: 98%;
+										height: 43px;
+										border: none;
+										padding-left: 2%;
+										font-family: 'Century Gothic';
+										font-size: 80%;
+									}
 								.pds-pi-table .one-three:nth-child(2) .pi-row .pi-row-input input:focus {
 									outline: none;
 								}
@@ -597,6 +605,7 @@ body {
 										font-family: 'Century Gothic';
 										font-size: 80%;
 									}
+
 
 									.pds-pi-table .one-three:last-child .pi-row:first-child .pi-row-input .radio-input:nth-child(6) select:focus {
 										outline: none;

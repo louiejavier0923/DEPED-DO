@@ -26,6 +26,10 @@ $(function(){
 	$('.pds_agencyemployee').keyup(function(e){
 		$(this).val($(this).val().replace(/(\d{3})\-?(\d{4})/,'$1-$2'));
 	});
+	$('.pds_telno').keyup(function(e){
+		$(this).val($(this).val().replace(/(\d{3})\-?(\d{4})/,'$1-$2'));
+	});
+
 	
 	/* $(".pds_pagibigno").keyup(function (e) {
       if($(this).val().length === 14) return;
@@ -116,6 +120,136 @@ $(function(){
 	
 	}
 	
+ $( ".pds_surname" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+ $( ".pds_firstname" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+  $( ".pds_nameextension" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+   $( ".pds_middlename" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+   	$(".pds_height").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   		$(".pds_weight").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   			$(".pds_pagibigno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   				$(".pds_gsisno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   					$(".pds_philhealthno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   						$(".pds_sssno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   	$(".pds_tinno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   		$(".pds_agencyemployee").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   			$(".pds_telno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+	$(".pds_mobileno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+
+	$(".pds_pzipcode").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+
+$(".pds_rzipcode").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+
+
+
+
+
+
+
+
 	$('.edit_pds').click(function(){
 	error = checking();
 	//window.location.href="application.php";

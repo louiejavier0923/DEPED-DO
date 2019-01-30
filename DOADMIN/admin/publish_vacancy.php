@@ -87,7 +87,7 @@
                 </thead>
                 <tbody>
                   <?php
-                    $sql = "SELECT * FROM publish_vacancy WHERE isActive = '1'";
+                    $sql = "SELECT * FROM publish_vacancy WHERE isActive = '1' and APP_ISSET = '0'";
 
 
 
@@ -255,7 +255,7 @@ $(function(){
 $( "#itemno ").keydown(function  (e){
     var itemno = $("#itemno").val();
     var qwe = $("#itemno").val().length;
-    if(qwe == 4 || qwe == 9){
+    if(qwe == 4 || qwe == 10){
     var s = itemno + "-";
     $("#itemno").val(s);
     }
@@ -292,7 +292,7 @@ $( "#itemno ").keydown(function  (e){
      //if the letter is not digit then display error and don't type anything
      if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
         //display error message
-        alert("Numbers only!");
+    
                return false;
     }
    });
@@ -300,7 +300,7 @@ $( "#itemno ").keydown(function  (e){
      //if the letter is not digit then display error and don't type anything
      if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
         //display error message
-        alert("Numbers only!");
+     
                return false;
     }
    });

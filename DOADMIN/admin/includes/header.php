@@ -2,11 +2,12 @@
 <html>
 <head>
   	<meta charset="utf-8">
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 
  <link rel ="icon" href="../../img/logo.png">
        	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<title>DIVISION OFFICE</title>
-  	<!-- Tell the browser to be responsive to screen width -->
+  	<!-- Tell the browser to be responsive to screen width --> 
   	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   	<!-- Bootstrap 3.3.7 -->
   	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -78,4 +79,71 @@
         
       }
   	</style>
+    <script>
+  $(function(){
+  $("#admin_save").click(function(){
+  var user = $("#username").val();
+  var pass = $("#password").val();
+  var fn = $("#firstname").val();
+  var ln = $("#lastname").val();
+  var cpass = $("#curr_password").val();
+  var admin_pass = $("#admin_pass").val();
+  var id = $("#admin_id").val();
+
+
+
+      var file_data = $('#photo').prop('files')[0];         
+      var form_data = new FormData();
+
+          $.ajax({
+        type: 'POST',
+        url: '../credentials/admin_img_upload.php',
+        data: form_data,
+        dataType: 'json',
+        success: function(response){
+        
+            alert(response.message);
+          
+          
+        }
+      });
+    /*
+    $.ajax({
+        type: 'POST',
+        url: '../credentials/model.php',
+        data: {action:'edit_admin', id:id, ln:ln, fn:fn, user:user, pass:pass},
+        dataType: 'json',
+        success: function(response){
+          if(response.confirm==='success'){
+            alert("Update Success!");
+            $("#profile").modal("hide");
+
+          }else{
+            alert('e');
+          }
+          
+        }
+      });
+      */
+   
+
+
+
+
+});
+ $( "#firstname" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+ $( "#lastname" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+});
+
+    </script>
 </head>

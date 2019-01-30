@@ -15,7 +15,7 @@
 			<div class= "line"></div>
 			<section class= "application-nav">
 				<p class= "success">1</p>
-				<p class= "current">2</p>
+				<p class= "success">2</p>
 				<p>3</p>
 			</section>
 			<section class= "application-content">
