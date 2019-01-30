@@ -20,6 +20,9 @@ $(function(){
 	$('.pds_tinno').keyup(function(){
 		$(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3-$4'))
 	});
+	$('.pds_agencyemployee').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{3})\-?(\d{4})/,'$1-$2'))
+	});
 	
 	/* $(".pds_pagibigno").keyup(function (e) {
       if($(this).val().length === 14) return;
