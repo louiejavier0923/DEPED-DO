@@ -1300,6 +1300,7 @@
 		<?php include '../include/applicant-choosefile-modal.php';?>
 		<?php include '../include/applicant-pds-modal.php';?>
 		<?php include '../include/applicant-files-modal.php';?>
+		<?php include '../include/error-message-modal.php';?>
 	</body>
 	<script type="text/javascript" src="../jsp/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../jsp/pds-function.js"></script>
