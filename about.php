@@ -269,5 +269,6 @@
         <section class= "modal-login-register" id= "modal-login-register">
         	<?php include 'include/login-register-modal.php';?>
         </section>
+		<?php include 'include/error-message-modal.php';?>
 	</body>
 </html>

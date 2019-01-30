@@ -344,6 +344,7 @@ $(document).ready(function() {
     var statusCont = document.getElementById('status-container');
     var logsCont = document.getElementById('logs-container');
     var updateImage = document.getElementById('change-image');
+    var errorMessage = document.getElementById('error-message');
 
     $('.fullname').attr('disabled', true);
     $('.new_password').attr('disabled', true);
@@ -419,6 +420,14 @@ $(document).ready(function() {
             else if (e.target == updateImage) {
                 updateImage.style.display= "none";
             }
+
+            else if (e.target == errorMessage) {
+                errorMessage.style.display= "none";
+            }
+        })
+
+        .on('click', '#closeErrorBtn', function() {
+            errorMessage.style.display= "none";
         })
             
         .on('click', '#accSettingBtn', function() {

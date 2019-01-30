@@ -74,6 +74,7 @@ if(isset($_SESSION['ADMIN'])){
 				</section>
 			</section>
 		</section>
+		<?php include 'include/error-message-modal.php';?>
 
 
 		 <script type="text/javascript">
