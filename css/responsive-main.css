@@ -5456,5 +5456,70 @@
 									}
 
 		/* == CONTACT US DESIGN ENDS HERE == */
+		/* ==  FAQS DESIGN == */
+
+		.body-container .body-faqs {
+			float: left;
+			width: 80%;
+			margin-left: 10%;
+		}
+
+			.body-faqs .body-faqs-container {
+				float: left;
+				width: 100%;
+				margin-bottom: 80px;
+			}
+
+				.body-faqs-container h1 {
+					float: left;
+					margin-right: 60%;
+					font-family: 'Gentona';
+					font-size: 190%;
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+				}
+
+				.body-faqs-container .line {
+					float: left;
+					width: 5%;
+					height: 5px;
+					background-color: rgb(4, 80, 140);
+					border-radius: 5px;
+					margin-bottom: 80px;
+					margin-right: 95%;
+				}
+
+				.body-faqs-container .faqs {
+					float: left;
+					width: 45%;
+					height: 570px;
+					display: inline-block;
+					background-color: rgb(250, 250, 250);
+					margin: 0px 2.5% 20px 2.5%;
+					padding: 20px 0px;
+					border-radius: 5px;
+					box-shadow: 5px 5px 10px -9px rgb(30, 30, 30);
+				}	
+
+					.faqs h2 {
+						float: left;
+						font-family: 'Gentona';
+						font-size: 140%;
+						text-transform: uppercase;
+						margin: 0px 5% 20px 5%;
+						color: rgb(90, 90, 90);
+					}
+
+					.faqs ul {
+						width: 80%;
+						display: inline-block;
+						margin-left: 10%;
+					}
+
+					.faqs ul li {
+						font-size: 90%;
+					}
+
+		/* == FAQS DESIGN ENDS HERE == */
 	/* == BODY CONTAINER DESIGN ENDS HERE == */
 }
