@@ -108,6 +108,7 @@ iPad 3
 				color: rgb(0, 0, 255);
 				text-decoration: underline;
 				margin-bottom: 20px;
+				cursor: pointer;
 			}
 
 			.applicant-header-profile h3 {
