@@ -39,7 +39,7 @@ switch ($_POST['action']) {
 	case 'get_published_vacancy':
 
 		$html = "";
-		$sql = "SELECT p.UID,p.TITLE,s.SCHOOL_NAME FROM publish_vacancy p JOIN schools s ON p.PLACE_ASSIGNMENT=s.SID WHERE PUBLICATION_DATE>CURRENT_DATE();";
+		$sql = "SELECT p.UID,p.TITLE,s.SCHOOL_NAME FROM publish_vacancy p JOIN schools s ON p.PLACE_ASSIGNMENT=s.SID WHERE PUBLICATION_DATE_UNTIL>CURRENT_DATE();";
 		$result = mysqli_query($conn,$sql);
 
 		while ($row = mysqli_fetch_assoc($result)) {

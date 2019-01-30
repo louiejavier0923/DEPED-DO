@@ -206,7 +206,7 @@ $id = $_SESSION['ID'];
 
 				<section class="submit">
 
-					<button>SAVE</button>
+					<button id="btn_save">SAVE</button>
 					
 				</section>
 
