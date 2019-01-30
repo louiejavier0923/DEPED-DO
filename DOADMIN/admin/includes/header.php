@@ -102,6 +102,22 @@
   }
   else if(admin_pass===cpass)
   {
+      var file_data = $('#photo').prop('files')[0];
+            
+         var form_data = new FormData();
+          $.ajax({
+        type: 'POST',
+        url: '../credentials/admin_img_upload.php',
+        data: form_data,
+        dataType: 'json',
+        success: function(response){
+        
+            alert('e');
+          
+          
+        }
+      });
+    /*
     $.ajax({
         type: 'POST',
         url: '../credentials/model.php',
@@ -118,6 +134,7 @@
           
         }
       });
+      */
    
   }
   else{
