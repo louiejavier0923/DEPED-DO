@@ -95,8 +95,8 @@ $(function(){
   });
 
    /*RETRIEVE SCHOOLS*/
-
-      $("#retrieve").click(function(e){
+$(document).on('click', '#retrieve', function(e){
+   
       e.preventDefault();
       var id = $("#d_id").val();
      $.ajax({
@@ -108,6 +108,8 @@ $(function(){
         alert(response.confirm);
      $('.alert-success').css("display","block").html(response.confirm);
      $('#delete').modal('hide');
+     
+     $("#reload").load(location.href + " #reload>*", "");
     }
   });
     });

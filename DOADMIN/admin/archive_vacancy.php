@@ -69,7 +69,7 @@
                           <td>".$row['SALARIES']."</td>
                           <td>".$row['ITEM_NO']."</td>
                           <td>
-                            <button class='btn btn-success btn-sm archive btn-flat' data-id='".$row['UID']."'><i class='fa fa-check'></i> Archive</button>
+                            <button class='btn btn-success btn-sm archive btn-flat' data-id='".$row['UID']."'><i class='fa fa-check'></i> Retrieve</button>
                           </td>
                         </tr>
                       ";
@@ -101,7 +101,8 @@ $(function(){
   });
 
   /*  ARCHIVE BUTTON*/
-  $("#retrieve_vacancy").click(function(e){
+  $(document).on('click', '#retrieve_vacancy', function(e){
+   
     e.preventDefault();
     var id = $("#id").val();
 

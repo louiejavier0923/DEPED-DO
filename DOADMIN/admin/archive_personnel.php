@@ -97,7 +97,8 @@ $(function(){
 
   });
 
-     $('#p_retrieve').click(function(e){
+     $(document).on('click', '#p_retrieve', function(e){
+   
       e.preventDefault();
     var id = $("#id").val();
      $.ajax({
