@@ -223,21 +223,20 @@
    	    /*INSERT*/
         case 'add_user':
             $output='';
-                     
+             $generatedKey = sha1(mt_rand(10000,99999).time());        
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $cpassword = $_POST['cpassword'];
-
+            $status = $_POST['status'];
             $sql="SELECT * from user where EMAIL='".$email."';";
             $result=mysqli_query($conn,$sql);
 
             if($result->num_rows > 0) {
-                $output='email already used';
+                $output='f';
             }
             else {
-                $sql=$conn->query("INSERT INTO user(UID,EMAIL,PWD, STATUS, IS_ONLINE)VALUES('TCH-0002','".$email."','".$password."','0','0')");
-                                      
-                $output='successful inserted';                      
+                    $sql=$conn->query("CALL `user`('".$email."', '".$password."','".$status."', '".$generatedKey."')");
+                                                                             
+                $output='s';                      
             }
 
             $data = array(    

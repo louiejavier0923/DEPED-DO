@@ -27,8 +27,7 @@
           <ul class="treeview-menu">
             <li><a href="users.php"><i class="fa fa-user"></i>User</a></li>
             <li><a href="personnel.php"><i class="fa fa-user"></i>Personnel</a></li>
-			<li><a href="personal_info.php"><i class="fa fa-user"></i>Personal Info.</a></li>
-			
+		
           </ul>
         </li>
         <li class="treeview">
@@ -60,7 +59,9 @@
           <ul class="treeview-menu">
             <li><a href="placement.php"><i class="fa fa-building"></i>Placement</a></li>
              <li><a href="appointments.php"><i class="fa fa-suitcase"></i>Appointment</a></li>
-                   <li><a href="recalibrate.php"><i class="fa fa-building"></i>Calibrate</a></li>
+             <li><a href="recalibrate.php"><i class="fa fa-building"></i>Calibrate</a></li>
+            <li><a href="personal_info.php"><i class="fa fa-user"></i>Personal Info.</a></li>
+      
           </ul>
         </li>
            <li class="treeview">
