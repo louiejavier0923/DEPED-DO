@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2019 at 07:33 PM
+-- Generation Time: Jan 30, 2019 at 07:40 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -56,6 +56,14 @@ INSERT INTO family_background(UID)VALUES(@THISUID);
 
 INSERT INTO other_info(UID)VALUES(@THISUID);
 
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `user`(IN `email` VARCHAR(255), IN `pwd` VARCHAR(255), IN `status_key` VARCHAR(255), IN `gen_key` VARCHAR(255))
+    NO SQL
+BEGIN
+SET @maxno = (SELECT MAX(NO)+1 FROM user);
+ SET @THISUID = (CONCAT("TCH-000",@maxno));
+insert into user(UID,EMAIL,PWD,STATUS,ACTIVATION_KEY,IS_ONLINE, ISACTIVE)VALUES(@THISUID,email,pwd,status_key,gen_key,'0','1');
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `view _ranking`()
