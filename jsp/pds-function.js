@@ -5,23 +5,26 @@ $(function(){
 	$(".radio-fields").change(function () {
 		$(this).css('background-color', "#ffffff");
 	});
+	$('input[type="date"]').change(function() {
+		$(this).css('background-color', "#ffffff");
+	});
 	$('.pds_gsisno').keyup(function(){
-		$(this).val($(this).val().replace(/(\d{4})\-?(\d{7})\-?(\d{1})/,'$1-$2-$3'))
+		$(this).val($(this).val().replace(/(\d{4})\-?(\d{7})\-?(\d{1})/,'$1-$2-$3'));
 	});
 	$('.pds_pagibigno').keyup(function(){
-		$(this).val($(this).val().replace(/(\d{4})\-?(\d{4})\-?(\d{4})/,'$1-$2-$3'))
+		$(this).val($(this).val().replace(/(\d{4})\-?(\d{4})\-?(\d{4})/,'$1-$2-$3'));
 	});
 	$('.pds_philhealthno').keyup(function(){
-		$(this).val($(this).val().replace(/(\d{2})\-?(\d{9})\-?(\d{1})/,'$1-$2-$3'))
+		$(this).val($(this).val().replace(/(\d{2})\-?(\d{9})\-?(\d{1})/,'$1-$2-$3'));
 	});
 	$('.pds_sssno').keyup(function(){
-		$(this).val($(this).val().replace(/(\d{2})\-?(\d{7})\-?(\d{1})/,'$1-$2-$3'))
+		$(this).val($(this).val().replace(/(\d{2})\-?(\d{7})\-?(\d{1})/,'$1-$2-$3'));
 	});
-	$('.pds_tinno').keyup(function(){
-		$(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3-$4'))
+	$('.pds_tinno').keyup(function(e){
+		$(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3-$4'));
 	});
-	$('.pds_agencyemployee').keyup(function(){
-		$(this).val($(this).val().replace(/(\d{3})\-?(\d{4})/,'$1-$2'))
+	$('.pds_agencyemployee').keyup(function(e){
+		$(this).val($(this).val().replace(/(\d{3})\-?(\d{4})/,'$1-$2'));
 	});
 	
 	/* $(".pds_pagibigno").keyup(function (e) {
@@ -52,7 +55,7 @@ $(function(){
 			}else{
 				$(this).css('background-color', "#ffa0a0f7");
 			   
-			   $(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
+			   //$(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
 			   count++;
 			}
 		   
@@ -61,19 +64,19 @@ $(function(){
 	if($('input[name="Gender"]:checked').length === 0) {
 		str = $(".errors div").html();
 		$(".gender-fields").css('background-color', "#ffa0a0f7");
-		$(".errors div").html(str +(count == 0 ? '' :', ') +  'Gender' );
+		//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Gender' );
 		count++;
 	}
 	if($('input[name="Civil Status"]:checked').length === 0) {
 		str = $(".errors div").html();
 		$(".civilstat-fields").css('background-color', "#ffa0a0f7");
-		$(".errors div").html(str +(count == 0 ? '' :', ') +  'Civil Status' );
+		//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Civil Status' );
 		count++;
 	}
 	if($('input[name="Citizenship"]:checked').length === 0) {
 		str = $(".errors div").html();
 		$(".citizenship-fields").css('background-color', "#ffa0a0f7");
-		$(".errors div").html(str +(count == 0 ? '' :', ') +  'Citizenship' );
+		//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Citizenship' );
 		count++;
 	}
 	$('.spouse-fields input').each(function(){
@@ -84,7 +87,7 @@ $(function(){
 				
 				}else{
 				 $(this).css('background-color', "#ffa0a0f7");
-				$(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
+				//$(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
 				count++;
 			}
 			  
