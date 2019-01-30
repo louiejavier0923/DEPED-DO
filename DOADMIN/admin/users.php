@@ -49,11 +49,12 @@
                   <th>UID</th>
                   <th>EMAIL</th>
                   <th>STATUS</th>
+                  <th>TOOLS</th>
                 </thead>
                 <tbody>
 
                   <?php
-                    $sql = "SELECT * FROM user";
+                    $sql = "SELECT * FROM user WHERE ISACTIVE = '1'";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                   $status = ($row['STATUS'])?'<span class="label label-success pull-left">activate</span>':'<span class="label label-danger pull-right">not activate</span>';
@@ -81,15 +82,97 @@
       </div>
     </section>   
   </div>
-    
+  </div>  
 
   <?php include 'includes/footer.php'; ?>
  <?php include 'includes/users-modal.php'; ?>
-</div>
+
 <?php include 'includes/scripts.php'; ?>
 
 <script>
 $(function(){
+
+  /*DELETE BUTTON*/
+  $(document).on('click', '#archive', function(e) {
+    var id = $("#d_id").val();
+    $.ajax({
+    type: 'POST',
+    url: '../credentials/model.php',
+    data: {action:'archive_user',id:id},
+    dataType: 'json',
+    success: function(response){ 
+         $("#archive").modal("hide");  
+               setTimeout(function(){ $('.alert-danger').fadeOut() }, 3000);
+               $('.alert-success').css("display","block").html('Archive Success!');
+             $("#reload").load(location.href + " #reload>*", "");   
+    }
+  });
+
+  });
+ $(document).on('click', '.edit', function(e) {
+$("#edit").modal("show");
+  var id = $(this).attr("data-id");
+    $("#id").val(id);
+     $.ajax({
+    type: 'POST',
+    url: '../credentials/model.php',
+    data: {action:'get_user_id',id:id},
+    dataType: 'json',
+    success: function(response){ 
+       $('#edit_email').val(response.email);
+       $('#edit_pass').val(response.p_edit);
+        $('#edit_cpass').val(response.cp_edit);
+        
+    }
+  });
+
+
+
+});
+  $(document).on('click', '.delete', function(e) {
+    $("#archive").modal("show");
+    var id = $(this).attr("data-id");
+    $("#d_id").val(id);
+});
+
+  $("#edit_user").click(function(){
+    var email = $("#edit_email").val();
+    var pass = $("#edit_pass").val();
+    var status = $("#edit_status").val();
+    var cpass = $("#edit_cpass").val();
+    var id = $("#id").val();
+    if(email == "" || pass == "" ||  cpass == ""){
+                     setTimeout(function(){ $('#edit_error').fadeOut() }, 1500);
+                     $('#edit_error').css("display","block").html('Fill up all forms!');    
+
+    }else if (pass === cpass){
+
+     $.ajax({
+    
+    type: 'POST',
+    url: '../credentials/model.php',
+    data: {action:'edit_user',id:id , email:email, pass:pass, status:status},
+    dataType: 'json',
+    success: function(response){ 
+
+                    setTimeout(function(){ $('.alert-success').fadeOut() }, 1000);
+                    $("#edit").modal("hide");
+                     $('.alert-success').css("display","block").html('Edit Success!');  
+    }
+  });
+    }
+    else{
+                           setTimeout(function(){ $('#edit_error').fadeOut() }, 1500);
+                     $('#edit_error').css("display","block").html('Your password and confirm password dont match!');    
+
+    }
+
+
+
+
+
+  });  
+
    $('#submit-user').click(function(e){
     e.preventDefault();
         var email = $('#email').val();
@@ -97,10 +180,16 @@ $(function(){
           var cpassword = $('#cpassword').val();
           var status = $('#status').val();
  if(email == "" || password == "" || cpassword  == ""){
-
+                    setTimeout(function(){ $('#error').fadeOut() }, 1500);
                      $('#error').css("display","block").html('Fill up all forms!');    
-  }else{
-             add_user();
+  }else if (password === cpassword){
+            add_user();
+  }
+  else{
+
+                    setTimeout(function(){ $('#error').fadeOut() }, 1500);
+                     $('#error').css("display","block").html('Your password and confirm password dont match!');    
+ 
     
   }
   });
@@ -111,6 +200,9 @@ $(function(){
                    $("#cpassword").val("");
   
   });
+/*EDIT BUTTON*/
+  
+   /* function end */
 });
 
 

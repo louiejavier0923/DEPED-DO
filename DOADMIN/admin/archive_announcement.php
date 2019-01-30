@@ -45,7 +45,6 @@
               <table id="example1" class="table table-bordered">
                 <thead>
                   <th>NO</th>
-                  <th>UID</th>
                   <th>TITLE</th>
                   <th>DESCRIPTION</th>
                   <th>DATE POSTED</th>
@@ -59,13 +58,12 @@
                       echo "
                         <tr>
                           <td>".$row['NO']."</td>
-                          <td>".$row['UID']."</td>
                           <td>".$row['TITLE']."</td>
                           <td>".$row['DESCRIPTION']."</td>
                           <td>".$row['DATE_PUB']."</td>
 
                           <td>
-                            <button class='btn btn-success btn-sm archive btn-flat' data-id='".$row['UID']."'><i class='fa fa-check'></i> Retrieve</button>
+                            <button class='btn btn-success btn-sm archive btn-flat' data-id='".$row['NO']."'><i class='fa fa-check'></i> Retrieve</button>
                           </td>
                         </tr>
                       ";
@@ -98,7 +96,7 @@ $(function(){
   });
 
     /*ARCHIVE NEWS*/
-    $("#retrieve_announcement").click(function(e){
+    $(document).on('click', '#retrieve_announcement', function(e){
      e.preventDefault();
     var id = $("#id").val();
      $.ajax({

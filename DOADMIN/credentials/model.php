@@ -240,8 +240,8 @@
             /*SELECTION*/
    	       	case 'get_user_id':
                    $output='';
-                   $edit_status = '';
                    $id = $_POST['id'];
+                   $edit_status = '';
                     $sql="SELECT * from user where UID='".$id."';";
                          $result=mysqli_query($conn,$sql);
                           if($result->num_rows > 0) 
@@ -250,14 +250,11 @@
                                                   $email=$row["EMAIL"];
                                                   $password=$row["PWD"];
                                                   $status=$row["STATUS"];
-                                                  if ($status == '1')
-                                                  {
-                                                    $edit_status = "ACTIVATE";
-
+                                                  if($status == '1'){
+                                                    $edit_status = 'ACTIVATE';
                                                   }
-                                                  else if ($status == '0')
-                                                  {
-                                                    $edit_status = "NOT ACTIVATE";
+                                                  else {
+                                                    $edit_status = 'NOT ACTIVATE';
                                                   }
 
                                       }
@@ -759,7 +756,8 @@ echo json_encode($data);
                   $id = $_POST['id'];
                   $email = $_POST['email'];
                   $pass = $_POST['pass'];
-                       $sql="UPDATE user SET EMAIL = '".$email. "', PWD ='".$pass."'WHERE UID='".$id."';";
+                  $status = $_POST['status'];
+                       $sql="UPDATE user SET EMAIL = '".$email. "', PWD ='".$pass."', STATUS = '".$status."' WHERE UID='".$id."';";
                        $result=mysqli_query($conn,$sql);
                        $output = 'success';
               $data = array(    
@@ -843,8 +841,8 @@ echo json_encode($data);
 
 
                     case 'archive_user':
-                  $d_id = $_POST['d_id'];
-                       $sql="UPDATE user SET STATUS = '0' WHERE UID='".$d_id."';";
+                  $d_id = $_POST['id'];
+                       $sql="UPDATE user SET ISACTIVE = '0' WHERE UID='".$d_id."';";
                        $result=mysqli_query($conn,$sql);
 
 
@@ -874,7 +872,7 @@ echo json_encode($data);
 
                     case 'retrieve_user':
                   $r_id = $_POST['r_id'];
-                       $sql="UPDATE user SET STATUS = '1' WHERE UID='".$r_id."';";
+                       $sql="UPDATE user SET ISACTIVE = '1' WHERE UID='".$r_id."';";
                        $result=mysqli_query($conn,$sql);
 
 
@@ -972,7 +970,7 @@ echo json_encode($data);
                   $description = $_POST['description'];
                     $news_date = $_POST['news_date'];
                     
-                      $sql=$conn->query("INSERT INTO news(NO,UID,TITLE,DESCRIPTION,DATE_PUB,isActive)VALUES('','UID-0004','".$title."','".$description."' , '".$news_date."', '1')");
+                      $sql=$conn->query("INSERT INTO news(NO,TITLE,DESCRIPTION,DATE_PUB,isActive)VALUES('','".$title."','".$description."' , '".$news_date."', '1')");
                              $output='Successful inserted';
                     
 
@@ -1002,9 +1000,9 @@ echo json_encode($data);
                 break;
 
                 case 'get_news_id':
-                       $id = $_POST['id'];
+                       $id = $_POST['id'];  
 
-                              $sql="SELECT * from news where UID= '".$id."';";
+                              $sql="SELECT * from news where NO= '".$id."';";
                          $result=mysqli_query($conn,$sql);
                           if($result->num_rows > 0) 
                                {
@@ -1039,29 +1037,24 @@ echo json_encode($data);
               echo json_encode($data);
             break;
 
-             case 'edit_news':          
-                   $output='';
-                    $date=date("Y-m-d");
-                    $string_date = (string)$date;
-                    $e_id = $_POST['e_id'];
-                    $desc = $_POST['desc'];
-                    $title = $_POST['title'];
-                    $date_pub = $_POST['date_pub'];
-                       $sql="UPDATE news SET TITLE = '".$title."', DESCRIPTION = '".$desc."', DATE_PUB = '".$date_pub."'  WHERE UID ='".$e_id."';";
-                       $result=mysqli_query($conn,$sql);
+           
+                
+            case 'update_news':
+            $output = '';
+            $date = date("Y-m-d");
+            $string_date = (string)$date;
+            $id = $_POST['id'];
 
 
-                        $data = array(    
-                       'confirm' =>"Edit Success!",
-                                       
-            
-                    );
 
-  echo json_encode($data);
-                break;
+            $sql = "UPDATE news SET TITLE = '' WHERE NO = '2'";
+            $result=mysqli_query($conn,$sql);
+
+
+            break;
                     case 'archive_news':
                   $d_id = $_POST['d_id'];
-                       $sql="UPDATE news SET isActive = '0' WHERE UID='".$d_id."';";
+                       $sql="UPDATE news SET isActive = '0' WHERE NO='".$d_id."';";
                        $result=mysqli_query($conn,$sql);
 
 
@@ -1075,7 +1068,7 @@ echo json_encode($data);
                 break;
                     case 'retrieve_news':
                   $id = $_POST['id'];
-                       $sql="UPDATE news SET isActive = '1' WHERE UID='".$id."';";
+                       $sql="UPDATE news SET isActive = '1' WHERE NO='".$id."';";
                        $result=mysqli_query($conn,$sql);
 
 
@@ -1101,7 +1094,7 @@ echo json_encode($data);
                 $description = $_POST['description'];
                 $a_date = $_POST['a_date'];
                     
-                      $sql=$conn->query("INSERT INTO announcement(NO,UID,TITLE,DESCRIPTION,DATE_PUB,isActive)VALUES('','UID-0004','".$title."','".$description."' , '".$a_date."', '1')");
+                      $sql=$conn->query("INSERT INTO announcement(NO,TITLE,DESCRIPTION,DATE_PUB,isActive)VALUES('','".$title."','".$description."' , '".$a_date."', '1')");
                              $output='Successful inserted';
                     
 
@@ -1118,7 +1111,7 @@ echo json_encode($data);
   case 'get_a_id':
                        $id = $_POST['id'];
 
-                              $sql="SELECT * from announcement where UID= '".$id."';";
+                              $sql="SELECT * from announcement where NO= '".$id."';";
                          $result=mysqli_query($conn,$sql);
                           if($result->num_rows > 0) 
                                {
@@ -1158,7 +1151,28 @@ echo json_encode($data);
                     $desc = $_POST['desc'];
                     $title = $_POST['title'];
                     $date_pub = $_POST['date_pub'];
-                       $sql="UPDATE announcement SET TITLE = '".$title."', DESCRIPTION = '".$desc."', DATE_PUB = '".$date_pub."'  WHERE UID ='".$e_id."';";
+                       $sql="UPDATE announcement SET TITLE = '".$title."', DESCRIPTION = '".$desc."', DATE_PUB = '".$date_pub."'  WHERE NO ='".$e_id."';";
+                       $result=mysqli_query($conn,$sql);
+
+                             $data = array(    
+                       'confirm' =>"Editing Success!",
+                                       
+            
+                    );
+
+                  echo json_encode($data);
+                break;
+
+                case 'edit_news':          
+                   $output='';
+                    $date=date("Y-m-d");
+                    $string_date = (string)$date;
+                    $e_id = $_POST['e_id'];
+
+                    $desc = $_POST['desc'];
+                    $title = $_POST['title'];
+                    $date_pub = $_POST['date_pub'];
+                       $sql="UPDATE news SET TITLE = '".$title."', DESCRIPTION = '".$desc."', DATE_PUB = '".$date_pub."'  WHERE NO ='".$e_id."';";
                        $result=mysqli_query($conn,$sql);
 
                              $data = array(    
@@ -1172,7 +1186,7 @@ echo json_encode($data);
 
                  case 'archive_announcement':
                   $d_id = $_POST['d_id'];
-                       $sql="UPDATE announcement SET isActive = '0' WHERE UID='".$d_id."';";
+                       $sql="UPDATE announcement SET isActive = '0' WHERE NO='".$d_id."';";
                        $result=mysqli_query($conn,$sql);
 
 
@@ -1188,7 +1202,7 @@ echo json_encode($data);
 
                     case 'retrieve_announcement':
                   $id = $_POST['id'];
-                  $sql="UPDATE announcement SET isActive = '1' WHERE UID='".$id."';";
+                  $sql="UPDATE announcement SET isActive = '1' WHERE NO='".$id."';";
                       $result=mysqli_query($conn,$sql);
                      
                         $data = array(    

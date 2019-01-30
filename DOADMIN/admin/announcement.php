@@ -76,7 +76,6 @@
               <table id="example1" class="table table-bordered">
                 <thead>
                   <th>NO</th>
-                  <th>UID</th>
                   <th>TITLE</th>
                   <th>DESCRIPTION</th>
                   <th>DATE POSTED</th>
@@ -90,14 +89,13 @@
                       echo "
                         <tr>
                           <td>".$row['NO']."</td>
-                          <td>".$row['UID']."</td>
                           <td>".$row['TITLE']."</td>
                           <td>".$row['DESCRIPTION']."</td>
                           <td>".$row['DATE_PUB']."</td>
 
                           <td>
-                            <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['UID']."'><i class='fa fa-edit'></i> Edit</button>
-                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['UID']."'><i class='fa fa-archive'></i> Archive</button>
+                            <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['NO']."'><i class='fa fa-edit'></i> Edit</button>
+                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['NO']."'><i class='fa fa-archive'></i> Archive</button>
                           </td>
                         </tr>
                       ";
