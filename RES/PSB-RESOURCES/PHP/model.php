@@ -29,7 +29,7 @@ switch ($_POST['action']) {
 		$result = mysqli_query($conn,$sql);
 		while ($row = mysqli_fetch_assoc($result)) {
 			$data[0] = $row['NO'];
-			$data[1] = $row['FIRSTNAME'].' '.substr($row['MIDDLENAME'],0,1).'. '.$row['LASTNAME'].' - PERSONNEL';
+			$data[1] = $row['FIRSTNAME'].' '.substr($row['MIDDLENAME'],0,1).'. '.$row['LASTNAME'].' - PERSONNEL SELECTION BOARD';
 		}
 
 		print_r(json_encode($data));
