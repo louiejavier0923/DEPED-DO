@@ -343,6 +343,7 @@ $(document).ready(function() {
     var fileModal = document.getElementById('file-modal');
     var statusCont = document.getElementById('status-container');
     var logsCont = document.getElementById('logs-container');
+    var updateImage = document.getElementById('change-image');
 
     $('.fullname').attr('disabled', true);
     $('.new_password').attr('disabled', true);
@@ -375,6 +376,14 @@ $(document).ready(function() {
             }
         })
 
+        .on('click', '#closeImageBtn', function() {
+            updateImage.style.display= "none";
+        })
+        
+        .on('click', '#updatePicBtn', function (){
+            updateImage.style.display= "block";
+        })
+
         .on('click', '#doneBtn', function() {
             window.location.href= "finish.php";
         })
@@ -405,6 +414,10 @@ $(document).ready(function() {
 
             else if (e.target == fileModal) {
               fileModal.style.display= "none";
+            }
+
+            else if (e.target == updateImage) {
+                updateImage.style.display= "none";
             }
         })
             
