@@ -457,6 +457,23 @@ $(document).ready(function() {
         })
 
         .on('click', '#okFileBtn', function () {
+                 var file_data = $('#applicantfile').prop('files')[0];         
+                   var form_data = new FormData();
+                   form_data.append('file',file_data);
+
+        $.ajax({
+                    url:'../DOADMIN/credentials/upload_files.php',
+                    dataType:'text',
+                    cache:false,
+                    contentType:false,
+                    processData:false,
+                    data:form_data,
+                    type:'post'
+                }).done(function(output_img){
+                    // alert(output_img);
+                     
+                            
+                });
             attachFileModal.style.display= "none";
         })
 
@@ -561,25 +578,7 @@ $(document).ready(function() {
     })
         })
 
-         $('#okFileBtn').click(function() {         
-                   var file_data = $('#applicantfile').prop('files')[0];         
-                   var form_data = new FormData();
-                   form_data.append('file',file_data);
-
-        $.ajax({
-                    url:'../credentials/admin_img_upload.php',
-                    dataType:'text',
-                    cache:false,
-                    contentType:false,
-                    processData:false,
-                    data:form_data,
-                    type:'post'
-                }).done(function(output_img){
-                    // alert(output_img);
-                     
-                            
-                });
-        });
+       
         $('#submit_login_btn').click(function() {			
             login();
         });
