@@ -400,6 +400,13 @@ $(document).ready(function(){
 	})
 	.on('click','.logout-no',function(){
 		$('body .message').remove();
+	})
+	.on('keypress','.input-grade,.input-gwa,.experience-months,.eligibility-rating,.interview-rating,.demo-rating,.comm-rating',function(e){
+		if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
+			//display error message
+		 
+				   return false;
+		}
 	});
 
 	// console.log(communicationPoints(98))
