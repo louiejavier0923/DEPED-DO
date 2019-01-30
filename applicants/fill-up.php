@@ -1293,6 +1293,7 @@
 			</section>
 		</section>
 		<?php include '../include/user-info-modal.php';?>
+		<?php include '../include/applicant-image-modal.php';?>
 		<?php include '../include/applicant-attach-modal.php';?>
 		<?php include '../include/applicant-choosefile-modal.php';?>
 		<?php include '../include/applicant-pds-modal.php';?>

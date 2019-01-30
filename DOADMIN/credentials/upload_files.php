@@ -1,5 +1,5 @@
 <?php
-             $output='';
+           
     if($_FILES['file']['error'] > 0){
    
     }

@@ -3,7 +3,7 @@
 		<h2>Seminars</h2>
 		<div class= "line"></div>
 		<section class= "input-file">
-			<input type= "file" multiple= "multiple">
+			<input type= "file" multiple= "multiple" id="applicantfile" name="applicantfile">
 			<label>Bring this files on the day of your evaluation as your proof.</label>
 		</section>
 		<section class= "input-button">
