@@ -1,413 +1,49 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-	/* == APPLICANT`S HEADER CONTAINER == */
-
-	.applicant-header-container {
-		float: left;
-		position: fixed;
-		width: 18%;
-		height: 100%;
-		border-right: solid 1px rgb(240, 240, 240);
-		background-color: rgb(250, 250, 250);
-		overflow-y: auto;
-	}
-
-		.applicant-header-container .applicant-header-profile {
-			float: left;
-			width: 100%;
-			border-bottom: solid 1px rgb(200, 200, 200);	
-			border-top: solid 4px rgb(4, 80, 140);
-			background-color: rgb(250, 250, 250);
-		}
-
-			.applicant-header-profile a {
-				float: right;
-				margin: 5px 5% 20px 95%;
-				color: rgb(90, 90, 90);
-				font-size: 130%;
-				transition: all 0.2s ease-in-out;
-			}
-
-			.applicant-header-profile a:hover {
-				transform: scale(1.1, 1.1);
-				transition: all 0.2s ease-in-out;
-			}
-
-			.applicant-header-profile #rank {
-				float: left;
-				font-size: 70%;
-				color: rgb(150, 150, 150);
-				margin: 0px 45% 5px 5%;
-			}
-
-				.applicant-header-profile #rank span {
-					font-weight: bold;
-					text-transform: uppercase;
-				}
-
-			.applicant-header-profile img {
-				float: left;
-				width: 60%;
-				height: 130px;
-				margin: 10px 20% 20px 20%;
-				border-radius: 100%;
-				overflow: hidden;
-			}
-
-			.applicant-header-profile h3 {
-				float: left;
-				width: 95%;
-				margin-left: 5%;
-				font-size: 90%;
-				color: rgb(50, 50, 50);
-			}
-
-			.applicant-header-profile #position {
-				float: left;
-				font-size: 70%;
-				color: rgb(150, 150, 150);
-				margin: 0px 45% 20px 5%;
-			}
-
-		.applicant-header-container .applicant-header-nav {
-			float: left;
-			width: 100%;
-		}
-
-			.applicant-header-nav a {
-				float: left;
-				width: 95%;
-				line-height: 50px;
-				text-decoration: none;
-				text-transform: uppercase;
-				text-align: right;
-				font-family: 'Century Gothic';
-				font-size: 70%;
-				color: rgb(100, 100, 100);
-				border-bottom: solid 1px rgb(240, 240, 240);
-				padding-right: 5%;
-				transition: all 0.2s ease-in-out;
-			}
-
-				.applicant-header-nav a:hover {
-					padding-top: 30px;
-					background-color: rgb(4, 80, 140);
-					color: rgb(255, 255, 255);
-					font-weight: bold;
-					transition: all 0.2s ease-in-out;
-				}
-
-	/* == APPLICANT`S HEADER CONTAINER ENDS HERE == */
-} 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-	/* == APPLICANT`S HEADER CONTAINER == */
-
-	.applicant-header-container {
-		float: left;
-		position: fixed;
-		width: 18%;
-		height: 100%;
-		border-right: solid 1px rgb(240, 240, 240);
-		background-color: rgb(250, 250, 250);
-		overflow-y: auto;
-	}
-
-		.applicant-header-container .applicant-header-profile {
-			float: left;
-			width: 100%;
-			border-bottom: solid 1px rgb(200, 200, 200);	
-			border-top: solid 4px rgb(4, 80, 140);
-			background-color: rgb(250, 250, 250);
-		}
-
-			.applicant-header-profile a {
-				float: right;
-				margin: 5px 5% 20px 95%;
-				color: rgb(90, 90, 90);
-				font-size: 130%;
-				transition: all 0.2s ease-in-out;
-			}
-
-			.applicant-header-profile a:hover {
-				transform: scale(1.1, 1.1);
-				transition: all 0.2s ease-in-out;
-			}
-
-			.applicant-header-profile #rank {
-				float: left;
-				font-size: 70%;
-				color: rgb(150, 150, 150);
-				margin: 0px 45% 5px 5%;
-			}
-
-				.applicant-header-profile #rank span {
-					font-weight: bold;
-					text-transform: uppercase;
-				}
-
-			.applicant-header-profile img {
-				float: left;
-				width: 60%;
-				height: 130px;
-				margin: 10px 20% 20px 20%;
-				border-radius: 100%;
-				overflow: hidden;
-			}
-
-			.applicant-header-profile h3 {
-				float: left;
-				width: 95%;
-				margin-left: 5%;
-				font-size: 90%;
-				color: rgb(50, 50, 50);
-			}
-
-			.applicant-header-profile #position {
-				float: left;
-				font-size: 70%;
-				color: rgb(150, 150, 150);
-				margin: 0px 45% 20px 5%;
-			}
-
-		.applicant-header-container .applicant-header-nav {
-			float: left;
-			width: 100%;
-		}
-
-			.applicant-header-nav a {
-				float: left;
-				width: 95%;
-				line-height: 50px;
-				text-decoration: none;
-				text-transform: uppercase;
-				text-align: right;
-				font-family: 'Century Gothic';
-				font-size: 70%;
-				color: rgb(100, 100, 100);
-				border-bottom: solid 1px rgb(240, 240, 240);
-				padding-right: 5%;
-				transition: all 0.2s ease-in-out;
-			}
-
-				.applicant-header-nav a:hover {
-					padding-top: 30px;
-					background-color: rgb(4, 80, 140);
-					color: rgb(255, 255, 255);
-					font-weight: bold;
-					transition: all 0.2s ease-in-out;
-				}
-
-	/* == APPLICANT`S HEADER CONTAINER ENDS HERE == */
-} 
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-	/* == APPLICANT`S HEADER CONTAINER == */
-
-	.applicant-header-container {
-		float: left;
-		position: fixed;
-		width: 18%;
-		height: 100%;
-		border-right: solid 1px rgb(240, 240, 240);
-		background-color: rgb(250, 250, 250);
-		overflow-y: auto;
-	}
-
-		.applicant-header-container .applicant-header-profile {
-			float: left;
-			width: 100%;
-			border-bottom: solid 1px rgb(200, 200, 200);	
-			border-top: solid 4px rgb(4, 80, 140);
-			background-color: rgb(250, 250, 250);
-		}
-
-			.applicant-header-profile a {
-				float: right;
-				margin: 5px 5% 20px 95%;
-				color: rgb(90, 90, 90);
-				font-size: 130%;
-				transition: all 0.2s ease-in-out;
-			}
-
-			.applicant-header-profile a:hover {
-				transform: scale(1.1, 1.1);
-				transition: all 0.2s ease-in-out;
-			}
-
-			.applicant-header-profile #rank {
-				float: left;
-				font-size: 70%;
-				color: rgb(150, 150, 150);
-				margin: 0px 45% 5px 5%;
-			}
-
-				.applicant-header-profile #rank span {
-					font-weight: bold;
-					text-transform: uppercase;
-				}
-
-			.applicant-header-profile img {
-				float: left;
-				width: 60%;
-				height: 130px;
-				margin: 10px 20% 20px 20%;
-				border-radius: 100%;
-				overflow: hidden;
-			}
-
-			.applicant-header-profile h3 {
-				float: left;
-				width: 95%;
-				margin-left: 5%;
-				font-size: 90%;
-				color: rgb(50, 50, 50);
-			}
-
-			.applicant-header-profile #position {
-				float: left;
-				font-size: 70%;
-				color: rgb(150, 150, 150);
-				margin: 0px 45% 20px 5%;
-			}
-
-		.applicant-header-container .applicant-header-nav {
-			float: left;
-			width: 100%;
-		}
-
-			.applicant-header-nav a {
-				float: left;
-				width: 95%;
-				line-height: 50px;
-				text-decoration: none;
-				text-transform: uppercase;
-				text-align: right;
-				font-family: 'Century Gothic';
-				font-size: 70%;
-				color: rgb(100, 100, 100);
-				border-bottom: solid 1px rgb(240, 240, 240);
-				padding-right: 5%;
-				transition: all 0.2s ease-in-out;
-			}
-
-				.applicant-header-nav a:hover {
-					padding-top: 30px;
-					background-color: rgb(4, 80, 140);
-					color: rgb(255, 255, 255);
-					font-weight: bold;
-					transition: all 0.2s ease-in-out;
-				}
-
-	/* == APPLICANT`S HEADER CONTAINER ENDS HERE == */
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-	/* == APPLICANT`S HEADER CONTAINER == */
-
-	.applicant-header-container {
-		float: left;
-		position: fixed;
-		width: 18%;
-		height: 100%;
-		border-right: solid 1px rgb(240, 240, 240);
-		background-color: rgb(250, 250, 250);
-	}
-
-		.applicant-header-container .applicant-header-profile {
-			float: left;
-			width: 100%;
-			border-bottom: solid 1px rgb(200, 200, 200);	
-			border-top: solid 4px rgb(4, 80, 140);
-			background-color: rgb(250, 250, 250);
-		}
-
-			.applicant-header-profile a {
-				float: right;
-				margin: 5px 5% 20px 95%;
-				color: rgb(90, 90, 90);
-				font-size: 130%;
-				transition: all 0.2s ease-in-out;
-			}
-
-			.applicant-header-profile a:hover {
-				transform: scale(1.1, 1.1);
-				transition: all 0.2s ease-in-out;
-			}
-
-			.applicant-header-profile #rank {
-				float: left;
-				font-size: 60%;
-				color: rgb(150, 150, 150);
-				margin: 0px 40% 5px 5%;
-			}
-
-				.applicant-header-profile #rank span {
-					font-weight: bold;
-					text-transform: uppercase;
-				}
-
-			.applicant-header-profile img {
-				float: left;
-				width: 60%;
-				height: 100px;
-				margin: 10px 20% 20px 20%;
-				border-radius: 100%;
-				overflow: hidden;
-			}
-
-			.applicant-header-profile h3 {
-				float: left;
-				width: 95%;
-				margin-left: 5%;
-				font-size: 80%;
-				color: rgb(50, 50, 50);
-			}
-
-			.applicant-header-profile #position {
-				float: left;
-				font-size: 65%;
-				color: rgb(150, 150, 150);
-				margin: 0px 45% 20px 5%;
-			}
-
-		.applicant-header-container .applicant-header-nav {
-			float: left;
-			width: 100%;
-			overflow-y: auto;
-		}
-
-			.applicant-header-nav a {
-				float: left;
-				width: 95%;
-				line-height: 40px;
-				text-decoration: none;
-				text-transform: uppercase;
-				text-align: right;
-				font-family: 'Century Gothic';
-				font-size: 65%;
-				color: rgb(100, 100, 100);
-				border-bottom: solid 1px rgb(240, 240, 240);
-				padding-right: 5%;
-				transition: all 0.2s ease-in-out;
-			}
-
-				.applicant-header-nav a:hover {
-					padding-top: 30px;
-					background-color: rgb(4, 80, 140);
-					color: rgb(255, 255, 255);
-					font-weight: bold;
-					transition: all 0.2s ease-in-out;
-				}
-
-	/* == APPLICANT`S HEADER CONTAINER ENDS HERE == */
-} 
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+	
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
 	/* == APPLICANT`S HEADER CONTAINER == */
 
 	.applicant-header-container {
@@ -462,6 +98,19 @@
 				overflow: hidden;
 			}
 
+			.applicant-header-profile #updatePicBtn {
+				float: left;
+				width: 100%;
+				margin: 0px;
+				font-size: 80%;
+				text-align: center;
+				margin-top: -15px;
+				color: rgb(0, 0, 255);
+				text-decoration: underline;
+				margin-bottom: 20px;
+				cursor: pointer;
+			}
+
 			.applicant-header-profile h3 {
 				float: left;
 				width: 95%;
@@ -506,4 +155,9 @@
 				}
 
 	/* == APPLICANT`S HEADER CONTAINER ENDS HERE == */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
 }
