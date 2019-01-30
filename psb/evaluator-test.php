@@ -213,6 +213,16 @@ $id = $_SESSION['ID'];
 			</section>
 
 		</section>
+<!-- 
+		<div class='message'>
+			<div class='message-inner'>
+				<div class='message-box'>
+					<div class='message-box-icon'><i class='fa fa-exclamation-circle'></i></div>
+					<div class='message-box-message'>You've entered an invalid value! Try again!</div>
+					<div class='message-box-btn'><button>Close</button></div>
+				</div>
+			</div>
+		</div> -->
 
 
 <!-- Custom Javascripts -->

@@ -56,6 +56,8 @@ $id = $_SESSION['ID'];
 				<a id="btn_training">Training</a>
 				<a id="btn_eligibility">Eligibility</a>
 				<a id="btn_interview">Interview</a>
+				<a id="btn_demo">Demo Teaching</a>
+				<a id="btn_comm">English Communication Skills</a>
 			</section>
 		</section>
 
