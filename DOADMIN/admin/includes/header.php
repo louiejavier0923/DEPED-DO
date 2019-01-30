@@ -94,19 +94,36 @@
 
       var file_data = $('#photo').prop('files')[0];         
       var form_data = new FormData();
+       form_data.append('file',file_data);
 
-          $.ajax({
-        type: 'POST',
-        url: '../credentials/admin_img_upload.php',
-        data: form_data,
-        dataType: 'json',
-        success: function(response){
-        
-            alert(response.message);
+        $.ajax({
+                    url:'../credentials/admin_img_upload.php',
+                    dataType:'text',
+                    cache:false,
+                    contentType:false,
+                    processData:false,
+                    data:form_data,
+                    type:'post'
+                }).done(function(output_img){
+                    // alert(output_img);
+                      $.ajax({
+                         type: 'POST',
+                            url: '../credentials/model.php',
+                            data: {action:'edit_admin', id:id, ln:ln, fn:fn, user:user, pass:pass,img:output_img},
+                            dataType: 'json',
+                              success: function(response){
+                              if(response.confirm==='success'){
+                                      alert("Update Success!");
+                                       $("#profile").modal("hide");
+
+                              }else{
+                                      alert('e');
+                                  }
           
-          
-        }
-      });
+                            }
+                     });
+                            
+                });
     /*
     $.ajax({
         type: 'POST',
