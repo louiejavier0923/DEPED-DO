@@ -1,0 +1,60 @@
+/* main css */
+@media screen and (max-width: 768px) {
+
+    .eval-user-info p {
+        width: 40%;
+    }
+    .eval-user-info #exit {
+        width: 15%;
+    }
+    .evaluation-form {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+    .evaluation-form .eval-title {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .evaluation-form .eval-options {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .eval-options a {
+        width: 33.33%;
+    }
+}
+
+/* evaluator css */
+@media screen and (max-width: 768px) {
+
+    .content-header .header:nth-child(3), .info-container .content:nth-child(3) {
+        display: none;
+    }
+    .info-container .content:first-child,.content-header .header:first-child {
+        width: 3%;
+    }
+    .content-header .header:nth-child(5), .info-container .content:nth-child(5) {
+        width: 12%;
+    }
+    .content-header .header:nth-child(6), .info-container .content:nth-child(6), .content-header .header:nth-child(7), .info-container .content:nth-child(7), .content-header .header:nth-child(8), .info-container .content:nth-child(8), .content-header .header:nth-child(10), .info-container .content:nth-child(10), .content-header .header:nth-child(11), .info-container .content:nth-child(11), .content-header .header:nth-child(12), .info-container .content:nth-child(12) {
+        width: 12%;
+    }
+    .content-header .header:nth-child(4), .info-container .content:nth-child(4) {
+        width: 12%;
+    }
+    .content-header .header:nth-child(4) p {
+        margin-top: 2px;
+    }
+    .evaluation-form .eval-info {
+        width: calc(100% - 8px);
+        height: calc(100% - 16px);
+        margin: 8px 4px 8px 4px;
+    }
+    .eval-info-content .content-info {
+        width: calc(100% + 17px);
+        height: calc(100% - 40px);
+        overflow: hidden;
+    }
+
+}
