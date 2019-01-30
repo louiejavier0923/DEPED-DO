@@ -265,14 +265,12 @@ $( "#itemno ").keydown(function  (e){
  $( "#title" ).keypress(function(e) {
                     var key = e.keyCode;
                     if (key >= 48 && key <= 57) {
-                    alert("Alphabet letters only!");
                         e.preventDefault();
                     }
                 });
  $( "#edit_title" ).keypress(function(e) {
                     var key = e.keyCode;
                     if (key >= 48 && key <= 57) {
-                    alert("Alphabet letters only!");
                         e.preventDefault();
                     }
                 });
@@ -281,14 +279,12 @@ $( "#itemno ").keydown(function  (e){
  $( "#noi" ).keypress(function(e) {
                     var key = e.keyCode;
                     if (key >= 48 && key <= 57) {
-                    alert("Alphabet letters only!");
                         e.preventDefault();
                     }
                 });
   $( "#edit_noi" ).keypress(function(e) {
                     var key = e.keyCode;
                     if (key >= 48 && key <= 57) {
-                    alert("Alphabet letters only!");
                         e.preventDefault();
                     }
                 });

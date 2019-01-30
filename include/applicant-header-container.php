@@ -11,6 +11,6 @@
 	<a href= "about.php" class= "applicantNav" id= "aboutBtn">About Us</a>
 	<a href= "download.php" class= "applicantNav" id= "downloadBtn">Downloadable Forms</a>
 	<a href= "contact.php" class= "applicantNav" id= "contactBtn">Contact Us</a>
-	<a href= "application.php" class= "applicantNav" id= "applyBtn">APPLY NOW!</a>
+	<a href= "fill-up.php" class= "applicantNav" id= "applyBtn">APPLY NOW!</a>
 	<a href= "logs.php" class= "applicantNav" id= "logsBtn">Logs</a>
 </section>

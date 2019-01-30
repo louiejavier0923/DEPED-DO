@@ -20,10 +20,12 @@
                 if($result->num_rows > 0) {
                       $output='you already applied for this position';
                 } 
-                else{
+                else{ 
+                            $sql = "INSERT INTO application (UID,PID,STATUS,DATE,IS_CALIBRATED)VALUES ('".$user['UID']."', '".$vacant_no."', '0',CURRENT_DATE(), '0');";
+                                                   $query = mysqli_query($conn, $sql);
                 
-                     $sql = "INSERT INTO application (UID,PID,STATUS,DATE,IS_CALIBRATED)VALUES ('".$user['UID']."', '".$vacant_no."', '0',CURRENT_DATE(), '0');";
-                      $query = mysqli_query($conn, $sql);
+                         
+                  
                         
                        // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
                                            $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -47,132 +49,19 @@
                                         
                                            //Content
                                            $mail->isHTML(true);                                  // Set email format to HTML
-                                           $mail->Subject = 'Here is the subject';
-                                           $mail->Body    = "<p>Nueva Ecija St., Bago Bantay, Quezon City
-
-                                                              www.depedqc.ph
-
-
-September 17, 2018
-
-(Date)
-MS. MARECRIS M. ABLAN
-
-#179 FFF Extension Brgy. Culiat,
-
-Quezon City
-
-Dear Sir/ Madam
-
-Please be informed that you have been considered for employment in this Division as Division OfficeNEQC
-
-division office
-
-Permanent Teacher I at Manuel Roxas High School
-
-vice MS. Lisa P. Soriano, Transferred to Division Of Nueva Ecija
-
-Date of Publication 6/26/18
-
-division office
-
-In view hereof, you are requested to submit to the Head, Personnel Services Section the following
-
-pertinent documents to facilitate the preparation of your appointment on or before October 4. 2018
-
-1. Call-up Letter
-
-- 2 xeroxed copies
-
-2. From No. 212 - Duly accomplished Personal Data Sheet, revised 2017
-
-- w/ latest picture passport size while background with name tag & signiture
-
-- Attachment of CS Form No. 212
-
-- 5 copies
-
-3. P.R.C. License & Report of Rating (Aithenticated copy from PRC)
-
-- 1 original copy &
-
-- 3 certified xeroxed copies
-
-4. DBM-CSC Form No. 1 - Duly accomplished Position Description
-
-Form, revised 2017
-
-- 4 copies
-
-5. Transcript of Records
-
-- 2 certified xeroxed copies
-
-6. CS Form No. 211 - Medical Certificate, revised 2018
-
-with copies of laboratory results
-
-- 2 copies (Original & xeroxed)
-
-7. Sworn Statement of Assets and Liabilities, revised 2015
-
-- 4 copies
-
-8. NBI Clearance (Original & xeroxed)
-
-- 2 copies (Original & xeroxed)
-
-9. TIN and PhilHealth Number (to indicate on Form 212/PDS)
-
-10. Certificate of Live Birth from PSA or LCR (certified copy)
-
-- 2 copies
-
-11. Marriage Contract/Certificate if married (certified copy)
-
-- 2 copies
-
-Additional papers to be submitted after Assumptions of Duty
-
-12. CS Form No. 4 - Certification of Assumption to Duty, revised 2018
-
-- 5 copies
-
-13. CS Form No. 32 - Oath of Office, revised 2018
-
-- 5 copies
-
-Truly yours,
-
-ELIZABETH E. QUESEDA, CESO V
-
-Schools Division Superintendent
-IMPORTANT NOTE:
-
-SECTION 4 ITEM #4.2, DEPED ORDER #7, s. 2015
-
-'' NO TRANSFER TO ANOTHER SCHOOL UNTIL AFTER RENDERING
-
-AT LEAST THREE (3) YEARS OF SERVICE IN PRESENT SCHOOL. '
-
-PLEASE REPORT TO YOUR ASSIGNED SCHOOL UPON ISSUANCE OF YOUR
-
-APPOINTMENT FROM THE PERSONNEL SECTION.
-
-P/ayee</p>";
+                                           $mail->Subject = 'APPLICATION';
+                                           $mail->Body    = "<p>Verifyin application<p>";
 
                                            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
                                        
                                          
                             
                                            if($mail->Send()) {
-                                                  $sql = "INSERT INTO application (UID,PID,STATUS,DATE,IS_CALIBRATED)VALUES ('".$user['UID']."', '".$vacant_no."', '0',CURRENT_DATE(), '0');";
-                                                   $query = mysqli_query($conn, $sql);
+
+                                                
                                                    $output="success";
                                           }
-                                          else{
-                                                     $output="failed";
-                                          }
+                                          
                 }
            
               $data = array(
@@ -256,12 +145,12 @@ P/ayee</p>";
             # code...
             $output='';
            
-            $sql = "SELECT MAX(b.UID) AS 'bUID',a.FIRSTNAME,a.LASTNAME,a.MIDDLENAME FROM view_rank a join  application b ON a.UID = b.UID WHERE STATUS='0' GROUP BY b.UID";
+            $sql = "SELECT MAX(b.UID) AS 'bUID',a.FIRSTNAME,a.LASTNAME,a.MIDDLENAME,a.TOTALPOINTS FROM view_rank a join  application b ON a.UID = b.UID WHERE a.TOTALPOINTS > 70 AND b.STATUS = '0'";
             $query = $conn->query($sql);
 
             while($row = $query->fetch_assoc()){                     
                 $output.="
-                                    <option  value=".$row['bUID'].">".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>                    
+                                    <option  value=".$row['bUID'].">".$row['LASTNAME'].''.$row['FIRSTNAME'].' '.$row['MIDDLENAME']."</option>                    
                                 ";
             }
 
@@ -300,16 +189,7 @@ P/ayee</p>";
 
         break;
                          
-                              $sql=$conn->query("CALL `insert_vacancy`('".$title."', '".$description."', '".$place."', '".$noi."', '".$date."', '".$expiration."', '".$status."', '".$salaries."', '".$itemno."')");
-                             $output='Successful inserted';
-
-
-
-   	       	        $data = array(	 	
-                       'message' => $output
-            
-         	             );
-
+                        
         case 'add_personnel':
             $output='';
             
@@ -344,8 +224,13 @@ P/ayee</p>";
             $salaries = $_POST['salaries'];
             $place = $_POST['place'];
 
-            $sql=$conn->query("INSERT INTO  publish_vacancy(UID,TITLE,DESCRIPTION,PLACE_ASSIGNMENT,NOI,PUBLICATION_DATE,PUBLICATION_DATE_UNTIL,STATUS,SALARIES,ITEM_NO,isActive)VALUES('PID-1005','".$title."','".$description."','".$place."','".$noi."','".$date."','".$expiration."','".$status."','".$salaries."','".$itemno."', '1')");
-            $output='Successful inserted';
+                 $sql=$conn->query("CALL `insert_vacancy`('".$title."', '".$description."', '".$place."', '".$noi."', '".$date."', '".$expiration."', '".$status."', '".$salaries."', '".$itemno."')");
+                             $output='Successful inserted';
+
+
+
+                  
+
 
    	        $data = array(	 	
                 'message' => $output
@@ -902,6 +787,31 @@ echo json_encode($data);
 
           $sql="UPDATE evaluators_info_tbl SET EMAIL = '".$email. "', PASSWORD ='".$pass."', LASTNAME = '".$ln."', FIRSTNAME ='".$fn."',
           MIDDLENAME = '".$mn."' WHERE NO='".$id."';";
+                       $result=mysqli_query($conn,$sql);
+                       $output = 'success';
+              $data = array(    
+                       'confirm' => $output,
+                       'message' => $message
+                                       
+            
+                    );
+
+
+
+  echo json_encode($data);
+                break;
+
+
+               case 'edit_admin':
+                  $output ='';
+                  $message ='Update success!';
+                  $id = $_POST['id'];
+                  $user = $_POST['user'];
+                  $pass = $_POST['pass'];
+                  $fn = $_POST['fn'];
+                  $ln = $_POST['ln'];
+              
+          $sql="UPDATE admin SET EMAIL = '".$user. "', PASSWORD ='".$pass."', LASTNAME = '".$ln."', FIRSTNAME ='".$fn."' WHERE NO='".$id."';";
                        $result=mysqli_query($conn,$sql);
                        $output = 'success';
               $data = array(    

@@ -13,8 +13,8 @@
 			<h2>APPLICATION FORM</h2>
 			<div class= "line"></div>
 			<section class= "application-nav">
-				<p class= "success">1</p>
-				<p class= "current">2</p>
+				<p class= "current">1</p>
+				<p>2</p>
 				<p>3</p>
 			</section>
 			<section class= "application-content">
@@ -45,7 +45,7 @@
 						</section>
 						<section class= "pi-row-input">
 							<input type= "text" class="pds_firstname" name='First Name' value="<?php echo $user['FIRSTNAME'] ?>">
-							<input type= "text" name='Extension Name' placeholder= "Name Extension (Jr., Sr.)" class="pds_nameextension">
+							<input type= "text" name='Extension Name' placeholder= "Name Extension (Jr., Sr.)" class="pds_nameextension not-require">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -138,7 +138,7 @@
 											<p>10. GSIS ID No</p> 
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='GSIS ID No.'  class="pds_gsisno" value="<?php echo $user['GSIS_ID_NO'] ?>">
+											<input type= "text" name='GSIS ID No.'  class="pds_gsisno" maxlength='14' value="<?php echo $user['GSIS_ID_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -146,7 +146,7 @@
 											<p>11. Pag-ibig ID No</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Pag-ibig ID No.' class="pds_pagibigno" value="<?php echo $user['PAG_IBIG_NO'] ?>">
+											<input type= "text" name='Pag-ibig ID No.' maxlength='14' class="pds_pagibigno" value="<?php echo $user['PAG_IBIG_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -154,7 +154,7 @@
 											<p>12. Philhealth No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Philhealth ID No.'  class="pds_philhealthno" value="<?php echo $user['PHILHEALTH_NO'] ?>">
+											<input type= "text" name='Philhealth ID No.'  maxlength='12' class="pds_philhealthno" value="<?php echo $user['PHILHEALTH_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -162,7 +162,7 @@
 											<p>13. SSS No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='SSS ID No.' class="pds_sssno" value="<?php echo $user['SSS_NO'] ?>">
+											<input type= "text" name='SSS ID No.' maxlength='10' class="pds_sssno" value="<?php echo $user['SSS_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -170,7 +170,7 @@
 											<p>14. TIN No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='TIN ID No.'  class="pds_tinno" value="<?php echo $user['TIN_NO'] ?>">
+											<input type= "text" name='TIN ID No.'  maxlength='14'  class="pds_tinno" value="<?php echo $user['TIN_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -291,7 +291,7 @@
 											<p>19. Telephone No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text"  name='Telephone No.' class="pds_telno" value="<?php echo $user['TELEPHONE_NO'] ?>">
+											<input type= "text"  name='Telephone No.' class="pds_telno not-require" value="<?php echo $user['TELEPHONE_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -329,7 +329,7 @@
 											</section>
 											<section class= "text-input">
 												<input type= "text"  name='Spouse`s First Name' class="pds_spousefirstname" value="<?php echo $user['spousefirstname'] ?>">
-												<input type= "text" name='Spouse`s Extension Name'  placeholder= "Name Extension(Jr., Sr.)"  class="pds_spousenameextension" value="<?php echo $user['spousenameextension'] ?>">
+												<input type= "text" name='Spouse`s Extension Name'  placeholder= "Name Extension(Jr., Sr.)"  class="pds_spousenameextension not-require" value="<?php echo $user['spousenameextension'] ?>">
 											</section>
 											<section class= "text-input">
 												<input type= "text"  name='Spouse`s Middle Name' class="pds_spousemiddlename" value="<?php echo $user['spousemiddlename'] ?>">
@@ -380,7 +380,7 @@
 											</section>
 											<section class= "text-input">
 												<input type= "text" name='Father`s First Name'  class="pds_fatherfirstname" value="<?php echo $user['fatherfirstname'] ?>"> 
-												<input type= "text"  name='Father`s Extension Name' placeholder= "Name Extension(Jr., Sr.)"  class="pds_fathernameextension" value="<?php echo $user['fathernameextension'] ?>">
+												<input type= "text"  name='Father`s Extension Name' placeholder= "Name Extension(Jr., Sr.)"  class="pds_fathernameextension not-require" value="<?php echo $user['fathernameextension'] ?>">
 											</section>
 											<section class= "text-input">
 												<input type= "text" name='Father`s Middle Name' class="pds_fathermiddlename" value="<?php echo $user['fathermiddlename'] ?>">
@@ -400,7 +400,7 @@
 											</section>
 											<section class= "text-input">
 												<input type= "text" name='Mother`s First Name'   class="pds_motherfirstname" value="<?php echo $user['motherfirstname'] ?>">
-												<input type= "text"  name='Mother`s Extension Name' placeholder= "Name Extension(Jr., Sr.)" class="pds_mothersnameextension" >
+												<input type= "text"  name='Mother`s Extension Name' placeholder= "Name Extension(Jr., Sr.)" class="pds_mothersnameextension not-require" >
 											</section>
 											<section class= "text-input">
 												<input type= "text"  name='Mother`s Middle Name' class="pds_mothersmiddlename" value="<?php echo $user['mothersmiddlename'] ?>">
@@ -1278,21 +1278,9 @@
 				</section>
 				
 				<section class= "application-btn">
-					<?php 
-					     
-           
-                  
-                          
-                              if($user['UID']==null) 
-                               {
-                             
-                                         echo "<button type= 'submit' class='save_pds' data-id='". $user['UID'] ."' id='submit_pds'>Confirm</button>";    
-                               }
-                           else{
-                                          echo "<button type= 'submit' class='edit_pds' id='edit_pds'>Save</button>"; 
-                               }
-                    
-					?>
+				
+                                 <button type= 'submit' class='edit_pds' data-id="<?php echo $user['UID']; ?>" id='edit_pds'>Save</button>
+                   
 					<button type= "submit" id= "submit_file">ATTACH FILE</button>
 				</section>
 			</section>

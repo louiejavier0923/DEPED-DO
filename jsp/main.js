@@ -502,6 +502,7 @@ $(document).ready(function() {
 
         .on('click', '#applyBtn', function() {
          
+         
             var vacant = $(this).data('id');
            
     $.ajax ({
