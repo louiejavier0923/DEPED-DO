@@ -10,6 +10,7 @@
 			<?php include '../include/applicant-header-container.php';?>
 		</section>
 		<section class= "applicant-content-container">
+			<input type= "hidden" id="myuid" value="<?php echo $user['UID'] ?>">
 			<h2>APPLICATION FORM</h2>
 			<div class= "line"></div>
 			<section class= "application-nav">
@@ -46,6 +47,7 @@
 						<section class= "pi-row-input">
 							<input type= "text" class="pds_firstname" maxlength ="45" name='First Name' value="<?php echo $user['FIRSTNAME'] ?>">
 							<input type= "text" name='Extension Name' maxlength ="3" placeholder= "Name Extension (Jr., Sr.)" class="pds_nameextension not-require">
+
 						</section>
 					</section>
 					<section class= "pi-row">
