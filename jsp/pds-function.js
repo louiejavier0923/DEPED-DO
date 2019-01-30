@@ -1,5 +1,40 @@
 $(function(){
-		
+	$(".single-fields input").keyup(function () {
+		$(this).css('background-color', "#ffffff");
+	});
+	$(".radio-fields").change(function () {
+		$(this).css('background-color', "#ffffff");
+	});
+	$('.pds_gsisno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{4})\-?(\d{7})\-?(\d{1})/,'$1-$2-$3'))
+	});
+	$('.pds_pagibigno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{4})\-?(\d{4})\-?(\d{4})/,'$1-$2-$3'))
+	});
+	$('.pds_philhealthno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{2})\-?(\d{9})\-?(\d{1})/,'$1-$2-$3'))
+	});
+	$('.pds_sssno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{2})\-?(\d{7})\-?(\d{1})/,'$1-$2-$3'))
+	});
+	$('.pds_tinno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3-$4'))
+	});
+	
+	/* $(".pds_pagibigno").keyup(function (e) {
+      if($(this).val().length === 14) return;
+      if(e.keyCode === 8 || e.keyCode === 37 || e.keyCode === 39) return;
+      let newStr = '';
+      let groups = $(this).val().split('-');
+      for(let i in groups) {
+       if (groups[i].length % 4 === 0) {
+        newStr += groups[i] + "-"
+       } else {
+        newStr += groups[i];
+       }
+      }
+      $(this).val(newStr);
+    }); */
 	function checking() {
 	text='';
 	$('.single-fields input').css('background-color', "#ffffff");
@@ -42,9 +77,14 @@ $(function(){
 		str = $(".errors div").html();
 		if(($('.pds_spousesurname').val().length != 0) ||  ($('.pds_spousefirstname').val().length != 0) ||  ($('.pds_spousenameextension').val().length != 0) ||  ($('.pds_spousemiddlename').val().length != 0) ){
 			if ($(this).val().length == 0) {
-			   $(this).css('background-color', "#ffa0a0f7");
-			   $(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
-			   count++;
+				if($(this).hasClass("not-require")){
+				
+				}else{
+				 $(this).css('background-color', "#ffa0a0f7");
+				$(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
+				count++;
+			}
+			  
 			} 
 		}
 		

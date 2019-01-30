@@ -138,7 +138,7 @@
 											<p>10. GSIS ID No</p> 
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='GSIS ID No.'  class="pds_gsisno" value="<?php echo $user['GSIS_ID_NO'] ?>">
+											<input type= "text" name='GSIS ID No.'  class="pds_gsisno" maxlength='14' value="<?php echo $user['GSIS_ID_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -146,7 +146,7 @@
 											<p>11. Pag-ibig ID No</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Pag-ibig ID No.' class="pds_pagibigno" value="<?php echo $user['PAG_IBIG_NO'] ?>">
+											<input type= "text" name='Pag-ibig ID No.' maxlength='14' class="pds_pagibigno" value="<?php echo $user['PAG_IBIG_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -154,7 +154,7 @@
 											<p>12. Philhealth No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='Philhealth ID No.'  class="pds_philhealthno" value="<?php echo $user['PHILHEALTH_NO'] ?>">
+											<input type= "text" name='Philhealth ID No.'  maxlength='12' class="pds_philhealthno" value="<?php echo $user['PHILHEALTH_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -162,7 +162,7 @@
 											<p>13. SSS No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='SSS ID No.' class="pds_sssno" value="<?php echo $user['SSS_NO'] ?>">
+											<input type= "text" name='SSS ID No.' maxlength='10' class="pds_sssno" value="<?php echo $user['SSS_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -170,7 +170,7 @@
 											<p>14. TIN No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" name='TIN ID No.'  class="pds_tinno" value="<?php echo $user['TIN_NO'] ?>">
+											<input type= "text" name='TIN ID No.'  maxlength='14'  class="pds_tinno" value="<?php echo $user['TIN_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
@@ -291,7 +291,7 @@
 											<p>19. Telephone No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text"  name='Telephone No.' class="pds_telno" value="<?php echo $user['TELEPHONE_NO'] ?>">
+											<input type= "text"  name='Telephone No.' class="pds_telno not-require" value="<?php echo $user['TELEPHONE_NO'] ?>">
 										</section>
 									</section>
 									<section class= "pi-row">
