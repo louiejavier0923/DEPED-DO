@@ -123,7 +123,7 @@
 
            
               $data = array(
-                'message' => $output;
+                'message' => $output
             );
 
             echo json_encode($data);
@@ -138,7 +138,7 @@
             $output= "Success!";
 
             $data = array(
-                'message' => $output;
+                'message' => $output
             );
 
             echo json_encode($data);
@@ -154,7 +154,7 @@
             $result= mysqli_query($conn, $sql);
 
             $data = array(    
-                'message' => $output;
+                'message' => $output
             );
 
             echo json_encode($data);
