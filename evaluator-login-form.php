@@ -82,6 +82,7 @@ if(isset($_SESSION['ID'])){
 
 <!-- Custom Javascripts -->
 <script type= "text/javascript" src= "RES/PSB-RESOURCES/JS/login.js"></script>
+<script type= "text/javascript" src= "RES/PSB-RESOURCES/JS/functions.js"></script>
 
 	</body>
 </html>

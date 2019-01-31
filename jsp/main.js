@@ -3,10 +3,17 @@ function login(action = 'login_function') {
     var login_password = $('#login_password').val();
     
      if(login_email=='' || login_email==null){
-          alert("empty email");
+                    $("#error-message").css('display','block');
+                        document.getElementById('error-info').innerHTML = "Please fill up all forms!";              
+                        document.getElementById('error-header').innerHTML = "Error!";
+        
      }
      else if(login_password=='' || login_password==null){
-          alert("empty password");
+
+                    $("#error-message").css('display','block');
+                        document.getElementById('error-info').innerHTML = "Please fill up all forms!";              
+                        document.getElementById('error-header').innerHTML = "Error!";
+        
      }
      else{         
     $.ajax({
@@ -24,7 +31,10 @@ function login(action = 'login_function') {
                         window.location.href='email-verification.php';
                     break;
                     default:
-                        alert(data.message);
+                                    $("#error-message").css('display','block');
+                        document.getElementById('error-info').innerHTML = "Incorrect email and password!";              
+                        document.getElementById('error-header').innerHTML = "Error!";
+        
                     break;
                 }
             }
