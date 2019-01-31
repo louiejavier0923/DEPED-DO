@@ -107,34 +107,27 @@ function update_applicant(action = 'update_applicant') {
         $('#applicant_firstname').css("border", "solid 1px rgb(255, 0, 0)");
         $('#error-message').css('display', 'block');
     }
-    else {
-        $('#applicant_firstname').css("border", "solid 1px rgb(0, 255, 0)");
-    }
-
-    //MIDDLE NAME
-     if (app_middlename == '') {
-        $('#applicant_middlename').css("border", "solid 1px rgb(255, 0, 0)");
-    }
-    else {
-        $('#applicant_middlename').css("border", "solid 1px rgb(0, 255, 0)");
-    }
 
     //LAST NAME
      if (app_lastname == '') {
         $('#applicant_lastname').css("border", "solid 1px rgb(255, 0, 0)");
-    }
-    else {
-        $('#applicant_lastname').css("border", "solid 1px rgb(0, 255, 0)");
+        $('#error-message').css('display', 'block');
+
+        document.getElementById('error-header').innerHTML = 'Opppsss';
+        document.getElementById('erroor-info').innerHTML = 'You Last name is Empty!';
     }
 
 
     //FUNCTION
-    if (app_firstname != "" & app_middlename != "" & app_lastname != "") {
+    if (app_firstname != "" & app_lastname != "") {
         
         $('.fullname').attr('disabled', true);
         $('#okInfoBtn').hide();
         $('#editInfoBtn').show();
-        $('.fullname').css('border', 'solid 1px rgb(220, 220, 220)');
+
+                            $('#success-message').css('display', 'block');
+                            document.getElementById('success-header').innerHTML = 'Success!';
+                            document.getElementById('success-info').innerHTML = 'Successfully Updated!';
 
         $.ajax ({
             url: '../DOADMIN/credentials/model.php',
@@ -166,9 +159,16 @@ function register(action = 'register_function') {
     var reg_confirm_pass = $('#reg_confirm_pwd').val();
 
 
-    if(reg_email==''&& reg_pass=='') {
-        alert('empty fields');
+    if(reg_email=='' || reg_pass=='') {
+        $('#error-message').css('display', 'block');
+        document.getElementById('error-info').innerHTML = "Make sure that all fields are filled up";
+        document.getElementById('error-header').innerHTML = "Ooooppssss!";
     }
+     else if (reg_pass != reg_confirm_pass) {
+        $('#error-message').css('display', 'block');
+        document.getElementById('error-info').innerHTML = "Make sure that your password is the same";
+        document.getElementById('error-header').innerHTML = "Ooooppssss!";
+     }
     else {
         $('#loading').css("display","block");
         $('.loading-container').css("display","block");
@@ -453,6 +453,10 @@ $(document).ready(function() {
 
         .on('click', '#okBtn', function() {
             window.location.href= "home.php";
+        })
+
+        .on('click', '#faqsBtn', function() {
+            window.location.href= "faqs.php";
         })
 
         .on('click', '#editInfoBtn', function() {
