@@ -431,14 +431,26 @@
 										</section>
 									</section>
 									<section class= "family-tbl-info">
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" class="pds_children">
+										<?php 
+										
+										$sql="SELECT * FROM `children` where `UID`='". $user['UID'] ."';";
+										   
+										if ($result = $conn->query($sql)) {
+
+											while ($row = $result->fetch_assoc()) {
+											?>
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text" value="<?php echo $row['CHILDNAME']; ?>" class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date" value='<?php echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-											<section class= "info">
-												<input type= "date" class="pds_childrenBdate">
-											</section>
-										</section>
+											<?php
+											}
+										} 
+										?>
 										<section class= "content-info">
 											<section class= "info">
 												<input type= "text">
@@ -564,24 +576,36 @@
 								</section>
 							</section>
 							<section class= "eligibility-tbl-info">
+								<?php 
+										
+							 $sql="SELECT * FROM `civill_service_eligibility` where `UID`='". $user['UID'] ."';";
+								   
+								if ($result = $conn->query($sql)) {
+
+									while ($row = $result->fetch_assoc()) {
+									?>
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "text" class='pds_CS'>
+										<input type= "text" value='<?php echo $row['Career service']; ?>' class='pds_CS'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_CS_rating'>
+										<input type= "text" value='<?php echo $row['RATING']; ?>' class='pds_CS_rating'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_CS_date'>
+										<input type= "text" value='<?php echo $row['DATE_OF_EXAMINATION']; ?>' class='pds_CS_date'>
 									</section>
 									<section class= "info">
-										<input type= "text"  class='pds_CS_place'>
+										<input type= "text" value='<?php echo $row['PLACE']; ?>' class='pds_CS_place'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_CS_licenceNo'>
-										<input type= "date" class='pds_CS_licenceDate'>
+										<input type= "text" value='<?php echo $row['LICENSE_NO']; ?>' class='pds_CS_licenceNo'>
+										<input type= "date" value='<?php echo $row['LICENSE_DATE_OF_VALIDITY']; ?>' class='pds_CS_licenceDate'>
 									</section>
 								</section>
+								<?php
+									 }
+								} 
+								?>
 								<section class= "content-info">
 									<section class= "info">
 										<input type= "text">
@@ -724,29 +748,41 @@
 							</section>
 							<section class= "expi-tbl-info">
 								<section class= "content-info">
+									<?php 
+										
+								 $sql="SELECT * FROM `work_experience` where `UID`='". $user['UID'] ."';";
+								   
+								if ($result = $conn->query($sql)) {
+
+									while ($row = $result->fetch_assoc()) { 
+									?>
 									<section class= "info">
-										<input type= "date" class='pds_WE_FromDate'>
-										<input type= "date" class='pds_WE_ToDate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_FROM']; ?>' class='pds_WE_FromDate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_TO']; ?>' class='pds_WE_ToDate'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_WE_PositionTitle'>
+										<input type= "text" value='<?php echo $row['POSITION_TITLE']; ?>' class='pds_WE_PositionTitle'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_WE_Place'>
+										<input type= "text" value='<?php echo $row['DEPARTMENT_AGENCY_OFFICE_COMPANY']; ?>' class='pds_WE_Place'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_WE_MonthSalary'>
+										<input type= "text" value='<?php echo $row['MONTHLY_SALARY']; ?>' class='pds_WE_MonthSalary'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_WE_Salary'>
+										<input type= "text" value='<?php echo $row['SALARY_JOB_PAY_GRADE']; ?>' class='pds_WE_Salary'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_WE_AppointmentStatus'>
+										<input type= "text" value='<?php echo $row['STATUS_OF_APPOINTMENT']; ?>' class='pds_WE_AppointmentStatus'>
 									</section>
 									<section class= "info">
-										<input type= "text" value='....' class='pds_WE_GovService'>
+										<input type= "text" value='<?php echo $row['GOVT_SERVICE']; ?>' class='pds_WE_GovService'>
 									</section>
 								</section>
+								<?php
+									 }
+								} 
+								?>
 								<section class= "content-info">
 									<section class= "info">
 										<input type= "date">
@@ -987,21 +1023,33 @@
 								</section>
 							</section>
 							<section class= "work-tbl-info">
+								<?php 
+										
+								 $sql="SELECT * FROM `voluntary_work` where `UID`='". $user['UID'] ."';";
+								   
+								if ($result = $conn->query($sql)) {
+
+									while ($row = $result->fetch_assoc()) { 
+									?>
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "text" class='pds_VW_Name_Address'>
+										<input type= "text" value='<?php echo $row['NAME']; ?>' class='pds_VW_Name_Address'>
 									</section>
 									<section class= "info">
-										<input type= "date" class='pds_VW_FromDate'>
-										<input type= "date" class='pds_VW_Todate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_FROM']; ?>' class='pds_VW_FromDate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_TO']; ?>' class='pds_VW_Todate'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_VW_NumbHours'>
+										<input type= "text" value='<?php echo $row['NUMBER_OF_HOURS']; ?>' class='pds_VW_NumbHours'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_VW_Work'>
+										<input type= "text" value='<?php echo $row['POSITION']; ?>' class='pds_VW_Work'>
 									</section>
 								</section>
+								<?php
+									 }
+								} 
+								?>
 								<section class= "content-info">
 									<section class= "info">
 										<input type= "text">
@@ -1179,24 +1227,37 @@
 								</section>
 							</section>
 							<section class= "training-tbl-info">
+								<?php 
+										
+								$sql="SELECT * FROM `learning_and_development` where `UID`='". $user['UID'] ."';";
+								   
+								if ($result = $conn->query($sql)) {
+
+									while ($row = $result->fetch_assoc()) { 
+									?>
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "text" class='pds_LaD_Title'>
+										<input type= "text" value='<?php echo $row['TITLE']; ?>' class='pds_LaD_Title'>
 									</section>
 									<section class= "info">
-										<input type= "date" class='pds_LaD_FromDate'>
-										<input type= "date" class='pds_LaD_ToDate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_FROM']; ?>' class='pds_LaD_FromDate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_TO']; ?>' class='pds_LaD_ToDate'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_LaD_NumbHours'>
+										<input type= "text" value='<?php echo $row['NUMBER_OF_HOURS']; ?>' class='pds_LaD_NumbHours'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_LaD_Type'>
+										<input type= "text" value='<?php echo $row['TYPE_OF_LD']; ?>' class='pds_LaD_Type'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_LaD_ConductBy'>
+										<input type= "text" value='<?php echo $row['CONDUCTED_SPONSORED_BY']; ?>' class='pds_LaD_ConductBy'>
 									</section>
 								</section>
+								<?php
+									 }
+								} 
+								?>
+								
 								<section class= "content-info">
 									<section class= "info">
 										<input type= "text">
