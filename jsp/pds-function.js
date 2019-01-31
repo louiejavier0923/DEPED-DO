@@ -58,6 +58,8 @@ $(function(){
 			}else{
 				
     	       	    	$("#error-message").css('display','block');
+    	       	    	document.getElementById('error-info').innerHTML = "Please input all required fields!";   	    	
+    	       	    	document.getElementById('error-header').innerHTML = "Error!";
 				$(this).css('background-color', "#ffa0a0f7");
 			   
 			   //$(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));

@@ -1340,6 +1340,7 @@
 						<section class= "footer-column">
 							<p>DATE</p>
 							<input type= "date" id="sign_date">
+					</section>
 						</section>
 					</section>
 				</section>
