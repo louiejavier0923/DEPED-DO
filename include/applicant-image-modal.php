@@ -3,6 +3,6 @@
 		<h1>Change Profile Picture</h1>
 		<a id= "closeImageBtn"><i class= "fa fa-close"></i></a>
 		<img src= "../img/logo.png">
-		<button id= "uploadBtn">UPLOAD</button>
+		<input type="file" id= "uploadBtn">UPLOAD
 	</section>
 </section>

@@ -13,7 +13,7 @@
 
 
                     
-                    $query = $conn->query($sql);
+                         $query = mysqli_query($conn, $sql);
 
                     while($row = $query->fetch_assoc()){
                                 
@@ -23,7 +23,6 @@
                                            	<section class= "files">
 				                                 <img src= "../img/icon-pdf.ico">
 				                                 <p>'.$row['FILE_NAME'].'</p>
-				                                 
 			                                 </section>
                                                ';
                             

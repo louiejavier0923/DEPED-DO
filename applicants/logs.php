@@ -58,6 +58,8 @@
 							<p id= "category">Englis Comm. Skills</p>
 							<p id= "evaluator-name">Evaluator: Louie Javier</p>
 						</section>
+
+						
 						<section class= "status-score">
 							<h1 class= "passed">100</h1>
 							<p>Congratulations! You are PASSED!</p>
