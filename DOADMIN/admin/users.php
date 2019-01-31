@@ -54,7 +54,7 @@
                 <tbody>
 
                   <?php
-                    $sql = "SELECT * FROM user WHERE ISACTIVE = '1'";
+                    $sql = "SELECT * FROM user WHERE isActive = 1";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                   $status = ($row['STATUS'])?'<span class="label label-success pull-left">activate</span>':'<span class="label label-danger pull-right">not activate</span>';

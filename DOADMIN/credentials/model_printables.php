@@ -24,25 +24,23 @@
     $content .= '
 
 
-    <div class="div-1">
-        <div class="div-2"> 
-              <div class="container"><img src="left.png"></div>
-            <div class="div-2">
-              <p>Republic of the Philippines</p>
-              <p>Department of Education</p>
-              <p>National Capital Region</p>
-              <p><b>SCHOOLS DIVISION OFFICE</b></p>
-              <p><b>QUEZON CITY</b></p>
-              <p>Nueva Ecija St., Bago Bantay, Quezon City</p>
-              <p>www.depedqc.ph</p>
+<body style="font-family: calibri;">
+
+    <div style="margin: auto; width: 50%; border: 1px solid black;">
+        <div style="display: flex; padding: 20px 0 20px 0; margin-left: 20%;">  
+              <div class="container"><img src="left.png" style="width: 75px;  height: 75px;"></div>
+            <div style="margin-left: 5%; margin-right: 5%;">
+              <p style="margin: 0; padding: 0;  font-size: 12px; text-align: center;">Republic of the Philippines</p>
+              <p style="margin: 0; padding: 0; font-size: 12px; text-align: center;">Department of Education</p>
+              <p style="margin: 0; padding: 0; font-size: 12px; text-align: center;">National Capital Region</p>
+              <p style="margin: 0; padding: 0; font-size: 12px; text-align: center;"><b>SCHOOLS DIVISION OFFICE</b></p>
+              <p style="margin: 0; padding: 0; font-size: 12px; text-align: center;"><b>QUEZON CITY</b></p>
+              <p style="margin: 0; padding: 0; font-size: 12px; text-align: center;">Nueva Ecija St., Bago Bantay, Quezon City</p>
+              <p style="margin: 0; padding: 0; font-size: 12px; text-align: center;">www.depedqc.ph</p>
             </div>
-            <div class="container"><img src="right.png"></div>
+            <div class="container"><img src="right.png" style="width: 75px; height: 75px;"></div>
         </div>
     </div>
-
-
-      	<h2 align="center">QCDO</h2>
-      	<h4 align="center">"RANKINGS - 2019"</h4>
       	<table border="1" cellspacing="0" cellpadding="3">  
            <tr>  
            		 <th>RANK</th>

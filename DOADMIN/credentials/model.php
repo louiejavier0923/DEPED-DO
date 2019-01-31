@@ -152,10 +152,9 @@
 
             $sql= "UPDATE personal_info SET FIRSTNAME= '". $app_fname ."', LASTNAME= '". $app_lname ."', MIDDLENAME= '". $app_mname ."' WHERE UID= '".$user['UID'] ."';";
             $result= mysqli_query($conn, $sql);
-            $output= "Success!";
 
             $data = array(    
-                'message' => $output 
+                'message' => $output
             );
 
             echo json_encode($data);

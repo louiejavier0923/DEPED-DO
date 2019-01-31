@@ -75,6 +75,7 @@ if(isset($_SESSION['ADMIN'])){
 			</section>
 		</section>
 		<?php include 'include/error-message-modal.php';?>
+		<?php include 'include/success-message-modal.php';?>
 
 
 		 <script type="text/javascript">
@@ -97,7 +98,7 @@ if(isset($_SESSION['ADMIN'])){
     	       	    break;
 
     	       	    default:
-    	       	            alert(response.message);
+    	       	    	$("#error-message").css('display','block');
     	       	    break;
     	       }
             

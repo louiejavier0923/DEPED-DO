@@ -3,10 +3,17 @@ function login(action = 'login_function') {
     var login_password = $('#login_password').val();
     
      if(login_email=='' || login_email==null){
-          alert("empty email");
+                    $("#error-message").css('display','block');
+                        document.getElementById('error-info').innerHTML = "Please fill up all forms!";              
+                        document.getElementById('error-header').innerHTML = "Error!";
+        
      }
      else if(login_password=='' || login_password==null){
-          alert("empty password");
+
+                    $("#error-message").css('display','block');
+                        document.getElementById('error-info').innerHTML = "Please fill up all forms!";              
+                        document.getElementById('error-header').innerHTML = "Error!";
+        
      }
      else{         
     $.ajax({
@@ -24,7 +31,10 @@ function login(action = 'login_function') {
                         window.location.href='email-verification.php';
                     break;
                     default:
-                        alert(data.message);
+                                    $("#error-message").css('display','block');
+                        document.getElementById('error-info').innerHTML = "Incorrect email and password!";              
+                        document.getElementById('error-header').innerHTML = "Error!";
+        
                     break;
                 }
             }
@@ -78,6 +88,7 @@ function update_password(action = "update_password") {
         else {
             $('#applicant_newPass').css('border', 'solid 1px rgb(255, 0, 0)');   
             $('#applicant_repeatPass').css('border', 'solid 1px rgb(255, 0, 0)');
+            $('#error-message').style.display= "block";
         }
     }
     else {
@@ -94,6 +105,7 @@ function update_applicant(action = 'update_applicant') {
     //FIRST NAME
     if (app_firstname == '') {
         $('#applicant_firstname').css("border", "solid 1px rgb(255, 0, 0)");
+        $('#error-message').css('display', 'block');
     }
     else {
         $('#applicant_firstname').css("border", "solid 1px rgb(0, 255, 0)");
@@ -345,6 +357,7 @@ $(document).ready(function() {
     var logsCont = document.getElementById('logs-container');
     var updateImage = document.getElementById('change-image');
     var errorMessage = document.getElementById('error-message');
+    var successMessage = document.getElementById('success-message');
 
     $('.fullname').attr('disabled', true);
     $('.new_password').attr('disabled', true);
@@ -375,6 +388,10 @@ $(document).ready(function() {
                     statusCont.style.display= "none";
                 break;
             }
+        })
+
+        .on('click', '#closeSuccessBtn', function() {
+            successMessage.style.display= "none";
         })
 
         .on('click', '#closeImageBtn', function() {
@@ -575,6 +592,8 @@ $(document).ready(function() {
          
          
             var vacant = $(this).data('id');
+                $('#loading').css("display","block");
+                $('.loading-container').css("display","block");
            
     $.ajax ({
         url: '../DOADMIN/credentials/model.php',
@@ -588,11 +607,15 @@ $(document).ready(function() {
                       
                       switch(data.message){
                             case 'success':
+                              $('#loading').css("display","none");
+                $('.loading-container').css("display","none");
                                   window.location.href='finish.php'
                                  
                             break;
 
                             default:
+                              $('#loading').css("display","none");
+                              $('.loading-container').css("display","none");
                                  alert(data.message);
                             break;
 

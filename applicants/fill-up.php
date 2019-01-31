@@ -3,9 +3,11 @@
 <html>
 	<head>
 		<title>Application Form | Division Office</title>
-		<?php include '../include/applicant-header-content.php';?>
+
+	<?php include '../include/applicant-header-content.php';?>
 	</head>
 	<body>
+			<?php include '../include/error-message-modal.php'; ?>
 		<section class= "applicant-header-container">
 			<?php include '../include/applicant-header-container.php';?>
 		</section>
@@ -55,7 +57,7 @@
 							<p>Middle name</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "text" name='Middle Name' class="pds_middlename" value="<?php echo $user['MIDDLENAME'] ?>">
+							<input type= "text" name='Middle Name' class="pds_middlename not-require" value="<?php echo $user['MIDDLENAME'] ?>">
 						</section>
 					</section>
 				</section>
@@ -65,7 +67,7 @@
 							<p>3. Date of birth<br>(mm/dd/yyyy)</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "date" name='Date of Birth' class="pds_dateofbirth" value="<?php echo $user['BIRTHDATE'] ?>">
+							<input type= "date" max="2000-12-30" min="1954-01-01" name='Date of Birth' class="pds_dateofbirth" value="<?php echo $user['BIRTHDATE'] ?>">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -186,7 +188,7 @@
 											<p>15. Agency Employee No.</p>
 										</section>
 										<section class= "pi-row-input">
-											<input type= "text" maxlength="10" name='Agency Employee ID No.' class="pds_agencyemployee" value="<?php echo $user['AGENCY_EMPLOYEE_NO'] ?>">
+											<input type= "text" maxlength="10" name='Agency Employee ID No.' class="pds_agencyemployee not-require" value="<?php echo $user['AGENCY_EMPLOYEE_NO'] ?>">
 										</section>
 									</section>
 								</section>
@@ -427,14 +429,26 @@
 										</section>
 									</section>
 									<section class= "family-tbl-info">
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" class="pds_children">
+										<?php 
+										
+										$sql="SELECT * FROM `children` where `UID`='". $user['UID'] ."';";
+										   
+										if ($result = $conn->query($sql)) {
+
+											while ($row = $result->fetch_assoc()) {
+											?>
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text" value="<?php echo $row['CHILDNAME']; ?>" class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date" value='<?php echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-											<section class= "info">
-												<input type= "date" class="pds_childrenBdate">
-											</section>
-										</section>
+											<?php
+											}
+										} 
+										?>
 										<section class= "content-info">
 											<section class= "info">
 												<input type= "text">
@@ -560,24 +574,36 @@
 								</section>
 							</section>
 							<section class= "eligibility-tbl-info">
+								<?php 
+										
+							 $sql="SELECT * FROM `civill_service_eligibility` where `UID`='". $user['UID'] ."';";
+								   
+								if ($result = $conn->query($sql)) {
+
+									while ($row = $result->fetch_assoc()) {
+									?>
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "text" class='pds_CS'>
+										<input type= "text" value='<?php echo $row['TYPE_OF_EXAMINATION']; ?>' class='pds_CS'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_CS_rating'>
+										<input type= "text" value='<?php echo $row['RATING']; ?>' class='pds_CS_rating'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_CS_date'>
+										<input type= "text" value='<?php echo $row['DATE_OF_EXAMINATION']; ?>' class='pds_CS_date'>
 									</section>
 									<section class= "info">
-										<input type= "text"  class='pds_CS_place'>
+										<input type= "text" value='<?php echo $row['PLACE']; ?>' class='pds_CS_place'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_CS_licenceNo'>
-										<input type= "date" class='pds_CS_licenceDate'>
+										<input type= "text" value='<?php echo $row['LICENSE_NO']; ?>' class='pds_CS_licenceNo'>
+										<input type= "date" value='<?php echo $row['LICENSE_DATE_OF_VALIDITY']; ?>' class='pds_CS_licenceDate'>
 									</section>
 								</section>
+								<?php
+									 }
+								} 
+								?>
 								<section class= "content-info">
 									<section class= "info">
 										<input type= "text">
@@ -720,29 +746,41 @@
 							</section>
 							<section class= "expi-tbl-info">
 								<section class= "content-info">
+									<?php 
+										
+								 $sql="SELECT * FROM `work_experience` where `UID`='". $user['UID'] ."';";
+								   
+								if ($result = $conn->query($sql)) {
+
+									while ($row = $result->fetch_assoc()) { 
+									?>
 									<section class= "info">
-										<input type= "date" class='pds_WE_FromDate'>
-										<input type= "date" class='pds_WE_ToDate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_FROM']; ?>' class='pds_WE_FromDate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_TO']; ?>' class='pds_WE_ToDate'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_WE_PositionTitle'>
+										<input type= "text" value='<?php echo $row['POSITION_TITLE']; ?>' class='pds_WE_PositionTitle'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_WE_Place'>
+										<input type= "text" value='<?php echo $row['DEPARTMENT_AGENCY_OFFICE_COMPANY']; ?>' class='pds_WE_Place'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_WE_MonthSalary'>
+										<input type= "text" value='<?php echo $row['MONTHLY_SALARY']; ?>' class='pds_WE_MonthSalary'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_WE_Salary'>
+										<input type= "text" value='<?php echo $row['SALARY_JOB_PAY_GRADE']; ?>' class='pds_WE_Salary'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_WE_AppointmentStatus'>
+										<input type= "text" value='<?php echo $row['STATUS_OF_APPOINTMENT']; ?>' class='pds_WE_AppointmentStatus'>
 									</section>
 									<section class= "info">
-										<input type= "text" value='....' class='pds_WE_GovService'>
+										<input type= "text" value='<?php echo $row['GOVT_SERVICE']; ?>' class='pds_WE_GovService'>
 									</section>
 								</section>
+								<?php
+									 }
+								} 
+								?>
 								<section class= "content-info">
 									<section class= "info">
 										<input type= "date">
@@ -983,21 +1021,33 @@
 								</section>
 							</section>
 							<section class= "work-tbl-info">
+								<?php 
+										
+								 $sql="SELECT * FROM `voluntary_work` where `UID`='". $user['UID'] ."';";
+								   
+								if ($result = $conn->query($sql)) {
+
+									while ($row = $result->fetch_assoc()) { 
+									?>
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "text" class='pds_VW_Name_Address'>
+										<input type= "text" value='<?php echo $row['NAME']; ?>' class='pds_VW_Name_Address'>
 									</section>
 									<section class= "info">
-										<input type= "date" class='pds_VW_FromDate'>
-										<input type= "date" class='pds_VW_Todate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_FROM']; ?>' class='pds_VW_FromDate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_TO']; ?>' class='pds_VW_Todate'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_VW_NumbHours'>
+										<input type= "text" value='<?php echo $row['NUMBER_OF_HOURS']; ?>' class='pds_VW_NumbHours'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_VW_Work'>
+										<input type= "text" value='<?php echo $row['POSITION']; ?>' class='pds_VW_Work'>
 									</section>
 								</section>
+								<?php
+									 }
+								} 
+								?>
 								<section class= "content-info">
 									<section class= "info">
 										<input type= "text">
@@ -1175,24 +1225,37 @@
 								</section>
 							</section>
 							<section class= "training-tbl-info">
+								<?php 
+										
+								$sql="SELECT * FROM `learning_and_development` where `UID`='". $user['UID'] ."';";
+								   
+								if ($result = $conn->query($sql)) {
+
+									while ($row = $result->fetch_assoc()) { 
+									?>
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "text" class='pds_LaD_Title'>
+										<input type= "text" value='<?php echo $row['TITLE']; ?>' class='pds_LaD_Title'>
 									</section>
 									<section class= "info">
-										<input type= "date" class='pds_LaD_FromDate'>
-										<input type= "date" class='pds_LaD_ToDate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_FROM']; ?>' class='pds_LaD_FromDate'>
+										<input type= "date" value='<?php echo $row['INCLUSIVE_DATES_TO']; ?>' class='pds_LaD_ToDate'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_LaD_NumbHours'>
+										<input type= "text" value='<?php echo $row['NUMBER_OF_HOURS']; ?>' class='pds_LaD_NumbHours'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_LaD_Type'>
+										<input type= "text" value='<?php echo $row['TYPE_OF_LD']; ?>' class='pds_LaD_Type'>
 									</section>
 									<section class= "info">
-										<input type= "text" class='pds_LaD_ConductBy'>
+										<input type= "text" value='<?php echo $row['CONDUCTED_SPONSORED_BY']; ?>' class='pds_LaD_ConductBy'>
 									</section>
 								</section>
+								<?php
+									 }
+								} 
+								?>
+								
 								<section class= "content-info">
 									<section class= "info">
 										<input type= "text">
@@ -1269,7 +1332,7 @@
 							</section>
 						</section>
 					</section>
-					<section class= "pds-footer">
+					<section class= "pds-footer singl">
 						<section class= "footer-column">
 							<p>SIGNATURE</p>
 							<input type= "text">
@@ -1277,7 +1340,7 @@
 						<section class= "footer-column">
 							<p>DATE</p>
 							<input type= "date" id="sign_date">
-
+					</section>
 						</section>
 					</section>
 				</section>
@@ -1300,6 +1363,8 @@
 		<?php include '../include/applicant-choosefile-modal.php';?>
 		<?php include '../include/applicant-pds-modal.php';?>
 		<?php include '../include/applicant-files-modal.php';?>
+		<?php include '../include/applicant-error-modal.php';?>
+		<?php include '../include/applicant-success-modal.php';?>
 		<?php include '../include/error-message-modal.php';?>
 	</body>
 	<script type="text/javascript" src="../jsp/jquery-2.1.4.min.js"></script>
