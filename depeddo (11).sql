@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2019 at 07:40 PM
+-- Generation Time: Jan 31, 2019 at 03:41 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -216,19 +216,16 @@ CREATE TABLE IF NOT EXISTS `application` (
   `STATUS` tinyint(4) NOT NULL,
   `date` date NOT NULL,
   `IS_CALIBRATED` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `application`
 --
 
 INSERT INTO `application` (`NO`, `UID`, `PID`, `STATUS`, `date`, `IS_CALIBRATED`) VALUES
-(83, 'TCH-00042', 'PID-10026', 1, '2019-01-30', 0),
-(85, 'TCH-00044', 'PID-00029', 1, '2019-01-31', 0),
-(87, 'TCH-00047', 'PID-00029', 0, '2019-01-30', 0),
-(89, 'TCH-00044', 'PID-1005', 1, '2019-01-30', 0),
-(90, 'TCH-00044', 'PID-10026', 1, '2019-01-30', 0),
-(91, 'TCH-00044', '', 0, '2019-01-31', 0);
+(94, 'TCH-00044', 'PID-00027', 0, '2019-01-31', 0),
+(95, 'TCH-00044', 'PID-00028', 0, '2019-01-31', 0),
+(96, 'TCH-00044', '', 0, '2019-01-31', 0);
 
 -- --------------------------------------------------------
 
@@ -242,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `appointment` (
   `VID` varchar(255) NOT NULL,
   `DATE` date NOT NULL,
   `EXPIRATION_DATE` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `appointment`
@@ -250,7 +247,8 @@ CREATE TABLE IF NOT EXISTS `appointment` (
 
 INSERT INTO `appointment` (`NO`, `UID`, `VID`, `DATE`, `EXPIRATION_DATE`) VALUES
 (66, 'TCH-00042', 'PID-00029', '2019-01-30', '2019-02-14'),
-(67, 'TCH-00044', 'PID-1005', '2019-01-30', '2019-02-14');
+(67, 'TCH-00044', 'PID-1005', '2019-01-30', '2019-02-14'),
+(68, 'TCH-00044', 'PID-10026', '2019-01-31', '2019-02-15');
 
 -- --------------------------------------------------------
 
@@ -264,6 +262,19 @@ CREATE TABLE IF NOT EXISTS `attachments` (
   `FILE_NAME` varchar(45) NOT NULL,
   `FILE_LOCATION` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `children`
+--
+
+CREATE TABLE IF NOT EXISTS `children` (
+  `NO` int(11) NOT NULL,
+  `UID` int(255) NOT NULL,
+  `CHILDNAME` varchar(30) NOT NULL,
+  `CHILDBIRTHDATE` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -391,14 +402,17 @@ CREATE TABLE IF NOT EXISTS `file` (
   `NO` int(11) NOT NULL,
   `UID` varchar(45) NOT NULL,
   `FILE_NAME` varchar(65) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `file`
 --
 
 INSERT INTO `file` (`NO`, `UID`, `FILE_NAME`) VALUES
-(9, 'TCH-00044', '5c51e84f6a21f-Capture.PNG');
+(9, 'TCH-00044', '5c51e84f6a21f-Capture.PNG'),
+(12, 'TCH-00044', '5c525c46e9b20-Cupcake.png'),
+(13, 'TCH-00044', '5c525c736ca5a-Cupcake.png'),
+(14, 'TCH-00044', '5c525c8bc0148-Cupcake.png');
 
 -- --------------------------------------------------------
 
@@ -515,9 +529,9 @@ CREATE TABLE IF NOT EXISTS `personal_info` (
 --
 
 INSERT INTO `personal_info` (`NO`, `UID`, `FIRSTNAME`, `LASTNAME`, `MIDDLENAME`, `EXTENSION_NAME`, `BIRTHDATE`, `BIRTHPLACE`, `GENDER`, `HEIGHT`, `WEIGHT`, `BLOOD_TYPE`, `CIVIL_STATUS`, `GSIS_ID_NO`, `PAG_IBIG_NO`, `PHILHEALTH_NO`, `SSS_NO`, `TIN_NO`, `AGENCY_EMPLOYEE_NO`, `CITIZENSHIP`, `RESIDENTIAL_LOTNO`, `RESIDENTIAL_STREET`, `RESIDENTIAL_SUBDIVISION`, `RESIDENTIAL_BARANGAY`, `RESIDENTIAL_MUNICIPALITY`, `RESIDENTIAL_PROVINCE`, `RESIDENTIAL_ZIP_CODE`, `PERMANENT_LOTNO`, `PERMANENT_STREET`, `PERMANENT_SUBDIVISION`, `PERMANENT_BARANGAY`, `PERMANENT_MUNICIPALITY`, `PERMANENT_PROVINCE`, `PERMANENT_ZIP_CODE`, `TELEPHONE_NO`, `MOBILE_NO`) VALUES
-(1, '', 'ADRIANE', 'ROMERO', 'GENITA', 'e', '1997-11-03', 'qwe', 'Male', '121', '212', 'AB', 'Single', '1111-1111111-111', '1111-1111-111111', '11-111111111-1', '11-1111111-1', '121-111-111-11111', '111-1111111', 'Filipino', 'qweqeqweqweq', 'e', 'e', 'e', 'e', 'e', '1231', 'e', 'e', 'e', 'e', 'e', 'e', '1111', '222-2222', '21312'),
-(2, '', 'ADRIANE', 'ROMERO', 'GENITA', 'e', '1997-11-03', 'qwe', 'Male', '121', '212', 'AB', 'Single', '1111-1111111-111', '1111-1111-111111', '11-111111111-1', '11-1111111-1', '121-111-111-11111', '111-1111111', 'Filipino', 'qweqeqweqweq', 'e', 'e', 'e', 'e', 'e', '1231', 'e', 'e', 'e', 'e', 'e', 'e', '1111', '222-2222', '21312'),
-(3, '', 'ADRIANE', 'ROMERO', 'GENITA', 'e', '1997-11-03', 'qwe', 'Male', '121', '212', 'AB', 'Single', '1111-1111111-111', '1111-1111-111111', '11-111111111-1', '11-1111111-1', '121-111-111-11111', '111-1111111', 'Filipino', 'qweqeqweqweq', 'e', 'e', 'e', 'e', 'e', '1231', 'e', 'e', 'e', 'e', 'e', 'e', '1111', '222-2222', '21312'),
+(1, '', 'ee', 'ROMERO', 'GENITA', 'e', '1997-11-03', 'qwe', 'Male', '121', '212', 'AB', 'Single', '1111-1111111-111', '1111-1111-111111', '11-111111111-1', '11-1111111-1', '121-111-111-11111', '111-1111111', 'Filipino', 'qweqeqweqweq', 'e', 'e', 'e', 'e', 'e', '1231', 'e', 'e', 'e', 'e', 'e', 'e', '1111', '222-2222', '21312'),
+(2, '', 'ee', 'ROMERO', 'GENITA', 'e', '1997-11-03', 'qwe', 'Male', '121', '212', 'AB', 'Single', '1111-1111111-111', '1111-1111-111111', '11-111111111-1', '11-1111111-1', '121-111-111-11111', '111-1111111', 'Filipino', 'qweqeqweqweq', 'e', 'e', 'e', 'e', 'e', '1231', 'e', 'e', 'e', 'e', 'e', 'e', '1111', '222-2222', '21312'),
+(3, '', 'ee', 'ROMERO', 'GENITA', 'e', '1997-11-03', 'qwe', 'Male', '121', '212', 'AB', 'Single', '1111-1111111-111', '1111-1111-111111', '11-111111111-1', '11-1111111-1', '121-111-111-11111', '111-1111111', 'Filipino', 'qweqeqweqweq', 'e', 'e', 'e', 'e', 'e', '1231', 'e', 'e', 'e', 'e', 'e', 'e', '1111', '222-2222', '21312'),
 (4, 'TCH-00032', 'ROMERO', 'ADRIANE', 'GENITA', '', '0000-00-00', '', 'Male', '', '', '', 'Married', '', '', '', '', '', '', 'By Birth', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (5, 'TCH-0005', 'Adriane Clark', 'Romero', 'Genita', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (6, 'TCH-0001', 'Adriane Clark', 'Romero', 'Genita', '', '1997-11-03', 'Manila', 'Male', '152cm', '49kg', 'A', 'Separated', '283929231', '23123123', '23123122', '2312312312', '12312312', '1231231231', 'Dual Citizenship', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', '09662715987'),
@@ -557,7 +571,7 @@ CREATE TABLE IF NOT EXISTS `publish_vacancy` (
 
 INSERT INTO `publish_vacancy` (`NO`, `UID`, `TITLE`, `DESCRIPTION`, `PLACE_ASSIGNMENT`, `NOI`, `PUBLICATION_DATE`, `PUBLICATION_DATE_UNTIL`, `STATUS`, `SALARIES`, `ITEM_NO`, `APP_ISSET`, `isActive`) VALUES
 (25, 'PID-1005', 'TEACHER I', 'NEED TEACHER I', 'SID-0003', 'QCPU', '2019-01-31', '2019-01-31', '1', '20000', 'TCHI-1232-1232', '1', 1),
-(26, 'PID-10026', 'TEACHER I', 'Replacing Teacher Retirement', 'SID-0002', 'qcpu', '2019-01-31', '2019-02-02', 'PERMANENT', '20000', 'TCHI-2912-3122', '0', 1),
+(26, 'PID-10026', 'TEACHER I', 'Replacing Teacher Retirement', 'SID-0002', 'qcpu', '2019-01-31', '2019-02-02', 'PERMANENT', '20000', 'TCHI-2912-3122', '1', 1),
 (27, 'PID-00027', 'TEACHER I', 'LALALA', 'SID-0003', 'QCPU', '2019-01-31', '2019-02-01', '1', '20000', 'TCHI-0291-9209', '0', 1),
 (28, 'PID-00028', 'TEACHER I', 'Hays', 'SID-0002', 'qcpu', '2019-01-31', '2019-01-31', '1', '20000', 'TCHI--223-1231', '0', 1),
 (29, 'PID-00029', 'EXAMPLE', 'Need Replacement', 'SID-0002', 'QCPU', '2019-01-31', '2019-02-14', '2', '20000', 'TCH7-61237-1263', '1', 1);
@@ -600,21 +614,21 @@ CREATE TABLE IF NOT EXISTS `user` (
   `IMG` varchar(65) NOT NULL,
   `STATUS` varchar(1) NOT NULL,
   `ACTIVATION_KEY` longtext NOT NULL,
-  `IS_ONLINE` varchar(1) NOT NULL
+  `IS_ONLINE` varchar(1) NOT NULL,
+  `isActive` tinyint(1) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`NO`, `UID`, `EMAIL`, `PWD`, `IMG`, `STATUS`, `ACTIVATION_KEY`, `IS_ONLINE`) VALUES
-(34, 'TCH-0001', 'niellaurenciano@gmail.com', 'e', '', '1', '2e942a8eb075d2c26f92cc2ae525999f20008153', '0'),
-(35, 'TCH-0002', 'flipmusicc@gmail.com', 'e', '', '1', '', '0'),
-(41, 'TCH-00036', 'cleeegs@gmail.com', '12345', '', '1', 'd27a1db70940016d2784ecc8b8fb12bc8a32490a', '0'),
-(42, 'TCH-00042', 'cromerosdadr@gmail.com', 'e', '', '1', '6eb91f33273af0317ab1c2254692f0c9444cf951', '0'),
-(43, 'TCH-00043', 'sdsd@gmail.com', 'e', '', '0', 'da19448c286f9f89d4da5c9f444be00d448694e5', '0'),
-(46, 'TCH-00044', 'cromeroadr@gmail.com', 'e', '', '1', '346342737c5a9a1639fa0aaf7724a20cc40c5d17', '0'),
-(47, 'TCH-00047', 'e@gmail.com', 'e', '', '1', '7cf42be2879bfe9560db19e88333c84e3525bedc', '0');
+INSERT INTO `user` (`NO`, `UID`, `EMAIL`, `PWD`, `IMG`, `STATUS`, `ACTIVATION_KEY`, `IS_ONLINE`, `isActive`) VALUES
+(34, 'TCH-0001', 'niellaurenciano@gmail.com', 'e', '', '1', '2e942a8eb075d2c26f92cc2ae525999f20008153', '0', 1),
+(41, 'TCH-00036', 'cleeegs@gmail.com', '12345', '', '1', 'd27a1db70940016d2784ecc8b8fb12bc8a32490a', '0', 0),
+(42, 'TCH-00042', 'cromerosdadr@gmail.com', 'e', '', '1', '6eb91f33273af0317ab1c2254692f0c9444cf951', '0', 1),
+(43, 'TCH-00043', 'sdsd@gmail.com', 'e', '', '0', 'da19448c286f9f89d4da5c9f444be00d448694e5', '0', 0),
+(46, 'TCH-00044', 'cromeroadr@gmail.com', 'e', '', '1', '346342737c5a9a1639fa0aaf7724a20cc40c5d17', '0', 0),
+(47, 'TCH-00047', 'e@gmail.com', 'e', '', '1', '7cf42be2879bfe9560db19e88333c84e3525bedc', '0', 0);
 
 -- --------------------------------------------------------
 
@@ -749,6 +763,12 @@ ALTER TABLE `attachments`
   ADD PRIMARY KEY (`NO`);
 
 --
+-- Indexes for table `children`
+--
+ALTER TABLE `children`
+  ADD PRIMARY KEY (`NO`);
+
+--
 -- Indexes for table `civill_service_eligibility`
 --
 ALTER TABLE `civill_service_eligibility`
@@ -855,16 +875,21 @@ ALTER TABLE `applicants_points`
 -- AUTO_INCREMENT for table `application`
 --
 ALTER TABLE `application`
-  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=92;
+  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=97;
 --
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=68;
+  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT for table `attachments`
 --
 ALTER TABLE `attachments`
+  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `children`
+--
+ALTER TABLE `children`
   MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `civill_service_eligibility`
@@ -890,7 +915,7 @@ ALTER TABLE `family_background`
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
-  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `NO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `learning_and_development`
 --
