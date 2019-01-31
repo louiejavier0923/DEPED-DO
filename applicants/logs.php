@@ -28,11 +28,11 @@
 						  <?php
                     $cnt='';
 
-                    $sql = "SELECT DISTINCT v.TOTALPOINTS,a.UID,a.EQUIVALENT_POINTS,a.CRITERIA_CODE,a.VALUE,a.GRADED_BY, CONCAT(p.LASTNAME,' ',p.FIRSTNAME,' ',p.MIDDLENAME) as 'APPLICANT_NAME',p.UID,CONCAT(e.LASTNAME,' ',e.FIRSTNAME,' ',e.MIDDLENAME) as 'EVALUATOR_NAME',e.NO FROM applicants_points a INNER JOIN personal_info p ON p.UID = a.UID INNER JOIN evaluators_info_tbl e ON e.NO = a.GRADED_BY INNER JOIN view_rank v ON v.UID = a.UID WHERE a.UID = '".$user['UID']."'";
+                    $sql = "SELECT DISTINCT v.INTERVIEW_AVG,v.TOTALPOINTS,a.UID,a.EQUIVALENT_POINTS,a.CRITERIA_CODE,a.VALUE,a.GRADED_BY, CONCAT(p.LASTNAME,' ',p.FIRSTNAME,' ',p.MIDDLENAME) as 'APPLICANT_NAME',p.UID,CONCAT(e.LASTNAME,' ',e.FIRSTNAME,' ',e.MIDDLENAME) as 'EVALUATOR_NAME',e.NO FROM applicants_points a INNER JOIN personal_info p ON p.UID = a.UID INNER JOIN evaluators_info_tbl e ON e.NO = a.GRADED_BY INNER JOIN view_rank v ON v.UID = a.UID WHERE a.UID = '".$user['UID']."'";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                     	$h = '<section class= "status-score">
-							<h1 class= "passed">'.$row['TOTALPOINTS'].'</h1>
+							<h1 class= "passed">'.round($row['TOTALPOINTS'],2).'</h1>
 							<p>Congratulations! You are PASSED!</p>
 						</section>';
                       $cnt += 1;
