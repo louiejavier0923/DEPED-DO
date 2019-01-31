@@ -1,5 +1,5 @@
  $(function(){
-	 alert('');
+	 
 	 var childname = [];
 	var childBDay = [];
 	var CS = [];
@@ -206,7 +206,7 @@
     }
 	 
 	$('.edit_pds').click(function(){
-		alert('gag ');
+		
 		get_MultiRrows();
 		error = checking();
 		//window.location.href="application.php";
@@ -367,11 +367,15 @@
 				if(response.exe==='success'){
 					
 				
-					alert(response.exe);
+					$("#success-message").css('display','block');
+							document.getElementById('success-info').innerHTML = "Please input all required fields!";   	    	
+							document.getElementById('success-header').innerHTML = "Success!";
 				window.location.href="application.php";
 				}else 
 
-					alert(response.error);
+					$("#error-message").css('display','block');
+							document.getElementById('error-info').innerHTML = "Please input all required fields!";   	    	
+							document.getElementById('error-header').innerHTML = "Error!";
 				
 				
 			}

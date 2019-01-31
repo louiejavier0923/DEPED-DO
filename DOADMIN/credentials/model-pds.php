@@ -107,14 +107,35 @@
 		$error = '';
 		
 		$sql="";
-		/* for ($i = 0; $i < count($pds_children); $i++){
-			echo $pds_children[$i];
-		} */
+		
 		$sql .= "UPDATE `personal_info` SET `FIRSTNAME`='$pds_firstname', `LASTNAME`='$pds_surname', `MIDDLENAME`='$pds_middlename', `EXTENSION_NAME`='$pds_nameextension', `BIRTHDATE`='$pds_dateofbirth', `BIRTHPLACE`='$pds_placeofbirth', `GENDER`='$pds_gender', `HEIGHT`='$pds_height', `WEIGHT`='$pds_weight', `BLOOD_TYPE`='$pds_bloodtype', `CIVIL_STATUS`='$civil_status', `GSIS_ID_NO`='$pds_gsisno', `PAG_IBIG_NO`='$pds_pagibigno', `PHILHEALTH_NO`='$pds_philhealthno', `SSS_NO`='$pds_sssno', `TIN_NO`='$pds_tinno', `AGENCY_EMPLOYEE_NO`='$pds_agencyemployee', `CITIZENSHIP`='$pds_citizenship', `RESIDENTIAL_LOTNO`='$pds_rhouseblk', `RESIDENTIAL_STREET`='$pds_rstreet', `RESIDENTIAL_SUBDIVISION`='$pds_rsubdivision', `RESIDENTIAL_BARANGAY`='$pds_rbarangay', `RESIDENTIAL_MUNICIPALITY`='$pds_rmunicipality', `RESIDENTIAL_PROVINCE`='$pds_rprovince', `RESIDENTIAL_ZIP_CODE`='$pds_rzipcode', `PERMANENT_LOTNO`='$pds_phouseblk', `PERMANENT_STREET`='$pds_pstreet', `PERMANENT_SUBDIVISION`='$pds_psubdivision', `PERMANENT_BARANGAY`='$pds_pbarangay', `PERMANENT_MUNICIPALITY`='$pds_pmunicipality', `PERMANENT_PROVINCE`='$pds_pprovince', `PERMANENT_ZIP_CODE`='$pds_pzipcode', `TELEPHONE_NO`='$pds_telno', `MOBILE_NO`='$pds_mobileno' WHERE UID = '$id';";
 		
 		$sql .= " UPDATE `family_background` SET `spousesurname`='$pds_spousesurname', `spousefirstname`='$pds_spousefirstname', `spousemiddlename`='$pds_spousemiddlename', `spousenameextension`='$pds_spousenameextension', `spouseoccupation`='$pds_spouseoccupation', `businessname`='$pds_businessname', `businessaddress`='$pds_businessaddress', `businesstelno`='$pds_businesstelno', `fathersurname`='$pds_fathersurname', `fatherfirstname`='$pds_fatherfirstname', `fathernameextension`='$pds_fathernameextension', `fathermiddlename`='$pds_fathermiddlename', `mothermaindenname`='$pds_mothermaindenname', `motherfirstname`='$pds_motherfirstname', `mothersnameextension`='$pds_mothersnameextension', `mothersmiddlename`='$pds_mothersmiddlename' WHERE UID = '$id';";
 		
+		/* $sql .=" DELETE FROM `children` WHERE UID = '$id';";
+		for ($i = 0; $i < count($childname); $i++) {
+		$sql .=" INSERT INTO `children`(`UID`, `CHILDNAME`, `CHILDBIRTHDATE`) VALUES ('$id','". $childname[$i] ."','". $childBDay[$i] ."'); ";
+		}
 		
+		$sql .=" DELETE FROM `civill_service_eligibility` WHERE UID = '$id';";
+		for ($i = 0; $i < count($CS); $i++) {
+			$sql .=" INSERT INTO `civill_service_eligibility`(`NO`, `UID`, `TYPE_OF_EXAMINATION`, `RATING`, `DATE_OF_EXAMINATION`, `PLACE`, `LICENSE_NO`, `LICENSE_DATE_OF_VALIDITY`) VALUES ('$id','". $CS[$i] ."','". $CS_rating[$i] ."','". $CS_date[$i] ."','". $CS_place[$i] ."','". $CS_licenceNo[$i] ."','". $CS_licenceDate[$i] ."');";
+		}
+		
+		$sql .=" DELETE FROM `work_experience` WHERE UID = '$id';";
+		for ($i = 0; $i < count($pds_WE_FromDate); $i++) {
+			$sql .=" INSERT INTO `work_experience`(`UID`, `INCLUSIVE_DATES_FROM`, `INCLUSIVE_DATES_TO`, `POSITION_TITLE`, `DEPARTMENT_AGENCY_OFFICE_COMPANY`, `MONTHLY_SALARY`, `SALARY_JOB_PAY_GRADE`, `STATUS_OF_APPOINTMENT`, `GOVT_SERVICE`) VALUES ('$id','". $WE_FromDate[$i] ."','". $WE_ToDate[$i] ."','". $WE_PositionTitle[$i] ."','". $WE_Place[$i] ."','". $WE_MonthSalary[$i] ."','". $WE_Salary[$i] ."','". $WE_AppointmentStatus[$i] ."','". $WE_GovService[$i] ."');";
+		}
+		
+		$sql .=" DELETE FROM `voluntary_work` WHERE UID = '$id';";
+		for ($i = 0; $i < count($pds_VW_Name_Address); $i++) {
+		$sql .=" INSERT INTO `voluntary_work`(`UID`, `NAME`, `INCLUSIVE_DATES_FROM`, `INCLUSIVE_DATES_TO`, `NUMBER_OF_HOURS`, `POSITION`) VALUES ('$id','". $VW_Name_Address[$i] ."','". $VW_FromDate[$i] ."','". $VW_ToDate[$i] ."','". $VW_NumbHours[$i] ."','". $VW_Work[$i] ."');";
+		}
+		
+		$sql .=" DELETE FROM `learning_and_development` WHERE UID = '$id'";
+		for ($i = 0; $i < count($pds_LaD_Title); $i++) {
+		$sql .=" INSERT INTO `learning_and_development`(`UID`, `TITLE`, `INCLUSIVE_DATES_FROM`, `INCLUSIVE_DATES_TO`, `NUMBER_OF_HOURS`, `TYPE_OF_LD`, `CONDUCTED_SPONSORED_BY`) VALUES ('$id','". $LaD_Title[$i] ."','". $LaD_FromDate[$i] ."','". $LaD_ToDate[$i] ."','". $LaD_NumbHours[$i] ."','". $LaD_Type[$i] ."','". $LaD_ConductBy[$i] ."');";
+		} */
 		
 		
 		if ($conn->multi_query($sql)) 
