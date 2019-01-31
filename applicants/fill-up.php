@@ -584,7 +584,7 @@
 									?>
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "text" value='<?php echo $row['Career service']; ?>' class='pds_CS'>
+										<input type= "text" value='<?php echo $row['TYPE_OF_EXAMINATION']; ?>' class='pds_CS'>
 									</section>
 									<section class= "info">
 										<input type= "text" value='<?php echo $row['RATING']; ?>' class='pds_CS_rating'>
@@ -1340,6 +1340,7 @@
 						<section class= "footer-column">
 							<p>DATE</p>
 							<input type= "date" id="sign_date">
+					</section>
 						</section>
 					</section>
 				</section>
@@ -1362,8 +1363,8 @@
 		<?php include '../include/applicant-choosefile-modal.php';?>
 		<?php include '../include/applicant-pds-modal.php';?>
 		<?php include '../include/applicant-files-modal.php';?>
-		<?php include '../include/error-message-modal.php';?>
-
+		<?php include '../include/applicant-error-modal.php';?>
+		<?php include '../include/applicant-success-modal.php';?>
 	</body>
 	<script type="text/javascript" src="../jsp/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../jsp/pds-function.js"></script>

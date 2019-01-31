@@ -78,9 +78,11 @@ if(isset($_SESSION['ID'])){
 			</section>
 		</section>
 		<?php include 'include/error-message-modal.php';?>
+		<?php include 'include/success-message-modal.php';?>
 
 <!-- Custom Javascripts -->
 <script type= "text/javascript" src= "RES/PSB-RESOURCES/JS/login.js"></script>
+<script type= "text/javascript" src= "RES/PSB-RESOURCES/JS/functions.js"></script>
 
 	</body>
 </html>
