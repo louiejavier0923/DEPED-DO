@@ -1,0 +1,136 @@
+/* == ERROR MESSAGE MODAL ==  */
+
+.error-modal {
+	float: left;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.6);
+	top: 0;
+	left: 0;
+	z-index: 15;
+	display: none;
+}
+
+	.error-modal .error-container {
+		float: left;
+		width: 25%;
+		background-color: rgb(255, 255, 255);
+		border-radius: 5px;
+		margin: 7% 37.5%;
+		overflow: hidden;
+	}
+
+
+		.error-container img {
+			float: left;
+			width: 20%;
+			height: 50px;
+			margin: 20% 40% 0px 40%;
+		}
+
+		.error-container #error-header {
+			float: left;
+			width: 100%;
+			text-align: center;
+			font-size: 130%;
+			font-weight: bold;
+			color: rgb(110, 110, 110);
+			margin-top: 5px;
+		}
+
+		.error-container #error-info {
+			float: left;
+			width: 70%;
+			margin: 15%;
+			font-size: 80%;
+			color: rgb(150, 150, 150);
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.error-container #closeErrorBtn {
+			float: left;
+			width: 100%;
+			position: relative;
+			padding: 21px 0px;
+			border: none;
+			font-size: 95%;
+			margin-top: 5px;
+			background-color: rgb(255, 0, 0);
+			color: rgb(255, 255, 255);
+		}
+
+		.error-container #closeErrorBtn:focus {
+			outline: none;
+		}
+
+/* == ERROR MESSAGE MODAL ENDS HERE == */
+/* == success MESSAGE MODAL ==  */
+
+.success-modal {
+	float: left;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.6);
+	top: 0;
+	left: 0;
+	z-index: 20;
+	display: none;
+}
+
+	.success-modal .success-container {
+		float: left;
+		width: 25%;
+		background-color: rgb(255, 255, 255);
+		border-radius: 5px;
+		margin: 7% 37.5%;
+		overflow: hidden;
+	}
+
+
+		.success-container img {
+			float: left;
+			width: 20%;
+			height: 65px;
+			margin: 20% 40% 0px 40%;
+		}
+
+		.success-container #success-header {
+			float: left;
+			width: 100%;
+			text-align: center;
+			font-size: 130%;
+			font-weight: bold;
+			color: rgb(110, 110, 110);
+			margin-top: 5px;
+		}
+
+		.success-container #success-info {
+			float: left;
+			width: 70%;
+			margin: 15%;
+			font-size: 80%;
+			color: rgb(150, 150, 150);
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.success-container #closeSuccessBtn {
+			float: left;
+			width: 100%;
+			position: relative;
+			padding: 21px 0px;
+			border: none;
+			font-size: 95%;
+			margin-top: 15px;
+			background-color: rgb(0, 255, 0);
+			color: rgb(255, 255, 255);
+		}
+
+		.success-container #closeSuccessBtn:focus {
+			outline: none;
+		}
+
+/* == ERROR MESSAGE MODAL ENDS HERE == */
