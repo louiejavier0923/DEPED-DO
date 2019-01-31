@@ -21,7 +21,8 @@
 			<section class= "application-content">
 				<section class= "content-container">
 			
-				
+				      <div id="loading"></div>
+			          <div class="loading-container"></div>
                                   
                  <?php
                     $sql = "SELECT * FROM publish_vacancy a join schools s ON s.SID=a.PLACE_ASSIGNMENT WHERE a.isActive = '1' and a.APP_ISSET = '0'";
