@@ -10,7 +10,7 @@
     $mail = new PHPMailer(true);  
  
     switch($_POST['action']){
-
+        
         case 'vacant-function':
             require '../../include/session.php';
              $memo='';
@@ -146,7 +146,7 @@
         break;
 
         case 'update_applicant':
-            $output = "";
+            /*$output = "";
             $app_fname = $_POST['fname'];
             $app_mname = $_POST['mname'];
             $app_lname = $_POST['lname'];
@@ -155,6 +155,21 @@
             $result= mysqli_query($conn, $sql);
 
             $data = array(    
+                'message' => $output
+            );
+
+            echo json_encode($data);*/
+
+            $fname = $_POST['fname'];
+            $mname = $_POST['mname'];
+            $lname = $_POST['lname'];
+            $output = '';
+
+            $sql = "UPDATE personal_info SET FIRSTNAME = '".$fname."', LASTNAME = '".$lname."', MIDDLENAME = '".$mname."' WHERE UID = '".$user['UID']."';";
+            $result = mysqli_query($conn, $sql);
+            $output = 'Success!';
+
+            $data = array (
                 'message' => $output
             );
 
@@ -1599,6 +1614,29 @@ echo json_encode($data);
 
          echo json_encode($output);
     break;
+
+    case 'recab':
+        $educ_array = $_POST['EDUCATION'];
+                       
+           for ($i = 0; $i < count($educ_array); $i++) 
+           {
+                    # code...
+                       $educ = mysql_real_escape_string($educ_array[$i]);
+
+                       $myArray = explode(',', $educ);
+                       $ouput=($myArray);
+
+           }
+                
+          $output='asdasdasdwqw';
+        $data = array(
+        'data' => $ouput
+       
+      );
+  
+    echo json_encode($data);
+    
+      break;
 	
    }
 

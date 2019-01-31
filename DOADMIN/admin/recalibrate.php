@@ -52,7 +52,7 @@
         <div class="col-xs-12">
           <div class="box">
               <div class="box-header with-border">
-              <a href="" id="recalibrate" data-toggle="modal" class="btn btn-success btn-sm btn-flat">RECALIBRATE</a>
+              <a href="" id="recalibrate" data-toggle="modal" class="btn btn-success btn-sm btn-flat">RECALIBRATE using DO #22</a>
                
             </div>
             <div class="box-body">
@@ -61,48 +61,16 @@
                 
                 
                   <th>NO</th>
-                    <th>UID</th>
-                   <th>NAME</th>
-                   <th>PID</th>
-                  <th>CRITERIA</th>
-                   <th>VALUE</th>
-                  <th>EQUIVALENT POINTS</th>
-                  <th>TOTAL POINTS</th>
-                   <th>STATUS</th>
+                    <th>Applicant ID</th>
+                   <th>Full Name</th>
+                   <th>Email</th>
+                  <th>Total Points</th>
                 
                    
                  
                 </thead>
-                <tbody>
-                  <?php
-                    $cnt='';
-                    $sql = "SELECT DISTINCT (u.UID) as 'ID',u.FIRSTNAME,u.LASTNAME,u.MIDDLENAME,u.TOTALPOINTS,n.IS_CALIBRATED,n.PID,a.CRITERIA_CODE,a.VALUE,a.EQUIVALENT_POINTS from view_rank u INNER JOIN application n on u.UID = n.UID INNER JOIN applicants_points a ON a.UID = u.UID where n.STATUS = '0' and u.TOTALPOINTS < 70";
-                    $query = $conn->query($sql);
-                    while($row = $query->fetch_assoc()){
-                      $cnt += 1;
-                        $status = ($row['IS_CALIBRATED'])?'<span class="label label-success pull-right">CALIBRATED</span>':'<span class="label label-danger pull-right">NOT CALIBRATED</span>';
-                      echo "
-                        <tr>
-                          <td>".$cnt."</td>
-                           <td>".$row['ID']."</td>
-                            <td>".$row['PID']."</td>
-                           <td>".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']. "</td>
-                          <td>".$row['CRITERIA_CODE']."</td>
-                          
-
-                          
-                          <td>".$row['VALUE']."</td>
-                           <td>".$row['EQUIVALENT_POINTS']."</td>
-                            <td>".$row['TOTALPOINTS']."</td>
-                             <td>".$status."</td>
-                          
-                         
+                <tbody class='table-ranker'>
                   
-
-                        </tr>
-                      ";
-                    }
-                  ?>
                 </tbody>
               </table>
             
@@ -117,36 +85,77 @@
   <?php include 'includes/ranking_modal.php'; ?>
 </div>
 <?php include 'includes/scripts.php'; ?>
+<script src='../../jsp/pointing-function.js'></script>
 <script>
 $(function(){
    $('#select_year').change(function(){
     window.location.href = 'home.php?year='+$(this).val();
   });
 
-   $('#recalibrate').click(function(e){
-    e.preventDefault();
-              var value = $("#example1").map(function() {
-              var $tr = $(this);
-              var id = $tr.find("td:nth-child(6)").text();
-              return id;
-              }).toArray();
-
-              var uid = $("#example1").map(function() {
-              var $tr = $(this);
-              var id = $tr.find("td:nth-child(2)").text();
-              return id;
-              }).toArray();
-
-
-              alert(uid+value);
-
-
                  
-  });
-
-   
 });
 
+function loadBelowAvg(){
+
+  $.ajax({
+    type:'POST',
+    url:'../credentials/model-recalibrate.php',
+    data:{
+      action:'view-below-ranking'
+    }
+  }).done(function(data){
+    $('.table-ranker').html(data);
+  })
+
+}
+
+$(document).ready(function(){
+  loadBelowAvg();
+
+  $('body')
+  .on('click','#recalibrate',function(){
+    // alert('tanga ako! tanga!');
+    
+    $.ajax({
+
+      type:'POST',
+      url:'../credentials/model-recalibrate.php',
+      dataType:'json',
+      data:{
+          action:'select-applicant-recalibrate'
+      }
+
+    }).done(function(output){
+
+      // console.log(output);
+      for(var i=0;i<output.length;i++){
+
+          var new_points = parseFloat(educationPoints('22',output[i].GWA))+parseFloat(output[i].GWA_ADD);
+
+          $.ajax({
+              type:'POST',
+              url:'../credentials/model-recalibrate.php',
+              data:{
+                  action:'recalibrate_applicant',
+                  a:output[i].UID,
+                  b:output[i].PID,
+                  c:new_points
+              }
+          }).done(function(data){
+                  // console.log(data);
+              if(data){
+                  // alert('OKAY! -- '+data);
+                  saveAlert('Recalibration Done!');
+              }
+              loadBelowAvg();
+          })
+
+      }
+
+    })
+  })
+
+})
 
 
 
