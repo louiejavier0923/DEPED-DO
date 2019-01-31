@@ -3185,6 +3185,69 @@ iPad 3
 							}
 
 			/* == LOGS DESIGN ENDS HERE == */
+			/* ==  FAQS DESIGN == */
+
+			.body-container .body-faqs {
+				float: left;s
+				width: 100%;
+				margin-top: 20px;
+			}
+
+				.body-faqs .body-faqs-container {
+					float: left;
+					width: 100%;
+					margin-bottom: 50px;
+				}
+
+					.body-faqs-container h1 {
+						float: left;
+						width: 100%;
+						font-size: 170%;
+						font-family: 'Gentona';
+						text-transform: uppercase;
+						color: rgb(110, 110, 110);
+					}
+
+					.body-faqs-container .line {
+						float: left;
+						margin: 0px;
+						margin-bottom: 50px;
+						margin-right: 80%;
+					}
+
+					.body-faqs-container .faqs {
+						float: left;
+						width: 40%;
+						height: 730px;
+						display: inline-block;
+						margin: 0px 2.5%;
+						background-color: rgb(250, 250, 250);
+						border-radius: 5px;
+						box-shadow: 5px 5px 10px -9px rgb(30, 30, 30);
+						padding: 0px 2.5%;
+						margin-bottom: 30px;
+					}
+
+						.faqs h2 {
+							float: left;
+							margin: 0px;
+							margin-top: 5%;
+							font-size: 150%;
+							line-height: 25px;
+							text-transform: uppercase;
+							color: rgb(140, 140, 140);
+							margin-bottom: 20px;
+						}
+
+						.faqs ul {
+							margin-left: 7%;
+						}
+
+						.faqs ul li {
+							font-size: 85%;
+						}
+
+			/* == FAQS DESIGN ENDS HERE == */
 	/* == APPLICANT`S CONTENT CONTAINER ENDS HERE == */
 }
 
