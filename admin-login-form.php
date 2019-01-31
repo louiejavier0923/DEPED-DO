@@ -97,7 +97,7 @@ if(isset($_SESSION['ADMIN'])){
     	       	    break;
 
     	       	    default:
-    	       	            alert(response.message);
+    	       	    	$("#error-message").css('display','block');
     	       	    break;
     	       }
             
