@@ -274,5 +274,7 @@ $(function(){
 
 
 </script>
+<?php include 'includes/admin-error-modal.php';?>
+<?php include 'includes/admin-success-modal.php';?>
 </body>
 </html>
