@@ -125,15 +125,159 @@
 <script>
 
 $(function(){
+	
+	var childname = [];
+	var childBDay = [];
+	var CS = [];
+	var CS_rating = [];
+	var CS_date = [];
+	var CS_place = [];
+	var CS_licenceNo = [];
+	var CS_licenceDate = [];
+	var WE_FromDate = [];
+	var WE_ToDate = [];
+	var WE_PositionTitle = [];
+	var WE_Place = [];
+	var WE_MonthSalary = [];
+	var WE_Salary = [];
+	var WE_AppointmentStatus = [];
+	var WE_GovService = [];
+	var VW_Name_Address = [];
+	var VW_FromDate = [];
+	var VW_Todate = [];
+	var VW_NumbHours = [];
+	var VW_Work = [];
+	var LaD_Title = [];
+	var LaD_FromDate = [];
+	var LaD_ToDate = [];
+	var LaD_NumbHours = [];
+	var LaD_Type = [];
+	var LaD_ConductBy = [];
+	
+	function get_MultiRrows() {
+		childname = [];
+		childBDay = [];
+		CS = [];
+		CS_rating = [];
+		CS_date = [];
+		CS_place = [];
+		CS_licenceNo = [];
+		CS_licenceDate = [];
+		WE_FromDate = [];
+		WE_ToDate = [];
+		WE_PositionTitle = [];
+		WE_Place = [];
+		WE_MonthSalary = [];
+		WE_Salary = [];
+		WE_AppointmentStatus = [];
+		WE_GovService = [];
+		VW_Name_Address = [];
+		VW_FromDate = [];
+		VW_Todate = [];
+		VW_NumbHours = [];
+		VW_Work = [];
+		LaD_Title = [];
+		LaD_FromDate = [];
+		LaD_ToDate = [];
+		LaD_NumbHours = [];
+		LaD_Type = [];
+		LaD_ConductBy = [];
+	
+		
+		$('.pds_children').each(function(){
+			childname.push($(this).val());
+		});
+		$('.pds_childrenBdate').each(function(){
+			childBDay.push($(this).val());
+		});
+		$('.pds_CS').each(function(){
+			CS.push($(this).val());
+		});
+		$('.pds_CS_rating').each(function(){
+			CS_rating.push($(this).val());
+		});
+		$('.pds_CS_date').each(function(){
+			CS_date.push($(this).val());
+		});
+		$('.pds_CS_place').each(function(){
+			CS_place.push($(this).val());
+		});
+		$('.pds_CS_licenceNo').each(function(){
+			CS_licenceNo.push($(this).val());
+		});
+		$('.pds_CS_licenceDate').each(function(){
+			CS_licenceDate.push($(this).val());
+		});
+		$('.pds_WE_FromDate').each(function(){
+			WE_FromDate.push($(this).val());
+		});
+		$('.pds_WE_ToDate').each(function(){
+			WE_ToDate.push($(this).val());
+		});
+		$('.pds_WE_PositionTitle').each(function(){
+			WE_PositionTitle.push($(this).val());
+		});
+		$('.pds_WE_Place').each(function(){
+			WE_Place.push($(this).val());
+		});
+		$('.pds_WE_MonthSalary').each(function(){
+			WE_MonthSalary.push($(this).val());
+		});
+		$('.pds_WE_Salary').each(function(){
+			WE_Salary.push($(this).val());
+		});
+		$('.pds_WE_AppointmentStatus').each(function(){
+			WE_AppointmentStatus.push($(this).val());
+		});
+		$('.pds_WE_GovService').each(function(){
+			WE_GovService.push($(this).val());
+		});
+		$('.pds_VW_Name_Address').each(function(){
+			VW_Name_Address.push($(this).val());
+		});
+		$('.pds_VW_FromDate').each(function(){
+			VW_FromDate.push($(this).val());
+		});
+		$('.pds_VW_Todate').each(function(){
+			VW_Todate.push($(this).val());
+		});
+		$('.pds_VW_NumbHours').each(function(){
+			VW_NumbHours.push($(this).val());
+		});
+		$('.pds_VW_Work').each(function(){
+			VW_Work.push($(this).val());
+		});
+		$('.pds_LaD_Title').each(function(){
+			LaD_Title.push($(this).val());
+		});
+		$('.pds_LaD_FromDate').each(function(){
+			LaD_FromDate.push($(this).val());
+		});
+		$('.pds_LaD_ToDate').each(function(){
+			LaD_ToDate.push($(this).val());
+		});
+		$('.pds_LaD_NumbHours').each(function(){
+			LaD_NumbHours.push($(this).val());
+		});
+		$('.pds_LaD_Type').each(function(){
+			LaD_Type.push($(this).val());
+		});
+		$('.pds_LaD_ConductBy').each(function(){
+			LaD_ConductBy.push($(this).val());
+		});
+		
+		
+	}
+	
+	
+	
 	var texterror ='';
 	function checking() {
 		text='';
 		$('.single-fields input').css('background-color', "#ffffff");
 		$('.radio-fields').css('background-color', "#ffffff");
-		$(".errors div").html('');
 		count = 0;
 		$('.single-fields input').each(function(){
-			str = $(".errors div").html();
 			if ($(this).val().length == 0) {
 				if($(this).hasClass("not-require")){
 					
@@ -151,7 +295,6 @@ $(function(){
 			} 
 		});
 		/* if($('input[name="Gender"]:checked').length === 0) {
-			str = $(".errors div").html();
 			$(".gender-fields").css('background-color', "#ffa0a0f7");
 			//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Gender' );
 			
@@ -159,22 +302,19 @@ $(function(){
 			count++;
 		}
 		if($('input[name="Civil Status"]:checked').length === 0) {
-			str = $(".errors div").html();
 			$(".civilstat-fields").css('background-color', "#ffa0a0f7");
 			//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Civil Status' );
 			
 			texterror+=$(this).attr("name");count++;
 		}
 		if($('input[name="Citizenship"]:checked').length === 0) {
-			str = $(".errors div").html();
 			$(".citizenship-fields").css('background-color', "#ffa0a0f7");
 			//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Citizenship' );
 			texterror+=$(this).attr("name");
 			count++;
 		} */
 		$('.spouse-fields input').each(function(){
-			str = $(".errors div").html();
-			if(($('.pds_spousesurname').val().length != 0) ||  ($('.pds_spousefirstname').val().length != 0) ||  ($('.pds_spousenameextension').val().length != 0) ||  ($('.pds_spousemiddlename').val().length != 0) ){
+			if(($('.pds_spousesurname').val().length != 0) ||  ($('.pds_spousefirstname').val().length != 0)  ){
 				if ($(this).val().length == 0) {
 					if($(this).hasClass("not-require")){
 					
@@ -277,7 +417,7 @@ $(function(){
 		
 			$.ajax({
 			type: 'POST',
-			url: '../credentials/model.php',
+			url: '../credentials/model-pds.php',
 			data: {action:action,id:id,
 				
 				pds_surname:pds_surname,
@@ -367,15 +507,14 @@ $(function(){
 				
 				
 				if(response.exe==='success'){
-					
-					$('#success-pds').modal('show');
+						alert('success');
+						$('#success-pds').modal('show');
 							$("#success-message").css('display','block');
 							document.getElementById('success-info').innerHTML = "Succeessfully update Info.!";   	    	
 							document.getElementById('success-header').innerHTML = "Success!";
-				window.location.href="application.php";
 				}else {
 					
-				
+				alert('error');
 					$('#error-pds').modal('show');
 							$("#error-message").css('display','block');
 							document.getElementById('error-info').innerHTML = "Please input all required fields!";   	    	
@@ -393,10 +532,11 @@ $(function(){
 		$('#view_pds').modal('show');
 		action='view_pds_function';
 		$("#view_pds input").val("");
-
+		id = $(this).attr("data-id");
+		alert(id);
 		$.ajax({
 			type: 'POST',
-			url: '../credentials/model.php',
+			url: '../credentials/model-pds.php',
 			data: {action:action,id:id},
 			dataType: 'json',
 			success: function(response){

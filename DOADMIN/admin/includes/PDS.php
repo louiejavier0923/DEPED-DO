@@ -15,7 +15,7 @@
 										<p>2. Surname</p>
 									</section>
 									<section class= "pi-row-input">
-										<input type= "text" class="pds_surname" name='Surname' maxlength ="45" value="<?php //echo $user['LASTNAME'] ?>"> 
+										<input type= "text" class="pds_surname" name='Surname' maxlength ="45" value=""> 
 									</section>
 								</section>
 								<section class= "pi-row">
