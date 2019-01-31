@@ -577,6 +577,8 @@ $(document).ready(function() {
          
          
             var vacant = $(this).data('id');
+                $('#loading').css("display","block");
+                $('.loading-container').css("display","block");
            
     $.ajax ({
         url: '../DOADMIN/credentials/model.php',
@@ -590,11 +592,15 @@ $(document).ready(function() {
                       
                       switch(data.message){
                             case 'success':
+                              $('#loading').css("display","none");
+                $('.loading-container').css("display","none");
                                   window.location.href='finish.php'
                                  
                             break;
 
                             default:
+                              $('#loading').css("display","none");
+                              $('.loading-container').css("display","none");
                                  alert(data.message);
                             break;
 

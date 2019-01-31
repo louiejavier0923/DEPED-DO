@@ -104,7 +104,7 @@
                 <tbody>
                   <?php
                     $cnt='';
-                    $sql = "SELECT * FROM view_rank where TOTALPOINTS > 70";
+                    $sql = "SELECT DISTINCT LASTNAME,FIRSTNAME,MIDDLENAME,EXTENSION_NAME,EMAIL,EDUCATION,EXPERIENCE,ELIGIBILITY,TRAINING,DEMO,INTERVIEW_AVG,TOTALPOINTS,COMMUNICATION  FROM view_rank WHERE TOTALPOINTS > 70";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $cnt += 1;

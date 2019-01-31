@@ -19,26 +19,20 @@
 				<h1>Account Settings</h1>
 				<div class= "line"></div>
 				<section class= "viewAccount" id= "viewContent">
-					<?php
-						$sql = "SELECT FIRSTNAME, LASTNAME, MIDDLENAME FROM personal_info WHERE UID= '".$user['UID']."'";
-						$query = $conn->query($sql);
-						while($row = $query->fetch_assoc()){
-					?>
+				
 					<section class= "input-field">
 						<label>First Name</label>
-						<input type= "text" value= "<?php echo $row['FIRSTNAME'];?>" class= "fullname" name= "applicant_firstname" id= "applicant_firstname">
+						<input type= "text" value= "<?php echo $user['FIRSTNAME'];?>" class= "fullname" name= "applicant_firstname" id= "applicant_firstname">
 					</section>
 					<section class= "input-field">
 						<label>Middle Name</label>
-						<input type= "text" value= "<?php echo $row['MIDDLENAME'];?>" class= "fullname" name= "applicant_firstname" id= "applicant_middlename">
+						<input type= "text" value= "<?php echo $user['MIDDLENAME'];?>" class= "fullname" name= "applicant_firstname" id= "applicant_middlename">
 					</section>
 					<section class= "input-field">
 						<label>Last Name</label>
-						<input type= "text" value= "<?php echo $row['LASTNAME'];?>" class= "fullname" name= "applicant_firstname" id= "applicant_lastname">
+						<input type= "text" value= "<?php echo $user['LASTNAME'];?>" class= "fullname" name= "applicant_firstname" id= "applicant_lastname">
 					</section>
-					<?php 
-						}
-					?>
+					
 					<section class= "button-field">
 						<button id= "editInfoBtn">EDIT</button>
 						<button id= "okInfoBtn">OK</button>

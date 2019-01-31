@@ -76,7 +76,7 @@
                 <tbody>
                   <?php
                     $cnt='';
-                    $sql = "SELECT DISTINCT (u.UID) as 'ID',u.FIRSTNAME,u.LASTNAME,u.MIDDLENAME,u.TOTALPOINTS from view_rank u INNER JOIN application n on u.UID = n.UID   where n.STATUS = '0' and u.TOTALPOINTS < 70";
+                    $sql = "SELECT DISTINCT (u.UID) as 'ID',u.FIRSTNAME,u.LASTNAME,u.MIDDLENAME,u.TOTALPOINTS,n.IS_CALIBRATED,n.PID,a.CRITERIA_CODE,a.VALUE,a.EQUIVALENT_POINTS from view_rank u INNER JOIN application n on u.UID = n.UID INNER JOIN applicants_points a ON a.UID = u.UID where n.STATUS = '0' and u.TOTALPOINTS < 70";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $cnt += 1;
@@ -84,7 +84,7 @@
                       echo "
                         <tr>
                           <td>".$cnt."</td>
-                           <td>".$row['UID']."</td>
+                           <td>".$row['ID']."</td>
                             <td>".$row['PID']."</td>
                            <td>".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']. "</td>
                           <td>".$row['CRITERIA_CODE']."</td>
