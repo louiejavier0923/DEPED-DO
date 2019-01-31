@@ -70,44 +70,46 @@
 		$pds_motherfirstname = $_POST['pds_motherfirstname'];
 		$pds_mothersnameextension = $_POST['pds_mothersnameextension'];
 		$pds_mothersmiddlename = $_POST['pds_mothersmiddlename'];
-		$pds_children = $_POST['pds_children'];
-		$pds_childrenBdate = $_POST['pds_childrenBdate'];
+		/* $pds_children = $_POST['childname'];
+		$pds_childrenBdate = $_POST['childBDay'];
 		
-		$pds_CS = $_POST['pds_CS'];
-		$pds_CS_rating = $_POST['pds_CS_rating'];
-		$pds_CS_date = $_POST['pds_CS_date'];
-		$pds_CS_place = $_POST['pds_CS_place'];
-		$pds_CS_licenceNo = $_POST['pds_CS_licenceNo'];
-		$pds_CS_licenceDate   = $_POST['pds_CS_licenceDate'];
+		$pds_CS = $_POST['CS'];
+		$pds_CS_rating = $_POST['CS_rating'];
+		$pds_CS_date = $_POST['CS_date'];
+		$pds_CS_place = $_POST['CS_place'];
+		$pds_CS_licenceNo = $_POST['CS_licenceNo'];
+		$pds_CS_licenceDate   = $_POST['CS_licenceDate'];
 		
-		$pds_WE_FromDate = $_POST['pds_WE_FromDate'];
-		$pds_WE_ToDate = $_POST['pds_WE_ToDate'];
-		$pds_WE_PositionTitle = $_POST['pds_WE_PositionTitle'];
-		$pds_WE_Place = $_POST['pds_WE_Place'];
-		$pds_WE_MonthSalary = $_POST['pds_WE_MonthSalary'];
-		$pds_WE_Salary = $_POST['pds_WE_Salary'];
-		$pds_WE_AppointmentStatus = $_POST['pds_WE_AppointmentStatus'];
-		$pds_WE_GovService = $_POST['pds_WE_GovService'];
+		$pds_WE_FromDate = $_POST['WE_FromDate'];
+		$pds_WE_ToDate = $_POST['WE_ToDate'];
+		$pds_WE_PositionTitle = $_POST['WE_PositionTitle'];
+		$pds_WE_Place = $_POST['WE_Place'];
+		$pds_WE_MonthSalary = $_POST['WE_MonthSalary'];
+		$pds_WE_Salary = $_POST['WE_Salary'];
+		$pds_WE_AppointmentStatus = $_POST['WE_AppointmentStatus'];
+		$pds_WE_GovService = $_POST['WE_GovService'];
 		
-		$pds_VW_Name_Address = $_POST['pds_VW_Name_Address'];
-		$pds_VW_FromDate = $_POST['pds_VW_FromDate'];
-		$pds_VW_Todate = $_POST['pds_VW_Todate'];
-		$pds_VW_NumbHours = $_POST['pds_VW_NumbHours'];
-		$pds_VW_Work = $_POST['pds_VW_Work'];
+		$pds_VW_Name_Address = $_POST['VW_Name_Address'];
+		$pds_VW_FromDate = $_POST['VW_FromDate'];
+		$pds_VW_Todate = $_POST['VW_Todate'];
+		$pds_VW_NumbHours = $_POST['VW_NumbHours'];
+		$pds_VW_Work = $_POST['VW_Work'];
 		
-		$pds_LaD_Title = $_POST['pds_LaD_Title'];
-		$pds_LaD_FromDate = $_POST['pds_LaD_FromDate'];
-		$pds_LaD_ToDate = $_POST['pds_LaD_ToDate'];
-		$pds_LaD_NumbHours = $_POST['pds_LaD_NumbHours'];
-		$pds_LaD_Type = $_POST['pds_LaD_Type'];
-		$pds_LaD_ConductBy = $_POST['pds_LaD_ConductBy'];
-		
+		$pds_LaD_Title = $_POST['LaD_Title'];
+		$pds_LaD_FromDate = $_POST['LaD_FromDate'];
+		$pds_LaD_ToDate = $_POST['LaD_ToDate'];
+		$pds_LaD_NumbHours = $_POST['LaD_NumbHours'];
+		$pds_LaD_Type = $_POST['LaD_Type'];
+		$pds_LaD_ConductBy = $_POST['LaD_ConductBy'];
+		 */
 		$output = '';
 		$exe = '';
 		$error = '';
 		
 		$sql="";
-		
+		/* for ($i = 0; $i < count($pds_children); $i++){
+			echo $pds_children[$i];
+		} */
 		$sql .= "UPDATE `personal_info` SET `FIRSTNAME`='$pds_firstname', `LASTNAME`='$pds_surname', `MIDDLENAME`='$pds_middlename', `EXTENSION_NAME`='$pds_nameextension', `BIRTHDATE`='$pds_dateofbirth', `BIRTHPLACE`='$pds_placeofbirth', `GENDER`='$pds_gender', `HEIGHT`='$pds_height', `WEIGHT`='$pds_weight', `BLOOD_TYPE`='$pds_bloodtype', `CIVIL_STATUS`='$civil_status', `GSIS_ID_NO`='$pds_gsisno', `PAG_IBIG_NO`='$pds_pagibigno', `PHILHEALTH_NO`='$pds_philhealthno', `SSS_NO`='$pds_sssno', `TIN_NO`='$pds_tinno', `AGENCY_EMPLOYEE_NO`='$pds_agencyemployee', `CITIZENSHIP`='$pds_citizenship', `RESIDENTIAL_LOTNO`='$pds_rhouseblk', `RESIDENTIAL_STREET`='$pds_rstreet', `RESIDENTIAL_SUBDIVISION`='$pds_rsubdivision', `RESIDENTIAL_BARANGAY`='$pds_rbarangay', `RESIDENTIAL_MUNICIPALITY`='$pds_rmunicipality', `RESIDENTIAL_PROVINCE`='$pds_rprovince', `RESIDENTIAL_ZIP_CODE`='$pds_rzipcode', `PERMANENT_LOTNO`='$pds_phouseblk', `PERMANENT_STREET`='$pds_pstreet', `PERMANENT_SUBDIVISION`='$pds_psubdivision', `PERMANENT_BARANGAY`='$pds_pbarangay', `PERMANENT_MUNICIPALITY`='$pds_pmunicipality', `PERMANENT_PROVINCE`='$pds_pprovince', `PERMANENT_ZIP_CODE`='$pds_pzipcode', `TELEPHONE_NO`='$pds_telno', `MOBILE_NO`='$pds_mobileno' WHERE UID = '$id';";
 		
 		$sql .= " UPDATE `family_background` SET `spousesurname`='$pds_spousesurname', `spousefirstname`='$pds_spousefirstname', `spousemiddlename`='$pds_spousemiddlename', `spousenameextension`='$pds_spousenameextension', `spouseoccupation`='$pds_spouseoccupation', `businessname`='$pds_businessname', `businessaddress`='$pds_businessaddress', `businesstelno`='$pds_businesstelno', `fathersurname`='$pds_fathersurname', `fatherfirstname`='$pds_fatherfirstname', `fathernameextension`='$pds_fathernameextension', `fathermiddlename`='$pds_fathermiddlename', `mothermaindenname`='$pds_mothermaindenname', `motherfirstname`='$pds_motherfirstname', `mothersnameextension`='$pds_mothersnameextension', `mothersmiddlename`='$pds_mothersmiddlename' WHERE UID = '$id';";
@@ -132,7 +134,7 @@
 		);
 
 	echo json_encode($data);
-		
+		 
 	break;
 	
 	case 'add_user_with_pds_info_function':

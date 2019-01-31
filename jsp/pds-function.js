@@ -426,8 +426,9 @@ $(".pds_rzipcode").keypress(function (e) {
 
 
 	$('.edit_pds').click(function(){
+		
 	error = checking();
-	//window.location.href="application.php";
+	get_MultiRrows();
 	action='update_pds_function';
 	id = $(this).attr("data-id");
 	//personal info
@@ -489,113 +490,113 @@ $(".pds_rzipcode").keypress(function (e) {
 	
 	
 	
-	if (error < 1) {
-		
-		$.ajax({
-		type: 'POST',
-		url: '../DOADMIN/credentials/model-pds.php',
-		data: {action:action,id:id,
+		if (error < 1) {
 			
-			pds_surname:pds_surname,
-			pds_firstname:pds_firstname,
-			pds_nameextension:pds_nameextension,
-			pds_middlename:pds_middlename,
-			pds_dateofbirth:pds_dateofbirth,
-			pds_placeofbirth:pds_placeofbirth,
-			pds_gender:pds_gender,
-			civil_status:civil_status,
-			pds_height:pds_height,
-			pds_weight:pds_weight,
-			pds_bloodtype:pds_bloodtype,
-			pds_gsisno:pds_gsisno,
-			pds_pagibigno:pds_pagibigno,
-			pds_philhealthno:pds_philhealthno,
-			pds_sssno:pds_sssno,
-			pds_tinno:pds_tinno,
-			pds_agencyemployee:pds_agencyemployee,
-			pds_citizenship:pds_citizenship,
-			pds_country:pds_country,
-			pds_rhouseblk:pds_rhouseblk,
-			pds_rstreet:pds_rstreet,
-			pds_rsubdivision:pds_rsubdivision,
-			pds_rbarangay:pds_rbarangay,
-			pds_rmunicipality:pds_rmunicipality,
-			pds_rprovince:pds_rprovince,
-			pds_rzipcode:pds_rzipcode,
-			pds_phouseblk:pds_phouseblk,
-			pds_pstreet:pds_pstreet,
-			pds_psubdivision:pds_psubdivision,
-			pds_pbarangay:pds_pbarangay,
-			pds_pmunicipality:pds_pmunicipality,
-			pds_pprovince:pds_pprovince,
-			pds_pzipcode:pds_pzipcode,
-			pds_telno:pds_telno,
-			pds_mobileno:pds_mobileno,
-			pds_emailaddress:pds_emailaddress,
-			
-			pds_spousesurname:pds_spousesurname,
-			pds_spousefirstname:pds_spousefirstname,
-			pds_spousenameextension:pds_spousenameextension,
-			pds_spousemiddlename:pds_spousemiddlename,
-			pds_spouseoccupation:pds_spouseoccupation,
-			pds_businessname:pds_businessname,
-			pds_businessaddress:pds_businessaddress,
-			pds_businesstelno:pds_businesstelno,
-			pds_fathersurname:pds_fathersurname,
-			pds_fatherfirstname:pds_fatherfirstname,
-			pds_fathernameextension:pds_fathernameextension,
-			pds_fathermiddlename:pds_fathermiddlename,
-			pds_mothermaindenname:pds_mothermaindenname,
-			pds_motherfirstname:pds_motherfirstname,
-			pds_mothersnameextension:pds_mothersnameextension,
-			pds_mothersmiddlename:pds_mothersmiddlename,
-			
-			childname:childname,
-			childBDay:childBDay,
-			CS:CS,
-			CS_rating:CS_rating,
-			CS_date:CS_date,
-			CS_place:CS_place,
-			CS_licenceNo:CS_licenceNo,
-			CS_licenceDate:CS_licenceDate,
-			WE_FromDate:WE_FromDate,
-			WE_ToDate:WE_ToDate,
-			WE_PositionTitle:WE_PositionTitle,
-			WE_Place:WE_Place,
-			WE_MonthSalary:WE_MonthSalary,
-			WE_Salary:WE_Salary,
-			WE_AppointmentStatus:WE_AppointmentStatus,
-			WE_GovService:WE_GovService,
-			VW_Name_Address:VW_Name_Address,
-			VW_FromDate:VW_FromDate,
-			VW_Todate:VW_Todate,
-			VW_NumbHours:VW_NumbHours,
-			VW_Work:VW_Work,
-			LaD_Title:LaD_Title,
-			LaD_FromDate:LaD_FromDate,
-			LaD_ToDate:LaD_ToDate,
-			LaD_NumbHours:LaD_NumbHours,
-			LaD_Type:LaD_Type,
-			LaD_ConductBy:LaD_ConductBy
-			},
-		dataType: 'json',
-		success: function(response){
-			
-			
-			if(response.exe==='success'){
+			$.ajax({
+			type: 'POST',
+			url: '../DOADMIN/credentials/model-pds.php',
+			data: {action:action,id:id,
 				
-			
-				alert(response.exe);
-			window.location.href="application.php";
-			}else 
+				pds_surname:pds_surname,
+				pds_firstname:pds_firstname,
+				pds_nameextension:pds_nameextension,
+				pds_middlename:pds_middlename,
+				pds_dateofbirth:pds_dateofbirth,
+				pds_placeofbirth:pds_placeofbirth,
+				pds_gender:pds_gender,
+				civil_status:civil_status,
+				pds_height:pds_height,
+				pds_weight:pds_weight,
+				pds_bloodtype:pds_bloodtype,
+				pds_gsisno:pds_gsisno,
+				pds_pagibigno:pds_pagibigno,
+				pds_philhealthno:pds_philhealthno,
+				pds_sssno:pds_sssno,
+				pds_tinno:pds_tinno,
+				pds_agencyemployee:pds_agencyemployee,
+				pds_citizenship:pds_citizenship,
+				pds_country:pds_country,
+				pds_rhouseblk:pds_rhouseblk,
+				pds_rstreet:pds_rstreet,
+				pds_rsubdivision:pds_rsubdivision,
+				pds_rbarangay:pds_rbarangay,
+				pds_rmunicipality:pds_rmunicipality,
+				pds_rprovince:pds_rprovince,
+				pds_rzipcode:pds_rzipcode,
+				pds_phouseblk:pds_phouseblk,
+				pds_pstreet:pds_pstreet,
+				pds_psubdivision:pds_psubdivision,
+				pds_pbarangay:pds_pbarangay,
+				pds_pmunicipality:pds_pmunicipality,
+				pds_pprovince:pds_pprovince,
+				pds_pzipcode:pds_pzipcode,
+				pds_telno:pds_telno,
+				pds_mobileno:pds_mobileno,
+				pds_emailaddress:pds_emailaddress,
+				
+				pds_spousesurname:pds_spousesurname,
+				pds_spousefirstname:pds_spousefirstname,
+				pds_spousenameextension:pds_spousenameextension,
+				pds_spousemiddlename:pds_spousemiddlename,
+				pds_spouseoccupation:pds_spouseoccupation,
+				pds_businessname:pds_businessname,
+				pds_businessaddress:pds_businessaddress,
+				pds_businesstelno:pds_businesstelno,
+				pds_fathersurname:pds_fathersurname,
+				pds_fatherfirstname:pds_fatherfirstname,
+				pds_fathernameextension:pds_fathernameextension,
+				pds_fathermiddlename:pds_fathermiddlename,
+				pds_mothermaindenname:pds_mothermaindenname,
+				pds_motherfirstname:pds_motherfirstname,
+				pds_mothersnameextension:pds_mothersnameextension,
+				pds_mothersmiddlename:pds_mothersmiddlename,
+				
+				childname:childname,
+				childBDay:childBDay,
+				CS:CS,
+				CS_rating:CS_rating,
+				CS_date:CS_date,
+				CS_place:CS_place,
+				CS_licenceNo:CS_licenceNo,
+				CS_licenceDate:CS_licenceDate,
+				WE_FromDate:WE_FromDate,
+				WE_ToDate:WE_ToDate,
+				WE_PositionTitle:WE_PositionTitle,
+				WE_Place:WE_Place,
+				WE_MonthSalary:WE_MonthSalary,
+				WE_Salary:WE_Salary,
+				WE_AppointmentStatus:WE_AppointmentStatus,
+				WE_GovService:WE_GovService,
+				VW_Name_Address:VW_Name_Address,
+				VW_FromDate:VW_FromDate,
+				VW_Todate:VW_Todate,
+				VW_NumbHours:VW_NumbHours,
+				VW_Work:VW_Work,
+				LaD_Title:LaD_Title,
+				LaD_FromDate:LaD_FromDate,
+				LaD_ToDate:LaD_ToDate,
+				LaD_NumbHours:LaD_NumbHours,
+				LaD_Type:LaD_Type,
+				LaD_ConductBy:LaD_ConductBy
+				},
+			dataType: 'json',
+			success: function(response){
+				
+				
+				if(response.exe==='success'){
+					
+				
+					alert(response.exe);
+				window.location.href="application.php";
+				}else 
 
-				alert(response.error);
-			
-			
+					alert(response.error);
+				
+				
+			}
+			});
+
 		}
-		});
-	
-	}
 	});
 	
 	$('.save_pds').click(function(){
