@@ -29,12 +29,6 @@ $(function(){
 	$('.pds_telno').keyup(function(e){
 		$(this).val($(this).val().replace(/(\d{3})\-?(\d{4})/,'$1-$2'));
 	});
-	$("#scroll").click(function(){
-		alert("qweqwe");
-		$("#error").modal("show");
-
-
-	});
 
 	/* $(".pds_pagibigno").keyup(function (e) {
       if($(this).val().length === 14) return;
@@ -62,6 +56,8 @@ $(function(){
 			if($(this).hasClass("not-require")){
 				
 			}else{
+				
+    	       	    	$("#error-message").css('display','block');
 				$(this).css('background-color', "#ffa0a0f7");
 			   
 			   //$(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
@@ -590,6 +586,7 @@ $(".pds_rzipcode").keypress(function (e) {
 				alert(response.exe);
 			window.location.href="application.php";
 			}else 
+
 				alert(response.error);
 			
 			

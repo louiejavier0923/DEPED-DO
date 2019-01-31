@@ -7,8 +7,6 @@
 	<?php include '../include/applicant-header-content.php';?>
 	</head>
 	<body>
-			              <button type= 'submit' class='scroll' id="scroll">Scroll</button>
-                   
 			<?php include '../include/error-message-modal.php'; ?>
 		<section class= "applicant-header-container">
 			<?php include '../include/applicant-header-container.php';?>
@@ -69,7 +67,7 @@
 							<p>3. Date of birth<br>(mm/dd/yyyy)</p>
 						</section>
 						<section class= "pi-row-input">
-							<input type= "date" name='Date of Birth' class="pds_dateofbirth" value="<?php echo $user['BIRTHDATE'] ?>">
+							<input type= "date" max="2000-12-30" min="1954-01-01" name='Date of Birth' class="pds_dateofbirth" value="<?php echo $user['BIRTHDATE'] ?>">
 						</section>
 					</section>
 					<section class= "pi-row">
@@ -1335,13 +1333,13 @@
 						</section>
 					</section>
 					<section class= "pds-footer singl">
-						<section class= "footer-column single-fields">
+						<section class= "footer-column">
 							<p>SIGNATURE</p>
 							<input type= "text">
 						</section>
 						<section class= "footer-column">
 							<p>DATE</p>
-							<input type= "date" id="sign_date"
+							<input type= "date" id="sign_date">
 						</section>
 					</section>
 				</section>
@@ -1365,6 +1363,7 @@
 		<?php include '../include/applicant-pds-modal.php';?>
 		<?php include '../include/applicant-files-modal.php';?>
 		<?php include '../include/error-message-modal.php';?>
+
 	</body>
 	<script type="text/javascript" src="../jsp/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../jsp/pds-function.js"></script>
