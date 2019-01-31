@@ -95,6 +95,7 @@ function update_applicant(action = 'update_applicant') {
     //FIRST NAME
     if (app_firstname == '') {
         $('#applicant_firstname').css("border", "solid 1px rgb(255, 0, 0)");
+        $('#error-message').css('display', 'block');
     }
     else {
         $('#applicant_firstname').css("border", "solid 1px rgb(0, 255, 0)");

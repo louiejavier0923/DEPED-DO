@@ -1,4 +1,4 @@
-
+ <link rel ="icon" href="../img/logo.png">
 <?php include'../DOADMIN/CREDENTIALS/connection.php';?>
 <?php include'../include/session.php';?>
 <meta name= "viewport" content= "width= device-width, initial-scale= 1">
