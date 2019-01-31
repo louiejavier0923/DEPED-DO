@@ -70,37 +70,35 @@
 		$pds_motherfirstname = $_POST['pds_motherfirstname'];
 		$pds_mothersnameextension = $_POST['pds_mothersnameextension'];
 		$pds_mothersmiddlename = $_POST['pds_mothersmiddlename'];
-		$pds_children = $_POST['pds_children'];
-		$pds_childrenBdate = $_POST['pds_childrenBdate'];
 		
-		$pds_CS = $_POST['pds_CS'];
-		$pds_CS_rating = $_POST['pds_CS_rating'];
-		$pds_CS_date = $_POST['pds_CS_date'];
-		$pds_CS_place = $_POST['pds_CS_place'];
-		$pds_CS_licenceNo = $_POST['pds_CS_licenceNo'];
-		$pds_CS_licenceDate   = $_POST['pds_CS_licenceDate'];
+		$childname = $_POST['childname'];
+		$childBDay = $_POST['childBDay'];
+		$CS = $_POST['CS'];
+		$CS_rating = $_POST['CS_rating'];
+		$CS_date = $_POST['CS_date'];
+		$CS_place = $_POST['CS_place'];
+		$CS_licenceNo = $_POST['CS_licenceNo'];
+		$CS_licenceDate = $_POST['CS_licenceDate'];
+		$WE_FromDate = $_POST['WE_FromDate'];
+		$WE_ToDate = $_POST['WE_ToDate'];
+		$WE_PositionTitle = $_POST['WE_PositionTitle'];
+		$WE_Place = $_POST['WE_Place'];
+		$WE_MonthSalary = $_POST['WE_MonthSalary'];
+		$WE_Salary = $_POST['WE_Salary'];
+		$WE_AppointmentStatus = $_POST['WE_AppointmentStatus'];
+		$WE_GovService = $_POST['WE_GovService'];
+		$VW_Name_Address = $_POST['VW_Name_Address'];
+		$VW_FromDate = $_POST['VW_FromDate'];
+		$VW_Todate = $_POST['VW_Todate'];
+		$VW_NumbHours = $_POST['VW_NumbHours'];
+		$VW_Work = $_POST['VW_Work'];
+		$LaD_Title = $_POST['LaD_Title'];
+		$LaD_FromDate = $_POST['LaD_FromDate'];
+		$LaD_ToDate = $_POST['LaD_ToDate'];
+		$LaD_NumbHours = $_POST['LaD_NumbHours'];
+		$LaD_Type = $_POST['LaD_Type'];
+		$LaD_ConductBy = $_POST['LaD_ConductBy'];
 		
-		$pds_WE_FromDate = $_POST['pds_WE_FromDate'];
-		$pds_WE_ToDate = $_POST['pds_WE_ToDate'];
-		$pds_WE_PositionTitle = $_POST['pds_WE_PositionTitle'];
-		$pds_WE_Place = $_POST['pds_WE_Place'];
-		$pds_WE_MonthSalary = $_POST['pds_WE_MonthSalary'];
-		$pds_WE_Salary = $_POST['pds_WE_Salary'];
-		$pds_WE_AppointmentStatus = $_POST['pds_WE_AppointmentStatus'];
-		$pds_WE_GovService = $_POST['pds_WE_GovService'];
-		
-		$pds_VW_Name_Address = $_POST['pds_VW_Name_Address'];
-		$pds_VW_FromDate = $_POST['pds_VW_FromDate'];
-		$pds_VW_Todate = $_POST['pds_VW_Todate'];
-		$pds_VW_NumbHours = $_POST['pds_VW_NumbHours'];
-		$pds_VW_Work = $_POST['pds_VW_Work'];
-		
-		$pds_LaD_Title = $_POST['pds_LaD_Title'];
-		$pds_LaD_FromDate = $_POST['pds_LaD_FromDate'];
-		$pds_LaD_ToDate = $_POST['pds_LaD_ToDate'];
-		$pds_LaD_NumbHours = $_POST['pds_LaD_NumbHours'];
-		$pds_LaD_Type = $_POST['pds_LaD_Type'];
-		$pds_LaD_ConductBy = $_POST['pds_LaD_ConductBy'];
 		
 		$output = '';
 		$exe = '';
