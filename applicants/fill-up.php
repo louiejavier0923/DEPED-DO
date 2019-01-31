@@ -449,7 +449,107 @@
 											}
 										} 
 										?>
-										
+										<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section>
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section>
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section>
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section>
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section><section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section><section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section><section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section>
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section>
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section>
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section>
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section>
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section>
 									</section>
 								</section>
 							</section>
@@ -917,96 +1017,6 @@
 										<input type= "text">
 									</section>
 								</section>
-								<section class= "content-info">
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "date">
-										<input type= "date">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-								</section>
-								<section class= "content-info">
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "date">
-										<input type= "date">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-								</section>
-								<section class= "content-info">
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "date">
-										<input type= "date">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-								</section>
-								<section class= "content-info">
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "date">
-										<input type= "date">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-								</section>
-								<section class= "content-info">
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "date">
-										<input type= "date">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-								</section>
-								<section class= "content-info">
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "date">
-										<input type= "date">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-									<section class= "info">
-										<input type= "text">
-									</section>
-								</section>
 								<p id= "separate">(Continue in separate sheet if necessary)</p>
 							</section>
 						</section>
@@ -1098,7 +1108,7 @@
 						</section>
 					</section>
 				</section>
-			</section>
+			
 			<section class='errors'>
 				<div>
 				</div>
@@ -1111,15 +1121,15 @@
 				<button type= "submit" id= "submit_file">ATTACH FILE</button>
 			</section>
 		</section>
-	
-		<?php //include '../include/user-info-modal.php';?>
-		<?php //include '../include/applicant-image-modal.php';?>
-		<?php// include '../include/applicant-attach-modal.php';?>
-		<?php //include '../include/applicant-choosefile-modal.php';?>
-		<?php //include '../include/applicant-pds-modal.php';?>
-		<?php //include '../include/applicant-files-modal.php';?>
-		<?php //include '../include/applicant-error-modal.php';?>
-		<?php //include '../include/applicant-success-modal.php';?>
+		</section>
+		<?php include '../include/user-info-modal.php';?>
+		<?php include '../include/applicant-image-modal.php';?>
+		<?php include '../include/applicant-attach-modal.php';?>
+		<?php include '../include/applicant-choosefile-modal.php';?>
+		<?php include '../include/applicant-pds-modal.php';?>
+		<?php include '../include/applicant-files-modal.php';?>
+		<?php include '../include/applicant-error-modal.php';?>
+		<?php include '../include/applicant-success-modal.php';?>
 	</body>
 	<script type="text/javascript" src="../jsp/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../jsp/pds-function.js"></script>
