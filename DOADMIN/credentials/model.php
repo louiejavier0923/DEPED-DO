@@ -7,7 +7,7 @@
     require 'vendor/autoload.php';
 
 
-    $mail = new PHPMailer(true);
+    $mail = new PHPMailer(true);  
  
     switch($_POST['action']){
 
