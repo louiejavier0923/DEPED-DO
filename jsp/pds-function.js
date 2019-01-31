@@ -29,8 +29,13 @@ $(function(){
 	$('.pds_telno').keyup(function(e){
 		$(this).val($(this).val().replace(/(\d{3})\-?(\d{4})/,'$1-$2'));
 	});
+	$("#scroll").click(function(){
+		alert("qweqwe");
+		$("#error").modal("show");
 
-	
+
+	});
+
 	/* $(".pds_pagibigno").keyup(function (e) {
       if($(this).val().length === 14) return;
       if(e.keyCode === 8 || e.keyCode === 37 || e.keyCode === 39) return;
@@ -663,7 +668,7 @@ $(".pds_rzipcode").keypress(function (e) {
 			
 				alert(response.exe);
 			$("input").val("");
-			}else 
+			}else
 				alert(response.error);
 			
 			
