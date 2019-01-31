@@ -270,5 +270,6 @@
         	<?php include 'include/login-register-modal.php';?>
         </section>
 		<?php include 'include/error-message-modal.php';?>
+		<?php include 'include/success-message-modal.php';?>
 	</body>
 </html>
