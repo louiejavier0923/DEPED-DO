@@ -146,7 +146,7 @@
         break;
 
         case 'update_applicant':
-            $output = "";
+            /*$output = "";
             $app_fname = $_POST['fname'];
             $app_mname = $_POST['mname'];
             $app_lname = $_POST['lname'];
@@ -155,6 +155,21 @@
             $result= mysqli_query($conn, $sql);
 
             $data = array(    
+                'message' => $output
+            );
+
+            echo json_encode($data);*/
+
+            $fname = $_POST['fname'];
+            $mname = $_POST['mname'];
+            $lname = $_POST['lname'];
+            $output = '';
+
+            $sql = "UPDATE personal_info SET FIRSTNAME = '".$fname."', LASTNAME = '".$lname."', MIDDLENAME = '".$mname."' WHERE UID = '".$user['UID']."';";
+            $result = mysqli_query($conn, $sql);
+            $output = 'Success!';
+
+            $data = array (
                 'message' => $output
             );
 
