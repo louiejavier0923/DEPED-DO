@@ -17,7 +17,8 @@ $(document).ready(function(){
 		pass = $('#passTxtbox').val();
 
 		if(email==""||pass==""){
-			alert('Fill all fields!');
+			// alert('Fill all fields!');
+			alertError("Fill all fields!");
 		}
 		else{
 
@@ -47,7 +48,8 @@ $(document).ready(function(){
 
 				}
 				else{
-					alert('Email or Password Incorrect! Please try again.');
+					// alert('Email or Password Incorrect! Please try again.');
+					alertError("Email or Password Incorrect! Try again!");
 				}
 
 			})
@@ -60,5 +62,8 @@ $(document).ready(function(){
 			$('#loginBtn').click();
 		}
 	})
-
+	.on('click','.alert-error-close',function(){
+		$('body .message').remove();
+	})
+	
 })
