@@ -1112,14 +1112,14 @@
 			</section>
 		</section>
 	
-		<?php include '../include/user-info-modal.php';?>
-		<?php include '../include/applicant-image-modal.php';?>
-		<?php include '../include/applicant-attach-modal.php';?>
-		<?php include '../include/applicant-choosefile-modal.php';?>
-		<?php include '../include/applicant-pds-modal.php';?>
-		<?php include '../include/applicant-files-modal.php';?>
-		<?php include '../include/applicant-error-modal.php';?>
-		<?php include '../include/applicant-success-modal.php';?>
+		<?php //include '../include/user-info-modal.php';?>
+		<?php //include '../include/applicant-image-modal.php';?>
+		<?php// include '../include/applicant-attach-modal.php';?>
+		<?php //include '../include/applicant-choosefile-modal.php';?>
+		<?php //include '../include/applicant-pds-modal.php';?>
+		<?php //include '../include/applicant-files-modal.php';?>
+		<?php //include '../include/applicant-error-modal.php';?>
+		<?php //include '../include/applicant-success-modal.php';?>
 	</body>
 	<script type="text/javascript" src="../jsp/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../jsp/pds-function.js"></script>
