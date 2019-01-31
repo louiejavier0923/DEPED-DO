@@ -347,6 +347,7 @@ $(document).ready(function() {
     var logsCont = document.getElementById('logs-container');
     var updateImage = document.getElementById('change-image');
     var errorMessage = document.getElementById('error-message');
+    var successMessage = document.getElementById('success-message');
 
     $('.fullname').attr('disabled', true);
     $('.new_password').attr('disabled', true);
@@ -377,6 +378,10 @@ $(document).ready(function() {
                     statusCont.style.display= "none";
                 break;
             }
+        })
+
+        .on('click', '#closeSuccessBtn', function() {
+            successMessage.style.display= "none";
         })
 
         .on('click', '#closeImageBtn', function() {
