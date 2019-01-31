@@ -1,0 +1,193 @@
+insert into jobs values 
+  ('sue','email',5),('bill','email',7), 
+  ('sally','print',2),('sue','sms',14),('bill','sms',2); 
+
+-set automatic id
+SET @maxno = (SELECT MAX(NO)+5 FROM user_tbl);
+SET @finidwithdecimal = @maxno/5;
+SET @UID =  TRUNCATE(@finidwithdecimal,0);
+
+SET @THISUID = (CONCAT("TCH-000",@UID));
+
+insert into user_tbl(UID,TYPE,VALUE)VALUES(@THISUID,'EMAIL','cromeroadr@gmail.com'),(@THISUID,'PWD','P@ssword'),(@THISUID,'STATUS','0'),(@THISUID,'KEY','lkqwje,asmnd2'),(@THISUID,'ISONLINE','0');
+-------------------------------------------------------------------------------------------------
+SP
+
+SET @p0='laurenciano@gmail.com'; SET @p1='P@ssw0rd'; SET @p2='0'; SET @p3='ksanwejn'; SET @p4='0'; CALL `insert_tbl`(@p0, @p1, @p2, @p3, @p4);
+
+-----------------------------------------------------
+
+SET @lastname =(SELECT MAX(IF(TYPE = 'LAST_NAME', VALUE, NULL)) FROM personal_info_tbl GROUP BY UID);
+SET @firstname =(SELECT MAX(IF(TYPE = 'FIRST_NAME', VALUE, NULL)) FROM personal_info_tbl GROUP BY UID);
+SET @middlename =(SELECT MAX(IF(TYPE = 'MIDDLENAME', VALUE, NULL)) FROM personal_info_tbl GROUP BY UID);
+SET @extension =(SELECT MAX(IF(TYPE = 'NAME_EXTENSION', VALUE, NULL)) FROM personal_info_tbl GROUP BY UID);
+SET @full = CONCAT(@lastname,', ',@firstname,' ',@extension);
+
+
+SELECT
+  UID,
+  MAX(IF(TYPE = 'FIRST_NAME', @full, NULL)) AS NAME,
+  MAX(IF(TYPE = 'BIRTH_DATE', VALUE, NULL)) AS BIRTH_DATE,
+  MAX(IF(TYPE = 'BIRTH_PLACE', VALUE, NULL)) AS BIRTH_PLACE,
+   MAX(IF(TYPE = 'SEX', VALUE, NULL)) AS SEX,
+    MAX(IF(TYPE = 'CIVIL_STATUS', VALUE, NULL)) AS CIVIL_STATUS,
+     MAX(IF(TYPE = 'HEIGHT', VALUE, NULL)) AS HEIGHT,
+      MAX(IF(TYPE = 'WEIGHT', VALUE, NULL)) AS WEIGHT,
+       MAX(IF(TYPE = 'BLOOD_TYPE', VALUE, NULL)) AS BLOOD_TYPE,
+        MAX(IF(TYPE = 'GSIS_ID_NO', VALUE, NULL)) AS GSIS_ID_NO,
+         MAX(IF(TYPE = 'PAG_IBIG_NO', VALUE, NULL)) AS PAG_IBIG_NO,
+          MAX(IF(TYPE = 'PHILHEALTH_NO', VALUE, NULL)) AS PHIL_HEALTH_NO,
+           MAX(IF(TYPE = 'SSS_NO', VALUE, NULL)) AS SSS_NO,
+            MAX(IF(TYPE = 'TIN_NO', VALUE, NULL)) AS TIN_NO,
+             MAX(IF(TYPE = 'AGENCY_EMPLOYEE_NO', VALUE, NULL)) AS AGENCY_EMPLOYEE_NO,
+              MAX(IF(TYPE = 'CITIZENSHIP', VALUE, NULL)) AS CITIZENSHIP,
+               MAX(IF(TYPE = 'RESIDENTIAL_ADDRESS', VALUE, NULL)) AS RESIDENTIAL_ADDRESS,
+                MAX(IF(TYPE = 'RESIDENTIAL_ZIP_CODE', VALUE, NULL)) AS RESIDENTIAL_ZIPCODE,
+                 MAX(IF(TYPE = 'PERMANENT_ADDRESS', VALUE, NULL)) AS PERMANENT_ADDRESS,
+                  MAX(IF(TYPE = 'PERMANENT_ZIP_CODE', VALUE, NULL)) AS PERMANENT_ZIP_CODE,
+                   MAX(IF(TYPE = 'TELEPHONE_NO', VALUE, NULL)) AS TELEPHONE_NO,
+                    MAX(IF(TYPE = 'MOBILE_NO', VALUE, NULL)) AS MOBILE_NO
+           
+FROM
+    personal_info_tbl
+ GROUP BY
+  UID
+  ------------------------------------
+SELECT CONCAT("TCH-000",MAX(NO)) FROM user_tbl;
+insert into user_tbl(UID,TYPE,VALUE) SELECT MAX(NO),'niel','ere' from user_tbl;
+
+
+create view user_tbl_extended_pivot as (
+  SELECT
+  UID,
+  MAX(IF(TYPE = 'EMAIL', VALUE, NULL)) AS EMAIL,
+  MAX(IF(TYPE = 'PWD', VALUE, NULL)) AS PASSWORD,
+  MAX(IF(TYPE = 'STATUS', VALUE, NULL)) AS STATUS,
+  MAX(IF(TYPE = 'KEY', VALUE, NULL)) AS ISKEY,
+  MAX(IF(TYPE = 'ISONLINE', VALUE, NULL)) AS ONLINE
+FROM
+    user_tbl
+ GROUP BY
+  UID
+);
+
+=========================================================================
+login
+ function login(action = 'login_function')
+                 {
+                    var login_email = $('#login_email').val();
+                    var login_password = $('#login_password').val();
+                 
+                  $.ajax({
+                         url:"DOADMIN/CREDENTIALS/model.php",
+                        method:"POST",
+                        data:{action:action,email:login_email,pwd:login_password},
+                        dataType:"json",
+                         success:function(data){
+                                         
+                                               switch(data.message){
+                                               	
+                                               	     case 'successful':
+                                               	            window.location.href='applicants/home.php';
+                                               	     break;
+
+                                               	     case 'redirect':
+                                               	            alert(data.message);
+                                               	     break;
+                                               }
+                                           
+                                                
+ 
+                                                  
+                                     
+                                      }
+                                                
+                          });
+  
+
+                 }
+
+
+$(document).ready(function() {
+
+		$('#loginBtn').click(function() {
+				 alert('sad');
+		});
+
+
+
+
+		$('#submit_login_btn').click(function() {			
+				login();
+		});
+
+});
+==========================================
+
+SET @firstname= (SELECT IF(TYPE = 'FIRST_NAME', VALUE, NULL) FROM personal_info_tbl GROUP BY UID);
+
+SET @fullname = concat(@firstname);
+SELECT @fullname
+===============================================
+<!DOCTYPE html>
+<?php include'../DOADMIN/CREDENTIALS/connection.php';?>
+<?php include'../include/session.php';?>
+<html>
+	<head>
+		<title>Application Form | Division Office</title>
+		<?php include '../include/applicant-header-content.php';?>
+	</head>
+	<body>
+
+		<section class= "applicant-header-container">
+			<?php include '../include/applicant-header-container.php';?>
+		</section>
+		<section class= "applicant-content-container">
+			<h2>APPLICATION FORM</h2>
+			<div class= "line"></div>
+			<section class= "application-nav">
+				<p class= "current">1</p>
+				<p>2</p>
+				<p>3</p>
+			</section>
+			<section class= "application-content">
+				<section class= "content-container">
+					
+					  <?php
+                                  
+                  $sql="SELECT * from publish_vacancy_tbl_extended_pivot;";
+                      
+                          if ($result=mysqli_query($conn,$sql))
+                          {
+         
+
+                              while ($row=mysqli_fetch_row($result))
+                               { 
+                                   
+                            
+                                    
+
+
+                                     echo  '
+                                           <section class= "container-info">
+						                      <img src= "../img/logo.png">
+						                        <h1 id= "position">'.$row[1].'</h1>
+						                        <p id= "school">'.$row[4].'</p>
+						                        <p id= "address">'.$row[3].'</p>
+						                        <p id= "salary">Salary: '.$row[8].' Php</p>
+						                        <a href= "#" data-id='.$row[0].' id= "applyBtn" class="apply_btn">APPLY</a>
+					                       </section>
+                                               ';
+                               }
+                          }
+                          mysqli_close($conn);
+                                  
+
+        ?>
+
+				
+				</section>
+			</section>
+		</section>
+	</body>
+</html>

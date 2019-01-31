@@ -70,38 +70,38 @@
 		$pds_motherfirstname = $_POST['pds_motherfirstname'];
 		$pds_mothersnameextension = $_POST['pds_mothersnameextension'];
 		$pds_mothersmiddlename = $_POST['pds_mothersmiddlename'];
-		$pds_children = $_POST['pds_children'];
-		$pds_childrenBdate = $_POST['pds_childrenBdate'];
+		/* $pds_children = $_POST['childname'];
+		$pds_childrenBdate = $_POST['childBDay'];
 		
-		$pds_CS = $_POST['pds_CS'];
-		$pds_CS_rating = $_POST['pds_CS_rating'];
-		$pds_CS_date = $_POST['pds_CS_date'];
-		$pds_CS_place = $_POST['pds_CS_place'];
-		$pds_CS_licenceNo = $_POST['pds_CS_licenceNo'];
-		$pds_CS_licenceDate   = $_POST['pds_CS_licenceDate'];
+		$pds_CS = $_POST['CS'];
+		$pds_CS_rating = $_POST['CS_rating'];
+		$pds_CS_date = $_POST['CS_date'];
+		$pds_CS_place = $_POST['CS_place'];
+		$pds_CS_licenceNo = $_POST['CS_licenceNo'];
+		$pds_CS_licenceDate   = $_POST['CS_licenceDate'];
 		
-		$pds_WE_FromDate = $_POST['pds_WE_FromDate'];
-		$pds_WE_ToDate = $_POST['pds_WE_ToDate'];
-		$pds_WE_PositionTitle = $_POST['pds_WE_PositionTitle'];
-		$pds_WE_Place = $_POST['pds_WE_Place'];
-		$pds_WE_MonthSalary = $_POST['pds_WE_MonthSalary'];
-		$pds_WE_Salary = $_POST['pds_WE_Salary'];
-		$pds_WE_AppointmentStatus = $_POST['pds_WE_AppointmentStatus'];
-		$pds_WE_GovService = $_POST['pds_WE_GovService'];
+		$pds_WE_FromDate = $_POST['WE_FromDate'];
+		$pds_WE_ToDate = $_POST['WE_ToDate'];
+		$pds_WE_PositionTitle = $_POST['WE_PositionTitle'];
+		$pds_WE_Place = $_POST['WE_Place'];
+		$pds_WE_MonthSalary = $_POST['WE_MonthSalary'];
+		$pds_WE_Salary = $_POST['WE_Salary'];
+		$pds_WE_AppointmentStatus = $_POST['WE_AppointmentStatus'];
+		$pds_WE_GovService = $_POST['WE_GovService'];
 		
-		$pds_VW_Name_Address = $_POST['pds_VW_Name_Address'];
-		$pds_VW_FromDate = $_POST['pds_VW_FromDate'];
-		$pds_VW_Todate = $_POST['pds_VW_Todate'];
-		$pds_VW_NumbHours = $_POST['pds_VW_NumbHours'];
-		$pds_VW_Work = $_POST['pds_VW_Work'];
+		$pds_VW_Name_Address = $_POST['VW_Name_Address'];
+		$pds_VW_FromDate = $_POST['VW_FromDate'];
+		$pds_VW_Todate = $_POST['VW_Todate'];
+		$pds_VW_NumbHours = $_POST['VW_NumbHours'];
+		$pds_VW_Work = $_POST['VW_Work'];
 		
-		$pds_LaD_Title = $_POST['pds_LaD_Title'];
-		$pds_LaD_FromDate = $_POST['pds_LaD_FromDate'];
-		$pds_LaD_ToDate = $_POST['pds_LaD_ToDate'];
-		$pds_LaD_NumbHours = $_POST['pds_LaD_NumbHours'];
-		$pds_LaD_Type = $_POST['pds_LaD_Type'];
-		$pds_LaD_ConductBy = $_POST['pds_LaD_ConductBy'];
-		
+		$pds_LaD_Title = $_POST['LaD_Title'];
+		$pds_LaD_FromDate = $_POST['LaD_FromDate'];
+		$pds_LaD_ToDate = $_POST['LaD_ToDate'];
+		$pds_LaD_NumbHours = $_POST['LaD_NumbHours'];
+		$pds_LaD_Type = $_POST['LaD_Type'];
+		$pds_LaD_ConductBy = $_POST['LaD_ConductBy'];
+		 */
 		$output = '';
 		$exe = '';
 		$error = '';
@@ -112,7 +112,30 @@
 		
 		$sql .= " UPDATE `family_background` SET `spousesurname`='$pds_spousesurname', `spousefirstname`='$pds_spousefirstname', `spousemiddlename`='$pds_spousemiddlename', `spousenameextension`='$pds_spousenameextension', `spouseoccupation`='$pds_spouseoccupation', `businessname`='$pds_businessname', `businessaddress`='$pds_businessaddress', `businesstelno`='$pds_businesstelno', `fathersurname`='$pds_fathersurname', `fatherfirstname`='$pds_fatherfirstname', `fathernameextension`='$pds_fathernameextension', `fathermiddlename`='$pds_fathermiddlename', `mothermaindenname`='$pds_mothermaindenname', `motherfirstname`='$pds_motherfirstname', `mothersnameextension`='$pds_mothersnameextension', `mothersmiddlename`='$pds_mothersmiddlename' WHERE UID = '$id';";
 		
+		/* $sql .=" DELETE FROM `children` WHERE UID = '$id';";
+		for ($i = 0; $i < count($childname); $i++) {
+		$sql .=" INSERT INTO `children`(`UID`, `CHILDNAME`, `CHILDBIRTHDATE`) VALUES ('$id','". $childname[$i] ."','". $childBDay[$i] ."'); ";
+		}
 		
+		$sql .=" DELETE FROM `civill_service_eligibility` WHERE UID = '$id';";
+		for ($i = 0; $i < count($CS); $i++) {
+			$sql .=" INSERT INTO `civill_service_eligibility`(`NO`, `UID`, `TYPE_OF_EXAMINATION`, `RATING`, `DATE_OF_EXAMINATION`, `PLACE`, `LICENSE_NO`, `LICENSE_DATE_OF_VALIDITY`) VALUES ('$id','". $CS[$i] ."','". $CS_rating[$i] ."','". $CS_date[$i] ."','". $CS_place[$i] ."','". $CS_licenceNo[$i] ."','". $CS_licenceDate[$i] ."');";
+		}
+		
+		$sql .=" DELETE FROM `work_experience` WHERE UID = '$id';";
+		for ($i = 0; $i < count($pds_WE_FromDate); $i++) {
+			$sql .=" INSERT INTO `work_experience`(`UID`, `INCLUSIVE_DATES_FROM`, `INCLUSIVE_DATES_TO`, `POSITION_TITLE`, `DEPARTMENT_AGENCY_OFFICE_COMPANY`, `MONTHLY_SALARY`, `SALARY_JOB_PAY_GRADE`, `STATUS_OF_APPOINTMENT`, `GOVT_SERVICE`) VALUES ('$id','". $WE_FromDate[$i] ."','". $WE_ToDate[$i] ."','". $WE_PositionTitle[$i] ."','". $WE_Place[$i] ."','". $WE_MonthSalary[$i] ."','". $WE_Salary[$i] ."','". $WE_AppointmentStatus[$i] ."','". $WE_GovService[$i] ."');";
+		}
+		
+		$sql .=" DELETE FROM `voluntary_work` WHERE UID = '$id';";
+		for ($i = 0; $i < count($pds_VW_Name_Address); $i++) {
+		$sql .=" INSERT INTO `voluntary_work`(`UID`, `NAME`, `INCLUSIVE_DATES_FROM`, `INCLUSIVE_DATES_TO`, `NUMBER_OF_HOURS`, `POSITION`) VALUES ('$id','". $VW_Name_Address[$i] ."','". $VW_FromDate[$i] ."','". $VW_ToDate[$i] ."','". $VW_NumbHours[$i] ."','". $VW_Work[$i] ."');";
+		}
+		
+		$sql .=" DELETE FROM `learning_and_development` WHERE UID = '$id'";
+		for ($i = 0; $i < count($pds_LaD_Title); $i++) {
+		$sql .=" INSERT INTO `learning_and_development`(`UID`, `TITLE`, `INCLUSIVE_DATES_FROM`, `INCLUSIVE_DATES_TO`, `NUMBER_OF_HOURS`, `TYPE_OF_LD`, `CONDUCTED_SPONSORED_BY`) VALUES ('$id','". $LaD_Title[$i] ."','". $LaD_FromDate[$i] ."','". $LaD_ToDate[$i] ."','". $LaD_NumbHours[$i] ."','". $LaD_Type[$i] ."','". $LaD_ConductBy[$i] ."');";
+		} */
 		
 		
 		if ($conn->multi_query($sql)) 
@@ -132,10 +155,10 @@
 		);
 
 	echo json_encode($data);
-		
+		 
 	break;
 	
-	case 'add_user_with_pds_info_function':
+	/* case 'add_user_with_pds_info_function':
 		$pds_surname = $_POST['pds_surname'];
 		$pds_firstname = $_POST['pds_firstname'];
 		$pds_nameextension = $_POST['pds_nameextension'];
@@ -189,37 +212,6 @@
 		$pds_motherfirstname = $_POST['pds_motherfirstname'];
 		$pds_mothersnameextension = $_POST['pds_mothersnameextension'];
 		$pds_mothersmiddlename = $_POST['pds_mothersmiddlename'];
-		$pds_children = $_POST['pds_children'];
-		$pds_childrenBdate = $_POST['pds_childrenBdate'];
-		
-		$pds_CS = $_POST['pds_CS'];
-		$pds_CS_rating = $_POST['pds_CS_rating'];
-		$pds_CS_date = $_POST['pds_CS_date'];
-		$pds_CS_place = $_POST['pds_CS_place'];
-		$pds_CS_licenceNo = $_POST['pds_CS_licenceNo'];
-		$pds_CS_licenceDate   = $_POST['pds_CS_licenceDate'];
-		
-		$pds_WE_FromDate = $_POST['pds_WE_FromDate'];
-		$pds_WE_ToDate = $_POST['pds_WE_ToDate'];
-		$pds_WE_PositionTitle = $_POST['pds_WE_PositionTitle'];
-		$pds_WE_Place = $_POST['pds_WE_Place'];
-		$pds_WE_MonthSalary = $_POST['pds_WE_MonthSalary'];
-		$pds_WE_Salary = $_POST['pds_WE_Salary'];
-		$pds_WE_AppointmentStatus = $_POST['pds_WE_AppointmentStatus'];
-		$pds_WE_GovService = $_POST['pds_WE_GovService'];
-		
-		$pds_VW_Name_Address = $_POST['pds_VW_Name_Address'];
-		$pds_VW_FromDate = $_POST['pds_VW_FromDate'];
-		$pds_VW_Todate = $_POST['pds_VW_Todate'];
-		$pds_VW_NumbHours = $_POST['pds_VW_NumbHours'];
-		$pds_VW_Work = $_POST['pds_VW_Work'];
-		
-		$pds_LaD_Title = $_POST['pds_LaD_Title'];
-		$pds_LaD_FromDate = $_POST['pds_LaD_FromDate'];
-		$pds_LaD_ToDate = $_POST['pds_LaD_ToDate'];
-		$pds_LaD_NumbHours = $_POST['pds_LaD_NumbHours'];
-		$pds_LaD_Type = $_POST['pds_LaD_Type'];
-		$pds_LaD_ConductBy = $_POST['pds_LaD_ConductBy'];
 		
 		$output = '';
 		$exe = '';
@@ -263,7 +255,7 @@
 		
 	
 	
-	break;
+	break; */
 	case 'view_pds_function':
 		$output = '';
 		$exe = '';

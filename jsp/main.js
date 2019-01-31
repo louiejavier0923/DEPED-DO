@@ -25,6 +25,10 @@ function login(action = 'login_function') {
                                          
                 switch(data.message){                      	
                     case 'successful':
+                                 $("#success-message").css('display','block');
+                        document.getElementById('success-info').innerHTML = "Successfully Login!";              
+                        document.getElementById('success-header').innerHTML = "Sucess!";
+        
                         window.location.href='applicants/home.php';
                     break;
                     case 'redirect':

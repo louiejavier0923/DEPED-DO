@@ -10,16 +10,16 @@
     $mail = new PHPMailer(true);
  
     switch($_POST['action']){
-
+        
         case 'vacant-function':
             require '../../include/session.php';
              $memo='';
             $vacant_no = $_POST['vacant_no'];
-               $sql="SELECT * from application where PID='" .$vacant_no."' AND UID = '".$user['UID']."';";
+               $sql="SELECT  * from application where PID='" .$vacant_no."' AND UID = '".$user['UID']."';";
             $result=mysqli_query($conn,$sql);
            
 
-            $memo .= '<html>
+            $memo='<html>
                                                                 <body style= "margin: 0px; padding: 0px;">
                      <section style= "float: left; position: relative; width: 80%; height: 1800px; padding: 40px 5%; border: solid 1px rgb(30, 30, 30); margin: 2.5% 5%">
       <section style= "float: left; width: 100%; height: 200px;">
@@ -71,13 +71,13 @@
        </html>';
 
             
-
+        
                   if($result->num_rows > 0) 
                   {
                       $output='you already applied for this position';
                   }
                       else {
-
+                                 
 
                                           $mail->isSMTP();                                      // Set mailer to use SMTP
                                            $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -101,7 +101,7 @@
                                            //Content
                                            $mail->isHTML(true);                                  // Set email format to HTML
                                            $mail->Subject = 'APPLICATION';                                                             
-                                           $mail->Body   = $memo;
+                                           $mail->Body   = 'asd';
                   
                         
                        // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
@@ -113,11 +113,12 @@
                             
                                            if($mail->Send()) {
                                                     
-                                                  $sql = "INSERT INTO application (UID,PID,STATUS,DATE,IS_CALIBRATED)VALUES ('".$user['UID']."', '".$vacant_no."', '0',CURRENT_DATE(), '0');";
-                                                   $query = mysqli_query($conn, $sql);
+                                                  
                                                 
                                                    $output="success";
                                           }
+                                        $sql=$conn->query("INSERT INTO application (UID,PID,STATUS,DATE,IS_CALIBRATED)VALUES ('".$user['UID']."', '".$vacant_no."', '0',CURRENT_DATE(), '0');");
+                                                
                                   }        
                 
 
@@ -1613,6 +1614,29 @@ echo json_encode($data);
 
          echo json_encode($output);
     break;
+
+    case 'recab':
+        $educ_array = $_POST['EDUCATION'];
+                       
+           for ($i = 0; $i < count($educ_array); $i++) 
+           {
+                    # code...
+                       $educ = mysql_real_escape_string($educ_array[$i]);
+
+                       $myArray = explode(',', $educ);
+                       $ouput=($myArray);
+
+           }
+                
+          $output='asdasdasdwqw';
+        $data = array(
+        'data' => $ouput
+       
+      );
+  
+    echo json_encode($data);
+    
+      break;
 	
    }
 

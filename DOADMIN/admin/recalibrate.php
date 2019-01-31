@@ -62,13 +62,13 @@
                 
                   <th>NO</th>
                     <th>UID</th>
-                   <th>NAME</th>
-                   <th>PID</th>
-                  <th>CRITERIA</th>
-                   <th>VALUE</th>
-                  <th>EQUIVALENT POINTS</th>
-                  <th>TOTAL POINTS</th>
-                   <th>STATUS</th>
+                   <th>EDUCATION</th>
+                   <th>EXPERIENCE</th>
+                  <th>ELIGIBILITY</th>
+                   <th>TRAINING</th>
+                  <th>INTERVIEW</th>
+                  <th>DEMO</th>
+                   <th>COMMUNICATION</th>
                 
                    
                  
@@ -76,25 +76,27 @@
                 <tbody>
                   <?php
                     $cnt='';
-                    $sql = "SELECT DISTINCT (u.UID) as 'ID',u.FIRSTNAME,u.LASTNAME,u.MIDDLENAME,u.TOTALPOINTS,n.IS_CALIBRATED,n.PID,a.CRITERIA_CODE,a.VALUE,a.EQUIVALENT_POINTS from view_rank u INNER JOIN application n on u.UID = n.UID INNER JOIN applicants_points a ON a.UID = u.UID where n.STATUS = '0' and u.TOTALPOINTS < 70";
+                    $sql = "SELECT  c.UID,c.EDU,c.EXP,c.ELIG,c.TRAINING,c.INTERVIEW,c.DEMO,c.COMMUNICATION FROM calibrate c";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $cnt += 1;
+                      /*
                         $status = ($row['IS_CALIBRATED'])?'<span class="label label-success pull-right">CALIBRATED</span>':'<span class="label label-danger pull-right">NOT CALIBRATED</span>';
+                        */
                       echo "
                         <tr>
                           <td>".$cnt."</td>
-                           <td>".$row['ID']."</td>
-                            <td>".$row['PID']."</td>
-                           <td>".$row['LASTNAME'].', '.$row['FIRSTNAME'].' '.$row['MIDDLENAME']. "</td>
-                          <td>".$row['CRITERIA_CODE']."</td>
+                           <td>".$row['UID']."</td>
+                            <td>".$row['EDU']."</td>
+                           <td>".$row['EXP']."</td>
+                          <td>".$row['ELIG']."</td>
                           
-
+                          <td>".$row['TRAINING']."</td>
                           
-                          <td>".$row['VALUE']."</td>
-                           <td>".$row['EQUIVALENT_POINTS']."</td>
-                            <td>".$row['TOTALPOINTS']."</td>
-                             <td>".$status."</td>
+                          <td>".$row['INTERVIEW']."</td>
+                           <td>".$row['DEMO']."</td>
+                            <td>".$row['COMMUNICATION']."</td>
+                           
                           
                          
                   
@@ -125,21 +127,24 @@ $(function(){
 
    $('#recalibrate').click(function(e){
     e.preventDefault();
-              var value = $("#example1").map(function() {
+              var EDUCATION = $("#example1").map(function() {
               var $tr = $(this);
-              var id = $tr.find("td:nth-child(6)").text();
-              return id;
-              }).toArray();
-
-              var uid = $("#example1").map(function() {
-              var $tr = $(this);
-              var id = $tr.find("td:nth-child(2)").text();
+              var id = $tr.find("td:nth-child(3)").text();
               return id;
               }).toArray();
 
 
-              alert(uid+value);
-
+   $.ajax({
+    type: 'POST',
+    url: '../credentials/model.php',
+    data: {action:'recab',EDUCATION:EDUCATION},
+    dataType: 'json',
+    success: function(response){ 
+ 
+                alert(response.data);
+        
+    }
+  });
 
                  
   });

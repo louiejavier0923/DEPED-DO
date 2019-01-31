@@ -77,14 +77,23 @@ if(isset($_SESSION['ADMIN'])){
 		<?php include 'include/error-message-modal.php';?>
 		<?php include 'include/success-message-modal.php';?>
 
-
 		 <script type="text/javascript">
 		 	 $(function(){
+		 	 	$("#closeErrorBtn").click(function(){
+		 	 		$("#error-message").css('display','none');
+		 	 	});
+
   $("#admin_login").click(function(e){
        e.preventDefault();
          var email= $("#id_email").val();
           var password = $("#id_password").val();
+          if(email == "" || password == ""){
 
+           					$("#error-message").css('display','block');
+                        document.getElementById('error-info').innerHTML = "Please fill up all forms";              
+                        document.getElementById('error-header').innerHTML = "Error!";
+          }
+          else{
       $.ajax({
     type: 'POST',
     url: 'DOADMIN/credentials/model.php',
@@ -95,16 +104,25 @@ if(isset($_SESSION['ADMIN'])){
     	       switch(response.message){
     	       	    case 'successful':
     	       	           window.location.href='DOADMIN/admin/home.php';
+    	       	            $("#success-message").css('display','block');
+                        document.getElementById('success-info').innerHTML = "Successfully Login!";              
+                        document.getElementById('success-header').innerHTML = "Success!";
+        
     	       	    break;
 
+
     	       	    default:
-    	       	    	$("#error-message").css('display','block');
-    	       	    break;
+        
+           					$("#error-message").css('display','block');
+                        document.getElementById('error-info').innerHTML = "Incorrect username or password!";              
+                        document.getElementById('error-header').innerHTML = "Error!";
+    	       	     	       	    break;
     	       }
             
            
      }
   });
+      }
   });
 });
 

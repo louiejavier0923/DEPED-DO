@@ -3,7 +3,7 @@
 <head>
   	<meta charset="utf-8">
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-
+  
  <link rel ="icon" href="../../img/logo.png">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<title>DIVISION OFFICE</title>
