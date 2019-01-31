@@ -11,6 +11,7 @@ if(isset($_SESSION['ID'])){
 	<head>
 
 		<title>Log-In Form | Division Office</title>
+		<link rel="icon" href="img/logo.png"/>
 		<meta name= "viewport" content= "width= device-width, initial-scale= 1"/>
 
 		<!-- CSS Libraries -->
@@ -77,8 +78,8 @@ if(isset($_SESSION['ID'])){
 				</section>
 			</section>
 		</section>
-		<?php include 'include/error-message-modal.php';?>
-		<?php include 'include/success-message-modal.php';?>
+		<?php //include 'include/error-message-modal.php';?>
+		<?php //include 'include/success-message-modal.php';?>
 
 <!-- Custom Javascripts -->
 <script type= "text/javascript" src= "RES/PSB-RESOURCES/JS/login.js"></script>
