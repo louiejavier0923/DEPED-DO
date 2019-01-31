@@ -199,6 +199,7 @@
 			</section>
 		</section>
 		<?php include '../include/applicant-image-modal.php';?>
-		<?php include '../include/error-message-modal.php';?>
+		<?php include '../include/applicant-error-modal.php';?>
+		<?php include '../include/applicant-success-modal.php';?>
 	</body>
 </html>
