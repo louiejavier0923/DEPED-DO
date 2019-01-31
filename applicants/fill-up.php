@@ -584,7 +584,7 @@
 									?>
 								<section class= "content-info">
 									<section class= "info">
-										<input type= "text" value='<?php echo $row['Career service']; ?>' class='pds_CS'>
+										<input type= "text" value='<?php echo $row['TYPE_OF_EXAMINATION']; ?>' class='pds_CS'>
 									</section>
 									<section class= "info">
 										<input type= "text" value='<?php echo $row['RATING']; ?>' class='pds_CS_rating'>
