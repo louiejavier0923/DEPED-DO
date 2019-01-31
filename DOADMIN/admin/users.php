@@ -5,7 +5,6 @@
 
   <?php include 'includes/navbar.php'; ?>
   <?php include 'includes/menubar.php'; ?>
-
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -180,9 +179,10 @@ $("#edit").modal("show");
           var cpassword = $('#cpassword').val();
           var status = $('#status').val();
  if(email == "" || password == "" || cpassword  == ""){
-                    setTimeout(function(){ $('#error').fadeOut() }, 1500);
-                     $('#error').css("display","block").html('Fill up all forms!');    
-  }else if (password === cpassword){
+                    $("#error-message").css('display','block');
+                        document.getElementById('error-info').innerHTML = "Please fill up all forms";              
+                        document.getElementById('error-header').innerHTML = "Error!";
+          }else if (password === cpassword){
             add_user();
   }
   else{

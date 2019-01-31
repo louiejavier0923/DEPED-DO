@@ -137,7 +137,7 @@
 		 
 	break;
 	
-	case 'add_user_with_pds_info_function':
+	/* case 'add_user_with_pds_info_function':
 		$pds_surname = $_POST['pds_surname'];
 		$pds_firstname = $_POST['pds_firstname'];
 		$pds_nameextension = $_POST['pds_nameextension'];
@@ -191,37 +191,6 @@
 		$pds_motherfirstname = $_POST['pds_motherfirstname'];
 		$pds_mothersnameextension = $_POST['pds_mothersnameextension'];
 		$pds_mothersmiddlename = $_POST['pds_mothersmiddlename'];
-		$pds_children = $_POST['pds_children'];
-		$pds_childrenBdate = $_POST['pds_childrenBdate'];
-		
-		$pds_CS = $_POST['pds_CS'];
-		$pds_CS_rating = $_POST['pds_CS_rating'];
-		$pds_CS_date = $_POST['pds_CS_date'];
-		$pds_CS_place = $_POST['pds_CS_place'];
-		$pds_CS_licenceNo = $_POST['pds_CS_licenceNo'];
-		$pds_CS_licenceDate   = $_POST['pds_CS_licenceDate'];
-		
-		$pds_WE_FromDate = $_POST['pds_WE_FromDate'];
-		$pds_WE_ToDate = $_POST['pds_WE_ToDate'];
-		$pds_WE_PositionTitle = $_POST['pds_WE_PositionTitle'];
-		$pds_WE_Place = $_POST['pds_WE_Place'];
-		$pds_WE_MonthSalary = $_POST['pds_WE_MonthSalary'];
-		$pds_WE_Salary = $_POST['pds_WE_Salary'];
-		$pds_WE_AppointmentStatus = $_POST['pds_WE_AppointmentStatus'];
-		$pds_WE_GovService = $_POST['pds_WE_GovService'];
-		
-		$pds_VW_Name_Address = $_POST['pds_VW_Name_Address'];
-		$pds_VW_FromDate = $_POST['pds_VW_FromDate'];
-		$pds_VW_Todate = $_POST['pds_VW_Todate'];
-		$pds_VW_NumbHours = $_POST['pds_VW_NumbHours'];
-		$pds_VW_Work = $_POST['pds_VW_Work'];
-		
-		$pds_LaD_Title = $_POST['pds_LaD_Title'];
-		$pds_LaD_FromDate = $_POST['pds_LaD_FromDate'];
-		$pds_LaD_ToDate = $_POST['pds_LaD_ToDate'];
-		$pds_LaD_NumbHours = $_POST['pds_LaD_NumbHours'];
-		$pds_LaD_Type = $_POST['pds_LaD_Type'];
-		$pds_LaD_ConductBy = $_POST['pds_LaD_ConductBy'];
 		
 		$output = '';
 		$exe = '';
@@ -265,7 +234,7 @@
 		
 	
 	
-	break;
+	break; */
 	case 'view_pds_function':
 		$output = '';
 		$exe = '';
