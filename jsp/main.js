@@ -78,6 +78,7 @@ function update_password(action = "update_password") {
         else {
             $('#applicant_newPass').css('border', 'solid 1px rgb(255, 0, 0)');   
             $('#applicant_repeatPass').css('border', 'solid 1px rgb(255, 0, 0)');
+            $('#error-message').style.display= "block";
         }
     }
     else {
