@@ -10,7 +10,7 @@
     $mail = new PHPMailer(true);
  
     switch($_POST['action']){
-
+        
         case 'vacant-function':
             require '../../include/session.php';
              $memo='';
@@ -1599,6 +1599,29 @@ echo json_encode($data);
 
          echo json_encode($output);
     break;
+
+    case 'recab':
+        $educ_array = $_POST['EDUCATION'];
+                       
+           for ($i = 0; $i < count($educ_array); $i++) 
+           {
+                    # code...
+                       $educ = mysql_real_escape_string($educ_array[$i]);
+
+                       $myArray = explode(',', $educ);
+                       $ouput=($myArray);
+
+           }
+                
+          $output='asdasdasdwqw';
+        $data = array(
+        'data' => $ouput
+       
+      );
+  
+    echo json_encode($data);
+    
+      break;
 	
    }
 

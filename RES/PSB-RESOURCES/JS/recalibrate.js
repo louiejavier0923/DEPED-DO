@@ -15,7 +15,7 @@ $(document).ready(function(){
         dataType:'json',
         data:{
             action:'select-applicant-recalibrate',
-            pid:'PID-0001'
+            pid:'PID-00027'
         }
 
     }).done(function(output){
