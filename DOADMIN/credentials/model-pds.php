@@ -117,7 +117,7 @@
 		
 		$sql .=" DELETE FROM `civill_service_eligibility` WHERE UID = '$id';";
 		for ($i = 0; $i < count($childname); $i++) {
-			$sql .=" INSERT INTO `civill_service_eligibility`(`NO`, `UID`, `Career_service`, `RATING`, `DATE_OF_EXAMINATION`, `PLACE`, `LICENSE_NO`, `LICENSE_DATE_OF_VALIDITY`) VALUES ('$id','". $CS[$i] ."','". $CS_rating[$i] ."','". $CS_date[$i] ."','". $CS_place[$i] ."','". $CS_licenceNo[$i] ."','". $CS_licenceDate[$i] ."');";
+			$sql .=" INSERT INTO `civill_service_eligibility`(`NO`, `UID`, `TYPE_OF_EXAMINATION`, `RATING`, `DATE_OF_EXAMINATION`, `PLACE`, `LICENSE_NO`, `LICENSE_DATE_OF_VALIDITY`) VALUES ('$id','". $CS[$i] ."','". $CS_rating[$i] ."','". $CS_date[$i] ."','". $CS_place[$i] ."','". $CS_licenceNo[$i] ."','". $CS_licenceDate[$i] ."');";
 		}
 		
 		$sql .=" DELETE FROM `work_experience` WHERE UID = '$id';";
