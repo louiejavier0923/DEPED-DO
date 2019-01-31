@@ -12,7 +12,7 @@
     }
 
     function rename_appending_unique_id($source, $tempfile){
-             $fileName='';
+            
                $target_path ='../images/'.$source;
                 while(file_exists($target_path)){
                      $fileName = uniqid().'-'.$source;
