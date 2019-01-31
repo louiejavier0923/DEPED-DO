@@ -3,7 +3,7 @@
 <head>
   	<meta charset="utf-8">
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-
+  
  <link rel ="icon" href="../../img/logo.png">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<title>DIVISION OFFICE</title>
@@ -37,6 +37,7 @@
 
   	<!-- Google Font -->
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel= "stylesheet" href= "../../css/admin-modal.css" type= "text/css">
 
   	<style type="text/css">
   		.mt20{
