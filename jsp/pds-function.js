@@ -426,6 +426,7 @@ $(".pds_rzipcode").keypress(function (e) {
 
 
 	$('.edit_pds').click(function(){
+		get_MultiRrows();
 	error = checking();
 	//window.location.href="application.php";
 	action='update_pds_function';
