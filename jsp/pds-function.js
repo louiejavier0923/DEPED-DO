@@ -1,6 +1,8 @@
  $(function(){
 	 
-	 var childname = [];
+	 
+	
+	var childname = [];
 	var childBDay = [];
 	var CS = [];
 	var CS_rating = [];
@@ -142,7 +144,25 @@
 		
 		
 	}
-	 
+	function generate_newRow() {
+		if ($('#pre-pds_children').val().length > 0 && $('#pre-pds_childrenBdate').val().length > 0) {
+			$('.pds_children').removeAttr('id');
+			$('.pds_childrenBdate').removeAttr('id');
+			
+			new_field = '<section class= "content-info"><section class= "info"><input type= "text" class="pds_children" id="pre-pds_children"></section><section class= "info"><input type= "date" class="pds_childrenBdate" id="pre-pds_childrenBdate"></section></section>';
+			
+			$(".children-form").append(new_field);
+		}
+	}
+	
+	$( "#pre-pds_children" ).keypress(function() {
+		generate_newRow();
+	});
+	$('#pre-pds_childrenBdate').change(function() {
+		generate_newRow();
+	});
+	
+	
 	function checking() {
 		text='';
 		$('.single-fields input').css('background-color', "#ffffff");
@@ -371,13 +391,14 @@
 							document.getElementById('success-info').innerHTML = "Please input all required fields!";   	    	
 							document.getElementById('success-header').innerHTML = "Success!";
 				window.location.href="application.php";
-				}else 
-
-					$("#error-message").css('display','block');
+				}else {
+					
+				
+						$("#error-message").css('display','block');
 							document.getElementById('error-info').innerHTML = "Please input all required fields!";   	    	
 							document.getElementById('error-header').innerHTML = "Error!";
 				
-				
+				}
 			}
 			});
 		
