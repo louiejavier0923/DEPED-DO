@@ -79,14 +79,14 @@
           <div class="small-box bg-green">
             <div class="inner">
               <?php
-                $sql = "SELECT * FROM view_rank where TOTALPOINTS > 70";
+                $sql = "SELECT DISTINCT a.TOTALPOINTS   from view_rank a INNER JOIN application p ON p.UID = a.UID where a.TOTALPOINTS > 70 AND p.IS_CALIBRATED = '1'";
                 $query = $conn->query($sql);
 
                 echo "<h3>".$query->num_rows."</h3>";
               ?>
               
           
-              <p>Total RQA</p>
+              <p>RQA</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
@@ -99,10 +99,15 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-            <h3>3</h3>
+            <?php
+                $sql = "SELECT DISTINCT TOTALPOINTS from view_rank where TOTALPOINTS < 70";
+                $query = $conn->query($sql);
+
+                echo "<h3>".$query->num_rows."</h3>";
+              ?>
               
              
-              <p>RQA</p>
+              <p>Recalibrate</p>
             </div>
             <div class="icon">
               <i class="ion ion-clock"></i>
@@ -115,10 +120,16 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-             <h3>23</h3>
+             <?php
+                $sql = "SELECT * from appointment";
+                $query = $conn->query($sql);
+
+                echo "<h3>".$query->num_rows."</h3>";
+              ?>
+              
               
 
-              <p>Calibrated</p>
+              <p>Appointments</p>
             </div>
             <div class="icon">
               <i class="ion ion-alert-circled"></i>
@@ -179,7 +190,7 @@
   $late = array();
   
   for( $m = 1; $m <= 12; $m++ ) {
-    $sql = "SELECT * FROM application WHERE MONTH(DATE) = '$m' AND IS_CALIBRATED = 0 $and";
+    $sql = "SELECT DISTINCT a.UID application a inner join view_rank v ON v.UID = a.UID WHERE a.MONTH(DATE) = '$m' AND a.IS_CALIBRATED = 0 $and";
     $oquery = $conn->query($sql);
     array_push($ontime, $oquery->num_rows);
 
