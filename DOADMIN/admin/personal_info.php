@@ -507,15 +507,14 @@ $(function(){
 				
 				
 				if(response.exe==='success'){
-						alert('success');
+						$('#view_pds').modal('hide');
 						$('#success-pds').modal('show');
 							$("#success-message").css('display','block');
 							document.getElementById('success-info').innerHTML = "Succeessfully update Info.!";   	    	
 							document.getElementById('success-header').innerHTML = "Success!";
-				}else {
-					
-				alert('error');
-					$('#error-pds').modal('show');
+				}else if(response.error==='error'){
+						$('#view_pds').modal('hide');
+						$('#error-pds').modal('show');
 							$("#error-message").css('display','block');
 							document.getElementById('error-info').innerHTML = "Please input all required fields!";   	    	
 							document.getElementById('error-header').innerHTML = "Error!";
@@ -533,7 +532,6 @@ $(function(){
 		action='view_pds_function';
 		$("#view_pds input").val("");
 		id = $(this).attr("data-id");
-		alert(id);
 		$.ajax({
 			type: 'POST',
 			url: '../credentials/model-pds.php',
@@ -581,6 +579,8 @@ $(function(){
 					$("#bybirth").prop("checked", true);
 				}else if(response.CITIZENSHIP==="By Naturalization"){
 					$("#bynatu").prop("checked", true);
+				}else{
+					$("#fili").prop("checked", true);
 				}
 				
 				//$("#view_pds .pds_citizenship").val(response.CITIZENSHIP);//citizenship
