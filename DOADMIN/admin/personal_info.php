@@ -512,12 +512,14 @@ $(function(){
 							$("#success-message").css('display','block');
 							document.getElementById('success-info').innerHTML = "Succeessfully update Info.!";   	    	
 							document.getElementById('success-header').innerHTML = "Success!";
+					setTimeout(function() {$('#success-pds').modal('hide');}, 3000);
 				}else if(response.error==='error'){
 						$('#view_pds').modal('hide');
 						$('#error-pds').modal('show');
 							$("#error-message").css('display','block');
 							document.getElementById('error-info').innerHTML = "Please input all required fields!";   	    	
 							document.getElementById('error-header').innerHTML = "Error!";
+						setTimeout(function() {$('#error-pds').modal('hide');}, 3000);
 				}
 				
 			}
