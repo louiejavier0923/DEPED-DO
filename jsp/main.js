@@ -445,6 +445,10 @@ $(document).ready(function() {
             else if (e.target == errorMessage) {
                 errorMessage.style.display= "none";
             }
+
+            else if (e.target == responsiveNav) {
+                responsiveNav.style.display= "none";
+            }
         })
 
         .on('click', '#closeErrorBtn', function() {

@@ -26,9 +26,9 @@
 
 				.header-title a img {
 					float: left;
-					width: 22%;
+					width: 20%;
 					height: 90%;
-					margin: 1% 2% 0px 3%;
+					margin: 0.8% 2% 0px 3%;
 				}
 
 				.header-title a h1 {
@@ -38,7 +38,7 @@
 					font-family: 'Gentona';
 					font-size: 120%;
 					line-height: 15px;
-					padding: 3.5% 0px;
+					padding: 2.5% 0px;
 					color: rgb(30, 30, 30);
 				}
 
@@ -47,7 +47,7 @@
 			float: right;
 			font-size: 140%;
 			color: rgb(120, 120, 120);
-			margin: 4% 3% 0px 0px;
+			margin: 2% 3% 0px 0px;
 		}
 
 		.header-container .header-nav {
@@ -156,7 +156,7 @@
 
 						.footer-one-two:first-child .one-three:first-child img {
 							float: left;
-							width: 8%;
+							width: 6%;
 							height: 15px;
 							padding-right: 2%;
 						}
@@ -292,7 +292,7 @@
 
 				.header-title a img {
 					float: left;
-					width: 22%;
+					width: 20%;
 					height: 90%;
 					margin: 1% 2% 0px 3%;
 				}
@@ -526,14 +526,14 @@
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-device-width : 500px) and (max-device-width : 1024px) {
 	/* == HEADER DESIGN == */
 
 	.header-container {
 		float: left;
 		position: fixed;
 		width: 100%;
-		height: 84px;
+		height: 74px;
 		background-color: rgb(255, 255, 255);
 		border-top: solid 5px rgb(4, 80, 140);
 		border-bottom: solid 1px rgb(230, 230, 230);
@@ -553,19 +553,19 @@
 
 				.header-title a img {
 					float: left;
-					width: 18%;
+					width: 22%;
 					height: 90%;
 					margin: 1% 2% 0px 3%;
 				}
 
 				.header-title a h1 {
 					float: left;
-					width: 75%;
+					width: 70%;
 					height: 90%;
 					font-family: 'Gentona';
-					font-size: 160%;
-					line-height: 20px;
-					padding: 3.5% 0px;
+					font-size: 130%;
+					line-height: 17px;
+					padding: 5% 0px;
 					color: rgb(30, 30, 30);
 				}
 
@@ -574,7 +574,7 @@
 			float: right;
 			font-size: 190%;
 			color: rgb(120, 120, 120);
-			margin: 2.5% 3% 0px 0px;
+			margin: 2% 3% 0px 0px;
 		}
 
 		.header-container .header-nav {
@@ -660,20 +660,21 @@
 
 				.footer-one-two:first-child .one-three {
 					float: left;
-					width: 25%;
+					width: 80%;
 					height: 100%;
 					display: inline-block;
+					margin: 0px 10% 20px 10%;
 				}
 
 					.footer-one-two:first-child .one-three:first-child {
-						margin-left: 7.5%;
+
 					}
 
 						.footer-one-two:first-child .one-three:first-child h2 {
 							float: left;
 							width: 100%;
 							font-family: 'Gentona';
-							font-size: 110%;
+							font-size: 140%;
 							color: rgb(4, 80, 140);
 							text-transform: uppercase;
 							margin-bottom: 40px;
@@ -681,14 +682,15 @@
 
 						.footer-one-two:first-child .one-three:first-child img {
 							float: left;
-							width: 8%;
+							width: 5%;
 							height: 15px;
 							padding-right: 2%;
+							padding-left: 5%;
 						}
 
 						.footer-one-two:first-child .one-three:first-child p {
 							float: left;
-							width: 90%;
+							width: 85%;
 							margin-bottom: 15px;
 							font-family: 'Century Gothic';
 							font-size: 90%;
@@ -699,11 +701,11 @@
 							display: inline-block;
 							text-decoration: none;
 							margin-top: 20px;
-							padding: 8px 4%;
+							padding: 8px 11%;
 							text-align: center;
 							text-transform: uppercase;
 							font-family: 'Gentona';
-							font-size: 75%;
+							font-size: 80%;
 							color: rgb(255, 255, 255);
 						}
 
@@ -720,43 +722,41 @@
 							}
 
 					.footer-one-two:first-child .one-three:nth-child(2) {
-						margin: 0px 5%;
+
 					}
 
 						.footer-one-two:first-child .one-three:nth-child(2) h2 {
 							float: left;
 							width: 100%;
 							font-family: 'Gentona';
-							font-size: 110%;
+							font-size: 140%;
 							color: rgb(4, 80, 140);
 							text-transform: uppercase;
 							margin-bottom: 40px;
-							text-align: center;
+							margin-top: 20px;
 						}
 
 						.footer-one-two:first-child .one-three:nth-child(2) a {
 							float: left;
 							text-decoration: none;
 							width: 100%;
-							text-align: center;
 							color: rgb(69, 93, 146);
 							line-height: 20px;
 							font-size: 80%;
 						}
 
 					.footer-one-two:first-child .one-three:last-child {
-						margin-righ: 7.5%;
+
 					}
 
 						.footer-one-two:first-child .one-three:last-child h2 {
 							float: left;
 							width: 100%;
 							font-family: 'Gentona';
-							font-size: 110%;
+							font-size: 140%;
 							color: rgb(4, 80, 140);
 							text-transform: uppercase;
 							margin-bottom: 40px;
-							text-align: center;
 						}
 
 						.footer-one-two:first-child .one-three:last-child a {
@@ -766,7 +766,6 @@
 							text-decoration: none;
 							line-height: 20px;
 							color: rgb(69, 93, 146);
-							text-align: center;
 							font-size: 85%;
 						}
 
@@ -814,7 +813,7 @@
 
 				.header-title a img {
 					float: left;
-					width: 18%;
+					width: 20%;
 					height: 90%;
 					margin: 1% 2% 0px 3%;
 				}
@@ -944,14 +943,14 @@
 
 						.footer-one-two:first-child .one-three:first-child img {
 							float: left;
-							width: 8%;
+							width: 7%;
 							height: 15px;
 							padding-right: 2%;
 						}
 
 						.footer-one-two:first-child .one-three:first-child p {
 							float: left;
-							width: 90%;
+							width: 85%;
 							margin-bottom: 15px;
 							font-family: 'Century Gothic';
 							font-size: 90%;
@@ -986,6 +985,7 @@
 						float: left;
 						width: 25%;
 						margin: 0% 5%;
+						margin-top: -20px;
 					}
 
 						.footer-one-two:first-child .one-three:nth-child(2) h2 {
@@ -1081,7 +1081,7 @@
 
 				.header-title a img {
 					float: left;
-					width: 18%;
+					width: 15%;
 					height: 90%;
 					margin: 1% 2% 0px 3%;
 				}
@@ -1248,7 +1248,6 @@
 							}
 
 					.footer-one-two:first-child .one-three:nth-child(2) {
-						margin: 0px 5%;
 					}
 
 						.footer-one-two:first-child .one-three:nth-child(2) h2 {
@@ -1273,7 +1272,7 @@
 						}
 
 					.footer-one-two:first-child .one-three:last-child {
-						margin-righ: 7.5%;
+
 					}
 
 						.footer-one-two:first-child .one-three:last-child h2 {
@@ -1513,7 +1512,7 @@
 							color: rgb(4, 80, 140);
 							text-transform: uppercase;
 							margin-bottom: 40px;
-							text-align: cent*/er;
+							text-align: center;
 						}
 
 						.footer-one-two:first-child .one-three:nth-child(2) a {
@@ -1766,7 +1765,7 @@
 							color: rgb(4, 80, 140);
 							text-transform: uppercase;
 							margin-bottom: 40px;
-							text-align: cent*/er;
+							text-align: center;
 						}
 
 						.footer-one-two:first-child .one-three:nth-child(2) a {

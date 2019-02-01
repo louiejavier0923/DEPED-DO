@@ -55,824 +55,6613 @@ body {
 		}
 
 	/* == MODAL MESSAGE ICON ENDS HERE == */
+
+	/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	/* == APPLICANT`S MORE INFO MODAL DESIGN == */
 
-.modal-info {
-	float: left;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	z-index: 1;
-	display: none;
-}
-
-	.modal-info .modal-content {
+	.modal-info {
 		float: left;
-		width: 15%;
-		height: 180px;
-		background-color: rgb(255, 255, 255);
-		border-right: solid 1px rgb(230, 230, 230);
-		border-bottom: solid 1px rgb(230, 230, 230);
-		border-top: solid 4px rgb(4, 80, 140);
-		margin-left: 18%;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		display: none;
 	}
 
-		.modal-content a {
+		.modal-info .modal-content {
 			float: left;
-			display: inline-block;
-			width: 95%;
-			padding: 8px 0px 8px 5%;
-			text-decoration: none;
-			text-transform: uppercase;
-			color: rgb(60, 60, 60);
-			font-size: 80%;
-			cursor: pointer;
-			transition: all 0.2s ease-in-out;
-		}
-
-		.modal-content a:hover {
-			font-weight: bold;
-			color: rgb(4, 80, 140);
-			transition: all 0.2s ease-in-out;
-		}
-
-/* == APPLICANT`S MORE INFO MOODAL DESIGN ENDS HERE == *//* == APPLICANT`S ACCOUNT SETTING MODAL == */
-
-	.applicant-content-container .accountSettingContainer {
-		float: left;
-		width: 60%;
-		height: 400px;
-		border-radius: 5px;
-		margin: 10% 20%;
-	}
-
-		.accountSettingContainer h1 {
-			float: left;
-			width: 95%;
-			font-family: 'Gentona';
-			font-size: 170%;
-			text-transform: uppercase;
-			color: rgb(130, 130, 130);
-			margin: 10px 0px 0px 5%;
-		}
-
-		.accountSettingContainer .line {
-			float: left;
-			width: 10%;
-			height: 5px;
-			background-color: rgb(4, 80, 140);
-			border-radius: 5px;
-			margin: 0px 0px 30px 5%;
-		}
-
-		.accountSettingContainer .viewAccount, .accountSettingContainer .updateAccount, .accountSettingContainer .changePassword {
-			float: left;
-			width: 90%;
-			margin: 20px 5% 80px 5%;
-		}
-
-			.viewAccount .input-field, .updateAccount .input-field, .changePassword .input-field {
-				float: left;
-				width: 70%;
-				margin: 10px 15%;
-			}
-
-				.input-field label {
-					float: left;
-					width: 100%;
-					font-size: 85%;
-					text-transform: uppercase;
-					color: rgb(120, 120, 120);
-					font-weight: bold;
-					margin-bottom: 5px;
-				}
-
-				.input-field input {
-					float: left;
-					width: 98%;
-					height: 35px;
-					border: solid 1px rgb(210, 210, 210);
-					padding-left: 2%;
-					font-family: 'Century Gothic';
-					font-size: 80%;
-					border-radius: 15px;
-				}
-
-				.input-field input:focus {
-					outline: none;
-				}
-
-			.viewAccount .button-field, .updateAccount .button-field, .changePassword .button-field {
-				float: left;
-				width: 70%;
-				margin: 20px 15% 0px 15%;
-			}
-
-				.button-field button {
-					float: left;
-					width: 100%;
-					padding: 12px 0px;
-					background-color: rgb(4, 80, 140);
-					border: none;
-					border-radius: 15px;
-					font-family: 'Gentona';
-					font-size: 110%;
-					color: rgb(255, 255, 255);
-					margin-bottom: 10px;
-				}
-
-				.button-field button:focus {
-					outline: none;
-				}
-
-				.button-field #okInfoBtn, .button-field #okPassBtn {
-					display: none;
-				}
-
-/* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
-/* == APPLICANT`S ATTACH FILE MODAL == */
-
-.attach-container {
-	float: left;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 4;
-	background-color: rgba(0, 0, 0, 0.4);
-	display: none;
-}
-
-	.attach-container .attach-file-container {
-		float: left;
-		width: 40%;
-		height: 350px;
-		background-color: rgb(255, 255, 255);
-		margin: 10% 30%;
-		border-radius: 5px;
-	}
-
-		.attach-container .attach-file-container h2 {
-			float: left;
-			width: 90%;
-			margin-left: 5%;
-			margin-top: 30px;
-			font-family: 'Gentona';
-			font-size: 150%;
-			text-transform: uppercase;
-			color: rgb(100, 100, 100);
-		}
-
-		.attach-container .attach-file-container .line {
-			float: left;
-			width: 7%;
-			height: 5px;
-			background-color: rgb(4, 80, 140);
-			border-radius: 3px;
-			margin-bottom: 60px;
-			margin-left: 5%;
-		}
-
-		.attach-container .attach-file-container .input-file {
-			float: left;
-			width: 80%;
-			margin-left: 10%;
-			margin-bottom: 30px;
-		}
-
-			.attach-container .attach-file-container .input-file input {
-				float: left;
-				width: 50%;
-				margin-left: 5%;
-				font-family: 'Century Gothic';
-				font-size: 85%;
-			}
-
-			.attach-container .attach-file-container .input-file label {
-				float: left;
-				width: 90%;
-				margin-left: 5%;
-				font-size: 70%;
-				text-transform: uppercase;
-				color: rgb(150, 150, 150);
-				font-weight: bold;
-				font-style: italic;
-				margin-top: 10px;
-			}
-
-		.attach-container .attach-file-container .input-button {
-			float: left;
-			width: 70%;
-			margin-left: 15%;
-			text-align: right;
-			margin-top: 20px;
-		}
-
-			.attach-container .attach-file-container .input-button button {
-				width: 25%;
-				padding: 12px 0px;
-				margin-left: 2.5%;
-				border: none;
-				border-radius: 5px;
-				font-family: 'Gentona';
-				font-size: 90%;
-			}
-
-				.attach-container .attach-file-container .input-button button:first-child {
-					background-color: rgb(255, 255, 255);
-					border: solid 1px rgb(4, 80, 140);
-					color: rgb(4, 80, 140);
-				}
-
-				.attach-container .attach-file-container .input-button button:last-child {
-					background-color: rgb(4, 80, 140);
-					color: rgb(255, 255, 255);
-				}
-
-/* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */
-/* == APPLICANT`S CHOOSE FILE MODAL == */
-
-.attach-category {
-	float: left;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 3;
-	background-color: rgba(0, 0, 0, 0.4);
-	display: none;
-}
-
-	.attach-category .attach-file-container {
-		float: left;
-		width: 40%;
-		height: 350px;
-		background-color: rgb(255, 255, 255);
-		margin: 10% 30%;
-		border-radius: 5px;
-	}
-
-		.attach-category #exitFileBtn {
-			font-size: 140%;
-			color: rgb(90, 90, 90);
-		}
-
-		.attach-category .attach-file-container h2 {
-			float: left;
-			width: 90%;
-			margin-left: 5%;
-			margin-top: 30px;
-			font-family: 'Gentona';
-			font-size: 150%;
-			text-transform: uppercase;
-			color: rgb(100, 100, 100);
-		}
-
-		.attach-category .attach-file-container .categ-button {
-			float: left;
-			width: 80%;
-			margin-top: 40px;
-			margin-left: 10%;
-		}
-
-			.categ-button button {
-				float: left;
-				width: 40%;
-				border: solid 1px rgb(4, 80, 140);
-				border-radius: 3px;
-				padding: 10px 0px;
-				font-family: 'Century Gothic';
-				font-size: 90%;
-				text-transform: uppercase;
-				color: rgb(255, 255, 255);
-				background-color: rgb(4, 80, 140);
-				font-weight: bold;
-				margin: 5% 2.5%;
-			}
-
-		.attach-category .attach-file-container .input-button {
-			float: right;
-			text-align: right;
-			width: 80%;
-			margin-right: 10%;
-			margin-top: 50px;
-		}
-
-			.attach-category .attach-file-container .input-button button {
-				width: 20%;
-				padding: 15px 0px;
-				border: solid 1px rgb(4, 80, 140);
-				border-radius: 5px;
-				font-family: 'Gentona';
-				color: rgb(4, 80, 140);
-				background-color: rgb(255, 255, 255);
-			}
-
-/* == APPLICANT`S CHOOSE FILE MODAL ENDS HERE == */
-/* == APPLICANT`S PDS FORM MODAL == */
-
-.pds-form-container {
-	float: left;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background-color: rgba(30, 30, 30, 0.5);
-	top: 0;
-	left: 0;
-	display: none;
-	overflow-y: auto;
-}
-
-	.pds-form-container .pds-form {
-		width: 70%;
-		height: auto;
-		margin-top: 5%;
-		margin-bottom: 1%;
-		background-color: rgb(255, 255, 255);
-		margin-left: 15%;
-		overflow: hidden;
-		border: solid 1px rgb(0, 0, 0);
-	}
-
-	.pds-form-container #closePdsBtn {
-		float: left;
-		width: 10%;
-		padding: 10px 0px;
-		background-color: rgb(4, 80, 140);
-		color: rgb(255, 255, 255);
-		font-family: 'Gentona';
-		font-size: 110%;
-		margin-left: 45%;
-		border: none;
-		border-radius: 5px;
-		margin-bottom: 5%;
-	}
-
-/* == APPLICANT`S PDS FORM MODAL ENDS HERE == */
-/* == MESSAGE MODAL DESIGN == */
-
-.message-modal-container {
-	float: left;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background-color: rgba(0, 0, 0, 0.4);
-	top: 0;
-	left: 0;
-	display: none;
-	z-index: 1;
-}
-
-	.message-modal-container .message-container {
-		float: left;
-		width: 30%;
-		height: 500px;
-		background-color: rgb(255, 255, 255);
-		border-radius: 5px;
-		margin: 3% 35%;
-	}
-
-		.message-container .message-header {
-			float: left;
-			width: 100%;
-			height: 10%;
-			border-bottom: solid 1px rgb(220, 220, 220);
-		}
-
-			.message-header h1 {
-				float: left;
-				font-family: 'Gentona';
-				font-size: 150%;
-				text-transform: uppercase;
-				color: rgb(110, 110, 110);
-				margin-left: 2%;
-				margin-top: 2%;
-			}
-
-			.message-header #exitMessageBtn {
-				float: right;
-				font-size: 150%;
-				margin: 2%;
-				margin-right: 2%;
-				color: rgb(110, 110, 110);
-			}
-
-		.message-container .message-inbox {
-			float: left;
-			width: 100%;
-			height: 80%;
-			overflow-y: auto;
-			background-color: rgb(250, 250, 250);
-			padding: 20px 0px;
-		}
-
-			.message-inbox .inbox-user {
-				float: right;
-				width: 80%;
-				margin-right: 5%;
-				padding: 10px 0px;
-				border-radius: 5px;
-				background-color: rgb(245, 245, 245);
-				margin-bottom: 10px;
-			}
-
-				.inbox-user img {
-					float: left;
-					width: 10%;
-					height: 30px;
-					margin: 0px 2.5%;
-				}
-
-				.inbox-user #inbox-name {
-					float: left;
-					width: 80%;
-					margin-top: 5px;
-					margin-bottom: 10px;
-					font-weight: bold;
-					text-transform: uppercase;
-					font-size: 85%;
-				}
-
-				.inbox-user #inbox-content {
-					float: left;
-					width: 80%;
-					margin: 0px 17.5%;
-					font-size: 80%;
-				}
-
-				.inbox-user #inbox-sent {
-					float: right;
-					margin: 5px 2.5% 0px 0px;
-					font-size: 50%;
-					text-transform: uppercase;
-					color: rgb(100, 100, 100);
-					font-weight: bold;
-				}
-
-			.message-inbox .inbox-admin {
-				float: left;
-				width: 80%;
-				margin-left: 5%;
-				padding: 10px 0px;
-				border-radius: 5px;
-				background-color: rgb(245, 245, 245);
-				margin-bottom: 10px;
-			}
-
-				.inbox-admin img {
-					float: left;
-					width: 10%;
-					height: 30px;
-					margin: 0px 2.5%;
-				}
-
-				.inbox-admin #inbox-name {
-					float: left;
-					width: 80%;
-					margin-top: 5px;
-					margin-bottom: 10px;
-					font-weight: bold;
-					text-transform: uppercase;
-					font-size: 85%;
-				}
-
-				.inbox-admin #inbox-content {
-					float: left;
-					width: 80%;
-					margin: 0px 17.5%;
-					font-size: 80%;
-				}
-
-				.inbox-admin #inbox-receive {
-					float: right;
-					margin: 5px 2.5% 0px 0px;
-					font-size: 50%;
-					text-transform: uppercase;
-					color: rgb(100, 100, 100);
-					font-weight: bold;
-				}
-
-		.message-container .message-input {
-			float: left;
-			width: 100%;
-			height: 9.5%;
-			border-top: solid 1px rgb(220, 220, 220);
-		}
-
-			.message-input input {
-				float: left;
-				width: 78%;
-				height: 100%;
-				border: none;
-				padding-left: 2%;
-				font-family: 'Century Gothic';
-				font-size: 80%;
-				border-bottom-left-radius: 5px;
-			}
-
-			.message-input input:focus {
-				outline: none;
-			}
-
-			.message-input button {
-				float: left;
-				width: 20%;
-				height: 100%;
-				background-color: rgb(4, 80, 140);
-				border: none;
-				border-bottom-right-radius: 5px;
-				color: rgb(255, 255, 255);
-				font-family: 'Gentona';
-				font-size: 95%;
-			}
-
-			.message-input button:focus {
-				outline: none;
-			}
-
-/* == MESSAGE MODAL DESIGN ENDS HERE == */
-/* == FILES MODAL DESIGN == */
-
-.file-modal-container {
-	float: left;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background-color: rgba(0, 0, 0, 0.4);
-	top: 0;
-	left: 0;
-	z-index: 2;
-	display: none;
-}
-
-	.file-modal-container .file-container {
-		float: left;
-		width: 30%;
-		height: 400px;
-		background-color: rgb(255, 255, 255);
-		border-radius: 5px;
-		margin-left: 35%;
-		margin-top: 5%;
-	}
-
-		.file-container .file-header {
-			float: left;
-			width: 100%;
-			height: 15%;
+			width: 15%;
+			height: 180px;
+			background-color: rgb(255, 255, 255);
+			border-right: solid 1px rgb(230, 230, 230);
 			border-bottom: solid 1px rgb(230, 230, 230);
+			border-top: solid 4px rgb(4, 80, 140);
+			margin-left: 18%;
 		}
 
-			.file-header h1 {
+			.modal-content a {
 				float: left;
-				font-size: 150%;
-				font-family: 'Gentona';
-				text-transform: uppercase;
-				color: rgb(110, 110, 110);
-				margin: 3% 0px 0px 3%;
-			}
-
-			.file-header #closeFileBtn {
-				float: right;
-				font-size: 150%;
-				color: rgb(110, 110, 110);
-				margin: 3% 3% 0px 0px;
-			}
-
-		.file-container .file-content {
-			float: left;
-			width: 96%;
-			height: 80.4%;
-			padding: 2%;
-		}
-
-			.file-content .files {
-				float: left;
-				width: 100%;
-				padding: 10px 0px;
 				display: inline-block;
-			}
-
-				.file-content .files img {
-					float: left;
-					margin-right: 10px;
-				}
-
-				.file-content .files p {
-					float: left;
-					margin-top: 5px;
-					font-size: 90%;
-					color: rgb(120, 120, 120);
-				}
-
-/* == FILES MODAL DESIGN ENDS HERE == */
-/* == UPDATE IMAGE MODAL == */
-
-.image-modal {
-	float: left;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background-color: rgba(0, 0, 0, 0.4);
-	z-index: 2;
-	top: 0;
-	left: 0;
-	display: none;
-}
-	.image-modal .image-container {
-		float: left;
-		width: 40%;
-		height: 300px;
-		background-color: rgb(255, 255, 255);
-		border-radius: 5px;
-		overflow: hidden;
-		margin: 10% 30%;
-		border-left: solid 10px rgb(4, 80, 140);
-	}
-
-		.image-container h1 {
-			float: left;
-			font-family: 'Gentona';
-			font-size: 140%;
-			text-transform: uppercase;
-			color: rgb(110, 110, 110);
-			margin-left: 5%;
-			margin-top: 20px;
-		}
-
-		.image-container #closeImageBtn {
-			float: right;
-			margin-right: 5%;
-			margin-top: 10px;
-			font-size: 150%;
-		}
-
-		.image-container img {
-			float: left;
-			width: 30%;
-			height: 150px;
-			margin-left: 35%;
-			margin-top: 10px;
-		}
-
-		.image-container #uploadBtn {
-			float: left;
-			width: 50%;
-			background-color: transparent;
-			border: none;
-			padding: 10px 0px;
-			border: solid 1px rgb(4, 80, 140);
-			border-radius: 5px;
-			font-family: 'Gentona';
-			font-size: 95%;
-			color: rgb(4, 80, 140);
-			margin: 20px 25% 0px 25%;
-			transition: all 0.2s ease-in-out;
-		}
-
-			.image-container #uploadBtn:hover {
-				background-color: rgb(4, 80, 140);
-				color: rgb(255, 255, 255);
+				width: 95%;
+				padding: 8px 0px 8px 5%;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: rgb(60, 60, 60);
+				font-size: 80%;
+				cursor: pointer;
 				transition: all 0.2s ease-in-out;
 			}
 
-/* == UPDATE IMAGE MODAL ENDS HERE == */
-/* == ERROR MESSAGE MODAL ==  */
+			.modal-content a:hover {
+				font-weight: bold;
+				color: rgb(4, 80, 140);
+				transition: all 0.2s ease-in-out;
+			}
 
-.error-modal {
-	float: left;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background-color: rgba(0, 0, 0, 0.6);
-	top: 0;
-	left: 0;
-	z-index: 3;
-	display: none;
-}
+	/* == APPLICANT`S MORE INFO MOODAL DESIGN ENDS HERE == *//* == APPLICANT`S ACCOUNT SETTING MODAL == */
 
-	.error-modal .error-container {
+		.applicant-content-container .accountSettingContainer {
+			float: left;
+			width: 60%;
+			height: 400px;
+			border-radius: 5px;
+			margin: 10% 20%;
+		}
+
+			.accountSettingContainer h1 {
+				float: left;
+				width: 95%;
+				font-family: 'Gentona';
+				font-size: 170%;
+				text-transform: uppercase;
+				color: rgb(130, 130, 130);
+				margin: 10px 0px 0px 5%;
+			}
+
+			.accountSettingContainer .line {
+				float: left;
+				width: 10%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 5px;
+				margin: 0px 0px 30px 5%;
+			}
+
+			.accountSettingContainer .viewAccount, .accountSettingContainer .updateAccount, .accountSettingContainer .changePassword {
+				float: left;
+				width: 90%;
+				margin: 20px 5% 80px 5%;
+			}
+
+				.viewAccount .input-field, .updateAccount .input-field, .changePassword .input-field {
+					float: left;
+					width: 70%;
+					margin: 10px 15%;
+				}
+
+					.input-field label {
+						float: left;
+						width: 100%;
+						font-size: 85%;
+						text-transform: uppercase;
+						color: rgb(120, 120, 120);
+						font-weight: bold;
+						margin-bottom: 5px;
+					}
+
+					.input-field input {
+						float: left;
+						width: 98%;
+						height: 35px;
+						border: solid 1px rgb(210, 210, 210);
+						padding-left: 2%;
+						font-family: 'Century Gothic';
+						font-size: 80%;
+						border-radius: 15px;
+					}
+
+					.input-field input:focus {
+						outline: none;
+					}
+
+				.viewAccount .button-field, .updateAccount .button-field, .changePassword .button-field {
+					float: left;
+					width: 70%;
+					margin: 20px 15% 0px 15%;
+				}
+
+					.button-field button {
+						float: left;
+						width: 100%;
+						padding: 12px 0px;
+						background-color: rgb(4, 80, 140);
+						border: none;
+						border-radius: 15px;
+						font-family: 'Gentona';
+						font-size: 110%;
+						color: rgb(255, 255, 255);
+						margin-bottom: 10px;
+					}
+
+					.button-field button:focus {
+						outline: none;
+					}
+
+					.button-field #okInfoBtn, .button-field #okPassBtn {
+						display: none;
+					}
+
+	/* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
+	/* == APPLICANT`S ATTACH FILE MODAL == */
+
+	.attach-container {
 		float: left;
-		width: 25%;
-		background-color: rgb(255, 255, 255);
-		border-radius: 5px;
-		margin: 7% 37.5%;
-		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 4;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
 	}
 
-
-		.error-container img {
+		.attach-container .attach-file-container {
 			float: left;
-			width: 20%;
-			height: 50px;
-			margin: 20% 40% 0px 40%;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
 		}
 
-		.error-container #error-header {
-			float: left;
-			width: 100%;
-			text-align: center;
-			font-size: 130%;
-			font-weight: bold;
-			color: rgb(110, 110, 110);
-			margin-top: 5px;
-		}
+			.attach-container .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
 
-		.error-container #error-info {
-			float: left;
-			width: 70%;
-			margin: 15%;
-			font-size: 80%;
-			color: rgb(150, 150, 150);
-			text-align: center;
-			margin-bottom: 50px;
-		}
+			.attach-container .attach-file-container .line {
+				float: left;
+				width: 7%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 3px;
+				margin-bottom: 60px;
+				margin-left: 5%;
+			}
 
-		.error-container #closeErrorBtn {
-			float: left;
-			width: 100%;
-			position: relative;
-			padding: 21px 0px;
-			border: none;
-			font-size: 95%;
-			margin-top: 5px;
-			background-color: rgb(255, 0, 0);
-			color: rgb(255, 255, 255);
-		}
+			.attach-container .attach-file-container .input-file {
+				float: left;
+				width: 80%;
+				margin-left: 10%;
+				margin-bottom: 30px;
+			}
 
-		.error-container #closeErrorBtn:focus {
-			outline: none;
-		}
+				.attach-container .attach-file-container .input-file input {
+					float: left;
+					width: 50%;
+					margin-left: 5%;
+					font-family: 'Century Gothic';
+					font-size: 85%;
+				}
 
-/* == ERROR MESSAGE MODAL ENDS HERE == */
-/* == success MESSAGE MODAL ==  */
+				.attach-container .attach-file-container .input-file label {
+					float: left;
+					width: 90%;
+					margin-left: 5%;
+					font-size: 70%;
+					text-transform: uppercase;
+					color: rgb(150, 150, 150);
+					font-weight: bold;
+					font-style: italic;
+					margin-top: 10px;
+				}
 
-.success-modal {
-	float: left;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background-color: rgba(0, 0, 0, 0.6);
-	top: 0;
-	left: 0;
-	z-index: 3;
-	display: none;
-}
+			.attach-container .attach-file-container .input-button {
+				float: left;
+				width: 70%;
+				margin-left: 15%;
+				text-align: right;
+				margin-top: 20px;
+			}
 
-	.success-modal .success-container {
+				.attach-container .attach-file-container .input-button button {
+					width: 25%;
+					padding: 12px 0px;
+					margin-left: 2.5%;
+					border: none;
+					border-radius: 5px;
+					font-family: 'Gentona';
+					font-size: 90%;
+				}
+
+					.attach-container .attach-file-container .input-button button:first-child {
+						background-color: rgb(255, 255, 255);
+						border: solid 1px rgb(4, 80, 140);
+						color: rgb(4, 80, 140);
+					}
+
+					.attach-container .attach-file-container .input-button button:last-child {
+						background-color: rgb(4, 80, 140);
+						color: rgb(255, 255, 255);
+					}
+
+	/* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S CHOOSE FILE MODAL == */
+
+	.attach-category {
 		float: left;
-		width: 25%;
-		background-color: rgb(255, 255, 255);
-		border-radius: 5px;
-		margin: 7% 37.5%;
-		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 3;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
 	}
 
-
-		.success-container img {
+		.attach-category .attach-file-container {
 			float: left;
-			width: 20%;
-			height: 65px;
-			margin: 20% 40% 0px 40%;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
 		}
 
-		.success-container #success-header {
-			float: left;
-			width: 100%;
-			text-align: center;
-			font-size: 130%;
-			font-weight: bold;
-			color: rgb(110, 110, 110);
-			margin-top: 5px;
-		}
+			.attach-category #exitFileBtn {
+				font-size: 140%;
+				color: rgb(90, 90, 90);
+			}
 
-		.success-container #success-info {
-			float: left;
+			.attach-category .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-category .attach-file-container .categ-button {
+				float: left;
+				width: 80%;
+				margin-top: 40px;
+				margin-left: 10%;
+			}
+
+				.categ-button button {
+					float: left;
+					width: 40%;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 3px;
+					padding: 10px 0px;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
+					background-color: rgb(4, 80, 140);
+					font-weight: bold;
+					margin: 5% 2.5%;
+				}
+
+			.attach-category .attach-file-container .input-button {
+				float: right;
+				text-align: right;
+				width: 80%;
+				margin-right: 10%;
+				margin-top: 50px;
+			}
+
+				.attach-category .attach-file-container .input-button button {
+					width: 20%;
+					padding: 15px 0px;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 5px;
+					font-family: 'Gentona';
+					color: rgb(4, 80, 140);
+					background-color: rgb(255, 255, 255);
+				}
+
+	/* == APPLICANT`S CHOOSE FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S PDS FORM MODAL == */
+
+	.pds-form-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(30, 30, 30, 0.5);
+		top: 0;
+		left: 0;
+		display: none;
+		overflow-y: auto;
+	}
+
+		.pds-form-container .pds-form {
 			width: 70%;
-			margin: 15%;
-			font-size: 80%;
-			color: rgb(150, 150, 150);
-			text-align: center;
-			margin-bottom: 50px;
+			height: auto;
+			margin-top: 5%;
+			margin-bottom: 1%;
+			background-color: rgb(255, 255, 255);
+			margin-left: 15%;
+			overflow: hidden;
+			border: solid 1px rgb(0, 0, 0);
 		}
 
-		.success-container #closeSuccessBtn {
+		.pds-form-container #closePdsBtn {
 			float: left;
-			width: 100%;
-			position: relative;
-			padding: 21px 0px;
-			border: none;
-			font-size: 95%;
-			margin-top: 15px;
-			background-color: rgb(0, 255, 0);
+			width: 10%;
+			padding: 10px 0px;
+			background-color: rgb(4, 80, 140);
 			color: rgb(255, 255, 255);
+			font-family: 'Gentona';
+			font-size: 110%;
+			margin-left: 45%;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 5%;
 		}
 
-		.success-container #closeSuccessBtn:focus {
-			outline: none;
+	/* == APPLICANT`S PDS FORM MODAL ENDS HERE == */
+	/* == MESSAGE MODAL DESIGN == */
+
+	.message-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		display: none;
+		z-index: 1;
+	}
+
+		.message-modal-container .message-container {
+			float: left;
+			width: 30%;
+			height: 500px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 3% 35%;
 		}
 
-/* == ERROR MESSAGE MODAL ENDS HERE == */
+			.message-container .message-header {
+				float: left;
+				width: 100%;
+				height: 10%;
+				border-bottom: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-header h1 {
+					float: left;
+					font-family: 'Gentona';
+					font-size: 150%;
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin-left: 2%;
+					margin-top: 2%;
+				}
+
+				.message-header #exitMessageBtn {
+					float: right;
+					font-size: 150%;
+					margin: 2%;
+					margin-right: 2%;
+					color: rgb(110, 110, 110);
+				}
+
+			.message-container .message-inbox {
+				float: left;
+				width: 100%;
+				height: 80%;
+				overflow-y: auto;
+				background-color: rgb(250, 250, 250);
+				padding: 20px 0px;
+			}
+
+				.message-inbox .inbox-user {
+					float: right;
+					width: 80%;
+					margin-right: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-user img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-user #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-user #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-user #inbox-sent {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+				.message-inbox .inbox-admin {
+					float: left;
+					width: 80%;
+					margin-left: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-admin img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-admin #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-admin #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-admin #inbox-receive {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+			.message-container .message-input {
+				float: left;
+				width: 100%;
+				height: 9.5%;
+				border-top: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-input input {
+					float: left;
+					width: 78%;
+					height: 100%;
+					border: none;
+					padding-left: 2%;
+					font-family: 'Century Gothic';
+					font-size: 80%;
+					border-bottom-left-radius: 5px;
+				}
+
+				.message-input input:focus {
+					outline: none;
+				}
+
+				.message-input button {
+					float: left;
+					width: 20%;
+					height: 100%;
+					background-color: rgb(4, 80, 140);
+					border: none;
+					border-bottom-right-radius: 5px;
+					color: rgb(255, 255, 255);
+					font-family: 'Gentona';
+					font-size: 95%;
+				}
+
+				.message-input button:focus {
+					outline: none;
+				}
+
+	/* == MESSAGE MODAL DESIGN ENDS HERE == */
+	/* == FILES MODAL DESIGN == */
+
+	.file-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		z-index: 2;
+		display: none;
+	}
+
+		.file-modal-container .file-container {
+			float: left;
+			width: 30%;
+			height: 400px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin-left: 35%;
+			margin-top: 5%;
+		}
+
+			.file-container .file-header {
+				float: left;
+				width: 100%;
+				height: 15%;
+				border-bottom: solid 1px rgb(230, 230, 230);
+			}
+
+				.file-header h1 {
+					float: left;
+					font-size: 150%;
+					font-family: 'Gentona';
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin: 3% 0px 0px 3%;
+				}
+
+				.file-header #closeFileBtn {
+					float: right;
+					font-size: 150%;
+					color: rgb(110, 110, 110);
+					margin: 3% 3% 0px 0px;
+				}
+
+			.file-container .file-content {
+				float: left;
+				width: 96%;
+				height: 80.4%;
+				padding: 2%;
+			}
+
+				.file-content .files {
+					float: left;
+					width: 100%;
+					padding: 10px 0px;
+					display: inline-block;
+				}
+
+					.file-content .files img {
+						float: left;
+						margin-right: 10px;
+					}
+
+					.file-content .files p {
+						float: left;
+						margin-top: 5px;
+						font-size: 90%;
+						color: rgb(120, 120, 120);
+					}
+
+	/* == FILES MODAL DESIGN ENDS HERE == */
+	/* == UPDATE IMAGE MODAL == */
+
+	.image-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+		.image-modal .image-container {
+			float: left;
+			width: 40%;
+			height: 300px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 10% 30%;
+			border-left: solid 10px rgb(4, 80, 140);
+		}
+
+			.image-container h1 {
+				float: left;
+				font-family: 'Gentona';
+				font-size: 140%;
+				text-transform: uppercase;
+				color: rgb(110, 110, 110);
+				margin-left: 5%;
+				margin-top: 20px;
+			}
+
+			.image-container #closeImageBtn {
+				float: right;
+				margin-right: 5%;
+				margin-top: 10px;
+				font-size: 150%;
+			}
+
+			.image-container img {
+				float: left;
+				width: 30%;
+				height: 150px;
+				margin-left: 35%;
+				margin-top: 10px;
+			}
+
+			.image-container #uploadBtn {
+				float: left;
+				width: 50%;
+				background-color: transparent;
+				border: none;
+				padding: 10px 0px;
+				border: solid 1px rgb(4, 80, 140);
+				border-radius: 5px;
+				font-family: 'Gentona';
+				font-size: 95%;
+				color: rgb(4, 80, 140);
+				margin: 20px 25% 0px 25%;
+				transition: all 0.2s ease-in-out;
+			}
+
+				.image-container #uploadBtn:hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == UPDATE IMAGE MODAL ENDS HERE == */
+	/* == ERROR MESSAGE MODAL ==  */
+
+	.error-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: block;
+	}
+
+		.error-modal .error-container {
+			float: left;
+			width: 90%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 5%;
+			overflow: hidden;
+		}
+
+
+			.error-container img {
+				float: left;
+				width: 20%;
+				height: 50px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.error-container #error-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.error-container #error-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.error-container #closeErrorBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 5px;
+				background-color: rgb(255, 0, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.error-container #closeErrorBtn:focus {
+				outline: none;
+			}
+
+	/* == ERROR MESSAGE MODAL ENDS HERE == */
+	/* == SUCCESS MESSAGE MODAL ==  */
+
+	.success-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.success-modal .success-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.success-container img {
+				float: left;
+				width: 20%;
+				height: 65px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.success-container #success-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.success-container #success-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.success-container #closeSuccessBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 15px;
+				background-color: rgb(0, 255, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.success-container #closeSuccessBtn:focus {
+				outline: none;
+			}
+
+	/* == SUCCESS MESSAGE MODAL ENDS HERE == */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+	/* == APPLICANT`S MORE INFO MODAL DESIGN == */
+
+	.modal-info {
+		float: left;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		display: none;
+	}
+
+		.modal-info .modal-content {
+			float: left;
+			width: 15%;
+			height: 180px;
+			background-color: rgb(255, 255, 255);
+			border-right: solid 1px rgb(230, 230, 230);
+			border-bottom: solid 1px rgb(230, 230, 230);
+			border-top: solid 4px rgb(4, 80, 140);
+			margin-left: 18%;
+		}
+
+			.modal-content a {
+				float: left;
+				display: inline-block;
+				width: 95%;
+				padding: 8px 0px 8px 5%;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: rgb(60, 60, 60);
+				font-size: 80%;
+				cursor: pointer;
+				transition: all 0.2s ease-in-out;
+			}
+
+			.modal-content a:hover {
+				font-weight: bold;
+				color: rgb(4, 80, 140);
+				transition: all 0.2s ease-in-out;
+			}
+
+	/* == APPLICANT`S MORE INFO MOODAL DESIGN ENDS HERE == *//* == APPLICANT`S ACCOUNT SETTING MODAL == */
+
+		.applicant-content-container .accountSettingContainer {
+			float: left;
+			width: 60%;
+			height: 400px;
+			border-radius: 5px;
+			margin: 10% 20%;
+		}
+
+			.accountSettingContainer h1 {
+				float: left;
+				width: 95%;
+				font-family: 'Gentona';
+				font-size: 170%;
+				text-transform: uppercase;
+				color: rgb(130, 130, 130);
+				margin: 10px 0px 0px 5%;
+			}
+
+			.accountSettingContainer .line {
+				float: left;
+				width: 10%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 5px;
+				margin: 0px 0px 30px 5%;
+			}
+
+			.accountSettingContainer .viewAccount, .accountSettingContainer .updateAccount, .accountSettingContainer .changePassword {
+				float: left;
+				width: 90%;
+				margin: 20px 5% 80px 5%;
+			}
+
+				.viewAccount .input-field, .updateAccount .input-field, .changePassword .input-field {
+					float: left;
+					width: 70%;
+					margin: 10px 15%;
+				}
+
+					.input-field label {
+						float: left;
+						width: 100%;
+						font-size: 85%;
+						text-transform: uppercase;
+						color: rgb(120, 120, 120);
+						font-weight: bold;
+						margin-bottom: 5px;
+					}
+
+					.input-field input {
+						float: left;
+						width: 98%;
+						height: 35px;
+						border: solid 1px rgb(210, 210, 210);
+						padding-left: 2%;
+						font-family: 'Century Gothic';
+						font-size: 80%;
+						border-radius: 15px;
+					}
+
+					.input-field input:focus {
+						outline: none;
+					}
+
+				.viewAccount .button-field, .updateAccount .button-field, .changePassword .button-field {
+					float: left;
+					width: 70%;
+					margin: 20px 15% 0px 15%;
+				}
+
+					.button-field button {
+						float: left;
+						width: 100%;
+						padding: 12px 0px;
+						background-color: rgb(4, 80, 140);
+						border: none;
+						border-radius: 15px;
+						font-family: 'Gentona';
+						font-size: 110%;
+						color: rgb(255, 255, 255);
+						margin-bottom: 10px;
+					}
+
+					.button-field button:focus {
+						outline: none;
+					}
+
+					.button-field #okInfoBtn, .button-field #okPassBtn {
+						display: none;
+					}
+
+	/* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
+	/* == APPLICANT`S ATTACH FILE MODAL == */
+
+	.attach-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 4;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-container .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-container .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-container .attach-file-container .line {
+				float: left;
+				width: 7%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 3px;
+				margin-bottom: 60px;
+				margin-left: 5%;
+			}
+
+			.attach-container .attach-file-container .input-file {
+				float: left;
+				width: 80%;
+				margin-left: 10%;
+				margin-bottom: 30px;
+			}
+
+				.attach-container .attach-file-container .input-file input {
+					float: left;
+					width: 50%;
+					margin-left: 5%;
+					font-family: 'Century Gothic';
+					font-size: 85%;
+				}
+
+				.attach-container .attach-file-container .input-file label {
+					float: left;
+					width: 90%;
+					margin-left: 5%;
+					font-size: 70%;
+					text-transform: uppercase;
+					color: rgb(150, 150, 150);
+					font-weight: bold;
+					font-style: italic;
+					margin-top: 10px;
+				}
+
+			.attach-container .attach-file-container .input-button {
+				float: left;
+				width: 70%;
+				margin-left: 15%;
+				text-align: right;
+				margin-top: 20px;
+			}
+
+				.attach-container .attach-file-container .input-button button {
+					width: 25%;
+					padding: 12px 0px;
+					margin-left: 2.5%;
+					border: none;
+					border-radius: 5px;
+					font-family: 'Gentona';
+					font-size: 90%;
+				}
+
+					.attach-container .attach-file-container .input-button button:first-child {
+						background-color: rgb(255, 255, 255);
+						border: solid 1px rgb(4, 80, 140);
+						color: rgb(4, 80, 140);
+					}
+
+					.attach-container .attach-file-container .input-button button:last-child {
+						background-color: rgb(4, 80, 140);
+						color: rgb(255, 255, 255);
+					}
+
+	/* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S CHOOSE FILE MODAL == */
+
+	.attach-category {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 3;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-category .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-category #exitFileBtn {
+				font-size: 140%;
+				color: rgb(90, 90, 90);
+			}
+
+			.attach-category .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-category .attach-file-container .categ-button {
+				float: left;
+				width: 80%;
+				margin-top: 40px;
+				margin-left: 10%;
+			}
+
+				.categ-button button {
+					float: left;
+					width: 40%;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 3px;
+					padding: 10px 0px;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
+					background-color: rgb(4, 80, 140);
+					font-weight: bold;
+					margin: 5% 2.5%;
+				}
+
+			.attach-category .attach-file-container .input-button {
+				float: right;
+				text-align: right;
+				width: 80%;
+				margin-right: 10%;
+				margin-top: 50px;
+			}
+
+				.attach-category .attach-file-container .input-button button {
+					width: 20%;
+					padding: 15px 0px;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 5px;
+					font-family: 'Gentona';
+					color: rgb(4, 80, 140);
+					background-color: rgb(255, 255, 255);
+				}
+
+	/* == APPLICANT`S CHOOSE FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S PDS FORM MODAL == */
+
+	.pds-form-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(30, 30, 30, 0.5);
+		top: 0;
+		left: 0;
+		display: none;
+		overflow-y: auto;
+	}
+
+		.pds-form-container .pds-form {
+			width: 70%;
+			height: auto;
+			margin-top: 5%;
+			margin-bottom: 1%;
+			background-color: rgb(255, 255, 255);
+			margin-left: 15%;
+			overflow: hidden;
+			border: solid 1px rgb(0, 0, 0);
+		}
+
+		.pds-form-container #closePdsBtn {
+			float: left;
+			width: 10%;
+			padding: 10px 0px;
+			background-color: rgb(4, 80, 140);
+			color: rgb(255, 255, 255);
+			font-family: 'Gentona';
+			font-size: 110%;
+			margin-left: 45%;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 5%;
+		}
+
+	/* == APPLICANT`S PDS FORM MODAL ENDS HERE == */
+	/* == MESSAGE MODAL DESIGN == */
+
+	.message-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		display: none;
+		z-index: 1;
+	}
+
+		.message-modal-container .message-container {
+			float: left;
+			width: 30%;
+			height: 500px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 3% 35%;
+		}
+
+			.message-container .message-header {
+				float: left;
+				width: 100%;
+				height: 10%;
+				border-bottom: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-header h1 {
+					float: left;
+					font-family: 'Gentona';
+					font-size: 150%;
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin-left: 2%;
+					margin-top: 2%;
+				}
+
+				.message-header #exitMessageBtn {
+					float: right;
+					font-size: 150%;
+					margin: 2%;
+					margin-right: 2%;
+					color: rgb(110, 110, 110);
+				}
+
+			.message-container .message-inbox {
+				float: left;
+				width: 100%;
+				height: 80%;
+				overflow-y: auto;
+				background-color: rgb(250, 250, 250);
+				padding: 20px 0px;
+			}
+
+				.message-inbox .inbox-user {
+					float: right;
+					width: 80%;
+					margin-right: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-user img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-user #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-user #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-user #inbox-sent {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+				.message-inbox .inbox-admin {
+					float: left;
+					width: 80%;
+					margin-left: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-admin img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-admin #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-admin #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-admin #inbox-receive {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+			.message-container .message-input {
+				float: left;
+				width: 100%;
+				height: 9.5%;
+				border-top: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-input input {
+					float: left;
+					width: 78%;
+					height: 100%;
+					border: none;
+					padding-left: 2%;
+					font-family: 'Century Gothic';
+					font-size: 80%;
+					border-bottom-left-radius: 5px;
+				}
+
+				.message-input input:focus {
+					outline: none;
+				}
+
+				.message-input button {
+					float: left;
+					width: 20%;
+					height: 100%;
+					background-color: rgb(4, 80, 140);
+					border: none;
+					border-bottom-right-radius: 5px;
+					color: rgb(255, 255, 255);
+					font-family: 'Gentona';
+					font-size: 95%;
+				}
+
+				.message-input button:focus {
+					outline: none;
+				}
+
+	/* == MESSAGE MODAL DESIGN ENDS HERE == */
+	/* == FILES MODAL DESIGN == */
+
+	.file-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		z-index: 2;
+		display: none;
+	}
+
+		.file-modal-container .file-container {
+			float: left;
+			width: 30%;
+			height: 400px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin-left: 35%;
+			margin-top: 5%;
+		}
+
+			.file-container .file-header {
+				float: left;
+				width: 100%;
+				height: 15%;
+				border-bottom: solid 1px rgb(230, 230, 230);
+			}
+
+				.file-header h1 {
+					float: left;
+					font-size: 150%;
+					font-family: 'Gentona';
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin: 3% 0px 0px 3%;
+				}
+
+				.file-header #closeFileBtn {
+					float: right;
+					font-size: 150%;
+					color: rgb(110, 110, 110);
+					margin: 3% 3% 0px 0px;
+				}
+
+			.file-container .file-content {
+				float: left;
+				width: 96%;
+				height: 80.4%;
+				padding: 2%;
+			}
+
+				.file-content .files {
+					float: left;
+					width: 100%;
+					padding: 10px 0px;
+					display: inline-block;
+				}
+
+					.file-content .files img {
+						float: left;
+						margin-right: 10px;
+					}
+
+					.file-content .files p {
+						float: left;
+						margin-top: 5px;
+						font-size: 90%;
+						color: rgb(120, 120, 120);
+					}
+
+	/* == FILES MODAL DESIGN ENDS HERE == */
+	/* == UPDATE IMAGE MODAL == */
+
+	.image-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+		.image-modal .image-container {
+			float: left;
+			width: 40%;
+			height: 300px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 10% 30%;
+			border-left: solid 10px rgb(4, 80, 140);
+		}
+
+			.image-container h1 {
+				float: left;
+				font-family: 'Gentona';
+				font-size: 140%;
+				text-transform: uppercase;
+				color: rgb(110, 110, 110);
+				margin-left: 5%;
+				margin-top: 20px;
+			}
+
+			.image-container #closeImageBtn {
+				float: right;
+				margin-right: 5%;
+				margin-top: 10px;
+				font-size: 150%;
+			}
+
+			.image-container img {
+				float: left;
+				width: 30%;
+				height: 150px;
+				margin-left: 35%;
+				margin-top: 10px;
+			}
+
+			.image-container #uploadBtn {
+				float: left;
+				width: 50%;
+				background-color: transparent;
+				border: none;
+				padding: 10px 0px;
+				border: solid 1px rgb(4, 80, 140);
+				border-radius: 5px;
+				font-family: 'Gentona';
+				font-size: 95%;
+				color: rgb(4, 80, 140);
+				margin: 20px 25% 0px 25%;
+				transition: all 0.2s ease-in-out;
+			}
+
+				.image-container #uploadBtn:hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == UPDATE IMAGE MODAL ENDS HERE == */
+	/* == ERROR MESSAGE MODAL ==  */
+
+	.error-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.error-modal .error-container {
+			float: left;
+			width: 80%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 10%;
+			overflow: hidden;
+		}
+
+
+			.error-container img {
+				float: left;
+				width: 20%;
+				height: 50px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.error-container #error-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.error-container #error-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.error-container #closeErrorBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 5px;
+				background-color: rgb(255, 0, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.error-container #closeErrorBtn:focus {
+				outline: none;
+			}
+
+	/* == ERROR MESSAGE MODAL ENDS HERE == */
+	/* == SUCCESS MESSAGE MODAL ==  */
+
+	.success-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.success-modal .success-container {
+			float: left;
+			width: 80%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 10%;
+			overflow: hidden;
+		}
+
+
+			.success-container img {
+				float: left;
+				width: 20%;
+				height: 65px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.success-container #success-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.success-container #success-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.success-container #closeSuccessBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 15px;
+				background-color: rgb(0, 255, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.success-container #closeSuccessBtn:focus {
+				outline: none;
+			}
+
+	/* == SUCCESS MESSAGE MODAL ENDS HERE == */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+	/* == APPLICANT`S MORE INFO MODAL DESIGN == */
+
+	.modal-info {
+		float: left;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		display: none;
+	}
+
+		.modal-info .modal-content {
+			float: left;
+			width: 15%;
+			height: 180px;
+			background-color: rgb(255, 255, 255);
+			border-right: solid 1px rgb(230, 230, 230);
+			border-bottom: solid 1px rgb(230, 230, 230);
+			border-top: solid 4px rgb(4, 80, 140);
+			margin-left: 18%;
+		}
+
+			.modal-content a {
+				float: left;
+				display: inline-block;
+				width: 95%;
+				padding: 8px 0px 8px 5%;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: rgb(60, 60, 60);
+				font-size: 80%;
+				cursor: pointer;
+				transition: all 0.2s ease-in-out;
+			}
+
+			.modal-content a:hover {
+				font-weight: bold;
+				color: rgb(4, 80, 140);
+				transition: all 0.2s ease-in-out;
+			}
+
+	/* == APPLICANT`S MORE INFO MOODAL DESIGN ENDS HERE == *//* == APPLICANT`S ACCOUNT SETTING MODAL == */
+
+		.applicant-content-container .accountSettingContainer {
+			float: left;
+			width: 60%;
+			height: 400px;
+			border-radius: 5px;
+			margin: 10% 20%;
+		}
+
+			.accountSettingContainer h1 {
+				float: left;
+				width: 95%;
+				font-family: 'Gentona';
+				font-size: 170%;
+				text-transform: uppercase;
+				color: rgb(130, 130, 130);
+				margin: 10px 0px 0px 5%;
+			}
+
+			.accountSettingContainer .line {
+				float: left;
+				width: 10%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 5px;
+				margin: 0px 0px 30px 5%;
+			}
+
+			.accountSettingContainer .viewAccount, .accountSettingContainer .updateAccount, .accountSettingContainer .changePassword {
+				float: left;
+				width: 90%;
+				margin: 20px 5% 80px 5%;
+			}
+
+				.viewAccount .input-field, .updateAccount .input-field, .changePassword .input-field {
+					float: left;
+					width: 70%;
+					margin: 10px 15%;
+				}
+
+					.input-field label {
+						float: left;
+						width: 100%;
+						font-size: 85%;
+						text-transform: uppercase;
+						color: rgb(120, 120, 120);
+						font-weight: bold;
+						margin-bottom: 5px;
+					}
+
+					.input-field input {
+						float: left;
+						width: 98%;
+						height: 35px;
+						border: solid 1px rgb(210, 210, 210);
+						padding-left: 2%;
+						font-family: 'Century Gothic';
+						font-size: 80%;
+						border-radius: 15px;
+					}
+
+					.input-field input:focus {
+						outline: none;
+					}
+
+				.viewAccount .button-field, .updateAccount .button-field, .changePassword .button-field {
+					float: left;
+					width: 70%;
+					margin: 20px 15% 0px 15%;
+				}
+
+					.button-field button {
+						float: left;
+						width: 100%;
+						padding: 12px 0px;
+						background-color: rgb(4, 80, 140);
+						border: none;
+						border-radius: 15px;
+						font-family: 'Gentona';
+						font-size: 110%;
+						color: rgb(255, 255, 255);
+						margin-bottom: 10px;
+					}
+
+					.button-field button:focus {
+						outline: none;
+					}
+
+					.button-field #okInfoBtn, .button-field #okPassBtn {
+						display: none;
+					}
+
+	/* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
+	/* == APPLICANT`S ATTACH FILE MODAL == */
+
+	.attach-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 4;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-container .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-container .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-container .attach-file-container .line {
+				float: left;
+				width: 7%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 3px;
+				margin-bottom: 60px;
+				margin-left: 5%;
+			}
+
+			.attach-container .attach-file-container .input-file {
+				float: left;
+				width: 80%;
+				margin-left: 10%;
+				margin-bottom: 30px;
+			}
+
+				.attach-container .attach-file-container .input-file input {
+					float: left;
+					width: 50%;
+					margin-left: 5%;
+					font-family: 'Century Gothic';
+					font-size: 85%;
+				}
+
+				.attach-container .attach-file-container .input-file label {
+					float: left;
+					width: 90%;
+					margin-left: 5%;
+					font-size: 70%;
+					text-transform: uppercase;
+					color: rgb(150, 150, 150);
+					font-weight: bold;
+					font-style: italic;
+					margin-top: 10px;
+				}
+
+			.attach-container .attach-file-container .input-button {
+				float: left;
+				width: 70%;
+				margin-left: 15%;
+				text-align: right;
+				margin-top: 20px;
+			}
+
+				.attach-container .attach-file-container .input-button button {
+					width: 25%;
+					padding: 12px 0px;
+					margin-left: 2.5%;
+					border: none;
+					border-radius: 5px;
+					font-family: 'Gentona';
+					font-size: 90%;
+				}
+
+					.attach-container .attach-file-container .input-button button:first-child {
+						background-color: rgb(255, 255, 255);
+						border: solid 1px rgb(4, 80, 140);
+						color: rgb(4, 80, 140);
+					}
+
+					.attach-container .attach-file-container .input-button button:last-child {
+						background-color: rgb(4, 80, 140);
+						color: rgb(255, 255, 255);
+					}
+
+	/* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S CHOOSE FILE MODAL == */
+
+	.attach-category {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 3;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-category .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-category #exitFileBtn {
+				font-size: 140%;
+				color: rgb(90, 90, 90);
+			}
+
+			.attach-category .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-category .attach-file-container .categ-button {
+				float: left;
+				width: 80%;
+				margin-top: 40px;
+				margin-left: 10%;
+			}
+
+				.categ-button button {
+					float: left;
+					width: 40%;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 3px;
+					padding: 10px 0px;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
+					background-color: rgb(4, 80, 140);
+					font-weight: bold;
+					margin: 5% 2.5%;
+				}
+
+			.attach-category .attach-file-container .input-button {
+				float: right;
+				text-align: right;
+				width: 80%;
+				margin-right: 10%;
+				margin-top: 50px;
+			}
+
+				.attach-category .attach-file-container .input-button button {
+					width: 20%;
+					padding: 15px 0px;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 5px;
+					font-family: 'Gentona';
+					color: rgb(4, 80, 140);
+					background-color: rgb(255, 255, 255);
+				}
+
+	/* == APPLICANT`S CHOOSE FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S PDS FORM MODAL == */
+
+	.pds-form-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(30, 30, 30, 0.5);
+		top: 0;
+		left: 0;
+		display: none;
+		overflow-y: auto;
+	}
+
+		.pds-form-container .pds-form {
+			width: 70%;
+			height: auto;
+			margin-top: 5%;
+			margin-bottom: 1%;
+			background-color: rgb(255, 255, 255);
+			margin-left: 15%;
+			overflow: hidden;
+			border: solid 1px rgb(0, 0, 0);
+		}
+
+		.pds-form-container #closePdsBtn {
+			float: left;
+			width: 10%;
+			padding: 10px 0px;
+			background-color: rgb(4, 80, 140);
+			color: rgb(255, 255, 255);
+			font-family: 'Gentona';
+			font-size: 110%;
+			margin-left: 45%;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 5%;
+		}
+
+	/* == APPLICANT`S PDS FORM MODAL ENDS HERE == */
+	/* == MESSAGE MODAL DESIGN == */
+
+	.message-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		display: none;
+		z-index: 1;
+	}
+
+		.message-modal-container .message-container {
+			float: left;
+			width: 30%;
+			height: 500px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 3% 35%;
+		}
+
+			.message-container .message-header {
+				float: left;
+				width: 100%;
+				height: 10%;
+				border-bottom: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-header h1 {
+					float: left;
+					font-family: 'Gentona';
+					font-size: 150%;
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin-left: 2%;
+					margin-top: 2%;
+				}
+
+				.message-header #exitMessageBtn {
+					float: right;
+					font-size: 150%;
+					margin: 2%;
+					margin-right: 2%;
+					color: rgb(110, 110, 110);
+				}
+
+			.message-container .message-inbox {
+				float: left;
+				width: 100%;
+				height: 80%;
+				overflow-y: auto;
+				background-color: rgb(250, 250, 250);
+				padding: 20px 0px;
+			}
+
+				.message-inbox .inbox-user {
+					float: right;
+					width: 80%;
+					margin-right: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-user img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-user #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-user #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-user #inbox-sent {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+				.message-inbox .inbox-admin {
+					float: left;
+					width: 80%;
+					margin-left: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-admin img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-admin #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-admin #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-admin #inbox-receive {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+			.message-container .message-input {
+				float: left;
+				width: 100%;
+				height: 9.5%;
+				border-top: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-input input {
+					float: left;
+					width: 78%;
+					height: 100%;
+					border: none;
+					padding-left: 2%;
+					font-family: 'Century Gothic';
+					font-size: 80%;
+					border-bottom-left-radius: 5px;
+				}
+
+				.message-input input:focus {
+					outline: none;
+				}
+
+				.message-input button {
+					float: left;
+					width: 20%;
+					height: 100%;
+					background-color: rgb(4, 80, 140);
+					border: none;
+					border-bottom-right-radius: 5px;
+					color: rgb(255, 255, 255);
+					font-family: 'Gentona';
+					font-size: 95%;
+				}
+
+				.message-input button:focus {
+					outline: none;
+				}
+
+	/* == MESSAGE MODAL DESIGN ENDS HERE == */
+	/* == FILES MODAL DESIGN == */
+
+	.file-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		z-index: 2;
+		display: none;
+	}
+
+		.file-modal-container .file-container {
+			float: left;
+			width: 30%;
+			height: 400px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin-left: 35%;
+			margin-top: 5%;
+		}
+
+			.file-container .file-header {
+				float: left;
+				width: 100%;
+				height: 15%;
+				border-bottom: solid 1px rgb(230, 230, 230);
+			}
+
+				.file-header h1 {
+					float: left;
+					font-size: 150%;
+					font-family: 'Gentona';
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin: 3% 0px 0px 3%;
+				}
+
+				.file-header #closeFileBtn {
+					float: right;
+					font-size: 150%;
+					color: rgb(110, 110, 110);
+					margin: 3% 3% 0px 0px;
+				}
+
+			.file-container .file-content {
+				float: left;
+				width: 96%;
+				height: 80.4%;
+				padding: 2%;
+			}
+
+				.file-content .files {
+					float: left;
+					width: 100%;
+					padding: 10px 0px;
+					display: inline-block;
+				}
+
+					.file-content .files img {
+						float: left;
+						margin-right: 10px;
+					}
+
+					.file-content .files p {
+						float: left;
+						margin-top: 5px;
+						font-size: 90%;
+						color: rgb(120, 120, 120);
+					}
+
+	/* == FILES MODAL DESIGN ENDS HERE == */
+	/* == UPDATE IMAGE MODAL == */
+
+	.image-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+		.image-modal .image-container {
+			float: left;
+			width: 40%;
+			height: 300px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 10% 30%;
+			border-left: solid 10px rgb(4, 80, 140);
+		}
+
+			.image-container h1 {
+				float: left;
+				font-family: 'Gentona';
+				font-size: 140%;
+				text-transform: uppercase;
+				color: rgb(110, 110, 110);
+				margin-left: 5%;
+				margin-top: 20px;
+			}
+
+			.image-container #closeImageBtn {
+				float: right;
+				margin-right: 5%;
+				margin-top: 10px;
+				font-size: 150%;
+			}
+
+			.image-container img {
+				float: left;
+				width: 30%;
+				height: 150px;
+				margin-left: 35%;
+				margin-top: 10px;
+			}
+
+			.image-container #uploadBtn {
+				float: left;
+				width: 50%;
+				background-color: transparent;
+				border: none;
+				padding: 10px 0px;
+				border: solid 1px rgb(4, 80, 140);
+				border-radius: 5px;
+				font-family: 'Gentona';
+				font-size: 95%;
+				color: rgb(4, 80, 140);
+				margin: 20px 25% 0px 25%;
+				transition: all 0.2s ease-in-out;
+			}
+
+				.image-container #uploadBtn:hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == UPDATE IMAGE MODAL ENDS HERE == */
+	/* == ERROR MESSAGE MODAL ==  */
+
+	.error-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.error-modal .error-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.error-container img {
+				float: left;
+				width: 20%;
+				height: 50px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.error-container #error-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.error-container #error-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.error-container #closeErrorBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 5px;
+				background-color: rgb(255, 0, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.error-container #closeErrorBtn:focus {
+				outline: none;
+			}
+
+	/* == ERROR MESSAGE MODAL ENDS HERE == */
+	/* == SUCCESS MESSAGE MODAL ==  */
+
+	.success-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.success-modal .success-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.success-container img {
+				float: left;
+				width: 20%;
+				height: 65px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.success-container #success-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.success-container #success-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.success-container #closeSuccessBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 15px;
+				background-color: rgb(0, 255, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.success-container #closeSuccessBtn:focus {
+				outline: none;
+			}
+
+	/* == SUCCESS MESSAGE MODAL ENDS HERE == */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	/* == APPLICANT`S MORE INFO MODAL DESIGN == */
+
+	.modal-info {
+		float: left;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		display: none;
+	}
+
+		.modal-info .modal-content {
+			float: left;
+			width: 15%;
+			height: 180px;
+			background-color: rgb(255, 255, 255);
+			border-right: solid 1px rgb(230, 230, 230);
+			border-bottom: solid 1px rgb(230, 230, 230);
+			border-top: solid 4px rgb(4, 80, 140);
+			margin-left: 18%;
+		}
+
+			.modal-content a {
+				float: left;
+				display: inline-block;
+				width: 95%;
+				padding: 8px 0px 8px 5%;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: rgb(60, 60, 60);
+				font-size: 80%;
+				cursor: pointer;
+				transition: all 0.2s ease-in-out;
+			}
+
+			.modal-content a:hover {
+				font-weight: bold;
+				color: rgb(4, 80, 140);
+				transition: all 0.2s ease-in-out;
+			}
+
+	/* == APPLICANT`S MORE INFO MOODAL DESIGN ENDS HERE == *//* == APPLICANT`S ACCOUNT SETTING MODAL == */
+
+		.applicant-content-container .accountSettingContainer {
+			float: left;
+			width: 60%;
+			height: 400px;
+			border-radius: 5px;
+			margin: 10% 20%;
+		}
+
+			.accountSettingContainer h1 {
+				float: left;
+				width: 95%;
+				font-family: 'Gentona';
+				font-size: 170%;
+				text-transform: uppercase;
+				color: rgb(130, 130, 130);
+				margin: 10px 0px 0px 5%;
+			}
+
+			.accountSettingContainer .line {
+				float: left;
+				width: 10%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 5px;
+				margin: 0px 0px 30px 5%;
+			}
+
+			.accountSettingContainer .viewAccount, .accountSettingContainer .updateAccount, .accountSettingContainer .changePassword {
+				float: left;
+				width: 90%;
+				margin: 20px 5% 80px 5%;
+			}
+
+				.viewAccount .input-field, .updateAccount .input-field, .changePassword .input-field {
+					float: left;
+					width: 70%;
+					margin: 10px 15%;
+				}
+
+					.input-field label {
+						float: left;
+						width: 100%;
+						font-size: 85%;
+						text-transform: uppercase;
+						color: rgb(120, 120, 120);
+						font-weight: bold;
+						margin-bottom: 5px;
+					}
+
+					.input-field input {
+						float: left;
+						width: 98%;
+						height: 35px;
+						border: solid 1px rgb(210, 210, 210);
+						padding-left: 2%;
+						font-family: 'Century Gothic';
+						font-size: 80%;
+						border-radius: 15px;
+					}
+
+					.input-field input:focus {
+						outline: none;
+					}
+
+				.viewAccount .button-field, .updateAccount .button-field, .changePassword .button-field {
+					float: left;
+					width: 70%;
+					margin: 20px 15% 0px 15%;
+				}
+
+					.button-field button {
+						float: left;
+						width: 100%;
+						padding: 12px 0px;
+						background-color: rgb(4, 80, 140);
+						border: none;
+						border-radius: 15px;
+						font-family: 'Gentona';
+						font-size: 110%;
+						color: rgb(255, 255, 255);
+						margin-bottom: 10px;
+					}
+
+					.button-field button:focus {
+						outline: none;
+					}
+
+					.button-field #okInfoBtn, .button-field #okPassBtn {
+						display: none;
+					}
+
+	/* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
+	/* == APPLICANT`S ATTACH FILE MODAL == */
+
+	.attach-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 4;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-container .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-container .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-container .attach-file-container .line {
+				float: left;
+				width: 7%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 3px;
+				margin-bottom: 60px;
+				margin-left: 5%;
+			}
+
+			.attach-container .attach-file-container .input-file {
+				float: left;
+				width: 80%;
+				margin-left: 10%;
+				margin-bottom: 30px;
+			}
+
+				.attach-container .attach-file-container .input-file input {
+					float: left;
+					width: 50%;
+					margin-left: 5%;
+					font-family: 'Century Gothic';
+					font-size: 85%;
+				}
+
+				.attach-container .attach-file-container .input-file label {
+					float: left;
+					width: 90%;
+					margin-left: 5%;
+					font-size: 70%;
+					text-transform: uppercase;
+					color: rgb(150, 150, 150);
+					font-weight: bold;
+					font-style: italic;
+					margin-top: 10px;
+				}
+
+			.attach-container .attach-file-container .input-button {
+				float: left;
+				width: 70%;
+				margin-left: 15%;
+				text-align: right;
+				margin-top: 20px;
+			}
+
+				.attach-container .attach-file-container .input-button button {
+					width: 25%;
+					padding: 12px 0px;
+					margin-left: 2.5%;
+					border: none;
+					border-radius: 5px;
+					font-family: 'Gentona';
+					font-size: 90%;
+				}
+
+					.attach-container .attach-file-container .input-button button:first-child {
+						background-color: rgb(255, 255, 255);
+						border: solid 1px rgb(4, 80, 140);
+						color: rgb(4, 80, 140);
+					}
+
+					.attach-container .attach-file-container .input-button button:last-child {
+						background-color: rgb(4, 80, 140);
+						color: rgb(255, 255, 255);
+					}
+
+	/* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S CHOOSE FILE MODAL == */
+
+	.attach-category {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 3;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-category .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-category #exitFileBtn {
+				font-size: 140%;
+				color: rgb(90, 90, 90);
+			}
+
+			.attach-category .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-category .attach-file-container .categ-button {
+				float: left;
+				width: 80%;
+				margin-top: 40px;
+				margin-left: 10%;
+			}
+
+				.categ-button button {
+					float: left;
+					width: 40%;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 3px;
+					padding: 10px 0px;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
+					background-color: rgb(4, 80, 140);
+					font-weight: bold;
+					margin: 5% 2.5%;
+				}
+
+			.attach-category .attach-file-container .input-button {
+				float: right;
+				text-align: right;
+				width: 80%;
+				margin-right: 10%;
+				margin-top: 50px;
+			}
+
+				.attach-category .attach-file-container .input-button button {
+					width: 20%;
+					padding: 15px 0px;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 5px;
+					font-family: 'Gentona';
+					color: rgb(4, 80, 140);
+					background-color: rgb(255, 255, 255);
+				}
+
+	/* == APPLICANT`S CHOOSE FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S PDS FORM MODAL == */
+
+	.pds-form-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(30, 30, 30, 0.5);
+		top: 0;
+		left: 0;
+		display: none;
+		overflow-y: auto;
+	}
+
+		.pds-form-container .pds-form {
+			width: 70%;
+			height: auto;
+			margin-top: 5%;
+			margin-bottom: 1%;
+			background-color: rgb(255, 255, 255);
+			margin-left: 15%;
+			overflow: hidden;
+			border: solid 1px rgb(0, 0, 0);
+		}
+
+		.pds-form-container #closePdsBtn {
+			float: left;
+			width: 10%;
+			padding: 10px 0px;
+			background-color: rgb(4, 80, 140);
+			color: rgb(255, 255, 255);
+			font-family: 'Gentona';
+			font-size: 110%;
+			margin-left: 45%;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 5%;
+		}
+
+	/* == APPLICANT`S PDS FORM MODAL ENDS HERE == */
+	/* == MESSAGE MODAL DESIGN == */
+
+	.message-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		display: none;
+		z-index: 1;
+	}
+
+		.message-modal-container .message-container {
+			float: left;
+			width: 30%;
+			height: 500px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 3% 35%;
+		}
+
+			.message-container .message-header {
+				float: left;
+				width: 100%;
+				height: 10%;
+				border-bottom: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-header h1 {
+					float: left;
+					font-family: 'Gentona';
+					font-size: 150%;
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin-left: 2%;
+					margin-top: 2%;
+				}
+
+				.message-header #exitMessageBtn {
+					float: right;
+					font-size: 150%;
+					margin: 2%;
+					margin-right: 2%;
+					color: rgb(110, 110, 110);
+				}
+
+			.message-container .message-inbox {
+				float: left;
+				width: 100%;
+				height: 80%;
+				overflow-y: auto;
+				background-color: rgb(250, 250, 250);
+				padding: 20px 0px;
+			}
+
+				.message-inbox .inbox-user {
+					float: right;
+					width: 80%;
+					margin-right: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-user img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-user #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-user #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-user #inbox-sent {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+				.message-inbox .inbox-admin {
+					float: left;
+					width: 80%;
+					margin-left: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-admin img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-admin #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-admin #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-admin #inbox-receive {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+			.message-container .message-input {
+				float: left;
+				width: 100%;
+				height: 9.5%;
+				border-top: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-input input {
+					float: left;
+					width: 78%;
+					height: 100%;
+					border: none;
+					padding-left: 2%;
+					font-family: 'Century Gothic';
+					font-size: 80%;
+					border-bottom-left-radius: 5px;
+				}
+
+				.message-input input:focus {
+					outline: none;
+				}
+
+				.message-input button {
+					float: left;
+					width: 20%;
+					height: 100%;
+					background-color: rgb(4, 80, 140);
+					border: none;
+					border-bottom-right-radius: 5px;
+					color: rgb(255, 255, 255);
+					font-family: 'Gentona';
+					font-size: 95%;
+				}
+
+				.message-input button:focus {
+					outline: none;
+				}
+
+	/* == MESSAGE MODAL DESIGN ENDS HERE == */
+	/* == FILES MODAL DESIGN == */
+
+	.file-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		z-index: 2;
+		display: none;
+	}
+
+		.file-modal-container .file-container {
+			float: left;
+			width: 30%;
+			height: 400px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin-left: 35%;
+			margin-top: 5%;
+		}
+
+			.file-container .file-header {
+				float: left;
+				width: 100%;
+				height: 15%;
+				border-bottom: solid 1px rgb(230, 230, 230);
+			}
+
+				.file-header h1 {
+					float: left;
+					font-size: 150%;
+					font-family: 'Gentona';
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin: 3% 0px 0px 3%;
+				}
+
+				.file-header #closeFileBtn {
+					float: right;
+					font-size: 150%;
+					color: rgb(110, 110, 110);
+					margin: 3% 3% 0px 0px;
+				}
+
+			.file-container .file-content {
+				float: left;
+				width: 96%;
+				height: 80.4%;
+				padding: 2%;
+			}
+
+				.file-content .files {
+					float: left;
+					width: 100%;
+					padding: 10px 0px;
+					display: inline-block;
+				}
+
+					.file-content .files img {
+						float: left;
+						margin-right: 10px;
+					}
+
+					.file-content .files p {
+						float: left;
+						margin-top: 5px;
+						font-size: 90%;
+						color: rgb(120, 120, 120);
+					}
+
+	/* == FILES MODAL DESIGN ENDS HERE == */
+	/* == UPDATE IMAGE MODAL == */
+
+	.image-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+		.image-modal .image-container {
+			float: left;
+			width: 40%;
+			height: 300px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 10% 30%;
+			border-left: solid 10px rgb(4, 80, 140);
+		}
+
+			.image-container h1 {
+				float: left;
+				font-family: 'Gentona';
+				font-size: 140%;
+				text-transform: uppercase;
+				color: rgb(110, 110, 110);
+				margin-left: 5%;
+				margin-top: 20px;
+			}
+
+			.image-container #closeImageBtn {
+				float: right;
+				margin-right: 5%;
+				margin-top: 10px;
+				font-size: 150%;
+			}
+
+			.image-container img {
+				float: left;
+				width: 30%;
+				height: 150px;
+				margin-left: 35%;
+				margin-top: 10px;
+			}
+
+			.image-container #uploadBtn {
+				float: left;
+				width: 50%;
+				background-color: transparent;
+				border: none;
+				padding: 10px 0px;
+				border: solid 1px rgb(4, 80, 140);
+				border-radius: 5px;
+				font-family: 'Gentona';
+				font-size: 95%;
+				color: rgb(4, 80, 140);
+				margin: 20px 25% 0px 25%;
+				transition: all 0.2s ease-in-out;
+			}
+
+				.image-container #uploadBtn:hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == UPDATE IMAGE MODAL ENDS HERE == */
+	/* == ERROR MESSAGE MODAL ==  */
+
+	.error-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.error-modal .error-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.error-container img {
+				float: left;
+				width: 20%;
+				height: 50px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.error-container #error-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.error-container #error-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.error-container #closeErrorBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 5px;
+				background-color: rgb(255, 0, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.error-container #closeErrorBtn:focus {
+				outline: none;
+			}
+
+	/* == ERROR MESSAGE MODAL ENDS HERE == */
+	/* == SUCCESS MESSAGE MODAL ==  */
+
+	.success-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.success-modal .success-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.success-container img {
+				float: left;
+				width: 20%;
+				height: 65px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.success-container #success-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.success-container #success-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.success-container #closeSuccessBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 15px;
+				background-color: rgb(0, 255, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.success-container #closeSuccessBtn:focus {
+				outline: none;
+			}
+
+	/* == SUCCESS MESSAGE MODAL ENDS HERE == */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	/* == APPLICANT`S MORE INFO MODAL DESIGN == */
+
+	.modal-info {
+		float: left;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		display: none;
+	}
+
+		.modal-info .modal-content {
+			float: left;
+			width: 15%;
+			height: 180px;
+			background-color: rgb(255, 255, 255);
+			border-right: solid 1px rgb(230, 230, 230);
+			border-bottom: solid 1px rgb(230, 230, 230);
+			border-top: solid 4px rgb(4, 80, 140);
+			margin-left: 18%;
+		}
+
+			.modal-content a {
+				float: left;
+				display: inline-block;
+				width: 95%;
+				padding: 8px 0px 8px 5%;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: rgb(60, 60, 60);
+				font-size: 80%;
+				cursor: pointer;
+				transition: all 0.2s ease-in-out;
+			}
+
+			.modal-content a:hover {
+				font-weight: bold;
+				color: rgb(4, 80, 140);
+				transition: all 0.2s ease-in-out;
+			}
+
+	/* == APPLICANT`S MORE INFO MOODAL DESIGN ENDS HERE == *//* == APPLICANT`S ACCOUNT SETTING MODAL == */
+
+		.applicant-content-container .accountSettingContainer {
+			float: left;
+			width: 60%;
+			height: 400px;
+			border-radius: 5px;
+			margin: 10% 20%;
+		}
+
+			.accountSettingContainer h1 {
+				float: left;
+				width: 95%;
+				font-family: 'Gentona';
+				font-size: 170%;
+				text-transform: uppercase;
+				color: rgb(130, 130, 130);
+				margin: 10px 0px 0px 5%;
+			}
+
+			.accountSettingContainer .line {
+				float: left;
+				width: 10%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 5px;
+				margin: 0px 0px 30px 5%;
+			}
+
+			.accountSettingContainer .viewAccount, .accountSettingContainer .updateAccount, .accountSettingContainer .changePassword {
+				float: left;
+				width: 90%;
+				margin: 20px 5% 80px 5%;
+			}
+
+				.viewAccount .input-field, .updateAccount .input-field, .changePassword .input-field {
+					float: left;
+					width: 70%;
+					margin: 10px 15%;
+				}
+
+					.input-field label {
+						float: left;
+						width: 100%;
+						font-size: 85%;
+						text-transform: uppercase;
+						color: rgb(120, 120, 120);
+						font-weight: bold;
+						margin-bottom: 5px;
+					}
+
+					.input-field input {
+						float: left;
+						width: 98%;
+						height: 35px;
+						border: solid 1px rgb(210, 210, 210);
+						padding-left: 2%;
+						font-family: 'Century Gothic';
+						font-size: 80%;
+						border-radius: 15px;
+					}
+
+					.input-field input:focus {
+						outline: none;
+					}
+
+				.viewAccount .button-field, .updateAccount .button-field, .changePassword .button-field {
+					float: left;
+					width: 70%;
+					margin: 20px 15% 0px 15%;
+				}
+
+					.button-field button {
+						float: left;
+						width: 100%;
+						padding: 12px 0px;
+						background-color: rgb(4, 80, 140);
+						border: none;
+						border-radius: 15px;
+						font-family: 'Gentona';
+						font-size: 110%;
+						color: rgb(255, 255, 255);
+						margin-bottom: 10px;
+					}
+
+					.button-field button:focus {
+						outline: none;
+					}
+
+					.button-field #okInfoBtn, .button-field #okPassBtn {
+						display: none;
+					}
+
+	/* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
+	/* == APPLICANT`S ATTACH FILE MODAL == */
+
+	.attach-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 4;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-container .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-container .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-container .attach-file-container .line {
+				float: left;
+				width: 7%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 3px;
+				margin-bottom: 60px;
+				margin-left: 5%;
+			}
+
+			.attach-container .attach-file-container .input-file {
+				float: left;
+				width: 80%;
+				margin-left: 10%;
+				margin-bottom: 30px;
+			}
+
+				.attach-container .attach-file-container .input-file input {
+					float: left;
+					width: 50%;
+					margin-left: 5%;
+					font-family: 'Century Gothic';
+					font-size: 85%;
+				}
+
+				.attach-container .attach-file-container .input-file label {
+					float: left;
+					width: 90%;
+					margin-left: 5%;
+					font-size: 70%;
+					text-transform: uppercase;
+					color: rgb(150, 150, 150);
+					font-weight: bold;
+					font-style: italic;
+					margin-top: 10px;
+				}
+
+			.attach-container .attach-file-container .input-button {
+				float: left;
+				width: 70%;
+				margin-left: 15%;
+				text-align: right;
+				margin-top: 20px;
+			}
+
+				.attach-container .attach-file-container .input-button button {
+					width: 25%;
+					padding: 12px 0px;
+					margin-left: 2.5%;
+					border: none;
+					border-radius: 5px;
+					font-family: 'Gentona';
+					font-size: 90%;
+				}
+
+					.attach-container .attach-file-container .input-button button:first-child {
+						background-color: rgb(255, 255, 255);
+						border: solid 1px rgb(4, 80, 140);
+						color: rgb(4, 80, 140);
+					}
+
+					.attach-container .attach-file-container .input-button button:last-child {
+						background-color: rgb(4, 80, 140);
+						color: rgb(255, 255, 255);
+					}
+
+	/* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S CHOOSE FILE MODAL == */
+
+	.attach-category {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 3;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-category .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-category #exitFileBtn {
+				font-size: 140%;
+				color: rgb(90, 90, 90);
+			}
+
+			.attach-category .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-category .attach-file-container .categ-button {
+				float: left;
+				width: 80%;
+				margin-top: 40px;
+				margin-left: 10%;
+			}
+
+				.categ-button button {
+					float: left;
+					width: 40%;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 3px;
+					padding: 10px 0px;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
+					background-color: rgb(4, 80, 140);
+					font-weight: bold;
+					margin: 5% 2.5%;
+				}
+
+			.attach-category .attach-file-container .input-button {
+				float: right;
+				text-align: right;
+				width: 80%;
+				margin-right: 10%;
+				margin-top: 50px;
+			}
+
+				.attach-category .attach-file-container .input-button button {
+					width: 20%;
+					padding: 15px 0px;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 5px;
+					font-family: 'Gentona';
+					color: rgb(4, 80, 140);
+					background-color: rgb(255, 255, 255);
+				}
+
+	/* == APPLICANT`S CHOOSE FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S PDS FORM MODAL == */
+
+	.pds-form-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(30, 30, 30, 0.5);
+		top: 0;
+		left: 0;
+		display: none;
+		overflow-y: auto;
+	}
+
+		.pds-form-container .pds-form {
+			width: 70%;
+			height: auto;
+			margin-top: 5%;
+			margin-bottom: 1%;
+			background-color: rgb(255, 255, 255);
+			margin-left: 15%;
+			overflow: hidden;
+			border: solid 1px rgb(0, 0, 0);
+		}
+
+		.pds-form-container #closePdsBtn {
+			float: left;
+			width: 10%;
+			padding: 10px 0px;
+			background-color: rgb(4, 80, 140);
+			color: rgb(255, 255, 255);
+			font-family: 'Gentona';
+			font-size: 110%;
+			margin-left: 45%;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 5%;
+		}
+
+	/* == APPLICANT`S PDS FORM MODAL ENDS HERE == */
+	/* == MESSAGE MODAL DESIGN == */
+
+	.message-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		display: none;
+		z-index: 1;
+	}
+
+		.message-modal-container .message-container {
+			float: left;
+			width: 30%;
+			height: 500px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 3% 35%;
+		}
+
+			.message-container .message-header {
+				float: left;
+				width: 100%;
+				height: 10%;
+				border-bottom: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-header h1 {
+					float: left;
+					font-family: 'Gentona';
+					font-size: 150%;
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin-left: 2%;
+					margin-top: 2%;
+				}
+
+				.message-header #exitMessageBtn {
+					float: right;
+					font-size: 150%;
+					margin: 2%;
+					margin-right: 2%;
+					color: rgb(110, 110, 110);
+				}
+
+			.message-container .message-inbox {
+				float: left;
+				width: 100%;
+				height: 80%;
+				overflow-y: auto;
+				background-color: rgb(250, 250, 250);
+				padding: 20px 0px;
+			}
+
+				.message-inbox .inbox-user {
+					float: right;
+					width: 80%;
+					margin-right: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-user img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-user #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-user #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-user #inbox-sent {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+				.message-inbox .inbox-admin {
+					float: left;
+					width: 80%;
+					margin-left: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-admin img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-admin #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-admin #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-admin #inbox-receive {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+			.message-container .message-input {
+				float: left;
+				width: 100%;
+				height: 9.5%;
+				border-top: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-input input {
+					float: left;
+					width: 78%;
+					height: 100%;
+					border: none;
+					padding-left: 2%;
+					font-family: 'Century Gothic';
+					font-size: 80%;
+					border-bottom-left-radius: 5px;
+				}
+
+				.message-input input:focus {
+					outline: none;
+				}
+
+				.message-input button {
+					float: left;
+					width: 20%;
+					height: 100%;
+					background-color: rgb(4, 80, 140);
+					border: none;
+					border-bottom-right-radius: 5px;
+					color: rgb(255, 255, 255);
+					font-family: 'Gentona';
+					font-size: 95%;
+				}
+
+				.message-input button:focus {
+					outline: none;
+				}
+
+	/* == MESSAGE MODAL DESIGN ENDS HERE == */
+	/* == FILES MODAL DESIGN == */
+
+	.file-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		z-index: 2;
+		display: none;
+	}
+
+		.file-modal-container .file-container {
+			float: left;
+			width: 30%;
+			height: 400px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin-left: 35%;
+			margin-top: 5%;
+		}
+
+			.file-container .file-header {
+				float: left;
+				width: 100%;
+				height: 15%;
+				border-bottom: solid 1px rgb(230, 230, 230);
+			}
+
+				.file-header h1 {
+					float: left;
+					font-size: 150%;
+					font-family: 'Gentona';
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin: 3% 0px 0px 3%;
+				}
+
+				.file-header #closeFileBtn {
+					float: right;
+					font-size: 150%;
+					color: rgb(110, 110, 110);
+					margin: 3% 3% 0px 0px;
+				}
+
+			.file-container .file-content {
+				float: left;
+				width: 96%;
+				height: 80.4%;
+				padding: 2%;
+			}
+
+				.file-content .files {
+					float: left;
+					width: 100%;
+					padding: 10px 0px;
+					display: inline-block;
+				}
+
+					.file-content .files img {
+						float: left;
+						margin-right: 10px;
+					}
+
+					.file-content .files p {
+						float: left;
+						margin-top: 5px;
+						font-size: 90%;
+						color: rgb(120, 120, 120);
+					}
+
+	/* == FILES MODAL DESIGN ENDS HERE == */
+	/* == UPDATE IMAGE MODAL == */
+
+	.image-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+		.image-modal .image-container {
+			float: left;
+			width: 40%;
+			height: 300px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 10% 30%;
+			border-left: solid 10px rgb(4, 80, 140);
+		}
+
+			.image-container h1 {
+				float: left;
+				font-family: 'Gentona';
+				font-size: 140%;
+				text-transform: uppercase;
+				color: rgb(110, 110, 110);
+				margin-left: 5%;
+				margin-top: 20px;
+			}
+
+			.image-container #closeImageBtn {
+				float: right;
+				margin-right: 5%;
+				margin-top: 10px;
+				font-size: 150%;
+			}
+
+			.image-container img {
+				float: left;
+				width: 30%;
+				height: 150px;
+				margin-left: 35%;
+				margin-top: 10px;
+			}
+
+			.image-container #uploadBtn {
+				float: left;
+				width: 50%;
+				background-color: transparent;
+				border: none;
+				padding: 10px 0px;
+				border: solid 1px rgb(4, 80, 140);
+				border-radius: 5px;
+				font-family: 'Gentona';
+				font-size: 95%;
+				color: rgb(4, 80, 140);
+				margin: 20px 25% 0px 25%;
+				transition: all 0.2s ease-in-out;
+			}
+
+				.image-container #uploadBtn:hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == UPDATE IMAGE MODAL ENDS HERE == */
+	/* == ERROR MESSAGE MODAL ==  */
+
+	.error-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.error-modal .error-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.error-container img {
+				float: left;
+				width: 20%;
+				height: 50px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.error-container #error-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.error-container #error-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.error-container #closeErrorBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 5px;
+				background-color: rgb(255, 0, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.error-container #closeErrorBtn:focus {
+				outline: none;
+			}
+
+	/* == ERROR MESSAGE MODAL ENDS HERE == */
+	/* == SUCCESS MESSAGE MODAL ==  */
+
+	.success-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.success-modal .success-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.success-container img {
+				float: left;
+				width: 20%;
+				height: 65px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.success-container #success-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.success-container #success-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.success-container #closeSuccessBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 15px;
+				background-color: rgb(0, 255, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.success-container #closeSuccessBtn:focus {
+				outline: none;
+			}
+
+	/* == SUCCESS MESSAGE MODAL ENDS HERE == */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+	/* == APPLICANT`S MORE INFO MODAL DESIGN == */
+
+	.modal-info {
+		float: left;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		display: none;
+	}
+
+		.modal-info .modal-content {
+			float: left;
+			width: 15%;
+			height: 180px;
+			background-color: rgb(255, 255, 255);
+			border-right: solid 1px rgb(230, 230, 230);
+			border-bottom: solid 1px rgb(230, 230, 230);
+			border-top: solid 4px rgb(4, 80, 140);
+			margin-left: 18%;
+		}
+
+			.modal-content a {
+				float: left;
+				display: inline-block;
+				width: 95%;
+				padding: 8px 0px 8px 5%;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: rgb(60, 60, 60);
+				font-size: 80%;
+				cursor: pointer;
+				transition: all 0.2s ease-in-out;
+			}
+
+			.modal-content a:hover {
+				font-weight: bold;
+				color: rgb(4, 80, 140);
+				transition: all 0.2s ease-in-out;
+			}
+
+	/* == APPLICANT`S MORE INFO MOODAL DESIGN ENDS HERE == *//* == APPLICANT`S ACCOUNT SETTING MODAL == */
+
+		.applicant-content-container .accountSettingContainer {
+			float: left;
+			width: 60%;
+			height: 400px;
+			border-radius: 5px;
+			margin: 10% 20%;
+		}
+
+			.accountSettingContainer h1 {
+				float: left;
+				width: 95%;
+				font-family: 'Gentona';
+				font-size: 170%;
+				text-transform: uppercase;
+				color: rgb(130, 130, 130);
+				margin: 10px 0px 0px 5%;
+			}
+
+			.accountSettingContainer .line {
+				float: left;
+				width: 10%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 5px;
+				margin: 0px 0px 30px 5%;
+			}
+
+			.accountSettingContainer .viewAccount, .accountSettingContainer .updateAccount, .accountSettingContainer .changePassword {
+				float: left;
+				width: 90%;
+				margin: 20px 5% 80px 5%;
+			}
+
+				.viewAccount .input-field, .updateAccount .input-field, .changePassword .input-field {
+					float: left;
+					width: 70%;
+					margin: 10px 15%;
+				}
+
+					.input-field label {
+						float: left;
+						width: 100%;
+						font-size: 85%;
+						text-transform: uppercase;
+						color: rgb(120, 120, 120);
+						font-weight: bold;
+						margin-bottom: 5px;
+					}
+
+					.input-field input {
+						float: left;
+						width: 98%;
+						height: 35px;
+						border: solid 1px rgb(210, 210, 210);
+						padding-left: 2%;
+						font-family: 'Century Gothic';
+						font-size: 80%;
+						border-radius: 15px;
+					}
+
+					.input-field input:focus {
+						outline: none;
+					}
+
+				.viewAccount .button-field, .updateAccount .button-field, .changePassword .button-field {
+					float: left;
+					width: 70%;
+					margin: 20px 15% 0px 15%;
+				}
+
+					.button-field button {
+						float: left;
+						width: 100%;
+						padding: 12px 0px;
+						background-color: rgb(4, 80, 140);
+						border: none;
+						border-radius: 15px;
+						font-family: 'Gentona';
+						font-size: 110%;
+						color: rgb(255, 255, 255);
+						margin-bottom: 10px;
+					}
+
+					.button-field button:focus {
+						outline: none;
+					}
+
+					.button-field #okInfoBtn, .button-field #okPassBtn {
+						display: none;
+					}
+
+	/* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
+	/* == APPLICANT`S ATTACH FILE MODAL == */
+
+	.attach-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 4;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-container .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-container .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-container .attach-file-container .line {
+				float: left;
+				width: 7%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 3px;
+				margin-bottom: 60px;
+				margin-left: 5%;
+			}
+
+			.attach-container .attach-file-container .input-file {
+				float: left;
+				width: 80%;
+				margin-left: 10%;
+				margin-bottom: 30px;
+			}
+
+				.attach-container .attach-file-container .input-file input {
+					float: left;
+					width: 50%;
+					margin-left: 5%;
+					font-family: 'Century Gothic';
+					font-size: 85%;
+				}
+
+				.attach-container .attach-file-container .input-file label {
+					float: left;
+					width: 90%;
+					margin-left: 5%;
+					font-size: 70%;
+					text-transform: uppercase;
+					color: rgb(150, 150, 150);
+					font-weight: bold;
+					font-style: italic;
+					margin-top: 10px;
+				}
+
+			.attach-container .attach-file-container .input-button {
+				float: left;
+				width: 70%;
+				margin-left: 15%;
+				text-align: right;
+				margin-top: 20px;
+			}
+
+				.attach-container .attach-file-container .input-button button {
+					width: 25%;
+					padding: 12px 0px;
+					margin-left: 2.5%;
+					border: none;
+					border-radius: 5px;
+					font-family: 'Gentona';
+					font-size: 90%;
+				}
+
+					.attach-container .attach-file-container .input-button button:first-child {
+						background-color: rgb(255, 255, 255);
+						border: solid 1px rgb(4, 80, 140);
+						color: rgb(4, 80, 140);
+					}
+
+					.attach-container .attach-file-container .input-button button:last-child {
+						background-color: rgb(4, 80, 140);
+						color: rgb(255, 255, 255);
+					}
+
+	/* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S CHOOSE FILE MODAL == */
+
+	.attach-category {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 3;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-category .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-category #exitFileBtn {
+				font-size: 140%;
+				color: rgb(90, 90, 90);
+			}
+
+			.attach-category .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-category .attach-file-container .categ-button {
+				float: left;
+				width: 80%;
+				margin-top: 40px;
+				margin-left: 10%;
+			}
+
+				.categ-button button {
+					float: left;
+					width: 40%;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 3px;
+					padding: 10px 0px;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
+					background-color: rgb(4, 80, 140);
+					font-weight: bold;
+					margin: 5% 2.5%;
+				}
+
+			.attach-category .attach-file-container .input-button {
+				float: right;
+				text-align: right;
+				width: 80%;
+				margin-right: 10%;
+				margin-top: 50px;
+			}
+
+				.attach-category .attach-file-container .input-button button {
+					width: 20%;
+					padding: 15px 0px;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 5px;
+					font-family: 'Gentona';
+					color: rgb(4, 80, 140);
+					background-color: rgb(255, 255, 255);
+				}
+
+	/* == APPLICANT`S CHOOSE FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S PDS FORM MODAL == */
+
+	.pds-form-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(30, 30, 30, 0.5);
+		top: 0;
+		left: 0;
+		display: none;
+		overflow-y: auto;
+	}
+
+		.pds-form-container .pds-form {
+			width: 70%;
+			height: auto;
+			margin-top: 5%;
+			margin-bottom: 1%;
+			background-color: rgb(255, 255, 255);
+			margin-left: 15%;
+			overflow: hidden;
+			border: solid 1px rgb(0, 0, 0);
+		}
+
+		.pds-form-container #closePdsBtn {
+			float: left;
+			width: 10%;
+			padding: 10px 0px;
+			background-color: rgb(4, 80, 140);
+			color: rgb(255, 255, 255);
+			font-family: 'Gentona';
+			font-size: 110%;
+			margin-left: 45%;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 5%;
+		}
+
+	/* == APPLICANT`S PDS FORM MODAL ENDS HERE == */
+	/* == MESSAGE MODAL DESIGN == */
+
+	.message-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		display: none;
+		z-index: 1;
+	}
+
+		.message-modal-container .message-container {
+			float: left;
+			width: 30%;
+			height: 500px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 3% 35%;
+		}
+
+			.message-container .message-header {
+				float: left;
+				width: 100%;
+				height: 10%;
+				border-bottom: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-header h1 {
+					float: left;
+					font-family: 'Gentona';
+					font-size: 150%;
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin-left: 2%;
+					margin-top: 2%;
+				}
+
+				.message-header #exitMessageBtn {
+					float: right;
+					font-size: 150%;
+					margin: 2%;
+					margin-right: 2%;
+					color: rgb(110, 110, 110);
+				}
+
+			.message-container .message-inbox {
+				float: left;
+				width: 100%;
+				height: 80%;
+				overflow-y: auto;
+				background-color: rgb(250, 250, 250);
+				padding: 20px 0px;
+			}
+
+				.message-inbox .inbox-user {
+					float: right;
+					width: 80%;
+					margin-right: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-user img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-user #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-user #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-user #inbox-sent {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+				.message-inbox .inbox-admin {
+					float: left;
+					width: 80%;
+					margin-left: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-admin img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-admin #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-admin #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-admin #inbox-receive {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+			.message-container .message-input {
+				float: left;
+				width: 100%;
+				height: 9.5%;
+				border-top: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-input input {
+					float: left;
+					width: 78%;
+					height: 100%;
+					border: none;
+					padding-left: 2%;
+					font-family: 'Century Gothic';
+					font-size: 80%;
+					border-bottom-left-radius: 5px;
+				}
+
+				.message-input input:focus {
+					outline: none;
+				}
+
+				.message-input button {
+					float: left;
+					width: 20%;
+					height: 100%;
+					background-color: rgb(4, 80, 140);
+					border: none;
+					border-bottom-right-radius: 5px;
+					color: rgb(255, 255, 255);
+					font-family: 'Gentona';
+					font-size: 95%;
+				}
+
+				.message-input button:focus {
+					outline: none;
+				}
+
+	/* == MESSAGE MODAL DESIGN ENDS HERE == */
+	/* == FILES MODAL DESIGN == */
+
+	.file-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		z-index: 2;
+		display: none;
+	}
+
+		.file-modal-container .file-container {
+			float: left;
+			width: 30%;
+			height: 400px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin-left: 35%;
+			margin-top: 5%;
+		}
+
+			.file-container .file-header {
+				float: left;
+				width: 100%;
+				height: 15%;
+				border-bottom: solid 1px rgb(230, 230, 230);
+			}
+
+				.file-header h1 {
+					float: left;
+					font-size: 150%;
+					font-family: 'Gentona';
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin: 3% 0px 0px 3%;
+				}
+
+				.file-header #closeFileBtn {
+					float: right;
+					font-size: 150%;
+					color: rgb(110, 110, 110);
+					margin: 3% 3% 0px 0px;
+				}
+
+			.file-container .file-content {
+				float: left;
+				width: 96%;
+				height: 80.4%;
+				padding: 2%;
+			}
+
+				.file-content .files {
+					float: left;
+					width: 100%;
+					padding: 10px 0px;
+					display: inline-block;
+				}
+
+					.file-content .files img {
+						float: left;
+						margin-right: 10px;
+					}
+
+					.file-content .files p {
+						float: left;
+						margin-top: 5px;
+						font-size: 90%;
+						color: rgb(120, 120, 120);
+					}
+
+	/* == FILES MODAL DESIGN ENDS HERE == */
+	/* == UPDATE IMAGE MODAL == */
+
+	.image-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+		.image-modal .image-container {
+			float: left;
+			width: 40%;
+			height: 300px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 10% 30%;
+			border-left: solid 10px rgb(4, 80, 140);
+		}
+
+			.image-container h1 {
+				float: left;
+				font-family: 'Gentona';
+				font-size: 140%;
+				text-transform: uppercase;
+				color: rgb(110, 110, 110);
+				margin-left: 5%;
+				margin-top: 20px;
+			}
+
+			.image-container #closeImageBtn {
+				float: right;
+				margin-right: 5%;
+				margin-top: 10px;
+				font-size: 150%;
+			}
+
+			.image-container img {
+				float: left;
+				width: 30%;
+				height: 150px;
+				margin-left: 35%;
+				margin-top: 10px;
+			}
+
+			.image-container #uploadBtn {
+				float: left;
+				width: 50%;
+				background-color: transparent;
+				border: none;
+				padding: 10px 0px;
+				border: solid 1px rgb(4, 80, 140);
+				border-radius: 5px;
+				font-family: 'Gentona';
+				font-size: 95%;
+				color: rgb(4, 80, 140);
+				margin: 20px 25% 0px 25%;
+				transition: all 0.2s ease-in-out;
+			}
+
+				.image-container #uploadBtn:hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == UPDATE IMAGE MODAL ENDS HERE == */
+	/* == ERROR MESSAGE MODAL ==  */
+
+	.error-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.error-modal .error-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.error-container img {
+				float: left;
+				width: 20%;
+				height: 50px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.error-container #error-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.error-container #error-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.error-container #closeErrorBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 5px;
+				background-color: rgb(255, 0, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.error-container #closeErrorBtn:focus {
+				outline: none;
+			}
+
+	/* == ERROR MESSAGE MODAL ENDS HERE == */
+	/* == SUCCESS MESSAGE MODAL ==  */
+
+	.success-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.success-modal .success-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.success-container img {
+				float: left;
+				width: 20%;
+				height: 65px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.success-container #success-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.success-container #success-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.success-container #closeSuccessBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 15px;
+				background-color: rgb(0, 255, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.success-container #closeSuccessBtn:focus {
+				outline: none;
+			}
+
+	/* == SUCCESS MESSAGE MODAL ENDS HERE == */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+	/* == APPLICANT`S MORE INFO MODAL DESIGN == */
+
+	.modal-info {
+		float: left;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		display: none;
+	}
+
+		.modal-info .modal-content {
+			float: left;
+			width: 15%;
+			height: 180px;
+			background-color: rgb(255, 255, 255);
+			border-right: solid 1px rgb(230, 230, 230);
+			border-bottom: solid 1px rgb(230, 230, 230);
+			border-top: solid 4px rgb(4, 80, 140);
+			margin-left: 18%;
+		}
+
+			.modal-content a {
+				float: left;
+				display: inline-block;
+				width: 95%;
+				padding: 8px 0px 8px 5%;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: rgb(60, 60, 60);
+				font-size: 80%;
+				cursor: pointer;
+				transition: all 0.2s ease-in-out;
+			}
+
+			.modal-content a:hover {
+				font-weight: bold;
+				color: rgb(4, 80, 140);
+				transition: all 0.2s ease-in-out;
+			}
+
+	/* == APPLICANT`S MORE INFO MOODAL DESIGN ENDS HERE == *//* == APPLICANT`S ACCOUNT SETTING MODAL == */
+
+		.applicant-content-container .accountSettingContainer {
+			float: left;
+			width: 60%;
+			height: 400px;
+			border-radius: 5px;
+			margin: 10% 20%;
+		}
+
+			.accountSettingContainer h1 {
+				float: left;
+				width: 95%;
+				font-family: 'Gentona';
+				font-size: 170%;
+				text-transform: uppercase;
+				color: rgb(130, 130, 130);
+				margin: 10px 0px 0px 5%;
+			}
+
+			.accountSettingContainer .line {
+				float: left;
+				width: 10%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 5px;
+				margin: 0px 0px 30px 5%;
+			}
+
+			.accountSettingContainer .viewAccount, .accountSettingContainer .updateAccount, .accountSettingContainer .changePassword {
+				float: left;
+				width: 90%;
+				margin: 20px 5% 80px 5%;
+			}
+
+				.viewAccount .input-field, .updateAccount .input-field, .changePassword .input-field {
+					float: left;
+					width: 70%;
+					margin: 10px 15%;
+				}
+
+					.input-field label {
+						float: left;
+						width: 100%;
+						font-size: 85%;
+						text-transform: uppercase;
+						color: rgb(120, 120, 120);
+						font-weight: bold;
+						margin-bottom: 5px;
+					}
+
+					.input-field input {
+						float: left;
+						width: 98%;
+						height: 35px;
+						border: solid 1px rgb(210, 210, 210);
+						padding-left: 2%;
+						font-family: 'Century Gothic';
+						font-size: 80%;
+						border-radius: 15px;
+					}
+
+					.input-field input:focus {
+						outline: none;
+					}
+
+				.viewAccount .button-field, .updateAccount .button-field, .changePassword .button-field {
+					float: left;
+					width: 70%;
+					margin: 20px 15% 0px 15%;
+				}
+
+					.button-field button {
+						float: left;
+						width: 100%;
+						padding: 12px 0px;
+						background-color: rgb(4, 80, 140);
+						border: none;
+						border-radius: 15px;
+						font-family: 'Gentona';
+						font-size: 110%;
+						color: rgb(255, 255, 255);
+						margin-bottom: 10px;
+					}
+
+					.button-field button:focus {
+						outline: none;
+					}
+
+					.button-field #okInfoBtn, .button-field #okPassBtn {
+						display: none;
+					}
+
+	/* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
+	/* == APPLICANT`S ATTACH FILE MODAL == */
+
+	.attach-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 4;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-container .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-container .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-container .attach-file-container .line {
+				float: left;
+				width: 7%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 3px;
+				margin-bottom: 60px;
+				margin-left: 5%;
+			}
+
+			.attach-container .attach-file-container .input-file {
+				float: left;
+				width: 80%;
+				margin-left: 10%;
+				margin-bottom: 30px;
+			}
+
+				.attach-container .attach-file-container .input-file input {
+					float: left;
+					width: 50%;
+					margin-left: 5%;
+					font-family: 'Century Gothic';
+					font-size: 85%;
+				}
+
+				.attach-container .attach-file-container .input-file label {
+					float: left;
+					width: 90%;
+					margin-left: 5%;
+					font-size: 70%;
+					text-transform: uppercase;
+					color: rgb(150, 150, 150);
+					font-weight: bold;
+					font-style: italic;
+					margin-top: 10px;
+				}
+
+			.attach-container .attach-file-container .input-button {
+				float: left;
+				width: 70%;
+				margin-left: 15%;
+				text-align: right;
+				margin-top: 20px;
+			}
+
+				.attach-container .attach-file-container .input-button button {
+					width: 25%;
+					padding: 12px 0px;
+					margin-left: 2.5%;
+					border: none;
+					border-radius: 5px;
+					font-family: 'Gentona';
+					font-size: 90%;
+				}
+
+					.attach-container .attach-file-container .input-button button:first-child {
+						background-color: rgb(255, 255, 255);
+						border: solid 1px rgb(4, 80, 140);
+						color: rgb(4, 80, 140);
+					}
+
+					.attach-container .attach-file-container .input-button button:last-child {
+						background-color: rgb(4, 80, 140);
+						color: rgb(255, 255, 255);
+					}
+
+	/* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S CHOOSE FILE MODAL == */
+
+	.attach-category {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 3;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-category .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-category #exitFileBtn {
+				font-size: 140%;
+				color: rgb(90, 90, 90);
+			}
+
+			.attach-category .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-category .attach-file-container .categ-button {
+				float: left;
+				width: 80%;
+				margin-top: 40px;
+				margin-left: 10%;
+			}
+
+				.categ-button button {
+					float: left;
+					width: 40%;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 3px;
+					padding: 10px 0px;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
+					background-color: rgb(4, 80, 140);
+					font-weight: bold;
+					margin: 5% 2.5%;
+				}
+
+			.attach-category .attach-file-container .input-button {
+				float: right;
+				text-align: right;
+				width: 80%;
+				margin-right: 10%;
+				margin-top: 50px;
+			}
+
+				.attach-category .attach-file-container .input-button button {
+					width: 20%;
+					padding: 15px 0px;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 5px;
+					font-family: 'Gentona';
+					color: rgb(4, 80, 140);
+					background-color: rgb(255, 255, 255);
+				}
+
+	/* == APPLICANT`S CHOOSE FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S PDS FORM MODAL == */
+
+	.pds-form-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(30, 30, 30, 0.5);
+		top: 0;
+		left: 0;
+		display: none;
+		overflow-y: auto;
+	}
+
+		.pds-form-container .pds-form {
+			width: 70%;
+			height: auto;
+			margin-top: 5%;
+			margin-bottom: 1%;
+			background-color: rgb(255, 255, 255);
+			margin-left: 15%;
+			overflow: hidden;
+			border: solid 1px rgb(0, 0, 0);
+		}
+
+		.pds-form-container #closePdsBtn {
+			float: left;
+			width: 10%;
+			padding: 10px 0px;
+			background-color: rgb(4, 80, 140);
+			color: rgb(255, 255, 255);
+			font-family: 'Gentona';
+			font-size: 110%;
+			margin-left: 45%;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 5%;
+		}
+
+	/* == APPLICANT`S PDS FORM MODAL ENDS HERE == */
+	/* == MESSAGE MODAL DESIGN == */
+
+	.message-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		display: none;
+		z-index: 1;
+	}
+
+		.message-modal-container .message-container {
+			float: left;
+			width: 30%;
+			height: 500px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 3% 35%;
+		}
+
+			.message-container .message-header {
+				float: left;
+				width: 100%;
+				height: 10%;
+				border-bottom: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-header h1 {
+					float: left;
+					font-family: 'Gentona';
+					font-size: 150%;
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin-left: 2%;
+					margin-top: 2%;
+				}
+
+				.message-header #exitMessageBtn {
+					float: right;
+					font-size: 150%;
+					margin: 2%;
+					margin-right: 2%;
+					color: rgb(110, 110, 110);
+				}
+
+			.message-container .message-inbox {
+				float: left;
+				width: 100%;
+				height: 80%;
+				overflow-y: auto;
+				background-color: rgb(250, 250, 250);
+				padding: 20px 0px;
+			}
+
+				.message-inbox .inbox-user {
+					float: right;
+					width: 80%;
+					margin-right: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-user img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-user #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-user #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-user #inbox-sent {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+				.message-inbox .inbox-admin {
+					float: left;
+					width: 80%;
+					margin-left: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-admin img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-admin #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-admin #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-admin #inbox-receive {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+			.message-container .message-input {
+				float: left;
+				width: 100%;
+				height: 9.5%;
+				border-top: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-input input {
+					float: left;
+					width: 78%;
+					height: 100%;
+					border: none;
+					padding-left: 2%;
+					font-family: 'Century Gothic';
+					font-size: 80%;
+					border-bottom-left-radius: 5px;
+				}
+
+				.message-input input:focus {
+					outline: none;
+				}
+
+				.message-input button {
+					float: left;
+					width: 20%;
+					height: 100%;
+					background-color: rgb(4, 80, 140);
+					border: none;
+					border-bottom-right-radius: 5px;
+					color: rgb(255, 255, 255);
+					font-family: 'Gentona';
+					font-size: 95%;
+				}
+
+				.message-input button:focus {
+					outline: none;
+				}
+
+	/* == MESSAGE MODAL DESIGN ENDS HERE == */
+	/* == FILES MODAL DESIGN == */
+
+	.file-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		z-index: 2;
+		display: none;
+	}
+
+		.file-modal-container .file-container {
+			float: left;
+			width: 30%;
+			height: 400px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin-left: 35%;
+			margin-top: 5%;
+		}
+
+			.file-container .file-header {
+				float: left;
+				width: 100%;
+				height: 15%;
+				border-bottom: solid 1px rgb(230, 230, 230);
+			}
+
+				.file-header h1 {
+					float: left;
+					font-size: 150%;
+					font-family: 'Gentona';
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin: 3% 0px 0px 3%;
+				}
+
+				.file-header #closeFileBtn {
+					float: right;
+					font-size: 150%;
+					color: rgb(110, 110, 110);
+					margin: 3% 3% 0px 0px;
+				}
+
+			.file-container .file-content {
+				float: left;
+				width: 96%;
+				height: 80.4%;
+				padding: 2%;
+			}
+
+				.file-content .files {
+					float: left;
+					width: 100%;
+					padding: 10px 0px;
+					display: inline-block;
+				}
+
+					.file-content .files img {
+						float: left;
+						margin-right: 10px;
+					}
+
+					.file-content .files p {
+						float: left;
+						margin-top: 5px;
+						font-size: 90%;
+						color: rgb(120, 120, 120);
+					}
+
+	/* == FILES MODAL DESIGN ENDS HERE == */
+	/* == UPDATE IMAGE MODAL == */
+
+	.image-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+		.image-modal .image-container {
+			float: left;
+			width: 40%;
+			height: 300px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 10% 30%;
+			border-left: solid 10px rgb(4, 80, 140);
+		}
+
+			.image-container h1 {
+				float: left;
+				font-family: 'Gentona';
+				font-size: 140%;
+				text-transform: uppercase;
+				color: rgb(110, 110, 110);
+				margin-left: 5%;
+				margin-top: 20px;
+			}
+
+			.image-container #closeImageBtn {
+				float: right;
+				margin-right: 5%;
+				margin-top: 10px;
+				font-size: 150%;
+			}
+
+			.image-container img {
+				float: left;
+				width: 30%;
+				height: 150px;
+				margin-left: 35%;
+				margin-top: 10px;
+			}
+
+			.image-container #uploadBtn {
+				float: left;
+				width: 50%;
+				background-color: transparent;
+				border: none;
+				padding: 10px 0px;
+				border: solid 1px rgb(4, 80, 140);
+				border-radius: 5px;
+				font-family: 'Gentona';
+				font-size: 95%;
+				color: rgb(4, 80, 140);
+				margin: 20px 25% 0px 25%;
+				transition: all 0.2s ease-in-out;
+			}
+
+				.image-container #uploadBtn:hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == UPDATE IMAGE MODAL ENDS HERE == */
+	/* == ERROR MESSAGE MODAL ==  */
+
+	.error-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.error-modal .error-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.error-container img {
+				float: left;
+				width: 20%;
+				height: 50px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.error-container #error-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.error-container #error-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.error-container #closeErrorBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 5px;
+				background-color: rgb(255, 0, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.error-container #closeErrorBtn:focus {
+				outline: none;
+			}
+
+	/* == ERROR MESSAGE MODAL ENDS HERE == */
+	/* == SUCCESS MESSAGE MODAL ==  */
+
+	.success-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.success-modal .success-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.success-container img {
+				float: left;
+				width: 20%;
+				height: 65px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.success-container #success-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.success-container #success-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.success-container #closeSuccessBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 15px;
+				background-color: rgb(0, 255, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.success-container #closeSuccessBtn:focus {
+				outline: none;
+			}
+
+	/* == SUCCESS MESSAGE MODAL ENDS HERE == */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+	/* == APPLICANT`S MORE INFO MODAL DESIGN == */
+
+	.modal-info {
+		float: left;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		display: none;
+	}
+
+		.modal-info .modal-content {
+			float: left;
+			width: 15%;
+			height: 180px;
+			background-color: rgb(255, 255, 255);
+			border-right: solid 1px rgb(230, 230, 230);
+			border-bottom: solid 1px rgb(230, 230, 230);
+			border-top: solid 4px rgb(4, 80, 140);
+			margin-left: 18%;
+		}
+
+			.modal-content a {
+				float: left;
+				display: inline-block;
+				width: 95%;
+				padding: 8px 0px 8px 5%;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: rgb(60, 60, 60);
+				font-size: 80%;
+				cursor: pointer;
+				transition: all 0.2s ease-in-out;
+			}
+
+			.modal-content a:hover {
+				font-weight: bold;
+				color: rgb(4, 80, 140);
+				transition: all 0.2s ease-in-out;
+			}
+
+	/* == APPLICANT`S MORE INFO MOODAL DESIGN ENDS HERE == *//* == APPLICANT`S ACCOUNT SETTING MODAL == */
+
+		.applicant-content-container .accountSettingContainer {
+			float: left;
+			width: 60%;
+			height: 400px;
+			border-radius: 5px;
+			margin: 10% 20%;
+		}
+
+			.accountSettingContainer h1 {
+				float: left;
+				width: 95%;
+				font-family: 'Gentona';
+				font-size: 170%;
+				text-transform: uppercase;
+				color: rgb(130, 130, 130);
+				margin: 10px 0px 0px 5%;
+			}
+
+			.accountSettingContainer .line {
+				float: left;
+				width: 10%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 5px;
+				margin: 0px 0px 30px 5%;
+			}
+
+			.accountSettingContainer .viewAccount, .accountSettingContainer .updateAccount, .accountSettingContainer .changePassword {
+				float: left;
+				width: 90%;
+				margin: 20px 5% 80px 5%;
+			}
+
+				.viewAccount .input-field, .updateAccount .input-field, .changePassword .input-field {
+					float: left;
+					width: 70%;
+					margin: 10px 15%;
+				}
+
+					.input-field label {
+						float: left;
+						width: 100%;
+						font-size: 85%;
+						text-transform: uppercase;
+						color: rgb(120, 120, 120);
+						font-weight: bold;
+						margin-bottom: 5px;
+					}
+
+					.input-field input {
+						float: left;
+						width: 98%;
+						height: 35px;
+						border: solid 1px rgb(210, 210, 210);
+						padding-left: 2%;
+						font-family: 'Century Gothic';
+						font-size: 80%;
+						border-radius: 15px;
+					}
+
+					.input-field input:focus {
+						outline: none;
+					}
+
+				.viewAccount .button-field, .updateAccount .button-field, .changePassword .button-field {
+					float: left;
+					width: 70%;
+					margin: 20px 15% 0px 15%;
+				}
+
+					.button-field button {
+						float: left;
+						width: 100%;
+						padding: 12px 0px;
+						background-color: rgb(4, 80, 140);
+						border: none;
+						border-radius: 15px;
+						font-family: 'Gentona';
+						font-size: 110%;
+						color: rgb(255, 255, 255);
+						margin-bottom: 10px;
+					}
+
+					.button-field button:focus {
+						outline: none;
+					}
+
+					.button-field #okInfoBtn, .button-field #okPassBtn {
+						display: none;
+					}
+
+	/* == APPLICANT`S ACCOUNT SETTING MODAL ENDS HERE == */
+	/* == APPLICANT`S ATTACH FILE MODAL == */
+
+	.attach-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 4;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-container .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-container .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-container .attach-file-container .line {
+				float: left;
+				width: 7%;
+				height: 5px;
+				background-color: rgb(4, 80, 140);
+				border-radius: 3px;
+				margin-bottom: 60px;
+				margin-left: 5%;
+			}
+
+			.attach-container .attach-file-container .input-file {
+				float: left;
+				width: 80%;
+				margin-left: 10%;
+				margin-bottom: 30px;
+			}
+
+				.attach-container .attach-file-container .input-file input {
+					float: left;
+					width: 50%;
+					margin-left: 5%;
+					font-family: 'Century Gothic';
+					font-size: 85%;
+				}
+
+				.attach-container .attach-file-container .input-file label {
+					float: left;
+					width: 90%;
+					margin-left: 5%;
+					font-size: 70%;
+					text-transform: uppercase;
+					color: rgb(150, 150, 150);
+					font-weight: bold;
+					font-style: italic;
+					margin-top: 10px;
+				}
+
+			.attach-container .attach-file-container .input-button {
+				float: left;
+				width: 70%;
+				margin-left: 15%;
+				text-align: right;
+				margin-top: 20px;
+			}
+
+				.attach-container .attach-file-container .input-button button {
+					width: 25%;
+					padding: 12px 0px;
+					margin-left: 2.5%;
+					border: none;
+					border-radius: 5px;
+					font-family: 'Gentona';
+					font-size: 90%;
+				}
+
+					.attach-container .attach-file-container .input-button button:first-child {
+						background-color: rgb(255, 255, 255);
+						border: solid 1px rgb(4, 80, 140);
+						color: rgb(4, 80, 140);
+					}
+
+					.attach-container .attach-file-container .input-button button:last-child {
+						background-color: rgb(4, 80, 140);
+						color: rgb(255, 255, 255);
+					}
+
+	/* == APPLICANT`S ATTACH FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S CHOOSE FILE MODAL == */
+
+	.attach-category {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 3;
+		background-color: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+		.attach-category .attach-file-container {
+			float: left;
+			width: 40%;
+			height: 350px;
+			background-color: rgb(255, 255, 255);
+			margin: 10% 30%;
+			border-radius: 5px;
+		}
+
+			.attach-category #exitFileBtn {
+				font-size: 140%;
+				color: rgb(90, 90, 90);
+			}
+
+			.attach-category .attach-file-container h2 {
+				float: left;
+				width: 90%;
+				margin-left: 5%;
+				margin-top: 30px;
+				font-family: 'Gentona';
+				font-size: 150%;
+				text-transform: uppercase;
+				color: rgb(100, 100, 100);
+			}
+
+			.attach-category .attach-file-container .categ-button {
+				float: left;
+				width: 80%;
+				margin-top: 40px;
+				margin-left: 10%;
+			}
+
+				.categ-button button {
+					float: left;
+					width: 40%;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 3px;
+					padding: 10px 0px;
+					font-family: 'Century Gothic';
+					font-size: 90%;
+					text-transform: uppercase;
+					color: rgb(255, 255, 255);
+					background-color: rgb(4, 80, 140);
+					font-weight: bold;
+					margin: 5% 2.5%;
+				}
+
+			.attach-category .attach-file-container .input-button {
+				float: right;
+				text-align: right;
+				width: 80%;
+				margin-right: 10%;
+				margin-top: 50px;
+			}
+
+				.attach-category .attach-file-container .input-button button {
+					width: 20%;
+					padding: 15px 0px;
+					border: solid 1px rgb(4, 80, 140);
+					border-radius: 5px;
+					font-family: 'Gentona';
+					color: rgb(4, 80, 140);
+					background-color: rgb(255, 255, 255);
+				}
+
+	/* == APPLICANT`S CHOOSE FILE MODAL ENDS HERE == */
+	/* == APPLICANT`S PDS FORM MODAL == */
+
+	.pds-form-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(30, 30, 30, 0.5);
+		top: 0;
+		left: 0;
+		display: none;
+		overflow-y: auto;
+	}
+
+		.pds-form-container .pds-form {
+			width: 70%;
+			height: auto;
+			margin-top: 5%;
+			margin-bottom: 1%;
+			background-color: rgb(255, 255, 255);
+			margin-left: 15%;
+			overflow: hidden;
+			border: solid 1px rgb(0, 0, 0);
+		}
+
+		.pds-form-container #closePdsBtn {
+			float: left;
+			width: 10%;
+			padding: 10px 0px;
+			background-color: rgb(4, 80, 140);
+			color: rgb(255, 255, 255);
+			font-family: 'Gentona';
+			font-size: 110%;
+			margin-left: 45%;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 5%;
+		}
+
+	/* == APPLICANT`S PDS FORM MODAL ENDS HERE == */
+	/* == MESSAGE MODAL DESIGN == */
+
+	.message-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		display: none;
+		z-index: 1;
+	}
+
+		.message-modal-container .message-container {
+			float: left;
+			width: 30%;
+			height: 500px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 3% 35%;
+		}
+
+			.message-container .message-header {
+				float: left;
+				width: 100%;
+				height: 10%;
+				border-bottom: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-header h1 {
+					float: left;
+					font-family: 'Gentona';
+					font-size: 150%;
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin-left: 2%;
+					margin-top: 2%;
+				}
+
+				.message-header #exitMessageBtn {
+					float: right;
+					font-size: 150%;
+					margin: 2%;
+					margin-right: 2%;
+					color: rgb(110, 110, 110);
+				}
+
+			.message-container .message-inbox {
+				float: left;
+				width: 100%;
+				height: 80%;
+				overflow-y: auto;
+				background-color: rgb(250, 250, 250);
+				padding: 20px 0px;
+			}
+
+				.message-inbox .inbox-user {
+					float: right;
+					width: 80%;
+					margin-right: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-user img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-user #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-user #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-user #inbox-sent {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+				.message-inbox .inbox-admin {
+					float: left;
+					width: 80%;
+					margin-left: 5%;
+					padding: 10px 0px;
+					border-radius: 5px;
+					background-color: rgb(245, 245, 245);
+					margin-bottom: 10px;
+				}
+
+					.inbox-admin img {
+						float: left;
+						width: 10%;
+						height: 30px;
+						margin: 0px 2.5%;
+					}
+
+					.inbox-admin #inbox-name {
+						float: left;
+						width: 80%;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 85%;
+					}
+
+					.inbox-admin #inbox-content {
+						float: left;
+						width: 80%;
+						margin: 0px 17.5%;
+						font-size: 80%;
+					}
+
+					.inbox-admin #inbox-receive {
+						float: right;
+						margin: 5px 2.5% 0px 0px;
+						font-size: 50%;
+						text-transform: uppercase;
+						color: rgb(100, 100, 100);
+						font-weight: bold;
+					}
+
+			.message-container .message-input {
+				float: left;
+				width: 100%;
+				height: 9.5%;
+				border-top: solid 1px rgb(220, 220, 220);
+			}
+
+				.message-input input {
+					float: left;
+					width: 78%;
+					height: 100%;
+					border: none;
+					padding-left: 2%;
+					font-family: 'Century Gothic';
+					font-size: 80%;
+					border-bottom-left-radius: 5px;
+				}
+
+				.message-input input:focus {
+					outline: none;
+				}
+
+				.message-input button {
+					float: left;
+					width: 20%;
+					height: 100%;
+					background-color: rgb(4, 80, 140);
+					border: none;
+					border-bottom-right-radius: 5px;
+					color: rgb(255, 255, 255);
+					font-family: 'Gentona';
+					font-size: 95%;
+				}
+
+				.message-input button:focus {
+					outline: none;
+				}
+
+	/* == MESSAGE MODAL DESIGN ENDS HERE == */
+	/* == FILES MODAL DESIGN == */
+
+	.file-modal-container {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		z-index: 2;
+		display: none;
+	}
+
+		.file-modal-container .file-container {
+			float: left;
+			width: 30%;
+			height: 400px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin-left: 35%;
+			margin-top: 5%;
+		}
+
+			.file-container .file-header {
+				float: left;
+				width: 100%;
+				height: 15%;
+				border-bottom: solid 1px rgb(230, 230, 230);
+			}
+
+				.file-header h1 {
+					float: left;
+					font-size: 150%;
+					font-family: 'Gentona';
+					text-transform: uppercase;
+					color: rgb(110, 110, 110);
+					margin: 3% 0px 0px 3%;
+				}
+
+				.file-header #closeFileBtn {
+					float: right;
+					font-size: 150%;
+					color: rgb(110, 110, 110);
+					margin: 3% 3% 0px 0px;
+				}
+
+			.file-container .file-content {
+				float: left;
+				width: 96%;
+				height: 80.4%;
+				padding: 2%;
+			}
+
+				.file-content .files {
+					float: left;
+					width: 100%;
+					padding: 10px 0px;
+					display: inline-block;
+				}
+
+					.file-content .files img {
+						float: left;
+						margin-right: 10px;
+					}
+
+					.file-content .files p {
+						float: left;
+						margin-top: 5px;
+						font-size: 90%;
+						color: rgb(120, 120, 120);
+					}
+
+	/* == FILES MODAL DESIGN ENDS HERE == */
+	/* == UPDATE IMAGE MODAL == */
+
+	.image-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+		.image-modal .image-container {
+			float: left;
+			width: 40%;
+			height: 300px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 10% 30%;
+			border-left: solid 10px rgb(4, 80, 140);
+		}
+
+			.image-container h1 {
+				float: left;
+				font-family: 'Gentona';
+				font-size: 140%;
+				text-transform: uppercase;
+				color: rgb(110, 110, 110);
+				margin-left: 5%;
+				margin-top: 20px;
+			}
+
+			.image-container #closeImageBtn {
+				float: right;
+				margin-right: 5%;
+				margin-top: 10px;
+				font-size: 150%;
+			}
+
+			.image-container img {
+				float: left;
+				width: 30%;
+				height: 150px;
+				margin-left: 35%;
+				margin-top: 10px;
+			}
+
+			.image-container #uploadBtn {
+				float: left;
+				width: 50%;
+				background-color: transparent;
+				border: none;
+				padding: 10px 0px;
+				border: solid 1px rgb(4, 80, 140);
+				border-radius: 5px;
+				font-family: 'Gentona';
+				font-size: 95%;
+				color: rgb(4, 80, 140);
+				margin: 20px 25% 0px 25%;
+				transition: all 0.2s ease-in-out;
+			}
+
+				.image-container #uploadBtn:hover {
+					background-color: rgb(4, 80, 140);
+					color: rgb(255, 255, 255);
+					transition: all 0.2s ease-in-out;
+				}
+
+	/* == UPDATE IMAGE MODAL ENDS HERE == */
+	/* == ERROR MESSAGE MODAL ==  */
+
+	.error-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.error-modal .error-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.error-container img {
+				float: left;
+				width: 20%;
+				height: 50px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.error-container #error-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.error-container #error-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.error-container #closeErrorBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 5px;
+				background-color: rgb(255, 0, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.error-container #closeErrorBtn:focus {
+				outline: none;
+			}
+
+	/* == ERROR MESSAGE MODAL ENDS HERE == */
+	/* == SUCCESS MESSAGE MODAL ==  */
+
+	.success-modal {
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		left: 0;
+		z-index: 3;
+		display: none;
+	}
+
+		.success-modal .success-container {
+			float: left;
+			width: 25%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 5px;
+			margin: 7% 37.5%;
+			overflow: hidden;
+		}
+
+
+			.success-container img {
+				float: left;
+				width: 20%;
+				height: 65px;
+				margin: 20% 40% 0px 40%;
+			}
+
+			.success-container #success-header {
+				float: left;
+				width: 100%;
+				text-align: center;
+				font-size: 130%;
+				font-weight: bold;
+				color: rgb(110, 110, 110);
+				margin-top: 5px;
+			}
+
+			.success-container #success-info {
+				float: left;
+				width: 70%;
+				margin: 15%;
+				font-size: 80%;
+				color: rgb(150, 150, 150);
+				text-align: center;
+				margin-bottom: 50px;
+			}
+
+			.success-container #closeSuccessBtn {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 21px 0px;
+				border: none;
+				font-size: 95%;
+				margin-top: 15px;
+				background-color: rgb(0, 255, 0);
+				color: rgb(255, 255, 255);
+			}
+
+			.success-container #closeSuccessBtn:focus {
+				outline: none;
+			}
+
+	/* == SUCCESS MESSAGE MODAL ENDS HERE == */
+}
+	

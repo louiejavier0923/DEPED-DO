@@ -10,9 +10,6 @@
 			<?php include '../include/applicant-header-container.php';?>
 		</section>
 		<section class= "applicant-content-container">
-			<section class= "modal-message">
-				<button id= "messageBtn"><img src= "../img/icon-message.png"></button>
-			</section>
 			<section class= "body-container">
 				<section class= "body-faqs">
 					<section class= "body-faqs-container">

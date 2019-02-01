@@ -9,12 +9,7 @@
 		<section class= "applicant-header-container">
 			<?php include '../include/applicant-header-container.php';?>
 		</section>
-		<section class= "applicant-content-container">
-			<section class= "modal-message">
-				<button id= "messageBtn"><img src= "../img/icon-message.png"></button>
-			</section>
-			<?php include '../include/applicant-message-modal.php';?>
-			<section class= "body-container">
+		<section class= "applicant-content-container">			<section class= "body-container">
 				<section class= "logs-info">
 					<h3>Status</h3>
 					<div class= "line"></div>
