@@ -12,11 +12,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        User
+        Personal Information
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Users</li>
+        <li class="active">Personal Information</li>
       </ol>
     </section>
 
@@ -72,8 +72,6 @@
                   <th>No.</th>
                   <th>FULL NAME</th>
                   <th>EMAIL</th>
-                  <th>STATUS</th>
-                  <th>ISONLINE</th>
                   <th>TOOLS</th>
                 
                 </thead>
@@ -101,8 +99,6 @@
                           <td>".$NO."</td>
                           <td>".$row['fullname']."</td>
                           <td>".$row['EMAIL']."</td>
-                          <td>".$status."</td>
-                          <td>".$online."</td>
                           <td>
                             <button class='btn btn-sm btn-flat view-pds' data-id='".$row['UID']."'><i class='fa fa-edit'></i>View PDS</button>
 							<button class='btn btn-danger btn-sm btn-flat delete' data-id='".$row['UID']."'><i class='fa fa-archive'></i> Archive</button>
@@ -129,15 +125,227 @@
 <script>
 
 $(function(){
+	
+	var childname = [];
+	var childBDay = [];
+	var CS = [];
+	var CS_rating = [];
+	var CS_date = [];
+	var CS_place = [];
+	var CS_licenceNo = [];
+	var CS_licenceDate = [];
+	var WE_FromDate = [];
+	var WE_ToDate = [];
+	var WE_PositionTitle = [];
+	var WE_Place = [];
+	var WE_MonthSalary = [];
+	var WE_Salary = [];
+	var WE_AppointmentStatus = [];
+	var WE_GovService = [];
+	var VW_Name_Address = [];
+	var VW_FromDate = [];
+	var VW_Todate = [];
+	var VW_NumbHours = [];
+	var VW_Work = [];
+	var LaD_Title = [];
+	var LaD_FromDate = [];
+	var LaD_ToDate = [];
+	var LaD_NumbHours = [];
+	var LaD_Type = [];
+	var LaD_ConductBy = [];
+	
+	function get_MultiRrows() {
+		childname = [];
+		childBDay = [];
+		CS = [];
+		CS_rating = [];
+		CS_date = [];
+		CS_place = [];
+		CS_licenceNo = [];
+		CS_licenceDate = [];
+		WE_FromDate = [];
+		WE_ToDate = [];
+		WE_PositionTitle = [];
+		WE_Place = [];
+		WE_MonthSalary = [];
+		WE_Salary = [];
+		WE_AppointmentStatus = [];
+		WE_GovService = [];
+		VW_Name_Address = [];
+		VW_FromDate = [];
+		VW_Todate = [];
+		VW_NumbHours = [];
+		VW_Work = [];
+		LaD_Title = [];
+		LaD_FromDate = [];
+		LaD_ToDate = [];
+		LaD_NumbHours = [];
+		LaD_Type = [];
+		LaD_ConductBy = [];
+	
+		
+		$('.pds_children').each(function(){
+			childname.push($(this).val());
+		});
+		$('.pds_childrenBdate').each(function(){
+			childBDay.push($(this).val());
+		});
+		$('.pds_CS').each(function(){
+			CS.push($(this).val());
+		});
+		$('.pds_CS_rating').each(function(){
+			CS_rating.push($(this).val());
+		});
+		$('.pds_CS_date').each(function(){
+			CS_date.push($(this).val());
+		});
+		$('.pds_CS_place').each(function(){
+			CS_place.push($(this).val());
+		});
+		$('.pds_CS_licenceNo').each(function(){
+			CS_licenceNo.push($(this).val());
+		});
+		$('.pds_CS_licenceDate').each(function(){
+			CS_licenceDate.push($(this).val());
+		});
+		$('.pds_WE_FromDate').each(function(){
+			WE_FromDate.push($(this).val());
+		});
+		$('.pds_WE_ToDate').each(function(){
+			WE_ToDate.push($(this).val());
+		});
+		$('.pds_WE_PositionTitle').each(function(){
+			WE_PositionTitle.push($(this).val());
+		});
+		$('.pds_WE_Place').each(function(){
+			WE_Place.push($(this).val());
+		});
+		$('.pds_WE_MonthSalary').each(function(){
+			WE_MonthSalary.push($(this).val());
+		});
+		$('.pds_WE_Salary').each(function(){
+			WE_Salary.push($(this).val());
+		});
+		$('.pds_WE_AppointmentStatus').each(function(){
+			WE_AppointmentStatus.push($(this).val());
+		});
+		$('.pds_WE_GovService').each(function(){
+			WE_GovService.push($(this).val());
+		});
+		$('.pds_VW_Name_Address').each(function(){
+			VW_Name_Address.push($(this).val());
+		});
+		$('.pds_VW_FromDate').each(function(){
+			VW_FromDate.push($(this).val());
+		});
+		$('.pds_VW_Todate').each(function(){
+			VW_Todate.push($(this).val());
+		});
+		$('.pds_VW_NumbHours').each(function(){
+			VW_NumbHours.push($(this).val());
+		});
+		$('.pds_VW_Work').each(function(){
+			VW_Work.push($(this).val());
+		});
+		$('.pds_LaD_Title').each(function(){
+			LaD_Title.push($(this).val());
+		});
+		$('.pds_LaD_FromDate').each(function(){
+			LaD_FromDate.push($(this).val());
+		});
+		$('.pds_LaD_ToDate').each(function(){
+			LaD_ToDate.push($(this).val());
+		});
+		$('.pds_LaD_NumbHours').each(function(){
+			LaD_NumbHours.push($(this).val());
+		});
+		$('.pds_LaD_Type').each(function(){
+			LaD_Type.push($(this).val());
+		});
+		$('.pds_LaD_ConductBy').each(function(){
+			LaD_ConductBy.push($(this).val());
+		});
+		
+		
+	}
+	
+	
+	
+	var texterror ='';
+	function checking() {
+		text='';
+		$('.single-fields input').css('background-color', "#ffffff");
+		$('.radio-fields').css('background-color', "#ffffff");
+		count = 0;
+		$('.single-fields input').each(function(){
+			if ($(this).val().length == 0) {
+				if($(this).hasClass("not-require")){
+					
+				}else{
+					texterror+=$(this).attr("name");
+							$("#error-message").css('display','block');
+							document.getElementById('error-info').innerHTML = "Please input all required fields!";   	    	
+							document.getElementById('error-header').innerHTML = "Error!";
+					$(this).css('background-color', "#ffa0a0f7");
+				   
+				   //$(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
+				   count++;
+				}
+			   
+			} 
+		});
+		/* if($('input[name="Gender"]:checked').length === 0) {
+			$(".gender-fields").css('background-color', "#ffa0a0f7");
+			//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Gender' );
+			
+			texterror+=$(this).attr("name");
+			count++;
+		}
+		if($('input[name="Civil Status"]:checked').length === 0) {
+			$(".civilstat-fields").css('background-color', "#ffa0a0f7");
+			//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Civil Status' );
+			
+			texterror+=$(this).attr("name");count++;
+		}
+		if($('input[name="Citizenship"]:checked').length === 0) {
+			$(".citizenship-fields").css('background-color', "#ffa0a0f7");
+			//$(".errors div").html(str +(count == 0 ? '' :', ') +  'Citizenship' );
+			texterror+=$(this).attr("name");
+			count++;
+		} */
+		$('.spouse-fields input').each(function(){
+			if(($('.pds_spousesurname').val().length != 0) ||  ($('.pds_spousefirstname').val().length != 0)  ){
+				if ($(this).val().length == 0) {
+					if($(this).hasClass("not-require")){
+					
+					}else{
+					 $(this).css('background-color', "#ffa0a0f7");
+					//$(".errors div").html(str + (count == 0 ? '' :', ') +  $(this).attr("name"));
+					texterror+=$(this).attr("name");
+					count++;
+					}
+				  
+				} 
+			}
+		});
+		return 0;
+	
+	
+    }
+	
+	
+	
+	
 	$('.view-pds').click(function(){
-	  $('#view_pds').modal('show');
-	   
-	   //$('#pds-container').css('display', "block");
-	});
-	$('#edit_n_update_pds_info-btn').click(function(){
-		action='update_user_function';
+		$('#view_pds').modal('show');
 		id = $(this).attr("data-id");
-		console.log(id);
+		$('#update_pds_info-btn').attr('id',id);
+		
+	   //$('#success-pds').modal('show');
+	});
+	$('#update_pds_info-btn').click(function(){
+		action='update_pds_function';
+		error = checking();
 		/* email =$('#email_edit').val(); 
 		pass =$('#password_edit').val(); 
 		repass =$('#repassword_edit').val(); 
@@ -149,101 +357,67 @@ $(function(){
 		} */
 		
 		//personal info
-		pds_surname = $('#addnew .pds_surname').val();
-		pds_firstname = $('#addnew .pds_firstname').val();
-		pds_nameextension = $('#addnew .pds_nameextension').val();
-		pds_middlename = $('#addnew .pds_middlename').val();
-		pds_dateofbirth = $('#addnew .pds_dateofbirth').val();
-		pds_placeofbirth = $('#addnew .pds_placeofbirth').val();
-		pds_gender = $("#addnew input[name='gender']:checked").val();
-		civil_status = $("#addnew input[name='civil_status']:checked").val();
-		pds_height = $('#addnew .pds_height').val();
-		pds_weight = $('#addnew .pds_weight').val();
-		pds_bloodtype = $('#addnew .pds_bloodtype').val();
-		pds_gsisno = $('#addnew .pds_gsisno').val();
-		pds_pagibigno = $('#addnew .pds_pagibigno').val();
-		pds_philhealthno = $('#addnew .pds_philhealthno').val();
-		pds_sssno = $('#addnew .pds_sssno').val();
-		pds_tinno = $('#addnew .pds_tinno').val();
-		pds_agencyemployee = $('#addnew .pds_agencyemployee').val();
-		pds_citizenship = $("#addnew input[name='citi']:checked").val();
-		pds_country = $('#addnew .pds_country option:selected').text();
-		pds_rhouseblk = $('#addnew .pds_rhouseblk').val();
-		pds_rstreet = $('#addnew .pds_rstreet').val();
-		pds_rsubdivision = $('#addnew .pds_rsubdivision').val();
-		pds_rbarangay = $('#addnew .pds_rbarangay').val();
-		pds_rmunicipality = $('#addnew .pds_rmunicipality').val();
-		pds_rprovince = $('#addnew .pds_rprovince').val();
-		pds_rzipcode = $('#addnew .pds_rzipcode').val();
-		pds_phouseblk = $('#addnew .pds_phouseblk').val();
-		pds_pstreet = $('#addnew .pds_pstreet').val();
-		pds_psubdivision = $('#addnew .pds_psubdivision').val();
-		pds_pbarangay = $('#addnew .pds_pbarangay').val();
-		pds_pmunicipality = $('#addnew .pds_pmunicipality').val();
-		pds_pprovince = $('#addnew .pds_pprovince').val();
-		pds_pzipcode = $('#addnew .pds_pzipcode').val();
-		pds_telno = $('#addnew .pds_telno').val();
-		pds_mobileno = $('#addnew .pds_mobileno').val();
-		pds_emailaddress = $('#addnew .pds_emailaddress').val();
+		pds_surname = $('.pds_surname').val();
+		pds_firstname = $('.pds_firstname').val();
+		pds_nameextension = $('.pds_nameextension').val();
+		pds_middlename = $('.pds_middlename').val();
+		pds_dateofbirth = $('.pds_dateofbirth').val();
+		pds_placeofbirth = $('.pds_placeofbirth').val();
+		pds_gender = $("input[name='Gender']:checked").val();
+		civil_status = $("input[name='Civil Status']:checked").val();
+		pds_height = $('.pds_height').val();
+		pds_weight = $('.pds_weight').val();
+		pds_bloodtype = $('.pds_bloodtype').val();
+		pds_gsisno = $('.pds_gsisno').val();
+		pds_pagibigno = $('.pds_pagibigno').val();
+		pds_philhealthno = $('.pds_philhealthno').val();
+		pds_sssno = $('.pds_sssno').val();
+		pds_tinno = $('.pds_tinno').val();
+		pds_agencyemployee = $('.pds_agencyemployee').val();
+		pds_citizenship = $("input[name='Citizenship']:checked").val();
+		pds_country = $('.pds_country option:selected').text();
+		pds_rhouseblk = $('.pds_rhouseblk').val();
+		pds_rstreet = $('.pds_rstreet').val();
+		pds_rsubdivision = $('.pds_rsubdivision').val();
+		pds_rbarangay = $('.pds_rbarangay').val();
+		pds_rmunicipality = $('.pds_rmunicipality').val();
+		pds_rprovince = $('.pds_rprovince').val();
+		pds_rzipcode = $('.pds_rzipcode').val();
+		pds_phouseblk = $('.pds_phouseblk').val();
+		pds_pstreet = $('.pds_pstreet').val();
+		pds_psubdivision = $('.pds_psubdivision').val();
+		pds_pbarangay = $('.pds_pbarangay').val();
+		pds_pmunicipality = $('.pds_pmunicipality').val();
+		pds_pprovince = $('.pds_pprovince').val();
+		pds_pzipcode = $('.pds_pzipcode').val();
+		pds_telno = $('.pds_telno').val();
+		pds_mobileno = $('.pds_mobileno').val();
+		pds_emailaddress = $('.pds_emailaddress').val();
 		
 		//family background
-		pds_spousesurname = $('#addnew .pds_spousesurname').val();
-		pds_spousefirstname = $('#addnew .pds_spousefirstname').val();
-		pds_spousenameextension = $('#addnew .pds_spousenameextension').val();
-		pds_spousemiddlename = $('#addnew .pds_spousemiddlename').val();
-		pds_spouseoccupation = $('#addnew .pds_spouseoccupation').val();
-		pds_businessname = $('#addnew .pds_businessname').val();
-		pds_businessaddress = $('#addnew .pds_businessaddress').val();
-		pds_businesstelno = $('#addnew .pds_businesstelno').val();
-		pds_fathersurname = $('#addnew .pds_fathersurname').val();
-		pds_fatherfirstname = $('#addnew .pds_fatherfirstname').val();
-		pds_fathernameextension = $('#addnew .pds_fathernameextension').val();
-		pds_fathermiddlename = $('#addnew .pds_fathermiddlename').val();
-		pds_mothermaindenname = $('#addnew .pds_mothermaindenname').val();
-		pds_motherfirstname = $('#addnew .pds_motherfirstname').val();
-		pds_mothersnameextension = $('#addnew .pds_mothersnameextension').val();
-		pds_mothersmiddlename = $('#addnew .pds_mothersmiddlename').val();
-		pds_children = $('#addnew .pds_children').val();
-		pds_childrenBdate = $('#addnew .pds_childrenBdate').val();
+		pds_spousesurname = $('.pds_spousesurname').val();
+		pds_spousefirstname = $('.pds_spousefirstname').val();
+		pds_spousenameextension = $('.pds_spousenameextension').val();
+		pds_spousemiddlename = $('.pds_spousemiddlename').val();
+		pds_spouseoccupation = $('.pds_spouseoccupation').val();
+		pds_businessname = $('.pds_businessname').val();
+		pds_businessaddress = $('.pds_businessaddress').val();
+		pds_businesstelno = $('.pds_businesstelno').val();
+		pds_fathersurname = $('.pds_fathersurname').val();
+		pds_fatherfirstname = $('.pds_fatherfirstname').val();
+		pds_fathernameextension = $('.pds_fathernameextension').val();
+		pds_fathermiddlename = $('.pds_fathermiddlename').val();
+		pds_mothermaindenname = $('.pds_mothermaindenname').val();
+		pds_motherfirstname = $('.pds_motherfirstname').val();
+		pds_mothersnameextension = $('.pds_mothersnameextension').val();
+		pds_mothersmiddlename = $('.pds_mothersmiddlename').val();
 		
-		//Civil Service Eligibility
-		pds_CS = $('#addnew .pds_CS').val();
-		pds_CS_rating = $('#addnew .pds_CS_rating').val();
-		pds_CS_date = $('#addnew .pds_CS_date').val();
-		pds_CS_place = $('#addnew .pds_CS_place').val();
-		pds_CS_licenceNo = $('#addnew .pds_CS_licenceNo').val();
-		pds_CS_licenceDate = $('#addnew .pds_CS_licenceDate').val();
-		
-		//Work Experience
-		pds_WE_FromDate = $('#addnew .pds_WE_FromDate').val();
-		pds_WE_ToDate = $('#addnew .pds_WE_ToDate').val();
-		pds_WE_PositionTitle = $('#addnew .pds_WE_PositionTitle').val();
-		pds_WE_Place = $('#addnew .pds_WE_Place').val();
-		pds_WE_MonthSalary = $('#addnew .pds_WE_MonthSalary').val();
-		pds_WE_Salary = $('#addnew .pds_WE_Salary').val();
-		pds_WE_AppointmentStatus = $('#addnew .pds_WE_AppointmentStatus').val();
-		pds_WE_GovService = $('#addnew .pds_WE_GovService').val();
-		
-		//Voluntary work
-		pds_VW_Name_Address = $('#addnew .pds_VW_Name_Address').val();
-		pds_VW_FromDate = $('#addnew .pds_VW_FromDate').val();
-		pds_VW_Todate = $('#addnew .pds_VW_Todate').val();
-		pds_VW_NumbHours = $('#addnew .pds_VW_NumbHours').val();
-		pds_VW_Work = $('#addnew .pds_VW_Work').val();
-		
-		//Learning and Development
-		pds_LaD_Title = $('#addnew .pds_LaD_Title').val();
-		pds_LaD_FromDate = $('#addnew .pds_LaD_FromDate').val();
-		pds_LaD_ToDate = $('#addnew .pds_LaD_ToDate').val();
-		pds_LaD_NumbHours = $('#addnew .pds_LaD_NumbHours').val();
-		pds_LaD_Type = $('#addnew .pds_LaD_Type').val();
-		pds_LaD_ConductBy = $('#addnew .pds_LaD_ConductBy').val();
+		if (error < 1) {
 		
 		
-		
-		$.ajax({
+			$.ajax({
 			type: 'POST',
-			url: '../credentials/model.php',
+			url: '../credentials/model-pds.php',
 			data: {action:action,id:id,
 				
 				pds_surname:pds_surname,
@@ -299,64 +473,70 @@ $(function(){
 				pds_motherfirstname:pds_motherfirstname,
 				pds_mothersnameextension:pds_mothersnameextension,
 				pds_mothersmiddlename:pds_mothersmiddlename,
-				pds_children:pds_children,
-				pds_childrenBdate:pds_childrenBdate,
 				
-				pds_CS:pds_CS,
-				pds_CS_rating:pds_CS_rating,
-				pds_CS_date:pds_CS_date,
-				pds_CS_place:pds_CS_place,
-				pds_CS_licenceNo:pds_CS_licenceNo,
-				pds_CS_licenceDate:pds_CS_licenceDate,
-				
-				pds_WE_FromDate:pds_WE_FromDate,
-				pds_WE_ToDate:pds_WE_ToDate,
-				pds_WE_PositionTitle:pds_WE_PositionTitle,
-				pds_WE_Place:pds_WE_Place,
-				pds_WE_MonthSalary:pds_WE_MonthSalary,
-				pds_WE_Salary:pds_WE_Salary,
-				pds_WE_AppointmentStatus:pds_WE_AppointmentStatus,
-				pds_WE_GovService:pds_WE_GovService,
-				
-				pds_VW_Name_Address:pds_VW_Name_Address,
-				pds_VW_FromDate:pds_VW_FromDate,
-				pds_VW_Todate:pds_VW_Todate,
-				pds_VW_NumbHours:pds_VW_NumbHours,
-				pds_VW_Work:pds_VW_Work,
-				
-				pds_LaD_Title:pds_LaD_Title,
-				pds_LaD_FromDate:pds_LaD_FromDate,
-				pds_LaD_ToDate:pds_LaD_ToDate,
-				pds_LaD_NumbHours:pds_LaD_NumbHours,
-				pds_LaD_Type:pds_LaD_Type,
-				pds_LaD_ConductBy:pds_LaD_ConductBy 
+				childname:childname,
+				childBDay:childBDay,
+				CS:CS,
+				CS_rating:CS_rating,
+				CS_date:CS_date,
+				CS_place:CS_place,
+				CS_licenceNo:CS_licenceNo,
+				CS_licenceDate:CS_licenceDate,
+				WE_FromDate:WE_FromDate,
+				WE_ToDate:WE_ToDate,
+				WE_PositionTitle:WE_PositionTitle,
+				WE_Place:WE_Place,
+				WE_MonthSalary:WE_MonthSalary,
+				WE_Salary:WE_Salary,
+				WE_AppointmentStatus:WE_AppointmentStatus,
+				WE_GovService:WE_GovService,
+				VW_Name_Address:VW_Name_Address,
+				VW_FromDate:VW_FromDate,
+				VW_Todate:VW_Todate,
+				VW_NumbHours:VW_NumbHours,
+				VW_Work:VW_Work,
+				LaD_Title:LaD_Title,
+				LaD_FromDate:LaD_FromDate,
+				LaD_ToDate:LaD_ToDate,
+				LaD_NumbHours:LaD_NumbHours,
+				LaD_Type:LaD_Type,
+				LaD_ConductBy:LaD_ConductBy
 				},
 			dataType: 'json',
 			success: function(response){
 				
 				
-				if(response.exe==='success')
-					$('#view_pds').modal('hide');
-				else 
-					alert(response.error);
-				
+				if(response.exe==='success'){
+						$('#view_pds').modal('hide');
+						$('#success-pds').modal('show');
+							$("#success-message").css('display','block');
+							document.getElementById('success-info').innerHTML = "Succeessfully update Info.!";   	    	
+							document.getElementById('success-header').innerHTML = "Success!";
+					setTimeout(function() {$('#success-pds').modal('hide');}, 3000);
+				}else if(response.error==='error'){
+						$('#view_pds').modal('hide');
+						$('#error-pds').modal('show');
+							$("#error-message").css('display','block');
+							document.getElementById('error-info').innerHTML = "Please input all required fields!";   	    	
+							document.getElementById('error-header').innerHTML = "Error!";
+						setTimeout(function() {$('#error-pds').modal('hide');}, 3000);
+				}
 				
 			}
-		});
-		
+			});
+		}else{
+			alert(texterror);
+		}
 	});
 	
 	$('.view-pds').click(function(){
 		$('#view_pds').modal('show');
 		action='view_pds_function';
-		id = $(this).attr("data-id");
-		$('.update_pds_info-btn').attr('id',id);
-		$('.update_pds_info-btn').html('Edit'); 
 		$("#view_pds input").val("");
-
+		id = $(this).attr("data-id");
 		$.ajax({
 			type: 'POST',
-			url: '../credentials/model.php',
+			url: '../credentials/model-pds.php',
 			data: {action:action,id:id},
 			dataType: 'json',
 			success: function(response){
@@ -366,8 +546,24 @@ $(function(){
 				$("#view_pds .pds_middlename").val(response.MIDDLENAME);
 				$("#view_pds .pds_dateofbirth").val(response.BIRTHDATE);
 				$("#view_pds .pds_placeofbirth").val(response.BIRTHPLACE);
-				//$("#view_pds .pds_gender").val(response.GENDER);//gender
-				//$("#view_pds .civil_status").val(response.CIVIL_STATUS);//civil_status
+				if(response.GENDER==="Male"){
+					$("#male").prop("checked", true);
+				}else{
+					$("#female").prop("checked", true);
+					
+				}
+				if(response.CIVIL_STATUS==="Single"){
+					$("#single").prop("checked", true);
+				}else if(response.CIVIL_STATUS==="Married"){
+					$("#married").prop("checked", true);
+				}else if(response.CIVIL_STATUS==="Widow"){
+					$("#widow").prop("checked", true);
+				}else if(response.CIVIL_STATUS==="Separated"){
+					$("#seperated").prop("checked", true);
+				}else{
+					$("#others").prop("checked", true);
+				}
+				
 				$("#view_pds .pds_height").val(response.HEIGHT);
 				$("#view_pds .pds_weight").val(response.WEIGHT);
 				$("#view_pds .pds_bloodtype").val(response.BLOOD_TYPE);
@@ -377,6 +573,18 @@ $(function(){
 				$("#view_pds .pds_sssno").val(response.SSS_NO);
 				$("#view_pds .pds_tinno").val(response.TIN_NO);
 				$("#view_pds .pds_agencyemployee").val(response.AGENCY_EMPLOYEE_NO);
+				if(response.CITIZENSHIP==="Filipino"){
+					$("#fili").prop("checked", true);
+				}else if(response.CITIZENSHIP==="Dual Citizenship"){
+					$("#dual").prop("checked", true);
+				}else if(response.CITIZENSHIP==="By Birth"){
+					$("#bybirth").prop("checked", true);
+				}else if(response.CITIZENSHIP==="By Naturalization"){
+					$("#bynatu").prop("checked", true);
+				}else{
+					$("#fili").prop("checked", true);
+				}
+				
 				//$("#view_pds .pds_citizenship").val(response.CITIZENSHIP);//citizenship
 				//$("#view_pds .pds_country").val(response.);//country
 				$("#view_pds .pds_rhouseblk").val(response.RESIDENTIAL_LOTNO);
@@ -442,109 +650,165 @@ $(function(){
 				*/
 				
 				
-				$("#view_pds input").prop('disabled', true);
 			}
 		});
 	 
 	});	
 	
-	$('.edit').click(function(){
-		$('#view_pds').modal('show');
-		$('.update_pds_info-btn').html('Update'); 
-		action='view_pds_function';
-		var id = $(this).attr('id');
-		$("#view_pds input").val("");
-		$.ajax({
-				type: 'POST',
-				url: '../credentials/model.php',
-				data: {action:action,id:id},
-				dataType: 'json',
-				success: function(response){
-					$("#view_pds .pds_surname").val(response.LASTNAME);
-					$("#view_pds .pds_firstname").val(response.FIRSTNAME);
-					$("#view_pds .pds_nameextension").val(response.EXTENSION_NAME);
-					$("#view_pds .pds_middlename").val(response.MIDDLENAME);
-					$("#view_pds .pds_dateofbirth").val(response.BIRTHDATE);
-					$("#view_pds .pds_placeofbirth").val(response.BIRTHPLACE);
-					//$("#view_pds .pds_gender").val(response.GENDER);//gender
-					//$("#view_pds .civil_status").val(response.CIVIL_STATUS);//civil_status
-					$("#view_pds .pds_height").val(response.HEIGHT);
-					$("#view_pds .pds_weight").val(response.WEIGHT);
-					$("#view_pds .pds_bloodtype").val(response.BLOOD_TYPE);
-					$("#view_pds .pds_gsisno").val(response.GSIS_ID_NO);
-					$("#view_pds .pds_pagibigno").val(response.PAG_IBIG_NO);
-					$("#view_pds .pds_philhealthno").val(response.PHILHEALTH_NO);
-					$("#view_pds .pds_sssno").val(response.SSS_NO);
-					$("#view_pds .pds_tinno").val(response.TIN_NO);
-					$("#view_pds .pds_agencyemployee").val(response.AGENCY_EMPLOYEE_NO);
-					//$("#view_pds .pds_citizenship").val(response.CITIZENSHIP);//citizenship
-					//$("#view_pds .pds_country").val(response.);//country
-					$("#view_pds .pds_rhouseblk").val(response.RESIDENTIAL_LOTNO);
-					$("#view_pds .pds_rstreet").val(response.RESIDENTIAL_STREET);
-					$("#view_pds .pds_rsubdivision").val(response.RESIDENTIAL_SUBDIVISION);
-					$("#view_pds .pds_rbarangay").val(response.RESIDENTIAL_BARANGAY);
-					$("#view_pds .pds_rmunicipality").val(response.RESIDENTIAL_MUNICIPALITY);
-					$("#view_pds .pds_rprovince").val(response.RESIDENTIAL_PROVINCE);
-					$("#view_pds .pds_rzipcode").val(response.RESIDENTIAL_ZIP_CODE);
-					$("#view_pds .pds_phouseblk").val(response.PERMANENT_LOTNO);
-					$("#view_pds .pds_pstreet").val(response.PERMANENT_STREET);
-					$("#view_pds .pds_psubdivision").val(response.PERMANENT_SUBDIVISION);
-					$("#view_pds .pds_pbarangay").val(response.PERMANENT_BARANGAY);
-					$("#view_pds .pds_pmunicipality").val(response.PERMANENT_MUNICIPALITY);
-					$("#view_pds .pds_pprovince").val(response.PERMANENT_PROVINCE);
-					$("#view_pds .pds_pzipcode").val(response.PERMANENT_ZIP_CODE);
-					$("#view_pds .pds_telno").val(response.TELEPHONE_NO);
-					$("#view_pds .pds_mobileno").val(response.MOBILE_NO);
-					$("#view_pds .pds_emailaddress").val(response.EMAIL);
-					$("#view_pds .pds_spousesurname").val(response.spousesurname);
-					$("#view_pds .pds_spousefirstname").val(response.spousefirstname);
-					$("#view_pds .pds_spousenameextension").val(response.spousenameextension);
-					$("#view_pds .pds_spousemiddlename").val(response.spousemiddlename);
-					$("#view_pds .pds_spouseoccupation").val(response.spouseoccupation);
-					$("#view_pds .pds_businessname").val(response.businessname);
-					$("#view_pds .pds_businessaddress").val(response.businessaddress);
-					$("#view_pds .pds_businesstelno").val(response.businesstelno);
-					$("#view_pds .pds_fathersurname").val(response.fathersurname);
-					$("#view_pds .pds_fatherfirstname").val(response.fatherfirstname);
-					$("#view_pds .pds_fathernameextension").val(response.fathernameextension);
-					$("#view_pds .pds_fathermiddlename").val(response.fathermiddlename);
-					$("#view_pds .pds_mothermaindenname").val(response.mothermaindenname);
-					$("#view_pds .pds_motherfirstname").val(response.motherfirstname);
-					$("#view_pds .pds_mothersnameextension").val(response.mothersnameextension);
-					$("#view_pds .pds_mothersmiddlename").val(response.mothersmiddlename);
-					/* $("#view_pds .pds_children").val(response.);
-					$("#view_pds .pds_childrenBdate").val(response.);
-					$("#view_pds .pds_CS").val(response.);
-					$("#view_pds .pds_CS_rating").val(response.);
-					$("#view_pds .pds_CS_date").val(response.);
-					$("#view_pds .pds_CS_place").val(response.);
-					$("#view_pds .pds_CS_licenceNo").val(response.);
-					$("#view_pds .pds_CS_licenceDate").val(response.);
-					$("#view_pds .pds_WE_FromDate").val(response.);
-					$("#view_pds .pds_WE_ToDate").val(response.);
-					$("#view_pds .pds_WE_PositionTitle").val(response.);
-					$("#view_pds .pds_WE_Place").val(response.);
-					$("#view_pds .pds_WE_MonthSalary").val(response.);
-					$("#view_pds .pds_WE_Salary").val(response.);
-					$("#view_pds .pds_WE_AppointmentStatus").val(response.);
-					$("#view_pds .pds_WE_GovService").val(response.);
-					$("#view_pds .pds_VW_Name_Address").val(response.);
-					$("#view_pds .pds_VW_FromDate").val(response.);
-					$("#view_pds .pds_VW_Todate").val(response.);
-					$("#view_pds .pds_VW_NumbHours").val(response.);
-					$("#view_pds .pds_VW_Work").val(response.);
-					$("#view_pds .pds_LaD_Title").val(response.);
-					$("#view_pds .pds_LaD_FromDate").val(response.);
-					$("#view_pds .pds_LaD_ToDate").val(response.);
-					$("#view_pds .pds_LaD_NumbHours").val(response.);
-					$("#view_pds .pds_LaD_Type").val(response.);
-					$("#view_pds .pds_LaD_ConductBy").val(response.); */
-					
-				}
-			});
+	$(".single-fields input").keyup(function () {
+		$(this).css('background-color', "#ffffff");
+	});
+	$(".radio-fields").change(function () {
+		$(this).css('background-color', "#ffffff");
+	});
+	$('input[type="date"]').change(function() {
+		$(this).css('background-color', "#ffffff");
+	});
+	$('.pds_gsisno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{4})\-?(\d{7})\-?(\d{1})/,'$1-$2-$3'));
+	});
+	$('.pds_pagibigno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{4})\-?(\d{4})\-?(\d{4})/,'$1-$2-$3'));
+	});
+	$('.pds_philhealthno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{2})\-?(\d{9})\-?(\d{1})/,'$1-$2-$3'));
+	});
+	$('.pds_sssno').keyup(function(){
+		$(this).val($(this).val().replace(/(\d{2})\-?(\d{7})\-?(\d{1})/,'$1-$2-$3'));
+	});
+	$('.pds_tinno').keyup(function(e){
+		$(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3-$4'));
+	});
+	$('.pds_agencyemployee').keyup(function(e){
+		$(this).val($(this).val().replace(/(\d{3})\-?(\d{4})/,'$1-$2'));
+	});
+	$('.pds_telno').keyup(function(e){
+		$(this).val($(this).val().replace(/(\d{3})\-?(\d{4})/,'$1-$2'));
+	});
+
+	$( ".pds_surname" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+ $( ".pds_firstname" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+  $( ".pds_nameextension" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+   $( ".pds_middlename" ).keypress(function(e) {
+                    var key = e.keyCode;
+                    if (key >= 48 && key <= 57) {
+                        e.preventDefault();
+                    }
+                });
+   	$(".pds_height").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   		$(".pds_weight").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   			$(".pds_pagibigno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   				$(".pds_gsisno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   					$(".pds_philhealthno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   						$(".pds_sssno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   	$(".pds_tinno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   		$(".pds_agencyemployee").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+   			$(".pds_telno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+	$(".pds_mobileno").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+
+	$(".pds_pzipcode").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
+
+$(".pds_rzipcode").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+     
+               return false;
+    }
+   });
 	
-  });
- 
 
 
 });

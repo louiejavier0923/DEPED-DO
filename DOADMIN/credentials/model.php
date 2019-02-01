@@ -7,7 +7,7 @@
     require 'vendor/autoload.php';
 
 
-    $mail = new PHPMailer(true);
+    $mail = new PHPMailer(true);  
  
     switch($_POST['action']){
         
@@ -101,7 +101,7 @@
                                            //Content
                                            $mail->isHTML(true);                                  // Set email format to HTML
                                            $mail->Subject = 'APPLICATION';                                                             
-                                           $mail->Body   = 'asd';
+                                           $mail->Body   = 'You applied for vacancy';
                   
                         
                        // $mail->SMTPDebug = 2;                                 // Enable verbose debug output

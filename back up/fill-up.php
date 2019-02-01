@@ -428,124 +428,128 @@
 											<p>Date of Birth<br>(mm/dd/yyyy)</p>
 										</section>
 									</section>
-									<section class= "family-tbl-info children-form">
+									<section class= "family-tbl-info">
 										<?php 
 										
-										/* $sql="SELECT * FROM `children` where `UID`='". $user['UID'] ."';";
+										$sql="SELECT * FROM `children` where `UID`='". $user['UID'] ."';";
 										   
 										if ($result = $conn->query($sql)) {
 
-											while ($row = $result->fetch_assoc()) { */
+											while ($row = $result->fetch_assoc()) {
 											?>
 											<section class= "content-info">
 												<section class= "info">
-													<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children"id="pre-pds_children">
+													<input type= "text" value="<?php echo $row['CHILDNAME']; ?>" class="pds_children pre-pds_children">
 												</section>
 												<section class= "info">
-													<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
+													<input type= "date" value='<?php echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate pre-pds_childrenBdate">
 												</section>
 											</section>
 											<?php
-											/* }
-										}  */
+											}
+										} 
 										?>
 										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-										</section>
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-										</section>
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section><section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section><section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
+											</section><section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-										</section>
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-										</section>
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
+											<section class= "content-info">
+												<section class= "info">
+													<input type= "text"  class="pds_children pre-pds_children">
+												</section>
+												<section class= "info">
+													<input type= "date"  class="pds_childrenBdate pre-pds_childrenBdate">
+												</section>
 											</section>
-										</section>
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
-											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
-											</section>
-										</section>
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
-											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
-											</section>
-										</section>
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
-											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
-											</section>
-										</section>
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
-											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
-											</section>
-										</section>
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
-											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
-											</section>
-										</section>
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
-											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
-											</section>
-										</section>
-										<section class= "content-info">
-											<section class= "info">
-												<input type= "text" value="<?php //echo $row['CHILDNAME']; ?>" class="pds_children" id="pre-pds_children">
-											</section>
-											<section class= "info">
-												<input type= "date" value='<?php //echo $row['CHILDBIRTHDATE']; ?>' class="pds_childrenBdate" id="pre-pds_childrenBdate">
-											</section>
-										</section>
-										
 									</section>
 								</section>
 							</section>
@@ -1117,13 +1121,13 @@
 				<button type= "submit" id= "submit_file">ATTACH FILE</button>
 			</section>
 		</section>
-	</section>
+		</section>
 		<?php include '../include/user-info-modal.php';?>
 		<?php include '../include/applicant-image-modal.php';?>
 		<?php include '../include/applicant-attach-modal.php';?>
 		<?php include '../include/applicant-choosefile-modal.php';?>
 		<?php include '../include/applicant-pds-modal.php';?>
-		<?php //include '../include/applicant-files-modal.php';?>
+		<?php include '../include/applicant-files-modal.php';?>
 		<?php include '../include/applicant-error-modal.php';?>
 		<?php include '../include/applicant-success-modal.php';?>
 	</body>

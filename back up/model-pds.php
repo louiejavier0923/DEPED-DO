@@ -141,8 +141,7 @@
 		if ($conn->multi_query($sql)) 
 			$exe = "success";
 		else 
-			$error = "error";
-			$output = "Error: " . $sql . "<br>" . $conn->error;
+			$error = "Error: " . $sql . "<br>" . $conn->error;
 		
 		
 	
@@ -261,12 +260,10 @@
 		$output = '';
 		$exe = '';
 		$error = '';
-		$id = $_POST['id'];
 		$sql = "SELECT u.EMAIL, p.FIRSTNAME, p.LASTNAME, p.MIDDLENAME, p.EXTENSION_NAME, p.BIRTHDATE, p.BIRTHPLACE, p.GENDER, p.HEIGHT, p.WEIGHT, p.BLOOD_TYPE, p.CIVIL_STATUS, p.GSIS_ID_NO, p.PAG_IBIG_NO, p.PHILHEALTH_NO, p.SSS_NO, p.TIN_NO, p.AGENCY_EMPLOYEE_NO, p.CITIZENSHIP, p.RESIDENTIAL_LOTNO, p.RESIDENTIAL_STREET, p.RESIDENTIAL_SUBDIVISION, p.RESIDENTIAL_BARANGAY, p.RESIDENTIAL_MUNICIPALITY, p.RESIDENTIAL_PROVINCE, p.RESIDENTIAL_ZIP_CODE, p.PERMANENT_LOTNO, p.PERMANENT_STREET, p.PERMANENT_SUBDIVISION, p.PERMANENT_BARANGAY, p.PERMANENT_MUNICIPALITY, p.PERMANENT_PROVINCE, p.PERMANENT_ZIP_CODE, p.TELEPHONE_NO, p.MOBILE_NO, f.spousesurname, f.spousefirstname, f.spousemiddlename, f.spousenameextension, f.spouseoccupation, f.businessname, f.businessaddress, f.businesstelno, f.fathersurname, f.fatherfirstname, f.fathernameextension, f.fathermiddlename, f.mothermaindenname, f.motherfirstname, f.mothersnameextension, f.mothersmiddlename
 		 FROM user as u
 		 INNER JOIN personal_info as p ON p.UID = u.UID
-		 INNER JOIN family_background as f ON f.UID = u.UID
-		 WHERE u.UID  = '$id'";
+		 INNER JOIN family_background as f ON f.UID = u.UID";
 		
 		if ($result = $conn->query($sql)) {
 			$row = $result->fetch_assoc();
