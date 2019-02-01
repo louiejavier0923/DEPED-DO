@@ -14,6 +14,7 @@ switch ($_POST['action']) {
         (SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID) AS 'EDUCATION',
         (SELECT ap.VALUE FROM applicants_points ap WHERE ap.CRITERIA_CODE='EDUCATION' AND ap.UID=a.UID) AS 'EDUCATION_GWA',
         (SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='EXPERIENCE' AND ap.UID=a.UID) AS 'EXPERIENCE',
+        (SELECT ap.VALUE FROM applicants_points ap WHERE ap.CRITERIA_CODE='EXPERIENCE' AND ap.UID=a.UID) AS 'EXPERIENCE_VALUE',
         (SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='ELIGIBILITY' AND ap.UID=a.UID) AS 'ELIGIBILITY',
         (SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='TRAINING' AND ap.UID=a.UID) AS 'TRAINING',
         (SELECT ap.EQUIVALENT_POINTS FROM applicants_points ap WHERE ap.CRITERIA_CODE='DEMO' AND ap.UID=a.UID) AS 'DEMO',
@@ -26,12 +27,15 @@ switch ($_POST['action']) {
         while($row = mysqli_fetch_assoc($result)){
 
             $educ_point = split(',', $row['EDUCATION_GWA']);
+            $exp_point = split(',', $row['EXPERIENCE_VALUE']);
 
             $arrPoint[] = [
                 "UID" => $row['UID'],
                 "PID" => $row['PID'],
                 "GWA" => $educ_point[0],
-                "GWA_ADD" => $educ_point[1]
+                "GWA_ADD" => $educ_point[1],
+                "EXP" => $exp_point[0],
+                "EXP_ADD" => $exp_point[1]
             ];
 
         }		
@@ -46,9 +50,13 @@ switch ($_POST['action']) {
         $a = $_POST['a'];
         $b = $_POST['b'];
         $c = $_POST['c'];
+        $d = $_POST['d'];
 
         $sql = "UPDATE applicants_points p INNER JOIN application a ON p.UID=a.UID AND p.PID=a.PID AND a.UID='$a' AND a.PID='$b' AND p.CRITERIA_CODE='EDUCATION' SET a.IS_CALIBRATED='1',p.EQUIVALENT_POINTS='$c';";
         $result = mysqli_query($conn,$sql);
+        
+        $sql2 = "UPDATE applicants_points p INNER JOIN application a ON p.UID=a.UID AND p.PID=a.PID AND a.UID='$a' AND a.PID='$b' AND p.CRITERIA_CODE='EXPERIENCE' SET a.IS_CALIBRATED='1',p.EQUIVALENT_POINTS='$d';";
+        $result2 = mysqli_query($conn,$sql2);
 
         print_r($result);
 

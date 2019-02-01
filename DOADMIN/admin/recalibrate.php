@@ -131,6 +131,8 @@ $(document).ready(function(){
       for(var i=0;i<output.length;i++){
 
           var new_points = parseFloat(educationPoints('22',output[i].GWA))+parseFloat(output[i].GWA_ADD);
+          var exp_new = parseFloat(experiencePoints('22',parseFloat(output[i].EXP)))+parseFloat(output[i].EXP_ADD);
+          console.log(exp_new);
 
           $.ajax({
               type:'POST',
@@ -139,7 +141,8 @@ $(document).ready(function(){
                   action:'recalibrate_applicant',
                   a:output[i].UID,
                   b:output[i].PID,
-                  c:new_points
+                  c:new_points,
+                  d:exp_new
               }
           }).done(function(data){
                   // console.log(data);
@@ -148,7 +151,7 @@ $(document).ready(function(){
                   saveAlert('Recalibration Done!');
               }
               loadBelowAvg();
-          })
+          });
 
       }
 
